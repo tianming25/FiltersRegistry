@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 3TkbYY5AD0qgwatFZkWx5A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1742931414-3600.patch
+! Checksum: pmuuS0pehkyEB/6yxbqxrw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1742942219-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.76.65
-! TimeUpdated: 2025-03-25T19:31:31+00:00
+! Version: 2.3.76.66
+! TimeUpdated: 2025-03-25T22:31:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -18353,6 +18353,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201162
+@@||godlikeproductions.com/adblock/js/checks/fingerprint.js$domain=godlikeproductions.com
 ! vogue.com - content gets removed in article
 vogue.com#$#.ad.ad-body.ad-slot.ad-content[style*="width: 1px"][style*="height: 1px"] { display: block !important; }
 @@||ads-static.conde.digital/production/cns/builds/vogue/v*.js$domain=vogue.com
@@ -45059,6 +45061,7 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+godlikeproductions.com##.rightpanel_ipad > div:has(> center > [data-type="_mgwidget"])
 ||nhentai.com/r34games.gif
 nhentai.com##main > .row:has(> a[target="_blank"])
 airhint.com##div[data-fuse]
@@ -69438,6 +69441,8 @@ implbits.com#@#.banner_container
 !
 !############### TEMPORARY ###############
 !
+! BUG: https://github.com/AdguardTeam/CoreLibs/issues/1970 [Stealth Mode - any/no option]
+! https://github.com/AdguardTeam/AdguardFilters/issues/200850
 ! https://github.com/AdguardTeam/AdguardFilters/issues/168834 [Stealth Mode - User-agent]
 ! BUG: https://github.com/AdguardTeam/CoreLibs/issues/1841
 ! TODO: remove after release AdGuard apps with CoreLibs 1.14

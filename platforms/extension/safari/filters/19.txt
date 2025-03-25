@@ -1,9 +1,9 @@
-! Checksum: n7645LpxSjK1HrmiZ578Sg
-! Diff-Path: ../patches/19/19-s-1742931407-3600.patch
+! Checksum: TyKMGkFRDFgI4TABf5MHZQ
+! Diff-Path: ../patches/19/19-s-1742942214-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.52.71
-! TimeUpdated: 2025-03-25T19:32:30+00:00
+! Version: 2.0.52.72
+! TimeUpdated: 2025-03-25T22:32:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -13218,6 +13218,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+gamefile.news#?##home-body > div.pencraft div[class*="contentBlockContainer"]:has(> div[class^="outerContainer"] > div.pencraft button:contains(Subscribe))
 ama-assn.org##.promo_as_inline-20676
 gogov.ru##.tg-share
 gogov.ru##.main-post-meta > div[style="display:flex; align-items:center;"]
@@ -15187,9 +15188,10 @@ greenmedinfo.com##.optinbox
 infotelematico.com#?#.entry-content > p.has-text-align-center:has(> a[href="https://t.me/infotelematico"])
 searchengineland.com##a[href="/newsletters"]
 searchengineland.com##.nl-stacked-form
-substack.com#$#.intro-popup { display: none !important; }
-substack.com#$#html.show-intro-popup { overflow: auto !important;}
-substack.com#$#body #main { visibility: visible !important; }
+gamefile.news,substack.com#$#.intro-popup { display: none !important; }
+gamefile.news,substack.com#$#html.show-intro-popup { overflow: auto !important; }
+gamefile.news,substack.com#$#body { overflow: auto !important; }
+gamefile.news,substack.com#$#body #main { visibility: visible !important; }
 substack.com##div[class*="SidebarSubscribe-module"]
 sportsmole.co.uk##div[title="Subscribe to our newsletter"]
 manga-zip.is#?#.sidebar > div.box1:has(> div.box1text > div.textwidget > div.followit--follow-form-container)

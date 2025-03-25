@@ -1,9 +1,9 @@
-! Checksum: TbKAMJxxpB/FQza0i6IMUg
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1742895412-3600.patch
+! Checksum: /JddTpdQFkJrAGQSIB7wag
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1742909874-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.25.55
-! TimeUpdated: 2025-03-25T09:32:21+00:00
+! Version: 2.2.25.56
+! TimeUpdated: 2025-03-25T13:32:39+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -7820,6 +7820,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 @@||cp.gutefrage.net^$domain=gutefrage.net
 kenamobile.it#@##cookie-bar
 @@||trychatgpt.ru/chunk/cookie-banner-*.js
+@@||sdk.privacy-center.org/*/loader.js$domain=expressen.se
+@@||sdk.privacy-center.org/sdk/*/sdk.*.js$domain=expressen.se
 leki.pl#@##cookie-popup
 leki.pl#@#.cookie-popup:not(body):not(html)
 @@||cdn.privacy-mgmt.com/unified/$domain=motorsport.com
@@ -15946,6 +15948,7 @@ theintercept.com##a[data-analytics-id="end-of-article-newsletter-form"]
 onliner.by#?#.news-text > p[style]:has(> strong > a[href="https://t.me/newsonliner_bot"])
 slobodenpecat.mk##div[class^="newsletter-"]
 theanalyst.com##.widget_the_analyst_subscribe_widget
+weheartthis.com,nomadsunveiled.com,comicbookmovie.com##div[id^="grow-me-inline-subscribe-cta-"]
 cbsnews.com##.embed--type-newsletter-widget
 aeon.co##div[data-ga-view-prompt="aeon_sidebar_videonewsletter_blue"]
 twitchquotes.com##aside[id^="financetldr-top-bar"]
@@ -20977,6 +20980,7 @@ rasp.yandex.adult,rasp.yandex.ac.id,rasp.yandex.ae,rasp.yandex.al,rasp.yandex.ap
 tv.yandex.adult,tv.yandex.ac.id,tv.yandex.ae,tv.yandex.al,tv.yandex.app,tv.yandex.asia,tv.yandex.at,tv.yandex.az,tv.yandex.ba,tv.yandex.be,tv.yandex.by,tv.yandex.ca,tv.yandex.cc,tv.yandex.cl,tv.yandex.cloud,tv.yandex.club,tv.yandex.co,tv.yandex.co.il,tv.yandex.com,tv.yandex.com.bd,tv.yandex.com.cn,tv.yandex.com.np,tv.yandex.com.tr,tv.yandex.de,tv.yandex.dev,tv.yandex.ee,tv.yandex.es,tv.yandex.eu,tv.yandex.fi,tv.yandex.fm,tv.yandex.fr,tv.yandex.ge,tv.yandex.gr,tv.yandex.hu,tv.yandex.in,tv.yandex.io,tv.yandex.jp,tv.yandex.kg,tv.yandex.kr,tv.yandex.kz,tv.yandex.lt,tv.yandex.lv,tv.yandex.md,tv.yandex.me,tv.yandex.mobi,tv.yandex.net,tv.yandex.news,tv.yandex.nl,tv.yandex.org,tv.yandex.pk,tv.yandex.pl,tv.yandex.pro,tv.yandex.ro,tv.yandex.rs,tv.yandex.ru,tv.yandex.se,tv.yandex.site,tv.yandex.su,tv.yandex.tech,tv.yandex.ua,tv.yandex.uk,tv.yandex.us,tv.yandex.uz,tv.yandex.work##.recommended-ott
 360.yandex.ru##div[data-test-id="promotopline"]
 www.kinopoisk.ru##div[class^="trailer-promo"]
+expressen.se##.site-body a[href^="https://prenumerera.expressen.se/"]
 axsam.az##.h-banner
 foreignpolicy.com##.home-region-promo-block
 skyeng.ru##ssm-articles-content-promo-slot

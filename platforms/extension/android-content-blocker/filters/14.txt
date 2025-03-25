@@ -1,8 +1,8 @@
-! Checksum: Dn2WsIbx3wx/dKZ3rKdkdQ
+! Checksum: b2jL03KgJ5wV/QxTnEUxjA
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.25.55
-! TimeUpdated: 2025-03-25T09:32:21+00:00
+! Version: 2.2.25.56
+! TimeUpdated: 2025-03-25T13:32:39+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14469,6 +14469,9 @@ kenamobile.it#@##cookie-bar
 olajonline.hu#@#.cookie-alert
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201280
 @@||trychatgpt.ru/chunk/cookie-banner-*.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/201417
+@@||sdk.privacy-center.org/*/loader.js$domain=expressen.se
+@@||sdk.privacy-center.org/sdk/*/sdk.*.js$domain=expressen.se
 ! leki.pl - unable to scroll
 leki.pl#@##cookie-popup
 leki.pl#@#.cookie-popup:not(body):not(html)
@@ -32035,7 +32038,7 @@ theanalyst.com##.widget_the_analyst_subscribe_widget
 audiostereo.pl##li[data-blocktitle="Newsletter Signup"]
 buffalonews.com###lee-holiday-banner
 falling-walls.com##.module-newsletter-form
-nomadsunveiled.com,comicbookmovie.com##div[id^="grow-me-inline-subscribe-cta-"]
+weheartthis.com,nomadsunveiled.com,comicbookmovie.com##div[id^="grow-me-inline-subscribe-cta-"]
 ||cbsnews.com/embed/newsletters/widget/
 cbsnews.com##.embed--type-newsletter-widget
 lanazione.it##div[class^="WhatsApp_wa_box__"]
@@ -44281,6 +44284,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+expressen.se##.site-body a[href^="https://prenumerera.expressen.se/"]
 axsam.az##.h-banner
 foreignpolicy.com##.home-region-promo-block
 skyeng.ru##ssm-articles-content-promo-slot

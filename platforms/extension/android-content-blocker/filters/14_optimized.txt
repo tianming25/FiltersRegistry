@@ -1,8 +1,8 @@
-! Checksum: hg23WJ/G6qg5/GbVnYAEng
+! Checksum: AJp7/mhETaEiIELkKtHxBQ
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.25.55
-! TimeUpdated: 2025-03-25T09:32:21+00:00
+! Version: 2.2.25.56
+! TimeUpdated: 2025-03-25T13:32:39+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -5944,6 +5944,8 @@ kenamobile.it#@##cookie-bar
 !+ PLATFORM(ext_android_cb, ios)
 olajonline.hu#@#.cookie-alert
 @@||trychatgpt.ru/chunk/cookie-banner-*.js
+@@||sdk.privacy-center.org/*/loader.js$domain=expressen.se
+@@||sdk.privacy-center.org/sdk/*/sdk.*.js$domain=expressen.se
 leki.pl#@##cookie-popup
 leki.pl#@#.cookie-popup:not(body):not(html)
 @@||cdn.privacy-mgmt.com/unified/$domain=motorsport.com
@@ -12971,6 +12973,7 @@ theintercept.com##.newsletter-embed
 theintercept.com##a[data-analytics-id="end-of-article-newsletter-form"]
 slobodenpecat.mk##div[class^="newsletter-"]
 theanalyst.com##.widget_the_analyst_subscribe_widget
+weheartthis.com,nomadsunveiled.com,comicbookmovie.com##div[id^="grow-me-inline-subscribe-cta-"]
 cbsnews.com##.embed--type-newsletter-widget
 aeon.co##div[data-ga-view-prompt="aeon_sidebar_videonewsletter_blue"]
 twitchquotes.com##aside[id^="financetldr-top-bar"]
@@ -17777,6 +17780,7 @@ rasp.yandex.*##.TravelHotelsBanner
 tv.yandex.*##.recommended-ott
 360.yandex.ru##div[data-test-id="promotopline"]
 www.kinopoisk.ru##div[class^="trailer-promo"]
+expressen.se##.site-body a[href^="https://prenumerera.expressen.se/"]
 axsam.az##.h-banner
 foreignpolicy.com##.home-region-promo-block
 skyeng.ru##ssm-articles-content-promo-slot

@@ -1,9 +1,9 @@
-! Checksum: YzVOPTK6ocPNXKpGcuzkvQ
-! Diff-Path: ../patches/18/18-s-1742909874-3600.patch
+! Checksum: FZ1iD+mMyo9eImMTPfElQg
+! Diff-Path: ../patches/18/18-s-1742917078-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.58.80
-! TimeUpdated: 2025-03-25T13:32:46+00:00
+! Version: 2.0.58.81
+! TimeUpdated: 2025-03-25T15:32:49+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -24,6 +24,8 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+medisup.com#$#body { overflow: auto !important; position: static !important; }
+medisup.com#$#.orejime-NoticeOverlay { display: none !important; }
 ###fupi_cookie_notice
 ##.bst-panel
 ###cookies-baner-wrapper
@@ -2499,6 +2501,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 beliani.nl##.cookie_warning_overlay
 gutefrage.net#%#//scriptlet('trusted-click-element', 'astro-island[props*="Zustimmen und weiter mit Werbung"] > button', '', '500')
+mysoftware.de##.cookie-permission-container:not(#style_important)
 otrium.*##div[data-testid="consent-manager-banner"]
 lesen.amazon.de###cookies-popover-overlay
 lesen.amazon.de##ion-toast

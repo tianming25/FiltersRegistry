@@ -1,9 +1,9 @@
-! Checksum: SIuVec/wcB7dexEegYCn6g
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1742920635-3600.patch
+! Checksum: Kn7pH807OutO2LVMkojnTQ
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1742931393-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.58.82
-! TimeUpdated: 2025-03-25T16:32:38+00:00
+! Version: 2.0.58.83
+! TimeUpdated: 2025-03-25T19:32:28+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -2089,6 +2089,7 @@ usmall.ru##.c-kuki-bar
 flypobeda.ru##cookie-warning
 app.zasta.de,tester.userbrain.com#%#//scriptlet('set-cookie', 'CookieConsent', 'true')
 music.amazon.*###banner:has(> div[class]:only-child > #bannerFooter > music-link[aria-label*="ookie"])
+music.amazon.*###banner:has(> div[class]:only-child > #bannerFooter > music-link > span[aria-label*="cookies"])
 onb.ac.at#$#.fcc-cookie-modal { position: absolute !important; left: -3000px !important; }
 onb.ac.at#%#//scriptlet('set-cookie', 'cookie_ytvideo', '1')
 gaming.amazon.com##div[data-a-target="cookie-policy-banner"]

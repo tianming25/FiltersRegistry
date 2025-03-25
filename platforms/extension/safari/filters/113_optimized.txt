@@ -1,9 +1,9 @@
-! Checksum: RDDsQxbdEpiNCfZSxpnBJA
-! Diff-Path: ../patches/113_optimized/113_optimized-s-1742864813-14400.patch
+! Checksum: 7e5Lxy4/7D/3kaDw76jrRg
+! Diff-Path: ../patches/113_optimized/113_optimized-s-1742879200-14400.patch
 ! Title: Liste FR (Optimized)
 ! Description: Additional filter list for websites in French. Already included in AdGuard French filter.
-! Version: 2.1.67.1
-! TimeUpdated: 2025-03-25T01:01:23+00:00
+! Version: 2.1.67.2
+! TimeUpdated: 2025-03-25T05:01:19+00:00
 ! Expires: 5 days (update frequency)
 &ad_count=
 &ad_unit_
@@ -415,6 +415,7 @@ _banner-300x150.
 _banner.*?partner=
 _banner_pub.
 _banniere-300.
+_banniere-728.
 _board_ad.
 _dfp_conf.js
 _display_ad_
@@ -435,14 +436,13 @@ _publicite.
 _publicite_
 _sca_ads.
 _side_ads02.
+_smads_
 _smartclick.js
 _square_ads.
 _werbebanner_
 /wp-content/banners/*$third-party
 /wp-content/plugins/bazooka-shopping/*
 /wp-content/plugins/easy-affiliate-links/*
-/wp-content/plugins/mm-ad-widget/*
-/wp-content/plugins/mm-kelkoo/*
 /wp-content/plugins/mts-wp-in-post-ads/*
 /wp-content/plugins/progressads/*
 /wp-content/plugins/quick-adsense-reloaded/*
@@ -471,6 +471,7 @@ _werbebanner_
 /cdn.unblockia.com/*
 ||co^*?zoneId=
 ||com/func.js$script,~third-party
+||com/watch.*?*&key=
 ||com/watch.*?key=
 ||com/wnload?a=*&tz=$third-party
 ||net/sw.js?$other,script,~third-party
@@ -545,6 +546,7 @@ _build=iclick-$popup
 ||adplus.io^$third-party
 ||adrock.tv^$third-party
 ||adschoom.com^$third-party
+||adsenseguard.com^$third-party
 ||adserver.pm^$third-party
 ||adsgarden.com^$third-party
 ||adskom.com^$third-party
@@ -609,6 +611,7 @@ _build=iclick-$popup
 ||e-mailit.com^$third-party
 ||easy-rencontre.com^$third-party
 ||easysexe.com^$third-party
+||ebuzzing.fr^$third-party
 ||echangedebannieres.fr^$third-party
 ||eclkspsa.com^$third-party
 ||egnatius-ear.com^$third-party
@@ -1126,6 +1129,7 @@ _build=iclick-$popup
 ||gleetresis.com^
 ||glodsidrik.net
 ||gloutstutu.click^
+||glum-mortgage.com^
 ||glwmjwwi.com^
 ||gneoewuhkwzd.com^
 ||gntwnasiofqjypk.com^
@@ -1617,7 +1621,6 @@ _build=iclick-$popup
 ||xdowl0adxd0wnloadx.com^
 ||xihubo.click^
 ||xxxtarget.com^
-||yggtorrent.com^
 ||yktxrceoyoxn.com^
 ||ywuxgdtybxgw.xyz^
 ||zealousplace.com^
@@ -1678,7 +1681,6 @@ _build=iclick-$popup
 ||cloudtransfer.store^$popup
 ||cmvrclicks000.com^$popup
 ||correctdilutetrophy.com^$popup
-||cpabuild.com^$popup,third-party
 ||daftsex.com^$popup
 ||denetsuk.com^$popup
 ||dmsik.com^$popup
@@ -1784,6 +1786,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||chaturbate.com^*/?track=$subdocument,third-party
 ||chp.org.tr^$domain=link.tl|pubiza.com
 ||classement.pro^$image,third-party
+||cloudfront.net/dynamic-banners/
 ||cloudfront.net/img/banner
 ||cloudfront.net^*?partner=
 ||cloudfront.net^*tid=$script
@@ -1906,7 +1909,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||up-banner.wavecdn.net^
 ||vanwa.tech/assets/js/app.js
 ||vegemiam.fr/wp-content/uploads/$third-party
-||vendezvotrevoiture.fr^$subdocument,third-party
 ||vidazoo.com/aggregate?
 ||vidcoin.com^$domain=aufeminin.com
 ||viously.com/amp/szuG21KBA-F$domain=positivr.fr
@@ -2141,6 +2143,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||egaliteetreconciliation.fr/img/
 ||elahmad.com/ads/
 ||elahmad.com/js/extreme.js
+||elheddaf.com/data/pub/
 ||emploitic.com/images/banners/
 ||emu-france.com/wp-content/themes/emufrance/*casino
 ||entreprise-oran.com/file/*/reservation_hotel_
@@ -2190,6 +2193,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||lafranceapoil.com^*.php$script
 ||largus.fr/*/includes/javascript/advertising/
 ||lcd-compare.com/images/main/*/pub.jpg
+||lebuteur.com/interstitiel/Scripts/
 ||lecho.be/ad/
 ||ledevoir.com/documents/image/pub/
 ||ledgerwallet.com/images/promo/
@@ -2239,6 +2243,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||realite-virtuelle.com/wp-content/cache/min/1/pub.
 ||regie.story-fr.com^
 ||rencontresanslendemain.net/wp-content/uploads/*/banniere-
+||roulettechat.fr^*/facebook-api-pub/
 ||routiers.com/image/routiers/pub/
 ||ruedesjoueurs.com/images/articles-/promo/
 ||ruedesjoueurs.com/images/banners/
@@ -2290,6 +2295,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 @@||static.eroprofile.com^*/jquery.$script,~third-party
 @@||static.eroprofile.com^*/tools.js$script,~third-party
 ||eroprofile.com^$script
+||tube-teen.fr^$popup,script
 ||wawacity.al/a?$popup
 ||yts.*/assets/$popup
 ###ADSblock
@@ -2330,7 +2336,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###divHomeAd2
 ###divHomeAd3
 ###divPublicityLateral
-###div_banniere_pub
 ###dm_ads_Ban_desktop_bottom
 ###dm_ads_mobile_bottom
 ###fake-player-wrapper
@@ -2448,6 +2453,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.ad.billboard
 ##.ad.onlyMobile
 ##.ads-container
+##.ads-footerBanner
 ##.ads-group
 ##.adwrapper
 ##.ap-AdContainer
@@ -2555,7 +2561,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pagin_pub
 ##.panel-ads
 ##.parent_ad
-##.pave-pub
 ##.pave_pub
 ##.placeholder-pub_dfp
 ##.player-adv
@@ -2606,7 +2611,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pubHeader
 ##.pubLeft
 ##.pubMobile
-##.pubPadding
 ##.pubRight
 ##.pubText
 ##.pubTitle
@@ -2668,7 +2672,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.simple-ad
 ##.site-pub-interstitiel
 ##.skin_outer_ad
-##.smiliar_ads
 ##.special-banner
 ##.sponsored-articles
 ##.sponsored-fly
@@ -2697,8 +2700,8 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.vda-block
 ##.video-list-ads
 ##.video_reklama
-##.view-publicites
 ##.widget-advert
+##.widget-le_guide
 ##.widget-pub
 ##.widget_keleops-ad
 ##.widget_keleops-adhalfpage
@@ -2856,7 +2859,6 @@ finalclap.com###aff_tuto_com
 africanmanager.com###bLayer
 commentcamarche.com,commentcamarche.net###ba_position4
 commentcamarche.com,commentcamarche.net###ba_right
-meilleurmobile.com###backgrounddiv
 deavita.fr###badHabbitsPopup
 manga-news.com###ban970250
 degrouptest.com###bandeauFooter
@@ -2874,11 +2876,11 @@ lepetitjournal.com###block-larubriquesponsoriseinternational
 manga-news.com###block-up
 lanutrition.fr###block-views-remote-products-block-home
 cowcotland.com###blocpub1
-memoclic.com###bom_ban
 cowcotland.com###bottom_pubN2
 algerie360.com###boxes
 ktotv.com###campain-bandeau
 scan-manga.com###carouselTOPContainer
+sitedesmarques.com###check-also-box
 jetanimes.com###clickfakeplayer
 auchan.fr###cms-slot-disclaimerSlot
 tukif.com###co_sponsor
@@ -2973,6 +2975,7 @@ ccm.net,commentcamarche.com,commentcamarche.net,latribune.fr,traildesforts.com##
 permaculteurs.com##.aff
 leparking-moto.fr##.alter
 amazon.fr##.amzn-safe-frame-container
+centre-presse.fr,lamontagne.fr,larep.fr,le-pays.fr,leberry.fr,lechorepublicain.fr,lejdc.fr,lepopulaire.fr,lyonne.fr##.annonce_prompteur
 autojournal.fr,autoplus.fr##.annonces-container
 autojournal.fr,autoplus.fr##.annonces-container-sidebar
 herault-tribune.com##.annonces-legales
@@ -3336,6 +3339,7 @@ zataz.com#?#.custom-sidebar:-abp-has(h3:-abp-contains(/Partenaires|Publicité/))
 @@||js.txxx.tube/assets/$script,domain=txxx.com
 @@||js.txxx.tube/upd/*/static/js/$script,domain=txxx.com
 @@||jscloudflare.com/ajax/libs/$script,stylesheet,domain=11anim.com|file-upload.org
+@@||mrsexe.com/api/video.6.6.3.min.js$script,domain=mrsexe.com
 @@||playiri.com/player8/provider.$script,domain=vidlooz.com
 @@||sdk.privacy-center.org^$script,domain=frandroid.com
 @@||ssl.p.jwpcdn.com/player/v/$script,stylesheet,xmlhttprequest,domain=ahvsh.com|allviid.live|allviid.xyz|allviids.xyz|daktna.net|databasegdriveplayer.co|filelions.com|filelions.site|gdriveplayer.me|gdriveplayer.to|jeansaispasplus.homes|liiivideo.com|lvturbo.com|movcloud.net|onlystream.tv|sbanh.com|sblona.com|sbrapid.com|segavid.com|streamhide.com|streamhide.to|streamsb.com|supervideo.cc|theproxy.how|vadbam.com|vadbam.net|vdesk.live|vedbam.xyz|vidbam.org|vidlo.us|vidmoly.to|vidshar.org|vidspeed.net|vidspeeds.com
@@ -3353,6 +3357,7 @@ zataz.com#?#.custom-sidebar:-abp-has(h3:-abp-contains(/Partenaires|Publicité/))
 @@||wp.com/*/wp-includes/js/$script,domain=gum-gum-streaming.com
 @@||www.mrsexe.com/bower_components/jquery/dist/jquery.min.js$script,domain=mrsexe.com
 @@||www.mrsexe.com/inc/clic.php?video=$script,domain=mrsexe.com
+@@||www.mrsexe.com/jwplayer/jwplayer.$script,domain=mrsexe.com
 @@||xcdnpro.com/plugin/epay/$script,domain=cam4.com|cam4.fr
 @@||xcdnpro.com/web/js/$script,domain=cam4.com|cam4.fr
 @@||xcdnpro.com/web/v2/app/js/$script,domain=cam4.com|cam4.fr

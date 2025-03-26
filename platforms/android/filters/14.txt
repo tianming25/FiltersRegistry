@@ -1,9 +1,9 @@
-! Checksum: mX4t0loSowwL1J+0V/YVfw
-! Diff-Path: ../patches/14/14-s-1742974612-3600.patch
+! Checksum: 7mszDgR3xJy6ZXR5E4tfvw
+! Diff-Path: ../patches/14/14-s-1742978223-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.25.66
-! TimeUpdated: 2025-03-26T07:32:23+00:00
+! Version: 2.2.25.67
+! TimeUpdated: 2025-03-26T08:32:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -22841,6 +22841,8 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+staging-hoichoitv.viewlift.com##body > div[style^="position: fixed;"][style*="z-index: 9999;"]
+morosedog.gitlab.io##.navbar-interceptor
 trychatgpt.ru#%#//scriptlet('prevent-element-src-loading', 'script', 'statika.mpsuadv.ru')
 vertopal.com###vertonotif-container__bottom-right > .vertonotif-type-warning
 nsmb.com##.Vt8kMlfQ6G73bU
@@ -54789,6 +54791,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201682
+foodtechnos.in#%#//scriptlet('adjust-setInterval', '[_0x', '*', '0.001')
+foodtechnos.in#%#//scriptlet('adjust-setTimeout', '/createLinkButton|buttonGroup/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201278
 asianetnews.com#%#//scriptlet('trusted-click-element', '.btnreadfull', '', '500')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200962

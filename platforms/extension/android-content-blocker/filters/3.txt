@@ -1,8 +1,8 @@
-! Checksum: 13IsTnuLHm9V5vbheth6ag
+! Checksum: ub5TKayGufoiWphok6MrOA
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.82.29
-! TimeUpdated: 2025-03-26T16:27:44+00:00
+! Version: 2.0.82.30
+! TimeUpdated: 2025-03-27T13:40:04+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -379,7 +379,7 @@ adseek.site#$##primary { display: block !important; }
 ||ct.beslist.nl^
 ||tvpixel.com^
 .tvp.tv^$third-party
-||applicationinsights.azure.com^
+||applicationinsights.azure.com^$domain=~azure.net
 ||analytics.sve.cc^
 ||api.taboola.sve.cc^
 ||identitypxl.app^
@@ -882,7 +882,6 @@ adseek.site#$##primary { display: block !important; }
 ||offer-go.com^$third-party
 ||d2ezz24t9nm0vu.cloudfront.net^
 ||px*.mediahills.ru^
-||sdk-v2.conscent.in^$third-party
 ||sdk.conscent.in^$third-party
 ||tpstelemetry.tencent.com^
 ||app.posthog.com^$third-party
@@ -51124,6 +51123,7 @@ adseek.site#$##primary { display: block !important; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||log.strawpoll.com^
 ||client.rum.*.amazonaws.com^
 ||tempo-client-metric-prod.s3.amazonaws.com^
 ||sapphire-api.target.com^
@@ -58911,6 +58911,8 @@ link.gmapp*.net$image
 ! it's problematic that due to how Gmail proxy work, these domains aren't even exposed on the network level
 ! fortunately, extensions can see them (Gmail puts the real URL in the location.hash part of the src)
 !
+! Atlassian
+atlassian-trk.prd.msg.ss-inf.net$image
 ! wise.com
 api.transferwise.com/v1/notification-flow/$image
 api.transferwise.com%2Fv1%2Fnotification-flow%2F$image
@@ -59875,6 +59877,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Bad:  ||monerominer.rocks^$third-party (should be in adservers.txt)
 !
 !
+! hwbusters.com
 ! rutube.ru
 ! katu.com
 ! popin.cc

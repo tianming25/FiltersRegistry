@@ -1880,6 +1880,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+hwbusters.com#%#//scriptlet('set-constant', 'advanced_ads_check_adblocker', 'noopFunc')
 voiceofdenton.com#%#//scriptlet('set-constant', 'advanced_ads_check_adblocker', 'noopFunc')
 staging-hoichoitv.viewlift.com##body > div[style^="position: fixed;"][style*="z-index: 9999;"]
 morosedog.gitlab.io##.navbar-interceptor
@@ -4580,6 +4581,8 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 ! SECTION: Anti-adblock - The rules for content blockers only
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
+hwbusters.com#@#.ad_unit
+hwbusters.com#@#.ad-unit:not(.textads)
 voiceofdenton.com#@#.ad_unit
 voiceofdenton.com#@#.ad-unit:not(.textads)
 @@||terrylove.com^$generichide
@@ -13537,6 +13540,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+inkefalonia.gr##.uk-panel:has(a[href^="https://news.google.com/publications/"])
 ukranews.com##.b-article__sign
 gamefile.news#?##home-body > div.pencraft div[class*="contentBlockContainer"]:has(> div[class^="outerContainer"] > div.pencraft button:contains(Subscribe))
 ama-assn.org##.promo_as_inline-20676
@@ -17245,7 +17249,7 @@ sotoguide.ru###button_tg
 trans.info##.newsletter-subscribe-popup
 publico.pt##.outter-box_paywall
 publico.pt##.site-message--subscription-promo.paywall_camp_verao
-emergency-live.com,moveo.telepass.com,newsmaker.md###custom_html-10
+domainnamewire.com,emergency-live.com,moveo.telepass.com,newsmaker.md###custom_html-10
 politico.eu##.entry__content > div.wp-block-cover
 paperpaper.ru#?#.stk-post > div.stk-grid:has(> div[class] > a:contains(/^подписаться$/))
 eurotopics.net##div[class^="newsletter-banner"]

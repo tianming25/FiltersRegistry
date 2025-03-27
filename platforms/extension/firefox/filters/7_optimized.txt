@@ -1,9 +1,9 @@
-! Checksum: 5PDeOpO/HKJaeSllpCCyhw
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1743006695-3600.patch
+! Checksum: xRbUxBJb83wb/Ab4i+iUXQ
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1743083051-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.19
-! TimeUpdated: 2025-03-26T16:27:59+00:00
+! Version: 2.0.63.20
+! TimeUpdated: 2025-03-27T13:40:14+00:00
 ! Expires: 10 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adandhub.com^
@@ -390,7 +390,8 @@
 ||kok.eroterest.net^
 ||ad-hatena.com^
 ||advert.punyu.com^
-qrcodemonkey.net#%#//scriptlet('prevent-setTimeout', '#ad_blocker_detector')
+video.tv-tokyo.co.jp#$##detect.ad-container { display: block !important; }
+video.tv-tokyo.co.jp#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 chobirich.com#$#.Enquete { display: block !important; }
 chobirich.com#@#.ad_image
 chobirich.com#@#.img_ad

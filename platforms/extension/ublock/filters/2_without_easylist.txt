@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1lOd/ItLkO8m31Nasxd99A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743091909-3600.patch
+! Checksum: tdoo9gDvnR0fWfEE10DUEQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743095440-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.76.77
-! TimeUpdated: 2025-03-27T16:07:39+00:00
+! Version: 2.3.76.78
+! TimeUpdated: 2025-03-27T17:06:24+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -44857,7 +44857,7 @@ triblive.com###storyContent > div[data-type="float"][data-stn-player]
 !
 ! START: Ad-Shield ad reinsertion
 ! ad-shield.cc CNAME ex. https://www.47206262.xyz/script/jmty.jp.js
-/^https:\/\/www\.\d{8}\.xyz\/script\/[0-9A-Za-z.-]+\.[A-Za-z-]{2,}\.js$/$script,third-party
+/^https:\/\/www\.[0-9a-z-]{8,}\.xyz\/script\/[-.0-9A-Za-z]+\.[A-Za-z-]{2,30}\.js$/$script,third-party,match-case
 ! For all platforms including iOS
 ||html-load.com/loader.min.js$domain=nikkansports.com|j-cast.com|picksandparlays.net|ranking.net|minkou.jp
 ||ad-shield.cc^

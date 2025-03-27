@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.76.79",
-			"timeUpdated": "2025-03-27T18:08:28+0000",
+			"version": "2.3.76.80",
+			"timeUpdated": "2025-03-27T19:06:05+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -701,8 +701,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.10.78",
-			"timeUpdated": "2025-03-27T13:40:35+0000",
+			"version": "2.0.10.79",
+			"timeUpdated": "2025-03-27T19:06:46+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

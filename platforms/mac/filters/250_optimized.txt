@@ -1,4 +1,4 @@
-! Checksum: a5SQEPx9RhC32qS7UT6yfg
+! Checksum: Zw9dnrQNtxDKdz3Q24BrKg
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.48
@@ -789,7 +789,6 @@ coolrom.com.au,coolrom.com##.download_link
 192.243.61.225$network
 !+ PLATFORM(windows, mac, android)
 192.243.61.227$network
-||bosselinorrummage.com^$all
 ||gridehornyidentifier.com^$all
 ||paddlemoscowsplit.com^$all
 !+ PLATFORM(windows, mac, android)
@@ -845,7 +844,6 @@ coolrom.com.au,coolrom.com##.download_link
 ||haltedtrustworthypurpose.com^$all
 ||negateacted.com^$all
 ||analaxadulatory.com^$all
-||inscribemutenessforced.com^$all
 ||expensivelikeness.com^$all
 ||acceptguide.com^$all
 ||apologiesoccursdepressed.com^$all
@@ -3495,6 +3493,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##a[href*="telegram.me/share/url?"]
 ##a[onclick*="plus.google.com/share?"]
 ##a[onclick^="window.open('http"][onclick*="facebook.com/sharer"]
+##a[title="Share on Reddit" i]
 ##a[title="Share on WhatsApp" i]
 ##a[title^="Share to "]
 ##amp-social-share
@@ -3575,6 +3574,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ~pinterest.*##.share-pinterest:not(html,body,:empty)
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~pinterest.*##a[onclick*="pinterest.com/pin/create/"]
+~pinterest.*##a[title="Share on Pinterest" i]
 ~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="reddit.com/submit?"]
 ~skype.com##a[href*="web.skype.com/share?url="]
 ~stumbleupon.com##a[href*="stumbleupon.com/submit?url="]
@@ -3697,6 +3697,7 @@ deviantart.com##div[style^="width:"] > div:first-of-type + div:last-of-type:has(
 twitch.tv###twilight-sticky-footer-root
 pinterest.*##div[id$=unauth-container] div[data-test-id=pin-closeup-image] > div[style^="cursor: pointer;"]
 www.deviantart.com##body > header[role=banner]:not([class*=" "]) ~ div[class^=_][class*=" "]:has(a[href*="/login"])
+magma.com##modals-box
 vk.com###page_bottom_banners_root
 substack.com,microsoftsecurityinsights.com,chipstrat.com##div[class^=subscribe-]
 substack.com,microsoftsecurityinsights.com,chipstrat.com##.subscription-widget-wrap > .show-subscribe
@@ -3829,11 +3830,11 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||accounts.google.com/gsi^$domain=www.deviantart.com
 @@||siteadvisor.com^
 @@||securitytrails.com^
+@@||www.joesandbox.com^
 @@||virustotal.com^
 @@://safeweb.norton.com^
 @@||sitecheck.sucuri.net^
 @@||safebrowsing.google.com^
-@@://www.fortiguard.com^
 @@://wikipedia.org^
 @@://github.com^|
 @@||bitbucket.org^
@@ -3909,7 +3910,6 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 ~imdb.com##.btn-imdb:not(html,body,:empty)
 ~imdb.com##.jt-imdb:not(html,body,:empty)
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
-playpilot.com##.ratings
 www.google.*,ipv6.google.com#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*,ipv6.google.com##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
@@ -3927,7 +3927,6 @@ $removeparam=mindbox-message-key
 $removeparam=nx_source
 $removeparam=oprtrack
 $removeparam=ysclid
-&uclick=*&uclickhash=$document,removeparam
 $document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp|~uploadnow.io
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
@@ -4105,7 +4104,6 @@ $removeparam=wbraid
 $removeparam=recurring_goal_id
 $document,removeparam=/^affiliateID=.*$/i
 $removeparam=affiliate_id
-$removeparam=afn_sr
 $removeparam=cjdata
 $removeparam=click_id,domain=~bookings.beatthatflight.*
 $removeparam=wtExtndSource
@@ -4271,11 +4269,8 @@ $document,removeparam=/^mtm_.*$/
 $removeparam=pk_campaign
 $removeparam=pk_medium
 $removeparam=pk_source
-$removeparam=pk_content
 $removeparam=pk_kwd
 $removeparam=pk_keyword
-$removeparam=au_advert_id
-$removeparam=au_car_id
 $removeparam=ads_adid
 $removeparam=ads_cmpid
 $removeparam=ads_creative
@@ -4407,6 +4402,7 @@ $document,removeparam=adid,domain=indeed.com|mcafee.com|nikkei.co.jp|tmz.com
 ||amazon.$removeparam=sr
 ||amazon.$removeparam=creative
 $removeparam=creativeASIN
+$removeparam=trkCampaign
 $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com|linkedin.com|lnkd.in
 ||amazon.$removeparam=/^__mk_*_.*$/
 ||amazon.$removeparam=ascsubtag
@@ -4588,6 +4584,7 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=fbs
 ||www.google.$document,removeparam=ictx
 ||www.google.$document,removeparam=dpr
+||www.google.$document,removeparam=tfu
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
 @@://www.google.com/maps?entry=$removeparam=utm_campaign
@@ -4832,6 +4829,7 @@ $removeparam=bsencid
 ||malwarebytes.com^$removeparam=x-source
 ||malwarebytes.com^$removeparam=ADDITIONAL_x-source
 ||ozon.ru^$removeparam=advert
+$document,removeparam=sh,domain=forbes.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 $removeparam=soc_src
 $removeparam=soc_trk
 ||as.com^$removeparam=omnil
@@ -4877,8 +4875,6 @@ $removeparam=algo,document
 $removeparam=imp_id,document
 ||steampowered.com^$removeparam=ser
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
-$removeparam=ds_e_adid,domain=clickserve.dartsearch.net
-$removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||xg4ken.com^$removeparam=prof
 ||xg4ken.com^$removeparam=kct
 ||xg4ken.com^$removeparam=kchid
@@ -4918,9 +4914,6 @@ $removeparam=visit_id,document,domain=bilibili.com|google.*
 ||coupang.com^$removeparam=traceid
 ||coupang.com^$removeparam=wTime
 ||coupang.com^$removeparam=wPcid
-||fiverr.com^$removeparam=bta
-||fiverr.com^$removeparam=afp
-||fiverr.com^$removeparam=cxd_token
 ||walmart.$removeparam=/^wl\d=.*$/
 ||walmart.$removeparam=wl10
 ||walmart.$removeparam=wl11
@@ -5061,7 +5054,6 @@ $removeparam=embeds_referring_euri
 ||open.substack.com^$removeparam=r,document
 $removeparam=afSmartRedirect
 ||wsj.com^$removeparam=st
-$removeparam=adt_ei
 ||linkedin.com/feed/update$removeparam=origin
 $document,domain=bilibili.com|querie.me,removeparam=timestamp
 ||gitlab.$removeparam=ref_type
@@ -5489,6 +5481,7 @@ youtube.com##ytd-miniplayer[has-playlist-data][closed] ~ * .ytp-miniplayer-butto
 $third-party,denyallow=microsoft.com,domain=store.rg-adguard.net
 fandom.com##.notifications-box
 flipkart.com##div[style^=flex-grow] div:first-of-type + div.col
+flipkart.com##footer section + div:last-of-type
 ||ogp.me^$csp=upgrade-insecure-requests
 ||schema.org^$csp=upgrade-insecure-requests
 ||detectportal.firefox.com^$csp=upgrade-insecure-requests

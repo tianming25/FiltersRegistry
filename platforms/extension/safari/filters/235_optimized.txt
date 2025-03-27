@@ -1,9 +1,9 @@
-! Checksum: jYlfWXy9p1IkvFH3YBcItg
-! Diff-Path: ../patches/235_optimized/235_optimized-s-1742792794-14400.patch
+! Checksum: AZ//hHfYeqEFeGeKezgJdA
+! Diff-Path: ../patches/235_optimized/235_optimized-s-1743093774-14400.patch
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.5.49
-! TimeUpdated: 2025-03-24T05:01:47+00:00
+! Version: 2.0.5.50
+! TimeUpdated: 2025-03-27T16:39:08+00:00
 ! Expires: 5 days (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
@@ -1990,6 +1990,8 @@ player.telewebion.com#%#//scriptlet('ubo-json-prune.js', 'body.productStatus')
 ||gateway.telewebion.com/broker/api/v1/message/twplayer^$xmlhttprequest,~third-party,method=POST
 ||gateway.telewebion.com/broker/api/v1/message/archive^$xmlhttprequest,~third-party,method=POST
 ||gateway.telewebion.com/broker/api/v1/message/live^$xmlhttprequest,~third-party,method=options|post
+||data.telewebion.com/broker/api/v1/message/vod-player^$xmlhttprequest,~third-party,method=post
+||hadeseh.simra.cloud^
 telewebion.com##.rmp-ad-container
 telewebion.com#$#app-channel div.live-box { width: 100% !important; }
 takhfifan.com#%#//scriptlet('ubo-set.js', '_paq', '[]')

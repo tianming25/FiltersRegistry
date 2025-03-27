@@ -1,9 +1,9 @@
-! Checksum: nPyCPA6rUalYNGwMUFsH0w
-! Diff-Path: ../patches/3/3-s-1743088280-3600.patch
+! Checksum: wEDH7G5RRZ93DPiw5ItZGw
+! Diff-Path: ../patches/3/3-s-1743091906-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.82.31
-! TimeUpdated: 2025-03-27T15:07:33+00:00
+! Version: 2.0.82.32
+! TimeUpdated: 2025-03-27T16:07:50+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -539,6 +539,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 !
 !
 !
+||cnstrc.com^
+||zineone.com^$third-party
 ||data.emb-api.com^
 ||config.emb-api.com^
 ||ponos.zeronaught.com^
@@ -44114,6 +44116,9 @@ _tracking.php?b=
 !
 ! NOTE: Specific rules
 !
+arstechnica.com#%#//scriptlet('set-local-storage-item', 'au/last_seen_pixels', '$remove$')
+arstechnica.com#%#//scriptlet('set-local-storage-item', 'permutive-data-misc', '$remove$')
+arstechnica.com#%#//scriptlet('set-local-storage-item', 'permutive-app', '$remove$')
 ||s.yimg.com/jk/aabd/prod/adblockerdetector.umd.js
 ||s.yimg.com/aaq/benji/benji-*.js
 addons.mozilla.org#%#//scriptlet('href-sanitizer', 'a[href^="https://prod.outgoing.prod.webservices.mozgcp.net/"]:not([title]')

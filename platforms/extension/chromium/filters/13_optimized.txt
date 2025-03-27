@@ -1,9 +1,9 @@
-! Checksum: YjX1ThWdsbWi3wHvHUtOwg
-! Diff-Path: ../patches/13_optimized/13_optimized-s-1743095421-3600.patch
+! Checksum: 4HYt10l4N5LbrIymoLOGnw
+! Diff-Path: ../patches/13_optimized/13_optimized-s-1743109820-3600.patch
 ! Title: AdGuard Turkish filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.55.44
-! TimeUpdated: 2025-03-27T17:07:00+00:00
+! Version: 2.0.55.45
+! TimeUpdated: 2025-03-27T21:07:03+00:00
 ! Expires: 10 days (update frequency)
 ||dontmakethem.club^
 ||subaxe.xyz^
@@ -679,7 +679,7 @@ mgviagrtoomuch.com#%#//scriptlet('set-constant', 'window.config.match.watermark'
 mislink3.com#%#//scriptlet('trusted-replace-node-text', 'script', 'saniye--', 'var saniye = 10;', 'var saniye = 0;')
 yeppuu.com#%#//scriptlet('abort-on-property-write', 'openRandomUrl')
 pllsfored.com#%#//scriptlet("set-constant", "window.config.adv", "emptyObj")
-webdramaturkey.net,afroditscans.com#%#//scriptlet("abort-on-property-read", "openPopup")
+webdramaturkey.*,afroditscans.com#%#//scriptlet("abort-on-property-read", "openPopup")
 dizipia.com#%#//scriptlet('abort-on-property-write', 'popURL')
 erosfilmizle.*#%#//scriptlet('prevent-window-open')
 justintvizle21.pro#%#//scriptlet('set-constant', 'puShown', 'true')
@@ -772,8 +772,7 @@ milligazete.com.tr#$?#div.slick-track > a[href^="/service/advertclick"] { remove
 mobile.donanimhaber.com#%#//scriptlet('set-session-storage-item', 'pageCount', '0')
 mobile.donanimhaber.com#%#if(window.sessionStorage) { window.sessionStorage.pageCount = 0; }
 mackolik.com,sahadan.com#%#setTimeout ("HideFloatAdBanner()", 1000);
-webdramaturkey.net#$#.container { margin-top: 0px !important; }
-webdramaturkey.com#$#body > .container { margin-top: 0 !important; }
+webdramaturkey.*#$#body > .container { margin-top: 0 !important; }
 dizikorea.*#$#.wrapper { margin-top: 0 !important; }
 sinema.cx#$#body > #page { margin-top: 0 !important; }
 diziyo.*#$##dt_contenedor { margin-top: 0 !important; }
@@ -1452,7 +1451,7 @@ softonic.com.tr##.black-friday-ads
 sinefy3.com##.bg-cover-faker > div:not([class]):not([id]) > center
 ||storage.oyungezer.com.tr/ogz-public/ads/
 ||webdramaturkey.com/*/*.mp4
-animeizlesene.com,webdramaturkey.com##.ads-embed
+animeizlesene.com,webdramaturkey.*##.ads-embed
 ntv.com.tr#?#.slick-track > div.slick-slide > div > div.ntv-main-slider-item:has(> a[href^="http://pubads.g.doubleclick.net/"])
 ntv.com.tr#?#.slick-track > div.slick-slide > div > li.ntv-main-slider-pagination-item:has(> a[href^="http://pubads.g.doubleclick.net/"])
 /^https:\/\/www\.donanimhaber\.com\/images\/images\/[a-z_-]+[0-9]+x[0-9]+(_|-)/$domain=donanimhaber.com
@@ -5138,6 +5137,7 @@ ugurfilm7.com,ugurfilm8.com,ugurfilm9.com,ugurfilm10.com,ugurfilm11.com,ugurfilm
 ugurfilm7.com,ugurfilm8.com,ugurfilm9.com,ugurfilm10.com,ugurfilm11.com,ugurfilm12.com,ugurfilm13.com,ugurfilm14.com,ugurfilm15.com,ugurfilm16.com##a[href="https://ucuncusinema.com/"]
 /reklampopup*.js$domain=ugurfilm7.com|ugurfilm8.com|ugurfilm9.com|ugurfilm10.com|ugurfilm11.com|ugurfilm12.com|ugurfilm13.com|ugurfilm14.com|ugurfilm15.com|ugurfilm16.com
 ugurfilm7.com,ugurfilm8.com,ugurfilm9.com,ugurfilm10.com,ugurfilm11.com,ugurfilm12.com,ugurfilm13.com,ugurfilm14.com,ugurfilm15.com,ugurfilm16.com##img[alt="Reklam"]
+||ugurfilm*.com/wp-content/cache/autoptimize/autoptimize_single_*.php
 ||avrupabettv*.com/wp-content/uploads/
 avrupabettv1.com,avrupabettv2.com,avrupabettv3.com,avrupabettv4.com,avrupabettv5.com,avrupabettv6.com,avrupabettv7.com,avrupabettv8.com,avrupabettv9.com,avrupabettv10.com,avrupabettv11.com,avrupabettv12.com,avrupabettv13.com,avrupabettv14.com,avrupabettv15.com,avrupabettv16.com,avrupabettv17.com,avrupabettv18.com,avrupabettv19.com,avrupabettv20.com,avrupabettv21.com,avrupabettv22.com##.pageskin
 ||rekortv*.com/wp-content/uploads/

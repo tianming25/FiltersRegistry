@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ynm3XmrORJj9kzQ/kUgA4w
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743142380-3600.patch
+! Checksum: EI7q8eK5NNghNRheaioqtg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743149578-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.76.87
-! TimeUpdated: 2025-03-28T06:08:55+00:00
+! Version: 2.3.76.88
+! TimeUpdated: 2025-03-28T08:08:37+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -18360,6 +18360,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201832
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=zone.msn.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201669
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201585
 fiches-auto.fr##body > button#back-to-top ~ div[id][style="display: block;"]
@@ -45110,6 +45112,7 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+peakpx.com##li[style^="width: 300px; height: 250px;"]
 fapcat.com##.alert-ad
 fapcat.com##.nav-item:has(> a[rel*="sponsored"])
 fastt.gg##a[id="startDownload"][target="_blank"]
@@ -64207,7 +64210,7 @@ forbes.com##.channel--ad
 ##html > div[class][style^="pointer-events: none; position: absolute; top: 0px; left: 0px; width:"]
 ##html > div[style="position: fixed; inset: 0px; z-index: 2147483647; pointer-events: auto;"]
 /^https:\/\/[a-z-]{5,13}\.[a-z]{2,6}\/[a-z0-9]{1,20}\?[A-Za-z0-9]{15,26}=(?=.*[A-Z])[A-Za-z0-9%]{35,2000}$/$xmlhttprequest,third-party,match-case
-yassflix.net,swipebreed.net,eurekaddl.lat,pepperlivestream.online,pawastreams.pro,time4tv.site,en.tgo-tv.xyz,miztv.shop,vidlink.pro,knaben.xyz,powstream.*,rojadirectaenvivo.pl,ext.to,nepu.to,capo4play.com,wawacity.cfd,1337x.to,zone-telechargement.*,kickassanime.mx,redecanais.in,streameast.*,thestreameast.*,anroll.net,anarchy-stream.com,freckledine.net,buffstreams.app,sanet.lc,1stream.eu,compensationcoincide.net,embedstreams.me,closedjelly.net,sportsonline.*,dl-protect.link,cricstream.me,extreme-down.*,yts.mx,eztvx.to,claplivehdplay.ru,skidrowreloaded.com,olympicstreams.*,streambucket.net,modsfire.com,official.nbabite.com,forgepattern.net,sportsonline.*##+js(abort-on-property-read, Adcash)
+wooflix.tv,yassflix.net,swipebreed.net,eurekaddl.lat,pepperlivestream.online,pawastreams.pro,time4tv.site,en.tgo-tv.xyz,miztv.shop,vidlink.pro,knaben.xyz,powstream.*,rojadirectaenvivo.pl,ext.to,nepu.to,capo4play.com,wawacity.cfd,1337x.to,zone-telechargement.*,kickassanime.mx,redecanais.in,streameast.*,thestreameast.*,anroll.net,anarchy-stream.com,freckledine.net,buffstreams.app,sanet.lc,1stream.eu,compensationcoincide.net,embedstreams.me,closedjelly.net,sportsonline.*,dl-protect.link,cricstream.me,extreme-down.*,yts.mx,eztvx.to,claplivehdplay.ru,skidrowreloaded.com,olympicstreams.*,streambucket.net,modsfire.com,official.nbabite.com,forgepattern.net,sportsonline.*##+js(abort-on-property-read, Adcash)
 anime4i.vip,vipleague.*,swipebreed.net,eurekaddl.lat,sanet.st,totalsportek.club,totalsportek.games,totalsportek.futbol,totalsportek.zip,totalsportek.racing,totalsportek.tel,totalsportek.dad,time4tv.site,buffsports.*,olympicstreams.*##+js(abort-current-script, globalThis, adserverDomain)
 vidlink.pro,knaben.xyz,powstream.*,rojadirectaenvivo.pl,ext.to,capo4play.com,1337x.to,zone-telechargement.*,kickassanime.mx,redecanais.in,freckledine.net,buffstreams.app,sanet.lc,1stream.eu,compensationcoincide.net,embedstreams.me,closedjelly.net,sportsonline.*##+js(abort-on-stack-trace, Element.prototype.hasAttribute, isActionAllowedOnElement)
 !

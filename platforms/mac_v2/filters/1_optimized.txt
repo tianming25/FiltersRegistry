@@ -1,9 +1,9 @@
-! Checksum: Y4lnY7WU5aJRRiC81NwJRw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1743178318-3600.patch
+! Checksum: GHUAiIF/iQDJdk5zedbVIg
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1743181815-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.98.42
-! TimeUpdated: 2025-03-28T16:07:20+00:00
+! Version: 2.0.98.43
+! TimeUpdated: 2025-03-28T17:06:05+00:00
 ! Expires: 12 hours (update frequency)
 /nadavi-api/?p4g3=js/api/widget.js
 ||aj*.bid/*?vpaid=$xmlhttprequest
@@ -2173,6 +2173,7 @@ dzen.ru##.viewer-layout__sidebar div[class*="__content"] > div[class*="__feed"] 
 ||strm.yandex.*/get/$xmlhttprequest,redirect=noopvast-3.0,domain=dzen.ru
 [$path=/video]dzen.ru##div[class$="sidebar__item"] div[class*="-sidebar__ad"]
 @@||ad.mail.ru/static/admanhtml/rbadman-html5.min.js$domain=dzen.ru
+[$path]mail.ru#%#//scriptlet('abort-on-stack-trace', 'document.createElement', 'getSlotByMimic')
 [$path]mail.ru#%#//scriptlet("prevent-window-open", "help.mail.ru/mail/faq/adblock")
 mail.ru##.box_double
 mail.ru##div[data-logger="partnerNews"]

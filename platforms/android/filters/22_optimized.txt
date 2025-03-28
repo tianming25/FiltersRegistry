@@ -1,5 +1,5 @@
-! Checksum: 43WwXsIEeglcXQV5KB28GQ
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1743083034-3600.patch
+! Checksum: OUiNKw/8sFtH0AiZTn0Hqg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1743129417-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.11.39
@@ -199,6 +199,7 @@ tousatu-ch.net##.widget_custom_html:has(> div.textwidget > div[style^="width: 10
 shirotomaster.com###container > div[style]:has(> iframe[src^="https://www.elog-ch.net/blogparts_iframe.php"])
 tousatu-ch.net##.widget:has(> div.textwidget > div[style] div[id^="blz_rss"])
 tousatu-ch.net##.widget:has(> div.textwidget > div[style] > iframe[src^="https://nozokix.com/blogparts_iframe.php"])
+tousatu-ch.net##div[id^="sidebar"] div.widget:has(> div.textwidget div[class^="side-"] li > a[href^="https://minkch.com/"])
 tousatu-ch.net###foot-in
 minkch.com##.click-drawing-container + div.yarpp-related-website
 minkch.com##.click-drawing-container + div.yarpp-related-website ~ li
@@ -269,7 +270,6 @@ gamedaradara.doorblog.jp#?#.article-body-inner b:has(+ div[id$="_rss"])
 ||rutube.ru/pangolin/api/web/yappy/$xmlhttprequest
 rutube.ru##section[aria-label="информационный баннер"]
 crx7601.com#?#.article-body-inner .twitter-tweet ~ b:has(+ .ninja-recommend-block)
-hmangamatome.net##.rssbox_midashi
 /wp-content/plugins/chaty/*$domain=krx18.com|canadaglobalinfo.com|mkvcinemas.kim
 netouyonews.net,gameinn.jp##.wp-rss-template-container
 sugi69693.xyz###sidebar
@@ -900,6 +900,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||cdn.freshbots.ai^$third-party
 ||cdn.reamaze.com^$third-party
 ||chaser.ru^$third-party
+||chat.amplify.ai^$third-party
 ||chat.autofaq.ai^$third-party
 ||chat24.io^$third-party
 ||chatbot.lifecell.ua^
@@ -997,7 +998,6 @@ blamper.ru##div[data-module^="widgets/common/FakeChat/"]
 centr-hirurgii.ru,smclinic.ru###call-btn
 eldorado.ru###custom-livetex-fab
 electron1ca.ru##.popup-phone-wrapper
-esputnik.com##.intercom-lightweight-app
 f.ua##.callback_buttons
 hdfcbank.com###chatTogglerDiv
 justanswer.com##.th-chat-window
@@ -1339,6 +1339,7 @@ agents.media##.single-post__donate-block
 charter97.org###donate-article
 nonciclopedia.org,miraheze.org###siteNotice
 winstall.app##div[class^="donateCard_container__"]
+openstreetmap.org###banner
 wbur.org##.section--takeover
 ||wisepops.net/loader.js$domain=civileats.com
 cavalierdaily.com#$#.modal-backdrop { display: none !important; }

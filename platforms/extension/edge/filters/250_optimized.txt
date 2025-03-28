@@ -1,5 +1,5 @@
-! Checksum: b8v4DAh4pwy9QM1xwmQZHw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1743093761-14400.patch
+! Checksum: Cl8x3bpsfrHd/IMvzTT67g
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1743151290-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.48
@@ -67,6 +67,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
 www.google.*,ipv6.google.com##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
 www.google.*,ipv6.google.com##.g:has(a[href^="https://books.google."])
+||fileplanet.com^$document,popup
 windowsreport.com##.code-block
 ugetfix.com,sauguspc.lt,wyleczpc.pl,sichernpc.de,pcseguro.es##.js-download_button_additional_links
 ugetfix.com,sauguspc.lt,wyleczpc.pl,sichernpc.de,pcseguro.es##.download-button-offer-header
@@ -116,6 +117,7 @@ coolrom.com.au,coolrom.com##.download_link
 ://landings.*_slots/?partner=$document
 ||rafkxx.com^$all
 ||goatmod.xyz^$all
+||inquirygrid.com^$all
 /page/bouncy.php?$all
 ||banquetunarmedgrater.com^$all
 ||garglingably.com^$all
@@ -697,7 +699,6 @@ apkfab.com##.tip-extension
 .aspx?iid=*&cid=$all
 /flying.asp?cid=$all
 ||googleapis.com/beastlyendeavors^$all
-||dreamintim.com^$all
 ||1bestmatch.com^$all
 ||googoodee.com^$all
 ||supporters.eu.org^$all
@@ -2569,10 +2570,8 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||amazonaws.com^$document,popup,badfilter
 ||amazonaws.com^$document,badfilter
 ||amazonaws.com^$badfilter
-||dabaicai.com^$all
 ||flash.cn^$all
 ||consumerproductsusa.com^$all
-||dabaicai.com^$all
 ||dateclique.life^$all
 ||flash.cn^$all
 ||onlinepromotionsusa.com^$all
@@ -2867,6 +2866,7 @@ news.sina.com.cn##.clearfix.blk-wxfollow
 smzdm.com##.footer-right
 tmall.com###mobile
 trade.tmall.com##.show-cross-btn
+ctrip.com###fl_wrap_default
 smzdm.com##.qr-buy-container
 12306.cn##.fixed-right-menu > li.menu-item:nth-of-type(3)
 58.com##.app.rightbtn
@@ -2880,6 +2880,7 @@ lianjia.com,zu.ke.com,csair.com##.qr-code
 map.baidu.com##.poi-ads
 map.baidu.com###leadDownloadCard
 mi.com##.item-image.item
+qyer.com##.advertising
 smzdm.com##.qrcode
 smzdm.com##.share_app_icon
 smzdm.com###index-elevator > li:nth-of-type(2)
@@ -3210,6 +3211,7 @@ $removeparam=MID,domain=~media-cdn.costco.*|~community.arubanetworks.com
 $removeparam=srnd
 =adservice$removeparam=coid,domain=~radioreference.com|~finanzonline.bmf.gv.at
 $document,removeparam=/^bsft_.*$/
+$document,removeparam=/^dpg_.*$/
 $document,removeparam=/^adjust.*$/,domain=~adj.st
 $document,removeparam=elq,domain=~comcast.com|~comcastforbusiness.com
 $document,removeparam=elqaid,domain=~comcast.com|~comcastforbusiness.com
@@ -3233,6 +3235,7 @@ $document,removeparam=/^affiliateID=.*$/i
 $removeparam=affiliate_id
 $removeparam=cjdata
 $removeparam=click_id,domain=~bookings.beatthatflight.*
+$removeparam=cm_soc
 $removeparam=wtExtndSource
 $removeparam=CAID
 $removeparam=rfsn
@@ -3249,8 +3252,9 @@ $removeparam=impradid
 $removeparam=impradname
 Ref=CJ^$document,removeparam=ref
 $removeparam=cjid
+$removeparam=irsharedid
+$removeparam=hvarAID
 $removeparam=sv_campaign_id
-$document,removeparam=/^sv_tax.*$/
 $document,removeparam=/^icid_.*$/
 $removeparam=LSNSUBSITE
 $removeparam=subacctname
@@ -3398,6 +3402,7 @@ $removeparam=pk_medium
 $removeparam=pk_source
 $removeparam=pk_kwd
 $removeparam=pk_keyword
+$removeparam=ig_mid
 $removeparam=ads_adid
 $removeparam=ads_cmpid
 $removeparam=ads_creative
@@ -3443,7 +3448,6 @@ $removeparam=as_campaign
 $removeparam=as_camptype
 $removeparam=as_channel
 $removeparam=as_source
-$document,removeparam=/^source=igodigital$/
 $removeparam=qq-pf-to
 $removeparam=mibextid
 $document,removeparam=/^adppopup=[a-eg-zA-EG-Z0-9]/
@@ -3705,6 +3709,7 @@ $removeparam=_x_tr_pto
 $document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||www.google.*/search$removeparam=oq,document
 ||google.$document,removeparam=sca_esv
+$removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||translate.goog^$removeparam=_x_tr_pto
 $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ://www.google.$document,removeparam=ie,domain=www.google.*|ipv6.google.com
@@ -3796,6 +3801,7 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=asctag
 ||baidu.com^$removeparam=rq
 ||baidu.com^$removeparam=logid
+||baidu.com^$removeparam=pageFrom
 ||baidu.com^$removeparam=srcp
 ||baidu.com^$removeparam=sfrom
 ||haokan.baidu.com/v?$removeparam=pd
@@ -3898,8 +3904,10 @@ $removeparam=user_ip
 ||mp.weixin.qq.com^$removeparam=devicetype
 ||mp.weixin.qq.com^$removeparam=version
 ||mp.weixin.qq.com^$removeparam=exportkey
+||mp.weixin.qq.com^$removeparam=pass_ticket
 $removeparam=clicktime
 $removeparam=nettype
+||mp.weixin.qq.com^$removeparam=abtest_cookie
 ||mp.weixin.qq.com^$removeparam=chksm
 ||mp.weixin.qq.com^$removeparam=count
 ||mp.weixin.qq.com^$removeparam=enterid
@@ -4002,6 +4010,7 @@ $removeparam=algo,document
 $removeparam=imp_id,document
 ||steampowered.com^$removeparam=ser
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
+$removeparam=ds_e_target_id
 ||xg4ken.com^$removeparam=prof
 ||xg4ken.com^$removeparam=kct
 ||xg4ken.com^$removeparam=kchid
@@ -4065,8 +4074,6 @@ $removeparam=plink,domain=audible.*
 ||netflix.com^$removeparam=trackIdTrailer
 ||netflix.com^$removeparam=trackIdEpisode
 ||netflix.com^$removeparam=dpRightClick
-$removeparam=rep,domain=shein.com
-$removeparam=ret,domain=shein.com
 ||adjust.com^$removeparam=adgroup
 $removeparam=rffrid
 $removeparam=ad_name
@@ -4089,6 +4096,7 @@ $removeparam=af,domain=1fichier.com|comodo.com
 ||qwant.com^$removeparam=client
 ||ecosia.org^$removeparam=addon
 $removeparam=referralInfo,domain=wix.com
+$removeparam=locale,domain=udemy.com
 ||zoho.com^$removeparam=zsrc
 ||nortonsafe.search.ask.com^$removeparam=installsource
 ||nortonsafe.search.ask.com^$removeparam=os
@@ -4243,6 +4251,7 @@ $document,removeparam=af_xp
 $removeparam=cgkit_search_word
 ||qzone.qq.com^$document,removeparam=jumptoqzone
 ||qzone.qq.com^$document,removeparam=g
+||asos.com^$removeparam=ctaref
 ||gumroad.com^$removeparam=recommended_by
 ||www.booking.com^$document,removeparam=aid
 ||www.booking.com^$document,removeparam=sid
@@ -4263,7 +4272,6 @@ $document,removeparam=entrypoint,domain=bing.com
 ||youtube.com^$document,removeparam=bp
 ||walmart.com/ip/$document,removeparam=classType
 ||walmart.com/ip/$document,removeparam=from
-?from=glia^$removeparam=from
 $document,removeparam=priceTId,domain=tmall.com|taobao.com
 $document,removeparam=utparam,domain=tmall.com|taobao.com
 $document,removeparam=ns,domain=tmall.com|taobao.com

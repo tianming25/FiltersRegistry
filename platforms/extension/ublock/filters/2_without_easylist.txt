@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: o3bFK01XwfK5Ll5XvJ9AMg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743171058-3600.patch
+! Checksum: TIn3XbCVHmJH2VRBtePxXg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743174662-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.76.94
-! TimeUpdated: 2025-03-28T14:06:55+00:00
+! Version: 2.3.76.95
+! TimeUpdated: 2025-03-28T15:06:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,7 @@
 !
 !
 !
+||iawbcdohtprwaxg.com^
 ||iiageq.com^
 ||splendlddate.com^$all
 ||my.pixgallery.xyz^
@@ -18361,6 +18362,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201718
+modernjs.com##+js(no-xhr-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201476
 3minx.com##+js(remove-node-text, script, detectAdBlock)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201483
@@ -27967,6 +27970,9 @@ auto.am##.azd-top
 ##.ainsyndication
 az##.makerekframe
 !
+vol.az##.down_area > button[onclick][data-u]
+vol.az##.logincenter > a[title]
+||xeberle.com/banner/
 milli.az#$#.nav-holder2 { position: static !important; }
 milli.az#$#.info-panel2 { margin-top: 0 !important; }
 metbuat.az##a[href="https://medialiteracy.media.gov.az"]
@@ -45145,6 +45151,7 @@ pixai.art##.content-start > .row-start-1:has(> a[href="https://go.getmogu.chat"]
 pixai.art##+js(json-prune, data.publicDynamicConfig.campaign.feed.*.[-].isAd.[=].true)
 prosettings.net##.placement
 op.gg##tr.ad
+kpopping.com##.box.advertise
 engadget.com##div[class]:has(> div[id*="TF"][id*="-"]:empty)
 pornsexer.*,m.peb5r.me##.bottom-adv1
 getrssfeed.com##.hero-section ~ br

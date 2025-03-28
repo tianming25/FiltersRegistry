@@ -1,10 +1,11 @@
-! Checksum: A4PjV/BxoSSPycTUI6m62w
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1743171055-3600.patch
+! Checksum: QlI8sfNI1Kzgye74p7gtWA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1743174659-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.76.94
-! TimeUpdated: 2025-03-28T14:06:55+00:00
+! Version: 2.3.76.95
+! TimeUpdated: 2025-03-28T15:06:57+00:00
 ! Expires: 5 days (update frequency)
+||iawbcdohtprwaxg.com^
 ||iiageq.com^
 ||splendlddate.com^$all
 ||my.pixgallery.xyz^
@@ -3241,6 +3242,7 @@ youporn.com#%#//scriptlet('remove-node-text', 'script', '/window\.[\s\S]*?_zone_
 #@#.ads_banner
 ##.stickyads:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"], [style*="-3"][style*="important"][style*="display: block;"], [style*="position: fixed"][style*="-188"], [style*="!important;"][style*="width:"][style*="height:"][style*="position"][style*="left:"][style*="top:"][style*="display"], [data-freestar-ad="123"]):not(:empty)
 ##.ads_banner:not([style^="width: 32px"], [style^="width: 33px"], [style*="left: -43px"], [style*="-3"][style*="important"][style*="display: block;"], [style*="position: fixed"][style*="-188"], [style*="!important;"][style*="width:"][style*="height:"][style*="position"][style*="left:"][style*="top:"][style*="display"]):not(:empty)
+modernjs.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 3minx.com#%#//scriptlet('remove-node-text', 'script', 'detectAdBlock')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=3minx.com
@@ -8043,6 +8045,9 @@ adslgate.com##.skyscraper-banner-right
 .az/banner/
 ##.ainsyndication
 az##.makerekframe
+vol.az##.down_area > button[onclick][data-u]
+vol.az##.logincenter > a[title]
+||xeberle.com/banner/
 milli.az#$#.nav-holder2 { position: static !important; }
 milli.az#$#.info-panel2 { margin-top: 0 !important; }
 metbuat.az##a[href="https://medialiteracy.media.gov.az"]
@@ -13543,6 +13548,7 @@ pixai.art##.content-start > .row-start-1:has(> a[href="https://go.getmogu.chat"]
 pixai.art#%#//scriptlet('json-prune', 'data.publicDynamicConfig.campaign.feed.*.[-].isAd.[=].true')
 prosettings.net##.placement
 op.gg##tr.ad
+kpopping.com##.box.advertise
 engadget.com##div[class]:has(> div[id*="TF"][id*="-"]:empty)
 pornsexer.*,m.peb5r.me##.bottom-adv1
 getrssfeed.com##.hero-section ~ br

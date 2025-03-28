@@ -1,8 +1,8 @@
-! Checksum: JUINXl8Fvw81d0F/ZvmCYg
+! Checksum: xGg7sA9DKk0r8jt3I20nmQ
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.58.98
-! TimeUpdated: 2025-03-28T17:06:54+00:00
+! Version: 2.0.58.99
+! TimeUpdated: 2025-03-28T18:08:58+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2497,6 +2497,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+shop.apotal.de#%#//scriptlet('trusted-click-element', '.cookie-message-overlay .settings > button')
 delo.ua##.c-cookies-modal
 altibox.dk,altibox.no#$#.CybotCookiebotDialogContentWrapper { display: none !important; }
 altibox.dk,altibox.no#%#//scriptlet('trusted-click-element', '[id="CybotCookiebotDialogBodyButtonDecline"]', '', '2000')
@@ -16742,6 +16743,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! shop.apotal.de - unable to checkout
+shop.apotal.de#@##cookie-message
+shop.apotal.de#@#.cookie-message-overlay
 ! https://github.com/uBlockOrigin/uAssets/issues/27748
 @@||consent.cookiebot.com/uc.js^$domain=altibox.dk|altibox.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201418

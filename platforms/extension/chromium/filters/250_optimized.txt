@@ -1,5 +1,5 @@
-! Checksum: sQaDa8Zg86lKDIAz2yvVNQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1743151287-14400.patch
+! Checksum: 3tK65Cubd9Sj7BXJ9H5Sqw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1743223282-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.48
@@ -62,6 +62,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 @@/^.*(tech|project|linux).*\.top(/[a-z0-9_-]?.*)?$/$document
 @@://blog.*.top^$document
 @@://pyrofork.*.top^$document
+||loan^$document
 ||bid^$document
 .life/*/?*=*&*=*&*=*&*=*&*=$document
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
@@ -84,7 +85,6 @@ windowsreport.com##div[class^=restoro-download] + section
 appuals.com##p + div > div:first-of-type
 softwaretested.com##.st-alternative
 softwaretested.com##.snippet-content
-||outbyte.com^$document
 ||solvusoft.com^$document
 ||freeroms.com^$document
 ||roms-download.com^$document
@@ -125,6 +125,7 @@ coolrom.com.au,coolrom.com##.download_link
 ||livejasmin.com/*&origin=$document
 ||exs7oilq14cz6.click^$all
 ||aysesuretobea.com^$all
+.avito.www.booking.$all
 ||gridehornyidentifier.com^$all
 ||paddlemoscowsplit.com^$all
 ||classesrainbowburka.com^$all
@@ -2572,6 +2573,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||amazonaws.com^$badfilter
 ||flash.cn^$all
 ||consumerproductsusa.com^$all
+||crentgate.com^$all
 ||dateclique.life^$all
 ||flash.cn^$all
 ||onlinepromotionsusa.com^$all
@@ -2708,7 +2710,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ~telegram.org##a[href^="tg://msg_url?"]
 ~tumblr.com##.share-tumblr:not(html,body,:empty)
 ~tumblr.com##a[href*="tumblr.com/share/"]
-~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
 ###share-twitter
 ##.btn-twitter:not(html,body,:empty)
@@ -2950,7 +2951,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /snowfall.jquery.
 /snowstorm-min.js
 /snowstorm.js
-/wp-snow-effect^
 /christmas-snow.js
 @@||aboluowang.com^
 @@||epochtimes.com^
@@ -2987,7 +2987,6 @@ reports.adguard.com$badfilter
 @@||pgl.yoyo.org/adservers/serverlist.
 @@||fanboy.co.nz/*.txt^
 yjc.ir,tabnak.ir##a[href$="/fa/prayer"]
-thenews.com.pk##a[href$="/prayer-time"]
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
 bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 delfi.lt#%#//scriptlet('ubo-aeld.js', 'copy')
@@ -3156,8 +3155,6 @@ $removeparam=ns_source
 $removeparam=ns_campaign
 $removeparam=ns_linkname
 $removeparam=zanpid
-$removeparam=wgu
-$removeparam=wgexpiry
 $removeparam=fsrc
 $removeparam=Referrer
 $removeparam=algo_pvid
@@ -3285,12 +3282,9 @@ $removeparam=spReportId
 $removeparam=actId
 $removeparam=actCampaignType
 $removeparam=actSource
-$removeparam=oly_anon_id
 $document,removeparam=/^wickedid=.*$/i
 $document,removeparam=/^wickedsource=.*$/i
 $removeparam=s_cid
-$removeparam=ml_subscriber
-$removeparam=ml_subscriber_hash
 $removeparam=_branch_match_id
 $removeparam=_branch_referrer
 $removeparam=vc_lpp
@@ -3381,7 +3375,6 @@ $removeparam=ircid
 $document,removeparam=/^src=rss$/
 $removeparam=amp_device_id
 $removeparam=awinaffid
-$removeparam=cje
 $removeparam=iclid
 $removeparam=a_fid
 $removeparam=afCampaignId
@@ -3550,9 +3543,7 @@ $removeparam=geniuslink
 ||amazon.$removeparam=lp_page_asin
 ||amazon.$removeparam=asc_contentid
 ||amazon.$removeparam=visitId
-||amazon.$removeparam=field-lbr_brands_browse-bin
 ||amazon.$removeparam=maas
-||amazon.$removeparam=/^aa_.*$/
 ||amazon.$removeparam=refinements
 ||amazon.$removeparam=ingress
 $removeparam=hvadid
@@ -3710,7 +3701,6 @@ $document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||google.$document,removeparam=sca_esv
 $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||translate.goog^$removeparam=_x_tr_pto
-$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ://www.google.$document,removeparam=ie,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=fbs
 ||www.google.$document,removeparam=ictx
@@ -3918,7 +3908,6 @@ $removeparam=nettype
 ||view.inews.qq.com^$removeparam=ft
 $removeparam=c,document,domain=announcements.bybit.com|appsflyer.com|farfetch.com|glami.cz|hepsiburada.com|norton.com|onelink.me|shopee.*|tiktok.com|instabox.io
 $removeparam=/^pf_rd_.*$/,domain=shopbop.com|amazon.*|imdb.com|zappos.com|audible.*|6pm.com
-$removeparam=p,domain=banggood.com|sogou.com|bstn.com
 $removeparam=linkId,domain=amazon.*|cbsnews.*|disneyplus.com|espn.*|sporza.be
 $document,removeparam=channel,domain=1sol.io|amazon.*|bybit.com|coinpanel.com|docs.google.com|docsend.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|ngx.me|privateinternetaccess.com|reddit.app.link|rei.com|runnode.com|squarespace.com|t.me|twitter.com|xd.wayin.com|x.com
 $removeparam=fr,domain=baidu.com|thegay.com|todayonline.com|hclips.com|search.yahoo.com
@@ -3933,6 +3922,7 @@ $removeparam=ts,domain=al.to|baidu.com|combat.pl|x-kom.pl
 ||fnac.$removeparam=Origin
 ||paypal.com^$removeparam=calc
 ||youtube.com^$removeparam=ab_channel
+$~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com|ledger.*|mrgay.com|odysee.com
 ||humblebundle.com^$removeparam=linkID
 ||humblebundle.com^$removeparam=mcID
 ||artstation.com^$removeparam=/^\d.*$/
@@ -3940,11 +3930,9 @@ $removeparam=context,domain=imdb.com|fiverr.com|spotify.com|avito.ru|avito.ma
 $removeparam=module,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion|scmp.com
 $removeparam=pgtype,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion|scmp.com
 $document,removeparam=ref_,domain=amazon.*|awesomeopensource.com|boxofficemojo.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|imdb.com|primevideo.com|shopbop.com
-||hostinger.$removeparam=session
 ||xbox.com^$removeparam=xr
 ||thehackernews.com^$removeparam=_m
 ||apple.com^$removeparam=fnode
-||microsoft.com^$removeparam=headerid
 ||microsoft.com^$removeparam=destrt
 $removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moosejaw.com|multitronic.fi|scandinavianphoto.fi|swamp.fi|ocado.com|ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
 ||squarespace.com^$removeparam=subchannel
@@ -3963,7 +3951,6 @@ $removeparam=bsencid
 ||malwarebytes.com^$removeparam=x-source
 ||malwarebytes.com^$removeparam=ADDITIONAL_x-source
 ||ozon.ru^$removeparam=advert
-$document,removeparam=sh,domain=forbes.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 $removeparam=soc_src
 $removeparam=soc_trk
 ||as.com^$removeparam=omnil
@@ -4009,7 +3996,9 @@ $removeparam=algo,document
 $removeparam=imp_id,document
 ||steampowered.com^$removeparam=ser
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
+$removeparam=ds_e_adid,domain=clickserve.dartsearch.net
 $removeparam=ds_e_target_id
+$removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||xg4ken.com^$removeparam=prof
 ||xg4ken.com^$removeparam=kct
 ||xg4ken.com^$removeparam=kchid
@@ -4087,7 +4076,6 @@ $document,removeparam=refresh,domain=cnn.com|startribune.com
 ||emag.ro^$removeparam=recid
 ||emag.ro^$removeparam=scenario_ID
 $removeparam=mt_click_id,domain=mail.ru|vkplay.ru
-||mercadolibre.com.ar^$removeparam=pdp_filters
 $removeparam=mwv_rm
 ||comodo.com^$removeparam=track
 $removeparam=af,domain=1fichier.com|comodo.com
@@ -4270,7 +4258,6 @@ $document,removeparam=entrypoint,domain=bing.com
 ||audible.$removeparam=/^ref/
 ||youtube.com^$document,removeparam=bp
 ||walmart.com/ip/$document,removeparam=classType
-||walmart.com/ip/$document,removeparam=from
 $document,removeparam=priceTId,domain=tmall.com|taobao.com
 $document,removeparam=utparam,domain=tmall.com|taobao.com
 $document,removeparam=ns,domain=tmall.com|taobao.com

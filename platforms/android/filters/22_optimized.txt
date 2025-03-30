@@ -1,5 +1,5 @@
-! Checksum: hAHFyFcLTgETuaMIa43eIg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1743215741-3600.patch
+! Checksum: VJ8F3fgT5D9iffcwhpol0w
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1743302311-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.11.40
@@ -104,6 +104,7 @@ koe-koe.com###nanmv
 shikotch.in###news
 matome-geinou.net##.widget_custom_html:has(> div > div[class^="rss-"])
 kh-pokemon-mc.com##aside.rss[id^="feedzy_wp_widget-"]
+hannoumatome.com##.blogcard
 kitimama-matome.net##.article-body-more > div[style="font-size:16px;line-height:23px;margin-bottom:40px;font-weight: bold;"]
 mashlife.doorblog.jp##.article-body-inner > a[target="_blank"]
 mashlife.doorblog.jp##.article-body-inner > br
@@ -394,6 +395,7 @@ akb48matomemory.com##.section-title-single0
 akb48matomemory.com##.section-title-style-2ch
 akb48matomemory.com##.ad-article
 alfalfalfa.com##.rss_headline
+pachinkolist.com##div[style^="height:130px;overflow:auto;"]
 oppainorakuen.com###more > a[target="_blank"]
 digital-thread.com##.article-headline
 ||blog.livedoor.jp/kokopyon1/rss/$subdocument
@@ -831,7 +833,6 @@ blog.livedoor.jp##.blogroll-wrapper
 blog.livedoor.jp##.blogroll_kijishita
 blog.livedoor.jp##.rss
 blog.livedoor.jp###main > div.column-inner > div.column-inner-2 > div[style="height:440px; overflow: auto; text-align:left; "]
-[$path=/news_aru]blog.livedoor.jp##.headline
 [$path=/itsoku]blog.livedoor.jp#$#.headline { visibility: hidden !important; height: 0 !important; }
 [$path=/itsoku]blog.livedoor.jp##.mtm-roll
 ||blog.livedoor.jp/goldennews/js/inlink_main12.js
@@ -865,7 +866,6 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||gso.amocrm.ru^$third-party
 ||leadball.ru^$third-party
 ||widget.flowxo.com^$third-party
-||tidio.com^$third-party
 ||chatntr.com^
 ||formilla.com^$third-party
 ||app.livechatoo.com^$third-party
@@ -1055,6 +1055,7 @@ volyninfa.com.ua###custom_html-2
 @@||widget.happyfoxchat.com^$domain=support.linksys.com
 @@||secure.livechatinc.com/customer/action/open_chat?$domain=kinguin.net
 @@||static.elfsight.com^$third-party,domain=cafemarta.ch|trestlebrewing.com|taube-rankweil.at|savearizonafund.com|avproedge.com|spiceandcurry.ca|keenetic.com.tr|bigchicken.com
+@@||code.jivo.ru/widget/$domain=coffee-tea-bravos.ru
 @@||components.justanswer.com^$domain=justanswer.co.uk|justanswer.es|justanswer.de|justanswer.jp
 @@||cdn.reamaze.com/assets/$domain=strongboxsafe.com
 gall.dcinside.com##.dctrend_ranking
@@ -1356,6 +1357,7 @@ smilepolitely.com##.foobar-cta
 kcrw.com###cta-get-involved-large-news-cta
 comfycozygaming.com,jestful.net,anyipa.me,klto9.com,klz9.com,baominh.tech##div[id^="kofi-widget"]
 apkmody.io###fixed-donate
+||static.fundraiseup.com$domain=gijn.org
 zn.ua##.content__news > div.news-support
 lyricstranslate.com###block-lyricstranslateblocks-91
 starfiles.co###support_alert

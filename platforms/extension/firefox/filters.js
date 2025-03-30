@@ -670,8 +670,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/firefox/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.40",
-			"timeUpdated": "2025-03-30T12:10:17+0000",
+			"version": "2.0.51.41",
+			"timeUpdated": "2025-03-30T13:09:47+0000",
 			"deprecated": false,
 			"languages": [
 				"fr"

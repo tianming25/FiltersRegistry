@@ -1,9 +1,9 @@
-! Checksum: gtNqeJdKnEmJBlEFBBw07Q
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1743423261-3600.patch
+! Checksum: Jo5PmSxNjl+pSmiPwRQQUQ
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1743427027-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.31.92
-! TimeUpdated: 2025-03-31T12:11:05+00:00
+! Version: 2.0.31.93
+! TimeUpdated: 2025-03-31T13:13:55+00:00
 ! Expires: 10 days (update frequency)
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
@@ -921,6 +921,7 @@ disk.yandex.ru#%#//scriptlet('remove-attr', 'href', '.InfoSpace[href^="https://3
 [$path=/maps]yandex.*##.business-card-view__main-wrapper div.card-offer-view
 [$path=/maps]yandex.*##.business-card-title-view__advert
 [$path=/maps]yandex.*##.business-card-title-view__actions .button._view_advertisement
+music.yandex.*#%#//scriptlet('trusted-click-element', 'div[role="dialog"][class*=" PaywallModal_root__"] button[class*=" PaywallModal_closeButton__"]')
 music.yandex.*#$#html > body.no-scroll { overflow: auto !important; }
 music.yandex.*#$#.pay-promo-popup { display: none !important; }
 music.yandex.*##.fullscreen-popup.deco-pane-popup
@@ -940,6 +941,7 @@ rasp.yandex.*##.TravelHotelsBanner
 tv.yandex.*##.recommended-ott
 360.yandex.ru##div[data-test-id="promotopline"]
 www.kinopoisk.ru##div[class^="trailer-promo"]
+aftenposten.no##.subscribe-bar
 thegreatoutdoorsmag.com##article > a[href^="https://shop.kelsey.co.uk/subscribe/"]
 truckstop.com##.truckpop__header-banner
 truckstop.com##.blog-detail-page__schedule-demo

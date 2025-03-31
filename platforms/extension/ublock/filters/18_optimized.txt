@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: wUAknJkgabrqxRGESwGViQ
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1743405082-3600.patch
+! Checksum: qdksRnaCpBd5/j55Z4oBiw
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1743408778-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.59.5
-! TimeUpdated: 2025-03-31T07:07:57+00:00
+! Version: 2.0.59.6
+! TimeUpdated: 2025-03-31T08:09:28+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1308,6 +1308,8 @@ help.lurker.tv,help.zenky.io,docs.powershelluniversal.com,docs.snyk.io,docs.keep
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+||static.coros.com/coros-v2/static/js/cookieconsent
+anm.cx##+js(set-cookie, null_cookie_notice, 1)
 culture.ru##footer + div[class]:has(> div > div > a[href="/cookies"])
 swotahtravel.com##+js(set-local-storage-item, privacyPolicyAccepted, true)
 forestriverinc.com###PrivacyPolicyNotice
@@ -3063,9 +3065,9 @@ bbc.com##.bbc-n7zdg2
 scite.ai##div[class^="CookieNotice"]
 moneycontrol.com##.cookie-concern-wrapper
 fapdrop.com###king-cookie
-dx2.pl,a4-szybko.pl,bialywiatr.com,silverstudiogames.org,lesekammer.de,tudolnyslask.info,parking.praha.eu,eb2b.com.pl,actagainstafib.com#$#.modal-cacsp-position { display: none !important; }
-dx2.pl,a4-szybko.pl,bialywiatr.com,silverstudiogames.org,lesekammer.de,tudolnyslask.info,parking.praha.eu,eb2b.com.pl,actagainstafib.com#$#.modal-cacsp-backdrop { display: none !important; }
-dx2.pl,a4-szybko.pl,bialywiatr.com,silverstudiogames.org,lesekammer.de,tudolnyslask.info,parking.praha.eu,eb2b.com.pl,actagainstafib.com#$#html.modal-cacsp-open { overflow: auto !important; position: static !important; }
+hator.com,dx2.pl,a4-szybko.pl,bialywiatr.com,silverstudiogames.org,lesekammer.de,tudolnyslask.info,parking.praha.eu,eb2b.com.pl,actagainstafib.com#$#.modal-cacsp-position { display: none !important; }
+hator.com,dx2.pl,a4-szybko.pl,bialywiatr.com,silverstudiogames.org,lesekammer.de,tudolnyslask.info,parking.praha.eu,eb2b.com.pl,actagainstafib.com#$#.modal-cacsp-backdrop { display: none !important; }
+hator.com,dx2.pl,a4-szybko.pl,bialywiatr.com,silverstudiogames.org,lesekammer.de,tudolnyslask.info,parking.praha.eu,eb2b.com.pl,actagainstafib.com#$#html.modal-cacsp-open { overflow: auto !important; position: static !important; }
 grandado.com#$?#body > div.MuiModal-root:has(> div.MuiDialog-container a[href="/pages/privacy-policy"]) { display: none !important; }
 grandado.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 suntech.cz#$?#body > div.modal-popup:has(> div.cookies) { display: none !important; }
@@ -5230,7 +5232,7 @@ motorfinity.uk,don24.ru,ronesans.com##.cookie-fixed
 schecterguitars.com,parts-express.com,red.com##.cookie-warning-banner-view
 nextdoor.directly.com,oyunicin.com,discord.com,abus.com###onetrust-banner-sdk
 kyounoryouri.jp,web-stat.com##.swal2-container
-anm.cx,help.ptsecurity.com,vportal.ctu.gov.cz,moncompteformation.gouv.fr,earnweb.com,portal.av-atlas.org,goo-gl.me,go.skillbox.ru,cs.android.com,jobsforgeek.com,ib.psbank.ru,eqmac.app,macdrop.net,smartshop.hu,ikea-family.info##.cdk-overlay-container
+help.ptsecurity.com,vportal.ctu.gov.cz,moncompteformation.gouv.fr,earnweb.com,portal.av-atlas.org,goo-gl.me,go.skillbox.ru,cs.android.com,jobsforgeek.com,ib.psbank.ru,eqmac.app,macdrop.net,smartshop.hu,ikea-family.info##.cdk-overlay-container
 trtmarket.com,gundogdumobilya.com.tr,modalife.com##.policyPopupContainer
 viewstats.com,vgchartz.com,video.foxbusiness.com##.notification-banner
 magzter.com##.cookies__notification
@@ -6905,6 +6907,7 @@ stockmann.com#$#body { position: static!important; }
 !+ NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=hollywoodreporter.com|resmed.com|southpark.de|movistar.es|redbull.com|all.accor.com|karriere.mcdonalds.de|blaklader.*|wallapop.com|rts.ch|npr.org|upc.pl|next.co.uk|zoom.us|rtlplay.be|motorsport-total.com|player.pl|mensjournal.com|gqmagazine.fr|nintendo.*|mtv.com|ryobitools.eu|cc.com|3sat.de|zdf.de|costco.com|giantbomb.com|glovoapp.com|rte.ie|digitaltrends.com|spiele.bild.de|spiele.stern.de|vanityfair.com|saarbruecker-zeitung.de|olympics.com|tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|volksfreund.de|kawasaki.com|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com|games.miamiherald.com|eurogamer.es|eurogamer.de|bet.com|ikonpass.com|mcdelivery.de|id.trimble.com|skateboarding.transworld.net|newegg.com|docs.vmware.com|udemy.com|olx.pl|usmagazine.com|uefa.com|milwaukeetool.eu|muscleandfitness.com|20min.ch|ted.com|elisa.fi|nhl.com|porn300.com|indiewire.com|victorinox.com|darkreading.com|trustradius.com|start.gg|geappliances.com|popeyes.com|channel5.com|bigbearmountainresort.com|quora.com|vod.pl|blick.ch|elle.com|teenvogue.com|vogue.co.jp|vogue.co.uk|vogue.com|vogue.com.tw|vogue.de|vogue.es|vogue.fr|vogue.in|vogue.it|vogue.mx|vogue.ph|tvnturbo.pl|superporn.com|thebump.com|bk.com|safeway.com|motor1.com|southparkstudios.com.br|southpark.lat|southparkstudios.com|realsimple.com|538.nl|skyradio.nl|radio10.nl|radioveronica.nl|homedepot.ca|wired.com|europapark.de|jdpower.com|bonava.lv|nick.com|mtvema.com|mtv.co.uk|mtv.de|mtv.it|themessenger.com|nickjr.com|lnw.com|otodom.pl|irishtimes.com|tntsports.com.br|sonos.com|rossmann.pl|rentcafe.com|seriouseats.com|bhg.com|gamescom.global|championsleague.basketball|fnac.com|twojapogoda.pl|pagesix.com|sony.pl|dhl.de|questdiagnostics.com|payback.de|kfc.fr|kfc.es|kfc.de|canadiantire.ca|drafthouse.com
+@@||lock5stat.com/StatKey/js/cookieconsent.min.js
 @@||usercentrics.eu^$domain=einhell.de
 kleinanzeigen.de#@##gdpr-banner
 shop.apotal.de#@##cookie-message

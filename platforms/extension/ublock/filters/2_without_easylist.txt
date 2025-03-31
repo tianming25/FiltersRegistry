@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ZCURSlP7urX+24/H3IO58A
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743427048-3600.patch
+! Checksum: QIOWaYhMASfxkj/4OJaDlA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743437521-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.33
-! TimeUpdated: 2025-03-31T13:13:12+00:00
+! Version: 2.3.77.34
+! TimeUpdated: 2025-03-31T16:07:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -44153,6 +44153,11 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+truepeoplesearch.com##.card > div:has(div.h5 > span[style="padding-bottom:5px;margin-top:-10px;font-size:.8rem;"])
+fastpeoplesearch.com##.admap
+fastpeoplesearch.com##div[id]:has(> div[class^="ad-widget-"])
+fastpeoplesearch.com##div[style]:has(> div[class^="ad-widget-"])
+fastpeoplesearch.com##div[style]:has(> div#admap-footer)
 hivecomic.com##div[class*="SimpleIconsGoogleadsense"] > div[style] > a[href="https://store.hivetoon.com/"] > img
 thegreatoutdoorsmag.com##.pageskin-ads
 thegreatoutdoorsmag.com###VideoAdContainer
@@ -58622,7 +58627,7 @@ sap-certification.info##.site-c-header-ad-cr
 mazterize.cc,rootcracks.org,intoupload.com,profullcrack.com##center > a[href][rel="nofollow"] > img
 codingforums.com###content > center > table > tbody > tr > td[style="width:430px;height:300px"]
 ||carambo.la^$domain=codingforums.com
-videezy.com,infoq.com,english.newstracklive.com,irishtimes.com,libhunt.com,runemate.com,trends.gab.com,gotporn.com##.sponsored
+fastpeoplesearch.com,videezy.com,infoq.com,english.newstracklive.com,irishtimes.com,libhunt.com,runemate.com,trends.gab.com,gotporn.com##.sponsored
 boostbot.org###ipsLayout_footer > div > center > a:not([href^="https://boostbot.org/"]) > img
 boostbot.org###ipsLayout_mainArea > center > a:not([href^="https://boostbot.org/"]) > img
 pornwhite.com##.info_wrap > div[class="cs"]

@@ -1,9 +1,9 @@
-! Checksum: kDYXa2IhleT+fm9pv/qJzw
-! Diff-Path: ../patches/18/18-s-1743427055-3600.patch
+! Checksum: AxVPhGVQ57vwHVheZZnNEQ
+! Diff-Path: ../patches/18/18-s-1743433883-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.59.11
-! TimeUpdated: 2025-03-31T13:13:53+00:00
+! Version: 2.0.59.12
+! TimeUpdated: 2025-03-31T15:07:48+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2500,6 +2500,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+diy.by#%#//scriptlet('trusted-set-cookie', 'cookie_agree', '%7B%22MAIN%22%3Atrue%2C%22FUNC%22%3Afalse%2C%22ANALITIKA%22%3Afalse%7D')
 tvprofil.com#%#//scriptlet('trusted-set-cookie-reload', 'gdpr_consent', 'necessary%3D1%26analytics%3D0')
 amcharts.com###amcharts-utils-consent
 brisanet.com.br##div[aria-labelledby="cookie-consent-title"]
@@ -16830,6 +16831,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202050
+diy.by#@#.cookie-notification:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201984
 tvprofil.com#@#.gdpr-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201985

@@ -1,9 +1,9 @@
-! Checksum: KTVpOLGPuwYdUFT07+0b4A
-! Diff-Path: ../patches/4/4-s-1743419403-3600.patch
+! Checksum: Ws5SYTagqfBM3HRZLfOcOQ
+! Diff-Path: ../patches/4/4-s-1743423276-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.12.85
-! TimeUpdated: 2025-03-31T11:06:16+00:00
+! Version: 2.1.12.86
+! TimeUpdated: 2025-03-31T12:10:30+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -653,6 +653,7 @@ esquire.com,dotesports.com,mashable.com,pcmag.com,onefootball.com,ign.com,israel
 !
 ! NOTE: Specific rules
 !
+startv.com.tr##.flex > button:has(> div > svg > path[d^="M23.5903"])
 patch.com##div[class^="styles_ShareDropdown__"]
 synoforum.com##.offCanvasMenu-installBanner
 uznayvse.ru##div[aria-label="Поделиться в социальных сетях"]
@@ -5671,7 +5672,7 @@ manga.line.me##.mdMNG01Share
 sukima.me##.share-description
 eggs.mu##.m-commnsnsAra
 tascam.com,esoteric.jp,tascam.jp,teac.co.jp,teac.jp,neg.by,karnaval.com##.share_container
-delo.ua##.c-post__share
+tsn.ua,delo.ua##.c-post__share
 driveplaza.com##.c-shareList
 mbn.co.kr##.sns_right > ul > li > img[onclick^="snsShare"]
 mbn.co.kr##.sns_right > ul > li > a[href] > img[id="share_katalk"]
@@ -10182,7 +10183,7 @@ pornxs.com##.social-tail
 ilkfilm.com##.sociaPayLasimyan
 screenanarchy.com##.post-actions__social > a:not(.post-action--comments)
 ||destekdukkan.com/images/sosyal.png
-edebiyatla.com,f35.com##.content__share
+novyny.live,kakprosto.ru,edebiyatla.com,f35.com##.content__share
 realmofdarkness.net##.widget_ssba_widget
 kitapkeyfim.com.tr##.share-square
 support.google.com##.social-sharing-widgets
@@ -13082,8 +13083,6 @@ bikeradar.com##.share-buttons
 gametimers.it,blogthetech.com##.td-post-sharing
 !+ NOT_PLATFORM(windows,mac,android)
 gazeta.ru##.article-share-name
-!+ NOT_PLATFORM(windows,mac,android)
-kakprosto.ru##.content__share
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 dir50.com###sharebuttons
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)

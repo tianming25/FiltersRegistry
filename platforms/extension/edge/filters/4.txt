@@ -1,9 +1,9 @@
-! Checksum: CpE2NMqm3csAfqht8UOFhw
-! Diff-Path: ../patches/4/4-s-1743419395-3600.patch
+! Checksum: OcyfrQqU2pcGAcclglqRFA
+! Diff-Path: ../patches/4/4-s-1743423267-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.12.85
-! TimeUpdated: 2025-03-31T11:06:16+00:00
+! Version: 2.1.12.86
+! TimeUpdated: 2025-03-31T12:10:30+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -653,6 +653,7 @@ esquire.com,dotesports.com,mashable.com,pcmag.com,onefootball.com,ign.com,israel
 !
 ! NOTE: Specific rules
 !
+startv.com.tr##.flex > button:has(> div > svg > path[d^="M23.5903"])
 patch.com##div[class^="styles_ShareDropdown__"]
 synoforum.com##.offCanvasMenu-installBanner
 uznayvse.ru##div[aria-label="Поделиться в социальных сетях"]
@@ -5671,7 +5672,7 @@ manga.line.me##.mdMNG01Share
 sukima.me##.share-description
 eggs.mu##.m-commnsnsAra
 tascam.com,esoteric.jp,tascam.jp,teac.co.jp,teac.jp,neg.by,karnaval.com##.share_container
-delo.ua##.c-post__share
+tsn.ua,delo.ua##.c-post__share
 driveplaza.com##.c-shareList
 mbn.co.kr##.sns_right > ul > li > img[onclick^="snsShare"]
 mbn.co.kr##.sns_right > ul > li > a[href] > img[id="share_katalk"]
@@ -10182,7 +10183,7 @@ pornxs.com##.social-tail
 ilkfilm.com##.sociaPayLasimyan
 screenanarchy.com##.post-actions__social > a:not(.post-action--comments)
 ||destekdukkan.com/images/sosyal.png
-edebiyatla.com,f35.com##.content__share
+novyny.live,kakprosto.ru,edebiyatla.com,f35.com##.content__share
 realmofdarkness.net##.widget_ssba_widget
 kitapkeyfim.com.tr##.share-square
 support.google.com##.social-sharing-widgets
@@ -13074,8 +13075,6 @@ m.gunes.com##.fixed-interaction-bar
 kinopoisk.ru##.block_social
 !+ NOT_PLATFORM(windows,mac,android)
 gazeta.ru##.article-share-name
-!+ NOT_PLATFORM(windows,mac,android)
-kakprosto.ru##.content__share
 ! https://github.com/AdguardTeam/AdguardFilters/issues/168228
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179384
 ! Not visible on desktop - so should be NOT_OPTIMIZED

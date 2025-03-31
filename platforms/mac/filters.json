@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.77.29",
-			"timeUpdated": "2025-03-31T09:07:25+0000",
+			"version": "2.3.77.30",
+			"timeUpdated": "2025-03-31T10:07:28+0000",
 			"languages": []
 		},
 		{
@@ -74,8 +74,8 @@
 			"displayNumber": 1,
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/3.txt",
-			"version": "2.0.82.49",
-			"timeUpdated": "2025-03-31T08:09:04+0000",
+			"version": "2.0.82.50",
+			"timeUpdated": "2025-03-31T10:07:38+0000",
 			"languages": []
 		},
 		{
@@ -187,8 +187,8 @@
 			"displayNumber": 2,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/11.txt",
-			"version": "2.0.59.47",
-			"timeUpdated": "2025-03-30T22:06:30+0000",
+			"version": "2.0.59.48",
+			"timeUpdated": "2025-03-31T10:07:55+0000",
 			"languages": []
 		},
 		{
@@ -234,8 +234,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.2.25.99",
-			"timeUpdated": "2025-03-31T09:07:57+0000",
+			"version": "2.2.26.0",
+			"timeUpdated": "2025-03-31T10:08:03+0000",
 			"languages": []
 		},
 		{
@@ -296,8 +296,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.59.7",
-			"timeUpdated": "2025-03-31T09:08:01+0000",
+			"version": "2.0.59.8",
+			"timeUpdated": "2025-03-31T10:08:09+0000",
 			"languages": []
 		},
 		{
@@ -309,8 +309,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/19.txt",
-			"version": "2.0.52.92",
-			"timeUpdated": "2025-03-31T09:08:02+0000",
+			"version": "2.0.52.93",
+			"timeUpdated": "2025-03-31T10:08:10+0000",
 			"languages": []
 		},
 		{
@@ -335,8 +335,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/21.txt",
-			"version": "2.0.31.90",
-			"timeUpdated": "2025-03-31T08:09:29+0000",
+			"version": "2.0.31.91",
+			"timeUpdated": "2025-03-31T10:08:11+0000",
 			"languages": []
 		},
 		{

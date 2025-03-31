@@ -1,9 +1,9 @@
-! Checksum: 0JuLroA3uZCLLGJmmaxJdg
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743437517-3600.patch
+! Checksum: 7c+2uQhBNTdmvR3NyOyjsg
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743440987-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.6
-! TimeUpdated: 2025-03-31T16:08:19+00:00
+! Version: 2.2.26.7
+! TimeUpdated: 2025-03-31T17:06:33+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1448,6 +1448,7 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+dasreda.ru##div[data-qa="Cookie-notice-agreement"]
 diy.by#%#//scriptlet('trusted-set-cookie', 'cookie_agree', '%7B%22MAIN%22%3Atrue%2C%22FUNC%22%3Afalse%2C%22ANALITIKA%22%3Afalse%7D')
 tvprofil.com#%#//scriptlet('trusted-set-cookie-reload', 'gdpr_consent', 'necessary%3D1%26analytics%3D0')
 amcharts.com###amcharts-utils-consent
@@ -21093,6 +21094,8 @@ rasp.yandex.adult,rasp.yandex.ac.id,rasp.yandex.ae,rasp.yandex.al,rasp.yandex.ap
 tv.yandex.adult,tv.yandex.ac.id,tv.yandex.ae,tv.yandex.al,tv.yandex.app,tv.yandex.asia,tv.yandex.at,tv.yandex.az,tv.yandex.ba,tv.yandex.be,tv.yandex.by,tv.yandex.ca,tv.yandex.cc,tv.yandex.cl,tv.yandex.cloud,tv.yandex.club,tv.yandex.co,tv.yandex.co.il,tv.yandex.com,tv.yandex.com.bd,tv.yandex.com.cn,tv.yandex.com.np,tv.yandex.com.tr,tv.yandex.de,tv.yandex.dev,tv.yandex.ee,tv.yandex.es,tv.yandex.eu,tv.yandex.fi,tv.yandex.fm,tv.yandex.fr,tv.yandex.ge,tv.yandex.gr,tv.yandex.hu,tv.yandex.in,tv.yandex.io,tv.yandex.jp,tv.yandex.kg,tv.yandex.kr,tv.yandex.kz,tv.yandex.lt,tv.yandex.lv,tv.yandex.md,tv.yandex.me,tv.yandex.mobi,tv.yandex.net,tv.yandex.news,tv.yandex.nl,tv.yandex.org,tv.yandex.pk,tv.yandex.pl,tv.yandex.pro,tv.yandex.ro,tv.yandex.rs,tv.yandex.ru,tv.yandex.se,tv.yandex.site,tv.yandex.su,tv.yandex.tech,tv.yandex.ua,tv.yandex.uk,tv.yandex.us,tv.yandex.uz,tv.yandex.work##.recommended-ott
 360.yandex.ru##div[data-test-id="promotopline"]
 www.kinopoisk.ru##div[class^="trailer-promo"]
+dasreda.ru##div[class^="styles_adPopupWrapperRecipe__"]
+dasreda.ru##div[class^="styles_bannerWrapperRecipe__"]
 aftenposten.no##.subscribe-bar
 thegreatoutdoorsmag.com##article > a[href^="https://shop.kelsey.co.uk/subscribe/"]
 truckstop.com##.truckpop__header-banner

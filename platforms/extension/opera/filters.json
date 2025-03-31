@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.12.82",
-			"timeUpdated": "2025-03-30T22:06:11+0000",
+			"version": "2.1.12.83",
+			"timeUpdated": "2025-03-31T05:07:21+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

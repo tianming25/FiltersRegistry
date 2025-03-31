@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: PLgXpJybNPH9/+mE8wmq9g
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743451921-3600.patch
+! Checksum: 7XT86euy1PdTGKeFrNKWBQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743455412-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.37
-! TimeUpdated: 2025-03-31T20:07:31+00:00
+! Version: 2.3.77.38
+! TimeUpdated: 2025-03-31T21:06:15+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -16664,9 +16664,9 @@ codec.kyiv.ua#$?#style[id="mdpDeblocker-css"] { remove: true; }
 whoisnovel.com,asiaon.top,jpopsingles.eu,superpsx.com,alliptvlinks.com#$#body[class*="blur"] > * { filter: none !important; }
 whoisnovel.com,asiaon.top,jpopsingles.eu,superpsx.com,alliptvlinks.com#$#body > div[class*="-blackout"] { display: none !important; }
 whoisnovel.com,asiaon.top,jpopsingles.eu,superpsx.com,alliptvlinks.com#$#body > div[class*="-blackout"] + div[class*="-wrapper"] { display: none !important; }
-tuksudia2.sbs,tuktukcinma.com#$#body > * { filter: none !important; }
-tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] + div[class]:has(> .active > [class*="-content"]) { display: none !important; }
-tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] { display: none !important; }
+yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > * { filter: none !important; }
+yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] + div[class]:has(> .active > [class*="-content"]) { display: none !important; }
+yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] { display: none !important; }
 !
 sketchup.cgtips.org##+js(abort-on-property-write, Databdcacb)
 ! NOTE: mdpDeBlocker end ⬆️
@@ -28904,6 +28904,8 @@ autopapa.ge##.top-rek
 !
 ! NOTE: Greek
 !
+||dimokratiki.gr/wp-content/banners/
+dimokratiki.gr##.widget:has(> div[class^="g"] a[href][target="_blank"] > img[src^="https://www.dimokratiki.gr/wp-content/banners/"])
 inkefalonia.gr##.uk-panel:has(> p > a[href][target="_blank"])
 inkefalonia.gr##.uk-panel:has(div[id^="div-gpt-ad-"])
 ipliroforia.gr##div[style]:has(> div > div[id^="_vidverto-"])
@@ -44153,6 +44155,8 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+fnlondon.com##.grid__rail_top:has(> .adWrapper)
+fnlondon.com##.grid__content_padded_bottom_border:has(> .adWrapper)
 truepeoplesearch.com##.card > div:has(div.h5 > span[style="padding-bottom:5px;margin-top:-10px;font-size:.8rem;"])
 fastpeoplesearch.com##.admap
 fastpeoplesearch.com##div[id]:has(> div[class^="ad-widget-"])
@@ -60502,7 +60506,7 @@ hdzog.com##div[class^="pl_showtime"]
 semprot.com##div[class^="sukasekalicrot_floating_banner"]
 imore.com##div[class^="zone"] > a > img
 independent.ie##div[data-label="Advertisement"]
-mahoningmatters.com,codeproject.com,html.net##div[data-type="ad"]
+miamiherald.com,mahoningmatters.com,codeproject.com,html.net##div[data-type="ad"]
 boardgamegeek.com##div[hide-ad-block$="blockrectangle"]
 androidcentral.com##div[id$="-store-ad"]
 ouo.press,leechpremium.link,cpmlink.net,shink.in##div[id*="ScriptRootC"]
@@ -64439,6 +64443,8 @@ $popup,third-party,domain=dood.ws,badfilter
 !##################
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201999
+allmusic.com#@##show_ads
 ! zone.msn.com - game stuck in loading screen
 @@||ams.cdn.arkadiumhosted.com/advertisement/video/stable/games.msn.com/video-ads.js$domain=zone.msn.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201500

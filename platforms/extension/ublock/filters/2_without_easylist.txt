@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: eYGFiSbukye351bmarJTNg
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743520278-3600.patch
+! Checksum: 56RuZfiLOBJC6NYywKGwAQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743527428-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.48
-! TimeUpdated: 2025-04-01T15:07:03+00:00
+! Version: 2.3.77.49
+! TimeUpdated: 2025-04-01T17:06:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,8 @@
 !
 !
 !
+||booksylatron.com^
+||jouchithep.net^
 ||mushlaregrass.com^
 ||iawbcdohtprwaxg.com^
 ||iiageq.com^
@@ -30811,7 +30813,7 @@ corriere.it##div[style="min-height: 1500px;"]
 corriere.it###box_mkt_hp_spalla_dx
 corriere.it###pno_manina_2024_inline
 everyeye.it##.p-dealLink
-mangaworld.ac##.col-sm-12 > div.row:has(> div.col-md-12 > div.ads)
+mangaworld.*##.col-sm-12 > div.row:has(> div.col-md-12 > div.ads)
 gamelegends.it##div[id^="gamelegends-dsk_"]
 iphoneitalia.com##div[id^="addendoContainer_"]
 subito.it##.dynamic-atf-container
@@ -43936,8 +43938,8 @@ infinityfree.com#$?#html[lang][dir="ltr"] [id^="img_"][style]:has(iframe[framebo
 smsonline.cloud#$?#html[data-theme][lang] [id^="img_"][style]:has(iframe[frameborder="0"][style]) { clip-path: circle(0) !important; }
 ! Common rules, which partially hide banners
 ~dogdrip.net,~infinityfree.com,~smsonline.cloud##html[class^="img_"][amp4ads=""][i-amphtml-layout=""][i-amphtml-no-boilerplate=""][amp-version="2502032353000"]
-~dogdrip.net,~infinityfree.com,~smsonline.cloud##*:not(body) > a[href^="https://html-load.com/contents/"]
-~dogdrip.net,~infinityfree.com,~smsonline.cloud##*:not(body) > a[href^="https://07c225f3.online/contents/"]
+~dogdrip.net,~infinityfree.com,~smsonline.cloud##*:not(body) > a[href^="https://html-load.com/content"]
+~dogdrip.net,~infinityfree.com,~smsonline.cloud##*:not(body) > a[href^="https://07c225f3.online/content"]
 07c225f3.online,content-loader.com,css-load.com,html-load.com,img-load.com#$?#html:not(:has(> head > style:only-child:contains(width:399px;height:411px))) { filter: opacity(0) !important; pointer-events: none !important; }
 $~script,~subdocument,~xmlhttprequest,domain=07c225f3.online|content-loader.com|css-load.com|html-load.com|img-load.com
 ! END: Ad-Shield ad reinsertion
@@ -44156,6 +44158,7 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+demonicscans.org##div[id^="pf-"]
 athlonsports.com##.m-fixedbottom-ad--container
 athlonsports.com##section[id^="phxoutbrain-"]
 tribune.net.ph##.skinner
@@ -62042,7 +62045,6 @@ xxxpicz.com#?##container > ul > li:has(> div.thumbnail > div > script.labeldolla
 nakedneighbour.com#?#.content > div.block:has(> div.banner)
 tube8.com#?##flvplayer > div[id]:has(> div[id] > div[id] > ins.adsbytrafficjunky)
 teslarati.com#?#body div[class^="ntv-"]:not([class="ntv-title"]):has(a.ntv-headline-anchor)
-mangaworld.cc#?#.container > div.row > div.col-sm-12 > div.row:has(> div.col-md-12 > div.ads)
 indy100.com#?#header ~ div:matches-css(height: 250px)
 tumblr.com#?##base-container aside > div[class^="_"] > div[class^="_"] > div[class^="_"] > div[class^="_"] > h1 + div[class] > div[class^="_"] div.iab_sf:upward(4)
 submityourflicks.com#?#.twocolumns > div.aside:has(> div[align="center"] > b:contains(Advertisements))

@@ -1,8 +1,8 @@
-! Checksum: 6WbcGxffY6/FXfKPIVrgyg
+! Checksum: Sq8YQhFAMjUKpBFRdxb/LA
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.59.17
-! TimeUpdated: 2025-03-31T22:07:18+00:00
+! Version: 2.0.59.18
+! TimeUpdated: 2025-04-01T07:07:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2499,6 +2499,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+ipill.de#%#//scriptlet('trusted-click-element', 'button.accept-all-cookies')
 vercel.com###fides-overlay
 flibco.com#%#//scriptlet('trusted-set-cookie', 'cookiesjsr', '%7B%22functional%22%3Afalse%2C%22analytics%22%3Afalse%2C%22facebook_pixel%22%3Afalse%2C%22recaptcha%22%3Afalse%2C%22gtag%22%3Afalse%2C%22video%22%3Afalse%7D')
 dasreda.ru##div[data-qa="Cookie-notice-agreement"]
@@ -4423,7 +4424,7 @@ lublin.eu###polityka-ciastek
 metro.de,metro-cc.ru##.consent-disclaimer
 metro.at,metro.bg,metro-cc.hr,metro.fr,metro.it,metro-kz.com,metro.md,metro.pk,metro.ro,metro.rs,metro.sk,makro.es,metro-tr.com,metro.ua,makro.pt#$#.consent-disclaimer { display: none !important; }
 metro.at,metro.bg,metro-cc.hr,metro.fr,metro.it,metro-kz.com,metro.md,metro.pk,metro.ro,metro.rs,metro.sk,makro.es,metro-tr.com,metro.ua,makro.pt#$#body { overflow: auto !important; }
-isbank.com.tr,turkcell.com.tr,lumberjack.com.tr,karaca.com,karaca-home.com,shiftdelete.net##body > efilli-layout-dynamic
+isbank.com.tr,isbank.com.tr,turkcell.com.tr,lumberjack.com.tr,karaca.com,karaca-home.com,shiftdelete.net##body > efilli-layout-dynamic
 atptour.com##.atp_cookie-message
 aterima-work.pl##.cm-popup-wrapper
 learnpick.in##.gdpr_holder
@@ -16833,6 +16834,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201936
+ipill.de#@#.cookie-message-overlay
+ipill.de#@##cookie-message
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201890
 @@||sdk.privacy-center.org^$domain=slam.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201895

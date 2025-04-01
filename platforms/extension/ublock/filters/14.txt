@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: M2ynJJEd+wOVV7gxsAohOA
-! Diff-Path: ../patches/14/14-s-1743478156-3600.patch
+! Checksum: IIwo+gPUYzLu7MwhyxzBqA
+! Diff-Path: ../patches/14/14-s-1743491454-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.11
-! TimeUpdated: 2025-04-01T03:25:51+00:00
+! Version: 2.2.26.12
+! TimeUpdated: 2025-04-01T07:07:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4080,7 +4080,7 @@ lublin.eu###polityka-ciastek
 metro.de,metro-cc.ru##.consent-disclaimer
 metro.at,metro.bg,metro-cc.hr,metro.fr,metro.it,metro-kz.com,metro.md,metro.pk,metro.ro,metro.rs,metro.sk,makro.es,metro-tr.com,metro.ua,makro.pt#$#.consent-disclaimer { display: none !important; }
 metro.at,metro.bg,metro-cc.hr,metro.fr,metro.it,metro-kz.com,metro.md,metro.pk,metro.ro,metro.rs,metro.sk,makro.es,metro-tr.com,metro.ua,makro.pt#$#body { overflow: auto !important; }
-isbank.com.tr,turkcell.com.tr,lumberjack.com.tr,karaca.com,karaca-home.com,shiftdelete.net##body > efilli-layout-dynamic
+isbank.com.tr,isbank.com.tr,turkcell.com.tr,lumberjack.com.tr,karaca.com,karaca-home.com,shiftdelete.net##body > efilli-layout-dynamic
 atptour.com##.atp_cookie-message
 aterima-work.pl##.cm-popup-wrapper
 learnpick.in##.gdpr_holder
@@ -15940,6 +15940,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201936
+ipill.de#@#.cookie-message-overlay
+ipill.de#@##cookie-message
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201890
 @@||sdk.privacy-center.org^$domain=slam.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201895
@@ -57565,6 +57568,8 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+pch24.pl##.sfd-donate-box-container
+pch24.pl##.cw-container:has(a[href^="https://pch24.pl/wesprzyj-rozwoj"])
 5.ua##.article-body > ul:has(> li > a[href="https://www.patreon.com/projects5"])
 newgrounds.com##.supporter-inter-pod
 newgrounds.com##.header-deck

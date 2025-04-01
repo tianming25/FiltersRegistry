@@ -1,9 +1,9 @@
-! Checksum: +8aFVGnWoPU3lg9jPE+vkA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743502260-3600.patch
+! Checksum: fIwtxPd68E92ydOeTfof+A
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743505786-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.15
-! TimeUpdated: 2025-04-01T10:07:42+00:00
+! Version: 2.2.26.16
+! TimeUpdated: 2025-04-01T11:06:24+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -9593,6 +9593,7 @@ drive2.ru##.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id], [d
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 playhop.com#%#//scriptlet('json-prune', 'direct rtb seatbid')
 mail.ru#%#//scriptlet('abort-on-property-write', 'mr.omicronConfig.config.restoreTgb')
+mail.ru##div[class^="tgb"][class*="wrapper__trap"]
 mail.ru##body > div:has(> div > div.buttonWrapper > div.button-help)
 mail.ru##div[slot="main-column"] > div.stripe-wrapper
 e.mail.ru,octavius.mail.ru#%#//scriptlet('prevent-setTimeout', 'adman_')
@@ -12180,9 +12181,6 @@ go.mo-t.com##.tc-banner-chase
 frag-mutti.de###campaign-popup
 planetary.org##.bugme
 cq.ru##.float-stream
-youla.ru#$?##app > div:not([class]) > div[tabindex]:has(> div[data-test-component="Modal"] main div[data-test-component="VasModal"] span:contains(Продайте свой товар быстрее)) { display: none !important; }
-youla.ru#$##app > div:not([class]) > div[tabindex] + div:not([tabindex]):empty { display: none !important; }
-youla.ru#$?#body { overflow: auto !important; padding-right: 0 !important; }
 cnet.com#%#//scriptlet('set-constant', '__NUXT__.state.services.features.shoppingExtensionPopupArticle', 'undefined')
 chess.com##.modal-upgrade-game-review-component
 kracie.co.jp##.l-floatingbnr

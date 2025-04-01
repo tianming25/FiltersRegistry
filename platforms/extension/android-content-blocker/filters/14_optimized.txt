@@ -1,8 +1,8 @@
-! Checksum: OJqrkO17e5iaO3ednB5aIA
+! Checksum: +VW2YdF3JvdvRp1j9FW/+w
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.15
-! TimeUpdated: 2025-04-01T10:07:42+00:00
+! Version: 2.2.26.16
+! TimeUpdated: 2025-04-01T11:06:24+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -7843,6 +7843,7 @@ echo.msk.ru##div[id]:empty
 razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style$="px;"] { width: 100% !important }
 razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style^="top:"] ~ div[class]:not([style]) { left: 100% !important; }
 drive2.ru##.js-page > div[class*=" "] > div[data-track]
+mail.ru##div[class^="tgb"][class*="wrapper__trap"]
 mail.ru##div[slot="main-column"] > div.stripe-wrapper
 m.dzen.ru##div[aria-label="Лента Дзена"] div + article[class*="--card-rtb__"]
 dzen.ru##div[class^="float-interview__float-"]
@@ -9977,7 +9978,6 @@ go.mo-t.com##.tc-banner-chase
 frag-mutti.de###campaign-popup
 planetary.org##.bugme
 cq.ru##.float-stream
-youla.ru#$##app > div:not([class]) > div[tabindex] + div:not([tabindex]):empty { display: none !important; }
 chess.com##.modal-upgrade-game-review-component
 kracie.co.jp##.l-floatingbnr
 bitrix24.ru##.helpdesk-notification-block

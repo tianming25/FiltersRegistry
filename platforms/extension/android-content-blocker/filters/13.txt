@@ -1,8 +1,8 @@
-! Checksum: su84PHklIQj4Z7UCVUQUHQ
+! Checksum: Hwt6tg/VFdu59KiCbVIdZQ
 ! Title: AdGuard Turkish filter
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.55.53
-! TimeUpdated: 2025-04-01T14:07:31+00:00
+! Version: 2.0.55.54
+! TimeUpdated: 2025-04-01T15:07:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1470,6 +1470,10 @@ dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdas
 !
 ! NOTE: Specific rules
 !
+dizimag.*##.series-watch-player > div[style^="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"]
+||dizimag.*/kripto$script
+||vipfilmizle.net/*1000x50.gif
+||vipfilmizle.net/*1000-50.gif
 mc-tr.com##.popup-reklam
 startv.com.tr##div[class*="dyg-"]
 sozcu.com.tr##.row div.sozcu-ramazan-imsakiye > a[target="_blank"]
@@ -1623,8 +1627,6 @@ koinfinans.com#$##main { margin-top: 0px !important; }
 ||dizifox*.com/wp-content/themes/diziplus/elma.js
 ||i.hizliresim.com/bsx4xwm.gif
 ||i.hizliresim.com/nddzy48.gif
-||dizimag.org/pop$script
-dizimag.org##.linko1
 ||sinetiktok.com/supermert$script
 filmgo.org#$##video > div#videos { display: block !important; }
 filmgo.org#$#.once-reklam { display: none !important; }
@@ -1827,9 +1829,8 @@ filmmakinesi.*##.ps-head-container
 memurlar.net###sticky-masthead
 mangaku.blog###sidebar-b
 mangaku.blog##.nctr
-/dizip*.js$domain=dizimag.org|dizipia.com
+/dizip*.js$domain=dizipia.com
 ||cdn.r10.net/rm/analiz/|$subdocument
-||dizimag.org/uploads/megapari.mp4
 ||dizipia.com/uploads/*.gif
 ||dizipia.com/uploads/1win1000.jpg
 dizipia.com,hdfilmcehennemii.co,dizimov.*##.rek-wrap
@@ -1911,9 +1912,7 @@ dizikorea.*##.top-wcs
 yenisafak.com##.ys-popup-video-ad
 fullhdfilm.*##.footerleft > a:not([href*="fullhdfilm.*"])
 fullhdfilm.*##.filmcontent > div[style^="margin:3px"]
-izlekolik.org,dizikorea.*,dizimag.org###activeFrontVid
-||dizimag.org/uploads/1350x50.gif
-||dizimag.org/uploads/1000x50.gif
+dizimag.*,izlekolik.org,dizikorea.*###activeFrontVid
 milliyet.com.tr##.main-card-ads
 bizevdeyokuz.com###custom_html-7
 sinematurk.com##a.coverup
@@ -1983,7 +1982,6 @@ sinema.cx###f-uyari2
 asyadiziizle.com###content > a
 reytingtv.com##div[class^="fullads"]
 hurriyet.com.tr##.news-content > .cf
-dizimag.org##.rek-info
 ||timeturk.com/assets/vast/videojs.ads.js
 islamveihsan.com##.ad-banner
 tafdi3.com,tafdi4.com,tafdi5.com##footer .lastright > p ~ a
@@ -4980,7 +4978,7 @@ takvim.com.tr##iframe[name$="BIKADV"]
 haberturk.com##iframe[src*="/ads/"]
 cnnturk.com##iframe[src^="/action/ibanner"]
 afyonhaber.com##img[alt*="web-banner"]
-dizimag.org,akcakocahavadis.com,muglagazetesi.com.tr,basarisiralamalari.com,eniyiandroid.com,bigatribun.net,mavididim.com.tr##img[alt="reklam"]
+akcakocahavadis.com,muglagazetesi.com.tr,basarisiralamalari.com,eniyiandroid.com,bigatribun.net,mavididim.com.tr##img[alt="reklam"]
 fatsayenihaber.com,geredeyenigun.com,balikesirhaberajansi.com,kurtulusgazetesi.com.tr##img[alt="Reklam"]
 gidahatti.com##img[alt="ad"]
 haber.sol.org.tr##img[style="width: 300px;height: 250px;"]

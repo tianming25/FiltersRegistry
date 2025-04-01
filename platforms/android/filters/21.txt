@@ -1,9 +1,9 @@
-! Checksum: tIV8Dh4Gy64MWBATkDsX9Q
-! Diff-Path: ../patches/21/21-s-1743491441-3600.patch
+! Checksum: kHOSYbxAakgtPve5YWNSMg
+! Diff-Path: ../patches/21/21-s-1743502251-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.31.95
-! TimeUpdated: 2025-04-01T07:07:32+00:00
+! Version: 2.0.31.96
+! TimeUpdated: 2025-04-01T10:07:50+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3482,6 +3482,8 @@ eda.yandex.ru##.TrackingBanner_root
 360.yandex.ru##div[data-test-id="promotopline"]
 !
 ! Kinopoisk
+www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
+www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
 www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! END: Yandex
@@ -4336,10 +4338,6 @@ dtf.ru#?#.view > div[class]:has(> div > a[href^="https://booster.osnova.io/a/red
 welcome.mosreg.ru#$#html { overflow: auto !important; padding-right: 0 !important; }
 welcome.mosreg.ru#$#.mfp-bg { display: none !important; }
 welcome.mosreg.ru#$#.mfp-wrap { display: none !important; }
-www.kinopoisk.ru#$#div[class*="styles_rootWithBranding__"] > header[class] > div > img { display: none !important; }
-www.kinopoisk.ru#$#div[class*="styles_rootWithBranding__"] > header[class] > div.header-navigation { margin-top: 0 !important; }
-www.kinopoisk.ru#$#header[class][style*="--header-height: 200px;"] > div > img { display: none !important; }
-www.kinopoisk.ru#$#header[class][style*="--header-height: 200px;"] > div.header-navigation { margin-top: 0 !important; }
 postimees.ee##.digipakett-branding-root-container-piano
 deepl.com##div[aria-describedby^="callout-subtitle-"][aria-describedby$="ExtensionPromo"]
 dtf.ru#%#//scriptlet('set-local-storage-item', 'plus-sheet-session-count', '0')

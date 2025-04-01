@@ -1,9 +1,9 @@
-! Checksum: FJpYhu+3Zk4jm1REnkJ8KA
-! Diff-Path: ../patches/14/14-s-1743498679-3600.patch
+! Checksum: Tcl4M2bzu9PpVTBLUYmrbg
+! Diff-Path: ../patches/14/14-s-1743502249-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.14
-! TimeUpdated: 2025-04-01T09:08:03+00:00
+! Version: 2.2.26.15
+! TimeUpdated: 2025-04-01T10:07:42+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23796,8 +23796,6 @@ myshows.me##.likewiki
 mysmsbox.ru##div[ng-if="status.adBlockerActive"]
 nachrichten.at###iab_overlay
 navcomic.com##body > div#document-header > aside.widget.widget_text
-nekopoi.care##.mobileadsbottom
-nekopoi.care##.mobileadstop
 nekto.me##.no-adb
 nesoacademy.org#?#div[class^="jss"]:has(> ins.adsbygoogle)
 netzwerktotal.de##.hidden-phone > .hidden-phone
@@ -44609,7 +44607,6 @@ myanimelist.net##div[data-text="Get the App"]
 bb-chat.tv,ldoceonline.com,ebookjapan.yahoo.co.jp,shonenjumpplus.com,1101.com,josei-bigaku.jp,androeed.net,magazine.hitosara.com,kyoko-np.net,myanimelist.net##.app
 hitosara.com##.app_area
 dailymail.co.uk##a[href^="http://itunes.apple.com/app/"]
-||nekopoi.care/wp-content/plugins/mobiloud-smart-app-banner/
 bing.com###bnp_rich_div
 cw.com.tw,www-livemint-com.cdn.ampproject.org,livemint.com##.openinApp
 besplatka.ua##.social-net
@@ -49924,6 +49921,8 @@ eda.yandex.ru##.TrackingBanner_root
 360.yandex.ru##div[data-test-id="promotopline"]
 !
 ! Kinopoisk
+www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
+www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
 www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! END: Yandex
@@ -50778,10 +50777,6 @@ dtf.ru#?#.view > div[class]:has(> div > a[href^="https://booster.osnova.io/a/red
 welcome.mosreg.ru#$#html { overflow: auto !important; padding-right: 0 !important; }
 welcome.mosreg.ru#$#.mfp-bg { display: none !important; }
 welcome.mosreg.ru#$#.mfp-wrap { display: none !important; }
-www.kinopoisk.ru#$#div[class*="styles_rootWithBranding__"] > header[class] > div > img { display: none !important; }
-www.kinopoisk.ru#$#div[class*="styles_rootWithBranding__"] > header[class] > div.header-navigation { margin-top: 0 !important; }
-www.kinopoisk.ru#$#header[class][style*="--header-height: 200px;"] > div > img { display: none !important; }
-www.kinopoisk.ru#$#header[class][style*="--header-height: 200px;"] > div.header-navigation { margin-top: 0 !important; }
 postimees.ee##.digipakett-branding-root-container-piano
 deepl.com##div[aria-describedby^="callout-subtitle-"][aria-describedby$="ExtensionPromo"]
 dtf.ru#%#//scriptlet('set-local-storage-item', 'plus-sheet-session-count', '0')

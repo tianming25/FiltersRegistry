@@ -1,9 +1,9 @@
-! Checksum: ESWK+YVaRuVwRxzGAyBX0A
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743498679-3600.patch
+! Checksum: BmJxMOgn8eYQ9igbANHBWw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743502250-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.14
-! TimeUpdated: 2025-04-01T09:08:03+00:00
+! Version: 2.2.26.15
+! TimeUpdated: 2025-04-01T10:07:42+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -10441,8 +10441,6 @@ motoroids.com#%#//scriptlet('prevent-setTimeout', '.height() == 0')
 mrexcel.com#%#//scriptlet("set-constant", "adblockDetector", "noopFunc")
 goflix.sbs,multiup.io,multiup.org#$#.mfp-ready { display: none !important; }
 navcomic.com##body > div#document-header > aside.widget.widget_text
-nekopoi.care##.mobileadsbottom
-nekopoi.care##.mobileadstop
 newnavitel.blogspot.com##.post-body > div[style="text-align: left;"] > div[style="text-align: center;"] > h1[id="result"]
 nnmclub.to##body > div.request
 nodecraft.com###intercom-warning
@@ -21652,6 +21650,8 @@ practicum.yandex.*###frontend-developer
 rasp.yandex.*##.TravelHotelsBanner
 tv.yandex.*##.recommended-ott
 360.yandex.ru##div[data-test-id="promotopline"]
+www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
+www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
 www.kinopoisk.ru##div[class^="trailer-promo"]
 dasreda.ru##div[class^="styles_adPopupWrapperRecipe__"]
 dasreda.ru##div[class^="styles_bannerWrapperRecipe__"]
@@ -22276,8 +22276,6 @@ undercovertourist.com#$#.jquery-modal.blocker { display: none !important; }
 aliyundrive.com##div[class^="share-list-banner--"]
 dtf.ru#?#.view > div[class]:has(> div > a[href^="https://booster.osnova.io/a/redirect?"])
 welcome.mosreg.ru#$#html { overflow: auto !important; padding-right: 0 !important; }
-www.kinopoisk.ru#$#div[class*="styles_rootWithBranding__"] > header[class] > div > img { display: none !important; }
-www.kinopoisk.ru#$#div[class*="styles_rootWithBranding__"] > header[class] > div.header-navigation { margin-top: 0 !important; }
 postimees.ee##.digipakett-branding-root-container-piano
 deepl.com##div[aria-describedby^="callout-subtitle-"][aria-describedby$="ExtensionPromo"]
 dtf.ru#%#//scriptlet('set-local-storage-item', 'plus-sheet-session-count', '0')

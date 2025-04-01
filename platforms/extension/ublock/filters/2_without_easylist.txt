@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: hJcWhBjatfBkhUtAOOudTw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743498702-3600.patch
+! Checksum: iv8o3UrTm6BVWEvi2vbvTg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743502267-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.43
-! TimeUpdated: 2025-04-01T09:07:19+00:00
+! Version: 2.3.77.44
+! TimeUpdated: 2025-04-01T10:07:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23692,8 +23692,6 @@ i.trackr.fr##.classInfoCoucou
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36217
 ! breaks cookie settings on https://github.com/AdguardTeam/AdguardFilters/issues/38663
 ! ||sourcepoint.mgr.consensu.org^
-! https://github.com/AdguardTeam/AdguardFilters/issues/36036
-nekopoi.care##+js(set-constant, popjs, noopFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197851
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197850
 ! https://github.com/AdguardTeam/AdguardFilters/issues/196178
@@ -30608,12 +30606,13 @@ minioppai.org#?#.rapi > .leftarea:has(> script:first-child:contains(ad_idzone))
 kshowsubindo.org##+js(abort-on-property-read, Object.prototype.popunder)
 kshowsubindo.org##.jquery-modal
 kshowsubindo.org###popup
+! https://github.com/AdguardTeam/AdguardFilters/issues/202093
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46816
-nekopoi.web.id##.sidebar > #HTML6
-nekopoi.web.id###header-wrapper > .batasan > #header2
-||blogspot.com/-*/ads-poi*.jpg$domain=nekopoi.web.id
-||rawcdn.githack.com/nkpoi/ads/master/adsblock2.js
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noop.js,important,domain=nekopoi.web.id
+nekopoi.*###nkpoibloc
+nekopoi.*##b\:if > a[href][target="_blank"] > img
+nekopoi.*##center > a[href][target="_blank"] > img
+nekopoi.*###header-wrapper > .batasan > #header2
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noop.js,important,domain=nekopoi.*
 ! https://github.com/realodix/AdBlockID/issues/173
 wizardsubs.com#?#div[class^="sidebar"] > div.widget:has(> h3.widget-title > span:contains(Ads))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/46604
@@ -30736,11 +30735,7 @@ kurazone.net##.anuads
 ||cdn.staticaly.com/gh/sotazer/sotazone/*/kurazoneAdblock.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24805
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18637
-nekopoi.care##.ero > div.leftarea
 linkpoi.in##center > a[href][target="_blank"] > img
-nekopoi.care###sidebar_right > .widget_text > .custom-html-widget > a[href^="http://bit.ly/"] > img
-nekopoi.care##div[class^="adsgen"]
-@@||nekopoi.*/wp-content/themes/ThemeNekopoi/js/adsbygoogle.js$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12590
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12559
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
@@ -44159,6 +44154,7 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+cloud.getpczone.com##form > center > a[target="_blank"]
 wjla.com##div[class^="DisplayAdvert-module_"]
 ||wjla.com/resources/video/players/prod/dist/*/advertising.js
 fnlondon.com##.grid__rail_top:has(> .adWrapper)
@@ -56052,7 +56048,6 @@ linkedin.com##.ad-banner-container
 autotrader.com##div[data-cmp="fixedAdContainer"]
 uploadrive.com###content > center > a.btn[onclick]
 sexgifs.me##a[target="_blank"] > img[width="300"][height="250"]
-nekopoi.care##a[href^="https://bit.ly"] > img[alt*="iklan "]
 vladan.fr##a[href*="banner"][href*="utm_source"][target="_blank"]
 ||vladan.fr/wp-content/uploads/images/veeamskin3.png
 vladan.fr##a[href^="https://www.vladan.fr/go"] > img

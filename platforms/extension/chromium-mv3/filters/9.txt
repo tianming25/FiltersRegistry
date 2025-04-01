@@ -1,8 +1,8 @@
-! Checksum: zLvknz7jESEvm6XMtzuV5A
+! Checksum: A8r4ATzUZWrLXX9DTjy52g
 ! Title: AdGuard Spanish/Portuguese filter
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.29.42
-! TimeUpdated: 2025-04-01T08:09:03+00:00
+! Version: 2.0.29.43
+! TimeUpdated: 2025-04-01T10:07:34+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2151,6 +2151,7 @@ c5n.com,t13.cl,solowrestling.mundodeportivo.com,todojujuy.com,mendozapost.com,me
 !
 ! NOTE: Specific rules
 !
+nationalgeographic.com.es#$#.add990x90 { min-height: 0 !important; }
 aa.com.br#$##aa-hero-ad-frame { height: 350px !important; visibility: hidden !important; }
 serviporno.com##.ads__block
 serviporno.com##.banner-frame
@@ -4028,7 +4029,7 @@ folhadoslagos.com##.container_16 > .billboardBanner + .clear + .spacer60
 ||cdn.folhadoslagos.com/upload/dn_banner/
 boadiversao.com.br##.publicidade-bd
 ofuxico.com.br###sidebar > .rel-news
-nationalgeographic.com.es,cuerpomente.com,clara.es##.add990x90
+cuerpomente.com,clara.es##.add990x90
 globo.com##.container-adv
 psicologiaymente.com##body .banner-module
 psicologiaymente.com##.facebook-ads-square
@@ -5839,6 +5840,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202097
+nationalgeographic.com.es#@#.ad-item
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198804
 @@||amazonaws.com/*uol.com.br/publicidade-legal/json/ultimas.json$domain=uol.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199029

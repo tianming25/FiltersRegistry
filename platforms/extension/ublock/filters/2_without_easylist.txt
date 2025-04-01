@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: rjn2XuLKZAn6vtsZVEALFA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743509706-3600.patch
+! Checksum: PBbXuj9zR5eX7ahcKgvmfQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743513496-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.46
-! TimeUpdated: 2025-04-01T12:10:35+00:00
+! Version: 2.3.77.47
+! TimeUpdated: 2025-04-01T13:13:48+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -42,7 +42,6 @@
 ||organicowner.com^
 ||woeful-trash.pro^
 ||dullequivalent.com^
-||travelpayouts.com^$third-party
 ||red-swimming.com^
 ||tds.favbet.partners^$popup
 ||pbl3citto.com^$all
@@ -26984,6 +26983,7 @@ auto.am##.azd-top
 ##.ainsyndication
 az##.makerekframe
 !
+||travelpayouts.com/widgets/$domain=news.milli.az
 vol.az##.down_area > button[onclick][data-u]
 vol.az##.logincenter > a[title]
 ||xeberle.com/banner/
@@ -28375,6 +28375,8 @@ metro.cz,fights.cz,antiyoutuber.cz,expres.cz,televizeseznam.cz,ahaonline.cz,extr
 !+ NOT_PLATFORM(windows, mac, android, ext_ff)
 !+ NOT_PLATFORM(windows, mac, android, ext_ff)
 karaoketexty.cz##+js(abort-current-script, Math, adbDetect)
+! https://github.com/AdguardTeam/AdguardFilters/issues/202095
+super.cz##+js(set-constant, Object.prototype._advertState, true)
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45246
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44412
@@ -44174,7 +44176,7 @@ pressgazette.co.uk##.c-read-next:has(> div.jobbioapp)
 troyhunt.com##.sponsor_bar
 tvguide.com##.c-tvListingsSchedule_video:has(.c-adDisplay_container)
 usnews.com#$#.content:has(> div[class^="Splash__BucketWrapper"] > div > div[class^="Ad__Container"]) { display: none !important; }
-usnews.com#$#.pt5 { padding-top: 0px !important; }
+usnews.com#$#main div.pt5 { padding-top: 0px !important; }
 3minx.com#$?#div.popup-box-ads { remove: true; }
 imagetwist.com##+js(abort-on-property-write, shouldShowAd)
 jav.sb##+js(abort-current-script, document.write, insertAd)
@@ -45354,7 +45356,6 @@ vxxx.com#?#.wrapper > div:has(> div > h2:matches-css(after, content: Advertising
 thehindubusinessline.com##.also-like
 news.abs-cbn.com##.MuiBox-root  > div.MuiBox-root:has(> div[style] > div > div[style^="background-color"] > div[id^="div-multiAd"])
 yify.guide##img[style="max-width:40%;height:auto;"]
-colorblindnesstest.org###bannerad1
 dpreview.com##.articleBody > .videoWrapper:has(> .raptiveVideoWrapper > div[class^="adthrive-content"])
 cybernews.com##.adds__wrapper
 cybernews.com##.adds__wrapper + hr
@@ -50670,7 +50671,6 @@ piracy.moe##div[class*=" Card_sponsored__"]
 cartooncrazy.uno##.tidymag-sidebar-content > div[id^="custom_html-"]
 serebii.net##div[style^="margin-top:16px"][style*="height:100px"]
 pcmag.com##a[href^="https://www.vouchercodes.co.uk/"]
-||osdn.net/js/ad_dfp_
 ||cloudemb.com/js/jquery/*/jquery-*.min.js?v=
 euronews.com###sharethrough-ad
 euronews.com##.qa-marketBlock
@@ -59925,7 +59925,6 @@ polisionline.com###adslayoutleftright
 ip-address.org###adsleft
 klart.se###advertisement-top
 alphaporno.com,crocotube.com###advertising2-preroll
-osdn.net###after-download-ad
 amazon.com###ape_Detail_dp-ads-center-promo_Desktop_placement
 mixesdb.com###area-trending.clear
 tweaktown.com###background_skin
@@ -63320,6 +63319,8 @@ adultlingeriepics.com,adultlingeriepics.com,adultspankingtgp.com,allfeetporn.com
 !
 !
 !+ NOT_OPTIMIZED
+colorblindnesstest.org###bannerad1
+!+ NOT_OPTIMIZED
 freepressjournal.in##.homeMobileMiddleAdContainer
 !+ NOT_OPTIMIZED
 gulfnews.com##div[class]:has(> div[class] > div[class] > div[id] > iframe[id^="google_ads"])
@@ -64445,6 +64446,8 @@ $popup,third-party,domain=dood.ws,badfilter
 !##################
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202065
+@@||audience.io/api/$domain=campaign.aptivada.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201999
 allmusic.com#@##show_ads
 ! zone.msn.com - game stuck in loading screen

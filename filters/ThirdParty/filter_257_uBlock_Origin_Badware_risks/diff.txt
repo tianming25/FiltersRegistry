@@ -3730,8 +3730,6 @@ www.cambe.pr.gov.br##+js(noeval-if, tigervip2)
 ||impotsgouv.*.wcomhost.com^$doc,to=~impots.gouv.fr
 ! Rule "/am/*.php^$doc,to=arubabusiness.it|mybluehost.me|serv00.net|wcomhost.com|~amendes.gouv.fr" converted to: "/am/*.php^$document,to=arubabusiness.it|mybluehost.me|serv00.net|wcomhost.com|~amendes.gouv.fr"
 /am/*.php^$doc,to=arubabusiness.it|mybluehost.me|serv00.net|wcomhost.com|~amendes.gouv.fr
-! Rule "||h567268.linp*.arubabusiness.it^$doc,to=~amendes.gouv.fr" converted to: "||h567268.linp*.arubabusiness.it^$document,to=~amendes.gouv.fr"
-||h567268.linp*.arubabusiness.it^$doc,to=~amendes.gouv.fr
 ! Rule "||fi/a/Amendes/*.php^$doc,to=fi|~amendes.gouv.fr" converted to: "||fi/a/Amendes/*.php^$document,to=fi|~amendes.gouv.fr"
 ||fi/a/Amendes/*.php^$doc,to=fi|~amendes.gouv.fr
 ! Rule "||fi/part/Amendes/*.php^$doc,to=fi|~amendes.gouv.fr" converted to: "||fi/part/Amendes/*.php^$document,to=fi|~amendes.gouv.fr"
@@ -4946,6 +4944,14 @@ adrissa.com.co,americansoda.co.uk,casteloforte.com.br,centerfabril.com.br,forque
 ||tlauncher.org^$doc
 ! Rule "||amezpay.com^$doc,to=~amerimedems.com" converted to: "||amezpay.com^$document,to=~amerimedems.com"
 ||amezpay.com^$doc,to=~amerimedems.com
+! Rule "/^https:\/\/[a-z]{7,8}\.com\/\?s=[0-9a-z]{13}&q=/$doc,to=com,match-case" converted to: "/^https:\/\/[a-z]{7,8}\.com\/\?s=[0-9a-z]{13}&q=/$document,to=com,match-case"
+/^https:\/\/[a-z]{7,8}\.com\/\?s=[0-9a-z]{13}&q=/$doc,to=com,match-case
+! Rule "/?fingerprint=*&i=$doc" converted to: "/?fingerprint=*&i=$document"
+/?fingerprint=*&i=$doc
+! Rule "/?id=*&traceId=$doc" converted to: "/?id=*&traceId=$document"
+/?id=*&traceId=$doc
+! Rule "=1&id=*&traceId=$doc" converted to: "=1&id=*&traceId=$document"
+=1&id=*&traceId=$doc
 ! ~support.ublock.org,ublock.org#$#main::before { content: 'uBlock is unrelated to the well-known uBlock Origin.' !important; font-size: 32px !important; color: red !important; font-weight: bold !important; } is excluded by "#$#" in exclusions-low.txt
 ~support.ublock.org,ublock.org#$#main::before { content: 'uBlock is unrelated to the well-known uBlock Origin.' !important; font-size: 32px !important; color: red !important; font-weight: bold !important; }
 ! support.ublock.org#$#div.hero-unit > div.search-box--hero-unit::before { content: 'uBlock is unrelated to the well-known uBlock Origin.' !important; font-size: var(--font-size-h2) !important; color: red !important; font-weight: bold !important; } is excluded by "#$#" in exclusions-low.txt

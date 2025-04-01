@@ -1,14 +1,14 @@
 ![Adblock Plus 2.0]
-! Checksum: RCX03VpWasQECgUo7z3fbw
-! Diff-Path: ../patches/251/251-s-1743324019-14400.patch
+! Checksum: xvy/XGGCxmupAZJ8BdFV9Q
+! Diff-Path: ../patches/251/251-s-1743511743-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.54
-! TimeUpdated: 2025-03-30T08:36:38+00:00
+! Version: 2.0.8.55
+! TimeUpdated: 2025-04-01T12:45:12+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 30March2025v1
+! OriginalVersion: 31March2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -143,7 +143,8 @@ $document,removeparam=taid
 ! https://www•tipsbladet•dk/nyhed/superliga/cv-afviser-traenerskifte-jeg-har-ikke-talt-med-kristian?eblink=artikel (14/12/2020)
 $document,removeparam=eblink
 ! https://contabo•com/?show=vps&utm_source=cj&utm_medium=affiliate&utm_campaign=vps&source=affiliate&AID=12454632&PID=8533995&SID=&CJEVENT=1999e98a465411eb825b03900a180510 (25/12/2020)
-$removeparam=AID,document,denyallow=firestore.googleapis.com,domain=~google.*|~disqus.*|~disquscdn.com
+! (https://github.com/DandelionSprout/adfilt/issues/1117)
+$removeparam=AID,document,denyallow=firestore.googleapis.com,domain=~google.*|~disqus.*|~disquscdn.com|~gov
 $removeparam=/^CJEVENT=.*$/i,document
 ! https://account•microsoft•com/?refd=www•microsoft•com
 $document,removeparam=refd
@@ -1406,6 +1407,9 @@ $removeparam=adset_id
 ! https://go•getlifevac•eu/offer/pre/3/?lpid=2205&source_id=DL&sub_id=&req_id=&oid=912&device_type=&country_name=&l=1&c=8&uid=2205&oid2=912&affid2=30747&geo=no (Ad found in Windows 11's Weather app; 30/03/2025)
 $removeparam=affid2
 $removeparam=oid2
+! https://code-wallets•com/products/stealth-wallet?tw_source=fb&tw_adid=120213146365990446&variant=50460353593575
+$removeparam=tw_source
+$removeparam=tw_adid
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320

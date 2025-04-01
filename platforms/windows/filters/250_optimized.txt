@@ -1,5 +1,5 @@
-! Checksum: wb5E5KZuFmvxTNydh2cH5A
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1743439419-14400.patch
+! Checksum: Uq/AxLjEaPxpbCoIt1Xlxw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1743482558-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.53
@@ -1524,6 +1524,7 @@ apkfab.com##.tip-extension
 158.222.7.83$network
 !+ PLATFORM(windows, mac, android)
 95.214.26.78$network
+.aspx?cname=*&cid=$all
 !+ PLATFORM(windows, mac, android)
 185.155.184.57$network
 !+ PLATFORM(windows, mac, android)
@@ -3422,7 +3423,6 @@ apkfab.com##.tip-extension
 ://ww7.$document,domain=~ww7.be|~ww7.readsnk.com|~ww7.autotask.net
 ://ww9.$document,domain=~ww9.ikea.com|~ww9.tiki.ne.jp|~ww9.sakura.ne.jp|~ww9.generali.pt|~ww9.itau.com.br|~ww9.autotask.net
 ://ww10.$document,domain=~ww10.autotask.net|~w10.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
-://ww11.$document,domain=~ww11.autotask.net|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww12.$document,domain=~ww12.autotask.net|~ww12.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww16.$document,domain=~ww16.autotask.net|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww17.$document,domain=~ww17.autotask.net|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
@@ -3579,6 +3579,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ~telegram.org##a[href^="tg://msg_url?"]
 ~tumblr.com##.share-tumblr:not(html,body,:empty)
 ~tumblr.com##a[href*="tumblr.com/share/"]
+~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
 ###share-twitter
 ##.btn-twitter:not(html,body,:empty)
@@ -3732,7 +3733,6 @@ amap.com##.dir_qr
 ctrip.com##.set-wechat.set-list > .nav-myctrip.person-text
 jd.com##.jdm-tbar-tab-qrcode.jdm-toolbar-tab.J-trigger
 mi.com##div.section:nth-of-type(31)
-news.sina.com.cn##.clearfix.blk-wxfollow
 smzdm.com##.footer-right
 tmall.com###mobile
 trade.tmall.com##.show-cross-btn
@@ -3814,6 +3814,7 @@ spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-sn
 alpresor.se#%#//scriptlet('ubo-acis.js', 'snowMax')
 /snow.js|$script
 /wp-content/plugins/christmasify^
+/wp-content/plugins/snow-3d^
 daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /let-it-snow.
 /snow-falling.js
@@ -4005,7 +4006,6 @@ $removeparam=LSNPUBID
 $removeparam=admitad_uid
 $removeparam=traffic_type
 $removeparam=traffic_id
-$removeparam=clickOrigin
 $removeparam=cmpid
 $removeparam=CMP
 $document,removeparam=/^OCID=.*$/i,domain=~youtube.com|~reiseauskunft.bahn.de|~msn.com
@@ -4104,6 +4104,8 @@ $removeparam=affiliate_id
 $removeparam=cjdata
 $removeparam=click_id,domain=~bookings.beatthatflight.*
 $removeparam=cm_soc
+$removeparam=o_lid
+$removeparam=o_sch
 $removeparam=wtExtndSource
 $removeparam=CAID
 $removeparam=rfsn
@@ -4172,7 +4174,6 @@ $removeparam=_kx
 $document,removeparam=/^affsrc=.*$/i
 $document,removeparam=/^aff_sub\d?=.*$/
 $removeparam=afftrack
-$removeparam=atid
 $document,removeparam=/^clickref\d?=.*$/
 $removeparam=cuid
 $removeparam=data1,domain=~web3.cmvm.pt
@@ -4240,8 +4241,6 @@ $removeparam=_gac
 $removeparam=af_medium
 $removeparam=af_source
 $removeparam=af_campaign
-$removeparam=aftr
-$removeparam=aftr_source
 $removeparam=ko_click_id
 $removeparam=nrtv_cid
 $removeparam=trk_ref
@@ -4251,8 +4250,6 @@ $removeparam=amp_device_id
 $removeparam=awinaffid
 $removeparam=iclid
 $removeparam=a_fid
-$removeparam=afCampaignId
-$removeparam=afCreativeId
 $removeparam=trk_contact
 $removeparam=trk_msg
 $removeparam=trk_sid
@@ -4586,7 +4583,6 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 @@://www.google.com/maps?entry=$removeparam=utm_campaign
 ||tiktok.com^$removeparam=_r
 $removeparam=u_code
-$removeparam=is_from_webapp
 $removeparam=sender_device
 ||tiktok.com^$removeparam=_d
 ||tiktok.com^$removeparam=tt_from
@@ -4667,7 +4663,6 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=logid
 ||baidu.com^$removeparam=pageFrom
 ||baidu.com^$removeparam=srcp
-||baidu.com^$removeparam=sfrom
 ||haokan.baidu.com/v?$removeparam=pd
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaId
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaTitle
@@ -4785,7 +4780,6 @@ $removeparam=nettype
 ||view.inews.qq.com^$removeparam=ft
 $removeparam=c,document,domain=announcements.bybit.com|appsflyer.com|farfetch.com|glami.cz|hepsiburada.com|norton.com|onelink.me|shopee.*|tiktok.com|instabox.io
 $removeparam=/^pf_rd_.*$/,domain=shopbop.com|amazon.*|imdb.com|zappos.com|audible.*|6pm.com
-$removeparam=linkId,domain=amazon.*|cbsnews.*|disneyplus.com|espn.*|sporza.be
 $document,removeparam=channel,domain=1sol.io|amazon.*|bybit.com|coinpanel.com|docs.google.com|docsend.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|ngx.me|privateinternetaccess.com|reddit.app.link|rei.com|runnode.com|squarespace.com|t.me|twitter.com|xd.wayin.com|x.com
 $removeparam=fr,domain=baidu.com|thegay.com|todayonline.com|hclips.com|search.yahoo.com
 $removeparam=promo,domain=thegay.com|hammacher.com|upornia.com|hclips.com
@@ -4886,7 +4880,6 @@ $removeparam=/^m_.*$/,domain=macys.com|macysinc.com
 $removeparam=CAGPSPN
 ||bindright.com^$removeparam=camp_id
 $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
-||unieuro.it^$removeparam=dedup
 ||apple.com^$removeparam=mttnsubad
 $removeparam=wfr,domain=weidian.com|baidu.com
 $removeparam=organic_search_click
@@ -4953,6 +4946,7 @@ $document,removeparam=refresh,domain=cnn.com|startribune.com
 ||emag.ro^$removeparam=scenario_ID
 $removeparam=mt_click_id,domain=mail.ru|vkplay.ru
 $removeparam=ico,domain=dailymail.co.uk|inews.co.uk|metro.co.uk|thisismoney.co.uk
+||mercadolibre.com.ar^$removeparam=pdp_filters
 $removeparam=mwv_rm
 ||comodo.com^$removeparam=track
 $removeparam=af,domain=1fichier.com|comodo.com
@@ -4960,6 +4954,7 @@ $removeparam=af,domain=1fichier.com|comodo.com
 ||qwant.com^$removeparam=client
 ||ecosia.org^$removeparam=addon
 $removeparam=referralInfo,domain=wix.com
+$removeparam=locale,domain=udemy.com
 ||zoho.com^$removeparam=zsrc
 ||nortonsafe.search.ask.com^$removeparam=installsource
 ||nortonsafe.search.ask.com^$removeparam=os
@@ -5100,7 +5095,6 @@ $document,removeparam=pub,domain=indeed.com
 $document,removeparam=jsa,domain=indeed.com
 $document,removeparam=vjk,domain=indeed.com
 $document,removeparam=fvj,domain=indeed.com
-$document,removeparam=ttclid
 $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid

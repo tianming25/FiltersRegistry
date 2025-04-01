@@ -1,9 +1,9 @@
-! Checksum: IpFWp16lM1kkzSY3WbMcgQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743491450-3600.patch
+! Checksum: W6SWxwUhhSh4TmDHUkhgZQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743495149-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.12
-! TimeUpdated: 2025-04-01T07:07:26+00:00
+! Version: 2.2.26.13
+! TimeUpdated: 2025-04-01T08:09:11+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1446,6 +1446,7 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+maxmo.de#%#//scriptlet('set-cookie', 'cookie-preference', '1')
 ipill.de#%#//scriptlet('trusted-click-element', 'button.accept-all-cookies')
 vercel.com###fides-overlay
 flibco.com#%#//scriptlet('trusted-set-cookie', 'cookiesjsr', '%7B%22functional%22%3Afalse%2C%22analytics%22%3Afalse%2C%22facebook_pixel%22%3Afalse%2C%22recaptcha%22%3Afalse%2C%22gtag%22%3Afalse%2C%22video%22%3Afalse%7D')
@@ -13077,8 +13078,11 @@ lbv.de#%#document.cookie="overlay-geschenk=donotshowfor7days; path=/;";
 egrp365.ru,vegasslotsonline.com##.exit-popup
 vegasslotsonline.com##.subscribe-to-newsletter-sticky
 tutorialsduniya.com,betootaadvocate.com,financefwd.com##.hustle-slidein-position--south
-rnd.de,elmundo.es##div[class="tp-modal"][style="z-index: 300050; display: block;"]
-rnd.de,elmundo.es##div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ div.tp-backdrop
+elmundo.es#$#body.tp-modal-open { overflow: auto !important; }
+elmundo.es#$#div[class="tp-modal"][style="z-index: 300050; display: block;"] { display: none !important; }
+elmundo.es#$#div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ div.tp-backdrop { display: none !important; }
+rnd.de##div[class="tp-modal"][style="z-index: 300050; display: block;"]
+rnd.de##div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ div.tp-backdrop
 growney.de#$##bio_ep { display: none !important; }
 growney.de#$#body { overflow: auto !important; }
 comss.ru#$#[id^="getsitecontrol"] { display: none!important; }

@@ -1,9 +1,9 @@
-! Checksum: u74rxqwfdWXhD6Vq0xwSpw
-! Diff-Path: ../patches/14/14-s-1743491442-3600.patch
+! Checksum: Bx2ooxv64lonitamTPp3/w
+! Diff-Path: ../patches/14/14-s-1743495142-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.12
-! TimeUpdated: 2025-04-01T07:07:26+00:00
+! Version: 2.2.26.13
+! TimeUpdated: 2025-04-01T08:09:11+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2500,6 +2500,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+maxmo.de#%#//scriptlet('set-cookie', 'cookie-preference', '1')
 ipill.de#%#//scriptlet('trusted-click-element', 'button.accept-all-cookies')
 vercel.com###fides-overlay
 flibco.com#%#//scriptlet('trusted-set-cookie', 'cookiesjsr', '%7B%22functional%22%3Afalse%2C%22analytics%22%3Afalse%2C%22facebook_pixel%22%3Afalse%2C%22recaptcha%22%3Afalse%2C%22gtag%22%3Afalse%2C%22video%22%3Afalse%7D')
@@ -29151,8 +29152,11 @@ egrp365.ru,vegasslotsonline.com##.exit-popup
 vegasslotsonline.com##.subscribe-to-newsletter-sticky
 tutorialsduniya.com,betootaadvocate.com,financefwd.com##.hustle-slidein-position--south
 crackevil.com###pop-ad-wrap
-rnd.de,elmundo.es##div[class="tp-modal"][style="z-index: 300050; display: block;"]
-rnd.de,elmundo.es##div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ div.tp-backdrop
+elmundo.es#$#body.tp-modal-open { overflow: auto !important; }
+elmundo.es#$#div[class="tp-modal"][style="z-index: 300050; display: block;"] { display: none !important; }
+elmundo.es#$#div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ div.tp-backdrop { display: none !important; }
+rnd.de##div[class="tp-modal"][style="z-index: 300050; display: block;"]
+rnd.de##div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ div.tp-backdrop
 deepl.com###dl_app_banner_popup
 typography.com##div[class^="App__footerRegion_"] > footer[class^="SiteFooter__footer"]
 influencermarketinghub.com###ccl_ppu

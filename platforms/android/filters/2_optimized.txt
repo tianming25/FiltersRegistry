@@ -1,9 +1,9 @@
-! Checksum: qOky+aR+6KnogfeCCDybOA
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1743574358-3600.patch
+! Checksum: yaL0oIoOySApvz7WJygPXg
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1743581571-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.77.53
-! TimeUpdated: 2025-04-02T06:08:48+00:00
+! Version: 2.3.77.54
+! TimeUpdated: 2025-04-02T08:08:41+00:00
 ! Expires: 5 days (update frequency)
 ||booksylatron.com^
 ||jouchithep.net^
@@ -9997,7 +9997,8 @@ toonily.me$$img[onerror="location.replace"]
 toonitube.com#%#//scriptlet('trusted-replace-xhr-response', '/(img.{1,50})onerror="location\.replace.{1,50}?"/', '$1', '/comments')
 zoechip.com#%#//scriptlet('prevent-addEventListener', 'mousedown', 'shown_at')
 clk.kim#%#//scriptlet('prevent-window-open')
-giphy.com#%#//scriptlet('trusted-replace-node-text', 'script', 'adUnits', '"adsEnabled\":true', '"adsEnabled\":false')
+giphy.com#%#//scriptlet('trusted-replace-node-text', 'script', 'banner_image', '/"htlAds\\":\[\\".{1,5}\\".*?\]/', '"htlAds\":[]')
+giphy.com#%#//scriptlet('trusted-replace-node-text', 'script', 'banner_image', '"hasTopLeaderboardAd\":true', '"hasTopLeaderboardAd\":false')
 freespoke.com#%#//scriptlet('json-prune', 'messaging', 'context')
 notube.re#%#//scriptlet('prevent-window-open', 'notube.re/p')
 leakshaven.com#%#//scriptlet('prevent-window-open', 'jump/next.php')
@@ -11543,6 +11544,9 @@ ilive.to#%#setTimeout(removeOverlayHTML, 2000);
 samplette.io#$#.all-content { top: 0px !important; }
 euronews.com#$?##o-site-hr__leaderboard-wallpaper.u-show-for-xlarge { remove: true; }
 ew.com#$?#.mm-ads-gpt-adunit { remove: true; }
+giphy.com#$#.dGQRHq { top: 0 !important; }
+giphy.com#$#.dUkoNT { top: -70px !important; }
+giphy.com#$#.z-stickyAd { display: none !important; }
 smithsonianmag.com#$#body > header[style^="top:"] { top: 0 !important; }
 smithsonianmag.com#$#body > :is(article, .largemasthead)[style^="margin-top:"] { margin-top: 0 !important; }
 cybernews.com#$#body { overflow: auto !important; }
@@ -18956,8 +18960,8 @@ $replace=/head>/head><meta charset="utf-8">/,document,domain=podhale24.pl|copyce
 !+ PLATFORM(windows, mac, android)
 ||4khd.com/content/$replace=/^((?!<style>)[\s\S])*<\/style>\n<style/<style/,document
 ||disqus.com/recommendations.js$replace=/\.width="calc\(100% - 310px\)":/.width="100%":/
-!+ PLATFORM(windows, mac, android)
-||giphy.com^$replace=/"adsEnabled\\":true/"adsEnabled\\":false/,document
+||giphy.com^$replace=/"htlAds\\":\[\\".{1\,5}\\".*?\]/"htlAds\\":\[\]/,document
+||giphy.com^$replace=/"hasTopLeaderboardAd\\":true/"hasTopLeaderboardAd\\":false/,document
 ||players.brightcove.net/*/default_default/index.min.js$replace=/if\(.\.getPlugin\("ssai"\)\)/if(!0)/,domain=nhl.com
 ||transfermarkt.com.tr^$replace=/<tm-consent[\s\S]*?<\/tm-consent>(<!DOCTYPE html>)/\$1/,document
 ||nbalpng.akamaized.net/vod-pz/a/hls-wvpr/*.m3u8$replace=/#EXT-X-DATERANGE:ID="AD-BREAK:[\s\S]*?(\.googlevideo\/|fwmrm\.net)[\s\S]*?#EXT-X-DISCONTINUITY//,domain=nba.com

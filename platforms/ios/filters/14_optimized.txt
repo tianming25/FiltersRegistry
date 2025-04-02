@@ -1,9 +1,9 @@
-! Checksum: jS4r6VpG7FE5klesnUys1w
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743577856-3600.patch
+! Checksum: x/RD40jIiBrO8tQSdaLkDQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743581588-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.26
-! TimeUpdated: 2025-04-02T07:07:30+00:00
+! Version: 2.2.26.27
+! TimeUpdated: 2025-04-02T08:09:24+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -9838,6 +9838,7 @@ drive2.ru##.js-page > div[class*=" "] > div[data-track]
 drive2.ru##.js-page > div[class*=" "] > div[itemscope] ~ div[class]:not([id], [data-role], :last-child):has(div:empty + script)
 drive2.ru#?#.js-page > div > div[class="x-box x-box--mh o-f"]:has(> script)
 playhop.com#%#//scriptlet('json-prune', 'direct rtb seatbid')
+mail.ru#%#//scriptlet('abort-on-property-write', 'mr._mimic.locator.transform')
 mail.ru#%#//scriptlet('abort-on-property-write', 'mr.omicronConfig.config.restoreTgb')
 mail.ru##div[class^="tgb"][class*="wrapper__trap"]
 mail.ru##body > div:has(> div > div.buttonWrapper > div.button-help)
@@ -21115,6 +21116,7 @@ store.playstation.com#@$?#meta[name="apple-itunes-app"] { remove: true; }
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com##._aagw:empty
+myoji-yurai.net##.buttonLinkBoxBottom
 psychologies.ru##.magazine__advertiser-mark-wrapper
 tvgry.pl,gry-online.pl#%#//scriptlet('trusted-replace-outbound-text', 'JSON.stringify', '"event":"pes_viewabilitychange"', '"event":""')
 myglo.com.ua##.main-disclaimer

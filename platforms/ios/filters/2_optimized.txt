@@ -1,9 +1,9 @@
-! Checksum: A8H2s0U2SjoWFS5CGlXOmw
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1743574378-3600.patch
+! Checksum: tD3pZbEaj9inVX7LQsml1g
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1743581590-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.77.53
-! TimeUpdated: 2025-04-02T06:08:48+00:00
+! Version: 2.3.77.54
+! TimeUpdated: 2025-04-02T08:08:41+00:00
 ! Expires: 5 days (update frequency)
 ||booksylatron.com^
 ||jouchithep.net^
@@ -13047,7 +13047,8 @@ worldstarhiphop.com,worldstar.com#%#(()=>{let e,n=!1;const t=function(){};Object
 toonitube.com#%#//scriptlet('trusted-replace-xhr-response', '/(img.{1,50})onerror="location\.replace.{1,50}?"/', '$1', '/comments')
 zoechip.com#%#//scriptlet('prevent-addEventListener', 'mousedown', 'shown_at')
 clk.kim#%#//scriptlet('prevent-window-open')
-giphy.com#%#//scriptlet('trusted-replace-node-text', 'script', 'adUnits', '"adsEnabled\":true', '"adsEnabled\":false')
+giphy.com#%#//scriptlet('trusted-replace-node-text', 'script', 'banner_image', '/"htlAds\\":\[\\".{1,5}\\".*?\]/', '"htlAds\":[]')
+giphy.com#%#//scriptlet('trusted-replace-node-text', 'script', 'banner_image', '"hasTopLeaderboardAd\":true', '"hasTopLeaderboardAd\":false')
 freespoke.com#%#//scriptlet('json-prune', 'messaging', 'context')
 notube.re#%#//scriptlet('prevent-window-open', 'notube.re/p')
 leakshaven.com#%#//scriptlet('prevent-window-open', 'jump/next.php')
@@ -14557,6 +14558,9 @@ ilive.to#%#setTimeout(removeOverlayHTML, 2000);
 samplette.io#$#.all-content { top: 0px !important; }
 euronews.com#$?##o-site-hr__leaderboard-wallpaper.u-show-for-xlarge { remove: true; }
 ew.com#$?#.mm-ads-gpt-adunit { remove: true; }
+giphy.com#$#.dGQRHq { top: 0 !important; }
+giphy.com#$#.dUkoNT { top: -70px !important; }
+giphy.com#$#.z-stickyAd { display: none !important; }
 smithsonianmag.com#$#body > header[style^="top:"] { top: 0 !important; }
 smithsonianmag.com#$#body > :is(article, .largemasthead)[style^="margin-top:"] { margin-top: 0 !important; }
 cybernews.com#$#body { overflow: auto !important; }

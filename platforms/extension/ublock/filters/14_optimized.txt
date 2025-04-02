@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 9fy4TOwMNCtxluaHnmrdWA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743599822-3600.patch
+! Checksum: DJv9KFyGCsHWvTZwEEn0GQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743603061-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.32
-! TimeUpdated: 2025-04-02T13:13:32+00:00
+! Version: 2.2.26.33
+! TimeUpdated: 2025-04-02T14:07:17+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -19570,7 +19570,6 @@ yourchannel.blog.jp#@##app-follow-banner
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com##._aagw:empty
-myoji-yurai.net##.buttonLinkBoxBottom
 psychologies.ru##.magazine__advertiser-mark-wrapper
 myglo.com.ua##.main-disclaimer
 hataractive.jp##.CtaButtonPrimary_wrapper__Vxnne[id^="article-details-others-article-text-"]
@@ -22504,6 +22503,7 @@ softpedia.com#$#iframe.swipebox-rightxd[id="relcontent"] { top: 60px!important; 
 !##############################
 !######### JS tweaks ##########
 !##############################
+new.lewd.ninja##+js(nano-setInterval-booster, next, 1000, 0.001)
 foodtechnos.in##+js(nano-setInterval-booster, [_0x, *, 0.001)
 foodtechnos.in##+js(adjust-setTimeout, /createLinkButton|buttonGroup/, *, 0.001)
 jestful.net##+js(nano-setInterval-booster, countDownSeconds, *, 0.001)

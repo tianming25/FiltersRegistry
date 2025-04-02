@@ -1,9 +1,9 @@
-! Checksum: DTMUZmbsfTbua0raVEJeew
-! Diff-Path: ../patches/17/17-s-1743509698-3600.patch
+! Checksum: McGooMn1OZueBcp1iGajuw
+! Diff-Path: ../patches/17/17-s-1743603058-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.82
-! TimeUpdated: 2025-04-01T12:11:29+00:00
+! Version: 2.0.10.83
+! TimeUpdated: 2025-04-02T14:07:21+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21,6 +21,10 @@
 ! Bad:  $removeparam=utm_id,domain=example.org (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201868
+$removeparam=uzcid
+$removeparam=beyond_uzcvid
+$removeparam=beyond_uzmcvid
 ! https://www.weblio.jp/ranking/?from=glia player.gliacloud.com anywhere
 ?from=glia^$removeparam=from
 ! Google Merchant Center tracking

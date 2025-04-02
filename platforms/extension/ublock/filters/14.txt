@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: kq9zFPjhioLI+exE7UeBXQ
-! Diff-Path: ../patches/14/14-s-1743606673-3600.patch
+! Checksum: IJ8Hf8jkEqUA6Nk1mOR/pA
+! Diff-Path: ../patches/14/14-s-1743610312-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.34
-! TimeUpdated: 2025-04-02T15:07:37+00:00
+! Version: 2.2.26.35
+! TimeUpdated: 2025-04-02T16:08:15+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -15858,6 +15858,7 @@ gadgethacks.com##+js(set-constant, WHT.ShowConsentForm, trueFunc)
 !+ NOT_PLATFORM(windows, mac, android, ios, ext_safari)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170168
 ! TODO: use trusted-click-element scriptlet when issues below are fixed
+! Fix 'trusted-click-element' — Cloudflare captcha is broken when >>> combinator is used - https://github.com/AdguardTeam/Scriptlets/issues/491
 ! Support for clicking in shadow DOM - https://github.com/AdguardTeam/Scriptlets/issues/323
 ! Support for longer delay - https://github.com/AdguardTeam/Scriptlets/issues/400
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202188
@@ -20430,6 +20431,7 @@ playhop.com##+js(json-prune, direct rtb seatbid)
 !   NOTE START: VK group
 !
 ! mail.ru
+mail.ru##+js(remove-class, grid_blocked_by_informer, main#grid)
 mail.ru##+js(abort-on-property-write, mr._mimic.locator.transform)
 mail.ru##div[class^="tgb"][class*="wrapper__trap"]
 mail.ru##body > div:has(> div > div.buttonWrapper > div.button-help)

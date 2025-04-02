@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: DjIcfgQPBe4AvctD7gqbDQ
-! Diff-Path: ../patches/19/19-s-1743599822-3600.patch
+! Checksum: 2A+PQxc7owDzZ/kOErfL+g
+! Diff-Path: ../patches/19/19-s-1743610313-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.13
-! TimeUpdated: 2025-04-02T13:13:37+00:00
+! Version: 2.0.53.14
+! TimeUpdated: 2025-04-02T16:08:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -181,6 +181,7 @@ playhop.com##+js(json-prune, direct rtb seatbid)
 !   NOTE START: VK group
 !
 ! mail.ru
+mail.ru##+js(remove-class, grid_blocked_by_informer, main#grid)
 mail.ru##+js(abort-on-property-write, mr._mimic.locator.transform)
 mail.ru##div[class^="tgb"][class*="wrapper__trap"]
 mail.ru##body > div:has(> div > div.buttonWrapper > div.button-help)

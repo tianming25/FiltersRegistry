@@ -1,8 +1,8 @@
-! Checksum: 84yVML6nJVRochXNe3Zl2g
+! Checksum: tucO7VdxDt988tCsTR9DgQ
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.30
-! TimeUpdated: 2025-04-02T11:06:37+00:00
+! Version: 2.2.26.31
+! TimeUpdated: 2025-04-02T12:10:16+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14476,6 +14476,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202169
+@@||sdk.privacy-center.org/*/loader.js$domain=nationalgeographic.com.es
+@@||sdk.privacy-center.org/sdk/$domain=nationalgeographic.com.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202087
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||cdn.privacy-mgmt.com^$domain=weather.com
@@ -31023,6 +31026,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+thegatewaypundit.com##.get-our-newsletter
 nationalgeographic.com.es##.newsletter-footer
 athlonsports.com###phx-1
 athlonsports.com###customComponent-1
@@ -51718,6 +51722,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+thegatewaypundit.com##.tgp-donate-sidebar-widget
 pch24.pl##.sfd-donate-box-container
 newgrounds.com##.supporter-inter-pod
 newgrounds.com##.header-deck

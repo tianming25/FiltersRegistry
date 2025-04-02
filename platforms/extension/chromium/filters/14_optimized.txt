@@ -1,9 +1,9 @@
-! Checksum: N/7bY2umz9Npyt2Nar+cUw
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743620974-3600.patch
+! Checksum: tpuzGwVAEboxlSQ5Nre94Q
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743624670-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.36
-! TimeUpdated: 2025-04-02T19:06:27+00:00
+! Version: 2.2.26.37
+! TimeUpdated: 2025-04-02T20:07:42+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -2197,7 +2197,8 @@ armut.com###consentDivCont
 people.andersenlab.com##div[class^="CookiesPolicy_"]
 onliner.by##.consent-app
 computherm.hu,linternasport.es,sportlampa.at,sportlampa.si,sportlampa.sk,sportlampa.hu,sportlampa.com,sportlampa.cz,tok-shop.hu,forrasztastechnologia.hu,godollokertje.hu,t-depo.hu,szaniteronline.hu,takaritogep.hu,kabelvilag.hu#%#//scriptlet('prevent-setTimeout', 'cookie_alert_overlay')
-antiyoutuber.cz,idnes.cz#%#//scriptlet('trusted-click-element', '#didomi-host ~ #main > .content .boxes > .box > .btn-cons.contentwall_ok')
+antiyoutuber.cz#%#//scriptlet('trusted-click-element', '#didomi-host ~ #main > .content .boxes > .box > .btn-cons.contentwall_ok')
+idnes.cz#%#//scriptlet('trusted-click-element', '#didomi-host ~ #main > .content .boxes > .box > .btn-cons.contentwall_ok', '', '500')
 expres.cz#%#//scriptlet('trusted-click-element', '.contentwall_ok', '', '1000')
 autos.suzuki.com.mx#%#//scriptlet('set-cookie', 'suzuki-accept-cookie', 'true')
 wizards.com#%#//scriptlet('set-session-storage-item', 'cookie-agreed', '0')

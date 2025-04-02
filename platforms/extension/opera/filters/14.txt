@@ -1,9 +1,9 @@
-! Checksum: Gda70GVM3jk+D8L1X0Pirg
-! Diff-Path: ../patches/14/14-s-1743596027-3600.patch
+! Checksum: KT2cgfuhREWPB+i/fwMkbg
+! Diff-Path: ../patches/14/14-s-1743599816-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.31
-! TimeUpdated: 2025-04-02T12:10:16+00:00
+! Version: 2.2.26.32
+! TimeUpdated: 2025-04-02T13:13:32+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21285,7 +21285,7 @@ news.mail.ru##body > div:has(> div[id] > div > div.title:contains(блокиро
 dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type="direct"])
 ! Ads in news
 dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adItems')
-dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.ssrBanner')
+dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.ssrBanner', 'undefined')
 dzen.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'initContext')
 dzen.ru#$?##LayoutTopMicroRoot div[style^="padding-top:"][style*="position: relative; height: 0;"] { remove: true; }
 ! https://m.dzen.ru/articles
@@ -49267,7 +49267,7 @@ book24.ru##div[data-b24-banner-slot="top-banner"]
 r34.app##figure.-mx-1.mt-4:has(> a[href*="&utm_"])
 klerk.ru##.advertising-text-block
 klerk.ru##.w-full > section:has(> ul > li > a[href^="/learn/event/"])
-dzen.ru##div[data-testid="dzenpro-banner"]
+dzen.ru##div[class^="dzen-desktop--banner-"]
 dzen.ru##div[class^="dzen-desktop--corner-banner__"]
 vegasslotsonline.com#$#footer + dialog[data-dialog-type="showModal"] { display: none !important; }
 vegasslotsonline.com#$#body.overflow-hidden { overflow: auto !important; }

@@ -1,5 +1,5 @@
-! Checksum: riXkrDgEl+WseAG10uOTOg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1743538314-3600.patch
+! Checksum: 4zcMastglA3T5QkwU9yMaA
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1743561442-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.11.45
@@ -78,7 +78,6 @@ lamsect.jp###main_line > div.content:has(> div.cate > script[src*="google.com/js
 morikinoko.com##div[class^="img_link"]
 morikinoko.com##.headline-wrap:has(> div.card-body > div.blogroll-wrap)
 syurabahazard.com##.kotei-link
-girlsreport.net###more > .top_link
 everydayissunday.livedoor.blog##.article-body span:has(> div[style="font-size: 16px; padding: 8px; border-radius: 5px; margin: 5px; border: 1px solid rgb(0, 0, 128); background-color: rgb(255, 255, 255); text-indent: 0px;"])
 news.tokimeki-s.com##.osusume_link_iframe02
 otanews.livedoor.biz##iframe[src^="https://otanews.livedoor.biz/otanews_rss"]
@@ -181,7 +180,6 @@ mojomojo-licarca.com##.column-inner-2 > div.plugin-memo:has(> div.side > script[
 nanjpride.blog.jp##div[class^="headlinerss"]
 nanjpride.blog.jp##div.recommend:has(> div[class^="headlinerss"])
 workingnews117.com##.free_area
-workingnews117.com##div[class^="im_headerad"]
 erogazoo.net##header > div#t_area
 erogazoo.net##a[href^="https://newmofu.doorblog.jp/"]
 natuero-dougakan.com##.side-menu:has(iframe.elogch_blogparts_iframe)
@@ -266,6 +264,8 @@ moeimg.net###side-2 li.widget-container:has(#side-img-rss_frame)
 switchsoku.com##.l-main > div.dividerBottom:first-child:has(> aside.widget-main)
 gamedaradara.doorblog.jp##div[id$="_rss"]
 gamedaradara.doorblog.jp#?#.article-body-inner b:has(+ div[id$="_rss"])
+burusoku-vip.com##.article-body-more > span[style="font-size: 18px;"]
+burusoku-vip.com##.article-body-more > span[style="font-size: 18px;"] + b
 ||rutube.ru/pangolin/api/web/yappy/$xmlhttprequest
 rutube.ru##section[aria-label="информационный баннер"]
 crx7601.com#?#.article-body-inner .twitter-tweet ~ b:has(+ .ninja-recommend-block)
@@ -822,7 +822,6 @@ blog.livedoor.jp#$#.toprss5 { display: none !important; }
 blog.livedoor.jp#$##blog-body-outer > #left-t { margin-top: 0 !important; }
 blog.livedoor.jp##div[class^="blogroll_innner"]
 blog.livedoor.jp##div[style="overflow-y:scroll; width:384px; height:300px;"]
-[$path=/soccerkusoyarou]blog.livedoor.jp##.column-inner-2 > .article-body2
 blog.livedoor.jp##.column-inner-2 > table[summary="<%blog_name>"][width="728"]
 blog.livedoor.jp###article_rss
 blog.livedoor.jp##iframe[src="http://blog.livedoor.jp/nanjstu/top_rss.html"]
@@ -838,7 +837,6 @@ blog.livedoor.jp###main > div.column-inner > div.column-inner-2 > div[style="hei
 ||blog.livedoor.jp/goldennews/js/inlink_main12.js
 ||blog.livedoor.jp/goldennews/js/inlink_mainlast.js
 blog.livedoor.jp###main-column > div.kiziue
-blog.livedoor.jp##div[style="margin:0px;padding:0px;line-height:1.4;width:100%;background-color:#ddf4e1;"]
 blog.livedoor.jp##.headrss
 blog.livedoor.jp##.naka_rss
 blog.livedoor.jp##div[class^="footrss"]
@@ -938,6 +936,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||whitesaas.com^$third-party
 ||widget-v*.tidiochat.com^$third-party
 ||widget.beesender.com^$third-party
+||widget.contactleader.pl^$third-party
 ||widget.getgist.com^$third-party
 ||widget.happyfoxchat.com^$third-party
 ||widget.helpcrunch.com^$third-party
@@ -1180,7 +1179,6 @@ tcaeintegral.es,tremplin-numerique.org,ordvor.com##.joinchat
 ||service.force.com/embeddedservice/*/esw.min.js
 ||smartsuppchat.com/loader.js
 ||studlancer.net/images/chat/studlancer_form.js
-||wchat.freshchat.com^$domain=unstoppabledomains.com
 @@||client.crisp.chat^$domain=journey.cloud
 @@||service.force.com/embeddedservice/*/esw.min.js$domain=microchip.com|visible.com|playstation.com|cyberpowersystems.com|lego.com|support.sonos.com
 namu.wiki#?#div[class*=" "] > div[class*=" "]:has(> a[target="_blank"][rel="noopener"]):contains(더 보기)
@@ -1348,7 +1346,6 @@ echofm.online##main > article.wp-embed-responsive ~ div[class^="sc-"]:has(> div[
 proekt.media##proekt-blocks > proekt-block:has(span#donateButton)
 gigazine.net###donation_wrapper
 getcomics.org##.wpfront-notification-bar-spacer
-insideclimatenews.org##.icn-donate-block
 insideclimatenews.org##.donate-cta
 agents.media##.single-post__donate-block
 charter97.org###donate-article

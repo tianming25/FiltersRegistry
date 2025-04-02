@@ -1,9 +1,9 @@
-! Checksum: YQ4CF7v/scfUzeUP4dN/8g
-! Diff-Path: ../patches/257/257-s-1743525741-14400.patch
+! Checksum: FQEIJ3WR0Kyo4AiwQPMb6A
+! Diff-Path: ../patches/257/257-s-1743598164-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.6.65
-! TimeUpdated: 2025-04-01T16:38:39+00:00
+! Version: 2.0.6.66
+! TimeUpdated: 2025-04-02T12:45:32+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -1205,6 +1205,8 @@ thepiratebay3.com^$all
 ?a=0&u=*&tracker=$document
 !+ NOT_OPTIMIZED
 ||elovify.com^$document
+!+ NOT_OPTIMIZED
+?t=adult_*&cid=$document
 ! https://github.com/uBlockOrigin/uAssets/issues/24602
 ! https://www.virustotal.com/gui/url/ce2b833adda2f862d77398203bbe33ea331097ba2a803d1a763492d2ac0d5a60
 ! https://safeweb.norton.com/report/show?url=discordvip.createsocialcard.top
@@ -4754,6 +4756,12 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||hoshinokouranai.com^$document
 !+ NOT_OPTIMIZED
 ||irene-fortuna.com^$document
+!+ NOT_OPTIMIZED
+||t-tousen.online^$document
+!+ NOT_OPTIMIZED
+||t-haifu.space^$document
+!+ NOT_OPTIMIZED
+||t-haifu.monster^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142492
 !+ NOT_OPTIMIZED
 ||apkmirror.co^$all
@@ -7108,6 +7116,9 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ! https://www.virustotal.com/gui/url/2422c2d5d78436b9f6510865c617237e98f04c2cc69db8f566c23e24d0922f3c
 !+ NOT_OPTIMIZED
 ||identityconfirrmpage.com^$all,to=~facebook.com
+! https://www.virustotal.com/gui/url/6c19e403b2f4fac5bb0e1703ed4883ea157525ced4af89a88b66f8c900d37530
+!+ NOT_OPTIMIZED
+/^https?:\/\/[-a-z]{12,}\.vercel\.app\/[^.]+?g_ep=?EgoyMDI/$document,match-case,to=vercel.app|~facebook.com
 ! shopping sites
 !+ NOT_OPTIMIZED
 /api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=access-control-allow-headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i

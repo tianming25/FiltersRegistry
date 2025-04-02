@@ -1,8 +1,8 @@
-! Checksum: KUcyHBFD1POB6GY4zQTdyw
+! Checksum: LQTw4kH2sc0geM18H6R7sg
 ! Title: uBlock Origin – Badware risks (Optimized)
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.6.65
-! TimeUpdated: 2025-04-01T16:38:39+00:00
+! Version: 2.0.6.66
+! TimeUpdated: 2025-04-02T12:45:32+00:00
 ! Expires: 10 days (update frequency)
 !+ NOT_OPTIMIZED
 ||01net.com/telecharger/$document
@@ -1108,6 +1108,8 @@ thepiratebay3.com^$all
 ?a=0&u=*&tracker=$document
 !+ NOT_OPTIMIZED
 ||elovify.com^$document
+!+ NOT_OPTIMIZED
+?t=adult_*&cid=$document
 !+ NOT_OPTIMIZED
 ||mikkim.top^$all
 !+ NOT_OPTIMIZED
@@ -4483,6 +4485,12 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 ||irene-fortuna.com^$document
 !+ NOT_OPTIMIZED
+||t-tousen.online^$document
+!+ NOT_OPTIMIZED
+||t-haifu.space^$document
+!+ NOT_OPTIMIZED
+||t-haifu.monster^$document
+!+ NOT_OPTIMIZED
 ||apkmirror.co^$all
 !+ NOT_OPTIMIZED
 ||webogram.org^$all
@@ -6236,6 +6244,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||counselschambers.co.uk^$document,to=~facebook.com
 !+ NOT_OPTIMIZED
 ||identityconfirrmpage.com^$all,to=~facebook.com
+!+ NOT_OPTIMIZED
+/^https?:\/\/[-a-z]{12,}\.vercel\.app\/[^.]+?g_ep=?EgoyMDI/$document,match-case,to=vercel.app|~facebook.com
 !+ NOT_OPTIMIZED
 /api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=access-control-allow-headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i
 !+ NOT_OPTIMIZED

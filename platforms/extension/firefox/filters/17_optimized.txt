@@ -1,9 +1,9 @@
-! Checksum: 8kb+1P7bG42A5QDbk/VVBw
-! Diff-Path: ../patches/17_optimized/17_optimized-s-1743603056-3600.patch
+! Checksum: wNLEvR+w4K1A9TFf41uGdw
+! Diff-Path: ../patches/17_optimized/17_optimized-s-1743620979-3600.patch
 ! Title: AdGuard URL Tracking filter (Optimized)
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.83
-! TimeUpdated: 2025-04-02T14:07:21+00:00
+! Version: 2.0.10.84
+! TimeUpdated: 2025-04-02T19:06:30+00:00
 ! Expires: 10 days (update frequency)
 $removeparam=uzcid
 $removeparam=beyond_uzcvid
@@ -1979,6 +1979,8 @@ $removeparam=s,domain=twitter.com|x.com
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_tracking_params
 !+ NOT_PLATFORM(windows, mac, android, ios, ext_ublock) NOT_OPTIMIZED
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
+@@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
+@@||portal-portm.meituan.com/horn$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
 @@||tix.axs.com^$removeparam=irclickid
 !+ PLATFORM(ext_ff, ext_opera, ext_chromium)
 @@||google.*/url?*%26srsltid%3D$removeparam=srsltid

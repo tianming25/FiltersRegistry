@@ -1,9 +1,9 @@
-! Checksum: qh+XY7RJ+Elu1ceyjW1wdw
-! Diff-Path: ../patches/17/17-s-1743620974-3600.patch
+! Checksum: YQZ/8EMJCX6tOzC3u0pjaA
+! Diff-Path: ../patches/17/17-s-1743682420-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.84
-! TimeUpdated: 2025-04-02T19:06:30+00:00
+! Version: 2.0.10.85
+! TimeUpdated: 2025-04-03T12:10:23+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -394,6 +394,8 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202252
+||nintendo.com^$removeparam=nt_redirect_referrer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-12682755
 ||code-wallets.com^$removeparam=tw_adid
 ||code-wallets.com^$removeparam=tw_source
@@ -2852,6 +2854,7 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/201922
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201424
 @@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com
 @@||portal-portm.meituan.com/horn$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com

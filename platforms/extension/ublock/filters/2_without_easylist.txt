@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: s54g7Yc43Eh9mHRYIZUp7w
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743678593-3600.patch
+! Checksum: nLER4yeUvGbCkJt53nPObw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743682443-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.72
-! TimeUpdated: 2025-04-03T11:05:49+00:00
+! Version: 2.3.77.73
+! TimeUpdated: 2025-04-03T12:09:46+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17374,6 +17374,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202200
+weshare.is,skycall.online##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202229
 myfxbook.com#@#.ad-box:not(#ad-banner):not(:empty)
 myfxbook.com#@#a[href^="https://pubads.g.doubleclick.net/"]
@@ -26993,6 +26995,7 @@ auto.am##.azd-top
 ##.ainsyndication
 az##.makerekframe
 !
+unikal.az##.headBanner
 baku.ws##.side-bnr
 baku.ws##.row > div.d-lg-block:has(> div.cat-left-bnr)
 ||travelpayouts.com/widgets/$domain=news.milli.az
@@ -27027,7 +27030,6 @@ kulis.az##div[class*="rek_"]
 musavat.com##.our-partners
 musavat.com##.left-side > div.news-content:not(:has(> div > *))
 qafqazinfo.az###topbanner
-azpolitika.info,qol.az##iframe[src^="https://ad.adriver.ru/"]
 qol.az##.second > .photo:has(> a[target="_blank"])
 news.milli.az##div[class="hidden-sm hidden-xs"]
 ||bakupost.az/extra/vumart-top/$domain=medicina.az
@@ -27260,7 +27262,6 @@ infocity.az##.mkdf-header-banner-widget
 infocity.az##a[href="http://ganja.marathon.az/"]
 ||code.adsgarden.com/js/adsgarden.js
 az.baku.ws##iframe[src^="http://ad.adriver.ru/"]
-sfera.az,az.baku.ws##iframe[src^="https://ad.adriver.ru/"]
 mp3.run.az###dle-content > .full > .sect
 bina.az##.crm-top
 apasport.az##.header-rek
@@ -32454,6 +32455,9 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+interpunkcja.pl##.top-billboard
+interpunkcja.pl##div[id^="slot_"]
+||interpunkcja.pl/js/adsGAM.js
 leki.pl##.wp-block-group.wp-block-group-is-layout-constrained[style*="padding-"]:has(> h2 + div.wp-block-group > script[src*="/delivery/ajs.php"])
 walbrzyszek.com##.kontener-reklam
 24legnica.pl###secondarySidebar > ul > .sticky-wrapper > .widget:has(> .textwidget > .adsbygoogle)
@@ -68674,6 +68678,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202254
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202103
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201451
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201735

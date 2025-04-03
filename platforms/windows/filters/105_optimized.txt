@@ -1,9 +1,9 @@
-! Checksum: Mu1LKc+oVO1W0CGTw8K1Lg
-! Diff-Path: ../patches/105_optimized/105_optimized-s-1743641526-14400.patch
+! Checksum: Naz5l2ij6ysixMrtSnLM1A
+! Diff-Path: ../patches/105_optimized/105_optimized-s-1743712793-14400.patch
 ! Title: EasyList Czech and Slovak (Optimized)
 ! Description: Additional filter list for websites in Czech and Slovak.
-! Version: 2.0.3.3
-! TimeUpdated: 2025-04-03T00:47:14+00:00
+! Version: 2.0.3.4
+! TimeUpdated: 2025-04-03T20:34:56+00:00
 ! Expires: 12 hours (update frequency)
 .com/bannery/
 .cz/ads/
@@ -86,7 +86,7 @@ kurzy.cz#%#//scriptlet('abp-abort-on-property-write', 's_back')
 ||stat.novinky.cz^
 ||stat.super.cz^
 ||stobklub.cz/images/banners/maintop.jpg
-titulky.com/banaltre/
+titulky.com/mybanaltre/
 titulky.com/ajaxlogon.php
 ||tracker.cncenter.cz^
 ||uschovna.cz/branding
@@ -487,8 +487,8 @@ super.cz##a[data-dot="c_pozadi"]
 telekomunikace.cz##.Flagrow-Ads-under-header
 tipcars.com##.amalker
 tiscali.cz##.bbtitle
-titulky.com###bnnr300X300
-titulky.com###side2wrap iframe[scrolling='no']
+titulky.com###bni300x300
+titulky.com###side2wrap iframe[height='300']
 titulky.com###fairuser
 topzine.cz###vyjizdeciBoxikDiv
 tryhard.cz##[class*="sda-"]
@@ -640,9 +640,9 @@ search.seznam.cz,clanky.seznam.cz##div[data-e-b-n*="advert"]
 sreality.cz#%#//scriptlet('ubo-nosiif.js', 'checkRods')
 super.cz#%#//scriptlet('ubo-ra.js', 'style', 'body')
 svetandroida.cz#%#//scriptlet('ubo-aopr.js', 'detectAdBlocker')
-titulky.com##div:matches-css(position:/fixed/i):has(+ div img:matches-css(float:/left/i))
-titulky.com##div:matches-css(position:/fixed/i) + div img:matches-css(float:/left/i):upward(5)
-titulky.com##a:matches-css(background:/martevax.cz/i):upward(3)
+titulky.com##div:matches-css(position:/fixed/i):has(+ div div:matches-css(float:/left/i):matches-css(background:/url.*/i))
+titulky.com##div:matches-css(position:/fixed/i) + div div:matches-css(float:/left/i):matches-css(background:/url.*/i):upward(5)
+titulky.com##a:matches-css(background:/marteva/i):upward(3)
 titulky.com#%#//scriptlet('ubo-aeld.js', 'load', 'document.cookie')
 titulky.com#%#//scriptlet('ubo-set.js', 'xmxalr', '')
 titulky.com#$##head_c { margin-top: 0 !important; }

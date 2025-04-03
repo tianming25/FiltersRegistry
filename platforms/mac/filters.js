@@ -379,8 +379,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.44.49",
-			"timeUpdated": "2025-04-03T00:47:11+0000",
+			"version": "2.1.44.50",
+			"timeUpdated": "2025-04-03T04:37:13+0000",
 			"languages": []
 		},
 		{
@@ -426,8 +426,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.49.43",
-			"timeUpdated": "2025-04-03T00:47:14+0000",
+			"version": "2.1.49.44",
+			"timeUpdated": "2025-04-03T04:37:15+0000",
 			"languages": []
 		},
 		{
@@ -458,8 +458,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.46",
-			"timeUpdated": "2025-04-03T00:47:16+0000",
+			"version": "2.1.67.47",
+			"timeUpdated": "2025-04-03T04:37:16+0000",
 			"languages": []
 		},
 		{
@@ -502,8 +502,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
-			"version": "2.1.67.48",
-			"timeUpdated": "2025-04-03T00:47:19+0000",
+			"version": "2.1.67.49",
+			"timeUpdated": "2025-04-03T04:37:17+0000",
 			"languages": [
 				"it"
 			]
@@ -547,8 +547,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
-			"version": "2.1.67.47",
-			"timeUpdated": "2025-04-03T00:47:21+0000",
+			"version": "2.1.67.48",
+			"timeUpdated": "2025-04-03T04:37:18+0000",
 			"languages": [
 				"ar"
 			]
@@ -565,8 +565,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.46",
-			"timeUpdated": "2025-04-03T00:47:24+0000",
+			"version": "2.1.67.47",
+			"timeUpdated": "2025-04-03T04:37:19+0000",
 			"languages": []
 		},
 		{
@@ -708,8 +708,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.44.78",
-			"timeUpdated": "2025-04-03T00:47:34+0000",
+			"version": "2.1.44.79",
+			"timeUpdated": "2025-04-03T04:37:28+0000",
 			"languages": []
 		},
 		{
@@ -740,8 +740,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.39.21",
-			"timeUpdated": "2025-04-03T00:47:36+0000",
+			"version": "2.0.39.22",
+			"timeUpdated": "2025-04-03T04:37:29+0000",
 			"languages": []
 		},
 		{
@@ -866,8 +866,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.47",
-			"timeUpdated": "2025-04-03T00:47:40+0000",
+			"version": "2.1.67.48",
+			"timeUpdated": "2025-04-03T04:37:31+0000",
 			"languages": []
 		},
 		{
@@ -940,8 +940,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.66.72",
-			"timeUpdated": "2025-04-03T00:47:41+0000",
+			"version": "2.1.66.73",
+			"timeUpdated": "2025-04-03T04:37:33+0000",
 			"languages": []
 		},
 		{
@@ -1230,8 +1230,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.48",
-			"timeUpdated": "2025-04-03T00:47:51+0000",
+			"version": "2.1.67.49",
+			"timeUpdated": "2025-04-03T04:37:40+0000",
 			"languages": []
 		},
 		{
@@ -1389,8 +1389,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.50.49",
-			"timeUpdated": "2025-04-03T00:48:03+0000",
+			"version": "2.1.50.50",
+			"timeUpdated": "2025-04-03T04:37:49+0000",
 			"languages": []
 		},
 		{
@@ -1415,8 +1415,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
-			"version": "2.0.21.21",
-			"timeUpdated": "2025-04-02T04:37:36+0000",
+			"version": "2.0.21.22",
+			"timeUpdated": "2025-04-03T04:37:49+0000",
 			"languages": [
 				"sv"
 			]
@@ -1465,8 +1465,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.63.54",
-			"timeUpdated": "2025-04-03T00:48:06+0000",
+			"version": "2.1.63.55",
+			"timeUpdated": "2025-04-03T04:37:50+0000",
 			"languages": []
 		},
 		{
@@ -1563,8 +1563,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
-			"version": "2.0.60.79",
-			"timeUpdated": "2025-04-03T00:48:15+0000",
+			"version": "2.0.60.80",
+			"timeUpdated": "2025-04-03T04:37:58+0000",
 			"languages": [
 				"hi"
 			]

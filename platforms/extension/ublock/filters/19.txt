@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: w9x/OLNw/9GApNGMvU+arw
-! Diff-Path: ../patches/19/19-s-1743671474-3600.patch
+! Checksum: 21mgAlByMp/ENBCq9AFnGQ
+! Diff-Path: ../patches/19/19-s-1743675082-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.15
-! TimeUpdated: 2025-04-03T09:07:36+00:00
+! Version: 2.0.53.16
+! TimeUpdated: 2025-04-03T10:07:59+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4366,6 +4366,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+studentappcentre.com##.exit_intent_popup
 golearn.gr##.seminar__cta
 bilibili.com##+js(abort-on-stack-trace, player.pause, /[0-9a-f]{40}\.js:1\d{2}([\S\s]+\.emit.+core\.){3}/)
 nationalgeographic.com.es##.popup-blocker
@@ -12108,6 +12109,7 @@ macwelt.de,pcwelt.de##+js(set-constant, firebase.messaging, noopFunc)
 !
 ! SECTION: Push notifications - Regular rules
 !
+myfxbook.com##+js(set-cookie, blockWebNotificationsModalShortTerm, 7)
 windowslatest.com##.pnfpb-push-subscribe-icon
 omroepwest.nl##div.layout-component:has(> div.dialog-toggle-notification)
 spot.uz##.push_subscribe

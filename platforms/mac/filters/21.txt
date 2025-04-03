@@ -1,8 +1,8 @@
-! Checksum: kHsvmRfUjZ1f9PdWtGOWjA
+! Checksum: R/G+qzQYuY7HNluHZnEBYQ
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.32.6
-! TimeUpdated: 2025-04-03T08:09:13+00:00
+! Version: 2.0.32.7
+! TimeUpdated: 2025-04-03T10:08:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3480,6 +3480,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+crxsoso.com##.search-wrapper + div.hover-animate:has(> div > a[href])
 alfavita.gr##.ros
 ||dic.pixiv.net/_api/get_news_banner
 myoji.jitenon.jp##.side_shop_bnr
@@ -8467,6 +8468,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202235
+mediafire.com#%#//scriptlet('adjust-setTimeout', 'download_link', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202200
 skycall.online#%#//scriptlet('adjust-setInterval', 'wpsafe', '*', '0.001')
 weshare.is#%#//scriptlet('adjust-setInterval', 'downloadTimer', '*', '0.001')

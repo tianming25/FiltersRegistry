@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: yXjPXTOrt7IQzihId2PZSA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743660774-3600.patch
+! Checksum: PglGpJpVnQojoua6zaMjfQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1743664258-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.77.67
-! TimeUpdated: 2025-04-03T06:08:34+00:00
+! Version: 2.3.77.68
+! TimeUpdated: 2025-04-03T07:06:53+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -28348,7 +28348,13 @@ antiyoutuber.cz##.space-a div[id][class*=" "]:has(img[src^="https://1gr.cz/"])
 antiyoutuber.cz##+js(remove-node-text, script, "branding")
 antiyoutuber.cz##+js(abort-on-property-read, Object.prototype.Branding)
 antiyoutuber.cz##+js(abort-on-stack-trace, String, /uniqueId[\s\S]*?Iframe/)
+! https://github.com/AdguardTeam/AdguardFilters/issues/202202
 ! https://github.com/AdguardTeam/AdguardFilters/issues/165900
+expres.cz###main > .counters + table[id][class*=" "]
+expres.cz###main > .counters + script + table[id][class*=" "]
+expres.cz##.columnContainer div[id][class*=" "]:has(a[href*="/data.aspx?"])
+expres.cz##+js(remove-node-text, script, "branding")
+||1gr.cz/*/js/uni/paticka.js$domain=expres.cz
 expres.cz#@#+js(addEventListener-defuser, beforeunload, ())
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201583
 idnes.cz##body .r-main.s_branding_fotogalerie

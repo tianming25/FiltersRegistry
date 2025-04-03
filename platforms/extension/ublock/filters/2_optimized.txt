@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: pH6ruzfSUjm25rs1EKirxA
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1743660773-3600.patch
+! Checksum: AXICZ5mLCayHXfDnnCg+GA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1743664257-3600.patch
 ! Title: AdGuard Base filter + EasyList (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.77.67
-! TimeUpdated: 2025-04-03T06:08:34+00:00
+! Version: 2.3.77.68
+! TimeUpdated: 2025-04-03T07:06:53+00:00
 ! Expires: 5 days (update frequency)
 ||booksylatron.com^
 ||jouchithep.net^
@@ -7135,6 +7135,11 @@ antiyoutuber.cz##.space-a div[id][class*=" "]:has(img[src^="https://1gr.cz/"])
 antiyoutuber.cz##+js(remove-node-text, script, "branding")
 antiyoutuber.cz##+js(abort-on-property-read, Object.prototype.Branding)
 antiyoutuber.cz##+js(abort-on-stack-trace, String, /uniqueId[\s\S]*?Iframe/)
+expres.cz###main > .counters + table[id][class*=" "]
+expres.cz###main > .counters + script + table[id][class*=" "]
+expres.cz##.columnContainer div[id][class*=" "]:has(a[href*="/data.aspx?"])
+expres.cz##+js(remove-node-text, script, "branding")
+||1gr.cz/*/js/uni/paticka.js$domain=expres.cz
 expres.cz#@#+js(addEventListener-defuser, beforeunload, ())
 idnes.cz##body .r-main.s_branding_fotogalerie
 idnes.cz###space-c-add > div[id][class*=" "]

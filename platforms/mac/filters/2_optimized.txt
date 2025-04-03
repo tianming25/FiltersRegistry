@@ -1,8 +1,8 @@
-! Checksum: 6/kWsLWjHmM7rHtKxuenmQ
+! Checksum: oeLfRoi2jYe9/2KjdWLRFQ
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.77.67
-! TimeUpdated: 2025-04-03T06:08:34+00:00
+! Version: 2.3.77.68
+! TimeUpdated: 2025-04-03T07:06:53+00:00
 ! Expires: 5 days (update frequency)
 ||booksylatron.com^
 ||jouchithep.net^
@@ -6852,6 +6852,12 @@ antiyoutuber.cz$$script:contains("branding")
 antiyoutuber.cz#%#//scriptlet('remove-node-text', 'script', '"branding"')
 antiyoutuber.cz#%#//scriptlet('abort-on-property-read', 'Object.prototype.Branding')
 antiyoutuber.cz#%#//scriptlet('abort-on-stack-trace', 'String', '/uniqueId[\s\S]*?Iframe/')
+expres.cz###main > .counters + table[id][class*=" "]
+expres.cz###main > .counters + script + table[id][class*=" "]
+expres.cz##.columnContainer div[id][class*=" "]:has(a[href*="/data.aspx?"])
+expres.cz$$script:contains("branding")
+expres.cz#%#//scriptlet('remove-node-text', 'script', '"branding"')
+||1gr.cz/*/js/uni/paticka.js$domain=expres.cz
 expres.cz#@%#//scriptlet('ubo-aeld.js', 'beforeunload', '()')
 idnes.cz##body .r-main.s_branding_fotogalerie
 idnes.cz###space-c-add > div[id][class*=" "]
@@ -6865,7 +6871,6 @@ idnes.cz#%#//scriptlet("abort-on-property-read", "Object.prototype.BrandingLayer
 antiyoutuber.cz,expres.cz,idnes.cz###waiting-screen
 antiyoutuber.cz,expres.cz,idnes.cz#%#//scriptlet('prevent-setTimeout', 'checkCookie(++')
 idnes.cz,expres.cz#%#//scriptlet("abort-on-property-read", "_1gif")
-$cookie=kolbda,domain=expres.cz|televizeseznam.cz|ahaonline.cz|extra.cz|mobilmania.cz|aktuality.sk|aktualne.cz|blesk.cz|centrum.cz|cnews.cz|e15.cz|karaoketexty.cz|novinky.cz|sport.cz|super.cz|tiscali.cz|zive.cz|fights.cz|metro.cz
 $cookie=adb,domain=expres.cz|televizeseznam.cz|ahaonline.cz|extra.cz|mobilmania.cz|idnes.cz|aktuality.sk|aktualne.cz|blesk.cz|centrum.cz|cnews.cz|e15.cz|karaoketexty.cz|novinky.cz|sport.cz|super.cz|tiscali.cz|zive.cz|antiyoutuber.cz|fights.cz|metro.cz
 $cookie=/adb\.key/,domain=expres.cz|televizeseznam.cz|ahaonline.cz|extra.cz|mobilmania.cz|idnes.cz|aktuality.sk|aktualne.cz|blesk.cz|centrum.cz|cnews.cz|e15.cz|karaoketexty.cz|novinky.cz|sport.cz|super.cz|tiscali.cz|zive.cz|antiyoutuber.cz|fights.cz|metro.cz
 metro.cz,fights.cz,antiyoutuber.cz,expres.cz,televizeseznam.cz,ahaonline.cz,extra.cz,mobilmania.cz,idnes.cz,aktuality.sk,aktualne.cz,blesk.cz,centrum.cz,cnews.cz,e15.cz,karaoketexty.cz,novinky.cz,sport.cz,super.cz,tiscali.cz,zive.cz#%#//scriptlet('remove-cookie', '/^adb$|adb\.key|^[a-z]{5,11}$/')

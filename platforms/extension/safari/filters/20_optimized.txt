@@ -1,5 +1,5 @@
-! Checksum: WvDS0OUAOu9ylZzMiRP37Q
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1743585074-3600.patch
+! Checksum: flYYcXWfiQaSY5sAf0yABA
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1743647785-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
 ! Version: 2.0.19.82
@@ -62,8 +62,6 @@ sportsinjuryclinic.net###media_image-10
 zexy.net###kikaku_tklp_banner_generalTop
 scribd.com##div[style] > a[href^="https://www.scribd.com/oauth/signup"]:has(> span[style^="position:absolute;"])
 cosme.net#%#//scriptlet('trusted-click-element', 'button[style*="background-color: rgb(255"].ab-message-button')
-shufoo.net##.__sp_floatingBanner
-shufoo.net##.__sp_footerBanner
 przegladsportowy.onet.pl###__bottomBanner
 foxford.ru##div[class*="ContentContainer"] > div > div:has( > div > div > .slick-slider > .slick-list > .slick-track > .slick-slide > div > div > div[class*="QrWrapper"])
 dropbox.com##div.dig-Banner[role="alert"]
@@ -214,7 +212,6 @@ navitime.co.jp###body-left > div.section:has(> a[href="https://www.navitime.co.j
 sketch.pixiv.net##.stores > a > img
 msn.com##div[class^="weatherMobileUpsellContainer-"]
 digitimes.com.tw#%#//scriptlet('abort-current-inline-script', '$', 'apppromo')
-cultura.uol.com.br###homecampanha
 moises.ai##.relative > div.flex-col:has(> div[role="group"] > a[title="App Store"])
 moises.ai##footer + div.fixed
 codenames.game##a[href="https://cge.as/cnapp-store-download-cno"]
@@ -506,7 +503,6 @@ myforecast.co#?#tr[align="left"] > td.normal:has(> a[href="https://apps.apple.co
 meetup.com#%#//scriptlet('trusted-set-cookie', 'appbanner_accepted', 'dismissed=1')
 bt.cn##.wechat-customer
 3bmeteo.com###favDialog
-||mytwintiers.com/wp-content/uploads/*/*-Mobile-App
 opb.org##.overlay-cta
 shabdkosh.com#?##content > div[class^="px-"] > div[class^="px-"]:has(> div.text-center > div.row > div[class^="col-"] > a[href^="https://play.google.com/store/apps/"])
 temu.com#?#div[id] div[class^="root-"] > div > div:has(+ div[class^="wrap-"][style^="height:"]):has(> div[style] div[js-selector="mobile-download-ui"])
@@ -748,7 +744,6 @@ ilkha.com##.backroundcolor-white-ss > h3.dowlandapptitle + div.footer-download-s
 tv.wp.pl#%#//scriptlet('trusted-set-local-storage-item', 'promo-info', '{"appLinkVisited":false,"closeDatetime":1751604073749}')
 medal.tv#%#document.cookie="dl-mobile-banner=hidden;path=/";
 medal.tv#%#document.cookie="downloadcta-state=hidden;path=/";
-medal.tv#?#article div[class^="sc-"] > div[class^="StyledBox-sc-"] > div[class^="StyledBox-sc-"]:has(> div[class^="StyledBox-sc-"] > span:contains(/^Medal is better with Mobile$/))
 minimodel.jp#$#.smart_app_banner_area { display: none !important; }
 minimodel.jp#$#.smart_app_banner_area + header.nav { margin-top: 0 !important; }
 allegro.pl##div[data-analytics-groups*="allegro.bar.mobileAppBanner"][data-prototype-id="layout.container"]
@@ -855,7 +850,6 @@ mail.yahoo.co.jp##img[alt="Yahoo!メールアプリをインストール"]
 mail.yahoo.co.jp##img[alt="Yahoo!メールアプリをインストール"] + div[class^="sc-"]
 boomplay.com##.googlePlay
 aptoide.com##div[class^="aptoide-installer"]
-live.line.me##.MdBtn01Download02
 nbcnews.com##amp-list#branch-amp-journey
 kino.tricolor.tv#%#//scriptlet('remove-class', 'add_app-module', '.main')
 moovitapp.com##.qr-code-wrapper
@@ -890,7 +884,6 @@ wallstreetcn.com#?#main > .modal:has(> .oia-drawer)
 wallstreetcn.com#$#body { overflow: auto !important; }
 sketch.pixiv.net###MobilePromote
 gooworld.jp,goo-net.com,goobike.com###appbnr
-palcy.jp##.dl-area
 hinatazaka46.com##.app-button
 ps.hket.com#$#html { overflow: auto !important; }
 ps.hket.com#$#body { overflow: auto !important; }
@@ -1055,6 +1048,7 @@ m.jd.com##div[id^="imk2Fixed"]
 kusurinomadoguchi.com##.app-wrap
 snaptik.app,cu.tbs.co.jp##.app-wrapper
 prospektangebote.de##.corner-popup
+estar.jp##.appLinkContainer
 tfm.co.jp###super
 ||st.work.ua/js/app-banner-
 academia.edu#$#body { overflow: auto!important; }
@@ -1142,7 +1136,6 @@ collabo-cafe.com##.app__smart__dl
 webtoons.com##.foot_app
 boredpanda.com,hackread.com##.get-app
 electrical4u.com###custom_html-24
-warnung.bund.de##.apphint
 camscanner.com##.orcode_box
 avg.com##.hub-cta-desktop
 glasswire.com##.glasswire-android
@@ -1273,12 +1266,12 @@ expedia.be,expedia.nl,expedia.ch,expedia.de,expedia.it,expedia.fr,expedia.at,exp
 academia.edu,raysigorta.com.tr,i2symbol.com#$#.modal-backdrop { display: none!important; }
 zhihu.com,vprok.ru,raysigorta.com.tr,m.sportmaster.ru,i2symbol.com#$#body { overflow: visible!important; }
 zhihu.com#$#.MobileModal-wrapper { display: none !important; }
+m.yelp.com##body > div[data-hypernova-key^="mobile_site_"] > div._2oFDT > div.u-space-t4 + div[class="_1mboc _39b4o _2oFDT"]:last-child
 waze.com##.wz-downloadbar
 dlive.tv##.v-snack--bottom
 m.jiemian.com##body > .app-open
 jiemian.com##.article-view > .jm-app
 hurriyet.com.tr##.app-redirect
-vgtime.com##.vg_download_app
 tracker.network,fortnitetracker.com##.mobile-promo-banner
 tracker.network,destinytracker.com,halotracker.com,fortnitetracker.com,tracker.gg##.mobile-app-preview
 okazjum.pl,tracker.network,destinytracker.com,halotracker.com,fortnitetracker.com,tracker.gg,bankturov.ru##.mobile-promo

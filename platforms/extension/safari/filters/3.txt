@@ -1,9 +1,9 @@
-! Checksum: qYspZ3ZCfZl2qPnFAsIEfg
-! Diff-Path: ../patches/3/3-s-1743779467-3600.patch
+! Checksum: TOFB56LsTTEvch/xpQ+djg
+! Diff-Path: ../patches/3/3-s-1743786598-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.82.76
-! TimeUpdated: 2025-04-04T15:06:57+00:00
+! Version: 2.0.82.77
+! TimeUpdated: 2025-04-04T17:06:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -40756,6 +40756,7 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||collector.bsg.brave.com^
 ||sy.ameba.jp^
 ||tracker.uira.live^
 ||col.surfside.io^
@@ -48661,6 +48662,9 @@ link.gmapp*.net$image
 ! it's problematic that due to how Gmail proxy work, these domains aren't even exposed on the network level
 ! fortunately, extensions can see them (Gmail puts the real URL in the location.hash part of the src)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202326#issuecomment-2778980839
+mail.proton.me/api/core/v*/images?Url=$image
+mail.proton.me%2Fapi%2Fcore%2Fv*%2Fimages%3FUrl%3D$image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202326
 images.harmony.epsilon.com/ContentHandler/images?id=$image
 images.harmony.epsilon.com%2FContentHandler%2Fimages%3Fid%3D$image

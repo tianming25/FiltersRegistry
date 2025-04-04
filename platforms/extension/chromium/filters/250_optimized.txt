@@ -1,5 +1,5 @@
-! Checksum: H+0LrIcf5jr9b+Hgwb5N0w
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1743684540-14400.patch
+! Checksum: T6q8t91DUAbSwFDDH1eACA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1743741639-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.55
@@ -10,7 +10,6 @@
 ##.app-cta:not(html,body,:empty)
 ##.app-download:not(html,body,section,.content)
 ##.download-app:not(html,body,:empty)
-##.open-in-app:not(html,body,:empty)
 ##div[class*=smartbanner i]
 ##div[class^=app_download]
 bilibili.com##.nav-link-item a[href$="app.bilibili.com"]
@@ -700,7 +699,6 @@ coolrom.com.au,coolrom.com##.download_link
 apkfab.com##.tip-extension
 ||sexy-egirls-leaked.com^$document
 ||erothots.co^$all
-||only2leaked.co^$document
 |http://www6.$document,domain=~often_used_in_malware_redirections.*
 .aspx?cname=*&cid=$all
 ||googleapis.com/beastlyendeavors^$all
@@ -3161,6 +3159,7 @@ $removeparam=ws_ab_test
 $removeparam=spLa
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
+$removeparam=SSAID
 $document,removeparam=/^cm_mmc.*$/
 $removeparam=hsCtaTracking
 $removeparam=tblci
@@ -3197,7 +3196,6 @@ $removeparam=_gl
 $document,removeparam=/^outputType=amp$/
 $removeparam=ncid
 $document,removeparam=/^ecid=.*$/i,domain=~account.microsoft.com
-$removeparam=adcid
 $removeparam=mkt_tok
 @@^mkt_unsubscribe=$removeparam=mkt_tok
 $removeparam=affname
@@ -3241,6 +3239,7 @@ $removeparam=afsrc
 $~ping,removeparam=lcid,domain=~rekono.si
 $document,removeparam=/^mpid=.*$/i,domain=~miguvideo.*
 $removeparam=trackingCode
+$removeparam=affiliateCustomId
 $removeparam=CJPID,domain=~keyade.com
 $removeparam=irmpname
 $removeparam=REFERRAL_ID
@@ -3263,6 +3262,7 @@ $removeparam=affuid
 $removeparam=refclickid
 $removeparam=ad_id,domain=~olx.ua
 $document,removeparam=/^affSource.*$/i
+$document,removeparam=/^_s=afl_impact$/
 $document,removeparam=/^cid_.*$/
 $document,removeparam=p_sid,domain=~wgv.de
 $removeparam=depth_1-utm_source
@@ -3359,7 +3359,6 @@ $document,removeparam=/^pid=.*_int$/
 $removeparam=deep_link_sub1
 $removeparam=sub_aff_id
 $document,removeparam=/^sub_id\d=.*$/
-$removeparam=tg_ref
 $removeparam=dt_dapp
 $removeparam=dt_platform
 $removeparam=waad
@@ -3474,6 +3473,7 @@ $removeparam=ttd_id
 $removeparam=dsp_uid
 $removeparam=adsafe_url
 $removeparam=mt_uuid
+$removeparam=sifi_uid
 $removeparam=_rlid
 $removeparam=ga_fc
 $removeparam=ga_client_id
@@ -3982,7 +3982,6 @@ $removeparam=fm,domain=flipkart.com|shopbop.com
 ||flipkart.com^$removeparam=ssid
 ||flipkart.com^$removeparam=store
 ||flipkart.com^$removeparam=marketplace
-||mozilla.org^$removeparam=redirect_source
 ||fiverr.com^$removeparam=funnel
 ||epicgames.com^$removeparam=epic_affiliate
 ||epicgames.com^$removeparam=epic_gameId
@@ -4009,7 +4008,6 @@ $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||macys.com^$removeparam=trackingid
 $removeparam=/^m_.*$/,domain=macys.com|macysinc.com
 $removeparam=CAGPSPN
-||bindright.com^$removeparam=camp_id
 $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
 ||apple.com^$removeparam=mttnsubad
 $removeparam=wfr,domain=weidian.com|baidu.com
@@ -4023,6 +4021,7 @@ $removeparam=frs,domain=etsy.com
 ||lazada.$removeparam=exlaz
 ||target.com^$removeparam=lnk
 $removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com
+$document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
 $removeparam=visit_id,document,domain=bilibili.com|google.*

@@ -1,9 +1,9 @@
-! Checksum: a1wKMrHRxmGdzjzOrjMhYw
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1743750657-3600.patch
+! Checksum: 3Cvpo71xtI3ZWYpdCpXszg
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1743754340-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.51
-! TimeUpdated: 2025-04-04T07:07:23+00:00
+! Version: 2.2.26.52
+! TimeUpdated: 2025-04-04T08:08:56+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1453,6 +1453,8 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+rumble.com###js-client-storage-consent__popup
+slazenger.com.tr###ucookie-container
 e1.ru##div[class] > div[class^="wrapper"]:has(> div[class^="content_"] a[href="/cookie-policy/"])
 portal.abczdrowie.pl#$#body > * { filter: none !important; }
 portal.abczdrowie.pl#$##modal-placement + div[style][class] { display: none !important; }
@@ -15366,7 +15368,7 @@ wish.com#%#//scriptlet('trusted-set-cookie', 'progressiveBottomSheetTimeStamp', 
 segodnya.ua##.article__newsfeeds
 bbc.com##section[aria-labelledby="Подписывайтесь-на-наши-соцсети-и-рассылку"]
 growdiaries.com#$#body { overflow: auto !important; }
-newsbomb.gr##[class*="publisher-teaser"]
+cnn.gr,newsbomb.gr##[class*="publisher-teaser"]
 bundesliga.com##dfl-newsletter-banner
 thepostmillennial.com##.card.bg-warning
 bbc.com##ul[role="list"] > li:has(> div[class] >  a[href^="https://www.bbc.com/russian/send/"])
@@ -22964,7 +22966,7 @@ melongmovie.site#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', '
 uploadhaven.com#%#//scriptlet('adjust-setInterval', 'countDown()', '*', '0.28')
 babup.com#%#//scriptlet('adjust-setInterval', 'timer', '*', '0.001')
 file-upload.com#%#//scriptlet('adjust-setTimeout', 'tick', '', '0.02')
-poptech.online,elbadr.xyz,abda3.xyz,wisw.online,stelux.online,gooltok.com,loiz.store,glo-n.online,jolk.online,minipet.online,spidergame.online,pedalpower.online,offeergames.online,sealat.com,fx4ever.com,businessnews-nigeria.com,day4news.com,net4you.xyz,maos4alaw.online,mamahawa.com,10short.pro#%#//scriptlet('adjust-setInterval', '/proceed|mdtimer/', '*', '0.001')
+foldrecipes.com,poptech.online,elbadr.xyz,abda3.xyz,wisw.online,stelux.online,gooltok.com,loiz.store,glo-n.online,jolk.online,minipet.online,spidergame.online,pedalpower.online,offeergames.online,sealat.com,fx4ever.com,businessnews-nigeria.com,day4news.com,net4you.xyz,maos4alaw.online,mamahawa.com,10short.pro#%#//scriptlet('adjust-setInterval', '/proceed|mdtimer/', '*', '0.001')
 terbit21.app,lk21static.*#%#//scriptlet('adjust-setInterval', 'time', '*', '0.02')
 present.rssing.com#%#//scriptlet('adjust-setTimeout', 'setC', '1000', '0.001')
 djrudrabasti.in#%#//scriptlet('adjust-setInterval', 'Popup will close in', '*', '0.001')

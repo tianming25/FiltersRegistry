@@ -1,9 +1,9 @@
-! Checksum: KXdZjBdg9XDzvAm7RyFdtw
-! Diff-Path: ../patches/4/4-s-1743711062-3600.patch
+! Checksum: DdEvzSO6yOiNDNViZBJviw
+! Diff-Path: ../patches/4/4-s-1743750673-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.13.3
-! TimeUpdated: 2025-04-03T20:06:59+00:00
+! Version: 2.1.13.4
+! TimeUpdated: 2025-04-04T07:07:03+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -675,6 +675,10 @@ esquire.com,dotesports.com,mashable.com,pcmag.com,onefootball.com,ign.com,israel
 !
 ! NOTE: Specific rules
 !
+adage.com##.u-flex > div.u-relative:has(> button > svg > path[d^="M13 4.5a2.5"])
+americatv.com.pe##button[data-variant="shared"]
+americatv.com.pe##.items-center > span:has(+ button[data-variant="shared"])
+americatv.com.pe##.justify-center.items-center:has(> button[data-variant="shared"]:only-child)
 latinanoticias.pe##.box-compartir
 unikal.az##.news-share-container
 faz.net##button[track-label="Teilen"]

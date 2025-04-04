@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: lU9CWix2go+IDo09apmM2A
-! Diff-Path: ../patches/235_optimized/235_optimized-s-1743439409-14400.patch
+! Checksum: tAVJTlbBWd+jhptAucG56w
+! Diff-Path: ../patches/235_optimized/235_optimized-s-1743756119-14400.patch
 ! Title: Persian Blocker (Optimized)
 ! Description: Filter list for blocking ads and trackers on websites in Persian.
-! Version: 2.0.5.52
-! TimeUpdated: 2025-03-31T16:39:22+00:00
+! Version: 2.0.5.53
+! TimeUpdated: 2025-04-04T08:38:00+00:00
 ! Expires: 5 days (update frequency)
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.site/"]
 ~arongroups.site,~arongroups.co##a[href^="https://arongroups.co/"]
@@ -840,8 +840,8 @@ estekhtam.com#@#.ads-bottom
 enama.ir##div.avdDiv
 fontchi.com##+js(href-sanitizer, a[href^="/goto/"], ?url -base64)
 filmekade.ir##div.banner-ads
+fam.ir##+js(json-prune, props.children.[].props.children.[].props.children.props.advertisment)
 ||analytics.fam.ir^$~third-party
-||fam.ir/ngx_pagespeed_beacon^$xmlhttprequest,~third-party,method=post
 fileboro.com##+js(abort-current-script, document.onselectstart, killCopy)
 fileboro.com##+js(abort-on-property-write, document.oncopy)
 fileboro.com##div.ads-content

@@ -379,8 +379,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.44.65",
-			"timeUpdated": "2025-04-05T16:36:51+0000",
+			"version": "2.1.44.66",
+			"timeUpdated": "2025-04-05T20:33:07+0000",
 			"languages": []
 		},
 		{
@@ -458,8 +458,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.62",
-			"timeUpdated": "2025-04-05T16:36:54+0000",
+			"version": "2.1.67.63",
+			"timeUpdated": "2025-04-05T20:33:11+0000",
 			"languages": []
 		},
 		{
@@ -502,8 +502,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
-			"version": "2.1.67.64",
-			"timeUpdated": "2025-04-05T16:36:56+0000",
+			"version": "2.1.67.65",
+			"timeUpdated": "2025-04-05T20:33:12+0000",
 			"languages": [
 				"it"
 			]
@@ -547,8 +547,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
-			"version": "2.1.67.63",
-			"timeUpdated": "2025-04-05T16:36:56+0000",
+			"version": "2.1.67.64",
+			"timeUpdated": "2025-04-05T20:33:12+0000",
 			"languages": [
 				"ar"
 			]
@@ -565,8 +565,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.62",
-			"timeUpdated": "2025-04-05T16:36:57+0000",
+			"version": "2.1.67.63",
+			"timeUpdated": "2025-04-05T20:33:13+0000",
 			"languages": []
 		},
 		{
@@ -708,8 +708,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.44.94",
-			"timeUpdated": "2025-04-05T16:37:06+0000",
+			"version": "2.1.44.95",
+			"timeUpdated": "2025-04-05T20:33:23+0000",
 			"languages": []
 		},
 		{
@@ -740,8 +740,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.39.37",
-			"timeUpdated": "2025-04-05T16:37:07+0000",
+			"version": "2.0.39.38",
+			"timeUpdated": "2025-04-05T20:33:23+0000",
 			"languages": []
 		},
 		{
@@ -866,8 +866,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.63",
-			"timeUpdated": "2025-04-05T16:37:09+0000",
+			"version": "2.1.67.64",
+			"timeUpdated": "2025-04-05T20:33:26+0000",
 			"languages": []
 		},
 		{
@@ -940,8 +940,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.66.88",
-			"timeUpdated": "2025-04-05T16:37:10+0000",
+			"version": "2.1.66.89",
+			"timeUpdated": "2025-04-05T20:33:28+0000",
 			"languages": []
 		},
 		{
@@ -1230,8 +1230,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.67.64",
-			"timeUpdated": "2025-04-05T16:37:17+0000",
+			"version": "2.1.67.65",
+			"timeUpdated": "2025-04-05T20:33:35+0000",
 			"languages": []
 		},
 		{
@@ -1246,8 +1246,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.0.69.36",
-			"timeUpdated": "2025-04-05T16:37:19+0000",
+			"version": "2.0.69.37",
+			"timeUpdated": "2025-04-05T20:33:38+0000",
 			"languages": []
 		},
 		{
@@ -1290,8 +1290,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/MasterKia/PersianBlocker/main/PersianBlocker.txt",
-			"version": "2.0.5.53",
-			"timeUpdated": "2025-04-04T08:38:00+0000",
+			"version": "2.0.5.54",
+			"timeUpdated": "2025-04-05T20:33:39+0000",
 			"languages": [
 				"fa",
 				"tg",
@@ -1389,8 +1389,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.50.65",
-			"timeUpdated": "2025-04-05T16:37:25+0000",
+			"version": "2.1.50.66",
+			"timeUpdated": "2025-04-05T20:33:45+0000",
 			"languages": []
 		},
 		{
@@ -1465,8 +1465,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.1.63.70",
-			"timeUpdated": "2025-04-05T16:37:27+0000",
+			"version": "2.1.63.71",
+			"timeUpdated": "2025-04-05T20:33:47+0000",
 			"languages": []
 		},
 		{
@@ -1494,8 +1494,8 @@
 			"displayNumber": 249,
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/NorwegianExperimentalList%20alternate%20versions/NordicFiltersAdGuard.txt",
-			"version": "2.0.7.96",
-			"timeUpdated": "2025-03-30T08:36:32+0000",
+			"version": "2.0.7.97",
+			"timeUpdated": "2025-04-05T20:33:47+0000",
 			"languages": [
 				"no",
 				"da",
@@ -1563,8 +1563,8 @@
 			"displayNumber": 2,
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
-			"version": "2.0.60.95",
-			"timeUpdated": "2025-04-05T16:37:34+0000",
+			"version": "2.0.60.96",
+			"timeUpdated": "2025-04-05T20:33:54+0000",
 			"languages": [
 				"hi"
 			]

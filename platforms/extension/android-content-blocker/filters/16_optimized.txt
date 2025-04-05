@@ -1,8 +1,8 @@
-! Checksum: OP37NY+RXdH2fQgRxK1iGQ
+! Checksum: 833JdB/yURA3De5x/4bbRw
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.51.57
-! TimeUpdated: 2025-04-04T16:08:00+00:00
+! Version: 2.0.51.58
+! TimeUpdated: 2025-04-05T10:06:53+00:00
 ! Expires: 5 days (update frequency)
 ||proxy.ads.canalplus-bo.net^
 ||7bd92.v.fwmrm.net^
@@ -98,7 +98,8 @@ ebookdz.com#@#.ad-placeholder:not(#filter_ads_by_classname):not(#detect_ad_empir
 ebookdz.com#$#body { overflow-y: auto !important; }
 ebookdz.com#$##abDetectorModal { display: none !important; }
 ||ebookdz.com/forum/libab/script.js
-@@||acscdn.com/script/advertising.js$script,third-party,domain=japscan.lol,important
+/^https:\/\/acscdn\.com\/script\/(?:aclib|atg|compatibility|ippg|suv4|ut)\.js(\?cb=\d{13})?$/$script,third-party,match-case,important,domain=japscan.lol
+@@||acscdn.com/script/advert$script,third-party,domain=japscan.lol,important
 @@.shop/*/invoke.js$script,third-party,domain=japscan.lol,important
 japscan.lol#@#div.container > [href]
 @@$image,domain=japscan.lol

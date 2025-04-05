@@ -1,13 +1,13 @@
-! Checksum: uncdc2QKOtvATY87ArMBfg
-! Diff-Path: ../patches/251/251-s-1743770941-14400.patch
+! Checksum: MSkgQ3Tj4EJr5Rjii9QiKA
+! Diff-Path: ../patches/251/251-s-1743857334-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.57
-! TimeUpdated: 2025-04-04T12:44:59+00:00
+! Version: 2.0.8.58
+! TimeUpdated: 2025-04-05T12:44:53+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 04April2025v1
+! OriginalVersion: 05April2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -251,7 +251,7 @@ $removeparam=CMP
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
 $document,removeparam=/^OCID=.*$/i,domain=~youtube.com|~reiseauskunft.bahn.de|~msn.com
 $removeparam=tduid,domain=~tradedoubler.com
-$removeparam=irclickid
+$document,removeparam=irclickid,domain=~axs.com
 $removeparam=irclicid
 $removeparam=intcmp
 $removeparam=sourceid,domain=~google.*

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Njiz1/RlPXfwvZ28ur2sYA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1744009874-3600.patch
+! Checksum: Gn0PdPwquFIxjDUpdtC2Vw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1744013569-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.78.18
-! TimeUpdated: 2025-04-07T07:07:10+00:00
+! Version: 2.3.78.19
+! TimeUpdated: 2025-04-07T08:08:37+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -17398,6 +17398,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202487
+royalroad.com##+js(set-constant, nitroAds.version, 1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202341
 kissanime.sx##+js(no-xhr-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202302
@@ -28427,13 +28429,18 @@ super.cz##+js(set-constant, Object.prototype._advertState, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/45246
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44412
 kosicednes.sk###gateBanner
+! https://github.com/AdguardTeam/AdguardFilters/issues/202357
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42904
+ceskenoviny.cz##.px-ads
+ceskenoviny.cz###textFullBan
+ceskenoviny.cz##.box-offer-mob-perex
+ceskenoviny.cz##div[id^="nativPodclanek"]
 ceskenoviny.cz##.box-offer
 ceskenoviny.cz###mobile-ahead
 ceskenoviny.cz###mobFullPerexBan
 ceskenoviny.cz###AdTrackCategoryTop1
 ceskenoviny.cz##.crossroad-grid > .list > .list-item > div[id^="hyperbox"]
-ceskenoviny.cz#?#.crossroad-grid > .list > .list-item:has(> .crossroad-light > div[id^="div-gpt-ad"])
+ceskenoviny.cz##.crossroad-grid > .list > .list-item:has(> .crossroad-light > div[id^="div-gpt-ad"])
 ceskenoviny.cz#?#.box-list > span.info:contains(/^Reklama$/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42496
 cdr.cz,diit.cz#$#html > body { background-image: none!important; padding-top: 0!important; }
@@ -32482,6 +32489,8 @@ roweroweporady.pl#@#.ad_container
 ||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,redirect=noop.txt
 !
 !
+piotrkowski24.pl##.stream-item
+piotrkowski24.pl###block-3
 flog.pl##.adlnk
 msze.info##body > div[style*="min-height:"]:has(> div[id^="slot_"])
 ops.pl,msze.info,flog.pl,naukowiec.org,rymy.eu,krzyzowki.edu.pl,odleglosci.info,ortograf.pl,interpunkcja.pl##.top-billboard
@@ -44181,7 +44190,7 @@ jizzoncam.com,pornhits.com,shemalesin.com,porntrex.video,maturetubehere.com,hent
 ! ##.spot
 coralxxx.com,analry.com,hard3r.com,bigbigtits.com,maturexy.com,bigbumfun.com,fuqster.com,bigtitbitches.com,w1mp.com,riverporn.pro,sexpester.com,w4nkr.com,pornwhite.com,gaygo.tv,sextaped.com,ratedgross.com,sleazyneasy.com,pornsexxxer.com,litecoin-faucet.com,3prn.com,motherporno.com,pornomovies.com,camhub.tv,max.porn,feetporno.com,familyporn.tv,freehardcore.com,moviesand.com,momvids.com,hdzog.com,pornbimbo.com##.spot
 ! ##.advertisement
-ashemaletv.com,ipaomtk.com,faceitstats.com,ichgcp.net,cinestaan.com,operanews.com,tasteofhome.com,readersdigest.ca,gramfile.com,outlookindia.com,cnbctv18.com,internationalnewsandviews.com,additudemag.com,motoroctane.com,serverhunter.com,rogerebert.com,blavity.com,nuvid.*,discordemoji.com,soft112.com,perfectgirls.net,indaily.com.au,generatorlinkpremium.com,8tracks.com,digiday-com.cdn.ampproject.org,mathopenref.com,playlive.pw##.advertisement
+hotdeals.com,ashemaletv.com,ipaomtk.com,faceitstats.com,ichgcp.net,cinestaan.com,operanews.com,tasteofhome.com,readersdigest.ca,gramfile.com,outlookindia.com,cnbctv18.com,internationalnewsandviews.com,additudemag.com,motoroctane.com,serverhunter.com,rogerebert.com,blavity.com,nuvid.*,discordemoji.com,soft112.com,perfectgirls.net,indaily.com.au,generatorlinkpremium.com,8tracks.com,digiday-com.cdn.ampproject.org,mathopenref.com,playlive.pw##.advertisement
 ! ##.ad-container
 netronline.com,linuxcapable.com,inc.com,businessday.ng,the-crossword-solver.com,crosswordsolver.com,greatbritishchefs.com,halotracker.com,wowdb.com,futbin.com,foxweather.com,tikmate.app,coomer.party,mixed-news.com,rome2rio.com,ubackup.com,southparkstudios.com,theglobeandmail.com,globalnews.ca,infoworld.com,worldsoccertalk.com,minecraftforum.net,snipboard.io,pics-x.com,recyclingtoday.com,battlefieldtracker.com,destinytracker.com,tracker.network,tracker.gg,jamesbachini.com,grammarbook.com,punchng.com,one-off.email,all3dp.com,mangafarm.com,mangajar.com,deeeep.io,raaaaft.io,trustedreviews.com,obsev.com,gfinityesports.com,reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,dvbtmap.eu,infinityfree.net,ibtimes.co.uk,amp-businessinsider-com.cdn.ampproject.org,deviantart.com,usatoday.com##.ad-container:not(#style_important)
 ! ##.adsbygoogle
@@ -44219,6 +44228,9 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+hotdeals.com##.ads-list-two
+royalroad.com##.portlet:has(> span > a[target="_blank"][href="/p/r"])
+royalroad.com##.t-center-3 > .text-center:has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
 op.gg##section:has(> div.min-h-\[250px\]):not(:has(> *:not(div.min-h-\[250px\])))
 stbturbo.xyz##+js(abort-on-stack-trace, WebAssembly, iwa)
 stbturbo.xyz##+js(no-setTimeout-if, /handleException[\s\S]*?WebAssembly/)

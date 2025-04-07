@@ -1,9 +1,9 @@
-! Checksum: tvIFGmMhPAU4nnfuu9TCLw
-! Diff-Path: ../patches/19/19-s-1743779476-3600.patch
+! Checksum: hYSX7BpxYreu+m+JY8agvg
+! Diff-Path: ../patches/19/19-s-1744013575-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.31
-! TimeUpdated: 2025-04-04T15:07:34+00:00
+! Version: 2.0.53.32
+! TimeUpdated: 2025-04-07T08:09:13+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -404,8 +404,9 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.InA
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.SidebarAd
 !#safari_cb_affinity
 !
-! Add without $third-party, so apps are blocking them too
+! NOTE: Add without $third-party, so apps are blocking them too
 !
+||fastenfather.com^
 ||stereotypedsugar.com^
 ||podname.com^
 ||luxformula.com^
@@ -4453,6 +4454,9 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+uview-plus.jiangruyi.com#$##vip-box { display: none !important; }
+uview-plus.jiangruyi.com#$#.v-modal { position: absolute !important; top: -9999px !important; }
+uview-plus.jiangruyi.com#$#body.el-popup-parent--hidden { overflow: auto !important; padding-right: 0 !important; }
 mynet.com##.ng-timeline-sticky-div
 studentappcentre.com##.exit_intent_popup
 golearn.gr##.seminar__cta

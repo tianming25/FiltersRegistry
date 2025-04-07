@@ -61,8 +61,8 @@
 			"displayNumber": 1,
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/2.txt",
-			"version": "2.3.78.21",
-			"timeUpdated": "2025-04-07T10:07:27+0000",
+			"version": "2.3.78.22",
+			"timeUpdated": "2025-04-07T11:06:10+0000",
 			"languages": []
 		},
 		{
@@ -113,8 +113,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/6.txt",
-			"version": "2.0.46.85",
-			"timeUpdated": "2025-04-07T10:07:46+0000",
+			"version": "2.0.46.86",
+			"timeUpdated": "2025-04-07T11:06:32+0000",
 			"languages": [
 				"de"
 			]
@@ -128,8 +128,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/7.txt",
-			"version": "2.0.63.43",
-			"timeUpdated": "2025-04-07T10:07:47+0000",
+			"version": "2.0.63.44",
+			"timeUpdated": "2025-04-07T11:06:35+0000",
 			"languages": [
 				"ja"
 			]
@@ -234,8 +234,8 @@
 			"platformsExcluded": [
 				"ext_chromium_mv3"
 			],
-			"version": "2.2.26.65",
-			"timeUpdated": "2025-04-07T10:08:02+0000",
+			"version": "2.2.26.66",
+			"timeUpdated": "2025-04-07T11:06:53+0000",
 			"languages": []
 		},
 		{
@@ -296,8 +296,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/18.txt",
-			"version": "2.0.59.50",
-			"timeUpdated": "2025-04-07T10:08:08+0000",
+			"version": "2.0.59.51",
+			"timeUpdated": "2025-04-07T11:07:00+0000",
 			"languages": []
 		},
 		{
@@ -309,8 +309,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/19.txt",
-			"version": "2.0.53.33",
-			"timeUpdated": "2025-04-07T10:08:09+0000",
+			"version": "2.0.53.34",
+			"timeUpdated": "2025-04-07T11:07:02+0000",
 			"languages": []
 		},
 		{
@@ -335,8 +335,8 @@
 			"displayNumber": 2,
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/21.txt",
-			"version": "2.0.32.15",
-			"timeUpdated": "2025-04-06T09:06:58+0000",
+			"version": "2.0.32.16",
+			"timeUpdated": "2025-04-07T11:07:02+0000",
 			"languages": []
 		},
 		{

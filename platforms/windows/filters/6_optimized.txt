@@ -1,9 +1,9 @@
-! Checksum: tnQLInCYt5Jzk6idSnlVjw
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1744020706-3600.patch
+! Checksum: BMTeUVM+pRltxJDMcRZOGw
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1744024248-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.46.85
-! TimeUpdated: 2025-04-07T10:07:46+00:00
+! Version: 2.0.46.86
+! TimeUpdated: 2025-04-07T11:06:32+00:00
 ! Expires: 12 hours (update frequency)
 ||addefend-platform.com^
 ||remp-campaign.golem.de^
@@ -2257,6 +2257,7 @@ homad-global-configs-eu-fra.schneevonmorgen.com.s3.amazonaws.com/*/config.json$r
 ||adserver.adtech.de/?advideo/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,important
 ||adserver.adtech.de/?advideo/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 ||cdn.videoplaza.tv/contrib/de-ipd/svm/homadConfigVideoplaza-wetter.json$replace=/"enabled": true\,/"enabled": false\,/i,important
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=winfuture.de
 [$path=/themenwelten]lvz.de#@#div[class^="Adstyled__AdWrapper"]
 [$path=/themenwelten]lvz.de#@#div[class^="Adstyled__AdWrapper-"]
 [$path=/schnaeppchen]nordbayern.de#@?#article:has(> a.box > div > .topline > .modul__teaser__dachzeile:contains([Anzeige]))

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Gn0PdPwquFIxjDUpdtC2Vw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1744013569-3600.patch
+! Checksum: lXXCGFi7RUbI3Jjd0D5Srg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1744017093-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.78.19
-! TimeUpdated: 2025-04-07T08:08:37+00:00
+! Version: 2.3.78.20
+! TimeUpdated: 2025-04-07T09:07:30+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,7 @@
 !
 !
 !
+||floors.dev^
 ||onkhwanhuo.com^
 ||srvtensz.com^
 ||exo1.georealcdn.com^
@@ -43018,9 +43019,6 @@ pirate.ws#$#body { padding-top: 70px !important; }
 news.com.au#$##header { margin-top: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/26761
 flaticon.com#$#ul.icons > li.icon[data-name][style="margin-bottom: 116px;"] { margin-bottom: 0!important; }
-! https://github.com/AdguardTeam/AdguardFilters/issues/25079
-maxedtech.com#$##headerwrap > div#header { height: 103px!important; }
-maxedtech.com#$##site-logo { top: 1px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/26595
 review-hub.co.uk#$#a[href^="http://shrsl.com/"] { font-weight: 100!important; border-bottom: none!important; pointer-events: none!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/26312
@@ -44228,6 +44226,7 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+waffi.cloud,seriezloaded.com.ng##+js(window.open-defuser, ?key=)
 hotdeals.com##.ads-list-two
 royalroad.com##.portlet:has(> span > a[target="_blank"][href="/p/r"])
 royalroad.com##.t-center-3 > .text-center:has(> div[id^="Content_Top_"]:first-child + div[id^="Content_Top_"]:last-child)
@@ -63448,6 +63447,10 @@ adultlingeriepics.com,adultlingeriepics.com,adultspankingtgp.com,allfeetporn.com
 !
 !
 !
+!+ NOT_OPTIMIZED
+maxedtech.com#$##headerwrap > div#header { height: 103px !important; }
+!+ NOT_OPTIMIZED
+maxedtech.com#$##site-logo { top: 1px !important; }
 !+ NOT_OPTIMIZED
 colorblindnesstest.org###bannerad1
 !+ NOT_OPTIMIZED

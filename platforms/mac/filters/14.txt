@@ -1,8 +1,8 @@
-! Checksum: jcVlivdjwM2/Ni1gXae8HQ
+! Checksum: bok36o6Ibc53Ydyg1P5XoQ
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.68
-! TimeUpdated: 2025-04-07T13:14:26+00:00
+! Version: 2.2.26.69
+! TimeUpdated: 2025-04-07T14:07:26+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -32229,7 +32229,7 @@ m.youtube.com#$#body[modal-open-body] { position: unset !important; }
 ||mail.ru/manifest.json
 ||m.lenta.ru/manifest.json
 ! "Do you want to subscribe to reach more viewers?" popup
-x.com,twitter.com###layers[style="z-index: 1;"]:has(div[role="dialog"] a[href="/i/premium_sign_up"][style])
+[$path=/\/[0-9A-Z_a-z]+\/status\/\d+/]x.com,twitter.com###layers[style="z-index: 1;"]:has(div[role="dialog"] a[href="/i/premium_sign_up"][style])
 ! Twitter login popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112718#issuecomment-1069965416
 x.com,twitter.com#$?#div[data-testid="sheetDialog"] > :not(div[data-testid="IntentLoginSheet_Login_Sheet"]) div[aria-label=""] > img[class^="css-"][src$="/privacy_cover.png"]:upward(div[role="group"]) { display: none !important; }
@@ -34242,6 +34242,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+awafim.tv##.spo-reel
+awafim.tv###sidebar-content-wrap > .sidebar-section:has(> .side-sub)
 paperswithcode.com##.list-button-subscribe
 gatesnotes.com##.SUButtonLoggedOff
 thedailybeast.com##.b-article-body__piano-top
@@ -42139,6 +42141,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+moviewalker.jp##.footerBnr
 posylka.net#$#.plugin-banner { display: none !important; }
 posylka.net#%#//scriptlet('remove-class', 'has-plugin-banner', 'body')
 gamersky.com##.gs_ccs_appdown

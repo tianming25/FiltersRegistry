@@ -1,5 +1,5 @@
-! Checksum: Kta98I5wAZylPXemkqEflw
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1743945153-3600.patch
+! Checksum: GZw2dtJ4Temg9yZ8zl5StA
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1743993472-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.46.84
@@ -1489,6 +1489,7 @@ bunte.de##.bfa-ad-slot
 tvdigital.de,hoerzu.de##.funkedigital-ad
 ||spark.cloud.funkedigital.de/spark.js$domain=hoerzu.de
 rheinpfalz.de##.cmsSnippetSlide
+||ulm-news.de/image/banners/
 tvdirekt.de,klack.de###adContentTop
 kirche-und-leben.de##.articleAdDetail
 businessinsider.de##.adup-wrap
@@ -1548,7 +1549,6 @@ praxistipps.focus.de,chip.de##aside.FC > .FC__Item
 techstage.de##[src^="https://api.heise.de/svc/pvg-widget"]
 techstage.de##div[class^="heise-ad"]
 desired.de##body > div[id][class]:empty
-widget.namerobot.de##.nr-gpt
 raidrush.net###top_ga
 raidrush.net###foot_ga
 focus.de#$##top-banner { max-height: 0px !important; min-height: 0px !important; }
@@ -1640,7 +1640,6 @@ manager-magazin.de,spiegel.de##div[data-advertisement]
 slashcam.de##.baga[style^="position:"]
 ||slashcam.de/images/basic/anzeige_aufweiss.gif
 n-land.de##.asdf
-motor-talk.de##div[id^="div-gpt"]
 chefkoch.de##div[amp-access^="NOT hasPaid"]
 koch-mit.de##body .c-advertisement__banner
 ||paketda.de/img/banner^
@@ -1729,7 +1728,6 @@ forum-raspberrypi.de##.wbbThreadPostList.messageList > li:not([id]):not([class])
 bimmertoday.de##.box-top-leaderboard
 computerbild.de##div[id^="rectangleAdTeaser"]
 focus.de##.articleContent > .BC-Container[data-bc-query-offerlimit]
-heise.de##a-ad
 forum.frag-mutti.de##.post-entry-ad
 frag-mutti.de###commentblock > .comment:not(.hide-comment):not([id])
 forum.golem.de###screen > #forum-bread + .g6
@@ -1849,12 +1847,13 @@ freizeitpartnerweb.de,outdoorpartner.net,urlaubspartner.net##.ad.text-uppercase
 freizeitpartnerweb.de,outdoorpartner.net,urlaubspartner.net##.row > div[class="visible-lg-block col-lg-4 text-center"] > span[style="font-size:9px;color:#aaa;"]
 ||widgets.outbrain.com^$domain=spiegel.de|manager-magazin.de
 borkenerzeitung.de,bbv-net.de###WallpaperBanner
+pfalz-express.de###alternative_footer
+pfalz-express.de##div[id^="banner_unter_menu"]
+pfalz-express.de###banner_unter_accordion
+pfalz-express.de###banner_unter_ticker
 unwetterzentrale.de###content > div[style*="width:336px;height:16px;"]
 kalender-365.de##.az
 spielkult.de##td[style^="width: 253"].auto-style154
-anpfiff.info##.content-col-r > div[style="min-height:250px;"]
-anpfiff.info##.content-col-r > div[style="min-height:250px;"] ~ hr.linie-seperator
-anpfiff.info##.content-col-r > div > div[style="min-height:250px;"]
 anpfiff.info##div[id^="divAdv"]
 brueckenkopf-online.com##.cols > div.g-3
 brueckenkopf-online.com##.cols > div.g-2
@@ -1901,6 +1900,7 @@ songtexte.com##.row > .boxless
 motorsport-total.com##.anzeige_teas_rect
 spiele123.com##li.ad
 ||ich-tanke.de/bilder/partner/
+||gamesaktuell.de/tsimg/$image
 ||andreas-unterberger.at/mediafiles/werbung
 andreas-unterberger.at##div[class^="adsensecontent"]
 whocallsme.com###phoneTop
@@ -2149,6 +2149,8 @@ formel1.de#?##right_column > div.teaser_container:has(span.ads-anzeige)
 formel1.de#?##right_column > div.teaser_container:has(div.OUTBRAIN)
 rtde.site#?#.Section-root:has(> div.Section-container > div.Section-block > div[id^="adfox_"])
 deutschlandkurier.de#?#.vc_column > div.wpb_wrapper > div.td_block_wrap:has(> div.td-fix-index:contains(Anzeige))
+ww-kurier.de#?#.uk-width-1-4 > div.uk-panel:has(> div.uk-text-center > a.ads-link)
+ww-kurier.de,ak-kurier.de#?#.uk-article > div:has(> p.rubric-ads)
 win-10-forum.de#?#.fh-sidebar > div.block-container:has(> div.fh-sidebar-top)
 wallstreet-online.de#?#.module:has(> div.shareTextInfo)
 ||android-hilfe.de^$replace=/<head\/><link/<head><link/,document
@@ -2368,6 +2370,7 @@ rtl.de#@#.rtlde-medium-rectangle
 .de/ads_
 .de/werb/
 .de/werbung/
+.org/werbung/
 /banners/werbung-
 /bannerwerbung-
 /bilder/werbung_
@@ -2411,6 +2414,7 @@ rtl.de#@#.rtlde-medium-rectangle
 /Widgets/Werbung/*
 /zzz/init.php?$script
 _Banner_Werbung_
+_bannerwerbung/
 _werbebanner.
 _werbung.php
 _werbung.pl
@@ -2480,6 +2484,8 @@ _woz_banner_vote.
 ###werbungWrapper
 ###werbung_cad
 ###werbung_mitte
+###werbung_superbanner
+###werbung_top
 ###werbung_wideskyscraper_screen
 ###werbungrechts1
 ###werbungrechtsfloat
@@ -2487,7 +2493,6 @@ _woz_banner_vote.
 ###werbungsky
 ##.Werbelabel
 ##.Werbung
-##.WerbungMitte
 ##.ad_platzhalter
 ##.ads-anzeige
 ##.ads_bueroklammer
@@ -2800,6 +2805,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||basic-tutorials.de/wp-content/uploads/793/165/assets/js/152.js
 ||bluray-disc.de/images/banner/
 ||boerse.cx/img/panda_german.gif
+||bolzano-bozen.it/images/banner/
 ||borncity.com/blog/wp-content/uploads/*/Amazon03b.jpg
 ||borncity.com/blog/wp-content/uploads/*/Book04.jpg
 ||borncity.com/blog/wp-content/uploads/*/W10Tricks1.jpg
@@ -2811,7 +2817,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||cript.to^$domain=ibooks.to
 ||crosswater-job-guide.com/pics/banner_
 ||dasoertliche.de/js/rmif.js
-||derkleinegarten.de/images/kiste/
 ||designtagebuch.de/wp-content/uploads/anzeigen/
 ||deutschland.fm^*/leaseweb.gif
 ||dforum.net/banner/
@@ -3031,6 +3036,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||wohnmobilforum.de/luftfederung.jpg
 ||wohnmobilforum.de/motorradtraeger.jpg
 ||wohnmobilforum.de/wasserhy.jpg
+||wp.com/custombike.de/wp-content/uploads/sites/*/banner_
 ||wp.com/nh24.de/wp-content/uploads/*/Banner-
 ||wp.com/nh24.de/wp-content/uploads/*/banner_
 ||ww4.cad.de^*/axjs.php
@@ -3067,7 +3073,6 @@ g.doubleclick.net###adunit
 ||googlesyndication.com/sodar/$domain=googlesyndication.com
 ||googletagservices.com/dcm/dcmads.js$domain=autobild.de
 ||imasdk.googleapis.com^$domain=autobild.de
-||mookie1.com^$domain=autobild.de
 ||pagead2.googlesyndication.com^$domain=autobild.de|gofeminin.de
 ||pubmatic.com^$domain=gofeminin.de
 ||redintelligence.net^$domain=g.doubleclick.net
@@ -3678,7 +3683,6 @@ haie.de##.footer__sponsors
 oefb.at##.footer_partner
 computerbase.de##.forum-teaser
 nordkurier.de,schwaebische.de##.fp-ad-placeholder
-arboe.at##.frame-type-mask_toolboxcontentad1
 freenet.de##.frn_contAmazon
 puls24.at##.fullbanner-wrapper
 raidrush.net##.funbox
@@ -3702,7 +3706,6 @@ qiez.de##.h5v
 helpster.de##.h5v-ad
 pornohut.info##.happy-player-beside
 ak-kurier.de##.hd-banner
-fkk24.de##.head-top-bannerplace
 blickpunkt-brandenburg.de,fruchtportal.de,katzeausdemsack.de,nh24.de,sunshine.it##.header-banner
 deine-tierwelt.de##.header-leaderboard-container
 tennis.de##.header-logo-second-display
@@ -3761,6 +3764,7 @@ ligaportal.at##.media
 fuersie.de,grazia-magazin.de,idee-fuer-mich.de,jolie.de,leben-und-erziehen.de,maedchen.de,ok-magazin.de,petra.de,vital.de##.mediumrectangle
 ligaportal.at##.medrec
 2ertalk.de,android-hilfe.de,grillsportverein.de,hardwareluxx.de,macuser.de,toyota-forum.de,usp-forum.de##.message--post:not([data-author])
+hallanzeiger.de##.mh-widget.s5214-widget
 heise.de##.middle-ad-container
 mt.de##.min-280.mr
 schweizer-illustrierte.ch##.ministage-channel-sponsor-paragraph
@@ -4073,7 +4077,6 @@ wallstreet-online.de##a[onclick*="tableAd"] + span
 allround-pc.com,supermarktblog.com##a[rel*="sponsored"]
 sportdeutschland.tv##app-top-banner
 ww3.cad.de##body > table[width="100%"][border="0"]:first-child
-ibooks.to##button[type="submit"]
 chefkoch.de##consent-for
 shop.rewe.de##div[class*="Product_productSpecialTile"]
 onlinehaendler-news.de##div[class*="adplacement_"]

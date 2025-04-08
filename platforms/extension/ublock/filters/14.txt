@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 7uimcCMnYQZB4pg+ul/H+A
-! Diff-Path: ../patches/14/14-s-1744107070-3600.patch
+! Checksum: Wx9n1i13mAiAClbkc5gfiw
+! Diff-Path: ../patches/14/14-s-1744110617-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.77
-! TimeUpdated: 2025-04-08T10:07:40+00:00
+! Version: 2.2.26.78
+! TimeUpdated: 2025-04-08T11:06:51+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -20461,6 +20461,9 @@ news.mail.ru##body > div:has(> div[id] > div > div.title:contains(блокиро
 ! Main page
 dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type="direct"])
 ! Ads in news
+dzen.ru##div[class*="__advertItem "]
+dzen.ru##.news-page-layout__content > div.news-page-layout__rubricator + div[id][class]:has(div[class*="-redesign-placeholder__"])
+dzen.ru##+js(set-constant, Object.prototype.config.rtbRequestViaScript, undefined)
 dzen.ru##+js(json-prune, ssrData.exportResponse.feedData.adItems)
 dzen.ru##+js(set-constant, Object.prototype.ssrBanner, undefined)
 dzen.ru##+js(abort-on-stack-trace, Promise, initContext)
@@ -33273,6 +33276,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+dzen.ru##div[class^="news-site--modal__rootElement-"]:has(div[aria-label="Попап добавления СМИ в избранное"])
 chronicle.com##.SignupModule
 adindex.ru##.our-telegram-channels
 adindex.ru##.newsfeed > div.newsfeed__section:has(> div.newsfeed__section-content > div.subscribe-block)
@@ -42361,7 +42365,7 @@ m.alibaba.com###corner-download-app-wrap
 couples.jp##.top-appBanner
 pikabu.ru#$?#body > div.overlay:has(> div.popup div.popup__content > div.mobile-app-popup) { display: none !important; }
 pikabu.ru#$#body { overflow: auto !important; }
-dzen.ru##div[class^="web2app-advert-qr-banner__"]
+dzen.ru##div[class^="news-site--web2app-advert-qr-banner__"]
 topperlearning.com,xiaohongshu.com##.open-app-btn
 xiaohongshu.com##.button-bottom-bar
 echofm.online#?#header + div[class^="sc-"] > div[class^="sc-"]:has(> div[class^="sc-"] > a[href="https://echofm.page.link/app"])

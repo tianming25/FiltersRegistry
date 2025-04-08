@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: NHYpT8z/V6xhjw+8n9v9wg
-! Diff-Path: ../patches/4/4-s-1744092745-3600.patch
+! Checksum: a5lJXqBya5reuc2weF6JTw
+! Diff-Path: ../patches/4/4-s-1744103462-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.13.13
-! TimeUpdated: 2025-04-08T06:08:43+00:00
+! Version: 2.1.13.14
+! TimeUpdated: 2025-04-08T09:07:12+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -632,6 +632,7 @@ akb48matomemory.com,jidounten-lab.com,jocee.jp,mantan-web.jp,fufukokan.af-origin
 !
 ! NOTE: Specific rules
 !
+idos.cz##.share-button--fb
 maziyabacity.com,audee-membership.jp##.MuiBox-root:has(> .react-share__ShareButton)
 redheadsound.studio#?#.col-side > div.side-block > div.side-block__title:has( > p:contains(МЫ ВКОНТАКТЕ))
 app.nimbusweb.me##.nns-toggle-share
@@ -14856,6 +14857,8 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202295
+idos.cz#@#.share-button
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202259
 monsterhunter.com#@#.sns_list
 monsterhunter.com#@#a[href^="https://lin.ee/"]

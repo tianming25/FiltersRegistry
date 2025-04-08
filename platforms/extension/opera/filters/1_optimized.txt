@@ -1,9 +1,9 @@
-! Checksum: UP1AI55+x5+fZ2poacv7gw
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1744082547-3600.patch
+! Checksum: u0HazQKE3Q8UXA/IYgfiPA
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1744099967-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.98.59
-! TimeUpdated: 2025-04-07T14:06:38+00:00
+! Version: 2.0.98.60
+! TimeUpdated: 2025-04-08T08:08:31+00:00
 ! Expires: 10 days (update frequency)
 /nadavi-api/?p4g3=js/api/widget.js
 ||aj*.bid/*?vpaid=$xmlhttprequest
@@ -2336,6 +2336,8 @@ yandex.*##div[class*="-R-A-"]
 yandex.*##.stack > div[class^="sticky-"]
 [$path=/games]yandex.*##div[style="width: 240px; margin-top: -32px; height: 100vh;"]
 [$path=/games]yandex.*#%#//scriptlet('trusted-click-element', '.play-app div.promo-popup__close')
+[$path=/q]yandex.*##.top-root > div[class]:has(> div[class="0"] > div > div[class] > div[id]:last-child)
+[$path=/q]yandex.*#$##page > div[class]:first-child > div[class] > section[class] > div[class] ~ div > div[class]:not(:has(> div[id^="content-control-"])):not(:has(span a[href^="/q/"])) { height: 0 !important; }
 [$path=/q]yandex.*##header ~ div#page > div[class]:not([id]) > div[class*=" "]:first-child + div[class*=" "] + div[class*=" "] > div[class] > div[style^="will-change:"] > div:not([class]) > div[class]:last-child
 [$path=/q]yandex.*#$?#body.page_qArticleRoute header ~ div#page > div[class]:not([id]) > div[class*=" "]:first-child + div[class*=" "] > section[class*=" "] > div[class] + div + div > span ~ div:not(:has(> div[class] button[data-role="button"] > svg)) { height: 0 !important; }
 [$path=/q]yandex.*#$?#body.page_qQuestionRoute header ~ div#page > div[class]:not([id]) > div[class*=" "]:first-child + div[class*=" "] > section[class*=" "] > div[class] + div + div > div[class] > span ~ div:not(:has(> div[class] button[data-role="button"] > svg)) { height: 0 !important; }

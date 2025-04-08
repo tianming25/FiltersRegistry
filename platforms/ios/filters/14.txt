@@ -1,9 +1,9 @@
-! Checksum: Slns/QFo+1d87UZqRtJpLw
-! Diff-Path: ../patches/14/14-s-1744092745-3600.patch
+! Checksum: vDBBvm7FIK1sEW0EXqddJw
+! Diff-Path: ../patches/14/14-s-1744096276-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.73
-! TimeUpdated: 2025-04-08T06:09:01+00:00
+! Version: 2.2.26.74
+! TimeUpdated: 2025-04-08T07:07:38+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2505,6 +2505,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+womenshealthmag.com##div[aria-label="Privacy Disclosure"]
 ionos.com##.tw-fixed.tw-bottom-0
 ||conductor.com/api/record-cookie-consent/
 hackernoon.com#%#//scriptlet('prevent-element-src-loading', 'script', 'iubenda.com')
@@ -21382,7 +21383,7 @@ foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 ya.ru,yandex.*#$?#div[class^="ImagesViewer-"][style^="height:"] { remove: true; }
 !
 ! Yandex.Maps
-[$path=/maps]ya.ru,yandex.*#%#//scriptlet('set-constant', 'Object.prototype.isStickyAd', 'undefined')
+[$path=/\/(maps|navi)/]ya.ru,yandex.*#%#//scriptlet('set-constant', 'Object.prototype.isStickyAd', 'undefined')
 !
 ! Yandex.Music
 music.yandex.adult,music.yandex.ac.id,music.yandex.ae,music.yandex.al,music.yandex.app,music.yandex.asia,music.yandex.at,music.yandex.az,music.yandex.ba,music.yandex.be,music.yandex.by,music.yandex.ca,music.yandex.cc,music.yandex.cl,music.yandex.cloud,music.yandex.club,music.yandex.co,music.yandex.co.il,music.yandex.com,music.yandex.com.bd,music.yandex.com.cn,music.yandex.com.np,music.yandex.com.tr,music.yandex.de,music.yandex.dev,music.yandex.ee,music.yandex.es,music.yandex.eu,music.yandex.fi,music.yandex.fm,music.yandex.fr,music.yandex.ge,music.yandex.gr,music.yandex.hu,music.yandex.in,music.yandex.io,music.yandex.jp,music.yandex.kg,music.yandex.kr,music.yandex.kz,music.yandex.lt,music.yandex.lv,music.yandex.md,music.yandex.me,music.yandex.mobi,music.yandex.net,music.yandex.news,music.yandex.nl,music.yandex.org,music.yandex.pk,music.yandex.pl,music.yandex.pro,music.yandex.ro,music.yandex.rs,music.yandex.ru,music.yandex.se,music.yandex.site,music.yandex.su,music.yandex.tech,music.yandex.ua,music.yandex.uk,music.yandex.us,music.yandex.uz,music.yandex.work##.notify > div.deco-tooltip_notify.notify_shown
@@ -21828,6 +21829,7 @@ reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#@#.Sid
 !
 ! NOTE: Add without $third-party, so apps are blocking them too
 !
+||ticketjolly.com^
 ||fastenfather.com^
 ||stereotypedsugar.com^
 ||podname.com^
@@ -34722,6 +34724,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+qds.it##.col-xs-12 > a[href="https://qds.it/newsletter-2/"]
+qds.it##.col-xs-12 > a[href^="https://whatsapp.com/channel/"]
 lapsha.media###popup-banner
 lapsha.media##.banner-sidebar
 awafim.tv##.spo-reel

@@ -1,9 +1,9 @@
-! Checksum: U7//IDvb1TygNGA0FbV6wg
-! Diff-Path: ../patches/4/4-s-1744118244-3600.patch
+! Checksum: c8z7Ovp/jVnbvCQbLrQ96A
+! Diff-Path: ../patches/4/4-s-1744125061-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.13.16
-! TimeUpdated: 2025-04-08T13:13:47+00:00
+! Version: 2.1.13.17
+! TimeUpdated: 2025-04-08T15:07:20+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -657,6 +657,7 @@ esquire.com,dotesports.com,mashable.com,pcmag.com,onefootball.com,ign.com,israel
 !
 ! NOTE: Specific rules
 !
+auto.ru#?#div[class^="SectionBlock"] > div.HoveredTooltip__trigger:has(> button > div[class^="Button"][class*="content-"]:contains(Поделиться))
 pixiv.net##section > div[class^="sc-"]:has(> button > svg > path[d^="M17,9.91842728"][d$="25,17 Z"])
 sigmatv.com##.sliding_share_btns
 patakis.gr##.book__share
@@ -13119,6 +13120,9 @@ gazeta.ru##.article-share-name
 dir50.com###sharebuttons
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
 thetalko.com##.btn-facebook-like
+! https://github.com/AdguardTeam/AdguardFilters/issues/202625
+!+ PLATFORM(ext_ff)
+rtvi.com#$#.ya-share2 { visibility: hidden !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/168228
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179384
 ! Not visible on desktop - so should be NOT_OPTIMIZED
@@ -14898,6 +14902,9 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202625
+!+ PLATFORM(ext_ff)
+rtvi.com#@#.ya-share2
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202295
 idos.cz#@#.share-button
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202259

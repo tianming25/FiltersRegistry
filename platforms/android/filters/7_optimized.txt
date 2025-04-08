@@ -1,9 +1,9 @@
-! Checksum: gGgczGxCikzRm1LeiVXhJQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1744114458-3600.patch
+! Checksum: JIUHwFbrUK/eQifXWgCn0w
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1744121484-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.47
-! TimeUpdated: 2025-04-08T12:10:54+00:00
+! Version: 2.0.63.48
+! TimeUpdated: 2025-04-08T14:07:11+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adandhub.com^
@@ -10820,6 +10820,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_japanese
 adguard.info,adguard.com,adguard.app##.hello_from_adguard_apps
 !+ PLATFORM(windows, mac, android) NOT_OPTIMIZED
 ||https-filtering-check.adtidy.org^
+!+ PLATFORM(windows, mac, android)
+$script,redirect-rule=noopjs,domain=azukiazusa.dev
 @@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=video-ac.com
 @@||g.doubleclick.net/pagead/managed/js/gpt/*/pubads_impl.js$domain=video-ac.com
 @@||g.doubleclick.net/tag/js/gpt.js$domain=video-ac.com

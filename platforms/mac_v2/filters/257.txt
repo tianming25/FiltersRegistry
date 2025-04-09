@@ -1,9 +1,9 @@
-! Checksum: DvqSmBtjBKv7KWjQUc5KYA
-! Diff-Path: ../patches/257/257-s-1744144844-14400.patch
+! Checksum: ZljEwZZZbkf4P4UHeRz9zg
+! Diff-Path: ../patches/257/257-s-1744231222-14400.patch
 ! Title: uBlock Origin – Badware risks
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.6.70
-! TimeUpdated: 2025-04-08T20:36:53+00:00
+! Version: 2.0.6.71
+! TimeUpdated: 2025-04-09T20:36:39+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: uBlock₀ filters – Badware risks
@@ -8178,6 +8178,14 @@ app##center#yangchen > iframe#external-frame[src="https://im136.mom/"]:not([clas
 ! https://www.virustotal.com/gui/url/3ff7013630ec52ca97ead99e456af477f027dbb7fb75a529536c35714d91d8d7
 !+ NOT_OPTIMIZED
 ||shop/au/uqmobile^$document
+! https://www.virustotal.com/gui/url/9c79f4b2c668cfb077990b88fd4c79d46cb23a989293d6de5e72fcd4d6e02b48
+!+ NOT_OPTIMIZED
+/^https?:\/\/[-a-z]{4,}\.(?:com|org)[-.][-a-z]{2,}\.(?:cc|top|vip|world|xin)\/pay\b/$document,match-case,to=cc|top|vip|world|xin
+!+ NOT_OPTIMIZED
+/^https?:\/\/[-a-z]{4,}\.(?:com|org)[-.][-a-z]{2,}\.(?:cc|top|vip|world|xin)\/us\b/$document,match-case,to=cc|top|vip|world|xin
+! https://www.virustotal.com/gui/url/8dacd7644def349c4f653861107b1ae465689e42b2195756e5a7606d27a5f5ae
+!+ NOT_OPTIMIZED
+||secure.*.win/pay^$document,to=win
 ! docusign.com
 !+ NOT_OPTIMIZED
 ||signature-rho.vercel.app^$all,to=~docusign.com

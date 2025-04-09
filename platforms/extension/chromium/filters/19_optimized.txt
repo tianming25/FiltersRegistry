@@ -1,9 +1,9 @@
-! Checksum: qmlpUrF/+OUu9SCu2jfpJg
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1744182663-3600.patch
+! Checksum: eYjbA56EBs0kCFji3cqTbQ
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1744193561-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.44
-! TimeUpdated: 2025-04-09T07:07:48+00:00
+! Version: 2.0.53.45
+! TimeUpdated: 2025-04-09T10:09:21+00:00
 ! Expires: 10 days (update frequency)
 ://yandex.*/images/_$xmlhttprequest,method=post
 [$path=/images]ya.ru,yandex.*#%#//scriptlet('abort-on-property-write', '__pcodeAllActiveTestIds')
@@ -89,7 +89,7 @@ e.mail.ru,octavius.mail.ru#%#//scriptlet('remove-class', 'letter-list_top-line-a
 dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type="direct"])
 dzen.ru##div[class*="__advertItem "]
 dzen.ru##.news-page-layout__content > div.news-page-layout__rubricator + div[id][class]:has(div[class*="-redesign-placeholder__"])
-dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.config.rtbRequestViaScript', 'undefined')
+~m.dzen.ru,dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.config.rtbRequestViaScript', 'undefined')
 dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adItems')
 dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.ssrBanner', 'undefined')
 dzen.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'initContext')
@@ -99,6 +99,7 @@ m.dzen.ru##div[aria-label="Лента Дзена"] div + article[class*="--card-
 dzen.ru##div[class^="float-interview__float-"]
 [$path=/video]dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.rtb', 'undefined')
 [$path=/video]dzen.ru##div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
+[$path=/pogoda]dzen.ru##div[data-bem*="segment-details"] > article.card ~ div[class]
 rambler.ua,rambler.ru#%#//scriptlet('set-cookie', '_blocker_hidden', '1')
 !+ NOT_PLATFORM(windows, mac, android)
 championat.com#%#//scriptlet('json-prune', 'Blocks')

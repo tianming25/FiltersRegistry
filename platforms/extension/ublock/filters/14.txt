@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Ixsd2I9mXtZcxpWM8hXNIA
-! Diff-Path: ../patches/14/14-s-1744189884-3600.patch
+! Checksum: J9Md8BWRY9wiKHUrwEKddw
+! Diff-Path: ../patches/14/14-s-1744193574-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.84
-! TimeUpdated: 2025-04-09T09:07:57+00:00
+! Version: 2.2.26.85
+! TimeUpdated: 2025-04-09T10:09:11+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -20465,7 +20465,7 @@ dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type=
 ! Ads in news
 dzen.ru##div[class*="__advertItem "]
 dzen.ru##.news-page-layout__content > div.news-page-layout__rubricator + div[id][class]:has(div[class*="-redesign-placeholder__"])
-dzen.ru##+js(set-constant, Object.prototype.config.rtbRequestViaScript, undefined)
+~m.dzen.ru,dzen.ru##+js(set-constant, Object.prototype.config.rtbRequestViaScript, undefined)
 dzen.ru##+js(json-prune, ssrData.exportResponse.feedData.adItems)
 dzen.ru##+js(set-constant, Object.prototype.ssrBanner, undefined)
 dzen.ru##+js(abort-on-stack-trace, Promise, initContext)
@@ -20486,6 +20486,9 @@ dzen.ru#?#:matches-path(/a/).zen-page div.feed__item article:matches-css(align-i
 dzen.ru##:matches-path(/video)div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
 dzen.ru##:matches-path(/video)div[class^="video-view-sidebar"] div[class]:matches-attr("aria-label"=/[Рр]екламная карта/)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
+!
+! Pogoda
+dzen.ru##:matches-path(/pogoda)div[data-bem*="segment-details"] > article.card ~ div[class]
 !
 ! END: VK group
 !   NOTE: VK group end ⬆️

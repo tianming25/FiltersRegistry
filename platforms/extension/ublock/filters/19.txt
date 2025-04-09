@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: BMReasxMBTbEuBhB/buT2g
-! Diff-Path: ../patches/19/19-s-1744182677-3600.patch
+! Checksum: nlzv8tTGLR80Ys4+KXn4tQ
+! Diff-Path: ../patches/19/19-s-1744193575-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.44
-! TimeUpdated: 2025-04-09T07:07:48+00:00
+! Version: 2.0.53.45
+! TimeUpdated: 2025-04-09T10:09:21+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -198,7 +198,7 @@ dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type=
 ! Ads in news
 dzen.ru##div[class*="__advertItem "]
 dzen.ru##.news-page-layout__content > div.news-page-layout__rubricator + div[id][class]:has(div[class*="-redesign-placeholder__"])
-dzen.ru##+js(set-constant, Object.prototype.config.rtbRequestViaScript, undefined)
+~m.dzen.ru,dzen.ru##+js(set-constant, Object.prototype.config.rtbRequestViaScript, undefined)
 dzen.ru##+js(json-prune, ssrData.exportResponse.feedData.adItems)
 dzen.ru##+js(set-constant, Object.prototype.ssrBanner, undefined)
 dzen.ru##+js(abort-on-stack-trace, Promise, initContext)
@@ -219,6 +219,9 @@ dzen.ru#?#:matches-path(/a/).zen-page div.feed__item article:matches-css(align-i
 dzen.ru##:matches-path(/video)div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
 dzen.ru##:matches-path(/video)div[class^="video-view-sidebar"] div[class]:matches-attr("aria-label"=/[Рр]екламная карта/)
 dzen.ru##.viewer-layout__sidebar div[aria-label*="екламная карта"]
+!
+! Pogoda
+dzen.ru##:matches-path(/pogoda)div[data-bem*="segment-details"] > article.card ~ div[class]
 !
 ! END: VK group
 !   NOTE: VK group end ⬆️

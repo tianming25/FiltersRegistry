@@ -1,8 +1,8 @@
-! Checksum: ibJtLADvZamqJNdiZOdX8A
+! Checksum: BLOSnvvY9nSAr9Sxn8RpaQ
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.84
-! TimeUpdated: 2025-04-09T09:07:57+00:00
+! Version: 2.2.26.85
+! TimeUpdated: 2025-04-09T10:09:11+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -9642,7 +9642,7 @@ e.mail.ru,octavius.mail.ru#%#//scriptlet('remove-class', 'letter-list_top-line-a
 dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type="direct"])
 dzen.ru##div[class*="__advertItem "]
 dzen.ru##.news-page-layout__content > div.news-page-layout__rubricator + div[id][class]:has(div[class*="-redesign-placeholder__"])
-dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.config.rtbRequestViaScript', 'undefined')
+~m.dzen.ru,dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.config.rtbRequestViaScript', 'undefined')
 dzen.ru#%#//scriptlet('json-prune', 'ssrData.exportResponse.feedData.adItems')
 dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.ssrBanner', 'undefined')
 dzen.ru#%#//scriptlet('abort-on-stack-trace', 'Promise', 'initContext')
@@ -9652,6 +9652,7 @@ m.dzen.ru##div[aria-label="Лента Дзена"] div + article[class*="--card-
 dzen.ru##div[class^="float-interview__float-"]
 [$path=/video]dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.rtb', 'undefined')
 [$path=/video]dzen.ru##div[class*="item-info__videoViewerItemInfo-"] + div:not([class])
+[$path=/pogoda]dzen.ru##div[data-bem*="segment-details"] > article.card ~ div[class]
 rambler.ua,rambler.ru#%#//scriptlet('set-cookie', '_blocker_hidden', '1')
 sports.ru#%#//scriptlet('set-constant', 'Object.prototype.renderDirect', 'undefined')
 sports.ru#%#//scriptlet('set-local-storage-item', 'sports:views:anti-adblock:shower', 'null')

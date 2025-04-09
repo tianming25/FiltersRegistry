@@ -1,5 +1,5 @@
-! Checksum: wTLj39BxgGs1XjmdHbFHHg
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744144816-14400.patch
+! Checksum: 4Lbka5GJSSwGV1g3yKTnbA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744173652-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.58
@@ -57,7 +57,6 @@ quora.com#$?#.PageWrapper { filter: none !important; }
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ||top^$document,domain=~caitlin.top|~callmebymygender.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~pressplay.top|~chillx.top|~strims.top|~thedesk.top|~audioforyou.top|~awavenue.top|~reyhub.top|~iboxs.top|~adrules.top|~hostingowy.top|~to|~yggtorrent.top|~asiaon.top
-@@/^.*(tech|project|linux).*\.top(/[a-z0-9_-]?.*)?$/$document
 @@://blog.*.top^$document
 @@://pyrofork.*.top^$document
 ||loan^$document
@@ -86,6 +85,8 @@ appuals.com##p + div > div:first-of-type
 softwaretested.com##.st-alternative
 ||solvusoft.com^$document
 coolrom.com.au,coolrom.com##.download_link
+softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
+softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 |http://ww01.$document,domain=~very_very_extremely_frequently_used_in_malware_redirections.*
 ?bemobdata=$all
 ||connatedresspint.com^$all
@@ -2595,7 +2596,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##.share-icons:not(html,body,:empty)
 ##.share-reddit:not(html,body,:empty)
 ##.share-telegram:not(html,body,:empty)
-##.share-tools:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.share-trigger:not(html,body,:empty)
 ##.share-whatsapp:not(html,body,:empty)
 ##.share_btn:not(html,body,:empty)
@@ -2733,8 +2733,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##div[class*=social-share]:not([preload],[class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-social-share])
 ##a[class*=social-share]:not([preload],[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.react-share__ShareButton:not(body,html,:empty)
-~linkedin.com##.sp_article_share_linkedin:not(body,html,:empty)
-##.sp_article_share_x:not(body,html,:empty)
 ##[class*=socialshare i]:not(html,body,article,[class*=body i],[id*=body i])
 ~kjokkenskriveren.no##[class*=ShareButton i]:not(button,body,html,article,[class*=body i],[id*=body i])
 pixivision.net##._floated-bottom-bar
@@ -2836,12 +2834,15 @@ context.reverso.net###register-popup-bottom
 ||comment.youmaker.com^$domain=theepochtimes.com
 indiatimes.com##div[class$="cmtwrapper "]
 ghacks.net###comments
+color-hex.com##.txtgray
+color-hex.com##a[href="#comments"]
 rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
 e621.net,e926.net###comments
 ###hot-network-questions
 /api/amediacomments/*
 /endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com|35.190.94.206
+vimeo.com##._16rrx
 ||rumble.com/embedJS/u3/?request=related$xmlhttprequest
 ||ixigua.com/api/feedv2^
 ted.com#%#//scriptlet('ubo-sid.js', 'd.period', '1000')
@@ -3010,7 +3011,6 @@ autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 feltet.dk#$#iframe + div[style*="height: 80vh"] { height: unset !important }
 rule34.xxx###status-notices > br:empty
 pixiv.net##div[class*=" "]:empty:has(+ aside + aside)
-channel4.com###playerContrastOverlay
 netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
 tv.nrk.no#$#:is(.episode-info-gradient,.tv-layout-fill) { background:unset!important }
 *#$?#.playkit-bottom-bar { background: none !important }
@@ -3218,6 +3218,7 @@ $document,removeparam=/^ds_.*$/,domain=~clickserve.dartsearch.net
 $removeparam=adposition
 $removeparam=gbraid
 $removeparam=wbraid
+$removeparam=cvosrc
 $removeparam=recurring_goal_id
 $document,removeparam=/^affiliateID=.*$/i
 $removeparam=affiliate_id
@@ -3240,6 +3241,7 @@ $removeparam=irmpname
 $removeparam=REFERRAL_ID
 $removeparam=impradid
 $removeparam=impradname
+$document,removeparam=/^source=pepperjam$/
 $removeparam=affil
 $removeparam=cjid
 $removeparam=irsharedid
@@ -3549,6 +3551,7 @@ $removeparam=hvlocphy
 $removeparam=hvtargid
 $removeparam=adgrpid
 $removeparam=hvbmt
+$removeparam=hvexid
 $removeparam=cstrackid
 ||amazon.$removeparam=SubscriptionId
 ||amazon.$removeparam=hydadcr
@@ -3906,7 +3909,6 @@ $removeparam=u1,domain=linksynergy.com|shop-links.co
 $removeparam=origin,denyallow=platform.twitter.com,domain=archive.org|buzzfeed.com|buzzfeednews.com|drop.com|flaticon.com|nordstrom.com|norton.com|philips.*|symbolab.com|yle.fi|dressmann.com
 $removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com|adtraction.com|tradedoubler.com
 $removeparam=ts,domain=al.to|baidu.com|combat.pl|x-kom.pl
-||fnac.$removeparam=Origin
 ||paypal.com^$removeparam=calc
 ||youtube.com^$removeparam=ab_channel
 $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com|ledger.*|mrgay.com|odysee.com
@@ -3919,6 +3921,7 @@ $removeparam=pgtype,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj
 $document,removeparam=ref_,domain=amazon.*|awesomeopensource.com|boxofficemojo.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|imdb.com|primevideo.com|shopbop.com
 ||hostinger.$removeparam=session
 ||xbox.com^$removeparam=xr
+$removeparam=medium,domain=1sol.io|bybit.com|coinpanel.com|deepdiscount.com|discord.*|docs.google.com|docsend.com|eonline.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|ngx.me|outnorth.fi|runnode.com|t.me|twitter.com|xd.wayin.com|x.com|youtube.com
 ||thehackernews.com^$removeparam=_m
 ||apple.com^$removeparam=fnode
 ||microsoft.com^$removeparam=destrt
@@ -3996,6 +3999,8 @@ $removeparam=ds_url_v,domain=clickserve.dartsearch.net
 $removeparam=/^m_.*$/,domain=macys.com|macysinc.com
 $removeparam=CAGPSPN
 $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
+||philips.$removeparam=linkname
+||philips.$removeparam=uuid
 ||apple.com^$removeparam=mttnsubad
 $removeparam=wfr,domain=weidian.com|baidu.com
 $removeparam=organic_search_click
@@ -4008,6 +4013,7 @@ $removeparam=frs,domain=etsy.com
 ||lazada.$removeparam=exlaz
 ||target.com^$removeparam=lnm
 ||target.com^$removeparam=lnk
+$removeparam=marketing_id
 $removeparam=s,domain=greenhouse.io|mothership.sg|spreadprivacy.com|youku.com|nextdoor.com|qwant.com
 $document,removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|elprecio.es|adressa.no|tiktok.com|lookmovie211.xyz
 ||yandex.$removeparam=clid
@@ -4036,7 +4042,6 @@ $removeparam=deep_and_deferred
 ||market.yandex.ru^$removeparam=cpc
 ||everesttech.net^$removeparam=/^ev_.*$/
 ||kelkoogroup.net^$removeparam=custom1
-||vimeo.com^$removeparam=owner
 ||lenovo.com^$removeparam=orgRef
 ||dhgate.com^$removeparam=f
 ||zhihu.com^$removeparam=hybrid_search_source
@@ -4142,7 +4147,6 @@ $removeparam=pk_vid,document
 ||xiaohongshu.com^$removeparam=apptime,document
 ||login.afreecatv.com^$removeparam=szFrom
 ||typeform.com^$removeparam=typeform-source
-$removeparam=_1lr
 $removeparam=ymid
 ref=troyhunt.com$document,removeparam=ref
 ||disneyplus.com^$removeparam=distributionPartner
@@ -4230,7 +4234,6 @@ $document,removeparam=af_xp
 ||www.roblox.com^$document,removeparam=discoverPageSessionInfo
 ||www.roblox.com^$document,removeparam=gameSetTargetId
 ||www.roblox.com^$removeparam=gameSearchSessionInfo
-$document,removeparam=entrypoint,domain=bing.com
 ||audible.$removeparam=creativeId
 ||audible.$removeparam=pageLoadId
 ||audible.$removeparam=/^ref/
@@ -4255,7 +4258,6 @@ $document,removeparam=umpChannel,domain=tmall.com|taobao.com
 ||roblox.$removeparam=friendshipSourceType
 ||detail.chiebukuro.yahoo.co.jp^$document,removeparam=__ysp
 ||detail.chiebukuro.yahoo.co.jp^$document,removeparam=fr
-||qwant.com^$removeparam=hti
 ||obs.no^$removeparam=matchtype
 /offer/pre/*$removeparam=lpid
 /offer/pre/*$removeparam=source_id

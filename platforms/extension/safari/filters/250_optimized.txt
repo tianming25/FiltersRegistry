@@ -1,5 +1,5 @@
-! Checksum: jI4Upgtbuh13btwuBhYuEw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744144830-14400.patch
+! Checksum: cSrwGSDGwAU+DH8UCGTxUg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744173661-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.58
@@ -57,7 +57,6 @@ quora.com#$?#.PageWrapper { filter: none !important; }
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ||top^$document,domain=~caitlin.top|~callmebymygender.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~pressplay.top|~chillx.top|~strims.top|~thedesk.top|~audioforyou.top|~awavenue.top|~reyhub.top|~iboxs.top|~adrules.top|~hostingowy.top|~to|~yggtorrent.top|~asiaon.top
-@@/^.*(tech|project|linux).*\.top(/[a-z0-9_-]?.*)?$/$document
 @@://blog.*.top^$document
 @@://pyrofork.*.top^$document
 ||loan^$document
@@ -86,6 +85,8 @@ appuals.com##p + div > div:first-of-type
 softwaretested.com##.st-alternative
 ||solvusoft.com^$document
 coolrom.com.au,coolrom.com##.download_link
+softonic.ch,softonic.cl,softonic.cn,softonic.co,softonic.com,softonic.com.bd,softonic.com.br,softonic.com.np,softonic.com.tr,softonic.de,softonic.es,softonic.fr,softonic.io,softonic.it,softonic.jp,softonic.kr,softonic.mobi,softonic.net,softonic.nl,softonic.pl,softonic.ru,softonic.se,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
+softonic.ch,softonic.cl,softonic.cn,softonic.co,softonic.com,softonic.com.bd,softonic.com.br,softonic.com.np,softonic.com.tr,softonic.de,softonic.es,softonic.fr,softonic.io,softonic.it,softonic.jp,softonic.kr,softonic.mobi,softonic.net,softonic.nl,softonic.pl,softonic.ru,softonic.se,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 |http://ww01.$document,domain=~very_very_extremely_frequently_used_in_malware_redirections.*
 ?bemobdata=$all
 ||connatedresspint.com^$all
@@ -2594,7 +2595,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ##.share-icons:not(html,body,:empty)
 ##.share-reddit:not(html,body,:empty)
 ##.share-telegram:not(html,body,:empty)
-##.share-tools:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.share-trigger:not(html,body,:empty)
 ##.share-whatsapp:not(html,body,:empty)
 ##.share_btn:not(html,body,:empty)
@@ -2732,8 +2732,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ##div[class*=social-share]:not([preload],[class*=body i],[id*=body i],[class*=content i],[id*=content i],[class*=has-social-share])
 ##a[class*=social-share]:not([preload],[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.react-share__ShareButton:not(body,html,:empty)
-~linkedin.com##.sp_article_share_linkedin:not(body,html,:empty)
-##.sp_article_share_x:not(body,html,:empty)
 ##[class*=socialshare i]:not(html,body,article,[class*=body i],[id*=body i])
 ~kjokkenskriveren.no##[class*=ShareButton i]:not(button,body,html,article,[class*=body i],[id*=body i])
 pixivision.net##._floated-bottom-bar
@@ -2835,12 +2833,15 @@ context.reverso.net###register-popup-bottom
 ||comment.youmaker.com^$domain=theepochtimes.com
 indiatimes.com##div[class$="cmtwrapper "]
 ghacks.net###comments
+color-hex.com##.txtgray
+color-hex.com##a[href="#comments"]
 rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
 e621.net,e926.net###comments
 ###hot-network-questions
 /api/amediacomments/*
 /endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com|35.190.94.206
+vimeo.com##._16rrx
 ||rumble.com/embedJS/u3/?request=related$xmlhttprequest
 ||ixigua.com/api/feedv2^
 ted.com#%#//scriptlet('ubo-sid.js', 'd.period', '1000')
@@ -3006,7 +3007,6 @@ autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 feltet.dk#$#iframe + div[style*="height: 80vh"] { height: unset !important }
 rule34.xxx###status-notices > br:empty
 pixiv.net##div[class*=" "]:empty:has(+ aside + aside)
-channel4.com###playerContrastOverlay
 netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
 tv.nrk.no#$#:is(.episode-info-gradient,.tv-layout-fill) { background:unset!important }
 *#$?#.playkit-bottom-bar { background: none !important }

@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: uqNC9qMq11KFv4X8Madm3g
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1744110619-3600.patch
+! Checksum: gXoVww6UtOPNBXi7ChRG6Q
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1744166262-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
 ! Version: 2.0.19.93
@@ -100,6 +100,7 @@ appbrain.com###pwa-install
 desport.ru##div[class^="PopupAppDesktop_"]
 oferty.praca.gov.pl##+js(set-local-storage-item, mobileAppDialogVisited, true)
 health.harvard.edu##div[x-show="mobilePopupShow"]
+javcup.com##.open-app-banner
 tandem.net##div[class^="styles_getAppBanner"]
 giphy.com##a[href="https://giphy.page.link/home"]
 business-standard.com##+js(set-cookie, popupShown, true)
@@ -158,7 +159,6 @@ rentio.jp##.footer > div[class="border-top border-secondary"][style="background-
 etsy.com##+js(set-cookie, web_signals_prompt_dismissed, true)
 trip.com##.h5-install-banner
 mail.proton.me##.content-container > div[aria-label="Notification"]:has(> a[href*="webapp-mail-topbanner"])
-ljsilvers.com##.site-popup
 nytimes.com##.promo
 coingecko.com##div[data-controller="navbar"] a[href^="https://coingecko.app.link/"]
 coingecko.com##div[data-controller="app-flyer"]
@@ -177,6 +177,7 @@ fontanka.ru##article > div[class^="wrapper_"]:has(> a[href^="https://redirect.ap
 proton.me##div[aria-labelledby="mobile-banner-title"]
 dzen.ru##.news-advert-column
 hinative.com##.mod_banner_app_download_sticky_button
+hinative.com##.mod_banner_app_download_footer
 web.whatsapp.com#?##app > .app-wrapper-web > div[tabindex] > header ~ div[class]:has(> div[class]:only-child div > button:only-child > div:only-child > div:only-child:contains(Store))
 web.whatsapp.com###side > div[role="button"]:has(> div:only-child div[class] > span[data-icon="wa-square-icon"] + span)
 hindustantimes.com##div[class^="OpenAppCTA_openAppButton_"]
@@ -213,7 +214,6 @@ yamap.com##.Posts__Download__Section
 tribune.net.ph###sw-wrapper
 cloud.boosteroid.com##app-load-app-notification
 revolut.com#?##__next > div[class^="Box-rui__sc"]:has(> span[class^="Box-rui__sc"] > a[href^="https://get.revolut.com/"])
-socket.dev##header + div[class^="css-"] > div[data-theme="dark"]:has(> div[data-theme="dark"] > div.chakra-stack > a[href="/github-app"])
 downdetector.*##.app-promo-card:not(#style_important)
 developer.baidu.com##a[class^="articel_detail_block-item__"][data-track-value$="banner"]
 economia.uol.com.br##.campaign-container
@@ -229,6 +229,7 @@ blitz.gg###main-content + div[data-anim-init="true"]:has(> div[class] > div[clas
 overwolf.com##.big-banner
 bundle.app#?#.fixed-bottom:has(> div.popup button.download)
 zukan.com##.topbar__news:has(> p > a[href="https://mikke.zukan.com"])
+m.star.com.tr,m.aksam.com.tr##.footerSocials
 guidetoiceland.is##h2 ~ div[class^="x-"]:has(> aside[class^="x-"] > div[class^="x-"] > a[href^="https://apps.apple.com/ua/app/"])
 peakvisor.com##+js(addEventListener-defuser, DOMContentLoaded, installAppDialog)
 ngs.ru,63.ru,msk1.ru##article > div[class^="wrapper"]:has(> a[href^="https://redirect.appmetrica.yandex.com/"])
@@ -249,6 +250,7 @@ m.facebook.com##div[data-status-bar-color]:not(.vscroller) > div[data-is-pull-to
 tagesspiegel.de##a[href*="tagesspiegel-app"]
 m.sporx.com##+js(set-constant, showPopupInts, noopFunc)
 jp.investing.com#?#.flex-col > div.flex:has(> div.flex-1 > div > nav > ul[data-test="footer-mobile-links"])
+news18.com##div[class*="install_app"]
 ||myhome.nifty.com/cms_image/myhome/rent-banner/*/banner_rent_left_sidemenu_pc.png
 ||insightsonindia.com/wp-content/uploads/*/App_Banner_
 2gis.ru##div[data-rack="true"] > div[class^="_"]:has(> div > div[class^="_"] > div[class^="_"] > a[href^="https://2gis.onelink.me/"])
@@ -508,6 +510,7 @@ anime-sharing.com##.js-installPromptContainer
 google.com##:matches-path(/maps)div[jsaction*="promotion"]
 yandex.*#?#:matches-path(/maps)form.route-form-view > div.card-banner-view
 instagram.com##+js(set-session-storage-item, loggedOutAppSheetIsMinimized, 1)
+myoji-kamon.net##.omamoriAd
 cleverdialer.de##.col-sidebar div.cd-box-clever-download
 homes.co.jp##aside[aria-labelledby="app-guidance-heading"]
 wiki.mbalib.com###box-app-tip
@@ -590,7 +593,6 @@ alvoradafm.com.br##a[href="/ad/162"]
 fitatu.com##.regular__content > div.regular__banner
 fitatu.com##.product-page__section-container > aside.product-page__ad-container
 yapokupayu.ru##.popup-app-download
-bayshop.com##.logout-tab-box
 bookwalker.jp##.p-app-bnr
 kinarino.jp##.p-download-app
 ||kinarino.k-img.com/assets/webpage/download-app/
@@ -737,6 +739,7 @@ realestate.yahoo.co.jp##.compFooterGlobalNavigation__app
 comic-days.com##div[class^="Original_app_area_wrapper"]
 family.co.jp###sptabnemu
 slickdeals.net#$#.sdModalOverlay { display: none !important; }
+anizm.net##.gensh-class
 finance.sina.com.cn,kashikoi.with.is,smsnator.online,emailnator.com##.top-banner
 pazarama.com##+js(set-cookie, prevent-in-app, true)
 taobao.com#?#body > button[style*="position: fixed;"][style*="z-index: 1000000;"]:contains(App)
@@ -1141,6 +1144,7 @@ portal.librus.pl##picture > img[src="https://portal.librus.pl/images/base/aplika
 ||portal.librus.pl/ad|
 reverso.net###home-badges
 ifunny.co#$#body { overflow-y: auto !important; }
+gotradio.com##.leftColAd
 www-hindustantimes-com.cdn.ampproject.org,hindustantimes.com##.openAppButton
 m.gamer.com.tw,noin.shop,india.com##.open-app
 qushucheng.com,m.wanben.org,jingwuhotel.com##.appguide-wrap
@@ -1196,6 +1200,7 @@ tw.stock.yahoo.com##a[href="https://yahoomode.tumblr.com/yahooapp/#stock"] > img
 pons.com###widget_apps
 thelocal.fr,m.mobile01.com,indianexpress.com,financialexpress.com##.app-btn
 f2movies.to##a[href="/android-movies-apk"]
+battleboats.io###appstores
 player.fm#$#.open-in-app-promo { display: none !important; }
 ||i2.sinaimg.cn/*/searchCallup.js$domain=gu.sina.cn
 bing.com###bnp_hfly
@@ -1229,7 +1234,9 @@ novaposhta.ua##.b_banners
 sudoku.com##.app-teaser-wrapper
 ltn.com.tw##.ltnapp
 ekimemo.com,asciidwango.jp,tumblr.com##.tmblr-iframe--app-cta-button
+investing.com##.installAppPopup
 caixinglobal.com##.caixinAPP
+kreiszeitung.de#?#.id-SiteMain > div.id-g > div[class] > div.id-Container:has(> div.id-Container-content > div.id-LB > div[class^="id-LB"] > div[class^="id-Teaser"] > a[href^="https://itunes.apple.com/de/app/mediengruppe-kreiszeitung/"])
 tinhte.vn##a[href^="https://tinhte.vn/app/"]
 coolapk.com##.apk_right_two
 coolapk.com##.app_left > div.left_download

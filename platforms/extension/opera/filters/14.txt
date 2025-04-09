@@ -1,9 +1,9 @@
-! Checksum: RLN9SCVuc8l/wlrA2d7MaQ
-! Diff-Path: ../patches/14/14-s-1744222347-3600.patch
+! Checksum: ph5l8ExgO+aJ2YeH9D1iZg
+! Diff-Path: ../patches/14/14-s-1744229454-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.90
-! TimeUpdated: 2025-04-09T18:08:42+00:00
+! Version: 2.2.26.91
+! TimeUpdated: 2025-04-09T20:07:29+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2532,7 +2532,7 @@ gtaweb.eu#%#//scriptlet('set-cookie', 'gweb_cookie_general', '1')
 anm.cx#%#//scriptlet('set-cookie', 'null_cookie_notice', '1')
 culture.ru##footer + div[class]:has(> div > div > a[href="/cookies"])
 swotahtravel.com#%#//scriptlet('set-local-storage-item', 'privacyPolicyAccepted', 'true')
-forestriverinc.com###PrivacyPolicyNotice
+coachmenrv.com,forestriverinc.com###PrivacyPolicyNotice
 kleinanzeigen.de#%#//scriptlet('trusted-click-element', '#gdpr-banner-container .ActionArea #gdpr-banner-accept')
 truckstop.com###bottom-message
 shop.apotal.de#%#//scriptlet('trusted-click-element', '.cookie-message-overlay .settings > button')
@@ -22872,6 +22872,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+||glav.su/js/libs/abd/abd.js
 ||protectsubrev.com^$third-party
 medicatusb.com##.text-center[role="alert"][class*="text-red-"]
 ||gulper.io^$cookie=play_cnt
@@ -34189,6 +34190,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+puck.news##.sticky-footer-email-capture
+puck.news##.container > div.full-width:has(> div.container > div.newsletters-hero)
 cgdownload.ru##.left_bar:has(> .bar_block > .telegram)
 ulefone.com###shopify-section-popup
 auto.ru##a[class*="PostFooterTelegram__card"]
@@ -41640,7 +41643,7 @@ rabota.ru##.subscribe-block__inner
 infoq.com,carnegie-mec.org,newegg.com,bracontece.com.br,livemint.com##.subscribe-box
 ppt.ru##.subscribe-card-wide
 scmp.com,foxtrot.com.ua,dazeddigital.com,ellegirl.ru##.subscribe-container
-itsfoss.com,nautil.us,last.fm##.subscribe-cta
+puck.news,itsfoss.com,nautil.us,last.fm##.subscribe-cta
 daily.afisha.ru##.subscribe-feed
 5koleso.ru,eg-online.ru,nativesintech.org,irn.ru,atlas.ru,crm.ru,businesstech.co.za,tech.ssut.me,biservis.com.tr,bigmag.ua,instyle.ru,blog.jetbrains.com,zr.ru,channelsstack.com,news.ifmo.ru,chita.ru,esquire.ru,liga.net,makeuseof.com,stopgame.ru##.subscribe-form
 rbc.ru##.subscribe-infographic
@@ -49141,6 +49144,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+puck.news###h-join-puck
+puck.news###h-join-puck + div.flex:has(form[action="/join/"])
 pixiv.net##section:has(> div > div.gtm-toppage-premium-close)
 bbs.itying.com##div[style="margin-bottom:20px;margin-bottom:10px"]
 bbs.itying.com##.ads

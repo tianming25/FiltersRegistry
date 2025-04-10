@@ -1,5 +1,5 @@
-! Checksum: YOd3o0lr9DhTUcS4Hz8vFQ
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1744222364-3600.patch
+! Checksum: KBv+Q/FB84LXe0hpXKjU4g
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1744252637-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.46.90
@@ -2361,6 +2361,7 @@ gamestar.de,gamepro.de##.offerteaser-box
 nickles.de###sidepanel a[target="_blank"][rel="nofollow"][href^="https://www.amazon.de"]
 daswetter.com##.principal span.creatividad
 golem.de##.list-tickers > .sp-article
+wetteronline.de###product_display > div[id*="-"][class*="-"]:not(.embedded-map):not(.linewrapper)
 wetteronline.de###sidebar > div[class]:not([id]):not(.teaser_block)
 wetteronline.de###maincontent > div[class]:not([id]):not(.linewrapper)
 windows-10-forum.com###messageList > li:not([id^="post-"]):not(.sectionMain)
@@ -2513,7 +2514,6 @@ brueckenkopf-online.com##.cols > div.g-3
 brueckenkopf-online.com##.cols > div.g-2
 brueckenkopf-online.com###header > div.g-1
 brueckenkopf-online.com###wrapper > div.g-4
-||brueckenkopf-online.com/wp-content/adds
 taz.de###adzone_wall
 tagesspiegel.de##div[id^="urban-"]
 chip.de##section[data-vr-zone="hp-neongelb"] > ul.List > li:last-child
@@ -2540,7 +2540,6 @@ tchgdns.de##.content-box.recommendation
 tvmovie.de,wunderweib.de##body .adAnything:not(#style_important)
 woxikon.de##.ads-bg-white
 magdeburg.de###md_sidebar
-wiesbaden.de###SP-commercials
 radiobielefeld.de###billboardad
 radiobielefeld.de##div[class*="jsbt"]
 schulferien.org###right_box
@@ -2633,7 +2632,6 @@ chip.de##div[id^="contentad-"]
 bmw-syndikat.de##div[id^="div-dfp-"]
 sueddeutsche.de##div[id^="iqad"]
 meinestadt.de##div[id^="ms_adsense"]
-all-in.de##div[id^="tplident"]
 transfermarkt.de##div[id^="werbung_"]
 hl-live.de##div[width="828"][height="90"]
 frustfrei-lernen.de##span.contentlabel
@@ -2689,6 +2687,7 @@ rp-online.de#?#main > section[data-cy="section"].w-full:has(> div[data-cy="secti
 rp-online.de#?#aside:has(> div[id^="ir_rpd"])
 rp-online.de#?#div[data-cy="article_content"] > div[data-cy="article-content"]:has(> div[data-cy="article-content-element"] > aside > glomex-integration#glomexplayer)
 rp-online.de#?#div[data-cy="article-content"]:has(> div[style="display: none !important;"]:only-child)
+hoehenrausch.de#?##content_right > div.box-rechts:has(> div[style="text-align:left"] > span.klein)
 tagesspiegel.de#?##main-content > div > div[class]:has(> div[id^="iqadtile"])
 googlewatchblog.de#?#.card-content > center:has(> .adsbygoogle)
 googlewatchblog.de#?#.card-content > center:has(> .adsbygoogle) + br
@@ -2991,7 +2990,6 @@ _woz_banner_vote.
 ###WerbungUnten
 ###Werbung_Sky
 ###ad-qm-sidebar-oben
-###ad_rechts
 ###adcontentoben
 ###adcontentoben1
 ###adliste
@@ -3115,7 +3113,6 @@ _woz_banner_vote.
 ##.werbung_sidebar
 ##.werbung_text
 ##.werbungimthread
-##.werbungrechtstitel
 ##.widget-werbung
 ##a[aria-label="Werbelink"]
 ##a[href*=".prodtraff.com/"]
@@ -3251,7 +3248,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||playamedia.com^$third-party
 ||ptadsrv.de^$third-party
 ||qualitymedianetwork.de^$third-party
-||quartermedia.de^$third-party
 ||ringier-advertising.ch^$third-party
 ||rtbsuperhub.com^$third-party
 ||securecnd.com^
@@ -3409,7 +3405,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||filmzitate.de/w/
 ||finanzen.net/images/b_home/bitpanda-integration-
 ||finanzen.net/images/b_home/invesco-integration.
-||finanzen.net/images/b_home/philoro-integration-
 ||finanzen.net/images/b_home/vontobel-integration.
 ||finanzen.net/images/b_partner/
 ||finanzen.net/images/b_realtime/vontobel-banner.jpg
@@ -3491,7 +3486,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||nius.de/adsense.js
 ||nnz-online.de/_daten/banner/
 ||nonstopnews.de/bilder/Banner/
-||nr-kurier.de/images/mankwetter.png
 ||nrhz.de/flyer/media/banner/
 ||oberberg-aktuell.de/Banner/
 ||obi.de/heyobi-includes/adserver/ad-controller/aec-bundle.js
@@ -3661,11 +3655,9 @@ seo-suedwest.de###Mod373
 seo-suedwest.de###Mod416
 netmoms.de###R1C2
 netmoms.de###R1C3
-wiesbaden.de###SP-commercials
 teltarif.de###SpaceBefore
 teltarif.de###SpaceRectangle
 teltarif.de###SpaceTgtLink
-t-online.de,www-t--online-de.cdn.ampproject.org###T-86926496
 1erforum.de,bauexpertenforum.de,dasheimwerkerforum.de,elektrikforen.de,fitness-foren.de,lpgforum.de,mazda-forum.info,megane-board.de,mercedes-forum.com,notebookforum.at,pkw-forum.de,skodacommunity.de,toyota-forum.de,vermieter-forum.com,windows-7-forum.net###TopRectangle
 neumarktaktuell.de###Werbung
 heise.de###ad-landingpage-top
@@ -3679,7 +3671,6 @@ kreuzwort-raetsel.net###ad_ic_2
 1und1.de,gmx.net,web.de###adc2
 webwiki.de###addmeright
 webwiki.de###addmetop
-web.de###ads
 radiobielefeld.de###adsd_skyscraper
 voucherwonderland.com###adup1
 voucherwonderland.com###adup5
@@ -3843,6 +3834,7 @@ rezeptwelt.de###mso-dplusc-banner_5
 mein-schoener-garten.de###native_desktop_wrapper
 mein-schoener-garten.de###native_mobile_wrapper
 wallstreet-online.de###newsDesktopFlag
+news.de###news_content_1
 news.de###news_content_2
 news.de###news_content_3
 news.de###news_header
@@ -3866,7 +3858,6 @@ ladies.de###page-top-sol
 inside-digital.de###parallax
 moz.de,swp.de###parent-adbox-superbanner
 comback.ch,h-bw.de###partner
-fundresearch.de###partnerCentersLogoBar
 pedelecforum.de###pedelecforum\.de_mpu_bot
 photovoltaikforum.com###pf_incontent_2
 wein.plus###premium-partners
@@ -4159,12 +4150,14 @@ wg-gesucht.de##.clicked_partner
 focus.de##.cls_ver_prnt
 focus.de##.cls_ver_prnt_xs
 markt.de##.clsy-adv-item
+djz.de##.code-block
 raptastisch.net##.code-block-1
 raptastisch.net##.code-block-12
 fussballnationalmannschaft.net,wohnungswirtschaft-heute.de##.code-block-13
 ibooks.to,raptastisch.net##.code-block-7
 tech-review.de,wallstreet-online.de,watson.de,wn.de##.commercial
 fotomagazin.de##.commercial-post-container
+celleheute.de##.comp-ku8lxchu
 coincierge.de##.compar_tbl_body_plugin
 ak-kurier.de,nr-kurier.de,ww-kurier.de##.container-banner
 1000ps.at,1000ps.de##.container-billboard
@@ -4381,7 +4374,6 @@ finanzfluss.de##.partner-news-card
 finanzfluss.de##.partner-suggestion
 eintracht.com##.partner-wrapper
 esports.ch,hannover96.de,p-stadtkultur.de,sihf.ch##.partners
-fla.de##.pbph
 otto.de##.pdp_reco-sponsored
 otto.de##.pdp_sda__slot
 heise.de##.perf-cls-reduc-leaderboard
@@ -4536,6 +4528,7 @@ xrel.to##.top_news_adv
 n-tv.de##.topbanner-mobile
 queer.de##.toplinks
 f95.de##.topsponlink
+supermarkt-inside.de##.tracking_trigger
 photovoltaikforum.com##.traffectiveBox
 trauerhilfe.it##.trauerhilfe_ads
 astronomie.de##.tx-sf-banners
@@ -4919,6 +4912,7 @@ obi.app,obi.at,obi.ba,obi.ca,obi.cc,obi.ch,obi.co.th,obi.com,obi.com.au,obi.com.
 hamburg-magazin.de,kiel-magazin.de,luebeck-magazin.de##article.card:has(.with-ad-marker)
 finanzen.net##article.page-content__item:has(img[alt="UBS"])
 abendzeitung-muenchen.de##article[class^="teaser nummer-"]:has(span.specialfeature)
+futurezone.de##article[data-post-id]:has(.sponsor-byline)
 travelbook.de##div.has-mark[style="min-width: 300px; min-height: 250px;"]
 hornoxe.com##div.post.hentry.ivycat-post:has(a[href^="https://www.amazon.de/"])
 nydus.org##div.ui-tabs:has(#nydus_org_300x600_desktop_1)

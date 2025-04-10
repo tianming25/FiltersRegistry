@@ -1,9 +1,9 @@
-! Checksum: Ql5DPz8dFyW61cjAtmJSNA
-! Diff-Path: ../patches/14/14-s-1744283401-3600.patch
+! Checksum: 4g60bRq7KfsKkfkHxUXNvA
+! Diff-Path: ../patches/14/14-s-1744287259-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.98
-! TimeUpdated: 2025-04-10T11:06:37+00:00
+! Version: 2.2.26.99
+! TimeUpdated: 2025-04-10T12:10:48+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2504,6 +2504,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+juken-mikata.net#%#//scriptlet('remove-class', 'has-cookie-consent', 'body')
 plvideo.ru###root > div[class^="mocked-styled-"] > div[class^="mocked-styled-"][style] + div:not([class^="mocked-styled-"]) > div:not([class^="mocked-styled-"]):has(button)
 zerobounce.net##.cookie-preferences
 budgetair.com##body > .exzZOy
@@ -25566,6 +25567,8 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+saisoncard.co.jp#$##modal-overlay:has(.form-area-content__img > [src$="/marketing01.jpg"]) { display: none !important; }
+saisoncard.co.jp#$#body[style="overflow-y: hidden;"] { overflow-y: auto !important; }
 truthsocial.com##main > div[data-testid="cta-banner"]
 xboxera.com###check-also-box
 fidoalliance.org##.hustle-popup

@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: +eFMDu2PX70YEm7bgXF9Mw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744231215-14400.patch
+! Checksum: YyoxM1DcfHnQuUsWdYOkLw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744260106-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.61
@@ -131,6 +131,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||inscribemutenessforced.com^$all
 ||expensivelikeness.com^$all
 ||apologiesoccursdepressed.com^$all
+||participationwhitehandwriting.com^$all
 ||billboardwring.com^$all
 ||complexionbootydistinction.com^$all
 ||agencyrearrangepasture.com^$all
@@ -3036,7 +3037,6 @@ fandom.com##.global-navigation__fanhub-wrapper
 fandom.com##.notifications-box
 fandom.com##div[class^=page-footer__]
 fandom.com##.open-web-wrapper
-fandom.com##.openweb-slot
 fandom.com##[data-testid=QuizBanner]
 fandom.com##section[class^=trfc]
 fandom.com##.notifications-placeholder:has(a[href$=":Signup" i])
@@ -3055,7 +3055,7 @@ alpresor.se##+js(abort-current-script, snowMax)
 /wp-content/plugins/christmasify^
 /wp-content/plugins/snow-3d^
 daz3d.ru##+js(set-constant, snow, undefined)
-/let-it-snow.
+/jquery.snow.js
 /snow-falling.js
 /snow-storm^$script
 /snowfall-master.min.js
@@ -3174,8 +3174,13 @@ $removeparam=yclid
 $removeparam=gclid
 $removeparam=fbclid
 $removeparam=_openstat
+$removeparam=fb_action_ids
 $removeparam=fb_comment_id
+$removeparam=fb_action_types
+$removeparam=fb_ref
 $removeparam=fb_source
+$removeparam=action_object_map
+$removeparam=action_ref_map
 $removeparam=_zucks_suid
 $removeparam=adfrom
 $removeparam=aiad_clid
@@ -3336,6 +3341,7 @@ $removeparam=affname
 $removeparam=MID,domain=~media-cdn.costco.*|~community.arubanetworks.com
 $removeparam=srnd
 =adservice$removeparam=coid,domain=~radioreference.com|~finanzonline.bmf.gv.at
+$removeparam=action_type_map
 $document,removeparam=/^bsft_.*$/
 $document,removeparam=/^dpg_.*$/
 $document,removeparam=/^adjust.*$/,domain=~adj.st
@@ -3379,6 +3385,7 @@ $removeparam=irmpname
 $removeparam=REFERRAL_ID
 $removeparam=impradid
 $removeparam=impradname
+$removeparam=cm_type
 $document,removeparam=/^source=pepperjam$/
 $removeparam=affil
 $removeparam=cjid
@@ -3451,7 +3458,6 @@ $document,removeparam=/^subid4=.*$/i
 $document,removeparam=/^subid5=.*$/i
 $removeparam=ckmc
 $removeparam=ckmsc
-$removeparam=__cn_tracker
 $document,removeparam=/^sfmc_.*$/
 $removeparam=mktc
 $removeparam=cm_ven
@@ -3560,7 +3566,6 @@ $document,removeparam=affiliate,domain=~justice.gov|~lippu.fi
 $document,removeparam=af_id,domain=~dmm.co.jp|~dmm.com
 $removeparam=trafficSource
 $removeparam=gps_adid
-$removeparam=app_clickref
 $removeparam=as_campaign
 $removeparam=as_camptype
 $removeparam=as_channel
@@ -3622,7 +3627,6 @@ $removeparam=client-ts
 $removeparam=tp_uid
 $removeparam=ft_section
 $removeparam=correlator
-$removeparam=ap_id
 $removeparam=ucf_user_id
 $removeparam=yandexuid
 $removeparam=google_nid
@@ -3655,6 +3659,7 @@ $document,removeparam=adid,domain=indeed.com|mcafee.com|nikkei.co.jp|tmz.com
 ||amazon.$removeparam=sr
 ||amazon.$removeparam=creative
 $removeparam=creativeASIN
+||amazon.$removeparam=/^sc_i.*$/
 $removeparam=trkCampaign
 $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com|linkedin.com|lnkd.in
 ||amazon.$removeparam=/^__mk_*_.*$/
@@ -3788,6 +3793,7 @@ $removeparam=referral_story_type,domain=facebook.*|facebookwkhpilnemxj7asaniu7vn
 $removeparam=_nc_cat,domain=~instagram.com
 ||instagram.*.fna.fbcdn.net^$removeparam=ccb,domain=~instagram.com
 ||facebook.$document,removeparam=hoisted_section_header_type
+$removeparam=store_visit_source,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion
 ||instagram.com^$document,removeparam=igsh
 $removeparam=rdid,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion
 $removeparam=biw
@@ -3930,12 +3936,8 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=frs
 ||baidu.com/link?$removeparam=eqid
 ||baidu.com/link?$removeparam=wd
-||map.baidu.com^$removeparam=compat
 ||map.baidu.com^$removeparam=da_src
 ||map.baidu.com^$removeparam=device_ratio
-||map.baidu.com^$removeparam=pcevaname
-||map.baidu.com^$removeparam=ugc_type
-||map.baidu.com^$removeparam=ugc_ver
 ||wenku.baidu.com^$removeparam=sxts
 ||baidu.com^$removeparam=hl_tag
 ||zhidao.baidu.com^$removeparam=qbl
@@ -4275,7 +4277,6 @@ $removeparam=cvid,domain=chinadaily.com.cn|eastday.com|msn.cn|msn.com|tianqi.com
 ||github.com^$removeparam=ref_loc
 ||github.com^$removeparam=ref_page
 ||quizlet.com^$removeparam=funnelUUID
-||quizlet.com^$removeparam=signupOrigin
 $removeparam=pk_vid,document
 ||xiaohongshu.com^$removeparam=app_platform,document
 ||xiaohongshu.com^$removeparam=app_version,document

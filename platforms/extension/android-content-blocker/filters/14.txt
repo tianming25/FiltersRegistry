@@ -1,8 +1,8 @@
-! Checksum: FLfjVj0ok8S9Jim0gQct3Q
+! Checksum: 9ycn9M2tcEwZKIFbmSm2eg
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.26.93
-! TimeUpdated: 2025-04-10T06:09:07+00:00
+! Version: 2.2.26.94
+! TimeUpdated: 2025-04-10T07:07:52+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2450,6 +2450,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+budgetair.com##body > .exzZOy
 marianaiframes.com###modal-cookie-consent
 womenshealthmag.com##div[aria-label="Privacy Disclosure"]
 ionos.com##.tw-fixed.tw-bottom-0
@@ -11625,7 +11626,7 @@ accounts.nintendo.com###cookie-accept-modal
 sparwelt.de,asklepios.com,digi.com###cookie-acceptance
 rowerystylowe.pl,master-plus.com.ua,xfilesaversa.it,biosuplementacja.pl,receiveasms.com,honda.com.tr,siteplus.com,topbattery.cz,keepinguptodate.com,benq.eu##div[id^="cookie-"]
 qt.io###cookie-confirm
-kymillman.com,blog.risingstack.com,blue-tomato.com###cookie-consent-box
+illust-ac.com,kymillman.com,blog.risingstack.com,blue-tomato.com###cookie-consent-box
 zoloto585.ru,sedo.com###cookie-info-wrapper
 dts.com###cookie-law-info
 m.marketplace.asos.com###cookie-message-modal
@@ -14487,6 +14488,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202776
+@@||assets.travix.com/client/cookie-banner-container-*.js$domain=budgetair.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202362
 @@||sdk.privacy-center.org^$domain=letelegramme.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202469
@@ -19140,6 +19143,9 @@ mail.ru##div[slot="main-column"] > div.stripe-wrapper
 ! dzen.ru
 ! Main page
 ! Ads in news
+dzen.ru###top-banner
+dzen.ru##div[class^="content--article-item__rightAdWrapper"]
+dzen.ru##div[data-testid="bottom-ad"]
 dzen.ru##div[class*="__advertItem "]
 ! https://m.dzen.ru/articles
 ! Ads in the feed
@@ -31067,6 +31073,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+tuexperto.com###optinforms-form1-container
 puck.news##.sticky-footer-email-capture
 ulefone.com###shopify-section-popup
 auto.ru##a[class*="PostFooterTelegram__card"]

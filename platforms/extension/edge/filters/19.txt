@@ -1,9 +1,9 @@
-! Checksum: GY0TMqnp1MBSxQ6StYizeA
-! Diff-Path: ../patches/19/19-s-1744269085-3600.patch
+! Checksum: MiQw4US7tAUpdhukcvi/Aw
+! Diff-Path: ../patches/19/19-s-1744276298-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.49
-! TimeUpdated: 2025-04-10T07:08:01+00:00
+! Version: 2.0.53.50
+! TimeUpdated: 2025-04-10T09:08:15+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -210,6 +210,8 @@ news.mail.ru##body > div:has(> div[id] > div > div.title:contains(блокиро
 ! Main page
 dzen.ru##div[aria-label="Лента Дзена"] article:has(> div[data-ad-type="direct"])
 ! Ads in news
+dzen.ru#%#//scriptlet('set-constant', 'Object.prototype.protect', 'undefined')
+dzen.ru##div[class^="content"][class*="placeholder_"]
 dzen.ru###top-banner
 dzen.ru##div[class^="content--article-item__rightAdWrapper"]
 dzen.ru##div[data-testid="bottom-ad"]

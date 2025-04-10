@@ -1,9 +1,9 @@
-! Checksum: 7VWli3DcLFGf1aDXuTA4Rw
-! Diff-Path: ../patches/17/17-s-1744020672-3600.patch
+! Checksum: /KAWgYqTX/QOg3DcFbscXg
+! Diff-Path: ../patches/17/17-s-1744279876-3600.patch
 ! Title: AdGuard URL Tracking filter
 ! Description: Filter that enhances privacy by removing tracking parameters from URLs.
-! Version: 2.0.10.86
-! TimeUpdated: 2025-04-07T10:08:08+00:00
+! Version: 2.0.10.87
+! TimeUpdated: 2025-04-10T10:07:56+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1326,7 +1326,6 @@ $removeparam=source_ve_path,domain=youtubekids.com|youtube-nocookie.com|youtube.
 ||etsy.com^$removeparam=click_sum
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160495
 ||myprotein.jp^$removeparam=affil
-||myprotein.jp^$removeparam=a8
 ! https://github.com/AdguardTeam/AdguardFilters/issues/159733
 ||email.nationalgeographic.com^$removeparam=__F__
 ||email.nationalgeographic.com^$removeparam=__dU__
@@ -2856,6 +2855,8 @@ adguard.info,adguard.com,adguard.app##.hello_from_adguard_ext
 !
 !
 !
+! Some a8 links on https://figure-times.com/
+@@||a8cv.amiami.jp/click/$removeparam=a8
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201922
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201424
 @@||apimeishi.meituan.com/meishi/poi$removeparam=utm_medium,xmlhttprequest,domain=meishi.meituan.com

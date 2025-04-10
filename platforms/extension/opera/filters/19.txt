@@ -1,9 +1,9 @@
-! Checksum: yhxoi7T6CTFizTQ803KdtQ
-! Diff-Path: ../patches/19/19-s-1744292239-3600.patch
+! Checksum: +Zsll0rdXA5pOz6NGJWDlQ
+! Diff-Path: ../patches/19/19-s-1744308724-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.53
-! TimeUpdated: 2025-04-10T13:23:48+00:00
+! Version: 2.0.53.54
+! TimeUpdated: 2025-04-10T18:08:37+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4058,6 +4058,9 @@ web.de,gmx.net,gmx.at,gmx.ch,gmx.com#$##abd-container { display: block !importan
 ! SECTION: Anti-adblock - Grouped rules for specific sites
 !
 ! chzzk.naver.com
+chzzk.naver.com##body > div[class^="popup_dimmed__"]:has(a[href^="https://help.naver.com/service/23946/contents/23806"])
+chzzk.naver.com#@#.banner_ad_wrapper
+chzzk.naver.com#@#.banner_ad
 chzzk.naver.com#%#//scriptlet('prevent-xhr', 'veta.naver.com/gfp')
 chzzk.naver.com#%#//scriptlet('prevent-xhr', 'veta.naver.com/call')
 chzzk.naver.com#%#//scriptlet('prevent-xhr', 'veta.naver.com/vas')
@@ -13097,6 +13100,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+||wolfmax4k.com/assets/js/telegram.js
+wolfmax4k.com###WolfTelegram
 tuexperto.com###optinforms-form1-container
 puck.news##.sticky-footer-email-capture
 puck.news##.container > div.full-width:has(> div.container > div.newsletters-hero)

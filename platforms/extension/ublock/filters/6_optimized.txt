@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: fW2t6G/FlqHRnV1VWjzrRA
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1744312225-3600.patch
+! Checksum: v+7oZLbIjYT1fFVuMIof2A
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1744339057-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.46.95
@@ -702,6 +702,7 @@ monopol-magazin.de,krone.at,cleverdialer.de,sueddeutsche.de,geo.de,northdata.de,
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
 formel1.de##.text-center:has(> .inline-block > div[data-str-format="posterad"])
+familie.de##.alice-adslot
 familie.de##.alice-root-header-ads__ad--top
 videogameszone.de##.wadtag
 videogameszone.de##aside[data-tracking-id^="affiliate-button"]
@@ -1072,6 +1073,7 @@ myboerse.bz##.p-body-inner > center
 golem.de#?#li:has(> a[href*="golem.de/news/anzeige"])
 nordbayern.de#?#.row:has(> .modul--newsticker-more:only-child)
 giga.de##.alice-adslot
+computerbase.de#?#li.article:has(> .article__main > .article__ad-hide-button)
 volksfreund.de##.portal-top
 volksfreund.de##section[style="display: none !important;"] + .park-divider
 volksfreund.de#?#.relative:has(> .portal-not-loaded:only-child)
@@ -1933,11 +1935,13 @@ pfalz-express.de###banner_unter_ticker
 unwetterzentrale.de###content > div[style*="width:336px;height:16px;"]
 kalender-365.de##.az
 spielkult.de##td[style^="width: 253"].auto-style154
+anpfiff.info##.content-col-r > div > div[style="min-height:250px;"]
 anpfiff.info##div[id^="divAdv"]
 brueckenkopf-online.com##.cols > div.g-3
 brueckenkopf-online.com##.cols > div.g-2
 brueckenkopf-online.com###header > div.g-1
 brueckenkopf-online.com###wrapper > div.g-4
+||brueckenkopf-online.com/wp-content/adds
 taz.de###adzone_wall
 tagesspiegel.de##div[id^="urban-"]
 chip.de##section[data-vr-zone="hp-neongelb"] > ul.List > li:last-child
@@ -1970,6 +1974,7 @@ schulferien.org###right_box
 journal-frankfurt.de,genussmagazin-frankfurt.de###banner_fullsize_div
 garten.de##h2.pane-title:nth-of-type(2)
 zeit.de##.cp-area--shop
+gamespot.com##.media-mpu
 nw.de###accordionDate
 wetteronline.de##.adplace
 wetteronline.de##.flagged
@@ -2067,7 +2072,6 @@ wow-forum.com,gta-5-forum.de###mpu
 weltwoche.ch,sky.de##div[id^="werbung"]
 weltwoche.ch##div[class^="werbung"]
 frag-mutti.de,suedkurier.de,fr.de,jeversches-wochenblatt.de##.superbanner
-gamona.de##.werbung ._container ~ .ad-label
 serienjunkies.de,fnp.de,az-online.de,frankfurter-wochenblatt.de,meine-anzeigenzeitung.de,fehmarn24.de,kreisbote.de,dasgelbeblatt.de,kurierverlag.de,leinetal24.de,ruhr24.de,wetterauer-zeitung.de,giessener-allgemeine.de,fr.de,wlz-online.de,da-imnetz.de,hallo-muenchen.de,werra-rundschau.de,extratipp.com,soester-anzeiger.de,lokalo24.de,heidelberg24.de,kreiszeitung.de,op-online.de,tz.de,hersfelder-zeitung.de,hna.de,merkur.de,mannheim24.de##div[data-id-advertdfpconf]
 wallstreet-online.de##body > #siteteaser
 wallstreet-online.de##.newsFlagSlider
@@ -2703,6 +2707,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||ced.sascdn.com^
 ||communicationads.net/tb.php
 ||datingpartner.com/medien/$third-party
+||dragonbox.de/img/banner/$third-party
 ||faire.software/img/$third-party
 ||fantecio.com/ib/$third-party
 ||fastad.beepworld.de^
@@ -2720,6 +2725,7 @@ wetter.com#@#div[id^="div-gpt-"]
 ||middleware.marktjagd.de^$third-party
 ||modules.wikifolio.com/v2/de/autocontent/stock/*?partner=
 ||monsterdealz.de/images/$third-party
+||partners2.das-onlinespiel.de/client.js?pid=*&_=2.12.3|$script,domain=games.focus.de|spiele.bild.de|spiele.stern.de
 ||qvid2.b-cdn.net^
 ||recht-aktuell.de/js.ads?
 ||rev.lapippa.com^
@@ -2759,7 +2765,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||adhocnews.de/static/spreads/
 ||administrator.de/images/banner/
 ||aedt.de/uploads/jcw-marketing.jpg
-||aerzteblatt.de/inc/js/ba_utils/arzt.js
 ||afterbuy.de/images/*/minibanner_$domain=thinkpad-forum.de
 ||ak-kurier.de/akkurier/www/images/
 ||ak-kurier.de/akkurier/www/pic/
@@ -2863,6 +2868,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||hpd.de/sites/hpd.de/files/advertising/
 ||huren-inserate.com/banner/
 ||hybrid-prd.ad-prd.s.joyn.de^
+||ibiza-heute.de/wp-content/uploads/*/Leaderboard-
 ||kalenderwoche.de/bobs/
 ||kath.net/mod/
 ||kauf6.com/img/banner/
@@ -2926,7 +2932,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||pr.t-online.de^
 ||preispirat.ch^*/partner-ads/
 ||promiflash.de/static/js/pf-web-*.js|
-||radio2000.it^*/banner_
 ||raidrush.net/js/wrpx.js
 ||realtotal.de/data/betrugstest-com.jpg
 ||res.ki.de^
@@ -2945,7 +2950,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||sensor-test.de/assets/Banner/
 ||sexnews.ch/uploads/tx_sfbanners/
 ||shopanbieter.de/SponsorLogos/
-||skipper-bootshandel.de/wp-content/uploads/*/BANNER-
 ||somquery.sqrt-5041.de/tv/ad-wrapper
 ||spreeblick.com/wp-content/themes/*/hosteurope.gif
 ||spreeblick.com/wp-content/themes/*/netzgemuese_banner.png
@@ -3024,7 +3028,6 @@ g.doubleclick.net###adunit
 ||adup-tech.com^$domain=autobild.de
 ||amazon-adsystem.com^$domain=autobild.de|gofeminin.de
 ||betrad.com^$domain=googlesyndication.com
-||cas.*.criteo.com^$domain=autobild.de
 ||cdn.flashtalking.com^$domain=autobild.de|imasdk.googleapis.com
 ||f11-ads.com^$domain=gofeminin.de
 ||flashtalking.com^$domain=g.doubleclick.net
@@ -3263,6 +3266,7 @@ yasni.de###offer
 planetradio.de###omsRectangleChannel
 onmeda.de###on-rectangle
 onmeda.de###on-sky
+tiervermittlung.de###openx_LB
 nachrichten.at###outbrain_container
 smart-rechner.de###outer_SR_banner_ganz_unten
 smart-rechner.de###outer_SR_rechner_banner_unter_rechner
@@ -3389,7 +3393,6 @@ mactechnews.de##.Content_3-minheight
 netmoms.de,praxistipps.focus.de##.FC__Ad
 swoodoo.com##.Flights-Results-FlightRightRail
 blick.de##.OAS_AD
-simmentalzeitung.ch##.PrintMotifRotator
 immoscout24.ch##.ResultListPage_adStyle_SPs8t
 de.rt.com##.TopBanner-root
 via-ferrata.de##.YouTubeoetz
@@ -3545,7 +3548,6 @@ tvspielfilm.de##.button.affiliate
 eventelevator.de##.bwdfb-widget
 bravo.de,cosmopolitan.de,happinez.de,lecker.de,liebenswert-magazin.de,maennersache.de,praxisvita.de,selbst.de,wunderweib.de##.bx-ada
 t3n.de##.c-ad-container
-rockantenne.at##.c-image--center
 rockantenne.bayern,rockantenne.de,rockantenne.hamburg##.c-image--left
 finanznachrichten.de##.c-sban1
 finanznachrichten.de##.c-sban2
@@ -4140,6 +4142,7 @@ finanzmarktwelt.de##div[id^="finan-"]
 nationalgeographic.de##div[id^="gpt-"]
 ruhr24.de##div[id^="gptslot-"]
 hardware-helden.de##div[id^="hardw-"]
+ibiza-heute.de##div[id^="ibiza-"]
 ruhr24.de##div[id^="id-beep-slot-"]
 teltarif.de##div[id^="ideaload"]
 journalistenwatch.com##div[id^="journ-"]
@@ -4367,7 +4370,6 @@ gamestar.de#?#.contentnewsitem-box .box-reload > div:-abp-has(.news-list span.me
 giga.de#?#.alice-teaser-list-item:-abp-has(.alice-teaser-meta-text:-abp-contains(Anzeige))
 handelszeitung.ch#?#.teaser-m-default:-abp-contains(Publireportage)
 hardwareluxx.de#?#.bg-gray-light:-abp-has(div.text-right:-abp-contains(Werbung))
-knuspr.de#?#div[data-test="whisperer-product-wrapper"]:-abp-contains(Gesponsert)
 koeln.de#?#.gb-container:-abp-contains(Anzeige)
 mediamarkt.at,mediamarkt.de,saturn.de#?#li:-abp-has(div[data-test="mms-product-card"]:-abp-has(span:-abp-contains(Gesponsert)))
 mediamarkt.de#?#[data-test="mms-base-teaser"]:-abp-contains(Gesponsert)

@@ -1,9 +1,9 @@
-! Checksum: xa3o9TwM91jTUN/eTzox5A
-! Diff-Path: ../patches/14/14-s-1744366241-3600.patch
+! Checksum: MzrGKZNnnLp7uHdEXLXyBA
+! Diff-Path: ../patches/14/14-s-1744369803-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.8
-! TimeUpdated: 2025-04-11T10:07:14+00:00
+! Version: 2.2.27.9
+! TimeUpdated: 2025-04-11T11:06:44+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -45736,6 +45736,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+mega.nz##.mega-promo-banner
+fibabanka.com.tr#%#//scriptlet('set-cookie', 'smartbanner', 'true')
 cj.sina.cn##.snp-callup-app-wrap
 cj.sina.cn##.m-guss-caijing
 m.economictimes.com#$#body:not(#style_important) { overflow: auto !important; }
@@ -49930,6 +49932,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+vbr.ru##.best-offers-body
+vbr.ru##.org-subcat-menu
 hepsiburada.com##.container > div > section:has(> a[data-hbus*="bannerDetails"])
 ej.alc.co.jp##.sub > .side-ad1
 eikaiwa.dmm.com##div[data-banner]

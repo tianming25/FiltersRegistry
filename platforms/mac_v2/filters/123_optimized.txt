@@ -1,9 +1,9 @@
-! Checksum: Su9T5zLxefmL0QnNFQsIUg
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1744332742-14400.patch
+! Checksum: zbLrQZkPZjnLF7ey2uUeEw
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1744346488-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.39.56
-! TimeUpdated: 2025-04-11T00:47:43+00:00
+! Version: 2.1.39.57
+! TimeUpdated: 2025-04-11T04:37:20+00:00
 ! Expires: 12 hours (update frequency)
 -facebook-widget.
 -share-bar/$~stylesheet
@@ -32,6 +32,7 @@
 /fb-pixel.js
 /fbshare.png
 /floating-wpp.min.js
+/follow-twitter-
 /follow-twitter.
 /follow-us.$~stylesheet
 /follow_instagram.png
@@ -53,12 +54,14 @@
 /pandalocker.$script
 /pinterest-footer-icon.svg
 /pinterest-for-woocommerce-save-button.min.js
+/plugins/add-to-any-subscribe/subscribe_
 /plugins/easy-facebook-likebox/*
 /plugins/facebook-button-plugin/js/script.js
 /plugins/facebook-page-promoter-$~stylesheet
 /plugins/mashsharer/assets/js/mashsb.min.js
 /plugins/pinterest-pin-it-button-on-image-hover-and-post/js/pinit.js
 /plugins/sociable-re/images/*
+/plugins/sociable/*$~stylesheet
 /plugins/social-media-widget/*$image
 /plugins/sociallocker-next-premium/*
 /plugins/subscribe-connect-follow-widget/images/*
@@ -404,7 +407,6 @@ _social-bar/
 ###sharer
 ###sharethis
 ###sharing-bar
-###sharing-box
 ###sharing-options
 ###sharing-sidebar
 ###sharingBlock
@@ -560,6 +562,7 @@ _social-bar/
 ###tab-share
 ###table_shareus
 ###top-bar-social
+###top-link-social
 ###top-share
 ###topSocial
 ###top_share
@@ -880,6 +883,7 @@ _social-bar/
 ##.bx-header__social-links
 ##.bx-social-share
 ##.byline-share
+##.c-article-share
 ##.c-footer-social
 ##.c-footer-social-media
 ##.c-footer__follow-us
@@ -892,6 +896,7 @@ _social-bar/
 ##.c-header__social
 ##.c-list--social
 ##.c-main-footer__social
+##.c-navbar-primary__social
 ##.c-share
 ##.c-share-tools
 ##.c-share1
@@ -1166,7 +1171,6 @@ _social-bar/
 ##.followTwitter
 ##.followUsLinks
 ##.followUsSocialMedia
-##.follow__list
 ##.followus_net
 ##.followuson
 ##.foo_social
@@ -1346,6 +1350,7 @@ _social-bar/
 ##.header-twitter
 ##.headerFacebook
 ##.headerShare
+##.headerSocialLinks
 ##.header__social
 ##.header__social-button
 ##.header__social-icons
@@ -1546,6 +1551,7 @@ _social-bar/
 ##.jssocials-share-logo
 ##.jssocials-share-pinterest
 ##.jssocials-shares
+##.juiz_sps_item
 ##.jw-settings-sharing
 ##.jw-sharing-dock-btn
 ##.kopa-share-post
@@ -1607,17 +1613,16 @@ _social-bar/
 ##.m-icon-tw
 ##.m-share
 ##.m-share-bar__link
-##.m-sharebar
 ##.m-sharing
 ##.m-sns
 ##.m-social-bar
 ##.m-social-share
 ##.m-socials
-##.m-socials__list
 ##.m_share
 ##.main-footer__bottom__social
 ##.main-footer__social
 ##.main-footer__socials
+##.main-header__social
 ##.main-nav-social
 ##.mashicon-facebook
 ##.mashicon-google
@@ -1710,16 +1715,16 @@ _social-bar/
 ##.nc_socialPanel
 ##.ncpost-share-links
 ##.nectar-social
-##.new-footer-social
-##.new-post__social
 ##.new-share
 ##.new-social
 ##.newGigyaShare
+##.newSocialButtons
 ##.news-detail-share
 ##.news-header-social
 ##.news-share
 ##.news-share-button
 ##.news__share
+##.nice-menu-menu-social-menu
 ##.node-share
 ##.node-social
 ##.normal_social
@@ -1727,7 +1732,6 @@ _social-bar/
 ##.ns-social
 ##.nv-post-share
 ##.o-footer__social
-##.o-footer__socials
 ##.o-shareBooster__item
 ##.o-social-icon
 ##.oSocial
@@ -1823,7 +1827,6 @@ _social-bar/
 ##.postShare
 ##.post__share
 ##.post__share-container
-##.post_shares
 ##.postshare
 ##.powerkit_social_links_widget
 ##.pp-social-icon
@@ -2252,6 +2255,7 @@ _social-bar/
 ##.sharesocial
 ##.sharetext
 ##.sharethis
+##.sharethis-bottom
 ##.sharethis-button
 ##.sharethis-buttons
 ##.sharethis-container
@@ -2801,7 +2805,6 @@ _social-bar/
 ##.stm-share
 ##.stm-shareble
 ##.story-share
-##.story-social
 ##.story__share
 ##.story__social
 ##.story__social-share
@@ -2994,7 +2997,6 @@ _social-bar/
 ##.whatsapp-share-button
 ##.whatsapp.icon
 ##.whatsapp_share
-##.widget-ahsocial
 ##.widget-follow
 ##.widget-follow-us
 ##.widget-followus
@@ -3004,6 +3006,7 @@ _social-bar/
 ##.widget-social-icons
 ##.widget_FacebookLikeBox
 ##.widget_a2a_follow_widget
+##.widget_add_to_any_subscribe_widget
 ##.widget_better-social-counter
 ##.widget_boombox_social
 ##.widget_bs-likebox
@@ -3402,6 +3405,7 @@ gadgets360.com##.gsocialbar
 archaeology.org##.header-share
 malaymail.com##.header-social-menu
 cgtn.com##.header-v3-shareicon
+cpac.ca##.header__multi__social
 mirror.co.uk##.header__nav__share--active
 apa.org##.horizontal-icon-bar
 dictionary.cambridge.org##.i-facebook
@@ -3546,7 +3550,6 @@ ringsidenews.com##.social_holder
 commondreams.org,twenteinsite.nl##.social_icon
 moneycontrol.com##.social_icons_wrapper
 ringsidenews.com##.social_label
-lithub.com##.social_links
 abplive.com,businesstoday.in,gamesindustry.biz,ilmeteo.it##.social_share
 videocardz.com##.socialbar-sidebar
 firstthings.com,mothership.sg,overclock3d.net,techtimes.com##.socials
@@ -3587,7 +3590,6 @@ beincrypto.com##.want-to-know-more-block
 dailymail.co.uk,oogtv.nl##.whatsapp
 business-standard.com##.whtsclick
 indiatoday.in##.whtspp_share
-androidheadlines.com##.widget-ahcount
 fandom.com##.wikia-bar-anon
 destructoid.com##.wp-block-gamurs-footer-nav__website-info__socials
 comicbook.com,hyperallergic.com,reneweconomy.com.au,vice.com##.wp-block-jetpack-sharing-buttons
@@ -3716,8 +3718,6 @@ orf.at##.share-dialog
 berliner-zeitung.de##.share-panel_wrapper__3tHN9
 bild.de##.sharingbar
 presseportal.de##.story-sharing
-t3n.de##.tg-pockethinweis
-t3n.de##.tg-social-bottom
 handelsblatt.com##app-icon-link
 focus.de##.socFbLikeShare
 meteofrance.com###block-publicmenusocial
@@ -3842,6 +3842,7 @@ kinoland.biz##.page__share
 forklog.com##.post_bottom_socials_buttons_wrapper
 aif.ru##.sharing_item
 academic.ru##.smm
+glas-javnosti.rs##.row.pt-4.pb-4
 sme.sk##.social-dialog-wrapper
 24ur.com##.flex.flex-row.items-center.justify-center.md\:justify-start.p-16.md\:p-0
 24ur.com##.w-full.md\:w-auto.h-full.flex.flex-row.items-center.justify-center.md\:justify-start.pt-16.md\:pt-0.border-t.md\:border-none.border-black\/10.dark\:border-white\/10

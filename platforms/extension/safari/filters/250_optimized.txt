@@ -1,5 +1,5 @@
-! Checksum: X9mbGJXgkjf5iGbbauEivA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744332732-14400.patch
+! Checksum: XZR6yyJVqG+86IqnBcYmCQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744346481-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.63
@@ -10,6 +10,7 @@
 ##.app-cta:not(html,body,:empty)
 ##.app-download:not(html,body,section,.content)
 ##.download-app:not(html,body,:empty)
+##.mobile-app-links:not(html,body,:empty)
 ##div[class*=smartbanner i]
 ##div[class^=app_download]
 bilibili.com##.nav-link-item a[href$="app.bilibili.com"]
@@ -48,7 +49,6 @@ nur.kz##.js-branding-top
 @@/jquery.smartbanner.js^
 no#$#html.smartbanner-show[data-paywall] { margin-top: 0 !important }
 media.tumblr.com###app-download-links-container
-www.google.com##li[jstcache]:has(> button[jsaction*=mobileapp i])
 www.google.com##li:last-of-type:has(> button[jsaction*="navigationrail.mobileApp"])
 ##a[href*=".app.link/"]
 .SmartMessage.$script,domain=weather.com
@@ -90,7 +90,6 @@ softonic.at,softonic.cl,softonic.cn,softonic.co,softonic.co.uk,softonic.com,soft
 softonic.at,softonic.cl,softonic.cn,softonic.co,softonic.co.uk,softonic.com,softonic.com.bd,softonic.com.br,softonic.com.np,softonic.com.tr,softonic.de,softonic.fr,softonic.info,softonic.io,softonic.it,softonic.jp,softonic.kr,softonic.mobi,softonic.net,softonic.nl,softonic.online,softonic.org,softonic.pl,softonic.ru,softonic.se,softonic.store,softonic.tech,softonic.xyz,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 |http://ww01.$document,domain=~very_very_extremely_frequently_used_in_malware_redirections.com.bd|~very_very_extremely_frequently_used_in_malware_redirections.com.np
 ?bemobdata=$all
-||connatedresspint.com^$all
 ||mechanicladenthereby.com^$all
 ||auslogics.com^$document
 ||in-automate.brevo.com^
@@ -2706,7 +2705,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ~skype.com##a[href*="web.skype.com/share?url="]
 ~stumbleupon.com##a[href*="stumbleupon.com/submit?url="]
 ~telegram.org##a[href^="tg://msg_url?"]
-~tumblr.com##.share-tumblr:not(html,body,:empty)
 ~tumblr.com##a[href*="tumblr.com/share/"]
 ~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
@@ -2961,7 +2959,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 #@#html
 #@#body
 @@||network-auth.com^
-@@|https://raw.githubusercontent.com/DandelionSprout/adfilt/*
 @@||kaltura.com^
 @@.dna.ip-only.net^
 ||filters.adtidy.org^$badfilter
@@ -2975,8 +2972,7 @@ reports.adguard.com$badfilter
 @@||gitlab.com/*/raw/main/*$~third-party
 @@||cdn.jsdelivr.net/gh/*@master$~third-party
 @@||easylist.to/*.txt^
-@@||void.gr/*/void-gr-filters.txt^
-@@||pgl.yoyo.org/adservers/serverlist.
+@@||someonewhocares.org/hosts/
 @@||fanboy.co.nz/*.txt^
 yjc.ir,tabnak.ir##a[href$="/fa/prayer"]
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
@@ -3041,7 +3037,6 @@ search.yurindo.bscentral.jp#$#:is(body,div,li,a,strong,dd,span:not([class*=mater
 www.svt.se#$#div[class*=TextContent_textContent__] { font-family: "Segoe UI Bold", "Segoe UI", "Calibri", "Verdana", "Ubuntu", sans-serif !important }
 /images/*/Cursor
 @@||wikia.nocookie.net^*/images/$image,badfilter
-/Mousehover.$image
 fandom.com,wikia.org#$?#a:link { cursor: pointer !important }
 cursor_hover.$image
 _Cursor1.png^

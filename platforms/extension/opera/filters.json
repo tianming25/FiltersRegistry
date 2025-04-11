@@ -334,8 +334,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/1.txt",
 			"trustLevel": "full",
-			"version": "2.0.98.66",
-			"timeUpdated": "2025-04-11T11:05:47+0000",
+			"version": "2.0.98.67",
+			"timeUpdated": "2025-04-11T12:09:42+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.78.79",
-			"timeUpdated": "2025-04-11T11:06:03+0000",
+			"version": "2.3.78.80",
+			"timeUpdated": "2025-04-11T12:09:54+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -382,8 +382,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.83.8",
-			"timeUpdated": "2025-04-11T09:07:03+0000",
+			"version": "2.0.83.9",
+			"timeUpdated": "2025-04-11T12:10:05+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.13.26",
-			"timeUpdated": "2025-04-11T10:06:56+0000",
+			"version": "2.1.13.27",
+			"timeUpdated": "2025-04-11T12:10:07+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -469,8 +469,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/7.txt",
 			"trustLevel": "full",
-			"version": "2.0.63.61",
-			"timeUpdated": "2025-04-11T09:07:12+0000",
+			"version": "2.0.63.62",
+			"timeUpdated": "2025-04-11T12:10:14+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -545,8 +545,8 @@
 			"groupId": 6,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/10.txt",
 			"trustLevel": "full",
-			"version": "2.0.3.62",
-			"timeUpdated": "2025-03-28T18:08:42+0000",
+			"version": "2.0.3.63",
+			"timeUpdated": "2025-04-11T12:10:17+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [],
@@ -616,8 +616,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.27.9",
-			"timeUpdated": "2025-04-11T11:06:44+0000",
+			"version": "2.2.27.10",
+			"timeUpdated": "2025-04-11T12:10:26+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -640,8 +640,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.78.83",
-			"timeUpdated": "2025-04-11T06:09:22+0000",
+			"version": "2.0.78.84",
+			"timeUpdated": "2025-04-11T12:10:27+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -721,8 +721,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.59.73",
-			"timeUpdated": "2025-04-11T10:07:18+0000",
+			"version": "2.0.59.74",
+			"timeUpdated": "2025-04-11T12:10:32+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -743,8 +743,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.55",
-			"timeUpdated": "2025-04-11T08:09:26+0000",
+			"version": "2.0.53.56",
+			"timeUpdated": "2025-04-11T12:10:33+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -809,8 +809,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.11.50",
-			"timeUpdated": "2025-04-10T14:07:31+0000",
+			"version": "2.0.11.51",
+			"timeUpdated": "2025-04-11T12:10:33+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1682,8 +1682,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/opera/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.34.52",
-			"timeUpdated": "2025-04-11T07:07:36+0000",
+			"version": "2.1.34.53",
+			"timeUpdated": "2025-04-11T12:10:38+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"

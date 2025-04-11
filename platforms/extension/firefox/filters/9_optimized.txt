@@ -1,9 +1,9 @@
-! Checksum: uwUZZP6oUvTrPWz5Wg82nQ
-! Diff-Path: ../patches/9_optimized/9_optimized-s-1744355451-3600.patch
+! Checksum: O0eG09BENWQODwJydk0bRg
+! Diff-Path: ../patches/9_optimized/9_optimized-s-1744366243-3600.patch
 ! Title: AdGuard Spanish/Portuguese filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Spanish, Portuguese, and Brazilian Portuguese languages.
-! Version: 2.0.29.54
-! TimeUpdated: 2025-04-11T07:07:16+00:00
+! Version: 2.0.29.55
+! TimeUpdated: 2025-04-11T10:07:04+00:00
 ! Expires: 10 days (update frequency)
 ||upeex.com.br^
 ||upeex.com^
@@ -175,12 +175,12 @@
 ||xad.dnoticias.pt^
 ||adclient-uol.lp.uol.com.br^
 ||adv.r7.com^
-redecanais.gs#@#.AdsBox
-redecanais.gs##body > #overlay
 elcorreogallego.es###_an_cmp
 elcorreogallego.es#%#//scriptlet('set-constant', '_an.ABMode', 'undefined')
-redecanaistv.ps,redecanais.*#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'loadAdScript')
-redecanaistv.ps,redecanais.*#%#//scriptlet('abort-on-property-read', 'close')
+redecanaistv.*,redecanais.*#%#//scriptlet('prevent-fetch', 'mode:no-cors')
+redecanaistv.*,redecanais.*#%#//scriptlet('set-constant', 'adClickCount', '0')
+redecanaistv.*,redecanais.*#%#//scriptlet('set-constant', 'close', 'undefined')
+redecanaistv.*,redecanais.*#$##player { display: block !important; }
 sport.es###_an_cmp
 yomucomics.com#%#//scriptlet('abort-on-stack-trace', 'atob', 'wp-content/')
 ||yomucomics.com/wp-content/uploads/becaae/
@@ -3731,8 +3731,6 @@ trendenciashombre.com,bebesymas.com##div[class^="ad ad-lat"]
 dn.pt##div[class^="t-modsys-pub"]
 dvdgayonline.com##.content > .load_modules
 yoututosjeff.es###HTML3
-redecanais.info###yb_mm
-redecanais.info###yb_bb
 tvsinpagar.com##.pub300x250
 torrentrapid.com,tvsinpagar.com##.gray[style="width:100%;height:98px;"]
 tvsinpagar.com##div[style="float:left;width:100%;height:90px;"]

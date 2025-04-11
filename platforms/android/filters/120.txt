@@ -1,15 +1,15 @@
-! Checksum: 4tfNeoRznSqvou0TwkXzvw
-! Diff-Path: ../patches/120/120-s-1744303370-14400.patch
+! Checksum: rfTSjQ3xgm67Tb25oVZjbw
+! Diff-Path: ../patches/120/120-s-1744403929-14400.patch
 ! Title: AdBlockID
 ! Description: Additional filter list for websites in Indonesian.
-! Version: 2.0.23.60
-! TimeUpdated: 2025-04-10T16:38:45+00:00
+! Version: 2.0.23.61
+! TimeUpdated: 2025-04-11T20:34:53+00:00
 ! Expires: 5 days (update frequency)
 !
-! OriginalVersion: 25.4.8
+! OriginalVersion: 25.4.9
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 10 Apr 2025 12:49 UTC
+! Last modified: 11 Apr 2025 19:15 UTC
 ! Expires: 1 days
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/bnr/$domain=~kalbarprov.go.id
@@ -1436,7 +1436,7 @@ _TimAds_$image
 passatworld.ru#@##ad_global_below_navbar
 ||aedi.ai/common/js/v1/aedi-$domain=okezone.com
 ||p.jwpcdn.com/*/vast.js$script
-/^https?:\/\/(?:ak\.)?[a-z]{6,15}\.(?:com|net)\/4\/\d{7}/$document,subdocument,popup
+/^https?:\/\/(?:ak\.)?[a-z]{6,15}\.(?:com|net)\/(?:1|4)\/\d{7}/$document,subdocument,popup
 /\/assets\/jquery\/jquery-\d\.\d\.(?:\d\.)?min\.js\?(?:v=2)?&?type=(?:adult|mainstream)$/$~third-party,script
 /^https:\/\/[a-z]{3,5}\.[a-z]{10,14}\.top\/[a-z]{10,16}\/[a-z]{5,6}(?:\?d=\d)?$/$third-party,match-case,script,xmlhttprequest,to=top
 /\/t\/[0-9]{3}\/[0-9]{3}\/a[0-9]{4,9}\.js$/$script
@@ -1444,7 +1444,7 @@ passatworld.ru#@##ad_global_below_navbar
 /^https:\/\/[0-9a-f]{10}\.[0-9a-f]{10}\.com\/[0-9a-f]{32}\/\d{6}\b/$third-party,match-case,xmlhttprequest,to=com
 /^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{5,16}\.[a-z]{3,7}\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/\d{4,6}(?:\?[_a-z]=[-0-9a-z]+)?$/$third-party,match-case,script,redirect=noopjs
 /^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.com\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/\d{4,6}(?:\?[_a-z]=[-0-9a-z]+)?$/$third-party,subdocument,match-case,popup,xmlhttprequest,to=com
-/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.website\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/\d{4,6}(?:\?[_a-z]=[-0-9a-z]+)?$/$third-party,subdocument,match-case,popup,xmlhttprequest
+/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.website\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/\d{4,6}(?:\?[_a-z]=[-0-9a-z]+)?$/$third-party,subdocument,match-case,popup,xmlhttprequest,to=website
 /^https?:\/\/(?:www\.|[0-9a-z]{7,10}\.)?[-0-9a-z]{5,}\.com\/\/?(?:[0-9a-z]{2}\/){2,3}[0-9a-f]{32}\.js/$third-party,script,xmlhttprequest,redirect=noopjs,to=com
 /^https?:\/\/[0-9a-z]{13,14}\.cloudfront\.net\/\?[a-z]{3,5}=\d{6,7}$/$third-party,script,xmlhttprequest
 /^https?:\/\/[0-9a-f]{50,}\.s3\.amazonaws\.com\/[0-9a-f]{10}$/$third-party,xmlhttprequest
@@ -1459,15 +1459,11 @@ passatworld.ru#@##ad_global_below_navbar
 /^https?:\/\/[a-z]{8,15}\.xyz\/(?!api|available|team)[a-z]{4,}\.json$/$third-party,match-case,xmlhttprequest
 /^https?:\/\/[a-z]{8,15}\.xyz\/[-a-z]{4,}\.css\?aHR0c[\/0-9a-zA-Z]{33,}=?=?$/$third-party,stylesheet,match-case
 /^https?:\/\/[a-z]{8,15}\.xyz\/[a-z]{4,}\.png\?aHR0c[\/0-9a-zA-Z]{33,}=?=?$/$third-party,image,match-case
-/^https?:\/\/[-a-z]{6,}\.com?\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest,to=co|com
-/^https?:\/\/[-a-z]{6,}\.info\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest,to=info
-/^https?:\/\/[-a-z]{6,}\.pro\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest,to=pro
-/^https?:\/\/[-a-z]{6,}\.xyz\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest,to=xyz
-/^https?:\/\/[-a-z]{8,15}\.(?:com|net)\/400\/\d{7}(?:\?v=\d+)?$/$third-party,script
-/^https?:\/\/[-a-z]{8,15}\.(?:com|net)\/401\/\d{7}(?:\?v=\d+)?$/$third-party,script
-/^https?:\/\/[-a-z]{8,15}\.(?:com|net)\/500\/\d{7}\?/$third-party,xmlhttprequest
+/^https?:\/\/[-a-z]{6,}\.(?:com?|info|pro|xyz)\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest,to=co|com|info|pro|xyz
+/^https?:\/\/[-a-z]{8,15}\.(?:com|net)\/400\/\d{7}(?:\?v=\d+)?$/$third-party,script,to=com|net
+/^https?:\/\/[-a-z]{8,15}\.(?:com|net)\/401\/\d{7}(?:\?v=\d+)?$/$third-party,script,to=com|net
+/^https?:\/\/[-a-z]{8,15}\.(?:com|net)\/500\/\d{7}\?/$third-party,xmlhttprequest,to=com|net
 /^https?:\/\/[a-z]{6,15}\.[a-z]{2,3}\/5\/\d{6,7}(?:\?_=\d+|\/\??)?$/$third-party,script,xmlhttprequest
-/^https?:\/\/[a-z]{8,15}\.(?:com|net)\/tag\.min\.js$/$third-party,script
 /^https?:\/\/[a-z]{8,15}\.com\/$/$third-party,header=access-control-expose-headers:/x-directionpartner-id/,xmlhttprequest,to=com,method=head
 /^https?:\/\/[a-z]{8,15}\.xyz\/$/$third-party,header=access-control-expose-headers:/x-directionpartner-id/,xmlhttprequest,to=xyz,method=head
 /get/*?zoneid=$script
@@ -3712,11 +3708,11 @@ nobartv.cc,nobartv99.*##.inline-banner
 ||cfcdn.apcqwd.com/prod/svimg/*.gif|$image
 /tigoals\d+\.com/##.banner
 rbtv77.icu###divFLRAbottom
-[$path=/id]fctv77.*,painsalt9gdle6k.cfd,rbsports77.*,rbtv77.*,zt11or04emunion.shop##div:matches-css(position: fixed):has(> img)
-[$path=/id]fctv77.*,painsalt9gdle6k.cfd,rbsports77.*,rbtv77.*,zt11or04emunion.shop##div:matches-css(position: relative):has(> img + div:matches-css(position: absolute))
-[$path=/id]fctv77.*,painsalt9gdle6k.cfd,rbsports77.*,rbtv77.*,zt11or04emunion.shop##iframe + div:matches-css(position: absolute):has(> img)
-[$path=/id]fctv77.*,painsalt9gdle6k.cfd,rbsports77.*,rbtv77.*,zt11or04emunion.shop#$#img { width: auto!important; }
-fctv77.*,painsalt9gdle6k.cfd,rbsports77.*,rbtv77.*,zt11or04emunion.shop#$#* { scrollbar-width: thin!important; }
+[$path=/id]7sj83broughth5implanet.shop,fctv77.*,rbsports77.*,rbtv77.*,warj2tfastdurbo6goes.shop##div:matches-css(position: fixed):has(> img)
+[$path=/id]7sj83broughth5implanet.shop,fctv77.*,rbsports77.*,rbtv77.*,warj2tfastdurbo6goes.shop##div:matches-css(position: relative):has(> img + div:matches-css(position: absolute))
+[$path=/id]7sj83broughth5implanet.shop,fctv77.*,rbsports77.*,rbtv77.*,warj2tfastdurbo6goes.shop##iframe + div:matches-css(position: absolute):has(> img)
+[$path=/id]7sj83broughth5implanet.shop,fctv77.*,rbsports77.*,rbtv77.*,warj2tfastdurbo6goes.shop#$#img { width: auto!important; }
+7sj83broughth5implanet.shop,fctv77.*,rbsports77.*,rbtv77.*,warj2tfastdurbo6goes.shop#$#* { scrollbar-width: thin!important; }
 /(?=.*[a-z])(?=.*[0-9])[a-z0-9]{17,}\.(cfd|sbs)$/#$#* { scrollbar-width: thin!important; }
 [$path=/id]/(?=.*[a-z])(?=.*[0-9])[a-z0-9]{17,}\.(cfd|sbs)$/##div:matches-css(position: fixed):has(> img)
 [$path=/id]/(?=.*[a-z])(?=.*[0-9])[a-z0-9]{17,}\.(cfd|sbs)$/##div:matches-css(position: relative):has(> img + div:matches-css(position: absolute))

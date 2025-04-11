@@ -1,9 +1,9 @@
-! Checksum: 4DPsl9yZSf6oMI+WGLotRg
-! Diff-Path: ../patches/224_optimized/224_optimized-s-1744373663-3600.patch
+! Checksum: /Wxj/07y0VMZhlOTOqxsqw
+! Diff-Path: ../patches/224_optimized/224_optimized-s-1744384272-3600.patch
 ! Title: AdGuard Chinese filter (Optimized)
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.34.53
-! TimeUpdated: 2025-04-11T12:10:38+00:00
+! Version: 2.1.34.54
+! TimeUpdated: 2025-04-11T15:07:40+00:00
 ! Expires: 5 days (update frequency)
 ||mernrza.com^
 ||xjwhtz10.com^
@@ -349,6 +349,8 @@ colamanga.com#$#div[class^="layui-layer-"]:not(#color) { display: none !importan
 bilinovel.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=bilinovel.com
+bilinovel.com#%#//scriptlet('set-constant', 'checkAndHandleAdBlock', 'undefined')
+bilinovel.com#@#.adv-box
 ||174.127.195.66/bbs/include/javascript/adblock.js
 noy1.top#%#//scriptlet('prevent-xhr', '/api/ads')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -4550,6 +4552,7 @@ newduba.cn###jq_youxi
 ||jmif.cn^
 ||rvxo.cn^
 ||idhaiafq.com^
+||opdh.cn^
 ||tezlpl.icu^
 ||duuddots.com^
 ||mjik.cn^

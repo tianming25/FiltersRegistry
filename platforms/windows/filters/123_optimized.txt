@@ -1,9 +1,9 @@
-! Checksum: i614dPVHccQmuYTssSnlIA
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1744419115-14400.patch
+! Checksum: qU91hLZqro7s1coUgRXpPg
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1744432855-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.39.62
-! TimeUpdated: 2025-04-12T00:47:28+00:00
+! Version: 2.1.39.63
+! TimeUpdated: 2025-04-12T04:36:56+00:00
 ! Expires: 12 hours (update frequency)
 -facebook-widget.
 -share-bar/$~stylesheet
@@ -200,6 +200,7 @@ _social-bar/
 ###fbShare
 ###fb_link
 ###fb_share
+###fb_video_link
 ###fbbox
 ###fbbox1
 ###fbshare
@@ -363,6 +364,7 @@ _social-bar/
 ###sharePinterest
 ###shareStrip
 ###shareTab
+###shareTags
 ###shareTop
 ###shareTxt
 ###shareUrl
@@ -489,6 +491,7 @@ _social-bar/
 ###socialLinksContainer
 ###socialMedia
 ###socialMediaFacebook
+###socialMediaSection
 ###socialMediaShare
 ###socialModal
 ###socialNetworks
@@ -507,7 +510,6 @@ _social-bar/
 ###social_bottom
 ###social_box
 ###social_btns
-###social_cont
 ###social_facebook
 ###social_fb
 ###social_follow
@@ -526,6 +528,7 @@ _social-bar/
 ###social_share
 ###social_share_wrapper
 ###social_sharing
+###social_side_links
 ###social_sidebar
 ###social_top
 ###social_tw
@@ -648,7 +651,6 @@ _social-bar/
 ##.SocialRibbon
 ##.SocialSection
 ##.SocialShare
-##.SocialShare-root
 ##.SocialSharing
 ##.Social_Widget
 ##.Socialbuttons
@@ -959,7 +961,6 @@ _social-bar/
 ##.custom-sharing
 ##.custom-social
 ##.custom_share
-##.d-share
 ##.d3-o-share-bar
 ##.dashicons-facebook
 ##.dashicons-twitter
@@ -995,8 +996,6 @@ _social-bar/
 ##.eg-footer-icon-vk
 ##.eg-footer-icon-youtube
 ##.ekit_social_media
-##.el-icon-facebook
-##.el-icon-twitter
 ##.elem-info__share
 ##.elementor-social-icon
 ##.elementor-social-icons-wrapper
@@ -1066,7 +1065,6 @@ _social-bar/
 ##.facebook-page-plugin
 ##.facebook-share-btn
 ##.facebook-share-button
-##.facebook-share-link
 ##.facebook-sidebar
 ##.facebook-social
 ##.facebookOuter
@@ -1075,6 +1073,7 @@ _social-bar/
 ##.facebook_box
 ##.facebook_icn
 ##.facebook_icon
+##.facebook_large
 ##.facebook_like
 ##.facebook_like_box
 ##.facebook_logo
@@ -1223,6 +1222,7 @@ _social-bar/
 ##.footer-socialIcons
 ##.footer-sociallinks
 ##.footer-socialmedia
+##.footer-socialmediaIcon
 ##.footer-socials
 ##.footer-socials-section
 ##.footer-top__social
@@ -1326,8 +1326,8 @@ _social-bar/
 ##.hatena-btn-icon
 ##.hd-social-icons
 ##.hdr-social
-##.head-fb
 ##.header-facebook
+##.header-icon-instagram
 ##.header-menu__social
 ##.header-share
 ##.header-social-button
@@ -1466,7 +1466,6 @@ _social-bar/
 ##.index_sns
 ##.info-sns-list
 ##.info_share
-##.inline-share-buttons
 ##.inline_socials
 ##.inner-header-social
 ##.inner-social
@@ -1494,7 +1493,6 @@ _social-bar/
 ##.item-facebook
 ##.item-share
 ##.item-share-social
-##.item-shares
 ##.item-sharing
 ##.item-social-row
 ##.itemSocialSharing
@@ -1816,7 +1814,6 @@ _social-bar/
 ##.post-share-links
 ##.post-share-menu-item
 ##.post-share-pinterest
-##.post-share-whatsapp
 ##.post-share-widget
 ##.post-sharing
 ##.post-social
@@ -1991,6 +1988,7 @@ _social-bar/
 ##.share-hover
 ##.share-icon-container
 ##.share-icon-list
+##.share-icon-small
 ##.share-icons-box
 ##.share-icons-list
 ##.share-icons-sticky-box
@@ -2212,6 +2210,7 @@ _social-bar/
 ##.share_vk
 ##.share_w
 ##.share_wa
+##.share_widget
 ##.share_with_friends
 ##.share_wrap
 ##.share_wrapper
@@ -2302,7 +2301,6 @@ _social-bar/
 ##.sharingButton
 ##.sharingLinks
 ##.sharingPanel
-##.sharingTools
 ##.sharing__list
 ##.sharing_block
 ##.sharing_box
@@ -2596,9 +2594,9 @@ _social-bar/
 ##.social-sharer
 ##.social-shares
 ##.social-sharing-bot
-##.social-sharing-button
 ##.social-sharing-buttons
 ##.social-sharing-item
+##.social-sharing-link
 ##.social-sharing-top
 ##.social-sharing__link
 ##.social-sidebar
@@ -2631,6 +2629,7 @@ _social-bar/
 ##.socialBar
 ##.socialBtnList
 ##.socialButtons
+##.socialButtonv1
 ##.socialConnect
 ##.socialCont
 ##.socialContacts
@@ -2645,7 +2644,6 @@ _social-bar/
 ##.socialHubInnerDiv
 ##.socialHubWrapper
 ##.socialIconContainer
-##.socialIconWrapper
 ##.socialIconsWrapper
 ##.socialIcons_link
 ##.socialInner
@@ -2690,6 +2688,8 @@ _social-bar/
 ##.social_bookmark
 ##.social_bookmarks
 ##.social_bottom
+##.social_but
+##.social_count
 ##.social_fix
 ##.social_follow
 ##.social_footer
@@ -2706,6 +2706,7 @@ _social-bar/
 ##.social_popup
 ##.social_row
 ##.social_section
+##.social_share_fb
 ##.social_share_left
 ##.social_share_privacy_area
 ##.social_share_wrapper
@@ -2772,7 +2773,6 @@ _social-bar/
 ##.socialwidget
 ##.socialwrap
 ##.sociaux
-##.sosmedshare
 ##.sow-social-media-button
 ##.ss-facebook
 ##.ss-inline-share-content
@@ -2797,6 +2797,7 @@ _social-bar/
 ##.st_sharethis_custom
 ##.st_sharethis_large
 ##.sti-share-box
+##.stick-share
 ##.sticky-share
 ##.sticky-social
 ##.sticky-social-share
@@ -2806,7 +2807,6 @@ _social-bar/
 ##.story-share
 ##.story__share
 ##.story__social
-##.story__social-share
 ##.stripe-social
 ##.sub_jeu_social_facebook
 ##.sub_jeu_social_twitter
@@ -3258,7 +3258,6 @@ journals.aps.org,theintercept.com###share-menu-button
 theintercept.com###share-menu-top-button
 news.warrington.ufl.edu###share-this-article
 androidpolice.com###sharingButtonPopup
-engineeringnews.co.za,miningweekly.com,polity.org.za###sidebar_items_container
 coingape.com###social-ad-new
 animenewsnetwork.com###social-bookmarks
 coindesk.com###social-icons-box
@@ -3308,7 +3307,6 @@ cosmosmagazine.com,forbes.com,heise.de,phillyvoice.com##.article-sharing
 newrepublic.com,thetech.com##.article-social
 nbcnews.com##.article-social-share-top
 jpost.com##.article-subline-inner-share-buttons
-rt.com##.article__google-news
 armeniasputnik.am,noticiabrasil.net.br,spnfa.ir,sputnik-abkhazia.info,sputnik-georgia.com,sputnik-ossetia.com,sputnik.af,sputnik.az,sputnik.by,sputnik.kg,sputnik.kz,sputnik.tj,sputnikarabic.ae,sputnikglobe.com,sputniknews.africa,sputniknews.cn,sputniknews.com,sputniknews.com.tr,sputniknews.in,sputniknews.jp,sputniknews.lat,sputniknews.ru,sputniknews.uz,sputniknews.vn,sputniknewsbr.com.br,sputnikportal.rs##.article__news-services-subscribe
 wnep.com##.article__sharing
 news.tvbs.com.tw##.article_community_box
@@ -3345,7 +3343,6 @@ theglobeandmail.com##.c-site-header__buttons
 mediaite.com##.c-youtube-subscribe
 ccn.com##.ccn-share
 cgdirector.com##.cgd-social-wrapper
-edugeek.net##.cms_widget_content.widget_content > [align="center"]
 stuff.co.nz##.comment-and-share
 goal.com##.component-share
 goal.com##.component-social-twitter
@@ -3436,7 +3433,6 @@ bitcoinmagazine.com,bringmethenews.com,dealbreaker.com,psmag.com,si.com,thespun.
 thestreet.com##.m-social--pinterest-pin-it
 insideevs.com##.m1-article-meta_share
 morningstar.com##.mdc-social-share
-themedialine.org##.mdl-share-tool-vertical
 amazon.jobs##.media-icons
 arabnews.com##.meta-area
 smashingmagazine.com##.meta-box--share
@@ -3532,7 +3528,6 @@ gfinityesports.com,stealthoptional.com##.social-follow-unit
 firstpost.com##.social-ic-wrap
 tmz.com##.social-item
 afro.com,hongkongfp.com,investigatemidwest.org,lafocusnews.com,ourweekly.com,theatlantavoice.com,washingtoncitypaper.com,washingtonmonthly.com##.social-links-menu
-blackamericaweb.com,cassiuslife.com,gosunoob.com,joblo.com,mycleo.tv,tvone.tv,ultiworld.com##.social-menu
 toofab.com##.social-nav
 melmagazine.com,thefrisc.com##.social-navigation
 adrenaline.com.br,bossip.com,insidehpc.com,mundoconectado.com.br,sportsbusinessjournal.com##.social-networks
@@ -3753,7 +3748,6 @@ szeretlekmagyarorszag.hu##.fbpage-like-szmo
 index.hu,totalcar.hu,velvet.hu##.megoszt
 telex.hu##.options
 centrometeoitaliano.it,leggo.it###box-social
-ilmeteo.it###condividi_news
 ilfattoquotidiano.it###glfb
 navigaweb.net###like
 navigaweb.net###social3
@@ -3857,7 +3851,6 @@ adn40.mx##.ListSiguenos-SocialStrip
 elpais.com.uy##.Page-actions-wrapper
 rpp.pe##.article__follow
 elfinanciero.com.mx##.b-footer__social-links-container
-13.cl##.banner-google-news
 estadiodeportivo.com##.boton-share
 de10.com.mx,elgrafico.mx##.botonGoogleNews
 biobiochile.cl##.botones-google-news-wsp
@@ -3869,7 +3862,6 @@ adslzone.net##.comments-social-share
 ecologiaverde.com,el9nou.cat,elsaltodiario.com,lanacion.com.ar,laverdad.com,psicologia-online.com,qmusica.tv,revistafamilia.ec##.compartir
 wapa.pe##.container_shared--internal
 elcolombiano.com##.contenedor-google-noticias
-13.cl##.cuerpo-share
 elperiodico.com,sport.es##.ft-mol-rrss-column
 milenio.com##.google-news-follow
 dolarhoy.com##.header__redes

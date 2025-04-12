@@ -1,5 +1,5 @@
-! Checksum: 63cLGJcOAZKXxpYZ11wavQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744346472-14400.patch
+! Checksum: Do32mKZbBhd/Ek3wqh8MzQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744432836-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.63
@@ -82,6 +82,7 @@ drivereasy.com#?#.pakb-content p:has-text(Driver Easy)
 drivereasy.com##.pakb-content img[sizes^="(max-width: 80"]
 drivereasy.com#?#.pakb-content p:has-text(the Pro version)
 windowsreport.com##div[class^=restoro-download] + section
+appuals.com##.wptp
 appuals.com##p + div > div:first-of-type
 softwaretested.com##.st-alternative
 ||solvusoft.com^$document
@@ -90,7 +91,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 |http://ww01.$document,domain=~very_very_extremely_frequently_used_in_malware_redirections.*
 ?bemobdata=$all
-||mechanicladenthereby.com^$all
 ||auslogics.com^$document
 ||in-automate.brevo.com^
 ||mediaget.com^$all
@@ -692,7 +692,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||tendonshepherdsomething.com^$all
 apkfab.com##.tip-extension
 cdburnerxp.se##[href*="/downloadsetup.exe"]
-||sexy-egirls-leaked.com^$document
 ||erothots.co^$all
 |http://www6.$document,domain=~often_used_in_malware_redirections.*
 .aspx?cname=*&cid=$all
@@ -2540,7 +2539,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||zui.app^$all
 ||zurc2.com^$all
 ||admozartxml.com^$all
-||bidmyadz.com^$all
 ||explodasclksec.com^$all
 ||fmlabsonline.com^$all
 ||mobuppsrtb.com^$all
@@ -2815,6 +2813,7 @@ tumblr.com##.tmblr-iframe--follow-teaser
 deviantart.com##div[style] > div[class^=_] + div:not([class^=_]):nth-of-type(2):last-of-type
 deviantart.com#$?#div[style*="wixmp.com/"] { filter: none !important }
 deviantart.com##div[style^="width:"] > div:first-of-type + div:last-of-type:has(> a[href*="/join/?"])
+||assets.guim.co.uk/assets/SignInGateMain.
 twitch.tv###twilight-sticky-footer-root
 pinterest.*##div[id$=unauth-container] div[data-test-id=pin-closeup-image] > div[style^="cursor: pointer;"]
 www.deviantart.com##body > header[role=banner]:not([class*=" "]) ~ div[class^=_][class*=" "]:has(a[href*="/login"])
@@ -3026,6 +3025,7 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 ~imdb.com##.jt-imdb:not(html,body,:empty)
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
 rakuten.tv##a[href*=".imdb.com/title/"]
+www.google.*,ipv6.google.com##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
 www.google.*,ipv6.google.com#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*,ipv6.google.com##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
@@ -3091,7 +3091,6 @@ $document,removeparam=_ga,domain=~login.aliexpress.*
 $document,removeparam=guccounter
 $document,removeparam=guce_referrer
 $document,removeparam=guce_referrer_sig
-$document,removeparam=source_location
 $document,removeparam=bxid
 $document,removeparam=irgwc
 $document,removeparam=/^clickid=.*$/i,domain=~discover.*
@@ -3229,6 +3228,7 @@ $removeparam=click_id,domain=~bookings.beatthatflight.*
 $removeparam=cm_soc
 $removeparam=o_lid
 $removeparam=o_sch
+$removeparam=o_xid
 $removeparam=wtExtndSource
 $removeparam=CAID
 $removeparam=rfsn
@@ -3708,6 +3708,7 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 @@://www.google.com/maps?entry=$removeparam=utm_campaign
 ||tiktok.com^$removeparam=_r
 $removeparam=u_code
+$removeparam=is_copy_url
 $removeparam=is_from_webapp
 $removeparam=sender_device
 ||tiktok.com^$removeparam=_d
@@ -3947,6 +3948,7 @@ $removeparam=soc_trk
 ||as.com^$removeparam=omnil
 $removeparam=kw,domain=udemy.com|hotels.com
 ||surfshark.com^$removeparam=transaction_id
+$removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com|media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=camp,domain=amazon.*|calvinklein.*|dickssportinggoods.com|dockers.com|dressbarn.com|lanebryant.com|levi.com|maurices.com|worldmarket.com|xg4ken.com
 $document,removeparam=/^siteid=.*$/i,domain=agentprovocateur.com|amerimark.com|anntaylor.com|asos.com|awd-it.*|barenecessities.com|barrons.com|beautyencounter.com|buckle.com|burpee.com|chacos.com|coursera.org|dxl.com|dyson.com|ebay.*|famousfootwear.com|finishline.com|freetaxusa.com|gap.com|gapcanada.ca|gucci.com|hanes.com|hotwire.com|hulu.com|hunterboots.com|jcrew.com|josbank.com|kobo.com|lanebryant.com|laroche-posay.us|loft.com|magazines.com|marketwatch.com|maurices.com|merrell.com|newbalance.com|nordstrom.com|officedepot.com|onehanesplace.com|online4baby.com|radissonhotelsamericas.com|ralphlauren.com|saksfifthavenue.com|saksoff5th.com|samash.com|samsclub.com|saucony.com|sharperimage.com|skinceuticals.com|thingsremembered.com|thrifty.*|timeformecatalog.com|verabradley.com|vivaterra.com|wine.com|yoox.com
 ||kohls.com^$removeparam=kls_sbp
@@ -3985,9 +3987,7 @@ $removeparam=algo,document
 $removeparam=imp_id,document
 ||steampowered.com^$removeparam=ser
 $removeparam=sourceType,domain=vitaminshoppe.com|aliexpress.com
-$removeparam=ds_e_adid,domain=clickserve.dartsearch.net
 $removeparam=ds_e_target_id
-$removeparam=ds_url_v,domain=clickserve.dartsearch.net
 ||xg4ken.com^$removeparam=prof
 ||xg4ken.com^$removeparam=kct
 ||xg4ken.com^$removeparam=kchid
@@ -4039,6 +4039,7 @@ $removeparam=recs_source
 ||gamivo.com^$removeparam=glv
 ||banggood.com^$removeparam=custlinkid
 ||market.yandex.ru^$removeparam=cpc
+||everesttech.net^$removeparam=/^ev_.*$/
 ||kelkoogroup.net^$removeparam=custom1
 ||lenovo.com^$removeparam=orgRef
 ||dhgate.com^$removeparam=f
@@ -4135,7 +4136,6 @@ $removeparam=cvid,domain=chinadaily.com.cn|eastday.com|msn.cn|msn.com|tianqi.com
 ||github.com^$removeparam=ref_loc
 ||github.com^$removeparam=ref_page
 ||quizlet.com^$removeparam=funnelUUID
-$removeparam=pk_vid,document
 ||xiaohongshu.com^$removeparam=app_platform,document
 ||xiaohongshu.com^$removeparam=app_version,document
 ||xiaohongshu.com^$removeparam=share_from_user_hidden,document
@@ -4161,6 +4161,7 @@ $removeparam=embeds_referring_euri
 ||kahoot.it^$removeparam=refer_method
 ||open.substack.com^$removeparam=r,document
 ref=spreadprivacy.com$removeparam=ref
+||github.com^$removeparam=reference_location
 $removeparam=afSmartRedirect
 ||linkedin.com/feed/update$removeparam=origin
 $document,domain=bilibili.com|querie.me,removeparam=timestamp
@@ -4232,6 +4233,7 @@ $document,removeparam=af_xp
 ||www.roblox.com^$document,removeparam=discoverPageSessionInfo
 ||www.roblox.com^$document,removeparam=gameSetTargetId
 ||www.roblox.com^$removeparam=gameSearchSessionInfo
+$document,removeparam=entrypoint,domain=bing.com
 ||audible.$removeparam=creativeId
 ||audible.$removeparam=pageLoadId
 ||audible.$removeparam=/^ref/

@@ -640,8 +640,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.78.85",
-			"timeUpdated": "2025-04-11T18:09:25+0000",
+			"version": "2.0.78.86",
+			"timeUpdated": "2025-04-12T00:24:24+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -670,8 +670,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.51.74",
-			"timeUpdated": "2025-04-11T05:07:21+0000",
+			"version": "2.0.51.75",
+			"timeUpdated": "2025-04-12T00:24:26+0000",
 			"deprecated": false,
 			"languages": [
 				"fr"
@@ -1682,8 +1682,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.34.54",
-			"timeUpdated": "2025-04-11T15:07:40+0000",
+			"version": "2.1.34.55",
+			"timeUpdated": "2025-04-12T00:24:35+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"

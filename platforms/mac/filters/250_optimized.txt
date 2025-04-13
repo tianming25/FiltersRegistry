@@ -1,4 +1,4 @@
-! Checksum: fqlalzSNqIjXu3SQtTOHpA
+! Checksum: urRHyayMlRvR7XUeUHtZ1w
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.65
@@ -87,6 +87,8 @@ drivereasy.com#?#.pakb-content p:has-text(the Pro version)
 windowsreport.com##div[class^=restoro-download] + section
 appuals.com##.wptp
 appuals.com##p + div > div:first-of-type
+windll.com##.download-block
+windll.com##.dll > p
 softwaretested.com##.st-alternative
 ||solvusoft.com^$document
 coolrom.com.au,coolrom.com##.download_link
@@ -712,7 +714,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 109.206.168.17$network
 !+ PLATFORM(windows, mac, android)
 57.128.71.215$network
-||rafkxx.com^$all
 !+ PLATFORM(windows, mac, android)
 37.1.223.231$network
 !+ PLATFORM(windows, mac, android)
@@ -788,7 +789,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 192.243.61.225$network
 !+ PLATFORM(windows, mac, android)
 192.243.61.227$network
-||gridehornyidentifier.com^$all
 ||paddlemoscowsplit.com^$all
 !+ PLATFORM(windows, mac, android)
 167.71.252.38$network
@@ -851,6 +851,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||agencyrearrangepasture.com^$all
 ||botanysummarytables.com^$all
 ||heartburnsurroundingcourtroom.com^$all
+||juvenilesoftlysoda.com^$all
 ||mistydivided.com^$all
 ||antonyexpected.com^$all
 ||profitablecpm*.com^$all
@@ -3399,7 +3400,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||zurc2.com^$all
 ||admozartxml.com^$all
 ||explodasclksec.com^$all
-||fmlabsonline.com^$all
 ||mobuppsrtb.com^$all
 [2a00:8860:10d:1::2:b01]$network
 !+ PLATFORM(windows, mac, android)
@@ -3712,9 +3712,9 @@ rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
 e621.net,e926.net###comments
 ###hot-network-questions
-/api/amediacomments/*
 /endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com|35.190.94.206
 /endscreen.js$app=com.google.android.youtube|com.google.android.apps.youtube.vr|com.google.android.youtube.tv|com.google.android.youtube.googletv
+vimeo.com##.pagination_holder
 vimeo.com##._16rrx
 ||rumble.com/embedJS/u3/?request=related$xmlhttprequest
 ||ixigua.com/api/feedv2^
@@ -3801,7 +3801,6 @@ fandom.com##nav.is-community-bar-in .mobile-global-navigation__community-bar
 fandom.com##div:not([class],[id],[style]):has(> [data-testid^=QuizBanner i])
 spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-snow', 'false')
 /particles.min.js^
-/pureSnow.js^
 /snowfall.min.jquery.js
 /snowplow$script,domain=casamundo.se|hemnet.se
 /snowplow-tracker$script
@@ -4019,6 +4018,7 @@ $removeparam=rmmds
 $removeparam=msclkid
 $removeparam=litb_from
 $removeparam=ftag
+$removeparam=akmClientCountry
 $removeparam=hss_channel
 $removeparam=ns_mchannel
 $removeparam=ns_source
@@ -4299,6 +4299,7 @@ $removeparam=analyticsCorrelationId
 $removeparam=adobe_mc
 $removeparam=omnisendContactID
 $document,removeparam=affiliate,domain=~justice.gov|~lippu.fi
+$removeparam=nosto
 $document,removeparam=af_id,domain=~dmm.co.jp|~dmm.com
 $removeparam=trafficSource
 $removeparam=gps_adid
@@ -4443,7 +4444,6 @@ $removeparam=cstrackid
 ||amazon.*/dp/$removeparam=s,document
 ||gaming.amazon.com^$removeparam=redirectRoute
 ||amazon.$removeparam=sbo
-||www.amazon.$document,removeparam=/^[a-z_]{1,20}=[a-zA-Z0-9._-]{80,}$/
 ||www.amazon.$removeparam=sp_csd
 ||www.amazon.$removeparam=dib_tag
 ||amazon.$document,removeparam=social_share
@@ -4799,11 +4799,11 @@ $document,removeparam=ref_,domain=amazon.*|awesomeopensource.com|boxofficemojo.c
 $removeparam=medium,domain=1sol.io|bybit.com|coinpanel.com|deepdiscount.com|discord.*|docs.google.com|docsend.com|eonline.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|ngx.me|outnorth.fi|runnode.com|t.me|twitter.com|xd.wayin.com|x.com|youtube.com
 ||thehackernews.com^$removeparam=_m
 ||apple.com^$removeparam=fnode
+||microsoft.com^$removeparam=headerid
 ||microsoft.com^$removeparam=destrt
 $removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moosejaw.com|multitronic.fi|scandinavianphoto.fi|swamp.fi|ocado.com|ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
 ||hp.com^$removeparam=jumpid
 ||walmart.com^$removeparam=veh
-||bbc.$removeparam=at_campaign
 $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
 ||gog.com^$removeparam=pp
 ||newegg.com^$removeparam=nm_mc
@@ -4990,10 +4990,7 @@ $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 ||onenote.com^$removeparam=nf
 ||onenote.com^$removeparam=fromAR
 ||adobe.com^$removeparam=mv2
-||bbc.$removeparam=at_campaign_type
-||bbc.$removeparam=at_format
 ||bbc.$removeparam=at_bbc_team
-||bbc.$removeparam=at_ptr_name
 ||linkedin.com^$removeparam=updateEntityUrn
 $document,removeparam=helpref,domain=whatsapp.com|facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|instagram.com
 ||nvidia.com^$removeparam=jso
@@ -5034,6 +5031,7 @@ $removeparam=embeds_referring_euri
 ||deepl.com^$document,removeparam=cta
 ||kahoot.it^$removeparam=refer_method
 ||open.substack.com^$removeparam=r,document
+||businessinsider.com^$removeparam=op,document
 ref=spreadprivacy.com$removeparam=ref
 ||github.com^$removeparam=reference_location
 $removeparam=afSmartRedirect
@@ -5145,6 +5143,8 @@ $document,removeparam=umpChannel,domain=tmall.com|taobao.com
 ||finn.no^$removeparam=alertType
 ||finn.no^$removeparam=stored-id
 ||finn.no^$removeparam=nocache
+$removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
+$removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 actionewz.com,animemojo.com,comicbookmovie.com,fearhq.com,gamefragger.com,mtvuutiset.fi,sffgazette.com,theringreport.com,toonado.com#%#//scriptlet('ubo-set.js', 'GSvars.addressTracking', 'false')
 buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@||web.archive.org/*_/http$removeparam

@@ -1,5 +1,5 @@
-! Checksum: Z4IYyNvtwfnA+RXcavrLCw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744476062-14400.patch
+! Checksum: 7Nyqi6+HYtrtbahpBohXJg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744519819-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.65
@@ -84,6 +84,8 @@ drivereasy.com#?#.pakb-content p:has-text(the Pro version)
 windowsreport.com##div[class^=restoro-download] + section
 appuals.com##.wptp
 appuals.com##p + div > div:first-of-type
+windll.com##.download-block
+windll.com##.dll > p
 softwaretested.com##.st-alternative
 ||solvusoft.com^$document
 coolrom.com.au,coolrom.com##.download_link
@@ -111,7 +113,6 @@ softonic.at,softonic.cl,softonic.cn,softonic.co,softonic.co.uk,softonic.com,soft
 ||nipechala.com^$all
 !+ NOT_OPTIMIZED
 ://landings.*_slots/?partner=$document
-||rafkxx.com^$all
 ||goatmod.xyz^$all
 ||inquirygrid.com^$all
 /page/bouncy.php?$all
@@ -122,7 +123,6 @@ softonic.at,softonic.cl,softonic.cn,softonic.co,softonic.co.uk,softonic.com,soft
 ||exs7oilq14cz6.click^$all
 ||aysesuretobea.com^$all
 .avito.www.booking.$all
-||gridehornyidentifier.com^$all
 ||paddlemoscowsplit.com^$all
 ||classesrainbowburka.com^$all
 ||commonjamknights.com^$all
@@ -139,6 +139,7 @@ softonic.at,softonic.cl,softonic.cn,softonic.co,softonic.co.uk,softonic.com,soft
 ||agencyrearrangepasture.com^$all
 ||botanysummarytables.com^$all
 ||heartburnsurroundingcourtroom.com^$all
+||juvenilesoftlysoda.com^$all
 ||mistydivided.com^$all
 ||antonyexpected.com^$all
 ||profitablecpm*.com^$all
@@ -2540,7 +2541,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||zurc2.com^$all
 ||admozartxml.com^$all
 ||explodasclksec.com^$all
-||fmlabsonline.com^$all
 ||mobuppsrtb.com^$all
 ||driverpack.io^$document,domain=~has_extreme_amounts_of_pup_in_it.com.bd|~has_extreme_amounts_of_pup_in_it.com.np
 ||ytechb.com^$document,domain=~had_not_updated_their_root_guides_to_reflect_a_b_partition_phones_as_of_2021.com.bd|~had_not_updated_their_root_guides_to_reflect_a_b_partition_phones_as_of_2021.com.np
@@ -2839,8 +2839,8 @@ rule34.paheal.net###comment-list-recent
 rule34.xxx###comment-list
 e621.net,e926.net###comments
 ###hot-network-questions
-/api/amediacomments/*
 /endscreen.js$script,domain=youtube.com|youtu.be|youtube-nocookie.com|35.190.94.206
+vimeo.com##.pagination_holder
 vimeo.com##._16rrx
 ||rumble.com/embedJS/u3/?request=related$xmlhttprequest
 ||ixigua.com/api/feedv2^
@@ -2927,7 +2927,6 @@ fandom.com##nav.is-community-bar-in .mobile-global-navigation__community-bar
 fandom.com##div:not([class],[id],[style]):has(> [data-testid^=QuizBanner i])
 spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-snow', 'false')
 /particles.min.js^
-/pureSnow.js^
 /snowfall.min.jquery.js
 /snowplow$script,domain=casamundo.se|hemnet.se
 /snowplow-tracker$script

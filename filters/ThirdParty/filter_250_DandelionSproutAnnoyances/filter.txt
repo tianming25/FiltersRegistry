@@ -46406,7 +46406,7 @@ vimeo.com##._16rrx
 ted.com#%#//scriptlet('ubo-sid.js', 'd.period', '1000')
 ted.com##.css-1dg07lz:has-text(Up next)
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! OriginalVersion: 12April2024v2-Alpha
+! OriginalVersion: 13April2024v3-Beta
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -46675,6 +46675,16 @@ news.sohu.com##.area.footer
 ! NVIDIA App
 /^https://images\.nvidia\.com/content/GRD.*/[g-z].*$/$app=NVIDIA App.exe|nvcontainer.exe
 ||images.nvidia.com/*-1920x620.jpg^$app=NVIDIA App.exe|nvcontainer.exe
+! Dolby Access app (DolbyAccess•exe), removing ones that are not directly related to Dolby Atmos sound tests
+||dolby.com/globalassets/access/banners^$app=DolbyAccess.exe
+||dolby.com/contentassets/*_testimonial-$app=DolbyAccess.exe
+! Lоvеnse Rеmоte's PC app (Lovense_Remote•exe), the banner doesn't actually even show up in the app
+||pc.vibemate.com/surfease/*homepage_banner$app=Lovense_Remote.exe
+! AOMEI Partition Assistant 10 (PartAssist•exe), sales prompts in the lower right of the screen even if the app is minimised
+||account.aomeitech.com/ini/popup/pa^$app=PartAssist.exe
+||aomeisoftware.com/popup/pa^$app=PartAssist.exe
+!+NOT_OPTIMIZED
+||aomeisoftware.com/ini/recommend/pa/rec.html^$app=PartAssist.exe
 !#endif
 ! Title: 🦁 Dandelion Sprout's African Languages List
 ! OriginalVersion: 05May2023v6-Alpha

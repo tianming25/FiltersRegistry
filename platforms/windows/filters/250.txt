@@ -1,9 +1,9 @@
-! Checksum: vhH9od9reoZ64Z/V68CFNg
-! Diff-Path: ../patches/250/250-s-1744548510-14400.patch
+! Checksum: 8bIDGG3yx8PAjNeDnTDfKg
+! Diff-Path: ../patches/250/250-s-1744562551-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.16.66
-! TimeUpdated: 2025-04-13T12:44:31+00:00
+! Version: 2.0.16.67
+! TimeUpdated: 2025-04-13T16:38:33+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
@@ -34102,7 +34102,7 @@ vimeo.com##._16rrx
 ted.com#%#//scriptlet('ubo-sid.js', 'd.period', '1000')
 ted.com##.css-1dg07lz:has-text(Up next)
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! OriginalVersion: 13April2024v3-Beta
+! OriginalVersion: 13April2024v4-Beta
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -34356,6 +34356,24 @@ ctrip.com##.copyright.mod
 mafengwo.cn###footer
 jandan.net###footer
 news.sohu.com##.area.footer
+! Removing various popup annoyances (Requires adding the exes manually to the list of filtered programmes)
+! CyberLink PowerDVD 16 (PowerDVD•exe); CyberLink Ultra HD Blu-Ray Advisor (BD_Advisor•exe)
+||liveupdate.cyberlink.com/*CHANNEL=iSales
+! Sims 3 (TS3W•exe)
+||igs.thesims3.com/api/$app=TS3W.exe
+! NVIDIA App
+/^https://images\.nvidia\.com/content/GRD.*/[g-z].*$/$app=NVIDIA App.exe|nvcontainer.exe
+||images.nvidia.com/*-1920x620.jpg^$app=NVIDIA App.exe|nvcontainer.exe
+! Dolby Access app (DolbyAccess•exe), removing ones that are not directly related to Dolby Atmos sound tests
+||dolby.com/globalassets/access/banners^$app=DolbyAccess.exe
+||dolby.com/contentassets/*_testimonial-$app=DolbyAccess.exe
+! Lоvеnse Rеmоte's PC app (Lovense_Remote•exe), the banner doesn't actually even show up in the app
+||pc.vibemate.com/surfease/*homepage_banner$app=Lovense_Remote.exe
+! AOMEI Partition Assistant 10 (PartAssist•exe), sales prompts in the lower right of the screen even if the app is minimised
+||account.aomeitech.com/ini/popup/pa^$app=PartAssist.exe
+||aomeisoftware.com/popup/pa^$app=PartAssist.exe
+!+NOT_OPTIMIZED
+||aomeisoftware.com/ini/recommend/pa/rec.html^$app=PartAssist.exe
 ! Title: 🦁 Dandelion Sprout's African Languages List
 ! OriginalVersion: 05May2023v6-Alpha
 ! Expires: 4 days

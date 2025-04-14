@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: HOs2F02efHfDs17YkO179w
-! Diff-Path: ../patches/14/14-s-1744643497-3600.patch
+! Checksum: zz08mw36lfavORZcpZnV7w
+! Diff-Path: ../patches/14/14-s-1744647093-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.25
-! TimeUpdated: 2025-04-14T15:07:49+00:00
+! Version: 2.2.27.26
+! TimeUpdated: 2025-04-14T16:08:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -32432,6 +32432,7 @@ macwelt.de,pcwelt.de##+js(set-constant, firebase.messaging, noopFunc)
 !
 ! SECTION: Push notifications - Regular rules
 !
+||passportnews.co.il/themes/HDB/wzpush.js
 karanpc.com##.zestmodal
 myfxbook.com##+js(set-cookie, blockWebNotificationsModalShortTerm, 7)
 windowslatest.com##.pnfpb-push-subscribe-icon
@@ -33323,6 +33324,10 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+passportnews.co.il##+js(set-local-storage-item, popup, true)
+passportnews.co.il###widget_newsletter_footer
+theverge.com###zephr-anchor > .duet--article--block-placement:has(> div[class] > a.duet--cta--button)
+vfokuse.mail.ru###article-root ~ div[class]:has(> div[class] > div[class] > div[class] > button[data-logger="PushSubscribeButton"])
 substack.com##.newsletter-post > div.pencraft:has(> div[class*="subscribeDialog"])
 substack.com##article > div > div.pencraft:has(> div.pencraft > div.subscribe-widget)
 substack.com##.embedded-publication-subscribe
@@ -41211,6 +41216,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+m.yelp.com##div[data-testid="smart-banner-pitch"]
 tvtropes.org##+js(set-cookie, app-announcement-banner-guest, 1)
 maziyabacity.com##.jss151
 haber.mynet.com##.app-link-container
@@ -45453,6 +45459,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/203136
+neoline.ru##a[href="/company/news/interesnoe/yandex-split-pay/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202283
 thedailybeast.com##.fancylink-card
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201878

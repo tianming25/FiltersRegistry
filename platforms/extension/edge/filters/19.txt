@@ -1,9 +1,9 @@
-! Checksum: YlgWt08xju64wpMsLsSMNw
-! Diff-Path: ../patches/19/19-s-1744636687-3600.patch
+! Checksum: L/f5z7vgiO37Fgxuhr9TdQ
+! Diff-Path: ../patches/19/19-s-1744647080-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.66
-! TimeUpdated: 2025-04-14T13:14:56+00:00
+! Version: 2.0.53.67
+! TimeUpdated: 2025-04-14T16:08:06+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -12208,6 +12208,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||passportnews.co.il/themes/HDB/wzpush.js
 karanpc.com##.zestmodal
 myfxbook.com#%#//scriptlet('set-cookie', 'blockWebNotificationsModalShortTerm', '7')
 windowslatest.com##.pnfpb-push-subscribe-icon
@@ -13100,6 +13101,10 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+passportnews.co.il#%#//scriptlet('set-local-storage-item', 'popup', 'true')
+passportnews.co.il###widget_newsletter_footer
+theverge.com###zephr-anchor > .duet--article--block-placement:has(> div[class] > a.duet--cta--button)
+vfokuse.mail.ru###article-root ~ div[class]:has(> div[class] > div[class] > div[class] > button[data-logger="PushSubscribeButton"])
 substack.com##.newsletter-post > div.pencraft:has(> div[class*="subscribeDialog"])
 substack.com##article > div > div.pencraft:has(> div.pencraft > div.subscribe-widget)
 substack.com##.embedded-publication-subscribe

@@ -1,5 +1,5 @@
-! Checksum: vk9UB0HlpWduxKFQ5E9RVg
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1744553412-3600.patch
+! Checksum: 9uOaRWWsXq47sVLdvf4j3g
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1744598358-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
 ! Version: 2.0.51.79
@@ -360,7 +360,6 @@ voirseries.io$$script[src="KGZ1bmN0aW9uKCQsZG9jdW1lbnQp"]
 /^(?!.*(ilfcdn.li|bytecdntp.com|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=scan-fr.cc
 $script,third-party,denyallow=ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=extreme-down.moe|dl-protect.link|tirexo.ink|zone-telechargement.*|fsmirror93.lol
 $xmlhttprequest,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=zone-telechargement.*
-campingcarlesite.com##div[id^="fancybox-"]
 observalgerie.com#%#//scriptlet('abort-current-inline-script', 'fetch', 'Uint8Array')
 fsmirror93.lol###ad-banner
 leboncoin.fr##li[style^="grid-area\:advertising"]
@@ -1101,6 +1100,7 @@ speed4up.com#@#.AdsTop
 @@||dl.unlockapk.com^
 @@||magazin.spiegel.de/EpubDelivery/image^
 @@||static.advance.net/static/common/js/adv_gigya.js
+@@||static.advance.net/static/common/js/adv_common.js
 @@||static.advance.net/static/common/js/adv_toprail.js
 youzik.com#@#a[style]
 @@||bitchute.com/static/*/js/monetization.js
@@ -1383,7 +1383,6 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 ://ad.*/adx/
 ://ad.*/dynamic/
 ://ad.*/embed.
-://ad.*/uri/
 ://ad.*?pid=
 ://adg.*/pub/
 ://adscdn.
@@ -1475,6 +1474,7 @@ _300-x-250_
 _300_600.
 _300x250/
 _300x250@
+_300x250v1.
 _300x300.gif
 _300x400.gif
 _300x600&
@@ -1508,6 +1508,7 @@ _ads.php$script,subdocument
 _ads/banner/
 _ads2-
 _ads_*?pubId=
+_ads_banner&
 _ads_banner_
 _ads_desktop.
 _ads_one_
@@ -1917,6 +1918,7 @@ _build=iclick-$popup
 ||backforward.bid^
 ||baldscatkins.com^
 ||balmyrind.com^
+||bankersend.com^
 ||basetts.com^
 ||baushainaig.com^
 ||bblvplguoma.com^
@@ -1961,7 +1963,6 @@ _build=iclick-$popup
 ||ca2686564a.com^
 ||callanspeed.top^
 ||carcakebedunch.com^
-||cartrigestale.com^
 ||catechuscypphi.shop^
 ||catsupskepped.com^
 ||cbbvi.com^
@@ -1993,7 +1994,6 @@ _build=iclick-$popup
 ||cpmterra.com^
 ||craftilypendantwhinny.com^
 ||craniolenfoil.shop^
-||crawledgoblet.com^
 ||craydark.pw^
 ||creatablegluesurvival.com^
 ||crinumslobated.com^
@@ -2297,6 +2297,7 @@ _build=iclick-$popup
 ||lvtuucmyfpz.com^
 ||lzexnxwjsmof.com^
 ||machilatundun.com^
+||malatiswirled.com^
 ||mamluksburion.com^
 ||mangerolympicssnort.com^
 ||mapiolaviwrba.com^
@@ -2377,7 +2378,6 @@ _build=iclick-$popup
 ||omvenusaurchan.com^
 ||onclckinp.com^
 ||onclckip.com^
-||oneaucys.com^
 ||onemontay.ru^
 ||onlinneoffers.com^
 ||onwardperishvaluables.com^
@@ -2495,7 +2495,6 @@ _build=iclick-$popup
 ||retimesfowl.top^
 ||retinaesprent.com^
 ||retiraltasty.top^
-||revenuetonightperforming.com^
 ||rhasuecism.top^
 ||riamiavid.com^
 ||rindespect.click^
@@ -2595,6 +2594,7 @@ _build=iclick-$popup
 ||thaimtotchouz.net^
 ||thaurgaiboocoah.com^
 ||thebainpushtu.com^
+||theirsneedful.com^
 ||theismsmartrix.click^
 ||thepsotsaims.com^
 ||thewhizproducts.com^
@@ -2695,12 +2695,12 @@ _build=iclick-$popup
 ||zestfulpate.click^
 ||zilovaro.ru^
 ||zilovaro.store^
+||zkkibwgpxbwcvt.com^
 ||zoaptuteglootoa.net^
 ||zolivexo.store^
 ||ztdog.com^
 ||zubplekl.com^
 ||zxvflioj.com^
--monero-miner/
 .aspx?poolid=
 /coinhive.min.js
 /lhnhelpouttab-current.
@@ -2711,7 +2711,6 @@ _build=iclick-$popup
 ||authedmine.com^$third-party
 ||binance.org^$third-party
 ||browsealoud.com/plus/scripts/$script
-||clgserv.pro^$third-party
 ||cnhv.co^$third-party
 ||coin-have.com^$third-party
 ||coinblind.com^$third-party
@@ -2913,7 +2912,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||pub.groupe-ldlc.com^
 ||ratehub.ca/widgets/$third-party
 ||recettes.de/images/logos/$third-party
-||regie-agricole.com^*/pubs^$third-party
 ||rza.pmu.fr^
 ||s.beop.io^
 ||s3.amazonaws.com^*/ads/
@@ -2953,6 +2951,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||wp.com/*/wp-content/uploads/*?resize=468%2C60
 ||wp.com/*/wp-content/uploads/*?resize=728%2C90
 ||wp.com/bluehost-cdn.com/media/partner/images/
+||wp.com/static.k2s.cc/images/i/
 ||wp.com/static.keep2share.cc/images/i/
 ||wp.com^*-300x250.
 ||wrapper.lemde.fr^
@@ -2970,7 +2969,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||shorte.st^$script,third-party
 ||shortem.com^$script,subdocument,third-party
 ||tmearn.net^$script,third-party
-||hostingpics.net/pics/*468x60.
 ||i.imgur.com/32xkKog.jpg
 ||lookimg.com/images/2021/12/20/PydgJE.png
 ||nsa40.casimages.com/img/2020/05/11/200511033032222532.png
@@ -3168,6 +3166,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||jeux.org/vda/
 ||judgehype.com/pub2/bg.php?
 ||lacanausurfinfo.com/admin/images/pubs/
+||lacasadeel.net/banners/
 ||lacoccinelle.net/extra.js
 ||lacoccinelle.net/generic.js
 ||ladiagonale.net/wp-content/uploads/2023/02/pub_article.jpg
@@ -3251,6 +3250,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||tahiti-infos.com/photo/*x150
 ||tahiti-infos.com/photo/*x90.
 ||tahiti-infos.com/photo/bann
+||tchatche.com/123m?
 ||techpowerup.com/reviyu
 ||telesatellite.com/images/a/
 ||tendancehotellerie.fr/img/jpg/
@@ -3278,6 +3278,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||x1337x.*/css/images/atopg.gif
 ||xavbox.com/ban/
 ||zebest-3000.com/*.html
+||zone-streaming.fr/wp-content/uploads/amazon-video.jpg
 ||zone911.com/images/logo-banniere/
 ||zoneadsl.com/_next/image?*-970x90.
 ||zonebourse.com/content_
@@ -3310,7 +3311,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###banniere_pub
 ###bg_pub
 ###bloc-pub
-###bloc-pub-gauche-120-600
 ###blocPub_CARRE_PUB
 ###bloc_pub
 ###block-gc-ad-bloc-centre-1
@@ -3524,7 +3524,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###publicite
 ###publicite-bas
 ###publiciteHaut
-###publicite_liste_bookmaker
 ###publicite_right
 ###publicite_top
 ###pubright
@@ -3622,6 +3621,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.buzz-ads
 ##.c-ads-sidebar
 ##.carrepub
+##.catAds
 ##.co-ads
 ##.col-advert
 ##.column_in_pub
@@ -3712,6 +3712,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.liens-sponsorises__external
 ##.line-adv
 ##.logo-right-ads
+##.map_fond_pub
 ##.marketing-container
 ##.mbanner-ad-wrapper
 ##.midads
@@ -3735,7 +3736,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.oan_ad
 ##.oboxads
 ##.oboxads-ad-widget
-##.oboxads-outstream
 ##.of-ad-container
 ##.padscreen
 ##.page-head-ad
@@ -3747,7 +3747,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pjsleads
 ##.placeholder-pub_dfp
 ##.player-adv
-##.player-screen-ads-wrapper
 ##.player-sponsor-block
 ##.player__ads
 ##.pmd-ads-mobile
@@ -3758,7 +3757,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pub-300
 ##.pub-300-250
 ##.pub-300-250-600
-##.pub-300-corp
 ##.pub-300x250
 ##.pub-300x600
 ##.pub-336x280
@@ -3834,7 +3832,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pub_left
 ##.pub_left_content
 ##.pub_mobile
-##.pub_open
 ##.pub_pave
 ##.pub_sky
 ##.pub_skyscraper
@@ -3939,6 +3936,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.top-publicite
 ##.topPub
 ##.top_banner_ads
+##.top_reklama
 ##.topleftad
 ##.tradingCenterAd
 ##.txt-pub
@@ -4135,7 +4133,6 @@ africanmanager.com###Layer1
 scan-manga.com###TOPAMZ720
 lepoint.fr###WRAP_BAN_ATF
 ahlaejaba.com,net-iris.fr,orange.fr,paruvendu.fr,radio.co.ma,zalotech.com###ad
-bobvoyeur.com,djazairess.com,ecogine.org,tendancehotellerie.fr,zalotech.com###ads
 cuisineaz.com###advi
 finalclap.com###aff_tuto_com
 akeo.fr###amazon
@@ -4170,7 +4167,6 @@ journaldunet.com###ctn_infeed
 papvacances.fr###details-services
 maxifoot.fr###ep300z
 maxifoot.fr###ep728
-cultissime.cyou,liensporno.com,wow-films.quest###fakeplayer
 amateur2sexe.fr###footer-boom
 hardware.fr###footer_img
 bdgest.com,bedetheque.com###hab_click
@@ -4181,6 +4177,7 @@ ladepeche.fr,midilibre.fr###immobilier
 walfoot.be###imu
 agriaffaires.com,bloggif.com,lesoir.be,play3-live.com,topquizz.fr###leaderboard
 tiplanet.org###left_column > .archive:not([id])
+journaldugeek.com###linkhabillage
 laposte.net###lpn_pub_main
 hellokids.com###mask
 sfr.fr###meeticWrapper
@@ -4196,7 +4193,6 @@ p-nintendo.com###network > ul > .jm
 net-iris.fr###ni-barreGroup
 xrares.com###nuevoa
 orange.fr###o_carrepub
-orange.fr###oan_ora_2_300x250_hp.prospects
 net-iris.fr###offer
 youtube.com###offer-module
 e-wok.tv,mp4upload.com###overlay
@@ -4365,6 +4361,7 @@ leparisien.fr##.moduleNew300
 ouedkniss.com##.mt-4.mt-md-6.home-front-store
 ouedkniss.com##.my-4
 jetanimes.com##.mysticky-welcomebar-fixed
+tchatche.com##.native-banner
 porndoe.com##.news-ticker-wrap
 nordicmag.info##.nordi-widget
 lecho.be##.o-hpgrid__row-sponsoredcombo
@@ -4413,6 +4410,7 @@ orangeinfo.fr,scifi-universe.com##.pubheader
 heures.be,hours.be,openingstijdengids.nl,openingsurengids.be##.publSibar
 lanutrition.fr##.push--shop
 flvto.biz##.push-offer
+imobie.fr##.rec_download
 forumconstruire.com##.recit_header_box
 cdiscount.com##.regBloc
 endirect24.com##.rek
@@ -4462,7 +4460,6 @@ meteomedia.com##[data-testid="ad-with-pre-text"]
 qwantjunior.com##[data-testid="autopromoJuniorLink"]
 meteomedia.com##[data-testid="header-ad-content"]
 meteomedia.com##[data-testid="pre-ad-text"]
-meteofrance.com##[href*=".xiti.com"] > img
 filecrypt.cc,filecrypt.co##[href^="javascript:"]
 fnac.com##[id$="-sponsored_products-0"]
 voyageforum.com##[id*="billboardArround"]

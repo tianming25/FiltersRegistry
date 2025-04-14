@@ -1,9 +1,9 @@
-! Checksum: 7NWFqyda+kccSqgyo1w0Dg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1744598344-3600.patch
+! Checksum: 3v/k4BBE7GUqYdxgJODQIg
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1744628974-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.11.51
-! TimeUpdated: 2025-04-11T12:10:33+00:00
+! Version: 2.0.11.52
+! TimeUpdated: 2025-04-14T11:06:35+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### Block useless widgets #######################
@@ -1036,9 +1036,10 @@ volyninfa.com.ua###custom_html-2
 ||w.chatlio.com/v5/w.chatlio-widget.js
 ||wchat.freshchat.com/js/widget.js
 ||widget.info-*.ru/js/init.js?t=$script,third-party
+@@||marquiz.ru^$domain=logiccontact.space
 @@||widget.happyfoxchat.com^$domain=support.linksys.com
 @@||secure.livechatinc.com/customer/action/open_chat?$domain=kinguin.net
-@@||static.elfsight.com^$third-party,domain=cafemarta.ch|trestlebrewing.com|taube-rankweil.at|savearizonafund.com|avproedge.com|spiceandcurry.ca|keenetic.com.tr|bigchicken.com
+@@||static.elfsight.com^$third-party,domain=cafemarta.ch|trestlebrewing.com|taube-rankweil.at|savearizonafund.com|avproedge.com|spiceandcurry.ca|keenetic.com.tr|bigchicken.com|agirsaglam.com
 @@||code.jivo.ru/widget/$domain=coffee-tea-bravos.ru
 @@||components.justanswer.com^$domain=justanswer.co.uk|justanswer.es|justanswer.de|justanswer.jp
 gall.dcinside.com##.dctrend_ranking
@@ -1177,7 +1178,7 @@ sakasaka10.blog.jp##.article-body-more > .t_b ~ br + br
 ||hawk.laptopmag.com^
 ||pcm-intl.speedtestcustom.com^$domain=pcmag.com
 ||script.marquiz.ru^
-||quiz.marquiz.ru^
+||quiz.marquiz.ru^$third-party
 ||widget.beop.io^$third-party
 ||arc.io/widget.*js$third-party
 haberler.com#%#//scriptlet("abort-current-inline-script", "document.write", "widget.yenimedya.com.tr/Partner/")
@@ -1246,6 +1247,7 @@ ukr.net###sinoptik_container
 ##.gsInformer
 /gs_informerClient.min.$third-party
 ||gismeteo.*/getInformer/$third-party
+paperpaper.io,paperpaper.ru##div[data-elementor-type="wp-post"] > section[data-settings="{\"background_background\":\"classic\"}"]
 militarnyi.com##.custom-support
 thegatewaypundit.com##.tgp-donate-sidebar-widget
 zona.media##.mz-publish__wrapper > div.mz-publish__wrapper__row:has(> section > div.tools__donate-article)

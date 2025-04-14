@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: p7ltpv0TYr+tZbJkXxEceg
-! Diff-Path: ../patches/22/22-s-1744373658-3600.patch
+! Checksum: 3LB/eu9N9Sdmc71Af0SDOg
+! Diff-Path: ../patches/22/22-s-1744628997-3600.patch
 ! Title: AdGuard Widgets filter
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
-! Version: 2.0.11.51
-! TimeUpdated: 2025-04-11T12:10:33+00:00
+! Version: 2.0.11.52
+! TimeUpdated: 2025-04-14T11:06:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1765,6 +1765,8 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 !
 !   SECTION: Widgets - Marketing - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202762
+@@||marquiz.ru^$domain=logiccontact.space
 ! https://github.com/AdguardTeam/AdguardFilters/issues/191742
 @@||static.landbot.io/landbot-widget/landbot-widget-*.js$domain=emma-matratze.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/188358
@@ -1773,10 +1775,11 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 @@||wchat.freshchat.com/js/widget.js$domain=livecrowd.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/174036
 @@||secure.livechatinc.com/customer/action/open_chat?$domain=kinguin.net
+! https://github.com/AdguardTeam/AdguardFilters/issues/202755
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201505
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187963
 ! https://github.com/AdguardTeam/AdguardFilters/issues/170804
-@@||static.elfsight.com^$third-party,domain=cafemarta.ch|trestlebrewing.com|taube-rankweil.at|savearizonafund.com|avproedge.com|spiceandcurry.ca|keenetic.com.tr|bigchicken.com
+@@||static.elfsight.com^$third-party,domain=cafemarta.ch|trestlebrewing.com|taube-rankweil.at|savearizonafund.com|avproedge.com|spiceandcurry.ca|keenetic.com.tr|bigchicken.com|agirsaglam.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/158945
 @@||widgets.trustedshops.com/reviews/tsSticker/tsSticker.js$domain=interpack.eu
 @@||widgets.trustedshops.com/reviews/tsSticker/css/light.theme.css$domain=interpack.eu
@@ -2182,7 +2185,7 @@ laptopmag.com##.hawk-nest
 pcmag.com###article > div:not([class]) > div.aspect-ratio-16\/9.iframe-wrapper
 ||getcobra.io/ext/poll/$third-party
 ||script.marquiz.ru^
-||quiz.marquiz.ru^
+||quiz.marquiz.ru^$third-party
 ||widget.bitay.com^$domain=ajansspor.com
 ajansspor.com##.bitay-widget-container
 ! stock market widget
@@ -2401,6 +2404,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+paperpaper.io,paperpaper.ru##div[data-elementor-type="wp-post"] > section[data-settings="{\"background_background\":\"classic\"}"]
 militarnyi.com##.custom-support
 thegatewaypundit.com##.tgp-donate-sidebar-widget
 zona.media##.mz-publish__wrapper > div.mz-publish__wrapper__row:has(> section > div.tools__donate-article)

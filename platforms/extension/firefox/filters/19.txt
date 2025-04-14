@@ -1,9 +1,9 @@
-! Checksum: 9bSJXBxz7hGmxvcWu6SpGQ
-! Diff-Path: ../patches/19/19-s-1744621884-3600.patch
+! Checksum: qFS7yVlw0m1tlorZcz0yPA
+! Diff-Path: ../patches/19/19-s-1744625487-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.62
-! TimeUpdated: 2025-04-14T09:08:13+00:00
+! Version: 2.0.53.63
+! TimeUpdated: 2025-04-14T10:08:01+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4477,6 +4477,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+dashlane.com#%#//scriptlet('set-cookie', 'offer-default', 'true')
 wcostream.tv###announcement-modal
 ej.alc.co.jp##body > #text-banner
 donaldjtrump.com##.popup
@@ -13114,6 +13115,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+leaddev.com#$##zephr-zone-popup { display: none !important; }
+leaddev.com#$#body[style^="overflow: hidden;"] { overflow: auto !important; position: absolute !important }
 gamefile.news#%#//scriptlet('trusted-set-local-storage-item', 'pub-66124-subscribe-prompt-next-shown-at', '99999999999999')
 scmp.com##div[data-qa="HomePage-Newsletters"]
 pc-builds.com###newsletter-sidebar-form

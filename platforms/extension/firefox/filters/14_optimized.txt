@@ -1,9 +1,9 @@
-! Checksum: IUIGyUaHV5wVo92byFdzBA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1744665027-3600.patch
+! Checksum: ZfXTw7R3XkqxdvSw38joOQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1744668661-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.29
-! TimeUpdated: 2025-04-14T21:07:00+00:00
+! Version: 2.2.27.30
+! TimeUpdated: 2025-04-14T22:07:25+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -2749,8 +2749,8 @@ probit.com##app-cookie-popup
 bbb.org#%#//scriptlet('trusted-set-cookie-reload', 'iabbb_cookies_policy', '{%22necessary%22:true%2C%22functional%22:true%2C%22performance%22:false%2C%22marketing%22:false}')
 bbb.org#%#//scriptlet('trusted-set-cookie', 'iabbb_cookies_preferences_set', 'true')
 mediamarkt.nl##div:has(> [data-test="mms-search-consent-section"])
-restaurantclub.pl#$#html.disable--interaction.show--consent:not(#style_important) { overflow-y: auto !important; }
-restaurantclub.pl,zamowienia.tpizza.pl,houseflippergame.com,subiektywnieofinansach.pl,atlasbus.by,mrgugu.com,dietly.pl#$##cc-main { display: none !important; }
+soulkyn.com,restaurantclub.pl#$#html.disable--interaction.show--consent:not(#style_important) { overflow-y: auto !important; }
+soulkyn.com,restaurantclub.pl,zamowienia.tpizza.pl,houseflippergame.com,subiektywnieofinansach.pl,atlasbus.by,mrgugu.com,dietly.pl#$##cc-main { display: none !important; }
 zamowienia.tpizza.pl,houseflippergame.com,subiektywnieofinansach.pl,atlasbus.by,mrgugu.com,dietly.pl#$#html.disable--interaction.show--consent:not(#style_important) { overflow: auto !important; }
 bleepingcomputer.com#%#//scriptlet('set-cookie', 'sc_cookie_consent', '0')
 melee.gg#%#//scriptlet('set-cookie-reload', 'CookieConsent', 'true')
@@ -4617,6 +4617,8 @@ inbank.ee#$#div[id^="cookie-consent-modal"] { display: none !important; }
 inbank.ee#$#body.modal-open { overflow: visible !important; padding-right: 0 !important; }
 cool-mania.pl,forpro.pl,natterhub.com,grubytom.pl,kotas.com.br,kuchniapupila.pl,allnutrition.pl,elenovo.pl,facetaria.pl,cool-mania.de,inkbook.pl,rheumaliga.ch,medicshop.pl,cobbo.pl,pakomat.pl,rolnet.pl,petrostar.pl,atmoskop.cz,pulser.hr,jesus.de,airindia.com,lovekrakow.pl,mediccentre.pl,erzeszow.pl#$#html.force--consent.show--consent:not(#style_important) { overflow: auto !important; }
 cool-mania.pl,forpro.pl,natterhub.com,grubytom.pl,kotas.com.br,kuchniapupila.pl,allnutrition.pl,elenovo.pl,facetaria.pl,cool-mania.de,inkbook.pl,rheumaliga.ch,medicshop.pl,cobbo.pl,pakomat.pl,rolnet.pl,petrostar.pl,atmoskop.cz,pulser.hr,jesus.de,airindia.com,lovekrakow.pl,mediccentre.pl,giga-hamburg.de,gerth.de,erzeszow.pl#$##cc--main { display: none !important; }
+soulkyn.com#$#html.show--consent { overflow: auto !important; }
+soulkyn.com#$##cc-main { display: none !important; }
 hyperbook.pl,eazymut.pl###cookie-change-button
 ||consent.prointernet.com/consent.js
 thaiza.com##.ck-acpt-container

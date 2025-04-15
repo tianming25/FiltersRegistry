@@ -1,9 +1,9 @@
-! Checksum: Pf28h0lgN5u+uOE7rdq+WA
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1744729842-3600.patch
+! Checksum: jxscoY023Dpwp8YizOGE0g
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1744755016-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.4
-! TimeUpdated: 2025-04-15T15:07:23+00:00
+! Version: 2.0.20.5
+! TimeUpdated: 2025-04-15T22:07:01+00:00
 ! Expires: 5 days (update frequency)
 /js/jquery.smartbanner.js
 ###xm_app_stickyHeader
@@ -1644,7 +1644,11 @@ honeysanime.com#$##header-line-2 { margin-top: -60px !important; }
 honeysanime.com#$##wrap-app-notice { display: none !important; }
 !+ NOT_OPTIMIZED
 m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
-~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
+~search.brave.com,~status.im,~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~hitta.se,~mail.ru,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
+theinformation.com##a[data-testid="download-app"]
+quora.com#?#a[href="https://www.quora.com/"][target="_top"] + div[class] > button:has(> div > div > div:contains(App))
+fantasi.one#?##app > div.background:has(> div:only-child > .close + .content > p:contains(App))
+hepsiburada.com##details[class^="sf-smart-banner"]
 ifunny.co###App > div[class*=" "]:has(> div[class] a[href^="https://ifunny.onelink.me/"])
 okeydostavka.ru###mainHeaderMobileBanner
 tft.op.gg##a[href^="https://apps.apple.com/"][href*="/app/op-gg/id605722237"]

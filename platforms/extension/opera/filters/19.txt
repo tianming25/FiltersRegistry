@@ -1,9 +1,9 @@
-! Checksum: B1/O01g94YGar9GJD1Umjg
-! Diff-Path: ../patches/19/19-s-1744737010-3600.patch
+! Checksum: JeycjQ6DElYTPesvm/aI9Q
+! Diff-Path: ../patches/19/19-s-1744755027-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.75
-! TimeUpdated: 2025-04-15T17:06:58+00:00
+! Version: 2.0.53.76
+! TimeUpdated: 2025-04-15T22:07:01+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4470,6 +4470,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+marktechpost.com##div[class*="sgpb-popup-"]
 cnnturk.com##watch-live-button
 bikepacking.com#%#//scriptlet('abort-current-inline-script', '$', 'showOverlay')
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:not(:has(button[aria-label="Close modal"])) { display: none !important; }
@@ -13110,6 +13111,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+androidauthority.com##main div[class]:has(> form:only-child)
+olderbest.com##seguno-popup
 trailspace.com#$#.fancybox-newsletter { display: none !important; }
 trailspace.com#$#body.fancybox-active { overflow: auto !important; }
 showbox.media##.follow_us

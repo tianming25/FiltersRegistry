@@ -1,9 +1,9 @@
-! Checksum: BWpKe6mqJAi7Dx+lFnKBvQ
-! Diff-Path: ../patches/20/20-s-1744729862-3600.patch
+! Checksum: hH+QQq2u/yzhq7Xwf34IkQ
+! Diff-Path: ../patches/20/20-s-1744755037-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.4
-! TimeUpdated: 2025-04-15T15:07:23+00:00
+! Version: 2.0.20.5
+! TimeUpdated: 2025-04-15T22:07:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3602,6 +3602,10 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+theinformation.com##a[data-testid="download-app"]
+quora.com#?#a[href="https://www.quora.com/"][target="_top"] + div[class] > button:has(> div > div > div:contains(App))
+fantasi.one#?##app > div.background:has(> div:only-child > .close + .content > p:contains(App))
+hepsiburada.com##details[class^="sf-smart-banner"]
 ifunny.co###App > div[class*=" "]:has(> div[class] a[href^="https://ifunny.onelink.me/"])
 okeydostavka.ru###mainHeaderMobileBanner
 tft.op.gg##a[href^="https://apps.apple.com/"][href*="/app/op-gg/id605722237"]

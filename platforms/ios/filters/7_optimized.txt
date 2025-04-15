@@ -1,9 +1,9 @@
-! Checksum: UVlHs6l285h2bYB41ipg/A
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1744723060-3600.patch
+! Checksum: KOHyITfE+z7HxB/Yw2o9qw
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1744737020-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.71
-! TimeUpdated: 2025-04-15T13:13:51+00:00
+! Version: 2.0.63.72
+! TimeUpdated: 2025-04-15T17:06:40+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adandhub.com^
@@ -416,6 +416,9 @@ rxlife.net#%#//scriptlet('prevent-fetch', 'adsbygoogle')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rxlife.net
 bm.best-hit.tv#%#//scriptlet('prevent-addEventListener', 'load', 'delayCheckAB')
+in-jpn.com,oninet.ne.jp,xth.jp#%#//scriptlet('set-constant', 'myFunc', 'noopFunc')
+/ad-check.js$domain=in-jpn.com|xth.jp
+/sakigake-ad-$domain=www2.oninet.ne.jp
 in-jpn.com##.sk-popup-window
 ||yourfones.net/js/adsb.js
 yourfones.net#%#//scriptlet('spoof-css', 'ins.adsbygoogle', 'display', 'block')

@@ -1,8 +1,8 @@
-! Checksum: jgCMt3aan4VreNWIp8auww
+! Checksum: RzjMC+tM1bCXowSkwIdd0Q
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.59.86
-! TimeUpdated: 2025-04-15T05:07:54+00:00
+! Version: 2.0.59.87
+! TimeUpdated: 2025-04-15T08:09:26+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5392,7 +5392,7 @@ tbs.fr###trackers-ask-consent-gdpr
 wokularach.pl#%#//scriptlet('set-local-storage-item', 'display_cookie_modal', 'false')
 allabout-japan.com###meerkat-wrap
 larousse.fr###poool-widget
-ekstrabladet.dk,otto.haribo.com,flughafen-zuerich.ch,stock3.com#%#//scriptlet('trusted-click-element', 'button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
+hawk.live,ekstrabladet.dk,otto.haribo.com,flughafen-zuerich.ch,stock3.com#%#//scriptlet('trusted-click-element', 'button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
 mediasphera.ru###cknt
 randa.org#$#body { overflow: auto !important; padding-right: 0 !important; }
 randa.org#$#.modal-backdrop { display: none !important; }
@@ -16799,6 +16799,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202826
+@@||consent.cookiebot.com/uc.js$domain=hawk.live
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203128
 giftshop24.pl#@#.gdprModal__placeholder
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202776

@@ -1,9 +1,9 @@
-! Checksum: YABBltWrRMp4NlVeRwzHrw
-! Diff-Path: ../patches/14/14-s-1744693864-3600.patch
+! Checksum: hcponNK/t5hfrasw0nnCuw
+! Diff-Path: ../patches/14/14-s-1744704766-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.31
-! TimeUpdated: 2025-04-15T05:07:47+00:00
+! Version: 2.2.27.32
+! TimeUpdated: 2025-04-15T08:09:20+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5393,7 +5393,7 @@ tbs.fr###trackers-ask-consent-gdpr
 wokularach.pl#%#//scriptlet('set-local-storage-item', 'display_cookie_modal', 'false')
 allabout-japan.com###meerkat-wrap
 larousse.fr###poool-widget
-ekstrabladet.dk,otto.haribo.com,flughafen-zuerich.ch,stock3.com#%#//scriptlet('trusted-click-element', 'button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
+hawk.live,ekstrabladet.dk,otto.haribo.com,flughafen-zuerich.ch,stock3.com#%#//scriptlet('trusted-click-element', 'button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll')
 mediasphera.ru###cknt
 randa.org#$#body { overflow: auto !important; padding-right: 0 !important; }
 randa.org#$#.modal-backdrop { display: none !important; }
@@ -16802,6 +16802,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/202826
+@@||consent.cookiebot.com/uc.js$domain=hawk.live
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203128
 giftshop24.pl#@#.gdprModal__placeholder
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202776

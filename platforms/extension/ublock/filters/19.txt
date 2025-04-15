@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: /QMKFsg1R8P6sCDU8BnSbA
-! Diff-Path: ../patches/19/19-s-1744719279-3600.patch
+! Checksum: jNNQ6c4BX1ioSNxbl8yFDg
+! Diff-Path: ../patches/19/19-s-1744723053-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.70
-! TimeUpdated: 2025-04-15T12:11:02+00:00
+! Version: 2.0.53.71
+! TimeUpdated: 2025-04-15T13:14:09+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4386,6 +4386,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+bikepacking.com##+js(abort-current-script, $, showOverlay)
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:not(:has(button[aria-label="Close modal"])) { display: none !important; }
 instacart.com#$#body.body--auth-modal-open { overflow: visible !important; }
 instacart.com##div[aria-label="$0 delivery fees on next 3 orders"]
@@ -13038,6 +13039,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+pamukovasosyalmedya.com##.tarih > a[title="Google News"]
+comicbook.com##.comicbook-cta-newsletter-wrap
 passportnews.co.il##+js(set-local-storage-item, popup, true)
 passportnews.co.il###widget_newsletter_footer
 theverge.com###zephr-anchor > .duet--article--block-placement:has(> div[class] > a.duet--cta--button)

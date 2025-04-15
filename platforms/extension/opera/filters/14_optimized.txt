@@ -1,9 +1,9 @@
-! Checksum: zNnbY8iHX6iBT5+fatFTjA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1744726251-3600.patch
+! Checksum: PSee3ASRfF91c/s4Is594g
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1744729852-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.36
-! TimeUpdated: 2025-04-15T14:07:33+00:00
+! Version: 2.2.27.37
+! TimeUpdated: 2025-04-15T15:07:14+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1455,6 +1455,8 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+casadotiro.com.br###container-popup:has(a[href="politica.privacidade.php"])
+stager.co##.s-cookie-consent
 easy-peasy.ai###__next > .fixed.m-4.max-w-md.rounded-lg.bg-gray-100
 starhub.com##.globalimportantmessage
 giftshop24.pl#%#//scriptlet('remove-class', 'overflow-hidden', 'body')
@@ -11198,6 +11200,7 @@ aol.com#@#.adwrap
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com|etnownews.com|timesnownews.com|menshealth.com|themirror.com|cq.ru|voetbalzone.nl|perplexity.ai|lefigaro.fr|lifehacker.ru|app.notta.ai|vnexpress.net
 ##iframe[id="google-one-tap-iframe"][allow="identity-credentials-get"]
 /.*/$permissions=identity-credentials-get=(),document
+cnnturk.com##watch-live-button
 bikepacking.com#%#//scriptlet('abort-current-inline-script', '$', 'showOverlay')
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:not(:has(button[aria-label="Close modal"])) { display: none !important; }
 instacart.com#$#body.body--auth-modal-open { overflow: visible !important; }
@@ -14740,6 +14743,7 @@ ozgurkocaeli.com.tr,turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocael
 gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,thelocal.ch,morgenpost.de,waz.de,nrz.de,braunschweiger-zeitung.de,abendblatt.de,wolfsburger-nachrichten.de,wolfenbuetteler-zeitung.de,ynet.co.il#$#html > body.tp-modal-open { overflow: auto !important; }
 gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,thelocal.ch,morgenpost.de,waz.de,nrz.de,braunschweiger-zeitung.de,abendblatt.de,wolfsburger-nachrichten.de,wolfenbuetteler-zeitung.de,ynet.co.il#$#div[class="tp-modal"][style^="z-index: 3000"] { display: none !important; }
 gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,thelocal.ch,morgenpost.de,waz.de,nrz.de,braunschweiger-zeitung.de,abendblatt.de,wolfsburger-nachrichten.de,wolfenbuetteler-zeitung.de,ynet.co.il#$#div[class="tp-modal"][style^="z-index: 3000"] ~ div.tp-backdrop { display: none !important; }
+showbox.media##.follow_us
 pamukovasosyalmedya.com##.tarih > a[title="Google News"]
 comicbook.com##.comicbook-cta-newsletter-wrap
 chubbycable.com#%#//scriptlet('trusted-set-local-storage-item', 'cc-theme-popup-dismissed', '$now$')
@@ -20861,6 +20865,7 @@ tv.yandex.*##.recommended-ott
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
 www.kinopoisk.ru##div[class^="trailer-promo"]
+santaretail.by##.gif_banner
 zeit.de##dialog[data-tp-layout="footer_bar_offer_variante_shared"]
 blitz.gg##div[class]:has(> .placeholder > [href^="/pro?utm_"])
 kyuzerogo.sakura.ne.jp##body > div.pe_1

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: uJVWfMOVn7gJfrFxNG3Jfg
-! Diff-Path: ../patches/14/14-s-1744726256-3600.patch
+! Checksum: 8/frnZqIQfPde4vHRqUuvg
+! Diff-Path: ../patches/14/14-s-1744729857-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.36
-! TimeUpdated: 2025-04-15T14:07:33+00:00
+! Version: 2.2.27.37
+! TimeUpdated: 2025-04-15T15:07:14+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2464,6 +2464,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+casadotiro.com.br###container-popup:has(a[href="politica.privacidade.php"])
+stager.co##.s-cookie-consent
 easy-peasy.ai###__next > .fixed.m-4.max-w-md.rounded-lg.bg-gray-100
 starhub.com##.globalimportantmessage
 giftshop24.pl##+js(remove-class, overflow-hidden, body)
@@ -24678,6 +24680,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+cnnturk.com##watch-live-button
 bikepacking.com##+js(abort-current-script, $, showOverlay)
 instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:not(:has(button[aria-label="Close modal"])) { display: none !important; }
 instacart.com#$#body.body--auth-modal-open { overflow: visible !important; }
@@ -33331,6 +33334,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+showbox.media##.follow_us
 pamukovasosyalmedya.com##.tarih > a[title="Google News"]
 comicbook.com##.comicbook-cta-newsletter-wrap
 passportnews.co.il##+js(set-local-storage-item, popup, true)
@@ -44733,6 +44737,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+ifunny.co###App > div[class*=" "]:has(> div[class] a[href^="https://ifunny.onelink.me/"])
+okeydostavka.ru###mainHeaderMobileBanner
 tft.op.gg##a[href^="https://apps.apple.com/"][href*="/app/op-gg/id605722237"]
 mega.nz##.mega-promo-banner
 fibabanka.com.tr##+js(set-cookie, smartbanner, true)
@@ -48876,6 +48882,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+santaretail.by##.gif_banner
 zeit.de##dialog[data-tp-layout="footer_bar_offer_variante_shared"]
 blitz.gg##div[class]:has(> .placeholder > [href^="/pro?utm_"])
 kyuzerogo.sakura.ne.jp##body > div.pe_1

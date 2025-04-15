@@ -1,9 +1,9 @@
-! Checksum: GKsF9F5eVI0/sYLvZCrQWg
-! Diff-Path: ../patches/19/19-s-1744693877-3600.patch
+! Checksum: X/UWFoCDrpoCv44baPBhwg
+! Diff-Path: ../patches/19/19-s-1744711897-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.53.68
-! TimeUpdated: 2025-04-15T05:07:55+00:00
+! Version: 2.0.53.69
+! TimeUpdated: 2025-04-15T10:08:03+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4645,6 +4645,9 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+instacart.com#$#.ReactModalPortal > div.AuthModal__Overlay:not(:has(button[aria-label="Close modal"])) { display: none !important; }
+instacart.com#$#body.body--auth-modal-open { overflow: visible !important; }
+instacart.com##div[aria-label="$0 delivery fees on next 3 orders"]
 agirsaglam.com##.tally-overlay
 dashlane.com#%#//scriptlet('set-cookie', 'offer-default', 'true')
 wcostream.tv###announcement-modal
@@ -9650,7 +9653,6 @@ bluebeards-revenge.co.uk#$#body { overflow: visible!important; }
 bluebeards-revenge.co.uk#$##bbr-popup { display: none!important; }
 20min.ch#?#body > #modal:has(> div[class] div[class] > div[class] > a[href^="https://cp.20min.ch"])
 20min.ch#$#body { overflow: visible !important; }
-blutv.com##a[test-id="registerStickyLink"]
 banki.ru##.l7e6a58f5
 transport-publiczny.pl,rynekinfrastruktury.pl,rynek-lotniczy.pl##.szerokosc > div[style^="float:"] > .popupModal
 transport-publiczny.pl,rynekinfrastruktury.pl,rynek-lotniczy.pl##.szerokosc > div[style^="float:"] > .popupElement
@@ -19418,7 +19420,7 @@ rihappy.com.br##.cadastro-whatsapp
 medaboutme.ru##.sidebar > form.form
 ryte.com###adNewSkyscraper
 forklog.com##div[class^="subscribe_blk"]
-jbl.com##.mail-form
+eksmo.ru,jbl.com##.mail-form
 inshokuten.com##.mailMagazineArea
 m.timesofindia.com##.newsletter_entertainment_widget
 programiz.com###mauticform_wrapper_csubscribersform

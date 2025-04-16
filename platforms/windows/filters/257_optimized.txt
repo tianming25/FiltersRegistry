@@ -1,9 +1,9 @@
-! Checksum: VcWPdCzcW4T4O6SjmVS/8g
-! Diff-Path: ../patches/257_optimized/257_optimized-s-1744792971-14400.patch
+! Checksum: gjZT1DVa7B0MRWg2Ugx25A
+! Diff-Path: ../patches/257_optimized/257_optimized-s-1744821838-14400.patch
 ! Title: uBlock Origin – Badware risks (Optimized)
 ! Description: Filter for risky sites, warning users of potential threats.
-! Version: 2.0.6.81
-! TimeUpdated: 2025-04-16T08:39:22+00:00
+! Version: 2.0.6.82
+! TimeUpdated: 2025-04-16T16:40:07+00:00
 ! Expires: 12 hours (update frequency)
 !+ NOT_OPTIMIZED
 ||01net.com/telecharger/$document
@@ -6050,29 +6050,29 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 ||dhl.*.potabox.com^$document,to=~dhl.com
 !+ NOT_OPTIMIZED
-||dhl-event.app^$all,to=~dhl.com
+||dhl-event.app^$all
 !+ NOT_OPTIMIZED
-||dhexpress.weebly.com^$all,to=~dhl.com
+||dhexpress.weebly.com^$all
 !+ NOT_OPTIMIZED
-||ltlweight.trgr.me^$all,to=~dhl.com
+||ltlweight.trgr.me^$all
 !+ NOT_OPTIMIZED
-||dhlproductosyservicios.com^$all,to=~dhl.com
+||dhlproductosyservicios.com^$all
 !+ NOT_OPTIMIZED
-||dhl-rpa-portal.infanion.com^$all,to=~dhl.com
+||dhl-rpa-portal.infanion.com^$all
 !+ NOT_OPTIMIZED
-||sites.google.com/view/expressdhl^$all,to=~dhl.com
+||sites.google.com/view/expressdhl^$all
 !+ NOT_OPTIMIZED
-||xn--d1aqfkf.xn--p1ai/bitrix/.../GlobalSources/$all,to=~dhl.com
+||xn--d1aqfkf.xn--p1ai/bitrix/.../GlobalSources/$all
 !+ NOT_OPTIMIZED
-||app.farmaciadelmonestironline.com/SER/dnkdl/$all,to=~dhl.com
+||app.farmaciadelmonestironline.com/SER/dnkdl/$all
 !+ NOT_OPTIMIZED
-||cricketbettingpro.com/home.html/autoload.html^$all,to=~dhl.com
+||cricketbettingpro.com/home.html/autoload.html^$all
 !+ NOT_OPTIMIZED
-||itmustbetime.com/content/uploads/products/china/china/index.php^$all,to=~dhl.com
+||itmustbetime.com/content/uploads/products/china/china/index.php^$all
 !+ NOT_OPTIMIZED
 ||leatherqueen.shop^$all
 !+ NOT_OPTIMIZED
-||dhl-express-ppd.infanion.com^$all,to=~dhl.com
+||dhl-express-ppd.infanion.com^$all
 !+ NOT_OPTIMIZED
 ||elementor.cloud/*/ENGHUY645/$document,to=~dhl.com
 !+ NOT_OPTIMIZED
@@ -6088,15 +6088,15 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 /tracking/fV5EjH/*.php^$document,to=~dhl.com
 !+ NOT_OPTIMIZED
-||delivery-globaldhlauth.github.io^$all,to=~dhl.com
+||delivery-globaldhlauth.github.io^$all
 !+ NOT_OPTIMIZED
 ||github.io/samedaydelivery/$document,to=~dhl.com
 !+ NOT_OPTIMIZED
-||myjobdhl.earcu.com^$all,to=~dhl.com
+||myjobdhl.earcu.com^$all
 !+ NOT_OPTIMIZED
 ||cere.network/*-dhlshipmailchecker.shtml^$document,to=~dhl.com
 !+ NOT_OPTIMIZED
-||myjobdhl.earcu.com^$all,to=~dhl.com
+||myjobdhl.earcu.com^$all
 !+ NOT_OPTIMIZED
 ||firavave.club^$all
 !+ NOT_OPTIMIZED
@@ -6119,6 +6119,8 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 ||instagram.irancell-10g-free.rf.gd^$all
 !+ NOT_OPTIMIZED
 ||businesslnstagram.zya.me^$all
+!+ NOT_OPTIMIZED
+||instagram0639.blogspot.$document
 !+ NOT_OPTIMIZED
 ||slimhealth.us^$all
 !+ NOT_OPTIMIZED
@@ -6230,19 +6232,19 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 /^https:\/\/(?:appeal|contact|page)\.[a-z]{15,}\.com\/appeal_case_id\b/$document,to=com|~facebook.com
 !+ NOT_OPTIMIZED
-||suport-page-help.com^$all,to=~facebook.com
+||suport-page-help.com^$all
 !+ NOT_OPTIMIZED
 /\/contract\/support-case-id=\d{14,19}\b/$document,match-case,to=~facebook.com
 !+ NOT_OPTIMIZED
 ||akuanakmamah.de^$document,to=~facebook.com
 !+ NOT_OPTIMIZED
-||support-metahelpcenter-id*.netlify.app^$all,to=~facebook.com
+||support-metahelpcenter-id*.netlify.app^$all
 !+ NOT_OPTIMIZED
 ||support-metahelpcenter-$document,to=~facebook.com
 !+ NOT_OPTIMIZED
 ||netlify.app/help/support/client_id=$document,to=~facebook.com
 !+ NOT_OPTIMIZED
-||reminders-infraction-account.netlify.app^$all,to=~facebook.com
+||reminders-infraction-account.netlify.app^$all
 !+ NOT_OPTIMIZED
 ||abc-ckd.com/facebook/$all
 !+ NOT_OPTIMIZED
@@ -6258,27 +6260,31 @@ torrdroidforpc.com##[href^="http://slugmefilehos.xyz/"]
 !+ NOT_OPTIMIZED
 /^https?:\/\/[-a-z]{12,}\.vercel\.app\/[^.]+?g_ep=?EgoyMDI/$document,match-case,to=vercel.app|~facebook.com
 !+ NOT_OPTIMIZED
+/^https?:\/\/[-a-z]{12,}\.vercel\.app\/[^.]+?=D400e/$document,match-case,to=vercel.app|~facebook.com
+!+ NOT_OPTIMIZED
+/^https?:\/\/[-a-z0-9]{25,}\.vercel\.app\/id\/\d{15,17}\.html\b/$document,match-case,to=vercel.app|~facebook.com
+!+ NOT_OPTIMIZED
 ||vercel.app/metasp.html^$document,to=~facebook.com
 !+ NOT_OPTIMIZED
-||live-metasupport.com^$all,to=~facebook.com
+||live-metasupport.com^$all
 !+ NOT_OPTIMIZED
-||supportadm7tmedia.online^$all,to=~facebook.com
+||supportadm7tmedia.online^$all
 !+ NOT_OPTIMIZED
-||befuls.shop^$all,to=~facebook.com
+||befuls.shop^$all
 !+ NOT_OPTIMIZED
-||businessrequestcenter.com^$all,to=~facebook.com
+||businessrequestcenter.com^$all
 !+ NOT_OPTIMIZED
-||businesscreatorportal.com^$all,to=~facebook.com
+||businesscreatorportal.com^$all
 !+ NOT_OPTIMIZED
-||fb-business.com^$all,to=~facebook.com
+||fb-business.com^$all
 !+ NOT_OPTIMIZED
-||faecbook.vn^$all,to=~facebook.com
+||faecbook.vn^$all
 !+ NOT_OPTIMIZED
-||contact-supportbusinessmanager.ubpages.com^$all,to=~facebook.com
+||contact-supportbusinessmanager.ubpages.com^$all
 !+ NOT_OPTIMIZED
 ||counselschambers.co.uk^$document,to=~facebook.com
 !+ NOT_OPTIMIZED
-||identityconfirrmpage.com^$all,to=~facebook.com
+||identityconfirrmpage.com^$all
 !+ NOT_OPTIMIZED
 /api/user/do_login|$xmlhttprequest,~third-party,to=com|info,method=post,header=access-control-allow-headers:/authorization\,content-type\,if-match\,if-modified-since\,if-none-match\,if-unmodified-since\,x-requested-with/i
 !+ NOT_OPTIMIZED
@@ -7277,8 +7283,6 @@ app##center#yangchen > iframe#external-frame[src="https://im136.mom/"]:not([clas
 ||soyte.cc^$all
 !+ NOT_OPTIMIZED
 ||dichvudienmay-xanh.online^$all,to=~dienmayxanh.com
-!+ NOT_OPTIMIZED
-||fasebook.com.vn^$all,to=~facebook.com.vn
 !+ NOT_OPTIMIZED
 ||giaohangtietkiemvn.website^$all,to=~giaohangtietkiem.vn
 !+ NOT_OPTIMIZED
@@ -8474,7 +8478,7 @@ uploadfox.net###ad-gs-05
 !+ NOT_OPTIMIZED
 /^https:\/\/[0-9a-z]{7}\.([0-9a-z]{7})\.top\/[0-9a-z]{7}\?t=\1&cid=[0-9a-z]+/$document,to=top,match-case
 !+ NOT_OPTIMIZED
-||dhldeliveryhome2.info^$all,to=~dhl.com
+||dhldeliveryhome2.info^$all
 !+ NOT_OPTIMIZED
 ||thetollroads.com-*.cfd^$all,to=~thetollroads.com
 !+ NOT_OPTIMIZED

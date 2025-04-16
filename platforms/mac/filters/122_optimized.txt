@@ -1,8 +1,8 @@
-! Checksum: wr52/p9/w5DwTAY/C2fWCA
+! Checksum: f8tbu10wGlxNNuJp2tUeqw
 ! Title: Fanboy's Annoyances (Optimized)
 ! Description: Removes in-page pop-ups and other annoyances. Includes Fanboy's Social Blocking & EasyList Cookie Lists.
-! Version: 2.1.45.52
-! TimeUpdated: 2025-04-16T08:38:46+00:00
+! Version: 2.1.45.53
+! TimeUpdated: 2025-04-16T12:44:39+00:00
 ! Expires: 5 days (update frequency)
 /1-popupally-pro-code.js
 /arscode-ninja-popups/*$~stylesheet
@@ -78,6 +78,7 @@ _backToTop.
 ###onesignal-popover-container
 ###phxtags-belowcontent
 ###piano_bottom_ribbon_wrapper
+###ppsPopupBgOverlay
 ###primeABBUpsell_feature_div
 ###wpd-bubble-wrapper
 ###wpfront-notification-bar-spacer
@@ -91,6 +92,7 @@ _backToTop.
 ##.onesignal-customlink-container
 ##.onesignal-slidedown-container
 ##.pin-it-btn-wrapper
+##.ppsPopupShell
 ##.prev-next-article
 ##.td-more-articles-box
 ##.trustpilot-widget
@@ -440,6 +442,7 @@ dashboard.razorpay.com#@##credential_picker_container
 ||apester.com^$third-party
 ||api.search.live.net^$third-party,domain=~bing.com
 ||app.convertful.com^$third-party
+||app.e2ma.net^$third-party
 ||attraqt.io^$third-party
 ||autolinkmaker.itunes.apple.com^$third-party
 ||batch.com^$third-party
@@ -888,6 +891,7 @@ www.youtube.com##tp-yt-paper-dialog.ytd-popup-container:has-text(/following Prem
 music.youtube.com##tp-yt-paper-dialog.ytmusic-popup-container:has-text(/family plan|Premium|ad-free|background play|kept playing|month free|without the ads|Try YouTube Music/)
 archdaily.com###article-navigation
 dailymail.co.uk###next-story
+news18.com###nextbtnwrap
 ndtv.com###tbl-next-up
 berkshireeagle.com,bgdailynews.com,bramptonguardian.com,captimes.com,chronicle-tribune.com,citizentribune.com,clintonherald.com,coloradopolitics.com,crossroadstoday.com,csindy.com,dailygazette.com,dailyitem.com,dentonrc.com,denvergazette.com,gazette.com,guelphmercury.com,herald-dispatch.com,hjnews.com,homenewshere.com,insidenova.com,insideottawavalley.com,insightnews.com,jhnewsandguide.com,kentuckytoday.com,keysnews.com,khq.com,kilgorenewsherald.com,kmaland.com,kmzu.com,komu.com,ktbs.com,kulr8.com,lufkindailynews.com,mdjonline.com,montanarightnow.com,mtdemocrat.com,nashvillescene.com,nbcrightnow.com,news-gazette.com,newsmirror.net,niagarathisweek.com,northcentralpa.com,ottumwacourier.com,phillytrib.com,postandcourier.com,pulaskicountyweekly.com,reformer.com,romesentinel.com,sfexaminer.com,sfweekly.com,sharonherald.com,starlocalmedia.com,swiowanewssource.com,thecanadianpressnews.ca,thecentersquare.com,themountaineer.com,thenewsenterprise.com,therecord.com,thesuburban.com,thetimestribune.com,unionleader.com,wdel.com,wdrb.com,wellandtribune.ca,wfmz.com,wvgazettemail.com,wvnews.com,wyomingnewsnow.tv,youralaskalink.com##.asset-paging-container
 lawandcrime.com,mediaite.com,whiskeyraiders.com##.c-article-nav-arrows
@@ -2012,6 +2016,7 @@ _social-bar/
 ##.ShareBox
 ##.ShareButton
 ##.ShareButtons
+##.ShareButtons__link
 ##.ShareLinks
 ##.ShareList
 ##.ShareMenu
@@ -2536,6 +2541,7 @@ _social-bar/
 ##.follow-text
 ##.follow-tw
 ##.follow-twitter
+##.follow-us-block
 ##.follow-us-box
 ##.follow-us-button
 ##.follow-us-container
@@ -3521,6 +3527,7 @@ _social-bar/
 ##.shareTop
 ##.shareTrig
 ##.shareTwitter
+##.shareVideo
 ##.shareWidget
 ##.shareWrap
 ##.share__button
@@ -4311,6 +4318,7 @@ _social-bar/
 ##.twitterbtn
 ##.twitterbutton
 ##.twitterfollow
+##.twitterjo
 ##.twittershare
 ##.twshare
 ##.twtr
@@ -4371,6 +4379,7 @@ _social-bar/
 ##.whatsapp-share-button
 ##.whatsapp.icon
 ##.whatsapp_share
+##.widget--twitter
 ##.widget-follow
 ##.widget-follow-us
 ##.widget-followus
@@ -4682,6 +4691,7 @@ alchetron.com##.alchetronShareCard
 asiaone.com##.ao-share-buttons
 firstpost.com##.art-soc-icons
 chosun.com##.article-control-bar
+gfinityesports.com,stealthoptional.com##.article-float-buttons
 mymodernmet.com##.article-share-container
 freebeacon.com##.article-share-icons
 cosmosmagazine.com,forbes.com,heise.de,phillyvoice.com##.article-sharing
@@ -5213,6 +5223,7 @@ infomoney.com.br##[data-ds-element^="social-share-"]
 megacurioso.com.br##div[class^="styles_shareLinks_"]
 inforesist.org###push_notificationBlock
 sibnet.ru###telegram_push
+rg.ru##.StoryContentMainShare_root__LRFwu
 5-tv.ru##._links
 ria.ru##.article__aggr
 interfax.ru##.header__soc
@@ -5877,6 +5888,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ###cookie-consent-bar
 ###cookie-consent-holder
 ###cookie-consent-message
+###cookie-consent-notice
 ###cookie-consent-popup
 ###cookie-consent-window
 ###cookie-consent-wrapper
@@ -6034,6 +6046,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ###cookieWrap
 ###cookieWrapper
 ###cookie__message
+###cookie_accept_msg_block
 ###cookie_agree
 ###cookie_agreement
 ###cookie_alert
@@ -6121,6 +6134,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ###cookienotice
 ###cookienotice-container
 ###cookienotif
+###cookienotification-block
 ###cookieoverlay
 ###cookiepolicy
 ###cookiepolicyContainer
@@ -6233,6 +6247,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ###cookiesck_overlay
 ###cookiescontainer
 ###cookiescript_badge
+###cookiescript_injected_wrapper
 ###cookiesdiv
 ###cookieseal-banner
 ###cookiesettings
@@ -6632,6 +6647,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ##.badge_privacy
 ##.bandaAceptacion
 ##.bandeau-cookie-wrapper
+##.bandeau-cookies
 ##.bandeau-wrapper
 ##.bandeauCookie
 ##.banner-consent-all
@@ -7278,6 +7294,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ##.ob-eu-cookie-consent
 ##.on.cookie
 ##.onetrust-pc-dark-filter
+##.opc-manager-cookie
 ##.opl-cookie-control
 ##.optanon-alert-box-wrapper
 ##.optanon-show-settings
@@ -7657,6 +7674,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 ||plugin.management^
 ||polaris.truevault.com^$third-party
 ||privacy-center.org^$third-party
+||privacybee.com^$third-party
 ||privacymanager.io^$third-party
 ||privacytools.com.br^$third-party
 ||privally.global^$third-party
@@ -14049,6 +14067,7 @@ gobankingrates.com##.newsletter-right-rail-optin
 foreignpolicy.com##.newsletter-signup-and-ads
 newsweek.com##.newsletter-signup-horizontal
 moneycontrol.com##.newsletter-signup-rhs
+neh.gov##.newsletter-subscribe-block-container
 rand.org##.newsletter-subscription-box-wrapper
 cio.com,computerworld.com,csoonline.com,networkworld.com##.newsletter-subscription-small
 monstersandcritics.com##.newsletter-surround

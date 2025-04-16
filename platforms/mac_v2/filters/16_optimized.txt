@@ -1,5 +1,5 @@
-! Checksum: zrC/uWtvPBawN498zGRKeA
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1744771107-3600.patch
+! Checksum: /qPv51UMeSoDkuTCnYLFxg
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1744794691-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
 ! Version: 2.0.51.82
@@ -121,7 +121,6 @@ lemanip.com#$##adblock_msg { display: none !important; }
 lemanip.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "adblock")
 signal-arnaques.com#%#//scriptlet("set-constant", "moneyAbovePrivacy", "true")
 trackmusik.fr#@#.AdSense
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,redirect=googlesyndication-adsbygoogle,domain=trackmusik.fr,important
 techno-science.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 @@||empire-streaming.*^$generichide
 dhnet.be#%#//scriptlet('set-constant', 'bAdBlocker', 'false')
@@ -204,6 +203,7 @@ rtl.be#%#//scriptlet('set-constant', 'bAdBlocker', 'false')
 iphonetweak.fr,iphonesoft.fr#%#//scriptlet('abort-on-property-read', 'onload')
 @@||googletagmanager.com/gtm.js$domain=commentcamarche.net
 animedigitalnetwork.fr#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+||natationpourtous.com/js/une_evaluation.js
 ultimate-catch.eu#%#//scriptlet("abort-current-inline-script", "document.getElementById", "adback")
 nicematin.com#@#.AdSense
 nicematin.com#%#//scriptlet('set-constant', 'adblockdetected', 'false')
@@ -475,7 +475,6 @@ commentcamarche.net##.sticky-zone
 commentcamarche.com,commentcamarche.net,journaldunet.com##div[id^="ctn_"]:not(:has(#content_ctn))
 jeux-gratuits.com##div[class^="placeholder_"]
 la-croix.com##.banner-offer__wrapper
-revolution-energetique.com#?#main > div[style]:has(> div.container div.row > div[id^="optidigital-adslot"])
 iphon.fr##.od-billboard
 automobile-propre.com###native-pub
 automobile-propre.com##.adsClearFix
@@ -511,21 +510,15 @@ frandroid.com#?#.is-hidden-desktop:has(> div[id^="optidigital-adslot-"]:only-chi
 futura-sciences.com#?#.futura-genecy > div[class^="box__"]:has(> .optidigital-slot)
 letelegramme.fr#?#.tlg-no-padding > .tlg-block-small-padding:has(> .tlg-ad-container:only-child)
 lesechos.fr#?#main > div[class^="sc-"]:has(> div[class^="sc-"]:not(.adBanner):empty)
-trustmyscience.com#?#.code-block:has(> .shopify-buy-frame)
-ozap.com#?#.article-sticky > .article-page-sticky:has(> .ad__placeholder)
 cyclismactu.net#?##side > div[style^="float"]:has(> div:contains(/^Publicité$/))
 jeanmarcmorandini.com#?##node-story > h2.story_subtitle_title:contains(/^Ailleurs sur le web$/)
 latribune.fr#?#.sticky-sidebar-block > div.bloc:contains(Annonces légales)
-aufeminin.com#?#.af-album-ctn  > div.cols-right-album > div.ad-container:upward(1)
-techno-science.net#?#.colonneDroite > .module:has(> div > .adsbygoogle)
 dhnet.be#?#main > section.ap-Chain:has(> div.ap-Chain-body iframe[src^="https://www.jobat.be/"])
 lemonde.fr#?#.aside__iso > .friend__container:has(> .friend--sticky > .OUTBRAIN)
 moneyvox.fr#$?#.habpage { remove: true; }
-lesechos.fr#?#div[id^="custom-gpt-"]:upward(div)
 forumconstruire.com#?##topic_discussion_box > div.post_simple_contener:has(div.postsimple_avatar_cell[onclick="document.location.href = '//www.forumconstruire.com/membre-1.php'"])
 tennisactu.net#?#.main-right > h2:contains(Partenaires)
 01net.com#?##app > div.text-center:has(> div[class] > div[id^="optidigital-adslot"])
-aniamey.com#?#div[align="center"]:has(> a > img[src$="/pub_icon.gif"])
 ici.tou.tv#?#section > div[class]:has(> p:contains(/^Publicité$/))
 forum.hardware.fr#?#.main ~ table.messagetable > tbody > tr.message div[id^="div-gpt-ad-"]:upward(table.messagetable)
 lematin.ch##div[class^="ContentPage_insideFullTopPlaceholder"]
@@ -3294,7 +3287,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||eroprofile.com^$script
 ||porndoe.com^$csp=img-src 'none' http: https:
 ||porndoe.com^$csp=media-src 'none' http: https:
-||delivery.tf1.fr/pub$media,redirect=noopmp3-0.1s,domain=tf1.fr
 ||batiactu.com/cap_pub/$popup
 ||datoporn.co^*.php?$popup
 ||ddl-island.*/xxx/$popup
@@ -3559,6 +3551,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###sitePubTop
 ###skin_container_sidebar_ad
 ###skin_td_sidebar_ad
+###slidepub
 ###small-banner-ad
 ###solreklam
 ###sp-entete-pour-la-pub
@@ -4583,7 +4576,6 @@ solutions-numeriques.com##td[onclick^="window.open('https://www.solutions-numeri
 wiflix-max.*,wiflix-catalogue.*,wiflix-hd.*,wiflix-pro.*,wiflixien.*##.btnnew
 wiflix-max.*,wiflix-catalogue.*,wiflix-hd.*,wiflix-pro.*,wiflixien.*##.sadst
 1fr1.net,3oloum.com,7olm.org,ahladalil.com,ahlamontada.com,alamontada.com,arabepro.com,banouta.net,darkbb.com,easyforumpro.com,fcmulhousefans.com,forum2jeux.com,forumactif.com,forumactif.fr,forumactif.org,forumalgerie.net,forumpro.fr,forums-actifs.com,galoppourlavie.org,gid3an.com,jordanforum.net,lebonforum.com,orizzontescuolaforum.net,own0.com,passionmilitaria.com,sorcieremonique.com,superforum.fr,syriaforums.net,walkingdead-rpg.com,yoo7.com,ze-43eme.com##.croco_wrapper, [onclick*="var"], [onmousedown*="\x"], [style*="height: 90px;"]
-planetegrandesecoles.com##.elementor-element:has(picture.attachment-full.size-full)
 auchan.fr##.hp-banner:has(.hp-banner__message-sponsored)
 frandroid.com##.is-hidden-mobile:has([class^="Billboard"])
 frandroid.com##.post-card:has(a[href^="https://native.humanoid.fr/"])
@@ -4604,14 +4596,10 @@ auchan.fr##article.product-thumbnail:has(.product-thumbnail__sponsored)
 cdiscount.com#?#.o-block:-abp-has(.o-block__content:-abp-has(.c-sponsoredMentions))
 cdiscount.com#?#li:-abp-has(.prdtBlocInline:-abp-has(.c-sponsoredMentions))
 cdiscount.com#?#li[data-sku]:-abp-has(.c-sponsoredMentions)
-delhaize.be#?#.product-item:-abp-contains(Sponsorisé)
 distrowatch.com#?#.News1:-abp-has(td:-abp-contains(Sponsored))
 jeuxvideo.com#?#.card:-abp-has(.badge:-abp-contains(Sponsorisé))
 latribune.fr#?#.article-wrapper:-abp-has(.subheading:-abp-contains(Partenaire))
-latribune.fr#?#.homepage-section.supplement-section:-abp-has(span:-abp-contains(Partenaires))
 leboncoin.fr#?#.undefined:-abp-contains(Sponsorisé)
-lesnumeriques.com#?#.l-section:has(.tops__items)
-lesnumeriques.com#?#.l-section:has(a[href*="/contenus-partenaires"])
 libhunt.com#?#.boxed:-abp-has(.tag:-abp-contains(Sponsored))
 mediamarkt.be#?#[data-index-number]:-abp-contains(Sponsorisé)
 nextinpact.com#?#li[class="ng-star-inserted"]:-abp-has(.sponsored)
@@ -4622,7 +4610,6 @@ phonandroid.com#?#li:-abp-has(a:-abp-contains(sponso))
 positivr.fr#?#article:-abp-has(.sponsored-notice)
 rakuten.com#?#[data-productid]:-abp-has(a[href^="/offer?action="])
 starbike.com#?#.post.has-profile:-abp-has(.postbody:-abp-has(.adsbygoogle))
-twitter.com#?#[data-testid="tweet"]:-abp-contains(Sponsorisé)
 zataz.com#?#.custom-sidebar:-abp-has(h3:-abp-contains(/Partenaires|Publicité/))
 ||facebook.com/ajax/qm/
 ||facebook.com/tr/

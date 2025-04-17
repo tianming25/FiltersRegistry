@@ -1,9 +1,9 @@
-! Checksum: TZgjfqBXS8tZn+UqlW0tNQ
-! Diff-Path: ../patches/21/21-s-1744881099-3600.patch
+! Checksum: KiAA6klcz8fKzq1xZwkftg
+! Diff-Path: ../patches/21/21-s-1744888209-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.32.47
-! TimeUpdated: 2025-04-17T09:07:58+00:00
+! Version: 2.0.32.48
+! TimeUpdated: 2025-04-17T11:06:36+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3489,6 +3489,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+mu-navi.com,travel.co.jp##.pr-area
+mu-navi.com##.widget_custom_html:has(> div > div.box)
 experts-exchange.com##iframe[id^="injectIframe"]
 uchi.ru##article[class^="RecommendationCard"]
 rus.postimees.ee##.article__piano-block
@@ -7005,8 +7007,6 @@ livelib.ru##.prm-block
 moeimg.net###overlay_frame
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94805
 auctions.yahoo.co.jp##[data-ylk^="rsec:pr_"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/94803
-travel.co.jp##.pr-area
 ! self-promo only on some articles
 news.goo.ne.jp##.gn-related-pickup
 ! links to native-ad articles

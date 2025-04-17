@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: sUi7z0u+8AsnsqjraYT5aw
-! Diff-Path: ../patches/14/14-s-1744892077-3600.patch
+! Checksum: PZpGGwncl5GgkxdIDPnBLQ
+! Diff-Path: ../patches/14/14-s-1744895823-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.59
-! TimeUpdated: 2025-04-17T12:10:52+00:00
+! Version: 2.2.27.60
+! TimeUpdated: 2025-04-17T13:13:20+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -33356,6 +33356,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+underhentai.net##.telegram-txt
+gemini.google.com##body > div.cdk-overlay-container:has(> div.cdk-global-overlay-wrapper email-opt-in-discovery-card)
 rsload.net##.telegram-block
 gamefile.news##.newsletter-post > div > div.pencraft:has(> div.pencraft > div.subscribe-widget)
 androidauthority.com##main div[class]:has(> form:only-child)
@@ -44768,6 +44770,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+finance.yahoo.com##.app-banner
 theinformation.com##a[data-testid="download-app"]
 quora.com#?#a[href="https://www.quora.com/"][target="_top"] + div[class] > button:has(> div > div > div:contains(App))
 fantasi.one#?##app > div.background:has(> div:only-child > .close + .content > p:contains(App))
@@ -48917,6 +48920,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+renderhub.com##.annLnk
 mu-navi.com,travel.co.jp##.pr-area
 mu-navi.com##.widget_custom_html:has(> div > div.box)
 experts-exchange.com##iframe[id^="injectIframe"]

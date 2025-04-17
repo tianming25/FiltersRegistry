@@ -359,8 +359,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.79.54",
-			"timeUpdated": "2025-04-17T08:08:32+0000",
+			"version": "2.3.79.55",
+			"timeUpdated": "2025-04-17T09:07:06+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -403,8 +403,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.13.49",
-			"timeUpdated": "2025-04-17T08:08:46+0000",
+			"version": "2.1.13.50",
+			"timeUpdated": "2025-04-17T09:07:20+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -563,8 +563,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/11.txt",
 			"trustLevel": "full",
-			"version": "2.0.59.89",
-			"timeUpdated": "2025-04-17T06:08:56+0000",
+			"version": "2.0.59.90",
+			"timeUpdated": "2025-04-17T09:07:38+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -616,8 +616,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.27.55",
-			"timeUpdated": "2025-04-17T08:09:08+0000",
+			"version": "2.2.27.56",
+			"timeUpdated": "2025-04-17T09:07:48+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -721,8 +721,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.60.1",
-			"timeUpdated": "2025-04-17T08:09:12+0000",
+			"version": "2.0.60.2",
+			"timeUpdated": "2025-04-17T09:07:56+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -743,8 +743,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.53.82",
-			"timeUpdated": "2025-04-17T07:07:51+0000",
+			"version": "2.0.53.83",
+			"timeUpdated": "2025-04-17T09:07:57+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -787,8 +787,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.32.46",
-			"timeUpdated": "2025-04-17T07:07:51+0000",
+			"version": "2.0.32.47",
+			"timeUpdated": "2025-04-17T09:07:58+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

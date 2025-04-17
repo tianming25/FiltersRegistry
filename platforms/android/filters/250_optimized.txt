@@ -1,5 +1,5 @@
-! Checksum: UxqGGRFvsSwGI0NLM8+/xg
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1744807714-14400.patch
+! Checksum: k+Cp5gPSP++24FSQgsTCxw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1744864882-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.69
@@ -602,6 +602,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 141.8.226.34$network
 !+ PLATFORM(windows, mac, android)
 91.240.118.172$network
+||upload-4ever.com^$document
 !+ PLATFORM(windows, mac, android)
 198.199.120.251$network
 !+ NOT_OPTIMIZED
@@ -690,7 +691,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 64.132.201.92$network
 !+ PLATFORM(windows, mac, android)
 209.141.51.49$network
-||nipechala.com^$all
 !+ PLATFORM(windows, mac, android)
 208.88.225.116$network
 !+ PLATFORM(windows, mac, android)
@@ -1458,6 +1458,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ PLATFORM(windows, mac, android)
 2600:1f1c:57F:b502:dd8:9588:11e6:282$network
 ||adblockermax.com/land$document,popup
+||howtofix.guide^$document
 !+ PLATFORM(windows, mac, android)
 194.226.139.121$network
 !+ PLATFORM(windows, mac, android)
@@ -1691,7 +1692,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##.sharing-container:not(html,body,:empty)
 ##.sharing-item:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.sharing-links:not(html,body,:empty)
-##.sharing-tools:not(html,body,:empty)
 ##.sharing:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.shr-opn:not(html,body,:empty)
 ##.single-share:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
@@ -2265,7 +2265,6 @@ $document,removeparam=ranEAID
 $document,removeparam=ranSiteID
 $document,removeparam=xtor
 $document,removeparam=SRC
-$document,removeparam=dartycid
 $document,removeparam=bbaid
 ||paypal.$document,removeparam=ppid
 $document,removeparam=unptid
@@ -2396,7 +2395,6 @@ $removeparam=mkt_tok
 $removeparam=affname
 $removeparam=MID,domain=~media-cdn.costco.*|~community.arubanetworks.com
 $removeparam=srnd
-=adservice$removeparam=coid,domain=~radioreference.com|~finanzonline.bmf.gv.at
 $removeparam=action_type_map
 $document,removeparam=/^bsft_.*$/
 $document,removeparam=/^dpg_.*$/
@@ -2535,7 +2533,6 @@ $removeparam=cm_lm
 $removeparam=cm_ainfo
 $removeparam=CSID
 $document,removeparam=/^source=webgains$/
-$document,removeparam=/^from=kelkoo.*$/
 $removeparam=paid
 $removeparam=adtype
 $removeparam=n_cid
@@ -2576,6 +2573,7 @@ $removeparam=nrtv_cid
 $removeparam=trk_ref
 $removeparam=ircid
 $document,removeparam=/^src=rss$/
+$removeparam=amp_device_id
 $removeparam=awinaffid
 $removeparam=iclid
 $removeparam=a_fid
@@ -2683,7 +2681,6 @@ $removeparam=tpmn_buid
 $removeparam=adsafe_type
 $removeparam=variationId
 $removeparam=beeswax_id
-$removeparam=ses_id
 $removeparam=_gfid
 $removeparam=mt_exid
 $removeparam=_sid
@@ -3011,7 +3008,6 @@ $removeparam=aff_click_id
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaId
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaTitle
 ||baidu.com^$removeparam=sourceFrom
-||baidu.com^$removeparam=frs
 ||baidu.com/link?$removeparam=eqid
 ||baidu.com/link?$removeparam=wd
 ||map.baidu.com^$removeparam=da_src
@@ -3028,7 +3024,6 @@ wenku.baidu.com#%#//scriptlet('ubo-set.js', 'history.replaceState', 'noopFunc')
 ||baidu.com^$removeparam=p_tk
 ||baidu.com^$document,removeparam=ps
 ||baidu.com^$document,removeparam=nc
-||baidu.com^$document,removeparam=xzhid
 ||baidu.com^$document,removeparam=fid
 ||baidu.com^$document,removeparam=pi
 ||baidu.com^$document,removeparam=query
@@ -3083,9 +3078,9 @@ $removeparam=user_ip
 ||sogou.com^$removeparam=htdbg
 ||sogou.com^$removeparam=interation
 ||sogou.com^$removeparam=interV
+||baike.sogou.com^$removeparam=ch
 ||sogou.com^$removeparam=fromTitle
 ||mp.weixin.qq.com^$removeparam=scene
-@@||mp.weixin.qq.com/mp/qrcode?$removeparam=scene
 ||mp.weixin.qq.com^$removeparam=xtrack
 ||mp.weixin.qq.com^$removeparam=key
 ||mp.weixin.qq.com^$removeparam=ascene
@@ -3155,7 +3150,6 @@ $removeparam=usqp,domain=gstatic.com|cdn.ampproject.org
 $removeparam=bsencid
 ||target.com^$removeparam=clkid
 ||dell.com^$removeparam=dgc
-||dell.com^$removeparam=VEN1
 ||dell.com^$removeparam=gacd
 $removeparam=ref_id,domain=expedia.com|intuit.com|tunnelbear.com
 $removeparam=sourceID,domain=gamestop.com|verizon.com
@@ -3384,11 +3378,6 @@ $document,removeparam=o,domain=ask.com|askmoney.com|bloglines.com|consumersearch
 ||jcpenney.com^$removeparam=productGridView
 ||jcpenney.com^$removeparam=badge
 ||jcpenney.com^$removeparam=selectedSKUId
-||bandcamp.com^$removeparam=search_item_id
-||bandcamp.com^$removeparam=search_item_type
-||bandcamp.com^$removeparam=search_match_part
-||bandcamp.com^$removeparam=search_page_no
-||bandcamp.com^$removeparam=search_rank
 ||app.slack.com^$removeparam=entry_point
 ||nicovideo.jp/comic^$removeparam=track
 ||onenote.com^$removeparam=nf
@@ -3432,7 +3421,6 @@ $removeparam=qid,domain=bookdepository.com|eastday.com
 ||login.afreecatv.com^$removeparam=szFrom
 ||typeform.com^$removeparam=typeform-source
 $removeparam=ymid
-$removeparam=ad_sub,domain=homo.xxx
 ref=troyhunt.com$document,removeparam=ref
 ||disneyplus.com^$removeparam=distributionPartner
 ||homedepot.com^$removeparam=fromReminder

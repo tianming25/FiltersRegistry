@@ -1,14 +1,14 @@
-! Checksum: tQ/BxF4l/YzW1FxGyXFllw
-! Diff-Path: ../patches/243/243-s-1744778472-14400.patch
+! Checksum: HVCA5dQJRsM7tfSM5XOzYA
+! Diff-Path: ../patches/243/243-s-1744864909-14400.patch
 ! Title: Frellwit's Swedish Filter
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.21.33
-! TimeUpdated: 2025-04-16T04:37:23+00:00
+! Version: 2.0.21.34
+! TimeUpdated: 2025-04-17T04:38:00+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-04-16 04:05:50 CEST
+! Last modified: 2025-04-17 05:37:02 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -139,7 +139,7 @@ aikhockey.se,almtuna.com,bikkarlskoga.se,bjorkloven.com,brynas.se,difhockey.se,f
 aip.nu##[class*="feed-ad"]
 aip.nu,funktionshinderpolitik.se,sjostadsbladet.se,fotbollsresultat.com,lansposten.se,dalabygden.se,sormlandsbygden.se,skaneplus.se,innovationslandet.se###cookie-notice
 aip.nu,lansposten.se,dalabygden.se,sormlandsbygden.se#$#body.cookies-not-set { overflow:unset!important }
-akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
+akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"], .advertisement--banner > div[class=""]
 aktavara.org##.banner-start
 aktieskolan.se##section.elementor-section:has-text(Huvudsponsorer & partners)
 aktiespararna.se,alekuriren.se,tidningen.se,kurera.se,vinbanken.se##.native
@@ -463,6 +463,7 @@ dust2.se##.target-banner, div[data-type="BANNER"]
 dykarna.nu###rightbanners
 edgeflyfishing.com###g-header, #g-aside, #g-sidebar
 edukatus.se###g-preloader
+ehandelstips.se##div[class*="block-wrap-ad-"]
 ehandelstips.se##:is(li, article):has([href*="/sponsradeartiklar/"])
 ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
 ehandel.se##.code-block:has-text(/annons/i)
@@ -678,7 +679,6 @@ gasetten.se##.footer-widgets .widget_block li
 gasetten.se,fotbollsthlm.se##article:has-text(/är en annons/i)
 gasetten.se,fotbollsthlm.se##.footer-links, .fotbo-target
 gentlemannaguiden.com##.advertising, .sidebar .widget_text, .sidebar .widget_media_image, .has-post-thumbnail.category-okategoriserade
-glassakademin.se##[class^="adverts-"]
 globalbar.se##.widget_media_image a:not(a[href*="globalbar.se"], a[href^="/"]) img
 globalpolitics.se##aside .textwidget a img
 globalportalen.org##.card__advertisment, .ays-survey-popup-survey-window
@@ -836,6 +836,7 @@ jobsinsweden.se#%#//scriptlet('ubo-set.js', 'eazy_ad_unblocker', 'null')
 journalisten.se##.o-blockCarousel--placementAd, .o-blockArea__item--block-ad, .m-blockAd
 juligen.se##.juligen-ads-box-widget
 kalender.se##.day-nav ~ a:not([href*="kalender.se"]), a:not([href*="kalender.se"]) img, div[style^="height:340px"], div[style^="height:110px"]
+kalender.se##.shadow-sm.items-center:has(#above-main-calendar, #below-main-calendar)
 kalmar.nu###rb-cookie
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
 kamrat.com#%#//scriptlet('ubo-set.js', 'showAds', 'false')
@@ -2093,7 +2094,7 @@ zeromagazine.nu##div[id^="ads"]
 /cts.js$domain=allas.se|elle.se|femina.se|hant.se|mabra.com|residencemagazine.se|svenskdam.se|motherhood.se
 /cx-emediate-userprofile-se
 /data/track$domain=nyaboendet.se
-/detroitchicago$domain=temadagar.se|svenskaorduttryck.se|wernamaten.se
+/detroitchicago$domain=temadagar.se|wernamaten.se
 /detroitchicago/*.gif?$image
 /dh-adscale$domain=dh.se
 /dh-adsticky$domain=dh.se
@@ -2690,7 +2691,7 @@ zeromagazine.nu##div[id^="ads"]
 ?bannerid$domain=existenz.se
 ?t=$xmlhttprequest,redirect=nooptext,domain=kyrkanstidning.se
 ?url=*impse.tradedoubler.com$image
-@@*$generichide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se
+@@*$generichide,domain=atl.nu|landlantbruk.se|land.se|fodertipset.se|citattorget.se|citiboard.se|kritiker.se|akaviaaspekt.se
 @@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/adx.js$~third-party,domain=atl.nu|landlantbruk.se|land.se
 @@/ad-block-detection-script$domain=blocket.se

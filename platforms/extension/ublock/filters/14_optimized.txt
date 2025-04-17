@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: thpwvdEYky5mzKSDtMUYkg
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1744895823-3600.patch
+! Checksum: vy2qjTksQmfBLBUmOQp1QQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1744899062-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.60
-! TimeUpdated: 2025-04-17T13:13:20+00:00
+! Version: 2.2.27.61
+! TimeUpdated: 2025-04-17T14:07:24+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -20595,6 +20595,8 @@ tv.yandex.*##.recommended-ott
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
 www.kinopoisk.ru##div[class^="trailer-promo"]
+brave.com###persistent-cta:has(> div > a.download[data-event-action="Persistent Download Button"])
+leakshaven.com##.container > div[style] > .w-full[style] > .text-card-foreground:has(> .p-6 > .flex > .flex > a[href="/plans"])
 renderhub.com##.annLnk
 mu-navi.com,travel.co.jp##.pr-area
 mu-navi.com##.widget_custom_html:has(> div > div.box)
@@ -22663,6 +22665,7 @@ softpedia.com#$#iframe.swipebox-rightxd[id="relcontent"] { top: 60px!important; 
 !##############################
 !######### JS tweaks ##########
 !##############################
+leakshaven.com##+js(nano-setInterval-booster, (clearInterval(, *, 0.001)
 shorttrick.in##+js(nano-setInterval-booster, wpsafe, *, 0.001)
 sampledrive.org##+js(nano-setInterval-booster, downloadButton, *, 0.001)
 kreditexperte.online##+js(nano-setInterval-booster, get-link, *, 0.001)

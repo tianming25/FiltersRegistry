@@ -500,8 +500,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.11",
-			"timeUpdated": "2025-04-18T17:06:42+0000",
+			"version": "2.0.8.12",
+			"timeUpdated": "2025-04-18T18:08:06+0000",
 			"deprecated": false,
 			"languages": [
 				"nl"

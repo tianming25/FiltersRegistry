@@ -500,8 +500,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/android-content-blocker/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.11",
-			"timeUpdated": "2025-04-18T17:06:42+0000",
+			"version": "2.0.8.12",
+			"timeUpdated": "2025-04-18T18:08:06+0000",
 			"deprecated": false,
 			"languages": [
 				"nl"
@@ -647,8 +647,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.79.14",
-			"timeUpdated": "2025-04-18T16:07:36+0000",
+			"version": "2.0.79.15",
+			"timeUpdated": "2025-04-18T18:08:18+0000",
 			"languages": [],
 			"tags": [
 				45,

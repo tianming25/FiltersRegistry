@@ -500,8 +500,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/android/filters/8_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.13",
-			"timeUpdated": "2025-04-18T19:06:04+0000",
+			"version": "2.0.8.14",
+			"timeUpdated": "2025-04-18T22:07:01+0000",
 			"deprecated": false,
 			"languages": [
 				"nl"

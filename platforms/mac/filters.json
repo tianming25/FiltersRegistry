@@ -1,48 +1,4 @@
 {
-	"groups": [
-		{
-			"groupId": 1,
-			"groupName": "Ad blocking",
-			"groupDescription": "Block ads",
-			"displayNumber": 1
-		},
-		{
-			"groupId": 2,
-			"groupName": "Privacy",
-			"groupDescription": "Block trackers",
-			"displayNumber": 2
-		},
-		{
-			"groupId": 3,
-			"groupName": "Social widgets",
-			"groupDescription": "Block social media elements such as Like and Share buttons",
-			"displayNumber": 3
-		},
-		{
-			"groupId": 4,
-			"groupName": "Annoyances",
-			"groupDescription": "Block annoying web elements, such as cookie notices or in-page popups",
-			"displayNumber": 4
-		},
-		{
-			"groupId": 5,
-			"groupName": "Security",
-			"groupDescription": "Block requests to phishing and malicious websites",
-			"displayNumber": 5
-		},
-		{
-			"groupId": 6,
-			"groupName": "Other",
-			"groupDescription": "This group contains various filters that don't fit into other categories",
-			"displayNumber": 6
-		},
-		{
-			"groupId": 7,
-			"groupName": "Language-specific",
-			"groupDescription": "Block ads on websites in specified languages",
-			"displayNumber": 7
-		}
-	],
 	"filters": [
 		{
 			"filterId": 1,
@@ -150,8 +106,8 @@
 			"displayNumber": 1,
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/mac/filters/8.txt",
-			"version": "2.0.8.13",
-			"timeUpdated": "2025-04-18T19:06:04+0000",
+			"version": "2.0.8.14",
+			"timeUpdated": "2025-04-18T22:07:01+0000",
 			"languages": [
 				"nl"
 			]
@@ -1629,6 +1585,43 @@
 			"version": "2.0.6.84",
 			"timeUpdated": "2025-04-18T12:45:15+0000",
 			"languages": []
+		}
+	],
+	"groups": [
+		{
+			"groupId": 1,
+			"groupName": "Ad blocking",
+			"displayNumber": 1
+		},
+		{
+			"groupId": 2,
+			"groupName": "Privacy",
+			"displayNumber": 2
+		},
+		{
+			"groupId": 3,
+			"groupName": "Social widgets",
+			"displayNumber": 3
+		},
+		{
+			"groupId": 4,
+			"groupName": "Annoyances",
+			"displayNumber": 4
+		},
+		{
+			"groupId": 5,
+			"groupName": "Security",
+			"displayNumber": 5
+		},
+		{
+			"groupId": 6,
+			"groupName": "Other",
+			"displayNumber": 6
+		},
+		{
+			"groupId": 7,
+			"groupName": "Language-specific",
+			"displayNumber": 7
 		}
 	]
 }

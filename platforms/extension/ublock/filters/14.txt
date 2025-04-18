@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: DAe+AI4HDX3i7phrFFTZ/A
-! Diff-Path: ../patches/14/14-s-1744978483-3600.patch
+! Checksum: lYNSkVEoX5NvKGa+9z0hzg
+! Diff-Path: ../patches/14/14-s-1744982135-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.74
-! TimeUpdated: 2025-04-18T12:10:43+00:00
+! Version: 2.2.27.75
+! TimeUpdated: 2025-04-18T13:12:00+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2919,7 +2919,6 @@ buki.com.ua##div[class^="styles_bannerWrapper__"]:has(> div[class^="styles_banne
 etsy.com##.wt-alert--success-02.wt-alert--fixed-bottom
 theprotocol.it###__next > div > div > div:has(> aside[data-test="section-cookieModal"])
 linkedin.com##.google-one-tap__module > div.relative:has(> p > a[href="/legal/cookie-policy?trk=linkedin-tc_auth-button_cookie-policy"])
-bookings.hermesairports.com##.cookie-panel-wrapper
 bookings.hermesairports.com##.cookie-settings-float
 drm.cloud,cercojobs.it,mangooutlet.com##div[class^="Cookies"]
 mobility.ch##.c-modal--cookie
@@ -15031,6 +15030,8 @@ befestigungsfuchs.de,jawoll.de,cafe-royal.com,campingplus.de,bikebox-shop.de,mli
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
 !
+!+ NOT_OPTIMIZED
+bookings.hermesairports.com##.cookie-panel-wrapper
 !+ NOT_OPTIMIZED
 ac-illust.com,photo-ac.com##.show-notice-cookie
 !+ NOT_OPTIMIZED
@@ -33371,6 +33372,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+mir24.tv##div[class^="Banner_"]:has(> a[href="https://t.me/+TXi6c5FYgYB7yMKl"])
 doityourselfrv.com##.mnp-newsletter-box
 kp.ru##div[data-gtm-el="content-body"] ~ div[class^="sc-"] > div[class^="sc-"]:not([data-name]):has(> div[class^="sc-"] > a[href="https://t.me/+J-YF9mCO3WY2MTBi"])
 genic-web.com#?#.headline-link:has(> h2.headline-link__text:contains(Newsletter))
@@ -48944,6 +48946,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+mir24.tv##div[class^="SidebarWidgets_"] > div[class^="Banner_"]:has(> a[href="/about/advertising"])
+||mirtvpc.cdnvideo.ru/mirtv/%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D0%B0%20%20%20.mp4
 gaming.amazon.com##div[data-a-target="prime-main"] div[data-a-target="MarketingPromotionBannerSectionRoot"]
 ilsole24ore.com###zephr-zone-footer
 ||membernotifications.aol.com/offers/aolHomepage/stickyFooter
@@ -55135,8 +55139,8 @@ cocoleech.com##+js(set-constant, width, 100)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14668
 prem.link##+js(set-constant, waiting_time, 0)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12814
-urlbluemedia.*,bluemediadownload.*,bluemediaurls.lol,bluemedialink.online,dl.pcgamestorrents.org,bluemediafile.*,bluemediafiles.*,get-url.com##+js(nano-setInterval-booster, i--, , 0.02)
-urlbluemedia.*,bluemediadownload.*,bluemediaurls.lol,bluemedialink.online,dl.pcgamestorrents.org,bluemediafile.*,bluemediafiles.*,get-url.com##+js(set-constant, Time_Start, 0)
+bluedownload.*,urlbluemedia.*,bluemediadownload.*,bluemediaurls.lol,bluemedialink.online,dl.pcgamestorrents.org,bluemediafile.*,bluemediafiles.*##+js(adjust-setTimeout, ['href'], *, 0.001)
+bluedownload.*,urlbluemedia.*,bluemediadownload.*,bluemediaurls.lol,bluemedialink.online,dl.pcgamestorrents.org,bluemediafile.*,bluemediafiles.*,get-url.com##+js(nano-setInterval-booster, i--, , 0.02)
 ! dailypost.co.uk - stop autoplay
 ! rutracker.org - allow pages preview in NewsFox RSS reader in FireFox
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133093

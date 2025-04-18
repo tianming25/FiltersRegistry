@@ -616,8 +616,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.27.69",
-			"timeUpdated": "2025-04-18T07:07:18+0000",
+			"version": "2.2.27.70",
+			"timeUpdated": "2025-04-18T08:08:39+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -721,8 +721,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.60.7",
-			"timeUpdated": "2025-04-17T15:07:17+0000",
+			"version": "2.0.60.8",
+			"timeUpdated": "2025-04-18T08:08:44+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

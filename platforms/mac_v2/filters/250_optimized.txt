@@ -1,5 +1,5 @@
-! Checksum: Syow4pDgBUxk8CLAqCexgA
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1745023909-14400.patch
+! Checksum: YdmFtZK9ovd/S685jAGRCg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1745037673-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.73
@@ -90,8 +90,6 @@ linkedin.com#$?#body { overflow: auto !important; }
 ||bid^$document
 .life/*/?*=*&*=*&*=*&*=*&*=$document
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
-www.google.*,ipv6.google.com##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
-www.google.*,ipv6.google.com##.g:has(a[href^="https://books.google."])
 !+ PLATFORM(windows, mac, android)
 109.201.135.46$network
 !+ PLATFORM(windows, mac, android)
@@ -124,7 +122,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 103.224.212.249$network
 !+ PLATFORM(windows, mac, android)
 199.59.243.222$network
-|http://ww01.$document,domain=~very_very_extremely_frequently_used_in_malware_redirections.*
 !+ PLATFORM(windows, mac, android)
 173.208.96.42$network
 !+ PLATFORM(windows, mac, android)
@@ -866,6 +863,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||negateacted.com^$all
 ||accomplishedpersuadedprinter.com^$all
 ||inscribemutenessforced.com^$all
+||invadedisheartentrail.com^$all
 ||expensivelikeness.com^$all
 ||apologiesoccursdepressed.com^$all
 ||participationwhitehandwriting.com^$all
@@ -1583,6 +1581,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||admozartxml.com^$all
 ||bidmyadz.com^$all
 ||explodasclksec.com^$all
+||explorads.com^$all
 ||mainexpclkdir.com^$all
 ||mobuppsrtb.com^$all
 [2a00:8860:10d:1::2:b01]$network
@@ -1957,7 +1956,6 @@ chronicle.com#$#html { overflow: auto !important; height: 100% !important }
 chronicle.com#$#.Page-body { overflow: auto !important; height: 100% !important }
 segmentfault.com#$#.modal-open { overflow: auto !important; padding-right: 0 !important; }
 segmentfault.com#$#.modal-open [style]:is([data-padding-right], [data-margin-right]) { padding-right: 0 !important; margin-right: 0 !important; }
-tumblr.com###glass-container > div[role=dialog]:has(p + p):has(a[href^="/auth/google?"])
 theepochtimes.com#$#body.single-post { overflow: unset !important }
 studocu.com#$#.page-content { filter: none !important; user-select: unset !important }
 studocu.com###document-wrapper > div:first-of-type:not([style])
@@ -2011,6 +2009,7 @@ trello.com##.mod-warning.header-banner
 pinterest.*##div[data-test-id=giftWrap]
 quizlet.com##.LoginBottomBar
 quizlet.com#$#.SetPageTerm-largeSide { filter: none !important }
+fm.to##.blockOverlay.blockUI
 investing.com###PromoteSignUpPopUp
 context.reverso.net###register-popup-bottom
 ||comment.youmaker.com^$domain=theepochtimes.com
@@ -2237,6 +2236,7 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
+$removeparam=_zucks_suid
 $removeparam=adfrom
 $removeparam=aiad_clid
 $removeparam=maf
@@ -2384,7 +2384,6 @@ $removeparam=AFID,domain=~chggtrx.com|~state.gov
 $document,removeparam=campaignid
 $removeparam=loc,document,domain=bestbuy.*|shopping.google.com
 $removeparam=acampID
-$removeparam=cmt
 $removeparam=at_gd
 $document,removeparam=/^amp=$/,domain=~eurasiantimes.com|~cybersecuritynews.com
 $removeparam=_gl
@@ -2479,7 +2478,6 @@ $removeparam=ldtag_cl
 $removeparam=vero_conv
 $removeparam=vero_id
 $removeparam=a_aid
-$removeparam=otracker
 $removeparam=ft_source
 $removeparam=ft_medium
 $removeparam=ref_source
@@ -2550,7 +2548,6 @@ $removeparam=af_adset_id
 $removeparam=af_c_id
 $removeparam=af_channel
 $removeparam=af_click_lookback
-$removeparam=af_cost_model
 $removeparam=af_force_deeplink
 $removeparam=af_keywords
 $removeparam=af_prt
@@ -2673,7 +2670,6 @@ $removeparam=dsp_uid
 $removeparam=adsafe_url
 $removeparam=mt_uuid
 $removeparam=sifi_uid
-$removeparam=_rlid
 $removeparam=ga_fc
 $removeparam=ga_client_id
 $removeparam=s_id
@@ -2747,6 +2743,7 @@ $removeparam=geniuslink
 ||amazon.$removeparam=lp_page_asin
 ||amazon.$removeparam=asc_contentid
 ||amazon.$removeparam=visitId
+||amazon.$removeparam=field-lbr_brands_browse-bin
 ||amazon.$removeparam=maas
 ||amazon.$removeparam=refinements
 $removeparam=hvadid
@@ -2915,7 +2912,6 @@ $document,removeparam=gs_lp,domain=www.google.*|ipv6.google.com
 ||google.$document,removeparam=sca_esv
 $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||translate.goog^$removeparam=_x_tr_pto
-$document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ://www.google.$document,removeparam=ie,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=fbs
 ||www.google.$document,removeparam=ictx
@@ -3030,11 +3026,17 @@ wenku.baidu.com#%#//scriptlet('ubo-set.js', 'history.replaceState', 'noopFunc')
 ||baidu.com^$removeparam=p_tk
 ||baidu.com^$document,removeparam=ps
 ||baidu.com^$document,removeparam=nc
+||baidu.com^$document,removeparam=xzhid
 ||baidu.com^$document,removeparam=fid
 ||baidu.com^$document,removeparam=pi
+||baidu.com^$document,removeparam=iid
 ||baidu.com^$document,removeparam=query
+||baidu.com^$document,removeparam=lattr
 ||baidu.com^$document,removeparam=category
+||baidu.com^$document,removeparam=jid
+||baidu.com^$document,removeparam=prod_type
 ||baidu.com^$document,removeparam=cf
+||baidu.com^$document,removeparam=miniId
 ||baidu.com^$document,removeparam=/^from.*$/
 ||baidu.com^$document,removeparam=tpl_from,domain=~graph.baidu.com
 ||bilibili.com^$removeparam=/^from.*$/
@@ -3147,6 +3149,7 @@ $removeparam=medium,domain=1sol.io|bybit.com|coinpanel.com|deepdiscount.com|disc
 ||microsoft.com^$removeparam=headerid
 ||microsoft.com^$removeparam=destrt
 $removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moosejaw.com|multitronic.fi|scandinavianphoto.fi|swamp.fi|ocado.com|ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
+||verizon.com^$removeparam=vendorid
 ||hp.com^$removeparam=jumpid
 ||walmart.com^$removeparam=veh
 ||bbc.$removeparam=at_campaign
@@ -3190,8 +3193,6 @@ $removeparam=site_id,domain=taskrabbit.com|kochava.com
 ||kochava.com^$removeparam=device_id
 ||skyscanner.$removeparam=redirectedFrom
 ||skyscanner.$removeparam=previousCultureSource
-$removeparam=context_referrer
-$removeparam=ref_ctx_id
 ||fiverr.com^$removeparam=pckg_id
 ||fiverr.com^$removeparam=context_alg
 ||fiverr.com^$removeparam=context_type
@@ -3211,8 +3212,6 @@ $removeparam=fm,domain=flipkart.com|shopbop.com
 ||epicgames.com^$removeparam=epic_affiliate
 ||epicgames.com^$removeparam=epic_gameId
 $document,removeparam=cId,domain=apple.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|youtube.com
-$document,removeparam=lId,domain=apple.com|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|youtube.com
-$document,removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
 ||music.apple.com^$removeparam=itsct
 ||music.apple.com^$removeparam=itscg
 ||apple.com^$removeparam=/^ign-.*$/
@@ -3243,6 +3242,7 @@ $removeparam=_ref,domain=fanatics.com|nhl.com
 $removeparam=/^m_.*$/,domain=macys.com|macysinc.com
 $removeparam=CAGPSPN
 $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
+||unieuro.it^$removeparam=dedup
 ||philips.$removeparam=linkname
 ||philips.$removeparam=uuid
 ||apple.com^$removeparam=mttnsubad
@@ -3520,6 +3520,8 @@ $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=activity
 ||qzone.qq.com^$document,removeparam=jumptoqzone
 ||qzone.qq.com^$document,removeparam=g
+||qzone.qq.com^$document,removeparam=bp2
+||qzone.qq.com^$document,removeparam=bp7
 ||asos.com^$removeparam=ctaref
 ||gumroad.com^$removeparam=recommended_by
 ||www.booking.com^$document,removeparam=aid

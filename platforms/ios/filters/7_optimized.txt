@@ -1,9 +1,9 @@
-! Checksum: dOUf6M6Z5y7lufDqd25UCQ
-! Diff-Path: ../patches/7_optimized/7_optimized-s-1745071778-3600.patch
+! Checksum: sCLY3CXpi8+8rW3juHgzvg
+! Diff-Path: ../patches/7_optimized/7_optimized-s-1745075412-3600.patch
 ! Title: AdGuard Japanese filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.84
-! TimeUpdated: 2025-04-19T14:05:51+00:00
+! Version: 2.0.63.85
+! TimeUpdated: 2025-04-19T15:06:14+00:00
 ! Expires: 5 days (update frequency)
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten-co.jp
 ||adandhub.com^
@@ -392,6 +392,8 @@
 ||advert.punyu.com^
 aimomo.net#%#//scriptlet('set-constant', 'google_tag_manager', 'emptyObj')
 aimomo.net#%#//scriptlet('set-constant', 'adsbygoogle.pageState', '1')
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=aimomo.net
+@@||googletagmanager.com/gtm.js$domain=aimomo.net
 ||math-joy-life.com/build/assets/detect-*.js
 pokegonews.net#%#//scriptlet('prevent-eval-if', '広告')
 pokegonews.net##body > [id][style^="display: block; width: 99"]

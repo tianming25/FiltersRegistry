@@ -1,9 +1,9 @@
-! Checksum: Zp7cCt+a/xxj0jxoEeCTUQ
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1745030123-3600.patch
+! Checksum: QRsUySlnv1w2AgNBYKrbgw
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1745075407-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.47.1
-! TimeUpdated: 2025-04-18T10:07:14+00:00
+! Version: 2.0.47.2
+! TimeUpdated: 2025-04-19T15:06:11+00:00
 ! Expires: 5 days (update frequency)
 ||addefend-platform.com^
 ||remp-campaign.golem.de^
@@ -4437,7 +4437,11 @@ mmnews.de#?#.sp-module:-abp-has(span:-abp-contains(Kleinanzeigen))
 mobile.de#?#[data-testid="home-brand-portal-section-container"]:-abp-contains(Gesponsert)
 notebookcheck.com#?#.introa_news:-abp-contains(Anzeige)
 onvista.de#?#.outer-spacing--xxlarge-top:-abp-contains(Werbung von)
+onvista.de#?#.ov-carousel__item:-abp-contains(Werbung)
 onvista.de#?#a[class*="ArticleTeaserBox"]:-abp-has(div.ov-subline:-abp-contains(Werbung))
+onvista.de#?#div[class="col col--md-3 col--sm-4 col--lg-4 col--xl-4"]:-abp-contains(Werbung)
+onvista.de#?#div[class="col py-0"]:-abp-contains(Werbung)
+onvista.de#?#div[class="flex justify-between mb-4 border-b-1 border-b-grey-100 pb-2 dark:border-b-grey-700"]:-abp-contains(Werbung)
 shop-apotheke.at#?#[data-qa-id="result-list-entry"]:-abp-contains(Gesponsert)
 t-online.de#?#.afl-widget-root:has(span:-abp-contains(Beliebt bei t-online))
 tag24.de#?#article.article-tile:-abp-has(span.article-tile__badge2:-abp-contains(ANZEIGE))
@@ -4463,6 +4467,7 @@ obi.at,obi.be,obi.ca,obi.ch,obi.co.id,obi.co.jp,obi.co.kr,obi.co.nz,obi.com,obi.
 @@||asadcdn.com/adlib/pages/musikexpress.js$domain=musikexpress.de
 @@||asadcdn.com/adlib/pages/stylebook.js^$script,domain=stylebook.de
 @@||atf-tagmanager.de/config/*.js|$domain=onvista.de
+@@||bf-ad.net/adengine/onvista/adengine.js$domain=onvista.de
 @@||cpdsrv.de/cpt.js$domain=radiobob.de
 @@||football-aktuell.de/links/banner_oben.png
 @@||g.doubleclick.net/gampad/ads?$script,xmlhttprequest,domain=11freunde.de|n-tv.de|stern.de

@@ -1,9 +1,9 @@
-! Checksum: aHphZFBqtkwxqcTzPS71Dw
-! Diff-Path: ../patches/7/7-s-1745053835-3600.patch
+! Checksum: Edd/Q0SdnOmCOJ+HHt81UA
+! Diff-Path: ../patches/7/7-s-1745068439-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.63.82
-! TimeUpdated: 2025-04-19T09:06:35+00:00
+! Version: 2.0.63.83
+! TimeUpdated: 2025-04-19T13:09:55+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1700,14 +1700,15 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 /shopping/item/m*/?zenid=$document,domain=cfd|fun|shop|space|top|xyz
 /mall/*.html?zenid=$document,domain=cfd|fun|shop|space|top|xyz
 /mart/*.html?zenid=$document,domain=cfd|fun|shop|space|top|xyz
+/^https:\/\/[a-z]{5,8}\.[a-z]{4,10}\.[a-z]{2,6}\/item\/m\d{10,11}$/$document,domain=shop
 /^https:\/\/(?!www)[a-z]{3,5}\.[a-z]{4,10}\.[a-z]{2,6}\/item-(?:(?=[a-z]*\d)[0-9a-z]{10}|\d{8})\.html$/$document,match-case,domain=art|baby|biz|blog|buzz|cc|cfd|click|cloud|club|eu|fit|fun|hair|homes|info|ink|lat|life|lol|me|mom|my|one|online|sbs|shop|site|skin|space|store|top|world|xyz
 /^https?:\/\/(?!www)[a-z]{3,5}\.[0-9a-z]{4,10}\.[a-z]{2,6}\/[a-z]{3,15}\/(?=[a-z]{0,9}[0-9A-Z])[0-9A-z]{10}\.html$/$document,match-case,domain=art|baby|biz|blog|buzz|cc|cfd|click|cloud|club|eu|fit|fun|hair|homes|info|ink|lat|life|lol|me|mom|my|one|online|sbs|shop|site|skin|space|store|top|world|xyz|~livedoor.biz|~livedoor.blog
 /?AC=*&IC=$document,domain=com|fun|online|site
 .asp?AC=*&IC=$document,domain=com|fun|online|site
 /ap/signin/openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.co.jp$document,domain=cn|top|xyz
 /index.php?route=product/product&product_id=$document,domain=cyou|life|live|shop|xyz|~ocam.live
-/index.php?main_page=product_info*&cPath=$document,domain=asia|bar|beauty|best|biz|bond|buzz|cam|cfd|click|cloud|club|cyou|fit|fun|gay|homes|icu|ink|life|live|ltd|me|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|za.com
-/index.php?main_page=product_info&products_id=$document,domain=asia|bar|beauty|best|biz|bond|buzz|cam|cfd|click|cloud|club|cyou|fit|fun|gay|homes|icu|ink|life|live|ltd|me|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|za.com
+/index.php?main_page=product_info*&cPath=$document,domain=asia|bar|beauty|best|biz|bond|buzz|cam|cfd|click|cloud|club|cyou|fit|fun|gay|homes|icu|ink|life|live|ltd|me|mom|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|za.com
+/index.php?main_page=product_info&products_id=$document,domain=asia|bar|beauty|best|biz|bond|buzz|cam|cfd|click|cloud|club|cyou|fit|fun|gay|homes|icu|ink|life|live|ltd|me|mom|monster|my|one|online|pics|pro|qpon|quest|rest|ru.com|sa.com|sbs|shop|site|skin|space|store|tokyo|top|website|wiki|work|xyz|za.com
 /\.(?:club|cn|icu|top|pro|site|work)\/Personal\/member\/Login\/index\.php\?oneTimeAccessID=/$document,domain=club|cn|icu|top|pro|site|work
 !
 /^https:\/\/[a-z]{4,8}\.[a-z]{7,10}\.shop\/product\/\d{4,7}$/$document,match-case

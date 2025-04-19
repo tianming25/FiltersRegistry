@@ -1,5 +1,5 @@
-! Checksum: PU5eCvl5Sklzg41WE95L0g
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1744971049-3600.patch
+! Checksum: B5I8z4ALV6+SzEMfVgzxHw
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1745030113-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
 ! Version: 2.0.47.1
@@ -554,6 +554,8 @@ golem.de#$#.wraptusplit { min-height: auto!important; }
 spin.de#$##footer { position: relative !important; }
 schnittberichte.com#$#.bgwrapper { top: 0px !important; }
 kurier.de#$#html[data-layout] .grid { top: 0px !important; }
+maniac.de#$#body.td-ad-background-link { background-image: none!important; }
+maniac.de#$#body.td-ad-background-link #td-outer-wrap { cursor: auto!important; }
 aktiencheck.de#$#body > #main { top: 0px!important; }
 forum.digitalfernsehen.de#$#.messageContent blockquote > div[id][style*="width:300px;height:250px"] { position: absolute!important; left: -3000px!important; }
 woxikon.de#$#.ads-wrapper { position: absolute!important; left: -3000px!important; }
@@ -743,7 +745,6 @@ heise.de#?#span[class^="right"]:contains(Anzeige)
 kabeleinsdoku.at,kabeleinsdoku.de##div[data-testid="display-ad"]
 stern.de##.ad-container
 stern.de#$?#.d-md-revert.ad-container { display: none !important; }
-stern.de##.group-teaserblock__items:has(> .group--adtag-with-fallbackcontent:first-child + .group--adtag-with-fallbackcontent:last-child)
 stern.de##.group-teaserblock__items:has(> .group--adtag-with-fallbackcontent:first-child + .group--adtag-with-fallbackcontent + .group--adtag-with-fallbackcontent + .group--adtag-with-fallbackcontent:last-child)
 stern.de##article:has(> .ad-labels)
 stern.de##div[data-upscore-zone="subsection-teaser-25"]
@@ -1467,7 +1468,6 @@ netzwelt.de##.ad-trigger
 netzwelt.de##.with-ad-label
 netzwelt.de##.without-ad-label
 mtb-news.de##div[class*="header__banner"]
-winfuture.de##a[target="_blank"][href*="mysoftware.de"]
 ||tichyseinblick.de/wp-content/uploads/*/Anzeigen-
 epochtimes.de##.etd-ad
 industrie.de##.mr_content
@@ -1855,7 +1855,6 @@ www-zeit-de.cdn.ampproject.org,kirche-und-leben.de,otz.de,thueringer-allgemeine.
 dejure.org##.reihe.googlediv
 dejure.org###werbungrechtsfloat
 dejure.org##content > #mobildiv
-||j2.dejure.org/jcg/anzeige_horizontal.svg
 kachelmannwetter.com##.dkpw-billboard
 ||tag.partner.mairdumont.com^$third-party
 wetter.com###localeInformationsWidget
@@ -1896,7 +1895,6 @@ winfuture.de###adbox16
 physio-deutschland.de###ads
 spielen.de###bannerarea
 amazon.de###browse_feature_div
-hallo-eltern.de###content-ad-bottom
 drehscheibe-online.de###dsHeaderColoured
 zdnet.de###featureWhitepaper
 golem.de###gts-clip
@@ -1914,7 +1912,6 @@ tweakpc.de###wpr
 focus.de##.adMarkerBlock
 abnehmen.com,seatforum.de##.ad_marker
 fcn.de##.ads:not([class^="ads small-block-grid-"])
-eatsmarter.de##.adsense
 winfuture.de##div[class^="amazon_widget_"]
 oeffnungszeitenbuch.de##.anzeigenlabel
 50plus.de,jetztspielen.ws,deavita.com,n-land.de,prospektangebote.de,bonedo.de,mallorcamagazin.com,tageskarte.io,piste.de,ruhrnachrichten.de,spielspiele.de,1001spiele.at,bundesliga.de,lbb.de##.banner
@@ -2178,6 +2175,7 @@ fahrrad.de#@#.is-sponsored
 @@||api-v*.trbo.com/r.php$domain=o2online.de
 businessinsider.de#@#.ll_partnerexpert_widget
 @@||getraenkedienst.com/muenchen/media/image/
+@@||toolbox.dfb.de/img/partner-logos^
 @@||assets.dfb.de/uploads/*/original_$image
 urlaubspartner.net#@#.werbung
 urlaubspartner.net#@##werbung
@@ -2251,7 +2249,6 @@ rtl.de#@#.rtlde-medium-rectangle
 /nativendo.js
 /nativendo/*
 /o2-layer.
-/pic/werbung/*
 /styles/werbung_
 /upload/werbung/*
 /usemax/*
@@ -2296,7 +2293,6 @@ _woz_banner_vote.
 ###ad-qm-sidebar-oben
 ###ad_rechts
 ###adcontentoben
-###adcontentoben1
 ###adliste
 ###bannerwerbung
 ###gwerbung
@@ -2331,7 +2327,6 @@ _woz_banner_vote.
 ###reklame
 ###reklame-rechts-mitte
 ###startwerbung
-###textwerbung
 ###topwerbung
 ###werbeanzeige
 ###werbebanner
@@ -2415,9 +2410,7 @@ _woz_banner_vote.
 ##.werbung_728
 ##.werbung_banner
 ##.werbung_links
-##.werbung_sidebar
 ##.werbung_text
-##.werbungimthread
 ##.widget-werbung
 ##a[aria-label="Werbelink"]
 ##a[href*=".prodtraff.com/"]
@@ -2550,7 +2543,6 @@ wetter.com#@#div[id^="div-gpt-"]
 ||netwayer.de^
 ||nonstoppartner.net^$third-party
 ||onlymega.com^$third-party
-||payclick.it^$third-party
 ||playamedia.com^$third-party
 ||ptadsrv.de^$third-party
 ||qualitymedianetwork.de^$third-party
@@ -2737,7 +2729,6 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||germanscooterforum.de/bannermanagement/
 ||gn-online.de/ad/
 ||goldpreis.de/ajax/revs.php?
-||googlewatchblog.de/wp-content/uploads/amazon-music-hd-stream.jpg
 ||graltek.net/php/amzad_$xmlhttprequest
 ||griechenland.net/images/banners/
 ||grower.ch/partner/
@@ -2863,6 +2854,7 @@ $stylesheet,subdocument,third-party,xmlhttprequest,domain=canna-power.to|canna.t
 ||stadt-bremerhaven.de^*/psw.jpg
 ||stereo.de^*/banner/
 ||steuertipps.de/scripts/google-ad/
+||suche.1und1.de/amazon?
 ||suche.gmx.net/amazon?
 ||suche.t-online.de/web/amazon?
 ||suche.t-online.de/web/billiger?
@@ -3044,6 +3036,7 @@ radiobielefeld.de###billboardad
 realtotal.de###block-3
 jungle.world###block-anzeige
 macgadget.de###block-anzeige2
+hoerzu.de###block-block-218
 duden.de###block-dudende-d-970x250-1billboard
 duden.de###block-leaderboard2ndslot
 duden.de###block-lexemleaderboardunten
@@ -3292,6 +3285,7 @@ netmoms.de,praxistipps.focus.de##.FC__Ad
 swoodoo.com##.Flights-Results-FlightRightRail
 blick.de##.OAS_AD
 de.rt.com##.TopBanner-root
+t-online.de,www-t--online-de.cdn.ampproject.org##.Tshlogobox
 via-ferrata.de##.YouTubeoetz
 gartenjournal.net##._gartenjournal_billboard
 mallorcazeitung.es##._mo_recs
@@ -3563,6 +3557,7 @@ my-homo.net##.gxt_banner
 my-homo.net##.gxt_feed
 qiez.de##.h5v
 helpster.de##.h5v-ad
+pornotim.com,xhammer.net##.happy-inside-player
 pornohut.info##.happy-player-beside
 ak-kurier.de##.hd-banner
 blickpunkt-brandenburg.de,fruchtportal.de,katzeausdemsack.de,nh24.de,sunshine.it##.header-banner
@@ -3696,7 +3691,6 @@ ga.de##.portal-top
 ibooks.to##.post_content .btn
 hartware.de##.postanzeige
 ostbelgiendirekt.be##.pr-area
-oljo.de##.preisboxinner
 f95.de##.premiumpartner
 pferd-aktuell.de##.presenting
 winfuture.de##.primis_widget
@@ -3712,7 +3706,6 @@ zentrum-der-gesundheit.de##.products-inarticle-slider--parent
 coolibri.de##.promContainer
 tvspielfilm.de##.promo-box
 tvspielfilm.de##.promo-box-any-banner
-wegwerfemailadresse.com##.promobox
 stadt-bremerhaven.de##.psw-container
 europa-landmaschinen.de,suedtirolnews.it##.pub
 tchgdns.de##.pub-footer
@@ -3948,7 +3941,6 @@ shop.rewe.de##div[class*="Product_productSpecialTile"]
 onlinehaendler-news.de##div[class*="adplacement_"]
 chartsurfer.de##div[class*="adszone-"]
 amazona.de##div[class*="fnetbr"]
-onvista.de##div[class="col col--sm-4 col--md-3 col--lg-4 col--xl-4"]
 homegate.ch##div[class^="AdSlotContainer_"]
 stol.it##div[class^="AdSuperBanner_"]
 stol.it##div[class^="AdUnit_"]
@@ -4105,6 +4097,7 @@ werkenntdenbesten.de##div[x-data^="modules.adMedia"]
 sueddeutsche.de##er-ad-slot
 190.115.18.20,aniworld.to,s.to##iframe[style*="z-index: 2147483647"]
 windowspro.de##iframe[style="height:250px;overflow: hidden;"]
+ibooks.to##img[alt="Download kostenlos"]
 finanzen.net##img[alt="Passende Produkte von Vontobel"]
 boerse.cx##img[alt="Promo"]
 warez-ddl.net##img[height="90"]
@@ -4161,9 +4154,7 @@ focus.de##.shoppingcartctn
 businessinsider.de,bz-berlin.de,giga.de,myhomebook.de,sport1.de,sueddeutsche.de,t-online.de,transfermarkt.de##.trc-content-sponsored
 businessinsider.de,bz-berlin.de,fitbook.de,giga.de,jetzt.de,myhomebook.de,noizz.de,sport1.de,sportbild.bild.de,sueddeutsche.de,t-online.de,techbook.de,transfermarkt.de,travelbook.de,welt.de##.trc_related_container div[data-item-syndicated="true"]
 willhaben.at##[data-testid="top-ads-large"]
-autobild.de,bz-berlin.de,computerbild.de,finanzen.net,gamestar.de,n-tv.de,ran.de##a[data-nvp*="'trafficUrl':'https://paid.outbrain.com/network/redir?"]
 autobild.de,bz-berlin.de,chip.de,computerbild.de,finanzen.net,gamestar.de,n-tv.de,ran.de##a[data-oburl^="https://paid.outbrain.com/network/redir?"]
-autobild.de,bz-berlin.de,computerbild.de,finanzen.net,gamestar.de,n-tv.de,ran.de##a[data-redirect^="https://paid.outbrain.com/network/redir?"]
 autobild.de,bz-berlin.de,computerbild.de,finanzen.net,focus.de,gamestar.de,n-tv.de,ran.de##a[href^="https://paid.outbrain.com/network/redir?"]
 focus.de##a[href^="https://www.communicationads.net/tc.php"]
 focus.de##a[href^="https://www.financeads.net/tc.php"]

@@ -1,9 +1,9 @@
-! Checksum: vJo6Zymq5YoKHS5SFuq+wQ
-! Diff-Path: ../patches/14/14-s-1745071775-3600.patch
+! Checksum: RBTjsAP0hP2vLSb9W+XqyQ
+! Diff-Path: ../patches/14/14-s-1745151183-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.27.80
-! TimeUpdated: 2025-04-19T14:06:02+00:00
+! Version: 2.2.27.81
+! TimeUpdated: 2025-04-20T12:09:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3520,7 +3520,7 @@ herohero.co#%#//scriptlet('trusted-set-local-storage-item', '__heroheroCookies',
 kanaldim.tv##.privacy-policy-block
 snipcart.com##.site-cookie-alert
 flocktory.com##.sc-CookiesNotification
-wells.pt,vcg.de,woolworth.de,woolworth.pl,woolworth.at#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialog input#CybotCookiebotDialogBodyLevelButtonPreferences, #CybotCookiebotDialog input#CybotCookiebotDialogBodyLevelButtonMarketing, #CybotCookiebotDialog button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection')
+zuiderzeemuseum.nl,wells.pt,vcg.de,woolworth.de,woolworth.pl,woolworth.at#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialog input#CybotCookiebotDialogBodyLevelButtonPreferences, #CybotCookiebotDialog input#CybotCookiebotDialogBodyLevelButtonMarketing, #CybotCookiebotDialog button#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection')
 mullerpolska.pl#%#//scriptlet('trusted-click-element', '#CybotCookiebotDialog a#CybotCookiebotDialogBodyButtonAccept')
 tass.ru##div[class^="CookieAcceptance_container"]
 go.bancatransilvania.ro##.gdprcookie-wrapper
@@ -16839,6 +16839,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/uBlockOrigin/uAssets/issues/28044
+@@||consent.cookiebot.com/uc.js$domain=zuiderzeemuseum.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203450
 cofra.it#@#.CookieConsent:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203320

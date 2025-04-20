@@ -1,9 +1,9 @@
-! Checksum: HHaQDFEcmaKD14yQgpDBwA
-! Diff-Path: ../patches/20/20-s-1745154918-3600.patch
+! Checksum: l1jisI+q+ccXBXJ9xCz7wQ
+! Diff-Path: ../patches/20/20-s-1745172708-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.13
-! TimeUpdated: 2025-04-20T13:11:55+00:00
+! Version: 2.0.20.14
+! TimeUpdated: 2025-04-20T18:08:25+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3605,6 +3605,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+reclameaqui.com.br#$#div[data-testid="complete-header"] > div[data-testid="banner-container"] { display: none !important; }
+reclameaqui.com.br#$#div[data-testid="complete-header"] > div[data-testid="banner-container"] + header > div[style="top:90px"] { top: 0 !important; }
 my-best.com###__next > div.css-1pcjl0n > a[href="https://mybest.go.link/924F7"]
 finance.yahoo.com##.app-banner
 theinformation.com##a[data-testid="download-app"]

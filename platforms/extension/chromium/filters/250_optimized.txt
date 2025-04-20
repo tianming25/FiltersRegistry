@@ -1,5 +1,5 @@
-! Checksum: E06e+y7bEzlJvnml51TWJQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1745110304-14400.patch
+! Checksum: nHDhKWELE3HrSKgoGVT5jA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1745124017-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.74
@@ -114,6 +114,7 @@ softwaretested.com##.st-alternative
 coolrom.com.au,coolrom.com##.download_link
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
+||ubuntu.org^$document,domain=~you-were-likely-looking-for-ubuntu.com
 ?bemobdata=$all
 ||auslogics.com^$document
 ||mediaget.com^$all
@@ -149,6 +150,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||enraptureforemostearly.com^$all
 ||negateacted.com^$all
 ||accomplishedpersuadedprinter.com^$all
+||delicioustightbronze.com^$all
 ||inscribemutenessforced.com^$all
 ||invadedisheartentrail.com^$all
 ||expensivelikeness.com^$all
@@ -793,7 +795,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||avhduwvirosl.com^$all
 ||avhffexurg.com^$all
 ||avhjzemp.com^$all
-||avsakrcapna.com^$all
 ||avsojlonp.com^$all
 ||avvxcexk.com^$all
 ||avvzamazdpa.com^$all
@@ -1483,6 +1484,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||amazonaws.com^$document,popup,badfilter
 ||amazonaws.com^$document,badfilter
 ||amazonaws.com^$badfilter
+||dabaicai.com^$all
 ||flash.cn^$all
 ||crentgate.com^$all
 ||redirekted.com^$all
@@ -1492,7 +1494,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ###share_bar
 ###share_container:not([class*=body i])
 ###sharebar
-###sharingfooter
 ###social-share:not([class*=body i])
 ###social_buttons:not([class*=body i])
 ###ss-floating-bar
@@ -1617,7 +1618,6 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##div[class^=shareLinks]
 ##div[class^=social-like]
 ##div[class^=social-media-container]:not([class*=body i],[id*=body i],[class*=content i],[id*=content i])
-##div[id^=btnShare i]
 ##div[id^=dpsp-]
 ##h2[class*=share-links]
 ##share-grid
@@ -1869,6 +1869,7 @@ pinterest.*##div[data-test-id=giftWrap]
 quizlet.com##.LoginBottomBar
 quizlet.com#$#.SetPageTerm-largeSide { filter: none !important }
 fm.to##.blockOverlay.blockUI
+dev.mysql.com##.login-callout
 investing.com###PromoteSignUpPopUp
 context.reverso.net###register-popup-bottom
 ||comment.youmaker.com^$domain=theepochtimes.com
@@ -1986,7 +1987,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /snowstorm.js
 /christmas-snow.js
 @@||epochtimes.com^
-@@||ntdtv.com^
 @@||accounts.google.com/gsi^$domain=www.deviantart.com
 @@||www.joesandbox.com^
 @@||virustotal.com^
@@ -2013,7 +2013,6 @@ reports.adguard.com$badfilter
 @@||easylist.to/*.txt^
 @@||someonewhocares.org/hosts/
 @@||fanboy.co.nz/*.txt^
-yjc.ir,tabnak.ir##a[href$="/fa/prayer"]
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
 bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 delfi.lt#%#//scriptlet('ubo-aeld.js', 'copy')
@@ -2079,7 +2078,6 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
 rakuten.tv##a[href*=".imdb.com/title/"]
 www.google.*,ipv6.google.com##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
-www.google.*,ipv6.google.com#?#.g:has-text(imdb.com › title) div[data-snf]:has(g-bubble)
 www.google.*,ipv6.google.com##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
 $removeparam=yclid
@@ -2326,6 +2324,7 @@ $removeparam=ad_id,domain=~olx.ua
 $document,removeparam=/^affSource.*$/i
 $document,removeparam=/^_s=afl_impact$/
 $document,removeparam=/^cid_.*$/
+$removeparam=cjReq
 $removeparam=ir_cid
 $document,removeparam=p_sid,domain=~wgv.de
 $removeparam=depth_1-utm_source
@@ -2412,7 +2411,6 @@ $removeparam=af_referrer_customer_id
 $removeparam=af_referrer_uid
 $removeparam=af_siteid
 $document,removeparam=/^af_sub\d=.*$/
-$removeparam=af_sub_siteid
 $removeparam=is_retargeting
 $document,removeparam=shortlink
 $document,removeparam=/^pid=.*_int$/
@@ -2867,6 +2865,7 @@ $removeparam=aff_click_id
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaId
 ||baike.baidu.com/tashuo/browse/content?$removeparam=lemmaTitle
 ||baidu.com^$removeparam=sourceFrom
+||baidu.com^$removeparam=frs
 ||baidu.com/link?$removeparam=eqid
 ||baidu.com/link?$removeparam=wd
 ||map.baidu.com^$removeparam=da_src
@@ -2969,6 +2968,7 @@ $removeparam=report_recomm_player
 ||qq.com^$removeparam=ptag
 ||view.inews.qq.com^$removeparam=refer
 ||view.inews.qq.com^$removeparam=ft
+^via=toolbar^$removeparam=via,domain=user.qzone.qq.com
 $removeparam=app,domain=tiktok.com|music.apple.*
 $removeparam=c,document,domain=announcements.bybit.com|appsflyer.com|farfetch.com|glami.cz|hepsiburada.com|norton.com|onelink.me|shopee.*|tiktok.com|instabox.io
 $document,removeparam=campaign,domain=1sol.io|bdsmx.tube|blue-tomato.com|bybit.com|coinpanel.com|discord.*|docs.google.com|docsend.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|mrgay.tube|outnorth.fi|peterhahn.*|reddit.app.link|runnode.com|scmp.com|shopee.*|sitepoint.com|sportler.com|t.me|twitter.com|ubereats.com|x.com|youtube.com
@@ -3056,7 +3056,6 @@ $removeparam=site_id,domain=taskrabbit.com|kochava.com
 $removeparam=ssdcat,domain=norton.com|ask.com
 ||cdninstagram.com^$removeparam=ccb
 ||cdninstagram.com^$removeparam=efg
-$removeparam=content,domain=1sol.io|bybit.com|coinpanel.com|docs.google.com|docsend.com|eonline.com|eventbrite.*|forms.gle|gleam.io|goodcrypto.app|instagram.com|kasta.io|runnode.com|t.me|twitter.com|x.com|youtube.com
 ||tokopedia.com^$removeparam=whid
 $removeparam=fm,domain=flipkart.com|shopbop.com
 ||flipkart.com^$removeparam=ppn
@@ -3142,7 +3141,6 @@ $removeparam=visit_id,document,domain=bilibili.com|google.*
 $removeparam=refdomain,domain=bestbuy.com
 $removeparam=recs_source
 ||gamivo.com^$removeparam=glv
-||banggood.com^$removeparam=custlinkid
 ||market.yandex.ru^$removeparam=cpc
 ||everesttech.net^$removeparam=/^ev_.*$/
 ||kelkoogroup.net^$removeparam=custom1
@@ -3284,6 +3282,7 @@ $removeparam=qid,domain=bookdepository.com|eastday.com
 ||xiaohongshu.com^$removeparam=apptime,document
 ||login.afreecatv.com^$removeparam=szFrom
 ||typeform.com^$removeparam=typeform-source
+$removeparam=_1lr
 $removeparam=ymid
 ref=troyhunt.com$document,removeparam=ref
 ||disneyplus.com^$removeparam=distributionPartner
@@ -3462,6 +3461,7 @@ www.svt.se#$#div[class*=TextContent_textContent__] { font-family: "Segoe UI Bold
 @@||wikia.nocookie.net^*/images/$image,badfilter
 fandom.com,wikia.org#$?#a:link { cursor: pointer !important }
 cursor_hover.$image
+||nocookie.net/*cursor.png^
 _Cursor1.png^
 tumblr.com#$#.custom-cursor { cursor: unset !important }
 tumblr.com#$#.custom-cursor a { cursor: pointer !important }

@@ -1,9 +1,9 @@
-! Checksum: qYbjJi4sIM36b9PI3L0uxw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1745196740-14400.patch
+! Checksum: 2R8cTuWzMJcocZfxsbAe8w
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1745210549-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.16.75
-! TimeUpdated: 2025-04-21T00:48:22+00:00
+! Version: 2.0.16.76
+! TimeUpdated: 2025-04-21T04:38:42+00:00
 ! Expires: 12 hours (update frequency)
 ###app-download
 ###app-modal
@@ -41,7 +41,6 @@
 bilibili.com##.nav-link-item a[href$="app.bilibili.com"]
 ifeng.com##.openApp[onclick^="loadOpen.init(download"]
 imageban.ru##img[alt="Get it on Google Play"]
-ipaddressguide.com##img[alt="iptools apple app"]
 kurashiru.com##.footer-image-wrapper
 momondo.*#$##mobile-splash-popup { display: none!important }
 momondo.*#$##mui-header { display: block!important }
@@ -108,6 +107,7 @@ ugetfix.com,sauguspc.lt,wyleczpc.pl,sichernpc.de,pcseguro.es##.download-button-o
 2-spyware.com,novirus.uk,faravirus.ro,uirusu.jp,virusi.hr,wubingdu.cn,avirus.hu,ioys.gr,odstranitvirus.cz,tanpavirus.web.id,utanvirus.se,virukset.fi,losvirus.es,virusler.info.tr,semvirus.pt,lesvirus.fr,senzavirus.it,dieviren.de,viruset.no,usunwirusa.pl,zondervirus.nl,bedynet.ru,virusai.lt,virusi.bg,viirused.ee,udenvirus.dk##.quick-download-button-text
 drivereasy.com#?#.pakb-content p:has-text(Driver Easy)
 drivereasy.com#?#.pakb-content p:has-text(the Pro version)
+howtoremove.guide##[id*="newage"]
 windowsreport.com##div[class^=restoro-download] + section
 appuals.com##.wptp
 appuals.com##p + div > div:first-of-type
@@ -859,8 +859,8 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 !+ PLATFORM(windows, mac, android)
 208.91.189.203$network
 ||classesrainbowburka.com^$all
+||commonjamknights.com^$all
 ||grievetube.com^$all
-||enraptureforemostearly.com^$all
 ||negateacted.com^$all
 ||accomplishedpersuadedprinter.com^$all
 ||delicioustightbronze.com^$all
@@ -2196,7 +2196,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 95.181.157.36$network
 !+ PLATFORM(windows, mac, android)
 95.181.172.204$network
-||tendonshepherdsomething.com^$all
 !+ PLATFORM(windows, mac, android)
 147.135.16.27$network
 apkfab.com##.tip-extension
@@ -2419,6 +2418,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##.shareit:not(html,body,:empty)
 ##.shareon:not(html,body,:empty)
 ##.sharethis-wrapper:not(html,body,:empty)
+##.shareToggle:not(html,body,:empty)
 ##.shariff-button:not(html,body,:empty)
 ##.sharing-btn:not(html,body,:empty)
 ##.sharing-container:not(html,body,:empty)
@@ -2717,7 +2717,6 @@ context.reverso.net#$#.blocked { filter: none !important; }
 linustechtips.com,forum.malwarebytes.com,community.ccleaner.com##.cTopicPostArea:has(.cGuestTeaser):not(:has(.ipsComposeArea_editor))
 ||subs.youmaker.com^$third-party
 ##.paywall-gradient:not(html, body)
-nijie.info##.twit-button
 instagram.com#?#div[class^=" _"][style^="width: "]:only-of-type:has(a[href^="/accounts/emailsignup/"])
 www.instagram.com##div[data-visualcompletion=ignore] + div[class*=" "]
 community.spiceworks.com#%#//scriptlet('ubo-cookie-remover.js', 'visit_count')
@@ -2807,6 +2806,7 @@ baidu.com##.poiLeadDownloadCard
 12306.cn##.foot-code
 flights.ctrip.com##.seo-links
 mafengwo.cn###footer
+jandan.net###footer
 ||liveupdate.cyberlink.com/*CHANNEL=iSales
 ||igs.thesims3.com/api/$app=TS3W.exe
 ||images.nvidia.com/*-1920x620.$image,app=NVIDIA App.exe|nvcontainer.exe
@@ -2858,6 +2858,7 @@ fandom.com##nav.is-community-bar-in .mobile-global-navigation__community-bar
 fandom.com##div:not([class],[id],[style]):has(> [data-testid^=QuizBanner i])
 spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-snow', 'false')
 /particles.min.js^
+/frosmo.easy.js^
 /snowplow$script,domain=casamundo.se|hemnet.se
 /snowplow-tracker$script
 alpresor.se#%#//scriptlet('ubo-acis.js', 'snowMax')
@@ -3121,14 +3122,15 @@ $removeparam=ASUBID
 $removeparam=ASID
 $removeparam=cm_sp
 $removeparam=cm_re
-$removeparam=refer_code
 $removeparam=AFID,domain=~chggtrx.com|~state.gov
 $document,removeparam=campaignid
 $removeparam=loc,document,domain=bestbuy.*|shopping.google.com
 $removeparam=acampID
+$removeparam=cmt
 $removeparam=at_gd
 $document,removeparam=/^amp=$/,domain=~eurasiantimes.com|~cybersecuritynews.com
 $removeparam=_gl
+$removeparam=vfadid
 $document,removeparam=/^outputType=amp$/
 $removeparam=orig_referrer
 $removeparam=ncid
@@ -3170,7 +3172,6 @@ $removeparam=o_lid
 $removeparam=o_sch
 $removeparam=o_xid
 $removeparam=wtExtndSource
-$removeparam=CAID
 $removeparam=rfsn
 $document,removeparam=trackid,domain=~nzpost.co.nz
 $removeparam=afsrc
@@ -3190,6 +3191,7 @@ $removeparam=impradid
 $removeparam=impradname
 $removeparam=cm_type
 $document,removeparam=/^source=pepperjam$/
+$document,removeparam=/^source=cj$/
 $removeparam=affil
 $removeparam=cjid
 $removeparam=irsharedid
@@ -3276,7 +3278,6 @@ $removeparam=cm_cat
 $removeparam=cm_pla
 $removeparam=cm_ite
 $removeparam=cm_lm
-$removeparam=cm_ainfo
 $removeparam=CSID
 $document,removeparam=/^source=webgains$/
 $removeparam=paid
@@ -3338,12 +3339,6 @@ $removeparam=pk_kwd
 $removeparam=ig_mid
 $removeparam=au_advert_id
 $removeparam=au_car_id
-$removeparam=ads_adid
-$removeparam=ads_cmpid
-$removeparam=ads_creative
-$removeparam=ads_matchtype
-$removeparam=ads_network
-$removeparam=ads_targetid
 $removeparam=mindbox-click-id
 $removeparam=tj,domain=baidu.com|sina.com.cn
 $removeparam=tagtag_uid
@@ -3365,6 +3360,10 @@ $removeparam=vgo_ee
 $document,removeparam=/^amp;utm_.*$/
 $removeparam=sap-outbound-id
 $removeparam=analyticsCorrelationId
+$removeparam=oft_id
+$removeparam=oft_k
+$removeparam=oft_lk
+$removeparam=oft_d
 $removeparam=adobe_mc
 $removeparam=omnisendContactID
 $document,removeparam=affiliate,domain=~justice.gov|~lippu.fi
@@ -3412,6 +3411,7 @@ $removeparam=dsp_uid
 $removeparam=adsafe_url
 $removeparam=mt_uuid
 $removeparam=sifi_uid
+$removeparam=_rlid
 $removeparam=ga_fc
 $removeparam=ga_client_id
 $removeparam=s_id
@@ -3436,7 +3436,6 @@ $removeparam=cbuster
 $removeparam=adsafe_jsinfo
 $removeparam=__hs
 $removeparam=ex-src
-$removeparam=mboxSession
 $removeparam=pv_ts
 $removeparam=bidswitch_ssp_id
 $removeparam=tgclid
@@ -3457,7 +3456,6 @@ $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|
 $removeparam=sid,domain=anrdoezrs.net|dpbolvw.net|gopjn.com|jdoqocy.com|kqzyfj.com|pepperjamnetwork.com|tkqlhce.com|gamereactor.*
 $removeparam=from,document,domain=apkpure.com|bandcamp.com|browserling.com|duckduckgo.com|duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion|ettoday.net|landevei.no|luisaviaroma.com|sogou.com|store.hbr.org|app.snyk.io|onlinepngtools.com|indiatimes.com|jetbrains.com|nextdns.io|tvtropes.org|yandex.com
 $removeparam=keyword,domain=bindright.com|lendgo.com|reddit.app.link
-$removeparam=id,domain=go.redirectingat.com|go.skimlinks.com|go.skimresources.com|karkkainen.com
 $removeparam=offer_id,domain=catch.com.au|surfshark.com
 $document,removeparam=adid,domain=indeed.com|mcafee.com|nikkei.co.jp|tmz.com
 ||amazon.$removeparam=th
@@ -3661,7 +3659,6 @@ $removeparam=/^udm=$/,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=tfu
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
-@@://www.google.com/maps?entry=$removeparam=utm_campaign
 ||tiktok.com^$removeparam=_r
 $removeparam=u_code
 $removeparam=is_copy_url
@@ -3951,6 +3948,7 @@ $removeparam=fm,domain=flipkart.com|shopbop.com
 ||flipkart.com^$removeparam=ssid
 ||flipkart.com^$removeparam=store
 ||flipkart.com^$removeparam=marketplace
+||mozilla.org^$removeparam=redirect_source
 ||fiverr.com^$removeparam=funnel
 ||epicgames.com^$removeparam=epic_affiliate
 ||epicgames.com^$removeparam=epic_gameId
@@ -4076,6 +4074,7 @@ $removeparam=af,domain=1fichier.com|comodo.com
 ||qwant.com^$removeparam=client
 ||ecosia.org^$removeparam=addon
 $removeparam=referralInfo,domain=wix.com
+$removeparam=tck,domain=mongodb.com
 $removeparam=locale,domain=udemy.com
 ||nortonsafe.search.ask.com^$removeparam=installsource
 ||nortonsafe.search.ask.com^$removeparam=os
@@ -4107,7 +4106,6 @@ $removeparam=user_id,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44
 ||linkedin.com^$removeparam=original_referer
 $document,removeparam=refId,domain=aebn.com|linkedin.com
 ||eporner.$removeparam=trx
-$removeparam=sub,domain=allboner.com|twinkvideos.com
 ||fandom.com^$removeparam=so
 ||tumblr.com^$removeparam=is_related_post
 ||xbox.com^$removeparam=rtc
@@ -4171,7 +4169,6 @@ $removeparam=qid,domain=bookdepository.com|eastday.com
 ||typeform.com^$removeparam=typeform-source
 $removeparam=_1lr
 $removeparam=ymid
-ref=troyhunt.com$document,removeparam=ref
 ||disneyplus.com^$removeparam=distributionPartner
 ||homedepot.com^$removeparam=fromReminder
 $removeparam=embeds_referring_euri
@@ -4262,6 +4259,9 @@ $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=pspid
 ||login.yahoo.com^$document,removeparam=activity
 ||qzone.qq.com^$document,removeparam=jumptoqzone
+||qzone.qq.com^$document,removeparam=subtype
+||qzone.qq.com^$document,removeparam=ciphertext
+||qzone.qq.com^$document,removeparam=blog_photo
 ||qzone.qq.com^$document,removeparam=g
 ||qzone.qq.com^$document,removeparam=bp2
 ||qzone.qq.com^$document,removeparam=bp7
@@ -4333,7 +4333,6 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@||img*.nga$removeparam=cmpid
 @@/aff_c?$removeparam=/^aff_id\d?=.*$/i
 @@||hitta.se^$removeparam=ad_id
-@@||youtube.com/videoplayback$removeparam=source
 @@||facebook.com^$removeparam=__s
 @@||bing.*/ws/redirect/$removeparam
 @@||email-link.$removeparam
@@ -4342,7 +4341,7 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@/login-redirect/*$removeparam
 @@/login?$removeparam=referrer
 @@$removeparam=/^OCID=.*$/i,app=Microsoft.Msn.News.exe
-1000mg.jp,1geki.jp,2nn.jp,4travel.jp,account.nicovideo.jp,altema.jp,amiami.jp,amy.tokyo,ark-pc.co.jp,ascii.jp,athome.co.jp,atpress.ne.jp,auone.jp,automaton-media.com,biccamera.com,blog.esuteru.com,bloomberg.co.jp,books-sanseido.jp,cdjapan.co.jp,cero.gr.jp,ch.nicovideo.jp,cinematoday.jp,coat.co.jp,cookpad.com,dengekionline.com,diamond.jp,direct.sanwa.co.jp,dmkt-sp.jp,dmm.co.jp,dmm.com,doope.jp,doorblog.jp,dto.jp,eagate.573.jp,entabe.jp,entamepost.jp,eonet.jp,epark.jp,eposcard.co.jp,expresscard.jp,expy.jp,familio-folkloro.com,famitsu.com,faq.radiko.jp,fgomatomeplus.com,g123.jp,gamefactory.jp,gamepedia.jp,gameranbu.jp,gamewith.jp,geekjob.jp,getchu.com,gigazine.net,goguynet.jp,granbluefantasy.jp,gta5.jp,h1g.jp,hentai-image.com,hentai-img.com,hosyusokuhou.jp,hotpepper.jp,huffingtonpost.jp,hulu.jp,ib-game.jp,impress.co.jp,innervision.co.jp,insightnow.jp,iphone-mania.jp,itmedia.co.jp,japan-animemusic.com,jgrants-portal.go.jp,jmty.jp,joshinweb.jp,jp.ign.com,jp.nexon.com,jp.wsj.com,k-manga.jp,kabutan.jp,kakaku.com,kamigame.jp,kinokuniya.co.jp,kitimama-matome.net,kojima.net,konoyubitomare.jp,livedoor.com,logroid.blogspot.com,maidonanews.jp,mainichi.jp,mapion.co.jp,matu.cocolog-nifty.com,mechacomic.jp,melonbooks.co.jp,mgjshop.co.jp,mineo.jp,mixi.jp,mora.jp,nazonazo.jp,nec.co.jp,neowing.co.jp,news.infoseek.co.jp,newsweekjapan.jp,nicenature.top,nicoco.net,nijie.info,nikkan.co.jp,nojima.co.jp,ntj.jac.go.jp,nttxstore.jp,ocn.ne.jp,odakyu.jp,omni7.jp,onojibi.jp,originalnews.nico,osawa-inc.co.jp,otakomu.jp,otanew.jp,pex.jp,platinedispositif.net,point.recruit.co.jp,poptapbeat.taiko-ch.net,qa.nicovideo.jp,qoo10.jp,rakuten.co.jp,rank-king.jp,recipe-blog.jp,research-panel.jp,sankei.com,sanwa-d.co.jp,security-next.com,seesaa.jp,seiga.nicovideo.jp,sengokuixa.jp,shogakukan.co.jp,store-tsutaya.tsite.jp,suruga-ya.jp,suumo.jp,takarazuka-an.co.jp,taking-a-stand.jp,tenki.jp,tinami.com,tokubai.co.jp,tokyo-np.co.jp,tsukumo.co.jp,tv-tokyo.co.jp,vector.co.jp,vippers.jp,vita.taiko-ch.net,weathernews.jp,web-ace.jp,webcomics.jp,weblio.jp,westjr.co.jp,wowkorea.jp,wowma.jp,www.gpoint.co.jp,www.homes.co.jp,www.infoseek.co.jp,www.jorudan.co.jp,www.meti.go.jp,www.nikkei.com,www.nintendo.co.kr,www.swiki.jp,yahoo.co.jp,yamanashirei.blog.fc2.com,yodobashi.com,yomiuri.co.jp,yugioh-card.com,~justpass.epark.jp,~mall.epark.jp,bookmeter.com,mottainaihonpo.com,netoff.co.jp,tokyodisneyresort.jp,nijimen.kusuguru.co.jp,applion.jp,mayla.jp,kawade.co.jp,koupenchan-store.jp,asunaro.shop-pro.jp,st-c.co.jp,eikoh-prize.jp,cocreco.kodansha.co.jp,kenko-tokina.co.jp,ganguoroshi.jp,shop.hanshintigers.jp,loft.co.jp,universal-music.co.jp,animate-onlineshop.jp,takaratomymall.jp,shop.adidas.jp,ftnews.jp,rtrp.jp,jalan.net,2ch2.net,japan-baseball.jp,bookoff.co.jp,kotobank.jp,sansokan.jp,p-m-g.tokyo,sendenkaigi.com,toyokeizai.net,sentankyo.jp,cosmeconcier.jp,commerce-design.net,diamond.co.jp,photo-ac.com,ac-illust.com,jmca.jp,maonline.jp,shidaikyo.or.jp,1book.biz,nikkeibp.co.jp,jri.co.jp,10mtv.jp,booth.pm,l2blocker.com,syosetu.org#$#:is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
+1000mg.jp,1geki.jp,2nn.jp,4travel.jp,account.nicovideo.jp,altema.jp,amiami.jp,amy.tokyo,ark-pc.co.jp,ascii.jp,athome.co.jp,atpress.ne.jp,auone.jp,automaton-media.com,biccamera.com,blog.esuteru.com,bloomberg.co.jp,books-sanseido.jp,cdjapan.co.jp,cero.gr.jp,ch.nicovideo.jp,cinematoday.jp,coat.co.jp,cookpad.com,dengekionline.com,diamond.jp,direct.sanwa.co.jp,dmkt-sp.jp,dmm.co.jp,dmm.com,doope.jp,doorblog.jp,dto.jp,eagate.573.jp,entabe.jp,entamepost.jp,eonet.jp,epark.jp,eposcard.co.jp,expresscard.jp,expy.jp,familio-folkloro.com,famitsu.com,faq.radiko.jp,fgomatomeplus.com,g123.jp,gamefactory.jp,gamepedia.jp,gameranbu.jp,gamewith.jp,geekjob.jp,getchu.com,gigazine.net,goguynet.jp,granbluefantasy.jp,gta5.jp,h1g.jp,hentai-image.com,hentai-img.com,hosyusokuhou.jp,hotpepper.jp,huffingtonpost.jp,hulu.jp,ib-game.jp,impress.co.jp,innervision.co.jp,insightnow.jp,iphone-mania.jp,itmedia.co.jp,japan-animemusic.com,jgrants-portal.go.jp,jmty.jp,joshinweb.jp,jp.ign.com,jp.nexon.com,jp.wsj.com,k-manga.jp,kabutan.jp,kakaku.com,kamigame.jp,kinokuniya.co.jp,kitimama-matome.net,kojima.net,konoyubitomare.jp,livedoor.com,logroid.blogspot.com,maidonanews.jp,mainichi.jp,mapion.co.jp,matu.cocolog-nifty.com,mechacomic.jp,melonbooks.co.jp,mgjshop.co.jp,mineo.jp,mixi.jp,mora.jp,nazonazo.jp,nec.co.jp,neowing.co.jp,news.infoseek.co.jp,newsweekjapan.jp,nicenature.top,nicoco.net,nijie.info,nikkan.co.jp,nojima.co.jp,ntj.jac.go.jp,nttxstore.jp,ocn.ne.jp,odakyu.jp,omni7.jp,onojibi.jp,originalnews.nico,osawa-inc.co.jp,otakomu.jp,otanew.jp,pex.jp,platinedispositif.net,point.recruit.co.jp,poptapbeat.taiko-ch.net,qa.nicovideo.jp,qoo10.jp,rakuten.co.jp,rank-king.jp,recipe-blog.jp,research-panel.jp,sankei.com,sanwa-d.co.jp,security-next.com,seesaa.jp,seiga.nicovideo.jp,sengokuixa.jp,shogakukan.co.jp,store-tsutaya.tsite.jp,suruga-ya.jp,suumo.jp,takarazuka-an.co.jp,taking-a-stand.jp,tenki.jp,tinami.com,tokubai.co.jp,tokyo-np.co.jp,tsukumo.co.jp,tv-tokyo.co.jp,vector.co.jp,vippers.jp,vita.taiko-ch.net,weathernews.jp,web-ace.jp,webcomics.jp,weblio.jp,westjr.co.jp,wowkorea.jp,wowma.jp,www.gpoint.co.jp,www.homes.co.jp,www.infoseek.co.jp,www.jorudan.co.jp,www.meti.go.jp,www.nikkei.com,www.nintendo.co.kr,www.swiki.jp,yahoo.co.jp,yamanashirei.blog.fc2.com,yodobashi.com,yomiuri.co.jp,yugioh-card.com,~justpass.epark.jp,~mall.epark.jp,bookmeter.com,mottainaihonpo.com,netoff.co.jp,tokyodisneyresort.jp,nijimen.kusuguru.co.jp,applion.jp,mayla.jp,kawade.co.jp,koupenchan-store.jp,asunaro.shop-pro.jp,st-c.co.jp,eikoh-prize.jp,cocreco.kodansha.co.jp,kenko-tokina.co.jp,ganguoroshi.jp,shop.hanshintigers.jp,loft.co.jp,universal-music.co.jp,animate-onlineshop.jp,takaratomymall.jp,shop.adidas.jp,ftnews.jp,rtrp.jp,jalan.net,2ch2.net,japan-baseball.jp,bookoff.co.jp,kotobank.jp,sansokan.jp,p-m-g.tokyo,sendenkaigi.com,toyokeizai.net,sentankyo.jp,cosmeconcier.jp,commerce-design.net,diamond.co.jp,photo-ac.com,ac-illust.com,jmca.jp,maonline.jp,shidaikyo.or.jp,1book.biz,nikkeibp.co.jp,jri.co.jp,10mtv.jp,booth.pm,l2blocker.com,syosetu.org,futtsu.lg.jp,numata.gunma.jp,walica.jp,conan-cafe.jp,gch.jp,syukatsu-kaigi.jp,umitenki.jp,jingu-stadium.com,shiki.jp,dietnavi.com,t-stamina.jp,jma.go.jp,jetro.go.jp,tokyubus.co.jp,kinro.ntv.co.jp,expo70-park.jp,kntv.jp,club-animate.jp,tepco.co.jp,kitakyushu.lg.jp,library.city.kita.tokyo.jp,jfa.jp,odakyubus.co.jp,keio.co.jp,number.bunshun.jp,yachiyo.lg.jp#$#:is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }
 store.playstation.com,1999.co.jp#$#html[lang=ja] :is(body,div,li,a,strong,dd,span) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana" !important }
 www.bbc.com#$#html[lang=ja] :is(body,div,li,a,strong,dd,span,p,time) { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana" !important }
 www.nicovideo.jp#$##CommonHeader * { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK JP", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Ume Gothic", "Ume UI Gothic", "Yu Gothic", "Yu Gothic UI", "Meiryo", "メイリオ", "BabelStone Han", "Nishiki-teki", "FRBTaiwaneseKana", "Malgun Gothic", "맑은 고딕", "NanumGothic", "AppleSDGothicNeo", "NanumBarumGothic", "sandoll-gothicneo3", "sandoll-gothicneo2", "sandoll-gothicneo1", "NanumSquareRoundB", sans-serif !important }

@@ -1,4 +1,41 @@
 {
+	"groups": [
+		{
+			"groupId": 1,
+			"groupName": "Ad blocking",
+			"displayNumber": 1
+		},
+		{
+			"groupId": 2,
+			"groupName": "Privacy",
+			"displayNumber": 2
+		},
+		{
+			"groupId": 3,
+			"groupName": "Social widgets",
+			"displayNumber": 3
+		},
+		{
+			"groupId": 4,
+			"groupName": "Annoyances",
+			"displayNumber": 4
+		},
+		{
+			"groupId": 5,
+			"groupName": "Security",
+			"displayNumber": 5
+		},
+		{
+			"groupId": 6,
+			"groupName": "Other",
+			"displayNumber": 6
+		},
+		{
+			"groupId": 7,
+			"groupName": "Language-specific",
+			"displayNumber": 7
+		}
+	],
 	"filters": [
 		{
 			"filterId": 1,
@@ -1585,43 +1622,6 @@
 			"version": "2.0.6.90",
 			"timeUpdated": "2025-04-21T16:39:19+0000",
 			"languages": []
-		}
-	],
-	"groups": [
-		{
-			"groupId": 1,
-			"groupName": "Ad blocking",
-			"displayNumber": 1
-		},
-		{
-			"groupId": 2,
-			"groupName": "Privacy",
-			"displayNumber": 2
-		},
-		{
-			"groupId": 3,
-			"groupName": "Social widgets",
-			"displayNumber": 3
-		},
-		{
-			"groupId": 4,
-			"groupName": "Annoyances",
-			"displayNumber": 4
-		},
-		{
-			"groupId": 5,
-			"groupName": "Security",
-			"displayNumber": 5
-		},
-		{
-			"groupId": 6,
-			"groupName": "Other",
-			"displayNumber": 6
-		},
-		{
-			"groupId": 7,
-			"groupName": "Language-specific",
-			"displayNumber": 7
 		}
 	]
 }

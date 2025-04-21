@@ -1,9 +1,9 @@
-! Checksum: nZ0qU0tBNw6gRBSlKTumow
-! Diff-Path: ../patches/16/16-s-1745190629-3600.patch
+! Checksum: E0N1G2atJqZkNrnV261dPA
+! Diff-Path: ../patches/16/16-s-1745212262-3600.patch
 ! Title: AdGuard French filter
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
-! Version: 2.0.51.94
-! TimeUpdated: 2025-04-20T23:07:01+00:00
+! Version: 2.0.51.95
+! TimeUpdated: 2025-04-21T05:07:59+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -199,7 +199,7 @@ ebookdz.com#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
 monumentum.fr#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'Blocking Ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/179837
 ! https://github.com/AdguardTeam/AdguardFilters/issues/1478420
-japscan.lol#%#//scriptlet("remove-node-text", "script", "Yoka")
+japscan.lol#%#//scriptlet("remove-node-text", "script", "/Y(oka|uuki)/")
 /^https:\/\/acscdn\.com\/script\/(?:aclib|atg|compatibility|ippg|suv4|ut)\.js(\?cb=\d{13})?$/$script,third-party,match-case,important,domain=japscan.lol
 @@||acscdn.com^$script,third-party,domain=japscan.lol
 @@.shop/*/invoke.js$script,third-party,domain=japscan.lol,important

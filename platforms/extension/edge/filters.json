@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.80.9",
-			"timeUpdated": "2025-04-20T23:06:06+0000",
+			"version": "2.3.80.10",
+			"timeUpdated": "2025-04-21T01:35:01+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -623,8 +623,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.27.83",
-			"timeUpdated": "2025-04-20T18:08:16+0000",
+			"version": "2.2.27.84",
+			"timeUpdated": "2025-04-21T01:35:52+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -750,8 +750,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.0",
-			"timeUpdated": "2025-04-20T13:11:55+0000",
+			"version": "2.0.54.1",
+			"timeUpdated": "2025-04-21T01:35:59+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1689,8 +1689,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/edge/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.35.21",
-			"timeUpdated": "2025-04-21T00:27:12+0000",
+			"version": "2.1.35.22",
+			"timeUpdated": "2025-04-21T01:36:04+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"

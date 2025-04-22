@@ -1,9 +1,9 @@
-! Checksum: 4BE4YoortxOQ4f9gXK3JWg
-! Diff-Path: ../patches/14/14-s-1745345532-3600.patch
+! Checksum: D49L61d0AZgM3X2md4orqQ
+! Diff-Path: ../patches/14/14-s-1745348992-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.8
-! TimeUpdated: 2025-04-22T18:09:06+00:00
+! Version: 2.2.28.9
+! TimeUpdated: 2025-04-22T19:06:38+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2505,6 +2505,9 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+cmlink.com#$#.cookie-dialog { display: none !important; }
+cmlink.com#$#.van-overlay { display: none !important; }
+cmlink.com#$#.van-overflow-hidden { overflow: auto !important; }
 tise.com##.ReactModalPortal:has(a[href="/terms/cookies"])
 tise.com#$#body { overflow-y: auto !important; }
 comexlive.org###terms-bar

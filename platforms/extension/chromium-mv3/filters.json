@@ -905,8 +905,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.68.56",
-			"timeUpdated": "2025-04-22T00:47:23+0000",
+			"version": "2.1.68.57",
+			"timeUpdated": "2025-04-22T04:37:13+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -980,8 +980,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.68.55",
-			"timeUpdated": "2025-04-22T00:47:23+0000",
+			"version": "2.1.68.56",
+			"timeUpdated": "2025-04-22T04:37:14+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1099,8 +1099,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/abpvn/abpvn/master/filter/abpvn_adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.35.96",
-			"timeUpdated": "2025-04-21T08:39:11+0000",
+			"version": "2.0.35.97",
+			"timeUpdated": "2025-04-22T04:37:32+0000",
 			"deprecated": false,
 			"languages": [
 				"vi"
@@ -1318,8 +1318,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.21.37",
-			"timeUpdated": "2025-04-21T04:38:30+0000",
+			"version": "2.0.21.38",
+			"timeUpdated": "2025-04-22T04:37:48+0000",
 			"deprecated": false,
 			"languages": [
 				"sv"
@@ -1402,8 +1402,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.61.87",
-			"timeUpdated": "2025-04-22T00:48:16+0000",
+			"version": "2.0.61.88",
+			"timeUpdated": "2025-04-22T04:37:56+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"

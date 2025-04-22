@@ -1,9 +1,9 @@
-! Checksum: M6E+8ZXtbv4ZMNd2iu/V4g
-! Diff-Path: ../patches/224_optimized/224_optimized-s-1745327842-3600.patch
+! Checksum: 0nvKmZWDQwhGfqJkYAhYdw
+! Diff-Path: ../patches/224_optimized/224_optimized-s-1745331069-3600.patch
 ! Title: AdGuard Chinese filter (Optimized)
 ! Description: EasyList China + AdGuard Chinese filter. Filter list that specifically removes ads on websites in Chinese language.
-! Version: 2.1.35.34
-! TimeUpdated: 2025-04-22T13:13:59+00:00
+! Version: 2.1.35.35
+! TimeUpdated: 2025-04-22T14:07:46+00:00
 ! Expires: 5 days (update frequency)
 ||mernrza.com^
 ||xjwhtz10.com^
@@ -614,10 +614,6 @@ popbee.com##.adblocker
 ##body > div#inplayer[align="center"]
 ##.Zi_ad_a_H
 ##a[href^="https://adm.beimg.com/"]
-##.app > div.app_tj
-##body > div.zdhf
-##body > div.dbfh
-##body > div.zdhf ~ div[style$=";background: #000;opacity:0.01;"]
 ##.row > div.colVideoList:has(> div.video-elem > a[target="_blank"])
 cnys.tv#%#//scriptlet('set-constant', 'config.group', '')
 applnn.cc#%#//scriptlet('trusted-set-cookie', 'gg_info', '$now$')
@@ -2514,6 +2510,10 @@ csdn.net###footerRightAds
 ||s3.amazonaws.com/dmas-public/sitemaji/vast.xml$domain=dailymotion.com
 ||c.mipcdn.com/static/*/mip-ad/mip-ad.js
 ||mycodes.net/js/*.js
+##.app > div.app_tj
+##body > div.zdhf
+##body > div.dbfh
+##body > div[style$=";background: #000;opacity:0.01;"]
 hanime1.me#%#//scriptlet("trusted-replace-node-text", "script", "popunder", "/window\.open\('(.*?)',.*?\);\n.*location.href = '.*';/", "location.assign('$1');")
 .gif|$domain=8727ck.cc|8726ck.cc|8724ck.cc
 ||imgsrc.baidu.com/*/pic/*.jpg$domain=8727ck.cc|8726ck.cc|8724ck.cc

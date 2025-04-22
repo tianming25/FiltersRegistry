@@ -1,9 +1,9 @@
-! Checksum: 7gkg/DQa2Y/KEvN8SzA94w
-! Diff-Path: ../patches/14/14-s-1745313070-3600.patch
+! Checksum: zirJRQuiGtrLrgCGC1m/gg
+! Diff-Path: ../patches/14/14-s-1745316683-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.2
-! TimeUpdated: 2025-04-22T09:07:47+00:00
+! Version: 2.2.28.3
+! TimeUpdated: 2025-04-22T10:07:59+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -5750,10 +5750,8 @@ witway.be,witway.nl#$#body.locked { position: static !important; }
 reolink.com##div[class^="_gdpr-cookie-popup_"]
 singkinderlieder.de#?##__next > .overflow-x-hidden:has(a[href="/impressum"] ~ a[href="/datenschutz"])
 singkinderlieder.de#?##__next > .overflow-x-hidden:has(a[href="/impressum"] ~ a[href="/datenschutz"]) + .inset-0.z-40
-chrono24.*#$#html:not(#style_important) { overflow: auto !important; }
-chrono24.*#$#html > body { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
-chrono24.*#$?#.gdpr-layer { remove: true; }
-chrono24.*#%#//scriptlet('remove-class', 'no-scroll', 'body')
+chrono24.*#$#.gdpr-layer { display: none; }
+chrono24.*#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
 son-video.com##div[data-context="cookies-banner"]
 capcut.com##.lv_cookie_banner-wrapper
 petsathome.com##.onetrust
@@ -42242,6 +42240,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+chrono24.*##header > section.js-pre-header:has(a[href="/info/apps.htm"])
 nyuka-now.com##.content.postCta
 treccani.it##.css-uwijew
 media.wear.jp##main > .flex > section:has(> ul > li > a[href^="https://app.adjust.com"])

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: Na1MamY+CPUNUtOYmuilVQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745313088-3600.patch
+! Checksum: JEH9LutYDJ/ICrOLNqzBfQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745316699-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.80.36
-! TimeUpdated: 2025-04-22T09:07:07+00:00
+! Version: 2.3.80.37
+! TimeUpdated: 2025-04-22T10:07:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -49145,6 +49145,9 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+poki.com###game-player ~ div:not(:has(*))
+apps.jeurissen.co##.cja-landing__content > .cja-sqrimage:not(#style_important)
+apps.jeurissen.co##div[class="cja-btmimage cja-card"]:not(#style_important)
 ||porn3dx.com/iframe-ads
 porn3dx.com##iframe[src="https://porn3dx.com/iframe-ads"]
 porn3dx.com##.flex:has(> div > iframe[src^="https://adserver.juicyads.com/"])
@@ -55502,9 +55505,6 @@ hancinema.net##.ad_article
 indiatoday.in##iframe[height="90"][width="100%"]
 ||akm-img-a-in.tosshub.com/sites/test/ipl/2022/index.html$domain=indiatoday.in
 fellowsfilm.com##article[data-author="Advertisement"]
-apps.jeurissen.co##img[height="250"][width="300"]
-apps.jeurissen.co##.cja-partner
-apps.jeurissen.co##div[class="cja-btmimage cja-card"]
 xmegadrive.com##body > div[style^="position: fixed; inset: 0px; z-index:"]
 parade.com,bringmethenews.com,thespun.com,thestreet.com,si.com##.m-outbrain
 /im_jerky?vlmi=$domain=redgifs.com
@@ -73586,6 +73586,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/203775
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203618
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203612
 ! bookings.hermesairports.com - broken site

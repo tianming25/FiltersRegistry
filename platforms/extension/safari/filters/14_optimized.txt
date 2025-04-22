@@ -1,9 +1,9 @@
-! Checksum: LjnB53Bkrd3K/H8tRr18kA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1745313083-3600.patch
+! Checksum: +9qlLgnAQJ+vYaPOeSAvrw
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1745316694-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.2
-! TimeUpdated: 2025-04-22T09:07:47+00:00
+! Version: 2.2.28.3
+! TimeUpdated: 2025-04-22T10:07:59+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -3591,10 +3591,8 @@ neopharm.ru###pop-check-cookie
 rigla.ru##.cookie-confirmation-notice
 fruugo.*#%#//scriptlet('set-cookie', 'consents', 'essential')
 reolink.com##div[class^="_gdpr-cookie-popup_"]
-chrono24.*#$#html:not(#style_important) { overflow: auto !important; }
-chrono24.*#$#html > body { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
-chrono24.*#$?#.gdpr-layer { remove: true; }
-chrono24.*#%#//scriptlet('remove-class', 'no-scroll', 'body')
+chrono24.*#$#.gdpr-layer { display: none; }
+chrono24.*#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
 son-video.com##div[data-context="cookies-banner"]
 capcut.com##.lv_cookie_banner-wrapper
 baldursgate3.game,larian.com##.ciastko
@@ -18648,6 +18646,7 @@ buttondown.email#@##subscribe-form
 ##.smartbanner--android
 ###smartbanner.ios
 alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-mail.org,ortobom.com.br,dicionarioinformal.com.br,5-fifth.com,news.sky.com,chat.babel.com,getwordly.com,school-turnup.com,naked-science.ru,vod.tvp.pl,tvn24.pl,m.lamoda.ru,lkfl2.nalog.ru,kocailem.com,dartworld.shopgate.com,m.alles10euro.de,dodopizza.ru,allo.ua,tempo.co,beymen.com,tvnmeteo.tvn24.pl,outsidetv.com,golfchannel.com,sportsnet.ca,euronews.com,pkobp.pl,tesco.hu,prima.hu,immobilienscout24.de,lcwaikiki.com,m.sigrun-woehr.com,transfermarkt.de,fragfinn.de,hh.ru,eraffe24.de,infranken.de,m.computeruniverse.net,m.emp.de,meduza.io##body .smartbanner
+chrono24.ae,chrono24.app,chrono24.at,chrono24.be,chrono24.ca,chrono24.ch,chrono24.cl,chrono24.cn,chrono24.co.id,chrono24.co.in,chrono24.co.nz,chrono24.co.th,chrono24.co.uk,chrono24.co.za,chrono24.com,chrono24.com.ar,chrono24.com.au,chrono24.com.bd,chrono24.com.br,chrono24.com.np,chrono24.com.tr,chrono24.cz,chrono24.de,chrono24.dk,chrono24.es,chrono24.fi,chrono24.fr,chrono24.hk,chrono24.hr,chrono24.hu,chrono24.in,chrono24.it,chrono24.jp,chrono24.kr,chrono24.mx,chrono24.my,chrono24.net,chrono24.nl,chrono24.no,chrono24.ph,chrono24.pl,chrono24.pt,chrono24.ro,chrono24.ru,chrono24.se,chrono24.sg,chrono24.sk,chrono24.space,chrono24.tw##header > section.js-pre-header:has(a[href="/info/apps.htm"])
 nyuka-now.com##.content.postCta
 treccani.it##.css-uwijew
 media.wear.jp##main > .flex > section:has(> ul > li > a[href^="https://app.adjust.com"])

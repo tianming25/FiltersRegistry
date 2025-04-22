@@ -1,9 +1,9 @@
-! Checksum: K5tZd8MdJfGfXw7Di6fmKA
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1745313075-3600.patch
+! Checksum: FB6GbhkyiI2YVdDdc47PPg
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1745316688-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.60.30
-! TimeUpdated: 2025-04-22T09:07:53+00:00
+! Version: 2.0.60.31
+! TimeUpdated: 2025-04-22T10:08:07+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -3453,10 +3453,8 @@ neopharm.ru###pop-check-cookie
 rigla.ru##.cookie-confirmation-notice
 fruugo.*#%#//scriptlet('set-cookie', 'consents', 'essential')
 reolink.com##div[class^="_gdpr-cookie-popup_"]
-chrono24.*#$#html:not(#style_important) { overflow: auto !important; }
-chrono24.*#$#html > body { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
-chrono24.*#$?#.gdpr-layer { remove: true; }
-chrono24.*#%#//scriptlet('remove-class', 'no-scroll', 'body')
+chrono24.*#$#.gdpr-layer { display: none; }
+chrono24.*#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
 son-video.com##div[data-context="cookies-banner"]
 capcut.com##.lv_cookie_banner-wrapper
 baldursgate3.game,larian.com##.ciastko

@@ -1,8 +1,8 @@
-! Checksum: kmVsCSMUVN+zqtQqHh8Y7w
+! Checksum: MTVI6X4yQR7g2wph7GumuQ
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.80.37
-! TimeUpdated: 2025-04-22T10:07:13+00:00
+! Version: 2.3.80.38
+! TimeUpdated: 2025-04-22T12:10:31+00:00
 ! Expires: 5 days (update frequency)
 ||performoo.com^
 ||keethoostoaps.net^
@@ -5686,6 +5686,7 @@ beinmatch.*#%#//scriptlet("abort-on-property-read", "S9tt")
 egyfalcons.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "adblock")
 egyshare.cc#%#//scriptlet("remove-attr", "href", "a[href]#clickfakeplayer")
 ||new.cimanow.online/judo.js
+freex2line.online,cimanowtv.com,cnvids.com,cimanow.cc,cimanow.*#%#//scriptlet('prevent-element-src-loading', 'script', '/judo.js')
 freex2line.online,cimanowtv.com,cnvids.com,cimanow.cc,cimanow.*$$script:contains(/\.__proto__\.constructor\.name|decompressFromUTF16|\)\.substr\(0/)
 freex2line.online,cimanowtv.com,cnvids.com,cimanow.cc,cimanow.*#%#//scriptlet('remove-node-text', 'script', '/\.__proto__\.constructor\.name|decompressFromUTF16|\)\.substr\(0/')
 freex2line.online,cimanow.cc,cimanow.*##body > a[target="_blank"]
@@ -14524,8 +14525,8 @@ x1337x.cc,1337x.st,1337x.to,1337xx.to,x1337x.eu,x1337x.ws,1337x.unblock2.xyz#%#/
 jetvid.top,fembedx.top,hihihaha1.xyz,playhydrax.com,hydrax.net,filmespi.online,playembedapi.site,streamsb.online,rufiguta.com,abysscdn.com,player-cdn.com,kmo.to,nazarickol.com,redirect-ads.com##body > #player ~ div[style^="position: fixed; inset:"][style*="z-index:"]
 chfi.com,1067rock.ca,921citi.ca,q92timmins.com,q92sudbury.com,star959.ca,977rock.ca,979rock.ca,chez106.com,chymfm.com,country1011.com,country1043.com,country1067.com,country1071.com,country1073.ca,country600.com,country933.com,country935.ca,easy1013.ca,jack1023.com,jack929.com,jack969.com,jack969.ca,krock1057.ca,sonic1029.com,sonicradio.ca,starfm.com,kiss1023.ca,kiss925.com,kissnorthbay.com,kissottawa.com,kissottawa.com,kisssudbury.com,kisstimmins.com,kiss917.com#%#//scriptlet('set-constant', 'adUtility', 'emptyObj')
 chfi.com,1067rock.ca,921citi.ca,q92timmins.com,q92sudbury.com,star959.ca,977rock.ca,979rock.ca,chez106.com,chymfm.com,country1011.com,country1043.com,country1067.com,country1071.com,country1073.ca,country600.com,country933.com,country935.ca,easy1013.ca,jack1023.com,jack929.com,jack969.com,jack969.ca,krock1057.ca,sonic1029.com,sonicradio.ca,starfm.com,kiss1023.ca,kiss925.com,kissnorthbay.com,kissottawa.com,kissottawa.com,kisssudbury.com,kisstimmins.com,kiss917.com#%#//scriptlet('set-constant', 'adUtility.insertAd', 'noopFunc')
-hulu.com#%#//scriptlet('xml-prune', 'xpath(//*[name()="MPD"]/@mediaPresentationDuration | //*[name()="Period"][.//*[name()="BaseURL" and contains(text(),"/ads-")]] | //*[name()="Period"]/@start)', 'Period[id^="Ad"i]', '.mpd')
-hulu.com#%#//scriptlet('json-prune', 'breaks pause_ads')
+hulu.com#%#//scriptlet('xml-prune', 'xpath(//*[name()="MPD"]/@mediaPresentationDuration | //*[name()="Period"][.//*[name()="BaseURL" and contains(text(),"/ads-")]] | //*[name()="Period"][starts-with(@id,"ad")] | //*[name()="Period"][starts-with(@id,"Ad")] | //*[name()="Period"]/@start)', 'Period[id^="Ad"i]', '.mpd')
+hulu.com#%#//scriptlet('json-prune', 'breaks custom_breaks_data pause_ads')
 hulu.com#%#//scriptlet('set-constant', 'Object.prototype.isAdPeriod', 'falseFunc')
 hulu.com#%#//scriptlet("set-constant", "Object.prototype._parseVAST", "noopFunc")
 hulu.com#%#//scriptlet("set-constant", "Object.prototype.createAdBlocker", "noopFunc")
@@ -17573,7 +17574,6 @@ $replace=/head>/head><meta charset="utf-8">/,document,domain=podhale24.pl|copyce
 ||10play.com.au/js/ShowsIndex.compiled.js$replace=/=this\.props\.disableAds\|\|this\._noAds/=true/
 ||gplinks.in/track/js/main.js$replace=/(var isOverGoogleAd = false;)([\s\S]*)(sendPostback\(\n[\s\S]*?\))/\$1\$3;\$2\$3/
 .mpd$replace=/<Period.{0\,400}value="Ad"[\s\S]*?<\/Period>//,xmlhttprequest,domain=amazon.com|amazon.co.jp|amazon.de|amazon.co.uk|primevideo.com
-.mpd$replace=/start="[0-9A-Z.]+?">/>/,xmlhttprequest,domain=amazon.com|amazon.co.jp|amazon.de|amazon.co.uk|primevideo.com
 ||pluto.tv/*/dash/*/*.mpd$replace=/<Period.{1\,100}?><BaseURL>.{1\,100}\.plutotv\.net\/.{1\,50}_ad\/.*?<\/BaseURL>[\s\S]*?<\/Period>//
 ||pluto.tv/*/session.json$jsonprune=\$.adBreak.*
 ||pluto.tv/*/session.json$jsonprune=\$.adBreaks.*
@@ -22700,6 +22700,7 @@ browsershots.org#@#.advert_area
 ||aj2532.bid^
 ||aj2550.bid^
 ||aj2555.bid^
+||aj2627.bid^
 ||aj2635.bid^
 ||ajillionmax.com^
 ||ajjbacpfuog.com^
@@ -27946,6 +27947,7 @@ browsershots.org#@#.advert_area
 ||mutcheng.net^
 ||mutsjeamenism.com^
 ||mutteredadisa.com^
+||muyusaitcze.com^
 ||muzikguide.com^
 ||mxjwznfcryxli.life^
 ||mxmkhyrmup.com^
@@ -29977,6 +29979,7 @@ browsershots.org#@#.advert_area
 ||rxeosevsso.com^
 ||rxthdr.com^
 ||rzobsgow.com^
+||rzxxflvdnvtws.vip^
 ||s-adzone.com^
 ||s0-greate.net^
 ||s0cool.net^
@@ -30269,6 +30272,7 @@ browsershots.org#@#.advert_area
 ||shukselr.com^
 ||shusacem.net^
 ||shussausach.com^
+||shvsrrpkgjcuk.life^
 ||shydastidu.com^
 ||sibajwpmux.com^
 ||sibohqoc.com^
@@ -31205,6 +31209,7 @@ browsershots.org#@#.advert_area
 ||tuxbpnne.com^
 ||tuxqcyqrybhi.com^
 ||tvoiioftvfzzc.buzz^
+||twaglurtuh.xyz^
 ||twelfthdistasteful.com^
 ||twinboutjuly.com^
 ||twinfill.com^
@@ -34199,6 +34204,7 @@ ytmp3.mobi###ba
 presearch.com###background-cover
 hypergames.top,op.gg,thecarconnection.com###banner-container
 battlefordsnow.com,cfjctoday.com,chatnewstoday.ca,ckpgtoday.ca,everythinggp.com,huskiefan.ca,larongenow.com,meadowlakenow.com,nanaimonewsnow.com,northeastnow.com,panow.com,rdnewsnow.com,sasknow.com,vernonmatters.ca###banner-header
+uhdmovies.tips###banner-section
 sourceforge.net###banner-sterling
 bbcamerica.com,ifc.com,onlinesearches.com,sundancetv.com,wetv.com###banner-top
 nitrome.com###banner_ad

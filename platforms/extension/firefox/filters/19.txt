@@ -1,9 +1,9 @@
-! Checksum: L4h0Tr7mVG5IEXVcksz8Qw
-! Diff-Path: ../patches/19/19-s-1745320230-3600.patch
+! Checksum: S+xmStpaJORsHB0EhInbIA
+! Diff-Path: ../patches/19/19-s-1745324094-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.54.9
-! TimeUpdated: 2025-04-22T11:07:05+00:00
+! Version: 2.0.54.10
+! TimeUpdated: 2025-04-22T12:11:21+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4481,6 +4481,8 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+hd.kinopoisk.ru#$#body > div.ReactModalPortal:has(> div.ReactModal__Overlay > div.ReactModal__Content > div[data-tid="FullscreenNotification"]) { display: none !important; }
+hd.kinopoisk.ru#$#body[class*="styles_body"]:not(#style_important) { overflow: visible !important; }
 3dzip.org##.float-contact
 3dzip.org##.more-stories.active
 bcliquorstores.com#%#//scriptlet('set-session-storage-item', 'enews_popup_session', '1')

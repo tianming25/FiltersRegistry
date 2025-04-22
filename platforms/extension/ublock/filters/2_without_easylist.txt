@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: uutqMjzDWiKjAYEayXjCQQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745309597-3600.patch
+! Checksum: Na1MamY+CPUNUtOYmuilVQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745313088-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.80.35
-! TimeUpdated: 2025-04-22T08:08:49+00:00
+! Version: 2.3.80.36
+! TimeUpdated: 2025-04-22T09:07:07+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23,6 +23,7 @@
 !
 !
 !
+||performoo.com^
 ||keethoostoaps.net^
 ||rneniibeiijmxeb.com^
 ||s2.static.cfgr3.com^
@@ -23054,7 +23055,7 @@ sonixgvn.net##+js(abort-on-stack-trace, DOMTokenList.prototype.contains, manageB
 @@||static.doubleclick.net/instream/ad_status.js$domain=sonixgvn.net
 ! URL shorteners used on sonixgvn.net
 ! fly.inc
-nidbdcheck.com,dizok.com,9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,phineypet.com,actualpost.com,beautifulfashionnailart.com,americanstylo.com##+js(set-constant, document.hasFocus, trueFunc)
+pasflav.online,nidbdcheck.com,dizok.com,9sblog.com,newselab.com,glowandglamcorner.com,dadinthemaking.com,listofthis.com,phineypet.com,actualpost.com,beautifulfashionnailart.com,americanstylo.com##+js(set-constant, document.hasFocus, trueFunc)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198028
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176543
 ourinfo.top##+js(abort-on-property-read, htmls)
@@ -24230,7 +24231,7 @@ linuxcapable.com##+js(set-constant, nitroAds.abp, true)
 hqq.to##+js(abort-on-stack-trace, olplayer.error, Be.o.dispatcher.o.dispatcher)
 hqq.to##+js(set-constant, adblockcheck, false)
 ! Clickadu reinjection
-fapeza.com,xmalay1.net,animeworld.*,natomanga.com,play.playkrx18.site,missavtv.com,poapan.xyz,nudogram.com,watchadsontape.com,streamtape.com,18comic.vip,18comic-gquu.vip,mitaku.net,hitomi.la,klmanga.app,mangarawjp.tv,coomer.su,kemono.su,safestream.cc,javmix.tv,hentai2read.com,sxyprn.com,xmoviesforyou.com,fapfappy.com,jav.direct,syosetu.*,telorku.xyz,kissjav.li,lovingsiren.com,mesex.pro,vlxyz.tv,xanimeporn.com##+js(abort-current-script, WebAssembly, atob)
+rule34.xyz,fapeza.com,xmalay1.net,animeworld.*,natomanga.com,play.playkrx18.site,missavtv.com,poapan.xyz,nudogram.com,watchadsontape.com,streamtape.com,18comic.vip,18comic-gquu.vip,mitaku.net,hitomi.la,klmanga.app,mangarawjp.tv,coomer.su,kemono.su,safestream.cc,javmix.tv,hentai2read.com,sxyprn.com,xmoviesforyou.com,fapfappy.com,jav.direct,syosetu.*,telorku.xyz,kissjav.li,lovingsiren.com,mesex.pro,vlxyz.tv,xanimeporn.com##+js(abort-current-script, WebAssembly, atob)
 natomanga.com##+js(no-setTimeout-if, this.ast)
 /^https:\/\/www\.natomanga\.com\/js\/[a-f0-9]{32}\.js$/$script,domain=natomanga.com
 /aas/r45d/vki/*$script,redirect=noop.js
@@ -34772,6 +34773,11 @@ ncore.cc#@#.text-ad-links
 !
 ap7am.com##.tb-dt
 ap7am.com##.prk1
+ap7am.com##.first-ad
+! https://github.com/AdguardTeam/AdguardFilters/issues/203525
+andhrajyothy.com##div[class^="ads"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/203533
+sakshi.com##.column_right > div[style]:has(> a[href^="https://orion.edu/"] > img)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/195546
 dhakapost.com##.w-full > div.container-section:has(> div.common-header-ad)
 dhakapost.com##.w-full:has(> div[class*="h-"][class*="250px"] iframe[id*="google_ads_iframe"])

@@ -1,9 +1,9 @@
-! Checksum: 5YCacR/CliloFd9qyEz6VQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1745302437-3600.patch
+! Checksum: +NXfxjOc8TICt+LDeHpUVg
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1745305874-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.80.33
-! TimeUpdated: 2025-04-22T06:08:59+00:00
+! Version: 2.3.80.34
+! TimeUpdated: 2025-04-22T07:07:01+00:00
 ! Expires: 5 days (update frequency)
 ||keethoostoaps.net^
 ||rneniibeiijmxeb.com^
@@ -14943,7 +14943,8 @@ startribune.com###highImpactAd
 startribune.com##div[data-testid="breaker-ad"]
 startribune.com##div[data-testid="rail-ad"]
 startribune.com##div[data-testid="sponsored-list-ad"]
-imginn.com##.page-search > .block-search:has(> div[data-ad]:only-child)
+imginn.com##.page-search > .block-search:has(> div:is([data-ad], [id*="-"]):only-child:empty)
+imginn.com##.page-search > .block-search:has(> div[id*="-"]:only-child > script[src^="//ads.themoneytizer.com/"])
 tetris.com##div[class^="rowT"] > div[class][style*="min-height"]
 mobygames.com##a[href^="https://atari.com/"] > img
 uploadvr.com##.force-load-ad

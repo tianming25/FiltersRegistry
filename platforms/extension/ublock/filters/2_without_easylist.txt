@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: TAD2dE3T1iCNYWsCN5swRw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745305871-3600.patch
+! Checksum: uutqMjzDWiKjAYEayXjCQQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745309597-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.80.34
-! TimeUpdated: 2025-04-22T07:07:01+00:00
+! Version: 2.3.80.35
+! TimeUpdated: 2025-04-22T08:08:49+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -49139,6 +49139,9 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+||porn3dx.com/iframe-ads
+porn3dx.com##iframe[src="https://porn3dx.com/iframe-ads"]
+porn3dx.com##.flex:has(> div > iframe[src^="https://adserver.juicyads.com/"])
 coosavalleynews.com##.widget_block:has(> a:only-child > img)
 coosavalleynews.com##.coosa-widget
 coosavalleynews.com##.widget_media_image:has( a > img)
@@ -58462,9 +58465,6 @@ playporngames.com##div[style*="width: 330px; height: 100%;"]
 ||hentai-gamer.com/pics/
 nationalfile.com##.code-block > a[href*="&utm_medium=sitebanner"][target="_blank"] > img
 ehotpics.com,upicsz.com##figure[style^="width: 310px;"]
-m-hentai.net##.leaderboardcontainer
-m-hentai.net##.landingpageadcontainer_iframe_300
-||m-hentai.net/JS/exoclick%20popunder.js
 ||gaysearch.com/gs*/gs.js
 ||vidxhot.net/out.php?$popup
 ||hqtube.xxx/api/pu/
@@ -68280,6 +68280,12 @@ adultlingeriepics.com,adultlingeriepics.com,adultspankingtgp.com,allfeetporn.com
 !
 !
 !+ NOT_OPTIMIZED
+m-hentai.net##.galleryleftadcontainer
+!+ NOT_OPTIMIZED
+m-hentai.net##.leaderboardcontainer
+!+ NOT_OPTIMIZED
+||m-hentai.net/img/Native%20Ads/
+!+ NOT_OPTIMIZED
 hawk.live##div[class*="-layout__"]:has(> div:only-child:is(.info-small, .info-medium, .info-large) > .info-text > span.info-text__contact)
 !+ NOT_OPTIMIZED
 vizzed.com##.boxadbox300
@@ -73574,6 +73580,7 @@ implbits.com#@#.banner_container
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/203618
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203612
 ! bookings.hermesairports.com - broken site
 ! https://github.com/AdguardTeam/AdguardForAndroid/issues/5658

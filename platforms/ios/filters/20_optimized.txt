@@ -1,9 +1,9 @@
-! Checksum: /mtfCy6onZ4lgI28Nb6CDA
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1745334665-3600.patch
+! Checksum: YWUY4AOpSa2+2YCp9wN4jQ
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1745345562-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.23
-! TimeUpdated: 2025-04-22T15:07:28+00:00
+! Version: 2.0.20.24
+! TimeUpdated: 2025-04-22T18:09:13+00:00
 ! Expires: 5 days (update frequency)
 /js/jquery.smartbanner.js
 ###xm_app_stickyHeader
@@ -21,6 +21,8 @@
 !+ PLATFORM(ios)
 #$?#meta[name="apple-itunes-app"] { remove: true; }
 alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-mail.org,ortobom.com.br,dicionarioinformal.com.br,5-fifth.com,news.sky.com,chat.babel.com,getwordly.com,school-turnup.com,naked-science.ru,vod.tvp.pl,tvn24.pl,m.lamoda.ru,lkfl2.nalog.ru,kocailem.com,dartworld.shopgate.com,m.alles10euro.de,dodopizza.ru,allo.ua,tempo.co,beymen.com,tvnmeteo.tvn24.pl,outsidetv.com,golfchannel.com,sportsnet.ca,euronews.com,pkobp.pl,tesco.hu,prima.hu,immobilienscout24.de,lcwaikiki.com,m.sigrun-woehr.com,transfermarkt.de,fragfinn.de,hh.ru,eraffe24.de,infranken.de,m.computeruniverse.net,m.emp.de,meduza.io##body .smartbanner
+search.brave.com##.download-cta
+wear.jp##section[class]:has(> div[class*="image_links"] > div.contents a[href^="https://app.adjust.com/"])
 chrono24.ae,chrono24.app,chrono24.at,chrono24.be,chrono24.ca,chrono24.ch,chrono24.cl,chrono24.cn,chrono24.co.id,chrono24.co.in,chrono24.co.nz,chrono24.co.th,chrono24.co.uk,chrono24.co.za,chrono24.com,chrono24.com.ar,chrono24.com.au,chrono24.com.bd,chrono24.com.br,chrono24.com.np,chrono24.com.tr,chrono24.cz,chrono24.de,chrono24.dk,chrono24.es,chrono24.fi,chrono24.fr,chrono24.hk,chrono24.hr,chrono24.hu,chrono24.in,chrono24.it,chrono24.jp,chrono24.kr,chrono24.mx,chrono24.my,chrono24.net,chrono24.nl,chrono24.no,chrono24.ph,chrono24.pl,chrono24.pt,chrono24.ro,chrono24.ru,chrono24.se,chrono24.sg,chrono24.sk,chrono24.space,chrono24.tw##header > section.js-pre-header:has(a[href="/info/apps.htm"])
 nyuka-now.com##.content.postCta
 treccani.it##.css-uwijew
@@ -1037,7 +1039,8 @@ travel.rakuten.co.jp##span[id="footerBannerAppDL"]
 travel.rakuten.co.jp###appDlBn
 hoyolab.com##.bbs-qr
 linkedin.com#$#.header-container { margin-top:0px!important; }
-wear.net,wear.jp###hdr_download
+wear.jp###hdr_download
+wear.jp###secAppDownload
 oceans-nadia.com#$#div[class^="CommonModal_modalBack"] { display:none!important; }
 oceans-nadia.com#$#header { margin-top: 0px !important;}
 point.md#%#//scriptlet('set-cookie', 'visited', 'true')
@@ -1655,6 +1658,7 @@ honeysanime.com#$##header-line-2 { margin-top: -60px !important; }
 honeysanime.com#$##wrap-app-notice { display: none !important; }
 !+ NOT_OPTIMIZED
 m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
+wear.jp###__next > div[class] > div.relative:has(a[href^="https://app.adjust.com/"])
 m.yelp.com#$#div[class*="search-container__"] > div[class^="overlay-color-cohort__"]:has(> div > img[alt="Install the Yelp app"]) { display: none; }
 m.yelp.com#$#html { overflow: auto !important; position: unset !important; }
 m.yelp.com##div[class*="main-content__"] > div > ol > div:has(> div > a[aria-label="Download the Yelp app"])
@@ -1792,7 +1796,6 @@ goo.ne.jp##.topbanner
 kachimai.jp###appwrap
 ||baby-calendar.jp/nazuke/img/app/header_
 jorudan.co.jp##.appHeaderBnr
-search.brave.com##.download-cta
 news.golfdigest.co.jp##.app-hide
 sahibinden.com##.smart-app-banner-v2
 snkrdunk.com##a.d-block[href="https://snkrdunkapp.page.link/ZwvZ"]

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: KIW+oLGciI1D10uG5sNh0g
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1745334662-3600.patch
+! Checksum: bPX2lwAWxzTGy7wZyuFLMA
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1745345558-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.23
-! TimeUpdated: 2025-04-22T15:07:28+00:00
+! Version: 2.0.20.24
+! TimeUpdated: 2025-04-22T18:09:13+00:00
 ! Expires: 5 days (update frequency)
 /js/jquery.smartbanner.js
 ###xm_app_stickyHeader
@@ -20,6 +20,8 @@
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
 ###SmBnLink
 alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-mail.org,ortobom.com.br,dicionarioinformal.com.br,5-fifth.com,news.sky.com,chat.babel.com,getwordly.com,school-turnup.com,naked-science.ru,vod.tvp.pl,tvn24.pl,m.lamoda.ru,lkfl2.nalog.ru,kocailem.com,dartworld.shopgate.com,m.alles10euro.de,dodopizza.ru,allo.ua,tempo.co,beymen.com,tvnmeteo.tvn24.pl,outsidetv.com,golfchannel.com,sportsnet.ca,euronews.com,pkobp.pl,tesco.hu,prima.hu,immobilienscout24.de,lcwaikiki.com,m.sigrun-woehr.com,transfermarkt.de,fragfinn.de,hh.ru,eraffe24.de,infranken.de,m.computeruniverse.net,m.emp.de,meduza.io##body .smartbanner
+search.brave.com##.download-cta
+wear.jp##section[class]:has(> div[class*="image_links"] > div.contents a[href^="https://app.adjust.com/"])
 chrono24.*##header > section.js-pre-header:has(a[href="/info/apps.htm"])
 nyuka-now.com##.content.postCta
 treccani.it##.css-uwijew
@@ -1011,7 +1013,8 @@ travel.rakuten.co.jp##span[id="footerBannerAppDL"]
 travel.rakuten.co.jp###appDlBn
 hoyolab.com##.bbs-qr
 linkedin.com#$#.header-container { margin-top:0px!important; }
-wear.net,wear.jp###hdr_download
+wear.jp###hdr_download
+wear.jp###secAppDownload
 oceans-nadia.com#$#div[class^="CommonModal_modalBack"] { display:none!important; }
 oceans-nadia.com#$#header { margin-top: 0px !important;}
 point.md##+js(set-cookie, visited, true)
@@ -1620,6 +1623,7 @@ honeysanime.com#$##header-line-2 { margin-top: -60px !important; }
 honeysanime.com#$##wrap-app-notice { display: none !important; }
 !+ NOT_OPTIMIZED
 m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
+wear.jp###__next > div[class] > div.relative:has(a[href^="https://app.adjust.com/"])
 m.yelp.com#$#div[class*="search-container__"] > div[class^="overlay-color-cohort__"]:has(> div > img[alt="Install the Yelp app"]) { display: none; }
 m.yelp.com#$#html { overflow: auto !important; position: unset !important; }
 m.yelp.com##div[class*="main-content__"] > div > ol > div:has(> div > a[aria-label="Download the Yelp app"])
@@ -1748,7 +1752,6 @@ goo.ne.jp##.topbanner
 kachimai.jp###appwrap
 ||baby-calendar.jp/nazuke/img/app/header_
 jorudan.co.jp##.appHeaderBnr
-search.brave.com##.download-cta
 news.golfdigest.co.jp##.app-hide
 sahibinden.com##.smart-app-banner-v2
 snkrdunk.com##a.d-block[href="https://snkrdunkapp.page.link/ZwvZ"]

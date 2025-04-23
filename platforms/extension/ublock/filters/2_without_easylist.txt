@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: bzUykSKJtlw9o9SjExP1kQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745388782-3600.patch
+! Checksum: bOwJxsLEq8Z7Ugbxpv/yLw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745395980-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.80.48
-! TimeUpdated: 2025-04-23T06:08:46+00:00
+! Version: 2.3.80.49
+! TimeUpdated: 2025-04-23T08:08:41+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -35785,6 +35785,11 @@ smellyfisher.com##.providers
 bestmovie.it,treccani.it##.gmp
 forum.fibra.click##.FibraClickAds-fake-poststream-item
 open.online##a[rel="sponsored"]
+! https://github.com/AdguardTeam/AdguardFilters/issues/203816
+virgilio.it##aside > .hp_300x1
+virgilio.it##aside > .hp_300x1 + hr
+||virgilio.it/public/*/js/adv.min.js
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=virgilio.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203390
 @@||js.datadome.co/tags.js$domain=thefork.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/198437
@@ -45803,7 +45808,7 @@ javideo.pw##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86555
 pussy-hub.com##+js(addEventListener-defuser, click, popundr)
 ! Streamplay
-powstream.*,stre4mplay.*,streampiay.*,stemplay.*,steamplay.*,steanplay.*,streamp1ay.*,streanplay.*##+js(window.open-defuser)
+powcloud.*,powstream.*,stre4mplay.*,streampiay.*,stemplay.*,steamplay.*,steanplay.*,streamp1ay.*,streanplay.*##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86270
 javhdfree.icu##+js(window.open-defuser)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85566
@@ -49150,6 +49155,11 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+porndoe.com##.-ad-top-wrap
+porndoe.com##.vpc-join > form[target="_blank"]
+fapnow.*##.primary > li:not([class]):has(> a[href][target="_blank"]:not(.nav-cams))
+subtitleporn.com##div[class^="banner-"]
+subtitleporn.com##.anuncios
 omgubuntu.co.uk##.homepage-layout__bg-container[data-layout="html"]:has(.html-layout > .adsbygoogle)
 teenager365.to##.top:has(> iframe[src^="//a.magsrv.com/"])
 cpmlink.net##+js(window.open-defuser)
@@ -59722,7 +59732,7 @@ lnk.parts##.display-link-layer > .display-300x250
 az511.gov##.adsContainerTop
 sitepoint.com##div[class^="styledHeader__TopBanner-"]
 gamelab.com,play.dictionary.com##div[class^="DisplayAd__container_"]
-fapcat.com,cambay.tv##.fp-logo
+fapnow.*,fapcat.com,cambay.tv##.fp-logo
 kolombox.com###dlbtn_big
 ||kolombox.com/images/downicon.png
 stylecaster.com##.wrapper-header-ad-slot
@@ -60375,7 +60385,7 @@ namethatporn.com##div[class][data-flba^="https://landing1.brazzersnetwork.com/"]
 gayforfans.com,namethatporn.com##iframe[src*="//a.adtng.com/"]
 avanderlee.com##span.swiftlee-ad
 9now.com.au##.vjs-cuepoints-bar
-powstream.*,povvldeo.*,steampiay.cc,pouvideo.cc,pomvideo.cc###oly
+powcloud.*,powstream.*,povvldeo.*,steampiay.cc,pouvideo.cc,pomvideo.cc###oly
 powvideo.net##iframe[src^="//wontent.powvideo.net/apw.hh"]
 steampiay.cc,pouvideo.cc,pomvideo.cc,powvideo.net,powv1deo.cc##iframe[src^="/ben/mgnat.html"]
 powv1deo.cc##iframe[src^="//tontent.powv1deo.cc/"]

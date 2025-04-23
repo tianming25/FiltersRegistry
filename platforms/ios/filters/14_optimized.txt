@@ -1,9 +1,9 @@
-! Checksum: +nU0ixa26oJHa3SuDo7laQ
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1745403096-3600.patch
+! Checksum: T5DkT7oKrXGeF6JIP+nIlg
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1745406646-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.15
-! TimeUpdated: 2025-04-23T10:07:52+00:00
+! Version: 2.2.28.16
+! TimeUpdated: 2025-04-23T11:07:05+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -865,7 +865,7 @@
 ##.cookies-overlay
 ##.cookies-policy
 ##.cookies-popin
-##.cookies-popup
+##.cookies-popup:not(#style_important)
 ##.cookies-row
 ##.cookies-sec
 ##.cookies-warning
@@ -7960,7 +7960,7 @@ leki.pl#@##cookie-popup
 leki.pl#@#.cookie-popup:not(body):not(html)
 @@||cdn.privacy-mgmt.com/unified/$domain=motorsport.com
 drafthouse.com#@##onetrust-consent-sdk
-autoersatzteile.de#@#.cookies-popup
+autoersatzteile.de#@#.cookies-popup:not(#style_important)
 autoteilexxl.de#@#.popup-choose-cookies
 oil-center.de#@##consent-manager
 guides.dss.gov.au#@#.accept-cookies
@@ -7998,7 +7998,7 @@ liontuning-carparts.de#@##cookie-banner
 hartvannederland.nl#@##onetrust-consent-sdk
 @@||cdn.privacy-mgmt.com^$domain=einfachbacken.de
 topmarkety.pl#@#.gdpr-box:not(body):not(html)
-enerad.pl#@#.cookies-popup
+enerad.pl#@#.cookies-popup:not(#style_important)
 enerad.pl#@#.cookies-overlay
 bugs.mojang.com#@#.consent-container
 @@||sdk.privacy-center.org^$domain=pb.pl
@@ -8048,7 +8048,7 @@ medlos.com.ua#@##cookies-modal
 @@||api.usercentrics.eu^$script,xmlhttprequest,domain=moebel.de
 @@||aggregator.service.usercentrics.eu/aggregate/$domain=moebel.de
 inwestycje.plus,energetyka.plus,haleprzemyslowe.plus#@##cookie-law-info-bar
-jobs.nike.com#@#.cookies-popup
+jobs.nike.com#@#.cookies-popup:not(#style_important)
 jobs.nike.com#@#.cookie-content
 @@||d.delivery.consentmanager.net/delivery/cmp.php$domain=nn.de
 @@||cdn.opencmp.net/tcf-v2/$domain=fr.de
@@ -8081,7 +8081,7 @@ pomadziarz.pl#@#.shop_index > div.consents
 @@||sdk.privacy-center.org^$domain=atresplayer.com
 @@||chesskid.com/js/client-prod/assets/cookie-banner-
 heckenpflanzen-heijnen.de#@#.cookies-overlay
-heckenpflanzen-heijnen.de#@#.cookies-popup
+heckenpflanzen-heijnen.de#@#.cookies-popup:not(#style_important)
 @@||cmp.pubtech.ai/*/pubtech-cmp-v2*.js$script,domain=everyeye.it
 @@||delivery.consentmanager.net/delivery/cmp.php$domain=werstreamt.es
 @@||bigmotoringworld.co.uk/static-*/js/plugins/cookieconsent-*.js
@@ -8116,7 +8116,7 @@ lasexta.com#@##didomi-notice
 legalteam.hu#@##cookieModal
 order.apexhotels.co.uk#@#.cookie-container
 order.apexhotels.co.uk#@#.cookie-content
-aptekadlapacjenta.pl,dlapacjenta.pl,swiatleku.pl,zikodermo.pl,hiperpharm.pl#@#.cookies-popup
+aptekadlapacjenta.pl,dlapacjenta.pl,swiatleku.pl,zikodermo.pl,hiperpharm.pl#@#.cookies-popup:not(#style_important)
 aptekadlapacjenta.pl,dlapacjenta.pl,swiatleku.pl,zikodermo.pl,hiperpharm.pl#@#.cookies-info:not(html):not(body)
 @@||cookielaw.org^$domain=dacia.pl
 @@||onetrust.com^$domain=dacia.pl
@@ -8126,7 +8126,7 @@ razer.com#@##onetrust-consent-sdk
 @@||consent.trustarc.com/notice$domain=concur.de
 @@||consent.trustarc.com/asset/notice.js/$domain=concur.de
 saal-digital.at,saal-digital.ch,saal-digital.co.uk,saal-digital.com,saal-digital.com.bd,saal-digital.com.np,saal-digital.cz,saal-digital.de,saal-digital.ee,saal-digital.es,saal-digital.eu,saal-digital.fr,saal-digital.gr,saal-digital.hu,saal-digital.it,saal-digital.net,saal-digital.nl,saal-digital.pl,saal-digital.pt,saal-digital.ro,saal-digital.ru,saal-digital.sk#@##onetrust-consent-sdk
-rezervesdalas24.lv#@#.cookies-popup
+rezervesdalas24.lv#@#.cookies-popup:not(#style_important)
 dhbbank.com#@#.cookie-bar:not(body)
 dhbbank.com#@#.js-cookie-bar
 netbanking.dhbbank.com#@##cookie-warning
@@ -8186,7 +8186,7 @@ eett.gr#@#.cli-popupbar-overlay
 bnet-internet.cz#@#.cookie-content
 @@||sdk.privacy-center.org^$domain=lalibre.be
 southernliving.com#@##onetrust-consent-sdk
-nehody-uzavirky.cz#@#.cookies-popup
+nehody-uzavirky.cz#@#.cookies-popup:not(#style_important)
 otokoc.com.tr#@##cookieModal
 thesprucecrafts.com#@##onetrust-consent-sdk
 tesup.com#@#.cookiebar:not(body)
@@ -8216,7 +8216,7 @@ myloview.com,myloview.com.bd,myloview.com.br,myloview.com.np,myloview.cz,mylovie
 @@||cdn.opencmp.net/publisher/$domain=come-on.de
 zsedrive.sk#@#.cookie-banner:not(body):not(html)
 @@||usercentrics.eu^$domain=br.de
-strefakierowcy.pl#@#.cookies-popup
+strefakierowcy.pl#@#.cookies-popup:not(#style_important)
 strefakierowcy.pl#@#.cookies-info:not(html):not(body)
 elektrodigit.hu#@#.cookie-alert
 communityfibre.co.uk#@##onetrust-consent-sdk
@@ -8496,7 +8496,7 @@ fix-price.com#@#.gdpr-container
 @@||sdk.privacy-center.org^$domain=lalsace.fr
 surveys.com#@#.CookieConsent:not(body):not(html)
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
-auto-doc.at,auto-doc.az,auto-doc.be,auto-doc.by,auto-doc.ch,auto-doc.com.bd,auto-doc.com.np,auto-doc.com.ua,auto-doc.eu,auto-doc.fr,auto-doc.ie,auto-doc.it,auto-doc.pt,auto-doc.ro,autodoc.ae,autodoc.ai,autodoc.al,autodoc.am,autodoc.at,autodoc.az,autodoc.be,autodoc.bg,autodoc.by,autodoc.co,autodoc.co.uk,autodoc.com,autodoc.com.ar,autodoc.com.bd,autodoc.com.br,autodoc.com.np,autodoc.com.tr,autodoc.cz,autodoc.de,autodoc.dev,autodoc.dk,autodoc.ee,autodoc.es,autodoc.eu,autodoc.fi,autodoc.fr,autodoc.fun,autodoc.gr,autodoc.hr,autodoc.hu,autodoc.ie,autodoc.in.ua,autodoc.it,autodoc.kz,autodoc.lt,autodoc.lv,autodoc.md,autodoc.nl,autodoc.no,autodoc.ph,autodoc.pl,autodoc.pro,autodoc.pt,autodoc.ro,autodoc.ru,autodoc.se,autodoc.si,autodoc.sk,autodoc.space,autodoc.store,autodoc.ua,autodoc.uk,autodoc.vn,autodoc.ws,autodoc24.be,autodoc24.ch,autodoc24.com.bd,autodoc24.com.np,autodoc24.pt,autodoc24.ro,autodoc24.ru#@#.cookies-popup
+auto-doc.at,auto-doc.az,auto-doc.be,auto-doc.by,auto-doc.ch,auto-doc.com.bd,auto-doc.com.np,auto-doc.com.ua,auto-doc.eu,auto-doc.fr,auto-doc.ie,auto-doc.it,auto-doc.pt,auto-doc.ro,autodoc.ae,autodoc.ai,autodoc.al,autodoc.am,autodoc.at,autodoc.az,autodoc.be,autodoc.bg,autodoc.by,autodoc.co,autodoc.co.uk,autodoc.com,autodoc.com.ar,autodoc.com.bd,autodoc.com.br,autodoc.com.np,autodoc.com.tr,autodoc.cz,autodoc.de,autodoc.dev,autodoc.dk,autodoc.ee,autodoc.es,autodoc.eu,autodoc.fi,autodoc.fr,autodoc.fun,autodoc.gr,autodoc.hr,autodoc.hu,autodoc.ie,autodoc.in.ua,autodoc.it,autodoc.kz,autodoc.lt,autodoc.lv,autodoc.md,autodoc.nl,autodoc.no,autodoc.ph,autodoc.pl,autodoc.pro,autodoc.pt,autodoc.ro,autodoc.ru,autodoc.se,autodoc.si,autodoc.sk,autodoc.space,autodoc.store,autodoc.ua,autodoc.uk,autodoc.vn,autodoc.ws,autodoc24.be,autodoc24.ch,autodoc24.com.bd,autodoc24.com.np,autodoc24.pt,autodoc24.ro,autodoc24.ru#@#.cookies-popup:not(#style_important)
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=eu.patagonia.com
 eu.patagonia.com#@##onetrust-consent-sdk
 selexion.be#@##cookie-popup
@@ -8544,7 +8544,7 @@ supermariobroswonder.nintendo.com#@##onetrust-consent-sdk
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=elle.de|instyle.de
 @@||cdn.privacy-mgmt.com/mms/$domain=elle.de|instyle.de
 @@||geolocation.onetrust.com/cookieconsentpub/v*/geo/location$domain=ted.com
-allecco.pl#@#.cookies-popup
+allecco.pl#@#.cookies-popup:not(#style_important)
 allecco.pl#@#.cookies-info:not(html):not(body)
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=breitbart.com
 !+ PLATFORM(ios, ext_safari)
@@ -11681,6 +11681,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ||accounts.google.com/gsi/client^$third-party,script,domain=dtf.ru|stackoverflow.com|vc.ru|pikabu.ru|nytimes.com|baltimoresun.com|rozetka.com.ua|estadao.com.br|medium.com|gzt.com|mercurynews.com|drukarnia.com.ua|diffchecker.com|kaystls.site|kaystls.site|overclock.net|nissanclub.com|crazygames.com|notion.so|usnews.com|nypost.com|etnownews.com|timesnownews.com|menshealth.com|themirror.com|cq.ru|voetbalzone.nl|perplexity.ai|lefigaro.fr|lifehacker.ru|app.notta.ai|vnexpress.net
 ##iframe[id="google-one-tap-iframe"][allow="identity-credentials-get"]
 /.*/$permissions=identity-credentials-get=(),document
+sky.pro#%#//scriptlet('trusted-set-session-storage-item', 'wiki_fortune_wheel_play_date', '99999999999999')
 goofish.com##div[class^="bottomLead-"]
 1tv.ru##.player > div[class*="eump-minimized"]
 hd.kinopoisk.ru#$#body > div.ReactModalPortal:has(> div.ReactModal__Overlay > div.ReactModal__Content > div[data-tid="FullscreenNotification"]) { display: none !important; }
@@ -15353,6 +15354,7 @@ ozgurkocaeli.com.tr,turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocael
 gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,thelocal.ch,morgenpost.de,waz.de,nrz.de,braunschweiger-zeitung.de,abendblatt.de,wolfsburger-nachrichten.de,wolfenbuetteler-zeitung.de,ynet.co.il#$#html > body.tp-modal-open { overflow: auto !important; }
 gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,thelocal.ch,morgenpost.de,waz.de,nrz.de,braunschweiger-zeitung.de,abendblatt.de,wolfsburger-nachrichten.de,wolfenbuetteler-zeitung.de,ynet.co.il#$#div[class="tp-modal"][style^="z-index: 3000"] { display: none !important; }
 gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,nordbayern.de,thelocal.ch,morgenpost.de,waz.de,nrz.de,braunschweiger-zeitung.de,abendblatt.de,wolfsburger-nachrichten.de,wolfenbuetteler-zeitung.de,ynet.co.il#$#div[class="tp-modal"][style^="z-index: 3000"] ~ div.tp-backdrop { display: none !important; }
+marktechpost.com##.td-ss-main-sidebar > aside.widget:has(> iframe[data-test-id="beehiiv-embed"])
 leggo.it###box_newsbuon
 jetpacglobal.com##.css-v2kfba
 news.de##section:has(> #newsletterFormBox:last-child)
@@ -22208,6 +22210,8 @@ tv.yandex.adult,tv.yandex.ac.id,tv.yandex.app,tv.yandex.asia,tv.yandex.at,tv.yan
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div > img { display: none !important; }
 www.kinopoisk.ru#$#header[class][style*="--header-height:150px"] > div.header-navigation { margin-top: 0 !important; }
 www.kinopoisk.ru##div[class^="trailer-promo"]
+sky.pro##a[href^="https://sky.pro/promo/media/"][target="_blank"]
+marktechpost.com##.wpb_wrapper > div.td-news-hub-news-ticker + div.td_block_empty_space + div.td_block_wrap
 mail.proton.me##.tip-box
 qieyou.com##.pc-box-app
 tagesspiegel.de###piano-footerbar

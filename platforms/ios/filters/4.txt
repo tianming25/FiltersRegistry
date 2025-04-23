@@ -1,9 +1,9 @@
-! Checksum: nS0LEjBo9lv0Q0O3FL+cTg
-! Diff-Path: ../patches/4/4-s-1745378701-3600.patch
+! Checksum: JdR9oIMcZJ3IUop1PoFydw
+! Diff-Path: ../patches/4/4-s-1745399504-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.13.68
-! TimeUpdated: 2025-04-23T03:21:25+00:00
+! Version: 2.1.13.69
+! TimeUpdated: 2025-04-23T09:07:36+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -657,7 +657,8 @@ esquire.com,dotesports.com,mashable.com,pcmag.com,onefootball.com,ign.com,israel
 !
 ! NOTE: Specific rules
 !
-dns-shop.ru##.share__wrapper
+dns-shop.ru##.share-popover__list > li.share-popover__list-link:not(.share-popover__list-link-copy)
+liberoquotidiano.it###dropdown-trigger
 genius.com##div[class^="ShareButtons__Root"]
 raiplay.it##.rai-sharing-button
 tv8.it##.c-social-share__container
@@ -7689,7 +7690,7 @@ cnbcindonesia.com##a[class*=" gtm_share_"]
 di.fm##.social-button.share
 forum.militaryparitet.com##.fancy-addthis-post
 onet.pl##.fbShare
-medonet.pl,fakt.pl##.socialButtons
+news.de,medonet.pl,fakt.pl##.socialButtons
 fakt.pl##div[data-position="mobile"][data-run-module="local/main.social"]
 calculateaspectratio.com##.share > *
 vagalume.com.br###shareLyrics

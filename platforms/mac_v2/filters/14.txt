@@ -1,9 +1,9 @@
-! Checksum: uE3E9uEfFI4qPkvSgLfGAg
-! Diff-Path: ../patches/14/14-s-1745395985-3600.patch
+! Checksum: bAb5ujw4PArGYXFSjwIH8Q
+! Diff-Path: ../patches/14/14-s-1745399505-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.13
-! TimeUpdated: 2025-04-23T08:09:13+00:00
+! Version: 2.2.28.14
+! TimeUpdated: 2025-04-23T09:07:53+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -25711,6 +25711,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+goofish.com##div[class^="bottomLead-"]
 1tv.ru##.player > div[class*="eump-minimized"]
 hd.kinopoisk.ru#$#body > div.ReactModalPortal:has(> div.ReactModal__Overlay > div.ReactModal__Content > div[data-tid="FullscreenNotification"]) { display: none !important; }
 hd.kinopoisk.ru#$#body[class*="styles_body"]:not(#style_important) { overflow: visible !important; }
@@ -34379,6 +34380,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+news.de##section:has(> #newsletterFormBox:last-child)
 shadowcore.ru###tg-btn
 darntough.com##body > div:has(> .needsclick > div[aria-label="POPUP Form"])
 1tv.ru##.title__social__link
@@ -49427,6 +49429,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+tagesspiegel.de###piano-footerbar
 teenager365.to##.block-offer
 iobit.com##[class*="bottom"][class~="on"]
 iobit.com##.pop-buy:has(> span.close)

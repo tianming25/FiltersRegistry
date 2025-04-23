@@ -1,9 +1,9 @@
-! Checksum: 012wzwDaNqYpuIAe0futDw
-! Diff-Path: ../patches/14/14-s-1745406638-3600.patch
+! Checksum: 3zxZNaFPQ9HI1n/EpYWnkA
+! Diff-Path: ../patches/14/14-s-1745410514-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.16
-! TimeUpdated: 2025-04-23T11:07:05+00:00
+! Version: 2.2.28.17
+! TimeUpdated: 2025-04-23T12:11:29+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21314,7 +21314,7 @@ foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 ya.ru,yandex.*#$?#div[class^="ImagesViewer-"][style^="height:"] { remove: true; }
 !
 ! Yandex.Maps
-[$path=/\/(maps|navi)/]ya.ru,yandex.*#%#//scriptlet('set-constant', 'Object.prototype.isStickyAd', 'undefined')
+[$path=/\/(maps|navi|web-maps)/]ya.ru,yandex.*#%#//scriptlet('set-constant', 'Object.prototype.isStickyAd', 'undefined')
 !
 ! Yandex.Music
 music.yandex.adult,music.yandex.ac.id,music.yandex.app,music.yandex.asia,music.yandex.at,music.yandex.az,music.yandex.ba,music.yandex.be,music.yandex.by,music.yandex.ca,music.yandex.cc,music.yandex.cl,music.yandex.cloud,music.yandex.club,music.yandex.cn,music.yandex.co,music.yandex.co.il,music.yandex.co.in,music.yandex.co.uk,music.yandex.co.za,music.yandex.com,music.yandex.com.bd,music.yandex.com.cn,music.yandex.com.np,music.yandex.com.pk,music.yandex.com.tr,music.yandex.com.ua,music.yandex.de,music.yandex.ee,music.yandex.es,music.yandex.eu,music.yandex.fi,music.yandex.fr,music.yandex.ge,music.yandex.hu,music.yandex.in,music.yandex.io,music.yandex.jp,music.yandex.kg,music.yandex.kz,music.yandex.link,music.yandex.lt,music.yandex.lv,music.yandex.md,music.yandex.mobi,music.yandex.my,music.yandex.net,music.yandex.news,music.yandex.one,music.yandex.org,music.yandex.org.in,music.yandex.pk,music.yandex.pl,music.yandex.pro,music.yandex.ru,music.yandex.site,music.yandex.sk,music.yandex.su,music.yandex.tech,music.yandex.ua,music.yandex.uk,music.yandex.us,music.yandex.uz,music.yandex.work,music.yandex.ws,music.yandex.xyz##.notify > div.deco-tooltip_notify.notify_shown
@@ -24273,8 +24273,6 @@ tigernet.com###topAdBlock
 tileman.io#$#.adbanner#adt { display: block!important; }
 timvision.it#$#.pub_300x250.pub_300x250m.adBanner { display: block !important; }
 titlovi.com##.header > header + [id*="-"]:not([class]) > a[href*="adblock"]
-titulky.com#%#//scriptlet("set-constant", "foolish_script_is_here", "noopFunc")
-titulky.com#%#//scriptlet("set-constant", "showBanner600", "true")
 tiz-cycling.live###msg-sticky-wrapper
 tool.liumingye.cn###pop-container
 topbestalternatives.com#%#//scriptlet("abort-current-inline-script", "EventTarget.prototype.addEventListener", "window.getComputedStyle")
@@ -25169,7 +25167,6 @@ wvgazettemail.com#@#.adSense
 @@||thestar.co.uk^$generichide
 @@||thgim.com/static/js/adsframe.min.js$domain=thehindu.com
 @@||timebucks.com/publishers/pages/ads.js
-@@||titulky.com/js/reklama.$~third-party
 @@||toolson.net/Scripts/core/advertisement.js
 @@||top-windows-tutorials.com/site/wp-content/plugins/tired-horse/assets/js/advertisement.min.js
 @@||torrenting.com/js/advertisement*.js
@@ -25918,6 +25915,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+blic.rs###loginPopUp
 sky.pro#%#//scriptlet('trusted-set-session-storage-item', 'wiki_fortune_wheel_play_date', '99999999999999')
 goofish.com##div[class^="bottomLead-"]
 1tv.ru##.player > div[class*="eump-minimized"]
@@ -34593,6 +34591,9 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+blic.rs##.article__community-groups-biznis
+blic.rs##.article__community-groups-blic
+latchit.org##div[id^="tpapopup-"]
 marktechpost.com##.td-ss-main-sidebar > aside.widget:has(> iframe[data-test-id="beehiiv-embed"])
 leggo.it###box_newsbuon
 jetpacglobal.com##.css-v2kfba
@@ -42519,6 +42520,7 @@ buttondown.email#@##subscribe-form
 /js/jquery.smartbanner.js
 ||br.app.link^$third-party
 !
+##.ldapp-article
 ###xm_app_stickyHeader
 ##.app-ad-container-desktop
 ##.appBanner:not(body)
@@ -56383,6 +56385,8 @@ ityouchannel.livedoor.blog,nanjei-baseball.blog.jp,baynews.blog.jp,xresolutionx.
 !
 ! NOTE: Blogroll specific rules
 !
+||hanshintigers1.blog.jp/include$subdocument,~third-party
+hanshintigers1.blog.jp##div[class^="include"]
 monst-news.net##div[id^="rss_wrap"]
 himasoku.com##.himajin-headline
 kalender.se##.hidden.justify-center > div[class*="min-h-[800px]"]

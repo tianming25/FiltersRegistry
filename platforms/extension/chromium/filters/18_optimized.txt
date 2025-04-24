@@ -1,9 +1,9 @@
-! Checksum: MProhrZYA4hSHrZYKpRI7A
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1745478678-3600.patch
+! Checksum: fnhfh5Vwt3NIQ2KoeaSXxw
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1745485904-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.60.44
-! TimeUpdated: 2025-04-24T07:07:53+00:00
+! Version: 2.0.60.45
+! TimeUpdated: 2025-04-24T09:08:23+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1331,6 +1331,7 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+smallpdf.com#%#//scriptlet('trusted-set-cookie', '_s.cookie_consent', 'marketing=0:analytics=0:version=2021-07-01')
 amazon.jobs##div[data-react-class="CookieBanner"]
 amazon.jobs##div[class^="_banner_"]:has(> ul > li > a[href$="/cookies"])
 conductor.com#%#//scriptlet('trusted-set-local-storage-item', 'conductor', '{"cookie-consent":{"consents":{"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","personalization_storage":"denied","security_storage":"denied"},"id":"T7I5OK6GjbLhc1-ItirDN","explicit":true}}')
@@ -6997,7 +6998,6 @@ e-food.gr#%#//scriptlet('set-cookie-reload', 'accepted_cookies', 'true')
 diag.pl#%#//scriptlet('set-local-storage-item', 'DIAG_COOKIES_AGREEMENT', 'true')
 americanexpress.ch,swisscard.ch#%#//scriptlet('set-cookie', 'sc-privacy-settings', 'true')
 perplexity.ai#%#//scriptlet('set-cookie', 'trackingAllowed', 'false')
-smallpdf.com#%#document.cookie='_s.cookie_consent=marketing=0:analytics=0:version=2021-07-01;path=/;';
 threads.net#%#//scriptlet('trusted-set-cookie-reload', 'cb', '1_2023_07_05_2-3')
 thegamingwatcher.com#%#//scriptlet('set-cookie', 'snc-cp', '2')
 technopat.net#%#document.cookie='cmplz_consented_services={"youtube":true};path=/;';
@@ -7366,7 +7366,7 @@ canalplus.com#%#//scriptlet('set-cookie', 'cp_cc_stats', '0')
 canalplus.com#%#//scriptlet('set-cookie', 'adsAllowed', 'false')
 canalplus.com#%#//scriptlet('set-cookie', 'statsAllowed', 'false')
 plex.tv#%#//scriptlet("set-cookie", "plex_tv_cookie_consent", "2")
-radio-canada.ca#%#//scriptlet('set-cookie', 'RCI_APP_LEGAL_DISCLAIMER_COOKIE', 'false')
+radio-canada.ca#%#//scriptlet('set-cookie', 'RC_NOTIFICATION_VIE_PRIVEE', 'false')
 kvk.nl#%#//scriptlet("set-cookie", "allowTrackingCookiesKvK", "1")
 xd2sketch.com#%#//scriptlet("set-cookie", "xd2sketch_cookies_accepted", "true")
 avocode.com#%#//scriptlet('set-cookie', 'avokie', 'no')

@@ -1,9 +1,9 @@
-! Checksum: LN9sOSW+x08x/pUjW6Ewbw
-! Diff-Path: ../patches/3/3-s-1745471516-3600.patch
+! Checksum: aswS6hvgO9Rdc1/Zd+rRWQ
+! Diff-Path: ../patches/3/3-s-1745485918-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.83.75
-! TimeUpdated: 2025-04-24T05:07:48+00:00
+! Version: 2.0.83.76
+! TimeUpdated: 2025-04-24T09:07:45+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -49021,6 +49021,12 @@ link.gmapp*.net$image
 ! it's problematic that due to how Gmail proxy work, these domains aren't even exposed on the network level
 ! fortunately, extensions can see them (Gmail puts the real URL in the location.hash part of the src)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/203888
+c-hh-point-jp.*.cuenote.jp/c/*.gif$image
+c-hh-point-jp.*.cuenote.jp%2Fc%2F*.gif$image
+! Medallia
+medallia.*/?*&invite-opened=yes$image
+medallia.*%2F%3F*%26invite-opened%3Dyes$image
 ! jeuxvideo.com
 liens.newsletters.jeuxvideo.com/m/opening/$image
 liens.newsletters.jeuxvideo.com%2Fm%2Fopening%2F$image

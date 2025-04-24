@@ -1,9 +1,9 @@
-! Checksum: Alba/yJ0kXaA0PoxKdbD+Q
-! Diff-Path: ../patches/18/18-s-1745507523-3600.patch
+! Checksum: EOyZKbL6IhV9C0JLKQguew
+! Diff-Path: ../patches/18/18-s-1745511124-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.60.48
-! TimeUpdated: 2025-04-24T15:08:21+00:00
+! Version: 2.0.60.49
+! TimeUpdated: 2025-04-24T16:08:34+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1248,7 +1248,7 @@
 ##.coockie_banner
 ##.cookie-accept-container
 ##.cookie-accept-overlay
-##.cookie-alert
+##body:not(.scroll-lock) .cookie-alert
 ##.cookie-alert-box
 ##.cookie-assistant
 ##.cookie-banner-bottom
@@ -16825,6 +16825,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/hufilter/hufilter/pull/555/files
+kaveverzum.hu#$#body { position: unset !important; }
+kaveverzum.hu#$#.cookie-alert { display: none !important; }
 ! https://www.reddit.com/r/uBlockOrigin/comments/1k3yj79/problems_with_wwwivoxcom/
 @@||sdk.privacy-center.org/sdk/$script,domain=ivoox.com
 ! excaliburshop.com - broken 18+ warning incl. cookie

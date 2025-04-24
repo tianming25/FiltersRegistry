@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: j9W1dU4VV6rw+yPrnT0YXw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745485921-3600.patch
+! Checksum: k36XHZfDyxo7/lnHeA/7hg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745489502-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.80.67
-! TimeUpdated: 2025-04-24T09:07:33+00:00
+! Version: 2.3.80.68
+! TimeUpdated: 2025-04-24T10:07:13+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -48608,7 +48608,7 @@ _clickunder&pb=$popup
 /rtb/r/?token=$script
 ! Clickadu
 ! ex. https://kaqppajmofte.com/en/owh/avw?spfrctux=ude&qdsp=jzub&dce=808204&jvkcce=391260&iilmwn=auge&id=1971897
-/^https:\/\/[a-z]{8,12}\.com\/en\/(?:[a-z]{2,10}\/){0,2}[a-z]{2,}\?(?:[a-z]+=(?:\d+|[a-z]+)&)*?id=[12]\d{6}/$script,third-party,match-case
+/^https:\/\/[a-z]{8,12}\.com\/en\/(?:[a-z]{2,10}\/){0,2}[a-z]{2,}\?(?:[a-z]+=[^&=?\s]*?&)*?id=[12]\d{6}/$script,third-party,match-case
 ?zoneid=*&ab=1|$script,third-party
 /get/*?zoneid=*&jp=$script
 ! https://github.com/AdguardTeam/AdguardFilters/pull/83787
@@ -49156,6 +49156,9 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+etymonline.com#?#.w-full:has(> div[class^="space-"] > div.flex > button:contains(Remove Ads))
+etymonline.com##div[class*="bg-secondary"]:has(> div[class] > div.relative > div[id^="div-gpt-ad-"])
+etymonline.com##.fixed:has(> div[id^="div-gpt-ad-"])
 nextdoordolls.com###single-post-right
 rifmelody.com##ad-host
 porn4fans.com###spot_player_start
@@ -69384,6 +69387,9 @@ mail.yahoo.com##[data-test-id^="pencil-ad"]
 ! ATTENTION: The rules in this section must be accompanied by a link of an issue, where the problem will be fixed
 ! or with clear description what to do next
 !
+! BUG: https://github.com/AdguardTeam/DisableAMP/issues/115
+! TODO: remove it when the release with the fix is out
+! aglint-disable-next-line invalid-modifiers
 ! https://github.com/AdguardTeam/AdguardFilters/issues/187875#issuecomment-2361917970
 ! Problem occurs only in Brave browser with MV3 extension
 ! TODO: remove it when this issue - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2954 is fixed

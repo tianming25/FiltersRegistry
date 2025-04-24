@@ -866,8 +866,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.45.69",
-			"timeUpdated": "2025-04-24T00:47:16+0000",
+			"version": "2.1.45.70",
+			"timeUpdated": "2025-04-24T04:36:58+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -939,8 +939,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.50.26",
-			"timeUpdated": "2025-04-24T00:47:19+0000",
+			"version": "2.1.50.27",
+			"timeUpdated": "2025-04-24T04:37:01+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -991,8 +991,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.68.66",
-			"timeUpdated": "2025-04-24T00:47:19+0000",
+			"version": "2.1.68.67",
+			"timeUpdated": "2025-04-24T04:37:01+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1063,8 +1063,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/easylistitaly.txt",
 			"trustLevel": "high",
-			"version": "2.1.68.68",
-			"timeUpdated": "2025-04-24T00:47:20+0000",
+			"version": "2.1.68.69",
+			"timeUpdated": "2025-04-24T04:37:03+0000",
 			"deprecated": false,
 			"languages": [
 				"it"
@@ -1138,8 +1138,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/Liste_AR.txt",
 			"trustLevel": "high",
-			"version": "2.1.68.67",
-			"timeUpdated": "2025-04-24T00:47:21+0000",
+			"version": "2.1.68.68",
+			"timeUpdated": "2025-04-24T04:37:03+0000",
 			"deprecated": false,
 			"languages": [
 				"ar"
@@ -1166,8 +1166,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.68.66",
-			"timeUpdated": "2025-04-24T00:47:22+0000",
+			"version": "2.1.68.67",
+			"timeUpdated": "2025-04-24T04:37:04+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1216,8 +1216,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.42.91",
-			"timeUpdated": "2025-04-24T00:47:25+0000",
+			"version": "2.1.42.92",
+			"timeUpdated": "2025-04-24T04:37:07+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1313,8 +1313,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.45.98",
-			"timeUpdated": "2025-04-24T00:47:31+0000",
+			"version": "2.1.45.99",
+			"timeUpdated": "2025-04-24T04:37:14+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1337,8 +1337,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.40.26",
-			"timeUpdated": "2025-04-24T00:47:32+0000",
+			"version": "2.1.40.27",
+			"timeUpdated": "2025-04-24T04:37:15+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1361,8 +1361,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.40.41",
-			"timeUpdated": "2025-04-24T00:47:32+0000",
+			"version": "2.0.40.42",
+			"timeUpdated": "2025-04-24T04:37:15+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1408,8 +1408,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://cdn.jsdelivr.net/gh/hufilter/hufilter@gh-pages/hufilter-adguard.txt",
 			"trustLevel": "high",
-			"version": "2.0.3.58",
-			"timeUpdated": "2025-03-26T16:37:30+0000",
+			"version": "2.0.3.59",
+			"timeUpdated": "2025-04-24T04:37:16+0000",
 			"deprecated": false,
 			"languages": [
 				"hu"
@@ -1483,8 +1483,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.68.67",
-			"timeUpdated": "2025-04-24T00:47:34+0000",
+			"version": "2.1.68.68",
+			"timeUpdated": "2025-04-24T04:37:17+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1527,8 +1527,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.67.92",
-			"timeUpdated": "2025-04-24T00:47:36+0000",
+			"version": "2.1.67.93",
+			"timeUpdated": "2025-04-24T04:37:19+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1717,8 +1717,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.9.32",
-			"timeUpdated": "2025-04-24T00:47:42+0000",
+			"version": "2.0.9.33",
+			"timeUpdated": "2025-04-24T04:37:25+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1790,8 +1790,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.68.68",
-			"timeUpdated": "2025-04-24T00:47:43+0000",
+			"version": "2.1.68.69",
+			"timeUpdated": "2025-04-24T04:37:27+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1989,8 +1989,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.0.5.80",
-			"timeUpdated": "2025-04-24T00:47:51+0000",
+			"version": "2.0.5.81",
+			"timeUpdated": "2025-04-24T04:37:35+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2013,8 +2013,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "high",
-			"version": "2.1.51.69",
-			"timeUpdated": "2025-04-24T00:47:53+0000",
+			"version": "2.1.51.70",
+			"timeUpdated": "2025-04-24T04:37:38+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2033,8 +2033,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Filter.txt",
 			"trustLevel": "high",
-			"version": "2.0.21.39",
-			"timeUpdated": "2025-04-23T04:37:46+0000",
+			"version": "2.0.21.40",
+			"timeUpdated": "2025-04-24T04:37:39+0000",
 			"deprecated": false,
 			"languages": [
 				"sv"
@@ -2087,8 +2087,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "low",
-			"version": "2.1.64.74",
-			"timeUpdated": "2025-04-24T00:47:56+0000",
+			"version": "2.1.64.75",
+			"timeUpdated": "2025-04-24T04:37:40+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -2241,8 +2241,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://easylist-downloads.adblockplus.org/indianlist.txt",
 			"trustLevel": "low",
-			"version": "2.0.61.99",
-			"timeUpdated": "2025-04-24T00:48:05+0000",
+			"version": "2.0.62.0",
+			"timeUpdated": "2025-04-24T04:37:49+0000",
 			"deprecated": false,
 			"languages": [
 				"hi"

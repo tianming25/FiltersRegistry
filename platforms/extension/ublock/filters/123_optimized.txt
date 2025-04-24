@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: LAZalA6yCntFYDZHENNgkw
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1745455903-14400.patch
+! Checksum: JskmZ51SiGC/zk7Rmnjlng
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1745469681-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.26
-! TimeUpdated: 2025-04-24T00:47:32+00:00
+! Version: 2.1.40.27
+! TimeUpdated: 2025-04-24T04:37:15+00:00
 ! Expires: 5 days (update frequency)
 -facebook-widget.
 -follow-icon-
@@ -36,6 +36,7 @@
 /follow-twitter-
 /follow-twitter.
 /follow-us.$~stylesheet
+/follow_instagram.png
 /highlight-and-share.js
 /icon_share_
 /icon_sns_
@@ -63,6 +64,7 @@
 /plugins/pinterest-pin-it-button-on-image-hover-and-post/js/pinit.js
 /plugins/sociable-re/images/*
 /plugins/sociable/*$~stylesheet
+/plugins/social-media-widget/*$image
 /plugins/sociallocker-next-premium/*
 /plugins/subscribe-connect-follow-widget/images/*
 /plugins/ultimate-social-deux/public/assets/js/min/us.script-min.js
@@ -94,6 +96,7 @@
 /shariff.min.js
 /silicon-counters.js
 /simple-share-$~stylesheet
+/simpleshare.js
 /sme-facebook-likebox-sidebar/*
 /sns_naverband.png
 /social-footer.jpg
@@ -143,6 +146,7 @@ _social-bar/
 ###article-social-share
 ###articleShare
 ###article_tools_share
+###articlebottomsharinglinks
 ###aside-social-links-container
 ###bdshare
 ###block-menu-menu-social-links
@@ -153,6 +157,7 @@ _social-bar/
 ###block-socialmedialinks
 ###block-socialmedialinks-2
 ###block-socialmenu
+###block-socialsharingblock
 ###blog-follow-widget
 ###btn-share-email
 ###btn-share-fb
@@ -216,6 +221,7 @@ _social-bar/
 ###follow-us-box
 ###follow-us-widget
 ###followBox
+###followTwitter
 ###followUs
 ###follow_buttons
 ###follow_us
@@ -354,6 +360,7 @@ _social-bar/
 ###shareButton
 ###shareButton1
 ###shareButtons
+###shareData
 ###shareDropdown
 ###shareFloat
 ###shareIcons
@@ -538,6 +545,7 @@ _social-bar/
 ###socialbookmarks
 ###socialbox
 ###socialbuttons
+###socialdiv
 ###socialfooter
 ###socialicons
 ###sociallinks
@@ -603,6 +611,7 @@ _social-bar/
 ##.ArticleView-bottomShares
 ##.ArticleView-shares
 ##.BtnShareGroup
+##.Custom_Facebook_Page
 ##.FacebookLike
 ##.FacebookShareButton
 ##.FollowButton
@@ -635,6 +644,7 @@ _social-bar/
 ##.ShareRail
 ##.ShareThis
 ##.Shariff
+##.SharingContainer
 ##.SiteFooter__follow
 ##.Social-Media
 ##.Social-link
@@ -966,6 +976,7 @@ _social-bar/
 ##.details-share
 ##.div-share
 ##.divFooterSocial
+##.div_share
 ##.dmSocialHub
 ##.dp-share
 ##.dpsp-network-btn
@@ -988,6 +999,8 @@ _social-bar/
 ##.eg-footer-icon-vk
 ##.eg-footer-icon-youtube
 ##.ekit_social_media
+##.el-icon-facebook
+##.el-icon-twitter
 ##.elem-info__share
 ##.elementor-social-icon
 ##.elementor-social-icons-wrapper
@@ -1088,6 +1101,7 @@ _social-bar/
 ##.fb-share-button
 ##.fb-share-container
 ##.fb-subscribe
+##.fb-twitter
 ##.fb-widget
 ##.fb-xfbml-parse-ignore
 ##.fbBtn
@@ -1096,6 +1110,7 @@ _social-bar/
 ##.fbShareTrigger
 ##.fb_bar
 ##.fb_like_and_share
+##.fb_like_box
 ##.fb_report_icon
 ##.fb_share
 ##.fb_share_link
@@ -1146,6 +1161,7 @@ _social-bar/
 ##.follow-us-container
 ##.follow-us-icons
 ##.follow-us-on-twitter
+##.follow-us-panel
 ##.follow-us-wrapper
 ##.followSocial
 ##.followTwitter
@@ -1309,6 +1325,7 @@ _social-bar/
 ##.hatena-bookmark-button
 ##.hatena-btn-icon
 ##.hdr-social
+##.head-post-share
 ##.header-facebook
 ##.header-icon-instagram
 ##.header-nav-social
@@ -1341,6 +1358,7 @@ _social-bar/
 ##.header__social-media
 ##.header__social-nav
 ##.header__socials
+##.header_sharing
 ##.header_sns
 ##.header_social
 ##.header_social_icon
@@ -1377,6 +1395,7 @@ _social-bar/
 ##.icon-circle-twitter
 ##.icon-circle-youtube
 ##.icon-connect
+##.icon-dailymotion
 ##.icon-delicious
 ##.icon-digg
 ##.icon-facebook-circle
@@ -1545,6 +1564,7 @@ _social-bar/
 ##.l-social
 ##.large-share-button
 ##.layer_share_on
+##.lazysocialbuttons
 ##.leftsharebtn
 ##.lf-facebook
 ##.like-fb
@@ -1607,6 +1627,8 @@ _social-bar/
 ##.main-footer__socials
 ##.main-header__social
 ##.main-nav-social
+##.mainVerticalArticleSharingLinks
+##.main_search_social
 ##.mashsb-box
 ##.mashsb-container
 ##.masterSocialbutton
@@ -1620,6 +1642,7 @@ _social-bar/
 ##.media-share-button
 ##.mediaShare
 ##.mejs-share-button
+##.menu--footer-social
 ##.menu--social-media
 ##.menu-article-share
 ##.menu-footer-social
@@ -2345,6 +2368,7 @@ _social-bar/
 ##.site-footer__social-links
 ##.site-footer__social-list
 ##.site-footer__socials
+##.site-nav-social
 ##.site-social
 ##.site-social-menu
 ##.sitewide-social-media
@@ -2754,6 +2778,7 @@ _social-bar/
 ##.socialwidget
 ##.socialwrap
 ##.sociaux
+##.socshare
 ##.sow-social-media-button
 ##.ss-facebook
 ##.ss-inline-share-content
@@ -2861,6 +2886,7 @@ _social-bar/
 ##.tve__info__share
 ##.tve_social_items
 ##.tw-share
+##.tweet-btn
 ##.tweet-link-button
 ##.tweet-this
 ##.tweet_btn
@@ -2922,7 +2948,9 @@ _social-bar/
 ##.ut2-social-link-block
 ##.utility-social
 ##.vbseo_share
+##.vc_container_social_button
 ##.vc_share_link_container
+##.vc_social_button
 ##.vc_social_icons
 ##.vce-share-bar
 ##.vce-share-items
@@ -3777,6 +3805,7 @@ gruppovideomedia.it##.tv-social-media
 sorrisi.com##.tvsc-social-share
 alfredopedulla.com##.tw-banner
 mymovies.it##.vota-pul-consiglio
+agendadigitale.eu,corrierecomunicazioni.it,economyup.it##a[href="#condivisioni"]
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##div[class^="SocialShare_"]
 ||imyfone.com/assets/js/media_share/
 ||ministop.co.jp/site_common/js/sns_

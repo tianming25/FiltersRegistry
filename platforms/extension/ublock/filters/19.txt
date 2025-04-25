@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: SK9GurAa+sDBr1PMJxL68w
-! Diff-Path: ../patches/19/19-s-1745568821-3600.patch
+! Checksum: 9OR7tj7TjSI4AihRQRQoVw
+! Diff-Path: ../patches/19/19-s-1745572271-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.54.28
-! TimeUpdated: 2025-04-25T08:09:55+00:00
+! Version: 2.0.54.29
+! TimeUpdated: 2025-04-25T09:07:35+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1730,6 +1730,8 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+||cdn.snigelweb.com/adengine/civitai.com/loader.js$domain=civitai.com,redirect=noop.js,script
+civitai.com##div[id][class*="box-content"]:empty
 yummy-anime.ru##.sidebar-block.additional-block
 p3dm.ru##.ban-div
 flipp.com###ad-blocker-detected-popup
@@ -3219,6 +3221,7 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION[id=general]: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+@@||cdn.snigelweb.com/adengine/civitai.com/loader.js$domain=civitai.com
 facebook.com#@#.post-ads
 facebook.com#@#.AdBox
 facebook.com#@#.sponsorPost
@@ -4388,6 +4391,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+thegirl.ru##.article-notification-inset
 ||wizconnected.com/*/resources/dist/promotional-popup-module.*.chunk.min.
 blic.rs###loginPopUp
 goofish.com##div[class^="bottomLead-"]

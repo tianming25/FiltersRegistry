@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: TJQqT4UyxlrAu4WFAafUKA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745565098-3600.patch
+! Checksum: LR6D/Oj75aU/OmViOgGOQQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745568822-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.80.79
-! TimeUpdated: 2025-04-25T07:07:07+00:00
+! Version: 2.3.80.80
+! TimeUpdated: 2025-04-25T08:09:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -35753,6 +35753,7 @@ movie76.com##img[alt="ads"]
 !
 ! NOTE: Italian
 !
+tgcom24.mediaset.it#?#.bd-area-sidebar > div[class*="sportMediaset"] > div[data-testid="section"]:has(div[data-testid="footer-card-elements"] > span:contains(contenuto sponsorizzato))
 macitynet.it##div[id^="div-flx-intext-container-"]
 dday.it##div[id^="offer-"][id$="-slider"]
 tiscali.it###wp-dtop
@@ -49812,8 +49813,8 @@ hix.ai#$##app-body > .relative:has(> .top-banner-container) { position: absolute
 ||ws.kora-api.top/api/ads
 socigames.com##div[class^="socig-"] > center
 gamecax.com##.menu-item > a[target="_blank"]
-gumtree.com.au###content div[class^="css-"]:has(> p:contains(SPONSORED))
-gumtree.com.au##div[class^="css-"]:has(> p:contains(ADVERTISEMENT))
+gumtree.com.au#?##content div[class^="css-"]:has(> p:contains(SPONSORED))
+gumtree.com.au#?#div[class^="css-"]:has(> p:contains(ADVERTISEMENT))
 adultgamesworld.com##+js(set-constant, doOpen, undefined)
 biblehub.com##div[align="center"]:has(> div[id^="div-gpt-ad"])
 o2tvseries.com##+js(set-cookie, downloadbypass, 1)
@@ -50240,7 +50241,7 @@ hotmovs.*##.underplayer__info > div[class]:has(> div > a[href^="http"][target="_
 toonstream.*##+js(abort-on-property-read, initPu)
 geeksforgeeks.org###rightBarSaleBanner:not(#style_important)
 xjav.tube##.video__wrapper > div.wrapper:has(> article div[style="width: 300px; height: 250px;"])
-xjav.tube##.video__wrapper > div.wrapper:has(> h2:contains(Advertisement))
+xjav.tube#?#.video__wrapper > div.wrapper:has(> h2:contains(Advertisement))
 xjav.tube##.jw-channel-btn
 a-lohas.jp##+js(remove-node-text, script, puURLstrpcht)
 rumble.com##main > section.homepage-section:has(> div.constrained a[href^="https://polymarket.com"])
@@ -51019,7 +51020,7 @@ defenseworld.net##.sidebar-section > div[style*="min-height:"]:has(> .adsbygoogl
 tresdaos.com,ragnarokscanlation.net##div[id^="ad-container"]
 freecoursesite.com###media_image-7
 scribd.com##div[data-testid="sticky-wrapper"]
-scribd.com###sidebar div[class^="_"]:has(> div[class] > div[class] > span:contains(ad))
+scribd.com#?##sidebar div[class^="_"]:has(> div[class] > div[class] > span:contains(ad))
 money.usnews.com#?#aside[class*="AfterContentContainer"]:has(> div > p:contains(Sponsored))
 realbooru.com##div[style^="margin: 0px 0px 20px 20px;"]
 25ans.jp,ellegirl.jp,harpersbazaar.com##div[class*="css-"]:has(> div.ad-disclaimer)
@@ -67814,6 +67815,9 @@ charismanews.com#$##headerAreaWrap { height: 180px !important; }
 !
 ! check-host.net
 ! Make sure that https://check-host.net/about/api is not broken
+||check-host.net/images/*baeza*$image
+||check-host.net/images/*guarg*$image
+check-host.net##div[id*="t"][id*="y"][id*="h"][id*="k"]
 check-host.net##div[class*="sm:text-left"]:has(> span > img[src="/images/closeq.svg"])
 check-host.net##.ru-elative
 !

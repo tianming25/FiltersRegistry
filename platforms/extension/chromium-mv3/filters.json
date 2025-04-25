@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.80.87",
-			"timeUpdated": "2025-04-25T16:07:48+0000",
+			"version": "2.3.80.88",
+			"timeUpdated": "2025-04-25T18:08:21+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -389,8 +389,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.83.88",
-			"timeUpdated": "2025-04-25T12:10:23+0000",
+			"version": "2.0.83.89",
+			"timeUpdated": "2025-04-25T18:08:32+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -410,8 +410,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.13.82",
-			"timeUpdated": "2025-04-25T12:10:25+0000",
+			"version": "2.1.13.83",
+			"timeUpdated": "2025-04-25T18:08:34+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -500,8 +500,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/8.txt",
 			"trustLevel": "full",
-			"version": "2.0.8.16",
-			"timeUpdated": "2025-04-24T15:07:58+0000",
+			"version": "2.0.8.17",
+			"timeUpdated": "2025-04-25T18:08:44+0000",
 			"deprecated": false,
 			"languages": [
 				"nl"
@@ -619,8 +619,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/16.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.4",
-			"timeUpdated": "2025-04-25T05:07:38+0000",
+			"version": "2.0.52.5",
+			"timeUpdated": "2025-04-25T18:08:59+0000",
 			"deprecated": false,
 			"languages": [
 				"fr"
@@ -736,8 +736,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/chromium-mv3/filters/21.txt",
 			"trustLevel": "full",
-			"version": "2.0.32.82",
-			"timeUpdated": "2025-04-25T13:13:40+0000",
+			"version": "2.0.32.83",
+			"timeUpdated": "2025-04-25T18:09:02+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

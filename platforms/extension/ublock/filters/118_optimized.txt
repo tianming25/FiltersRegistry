@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: IeJJuMGRHDcqwu4Y05Ya1w
-! Diff-Path: ../patches/118_optimized/118_optimized-s-1745671694-14400.patch
+! Checksum: 55tp/1dIzdDurG3cEJEa4w
+! Diff-Path: ../patches/118_optimized/118_optimized-s-1745699887-14400.patch
 ! Title: EasyPrivacy (Optimized)
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.43.6
-! TimeUpdated: 2025-04-26T12:44:03+00:00
+! Version: 2.1.43.7
+! TimeUpdated: 2025-04-26T20:33:56+00:00
 ! Expires: 5 days (update frequency)
 &&sub19=undefined&sub20=undefined
 &action=js_stats
@@ -146,6 +146,7 @@
 /anclytic-ajax.html
 /apc/trans.gif?
 /api-analytics.
+/api/adtracking$xmlhttprequest
 /api/bfb_write_log
 /api/click/*?c=
 /api/cmp_tracker|
@@ -363,6 +364,7 @@
 /eventtracking.
 /eventtracking/*
 /evercookie.js
+/evercookie_get.js
 /evergage.min.js
 /exactag.js
 /exponea.min.js
@@ -745,6 +747,7 @@
 /sa.gif?
 /satismeter.js
 /scribd_events?
+/script.tagged-events.js
 /script.tagged-events.outbound-links.js
 /scripts/clickjs.php
 /scripts/track_visit.php?
@@ -803,6 +806,7 @@
 /stats/collect/*
 /stats/events$xmlhttprequest
 /stats/footer.js
+/stats/header.js
 /stats/page_view_
 /stats/pageview
 /stats/record_visit/*
@@ -954,6 +958,7 @@
 /webdig.js
 /webdig_test.js
 /weblog.php?
+/webruntime/log/metrics$ping
 /webtrack.js
 /webtracker.dll
 /webtracking/*$~document,~subdocument,domain=~wwwapps.ups.com
@@ -1194,6 +1199,7 @@ omni.soundestlink.com$image
 ||analysis.fi^
 ||analyt.ir^
 ||apenterprise.io^
+||astarsbuilding.com^
 ||b3mxnuvcer.com^
 ||bfmio.com^
 ||bidswitch.net^
@@ -1373,6 +1379,7 @@ omni.soundestlink.com$image
 ||tw.cx^
 ||ugdturner.com^
 ||uidapi.com^
+||uimarketpro.com^
 ||uqd.io^
 ||ustat.info^
 ||venture-365-inspired.com^
@@ -5137,6 +5144,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||yarpp.org/pixels/
 ||yellow.ai/api/plugin/analytics?
 ||yellow.ai/integrations/analytics/
+||yepnews.eu/event.html
 ||yext.com/plpixel?
 ||yimg.com/aaq/vzm/$script,domain=news.yahoo.com
 ||yimg.com/cx/vzm/cs.js
@@ -5144,6 +5152,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||yotpo.com/widget-assets/yotpo-pixel/
 ||yotrack.cdn.ybn.io^
 ||zendesk.com/frontendevents/$xmlhttprequest
+||zi-scripts.com/zi-tag.js
 ||zineone.com^*/event
 ||zip.co/analytics
 ||zoominfo.com/pixel/
@@ -5602,6 +5611,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||cloudfunctions.net/webtraffic$domain=eurocampings.nl
 ||ct.beslist.nl^
 ||dmtgo.upc.biz^
+||falco.studio/api/track
 ||go.planetnine.com^
 ||mediahuis.be/cxense/
 ||mhtr.be/public/tr/tracker.min.js
@@ -6463,6 +6473,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||indeed.com/rpc/$~xmlhttprequest
 ||indeed.com/rpc/pageload/perf
 ||independent.co.uk/iframe/native-cookiesync-frames.html
+||info.onwd.com^
 ||infoq.com/metrics/
 ||ingest.make.rvohealth.com^
 ||ingress.linktr.ee^
@@ -6676,6 +6687,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ranker.com/api/tr?
 ||ranker.com/api/tracking/comscore
 ||rankhit.china.com^
+||raw.vidyard.com^
 ||read.amazon.*/uploadMetrics/
 ||rec.banggood.com^
 ||reddit.com/static/pixel.png$image
@@ -6895,6 +6907,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||twitter.com/i/csp_report?
 ||twitter.com/i/jot
 ||twitter.com^*/log.json
+||two.cm.com^
 ||typepad.com/t/stats?
 ||ua.financialexpress.com/api/capture
 ||ua.indianexpress.com^
@@ -6916,6 +6929,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||user-metrics.onthemarket.com^
 ||usnews.com/static/esi/usn-geo.json
 ||vf.startpage.com^
+||vidyard.com/api/metrics
 ||vimeo.com/ablincoln/
 ||vimeo.com/add/
 ||visualstudio.com/v2/track
@@ -26731,13 +26745,18 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||zz.bdstatic.com^
 ||jslog.post.cz^
 ||seznam.cz^$ping
+||api.beleggersbelangen.nl//api/statistics/
 ||api.rtl.nl/monitoring/
 ||azerty.nl/ambannerslider/analytic/
 ||c.vrt.be^
+||cpt.postnl.be^
+||cpt.postnl.nl^
 ||e428.tio.nl^
 ||events.reclamefolder.nl^
 ||filmvandaag.nl/pl/js/script.js
 ||folderz.nl/clickstream/
+||inzicht.cz.nl^
+||localfocuswidgets.net/stats/
 ||log.rabobank.nl^
 ||marktplaats.nl/metrics/
 ||metrics.pazzox.be^
@@ -26746,6 +26765,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||pipeline.dvhn.nl^$~script
 ||pipeline.rd.nl^$~script
 ||r.kleertjes.com^
+||raf.postnl.be^
+||raf.postnl.nl^
 ||sat.sanoma.fi^
 ||sliponline.nl/tracker/
 ||sst.babypark.nl^
@@ -26943,10 +26964,12 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||propertyguru.com.my/api/consumer/vast-media/impression?
 ||data.nrk.no^
 ||aparat.com/gogol/
+||cs.bankmillennium.pl^
 ||eventstream.dodopizza.com^
 ||iplsc.com/inpl.log/
 ||iwa.iplsc.com^
 ||kropka.onet.pl^
+||mr.allegro.
 ||p.gazeta.pl^
 ||pb.siepomaga.pl^
 ||rek.www.wp.pl^
@@ -26956,6 +26979,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||audience-mostread.r7.com^
 ||click.afiliados.uol.com.br^
 ||csplog.kwai-pro.com^
+||data-events.uniplaces.com^
 ||dna.uol.com.br^
 ||eduplay.rnp.br/collector/
 ||globo-ab.globo.com^
@@ -26969,6 +26993,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||netshoes.com.br/tracking/
 ||poder360.com.br/_tracker
 ||sdk-analytics-web.cloud.itau.com.br^
+||stats.uniplaces.com^
 ||sympla.com.br/api/event-bff/tracking/
 ||tags.globo.com^
 ||terra.com.br^*/metrics.js
@@ -26977,6 +27002,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||track.olx.com.br^
 ||tracker.bt.uol.com.br^
 ||udr.uol.com.br^
+||uni7.uniplaces.com^
 ||views.romaniatv.net^
 ||2gis.ru/_/log
 ||2gis.ru/_/metrics

@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: fRq+ayNeHLSCzb3gLY7r/g
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1745604762-3600.patch
+! Checksum: +GRrIvs56VjhCYxSafKGig
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1745635018-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
 ! Version: 2.0.52.5
@@ -343,7 +343,6 @@ torrents9.cc#$#a[href^="magnet:?"] { width: 100%!important; }
 malekal.com#$#.adsbygoogle { height: 1px!important; visibility:hidden!important; }
 cityplug.be#$#.preview-tabs-controls li { height: auto!important; }
 igen.fr#$##motherboard { top: 30px!important; }
-/^(?!.*(ilfcdn.li|bytecdntp.com|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|(\/\/|\.)vk\.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|imgsmail.ru|cloudflare.net|(\/\/|\.)x\.com)).*$/$third-party,script,_____,domain=scan-fr.cc
 $script,third-party,denyallow=ilfcdn.li|bytecdntp.com|fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=extreme-down.moe|dl-protect.link|tirexo.ink|zone-telechargement.*|fsmirror93.lol
 $xmlhttprequest,third-party,denyallow=fastlycdn.com|doodcdn.co|intensedebate.com|vixcloud.co|cdn.plyr.io|authkong.com|rsc.cdn77.org|linkvertise.com|fastly.net|statically.io|sharecast.ws|b-cdn.net|bunnycdn.ru|bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yastatic.net|ytimg.com|zencdn.net|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com|fastcomments.com|plyr.io|x.com,_____,domain=zone-telechargement.*
 observalgerie.com##+js(abort-current-script, fetch, Uint8Array)
@@ -1641,6 +1640,7 @@ _build=iclick-$popup
 ||adpicker.net^$third-party
 ||adrequest.net^$third-party
 ||adrock.tv^$third-party
+||adsb4trk.com^$third-party
 ||adschoom.com^$third-party
 ||adsenseguard.com^$third-party
 ||adsgarden.com^$third-party
@@ -1682,6 +1682,7 @@ _build=iclick-$popup
 ||clcktrax.com^$third-party
 ||click2m.org^$third-party
 ||clickbank.net^$third-party
+||clickcashmoney.com^$third-party
 ||clickiocdn*.com^$third-party
 ||clickzzs.nl^$third-party
 ||clicmanager.fr^$third-party
@@ -2125,6 +2126,7 @@ _build=iclick-$popup
 ||idreamed.com^
 ||igrid.org^
 ||ikiif.com^
+||ileumoctant.com^
 ||imagerystirrer.com^
 ||imparloments.com^
 ||impressexaltsculptor.com^
@@ -2905,6 +2907,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||africaguinee.com/*/bannier
 ||algerie360.com/pub360/
 ||algerie360.com/wp-content/uploads/*/Banniere
+||algerieclic.com/images/baniere_principale/
 ||allmetsat.com/data/pub/
 ||amateur2sexe.fr/droibam/
 ||amateur2sexe.fr/fooboom/
@@ -2975,6 +2978,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||geny.com/web/images/genybet/
 ||goal.*/uploads/promotion/
 ||goal.com^$subdocument,~third-party
+||guinee7.com/wp-content/uploads/*/banniere-
 ||hackforums.net/uploads/mam/$image
 ||handroit.com/upl/slideshows/
 ||hdss.*/voir/
@@ -3149,6 +3153,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###block-gc-ad-dhtml
 ###block-gc-ad-megaban-haut
 ###bottom-adv
+###bottom_ad_space
 ###bottom_pub
 ###bsa-block-125--125
 ###bsa-block-1920--1200
@@ -3319,6 +3324,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###pub_dfp_pre_home
 ###pub_droite
 ###pub_footer
+###pub_footer_banner
 ###pub_gauche
 ###pub_geante
 ###pub_haut
@@ -3480,6 +3486,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.cubes-ads
 ##.desktop-ff-ads
 ##.desktop-ff-ads__main
+##.desktop-mobile-ads__desktop
 ##.dfp-ads
 ##.divAdsBottom
 ##.div_ads
@@ -3521,6 +3528,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.header_bloc_pub
 ##.header_pub
 ##.header_sponsors
+##.hide-pub-300x250
 ##.hmads_300x250
 ##.horizontal-pub
 ##.iframe_pub
@@ -3577,6 +3585,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.newads
 ##.nf-aside-ads
 ##.nf-aside-ads__legal
+##.null-ad
 ##.oan_ad
 ##.oboxads
 ##.oboxads-ad-widget
@@ -3856,6 +3865,7 @@ gratuiciel.com,logitheque.com###bloc-droite-bas-250-250
 ouest-france.fr###bloc_partenaires_sport
 ouest-france.fr###bloc_pleine_page_1
 ouest-france.fr###bloc_pleine_page_2
+meteoconsult.fr###bloc_pub_sommaire_terrestre
 ouest-france.fr###bloc_shopping
 manga-news.com###block-up
 lanutrition.fr###block-views-remote-products-block-home
@@ -3925,6 +3935,7 @@ ledemondujeu.com,minuteur-en-ligne.fr,musculaction.com,planeterenault.com,quiveu
 musculaction.com###pub3
 maxifoot-live.com###pub_bc
 emu-france.com###pub_casino_header
+entrecoquins.com###pub_club
 igen.fr,macg.co,watchgeneration.fr###refurb-widget
 sante-dz.com###revenue-wrapper
 lesoir.be###rossel-imu-bottom

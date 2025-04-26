@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: 4muy69U+cvsNi9Ze3IVqcg
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1745593831-3600.patch
+! Checksum: 1JVUoBkhnefePcDctN7M/A
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1745635018-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
 ! Version: 2.0.20.33
@@ -65,7 +65,6 @@ calendar.yandex.ru###CalendarBanner
 antalya.bel.tr##.mobile-info
 rohlik.cz##section[data-test="app-promo-wrapper"]
 m.dcinside.com##.app-info-ban
-m.dcinside.com##.layer-bottom-popup
 wetransfer.com##.AppInstallBanner
 apsiyon.com#$##mobile-redirect-banner { display: none !important; }
 apsiyon.com##+js(remove-class, with-sb, #header)
@@ -219,6 +218,7 @@ sp.manga.nicovideo.jp##div.fixed.bottom-2
 businessinsider.com,sakurazaka46.com##.app-button
 hangikredi.com##div[class*="bg-bannerLeftGradient"]
 meteum.ai##button[class^="AppPromo_container"]
+theportugalnews.com##header > .p-3 > .mx-auto > .row:has(> .col-8 > a.btn-download)
 m.sonyunara.jp,magnit.ru##.install-app-banner
 navitime.co.jp###body-left > div.section:has(> a[href="https://www.navitime.co.jp/pcstorage/html/japan_travel/english/"])
 msn.com##div[class^="weatherMobileUpsellContainer-"]
@@ -227,6 +227,7 @@ moises.ai##.relative > div.flex-col:has(> div[role="group"] > a[title="App Store
 moises.ai##footer + div.fixed
 codenames.game##a[href="https://cge.as/cnapp-store-download-cno"]
 v.daum.net##.box_floating:has(button[data-tiara-action-name="다음앱배너_클릭"])
+member.kms.kuronekoyamato.co.jp##.common-header ~ div > .overlay:has(> .open-app-area)
 camp-fire.jp###main ~ section > div[class]:has(> img[src*="_app"])
 hromadske.radio##div[class^="ModalBanner_modalBanner"]
 yamap.com##.Posts__Download__Section
@@ -629,6 +630,7 @@ qidian.com###left-container > div[dl-track$="_redpacketdownload"]
 rainews.it#$#.banner-app { display: none !important; }
 rainews.it#$#html > body[data-layout=homepage] main { border-bottom: 0px solid #009 !important; }
 researchgate.net##.lite-page__footer-native-app
+mts.by##.tariff > section.app
 wenshushu.cn##.cont-right a[href="https://www.wenshushu.cn/download"] > img
 character.ai##+js(set-local-storage-item, MOBILE_APP_ANNOUNCEMENT_SEEN, true)
 happymod.ru##.new-fixd-box
@@ -690,6 +692,7 @@ bisnis.com##.wrapper__ads-download
 runtrip.jp##.fixed_banner
 job.minnanokaigo.com##.grid-cols-app-bar
 goobike.com##.app_install
+ubook.reader.qq.com##.guide-card
 ubook.reader.qq.com##.top-guide
 ubook.reader.qq.com##.writer-say
 bhaskar.com##+js(remove-attr, style, #root > div[style^="--mobile-navbar-height:"])
@@ -1179,6 +1182,7 @@ m.kooora.com#$#html { margin-top: 0 !important; }
 nur.kz##.js-page-top
 nperf.com##.mobilePromoLogos
 house.goo.ne.jp,kusurinomadoguchi.com,bleacherreport.com,tvbs.com.tw##.smart_banner
+||m.555duo.net/images/app.gif
 myanimelist.net##.header-mini-banner
 sport.tvp.pl,buser.com.br,belsat.eu##.banner-app
 fanfox.net###edShow

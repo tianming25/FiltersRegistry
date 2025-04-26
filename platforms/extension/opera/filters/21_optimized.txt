@@ -1,5 +1,5 @@
-! Checksum: Si4dDw0SNWlRH3KZ2ON6Bg
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1745604756-3600.patch
+! Checksum: zCbLjeYYhQvmvqNWXP0XdA
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1745635014-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
 ! Version: 2.0.32.83
@@ -357,6 +357,7 @@ avg.com,avast.com###offer-chrome
 ||point.widget.rakuten.co.jp^$third-party
 wiki.merionet.ru##.new-cource
 m-78.jp##.st-Footer_FixedBnr
+hollywoodreporter.com##div[class="jw-wrapper jw-reset"][style="will-change: auto; width: 100%; max-width: 400px;"]
 watch.impress.co.jp##.right.ad > aside.special
 news18.com##.jio_widgetAmp
 gamewith.jp##.to-btn--nps
@@ -627,6 +628,8 @@ kresy.pl##.ls-popup [id^="layerslider_"]
 semrush.com#$#body { overflow:visible!important; }
 ||pdj.cc^$domain=promodj.com
 urlaubstracker.de###wysija-2
+investingnote.com##.blocker
+pagalguy.com##.floater-bottom > .pg-card
 newtab.club##.section-icon-tabs
 webtekno.com##.content-bottom
 wikipedia.org##.cnotice
@@ -687,6 +690,7 @@ disqus.com##div[data-role="motd-alert"]
 online-life.cc###top-line
 ikinohd.com##.browser-fav
 klerk.ru##.lenta-classified
+ivi.ru###traffic-optimizer-warning
 xeberle.com##.base-box.mom_box_sc.mom_callout
 glavpost.com##.useful-slider
 pastelink.net###display-sidebar
@@ -1089,6 +1093,8 @@ filepuma.com##.ad-gu-wrap
 bild.de#$?#article:has(> a:only-child[target="_blank"][href*="source"]) { remove: true; }
 [$path=/file]tezfiles.com##.premium
 securelist.ru,securelist.com##a[data-element-id="main-page-banner"]
+komaki2.jp###sidebar-inner > a[href^="https://komaki2.jp/ad/ad-"]
+komaki2.jp###sidebar-inner > br
 journal.sovcombank.ru##astro-island:has( > div > div > div > span.bg-red + div > div.wysiwyg-markup > p > a[href*="utm_medium=referral"][target="_blank"])
 journal.sovcombank.ru##a[data-event^="bannerClick_"]
 jorudan.co.jp###js_bnr_right_block3_parent
@@ -1647,6 +1653,7 @@ nektony.com##.banner__container
 paradigm-shift.co.jp##.paperbnr1-wrap
 iguides.ru##.i-box__bottom-note
 filemail.com##.signupinvite
+pdfforge.org#?#.GridContainer > div.GridItem:has(> div.border > div.GridContainer > div.GridItem > p:contains(/^Try the PDFCreator desktop|^Take your PDF/))
 idnes.cz###pianoreminder
 ttt.ua##.page__big-banner
 tool.chinaz.com#?#.backtoTop > div.toItem:has(> a[href="http://my.chinaz.com/toolvip/vip"])
@@ -1964,6 +1971,7 @@ gq.com##.journey-unit__container > div[class^="InContentWrapper"]
 gq.com##div[class^="PersistentBottomWrapper"]
 goo.ne.jp##.topBanner
 zvuk.com#?#main > div > div[width]:has(> a[href] > img[data-banner-category])
+telegraphindia.com##.marketingbannerbox
 15min.lt#?#.col-right > div.widget-group:has(> div.widget div.item-info > div.item-category:contains(Reklama))
 rlsnet.ru##.js-banner-group
 smbc-card.com##div[class^="cv__banner-area"]
@@ -2300,6 +2308,7 @@ maski-proekt.media,proekt.media##.alerts.reversed
 thetimes.co.uk###paywall-portal-page-footer
 makuring.jp,dontpayfull.com##.sponsored
 theatlantic.com###nonMeteredNudge
+theatlantic.com##.c-non-metered-nudge
 interfax.ru##.popupNowReading
 madnessporn.com#?#.video div.header:has(> h2:contains(Madness Webcam))
 baraholka.onliner.by##.b-fleamarket__right-block
@@ -2442,6 +2451,7 @@ megamarket.ru##.page-catalog-details__banners
 reports.adguard.*##.flash-wrapper-wrap
 sueddeutsche.de###ma-bo-container
 filmora.wondershare.com##aside[data-recommend="section-product-logo"]
+ka-style.jp##.l-footerBanner
 ag.ru#%#//scriptlet('set-cookie', 'articlesRead', '1')
 ag.ru#%#//scriptlet('set-cookie', 'headercoin', '1')
 traefik.io##section[class^="post-inline-cta"]
@@ -2878,6 +2888,7 @@ irccloud.com###sidebar > #limits.info
 foreignpolicy.com##.subscribe--long
 heise.de##.stage-advertising
 ||flashondemand.top-ix.org/video-omg/channels/vvvvid.mp4
+||myshows.me/shared/img/fe/banners/pro-*.gif
 search.yahoo.com###browserExtensionPromotion
 mail.yahoo.com#?#div[style="width:640px;height:360px"][id="video-player"]:upward(div:not([class]))
 123pan.com#$#.verifyBox { background: none !important; }
@@ -3731,6 +3742,7 @@ t24.com.tr#%#//scriptlet('set-constant', 'Object.prototype.autoplay', '0')
 /wp-content/plugins/right-click-disable-orignal/*
 ||gazetasp.com.br/application/themes/gazetasp.com.br/js/noticia.js
 ||klmanga.app/js/script.js
+||mangarawjp.tv/js/script.js
 ||mantan-web.jp/assets/js/no_contextmenu.js
 ||script.gmarket.co.kr/js/itemdweb/ItemBase.js
 ||tv-asahi.co.jp/wp-content/themes/favclip-master/js/front.js

@@ -1,8 +1,8 @@
-! Checksum: zAkSdLyME8lbYLwWkdZQzg
+! Checksum: snnSXZeZMbxF6h5W8qgrcA
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.37
-! TimeUpdated: 2025-04-26T00:47:28+00:00
+! Version: 2.1.40.38
+! TimeUpdated: 2025-04-26T04:36:53+00:00
 ! Expires: 5 days (update frequency)
 -facebook-widget.
 -follow-icon-
@@ -143,6 +143,7 @@ _social-bar/
 ###article-social-bar
 ###article-social-share
 ###articleShare
+###article_share
 ###article_tools_share
 ###articlebottomsharinglinks
 ###aside-social-links-container
@@ -219,6 +220,8 @@ _social-bar/
 ###follow-us-box
 ###follow-us-widget
 ###followBox
+###followFB
+###followFBSvg
 ###followTwitter
 ###followUs
 ###follow_buttons
@@ -299,6 +302,7 @@ _social-bar/
 ###mvp-fly-soc-wrap
 ###mvp-foot-soc
 ###mvp-nav-soc
+###mvp-nav-soc-list
 ###mvp-soc-mob-wrap
 ###mvp-top-nav-soc
 ###navbar-social
@@ -519,6 +523,7 @@ _social-bar/
 ###social_fb
 ###social_follow
 ###social_footer
+###social_head
 ###social_icons
 ###social_instagram
 ###social_link
@@ -670,6 +675,7 @@ _social-bar/
 ##.Twitter-icon
 ##.TwitterButton
 ##.TwitterShareButton
+##._footer__social
 ##.a-icon-share-email
 ##.a-icon-share-facebook
 ##.a-icon-share-pinterest
@@ -740,6 +746,7 @@ _social-bar/
 ##.apsc-icons-wrapper
 ##.apsc-twitter-icon
 ##.apss-social-share
+##.arr--share
 ##.art-share
 ##.art-social
 ##.artShare
@@ -847,6 +854,7 @@ _social-bar/
 ##.block-social-share
 ##.block-socialmedia
 ##.block-socials
+##.block_post_social
 ##.block_share
 ##.block_social
 ##.blog-post-share
@@ -944,6 +952,7 @@ _social-bar/
 ##.comment_share
 ##.comments__likes
 ##.common-social-link
+##.common_share
 ##.component-social
 ##.connect-with-us
 ##.contenedor_redes_sociales
@@ -1129,6 +1138,7 @@ _social-bar/
 ##.fbsmallshare
 ##.fi-social-facebook
 ##.fi-social-instagram
+##.fi-social-linkedin
 ##.fi-social-pinterest
 ##.fi-social-twitter
 ##.fi-social-youtube
@@ -1319,6 +1329,10 @@ _social-bar/
 ##.gridlove-share-wrapper
 ##.gridlove-soc-menu
 ##.gs-share
+##.gtm-clipboard-share-button
+##.gtm-email-share-button
+##.gtm-facebook-share-button
+##.gtm-twitter-share-button
 ##.gtm_footer_facebook
 ##.gtm_footer_instagram
 ##.gtm_footer_twitter
@@ -1513,6 +1527,7 @@ _social-bar/
 ##.janrainShareCountContainer
 ##.janrainSocialBar
 ##.jeg_author_socials
+##.jeg_custom_share_wrapper
 ##.jeg_share_button
 ##.jeg_share_top_container
 ##.jeg_sharelist
@@ -1899,6 +1914,7 @@ _social-bar/
 ##.scShareText
 ##.scSocialIconsWidget
 ##.scriptlesssocialsharing
+##.scroll-triggered-box
 ##.sd-sharing
 ##.sd-social
 ##.sd-social-icon-text
@@ -2238,6 +2254,7 @@ _social-bar/
 ##.sharebutt
 ##.sharebutton
 ##.sharebuttons
+##.sharecont
 ##.sharecontainer
 ##.shared-counts-button
 ##.shared-counts-icon-label
@@ -2793,6 +2810,7 @@ _social-bar/
 ##.ss-social-circle
 ##.ss-social-icons-container
 ##.ss-social-regular
+##.ss-total-shares
 ##.ssb_followers
 ##.ssba-share-text
 ##.ssba_email_share
@@ -2924,6 +2942,7 @@ _social-bar/
 ##.twitterItem
 ##.twitterLink
 ##.twitterShare
+##.twitterShareButton
 ##.twitterWidget
 ##.twitter_btn
 ##.twitter_feed
@@ -2941,6 +2960,7 @@ _social-bar/
 ##.ty-social-link
 ##.ty-social-link-block
 ##.typcn-social-twitter
+##.ui-share-page
 ##.ui-socials
 ##.uix_socialMedia
 ##.uix_socialMediaLinks
@@ -3079,6 +3099,7 @@ _social-bar/
 ##a[href^="http://twitthis.com/twit?url"]
 ##a[href^="http://www.addtoany.com/share_save"]
 ##a[href^="http://www.digg.com/submit?"]
+##a[href^="http://www.facebook.com/dialog/feed?"]
 ##a[href^="http://www.facebook.com/share.php"]
 ##a[href^="http://www.facebook.com/sharer.php"]
 ##a[href^="http://www.facebook.com/sharer/sharer.php"]
@@ -3255,7 +3276,6 @@ eporner.com###footsocbuttons
 tasteofhome.com###gch-social-icons
 rd.com###gch-social-share-container
 bleedingcool.com###google_follow
-popculture.com###jetpack-sharing-serivces-list
 medicalxpress.com,phys.org,techxplore.com###js-soc-panel
 digitaltrends.com###menu-2021-social
 taylorfrancis.com###openShare
@@ -3301,8 +3321,10 @@ ynet.co.il,ynetnews.com##.SiteArticleSocialShareNew1280
 asahi.com##.SnsName
 asahi.com##.SnsUtilityArea
 cbssports.com##.SocialIconsBar
+suntimes.com,tageblatt.de##.SocialLink
 streetsblog.org##.SocialSharing_socialSharingItems__wdJu8
 indiatoday.in##.Story_whatsapp_channel__6xdtB
+grammarly.com##._3fq8S-container
 pixivision.net##._floated-bottom-bar
 pixivision.net##._follow-us-card
 france24.com##.a-share-button
@@ -3321,6 +3343,7 @@ cosmosmagazine.com,forbes.com,heise.de,phillyvoice.com##.article-sharing
 newrepublic.com,thetech.com##.article-social
 nbcnews.com##.article-social-share-top
 jpost.com##.article-subline-inner-share-buttons
+rt.com##.article__google-news
 armeniasputnik.am,noticiabrasil.net.br,spnfa.ir,sputnik-abkhazia.info,sputnik-georgia.com,sputnik-ossetia.com,sputnik.af,sputnik.az,sputnik.by,sputnik.kg,sputnik.kz,sputnik.tj,sputnikarabic.ae,sputnikglobe.com,sputniknews.africa,sputniknews.cn,sputniknews.com,sputniknews.com.tr,sputniknews.in,sputniknews.jp,sputniknews.lat,sputniknews.ru,sputniknews.uz,sputniknews.vn,sputniknewsbr.com.br,sputnikportal.rs##.article__news-services-subscribe
 wnep.com##.article__sharing
 news.tvbs.com.tw##.article_community_box
@@ -3357,6 +3380,7 @@ theglobeandmail.com##.c-site-header__buttons
 mediaite.com##.c-youtube-subscribe
 aol.com##.caas-share-section
 cgdirector.com##.cgd-social-wrapper
+stuff.co.nz##.comment-and-share
 goal.com##.component-share
 goal.com##.component-social-twitter
 dailymail.co.uk##.container-3zJLP
@@ -3549,6 +3573,7 @@ churchpop.com,dersonntag.at,toofab.com##.social-nav
 melmagazine.com,thefrisc.com##.social-navigation
 adrenaline.com.br,bonsfluidos.com.br,bossip.com,brasil.perfil.com,glamurama.com.br,insidehpc.com,maisnovela.com.br,manequim.com.br,marciapiovesan.com.br,mundoconectado.com.br,sportsbusinessjournal.com,vivasaudedigital.com.br##.social-networks
 businessinsider.in##.social-panel-rgt
+draxe.com##.social-proof-wrapper
 vinepair.com##.social-share-block
 iflscience.com##.social-share-elements
 nashvillescene.com,stltoday.com##.social-share-links
@@ -3709,6 +3734,7 @@ teltarif.de##.sbm
 orf.at##.share-dialog
 berliner-zeitung.de##.share-panel_wrapper__3tHN9
 bild.de##.sharingbar
+derfinanzinvestor.de,esg-aktien.de,inv3st.de,kapitalerhoehungen.de##.smIconsWrap
 bafoeg-rechner.de,studis-online.de##.ston-shareicn
 presseportal.de##.story-sharing
 watson.ch##.watson-sharebuttons

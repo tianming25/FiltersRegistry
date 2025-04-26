@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: DO+ZZvaGpuFuAIAMzpYYQQ
-! Diff-Path: ../patches/118_optimized/118_optimized-s-1745613591-14400.patch
+! Checksum: avRTIVUGcpvqjgH47sSbIA
+! Diff-Path: ../patches/118_optimized/118_optimized-s-1745628688-14400.patch
 ! Title: EasyPrivacy (Optimized)
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.43.2
-! TimeUpdated: 2025-04-25T20:35:17+00:00
+! Version: 2.1.43.3
+! TimeUpdated: 2025-04-26T00:47:21+00:00
 ! Expires: 5 days (update frequency)
 &&sub19=undefined&sub20=undefined
 &action=js_stats
@@ -60,6 +60,7 @@
 /__utm.js
 /_assets/oply/public/*
 /_blazor/*$ping
+/_events/api/setEvent$xmlhttprequest
 /_ga?sponsor_pixel=
 /_gz/counter.php?
 /_hcms/perf
@@ -136,6 +137,7 @@
 /analytics/pageview
 /analytics/searches?
 /analytics/track_event/*
+/analytics?ver=*&referrer=
 /analytics_events.js
 /analytics_js/client.js
 /analyticsjs.js
@@ -705,6 +707,7 @@
 /r.rnc?
 /r/collect?
 /rainbow/master-js
+/rd-js-integration.min.js
 /readReceipt/notify/?img=$image
 /realtimeapi/impression?
 /realytics-1.2.min.js
@@ -961,6 +964,7 @@
 /wmxtracker.js
 /woocommerce-google-adwords-conversion-tracking-tag/*
 /wp-content/plugins/woocommerce-google-analytics-integration/*
+/wp-json/burst/v1/track/*
 /wp-json/iawp/*
 /wp-sentry-browser.min.js
 /wp-statistics/assets/js/tracker.js
@@ -1211,6 +1215,7 @@ omni.soundestlink.com$image
 ||cntxtfl.com^
 ||confiant-integrations.net^
 ||convertlink.com^
+||counter247.live^
 ||cpx.to^
 ||crwdcntrl.net^
 ||cxense.com^
@@ -1811,6 +1816,7 @@ omni.soundestlink.com$image
 ||flx1.com^$third-party
 ||flxpxl.com^$third-party
 ||flyingpt.com^$third-party
+||fml-x.com^$third-party
 ||fndrsp.net^$third-party
 ||footprintdns.com^$third-party
 ||force24.co.uk^$third-party
@@ -5250,6 +5256,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||di2xwvxz1jrvu.cloudfront.net^
 ||dkupaw9ae63a8.cloudfront.net^
 ||dl1d2m8ri9v3j.cloudfront.net^
+||dmxhgf4zuwdvu.cloudfront.net^
 ||dn34cbtcv9mef.cloudfront.net^
 ||dniyppubkuut7.cloudfront.net^
 ||dnn506yrbagrg.cloudfront.net^
@@ -5846,16 +5853,20 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||collect.chaordicsystems.com^
 ||events.chaordicsystems.com^
 ||feature-flag-edge.live.clickbus.net^
+||gke.econodata.com.br^
 ||hitserver.ibope.com.br^
+||housecrm.com.br/track/
 ||leadster.com.br/api/chatbot/events
 ||lurker.olx.com.br^
 ||melhorplano.net/scripts/tracker/
 ||nctrk.abmail.com.br^
 ||neurotrack.neurolake.io^
 ||pageviews.tray.com.br^
+||pixel.leadlovers.app^
 ||sat.soluall.net^
 ||segmentor.snowfox-ai.com^
 ||statistic.audima.co^
+||sycamore.com.br/pixel/
 ||tags.cmp.tail.digital^
 ||tiktok.tray.com.br^
 ||track.zapimoveis.com.br^
@@ -6474,6 +6485,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||lendingtree.com/analytics/
 ||librato-collector.genius.com^
 ||link.kogan.com^
+||linkedin.com/apfc/collect$xmlhttprequest
 ||linkedin.com/collect/
 ||linkedin.com/li/track$xmlhttprequest
 ||linkedin.com/litms/utag/
@@ -6697,6 +6709,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||shopee.*/__t__$xmlhttprequest
 ||shopifysvc.com/v1/metrics
 ||sid.nordstrom.com^
+||siemens.com/c2_analytics.js
 ||silvergames.com/div/g.php?
 ||skyscanner.*/slipstream/view
 ||slack.com/beacon/
@@ -26713,8 +26726,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||matt.mercadolivre.com.br^
 ||netshoes.com.br/tracking/
 ||poder360.com.br/_tracker
-||rumolog.com/wp-json/burst/v1/track/
 ||sdk-analytics-web.cloud.itau.com.br^
+||sympla.com.br/api/event-bff/tracking/
 ||tags.globo.com^
 ||terra.com.br^*/metrics.js
 ||track.exame.com^

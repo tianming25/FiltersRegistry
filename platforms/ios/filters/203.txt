@@ -1,15 +1,15 @@
-! Checksum: Kyq4iac3Tj5MFlN2jQ+78Q
-! Diff-Path: ../patches/203/203-s-1745671699-14400.patch
+! Checksum: kIT7h+cWcPe9iCHLYrsHBg
+! Diff-Path: ../patches/203/203-s-1745743217-14400.patch
 ! Title: Hungarian filter
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.3.63
-! TimeUpdated: 2025-04-26T12:44:10+00:00
+! Version: 2.0.3.64
+! TimeUpdated: 2025-04-27T08:36:10+00:00
 ! Expires: 5 days (update frequency)
 !
-! Checksum: fHFrRjDHMp6qKaVCF/I8uw
-! OriginalVersion: 202504261155
+! Checksum: nMLFSp106+AzCVFrJaN+7w
+! OriginalVersion: 202504261428
 ! Title: Hufilter for AdGuard
-! Last modified: 26 Apr 2025 11:55 UTC
+! Last modified: 26 Apr 2025 14:28 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://hufilter.hu
 ! Licence: CC-BY, see https://creativecommons.org/licenses/by/4.0/
@@ -158,6 +158,7 @@ alfahir.hu###block-block-16
 alfahir.hu###block-block-22
 alfahir.hu###block-views-ajanlo-block
 alfahir.hu###sticky_footer
+allegro.hu##.opbox-sheet.card:has(div[data-box-name^="allegro.ads."])
 androbit.net###RedUserNotification
 androgeek.hu##div.cikk_zona
 androgeek.hu##div.rightside > iframe
@@ -1254,7 +1255,8 @@ nlc.hu#?#.m-breakingLayer:-abp-has(a[href*="nlc.hu/balkonfanatik"])
 prohardver.hu,mobilarena.hu,gamepod.hu,itcafe.hu,hardverapro.hu,fototrend.hu#?#div:-abp-has(>[style*="calc"])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu,hardverapro.hu#?#div:-abp-has(>h4 + div[style*="calc"])
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu#?#div#center:-abp-has(div > div > p > a[style="color: #b42223;"])
-prohardver.hu,hardverapro.hu#?#div[class]:-abp-has(> h4:-abp-contains(/(Hirdetés|[Hh].*i.*r.*d.*e.*t.*é.*s)/) + div[class])
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu,hardverapro.hu##.adaptiveAd
+prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu,hardverapro.hu#?#div:not(.priv-thread-owner):-abp-has(> h4:-abp-contains(/(Hirdetés|[Hh].*i.*r.*d.*e.*t.*é.*s)/) + div[class])
 szeged365.hu#?#[id^="tie-block"]:-abp-has(.stream-title)
 ugytudjuk.hu#?#.row:-abp-has(.mainTopBnr)
 !-------------------------------------------------------------------------------!
@@ -1945,6 +1947,7 @@ myonlineradio.hu#$#.topHorizontalBanner { position: absolute !important; left: -
 startlap.hu#$#div.container.banner-container.wide { min-height: 0 !important; height: auto !important; }
 dehir.hu#$##popupFrontPageBanner-modal { display: none !important; }
 dehir.hu#$#body { overflow: auto !important; }
+prohardver.hu,fototrend.hu#$#main { background-image: none !important; }
 ! https://github.com/hufilter/hufilter/issues/440
 ! https://github.com/hufilter/hufilter/pulls/452
 prohardver.hu,mobilarena.hu,itcafe.hu,gamepod.hu,logout.hu,hardverapro.hu##div:has(> h4 + div[style*="calc"])

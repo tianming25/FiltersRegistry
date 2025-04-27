@@ -1,14 +1,14 @@
-! Checksum: CDyidM2kJJMtMW+Dc8SQtg
-! Diff-Path: ../patches/243/243-s-1745556079-14400.patch
+! Checksum: sqOOp0f8zFN0Nx4cT18MIw
+! Diff-Path: ../patches/243/243-s-1745728834-14400.patch
 ! Title: Frellwit's Swedish Filter
 ! Description: Filter that aims to remove regional Swedish ads, tracking, social media, annoyances, sponsored articles etc.
-! Version: 2.0.21.41
-! TimeUpdated: 2025-04-25T04:37:35+00:00
+! Version: 2.0.21.42
+! TimeUpdated: 2025-04-27T04:36:48+00:00
 ! Expires: 12 hours (update frequency)
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days
-! Last modified: 2025-04-25 05:35:02 CEST
+! Last modified: 2025-04-27 05:27:07 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwits-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPL3 - https://github.com/lassekongo83/Frellwits-filter-lists/blob/master/LICENSE
@@ -286,7 +286,8 @@ borssnack.di.se##.bn_advertisement__panorama, .bn_advertisement__container
 borsvarlden.com##article:has(.border-sponsored)
 borsvarlden.com##.label:has-text(/annons/i):upward(.highlighted-article-block)
 borsvarlden.com##.sponsored-articles-container, .nav-sep-blink, .annons-label, .index-side-banner-wrapper, .index-top-banners-wrapper, .fullwidthbanner-container, .banner-wrapper
-bostadsrattsnytt.se##div[data-widget_type="image.default"] a:not([href^="/"], [href*="bostadsrattsnytt.se"]) img
+bostadsrattsnytt.se##div[data-widget_type="image.default"]:has(a:not([href^="/"], [href*="bostadsrattsnytt.se"]))
+bostadsrattsnytt.se##div[data-widget_type="image.default"]:has(img[src*="banner"])
 bovision.se##.banner-image, .bvads-container, .a-full-width, .ads-container
 bovision.se##.blog-article-card:has(.sponsor-mark)
 brafiler.se###header-banner, #cboxOverlay, #colorbox, .adv-inner, #sidebar-banner
@@ -807,9 +808,10 @@ inredningsvis.se#%#//scriptlet('ubo-set-cookie.js', 'cmplz_statistics', 'deny')
 internetmedicin.se##[itemtype="https://schema.org/WPAdBlock"]
 internetodontologi.se,prv.se##.overlay
 internetodontologi.se,skrattsajten.com,norpan.se#%#//scriptlet('ubo-rmnt.js', 'script', 'e.preventDefault')
-investeramera.se##a[href^="https://investeramera.se/go/"] img
+investeramera.se##a[href^="https://go."]
 investeramera.se###dialog-locked
 investeramera.se##.post-single-content p em:has-text(Annons:)
+investeramera.se##.rich-text:has(a[target="_blank"], img[width="320"][height="320"])
 ipo.se##.tag-sponsrad
 itseniorerna.se###astroid-preloader
 itseniorerna.se###redim-cookiehint-modal
@@ -1170,6 +1172,7 @@ pricerunner.se##span[class^="pr-"]:has-text(ANNONS):upward(a)
 prisjakt.nu##.pjra-relative, .outsider-ads, div[class^="AdPlacementWrapper"]
 proshop.se##.site-background-banner
 proshop.se#$#:is(body, .site-container-fullwidth) { background-image: none !important; }
+psykoterapicentrum.se##span[style="background-color: #FFFF00"]:has-text(/annons/i):upward(1)
 psykoterapicentrum.se###omtag p[style^="margin-top"]:not([class]):has(a[target="_blank"])
 psykoterapicentrum.se##.textmenyspalt:has(img[src^="bilder/annons"])
 pussad.se#$#html.g1-popup-visible { overflow: initial !important; }
@@ -1311,7 +1314,7 @@ sporthalsa.se##.textwidget:has(a[href*="casino"])
 sportlovin.se##div[style*="min-height"]:has(div[id^="sportlovin_"])
 sportpanelen.se##.textwidget:has(a[href*="casino"])
 sportsnews.se,xn--sporthnt-5za.se###secondary:has(a[href*="casino"])
-sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se##a[href*="casino"]
+sportsnews.se,xn--sporthnt-5za.se,killsteal.se,samnytt.se,samnytt.nu,obsid.se,senses.se,teknologiexperten.se,sverige.nu,enterprisemagazine.se,haboportalen.se,bike.se,xn--lgenhet-5wa.nu##a[href*="casino"]
 sporttv.nu##a[onclick*="bannerClick"], #linkus, .details-bet-banner
 sporttv.nu#$?#.progams-list-xs .text-center:has(.banner) { remove: true; }
 stallet.se##.pnlAdTop
@@ -2456,7 +2459,6 @@ zeromagazine.nu##div[id^="ads"]
 /popup-overlay$script,domain=sistersinlaw.se
 /popup-subscribe.js$domain=borsvarlden.com
 /popup/follow-us-fb
-/prebid-ads.js$domain=svenskadating.com
 /prebid_rtb_call
 /prisjakt$xmlhttprequest,domain=fz.se
 /prisjakt-ad-carousel$subdocument

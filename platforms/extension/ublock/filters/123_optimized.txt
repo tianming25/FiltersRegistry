@@ -1,11 +1,12 @@
 ![Adblock Plus 2.0]
-! Checksum: BI67J/BQRESM3r0nLNBmHQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1745715117-14400.patch
+! Checksum: PIIk17wS3OXVnwGekyYa7w
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1745728827-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
 ! Version: 2.1.40.42
 ! TimeUpdated: 2025-04-27T00:47:46+00:00
 ! Expires: 5 days (update frequency)
+-facebook-share.
 -facebook-widget.
 -follow-icon-
 -share-bar/$~stylesheet
@@ -76,6 +77,7 @@
 /share_popup.js
 /share_sprite.png
 /share_view.js
+/share_wechat.png
 /share_weibo.png
 /shareaholic.js
 /sharebar.js
@@ -761,6 +763,7 @@ _social-bar/
 ##.article-footer__share
 ##.article-full__share
 ##.article-header__share
+##.article-open_shere
 ##.article-pic-soc
 ##.article-share
 ##.article-share__item
@@ -1016,6 +1019,7 @@ _social-bar/
 ##.el-icon-facebook
 ##.el-icon-twitter
 ##.elem-info__share
+##.element-share
 ##.elementor-social-icon
 ##.elementor-social-icons-wrapper
 ##.elementor-widget-facebook-page
@@ -1107,6 +1111,7 @@ _social-bar/
 ##.fb-footer
 ##.fb-like-box
 ##.fb-like-box-wrapper
+##.fb-like-buttons
 ##.fb-like-container
 ##.fb-page-like
 ##.fb-recommend
@@ -1177,6 +1182,7 @@ _social-bar/
 ##.follow-us-icons
 ##.follow-us-on-twitter
 ##.follow-us-panel
+##.follow-us-txt
 ##.follow-us-wrapper
 ##.followSocial
 ##.followTwitter
@@ -1229,6 +1235,7 @@ _social-bar/
 ##.footer-social-links
 ##.footer-social-ul
 ##.footer-socialIcons
+##.footer-sociallink
 ##.footer-sociallinks
 ##.footer-socialmedia
 ##.footer-socialmediaIcon
@@ -1586,6 +1593,7 @@ _social-bar/
 ##.large-share-button
 ##.layer_share_on
 ##.lazysocialbuttons
+##.leaf-social-inner
 ##.leftsharebtn
 ##.lf-facebook
 ##.like-fb
@@ -2225,6 +2233,7 @@ _social-bar/
 ##.share_ok
 ##.share_panel
 ##.share_pinterest
+##.share_post
 ##.share_row
 ##.share_social
 ##.share_story
@@ -2928,6 +2937,7 @@ _social-bar/
 ##.twitter-follow
 ##.twitter-follow-box
 ##.twitter-footer
+##.twitter-hashtag
 ##.twitter-share
 ##.twitter-share-btn
 ##.twitter-share-button
@@ -3002,6 +3012,7 @@ _social-bar/
 ##.vlog-social-icons
 ##.voc-social
 ##.vs-social
+##.vs-social-link
 ##.vuukle-powerbar
 ##.w-share
 ##.w-sharing
@@ -3283,6 +3294,8 @@ digitaltrends.com###menu-2021-social
 taylorfrancis.com###openShare
 mediaite.com###post-social
 auburnpub.com,azdailysun.com,beatricedailysun.com,billingsgazette.com,bismarcktribune.com,chippewa.com,columbustelegram.com,cumberlink.com,dailyjournalonline.com,democratherald.com,elkodaily.com,fremonttribune.com,gazettetimes.com,globegazette.com,hanfordsentinel.com,helenair.com,herald-review.com,jg-tc.com,journalstar.com,journaltimes.com,lacrossetribune.com,lebanon-express.com,lompocrecord.com,magicvalley.com,missoulanews.com,missoulian.com,mtstandard.com,muscatinejournal.com,napavalleyregister.com,nwitimes.com,pantagraph.com,poststar.com,qconline.com,qctimes.com,rapidcityjournal.com,ravallirepublic.com,santamariatimes.com,siouxcityjournal.com,stltoday.com,tdn.com,thesouthern.com,thetandd.com,theworldlink.com,trib.com,tucson.com,wcfcourier.com,winonadailynews.com,wiscnews.com###reaction-wrap
+redice.tv###s1
+redice.tv###s2
 bracketfights.com,ecuadoradio.ec,tiermaker.com###share-container
 aiseesoft.com###share-list
 journals.aps.org,theintercept.com###share-menu-button
@@ -3438,6 +3451,7 @@ airdriecityview.com,alaskahighwaynews.ca,barrietoday.com,baytoday.ca,bowenisland
 ghacks.net##.ghacks_share_widget
 cars.com##.global-footer-social-buttons
 oneindia.com##.goog-one-news
+japan.go.jp##.gov_sns
 gadgets360.com##.gsocialbar
 israelnationalnews.com##.header-nav-addons-link
 archaeology.org##.header-share

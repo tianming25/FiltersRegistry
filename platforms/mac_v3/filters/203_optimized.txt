@@ -1,9 +1,9 @@
-! Checksum: Q5Mo3oLxB+b+M/PK77CbHg
-! Diff-Path: ../patches/203_optimized/203_optimized-s-1745786362-14400.patch
+! Checksum: pdXcg24Rhm+1o37gI684sg
+! Diff-Path: ../patches/203_optimized/203_optimized-s-1745844728-14400.patch
 ! Title: Hungarian filter (Optimized)
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.3.65
-! TimeUpdated: 2025-04-27T20:34:44+00:00
+! Version: 2.0.3.66
+! TimeUpdated: 2025-04-28T12:47:02+00:00
 ! Expires: 12 hours (update frequency)
 ##.ad__main
 ##.adblokk
@@ -1787,6 +1787,9 @@ videa.hu,videaloop.hu##.top-video-container-banner
 ||adtrackeraa.com^
 ||beam-tracker.telex.hu^
 ||beam.telex.hu^
+||campaign.telex.hu/*/remplib.js$script
+||campaign.telex.hu/*/banner.js$script
+||campaign.telex.hu/showtime.php
 ||counter.megagroup.ru^
 ||doubleclick.net^
 ||gemius.hu^
@@ -1882,6 +1885,7 @@ $cookie=adblock,domain=myonlineradio.hu
 pcworld.hu#%#//scriptlet('remove-class', 'have-ad', 'body')
 port.hu#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'window.ado.blocked')
 online-filmek.ac#%#//scriptlet('prevent-fetch', 'api')
+online-filmek.ac#%#//scriptlet('prevent-fetch', 'ads')
 rubyvidhub.com#%#//scriptlet('remove-node-text', 'script', 'undefined')
 karpathir.com##[class^="k"][class*="-container"][class*="-2"][class$="-hide"]
 player.rtl.hu#%#//scriptlet('set-constant', 'gemiusStream', 'emptyObj')

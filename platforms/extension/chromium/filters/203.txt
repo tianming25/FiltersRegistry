@@ -1,15 +1,15 @@
-! Checksum: 49Bx+1IGSAmNMNh5ZA3Bng
-! Diff-Path: ../patches/203/203-s-1745786337-14400.patch
+! Checksum: t1Gbrp+XQNcOp0etzDzfNA
+! Diff-Path: ../patches/203/203-s-1745844696-14400.patch
 ! Title: Hungarian filter
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.3.65
-! TimeUpdated: 2025-04-27T20:34:44+00:00
+! Version: 2.0.3.66
+! TimeUpdated: 2025-04-28T12:47:02+00:00
 ! Expires: 10 days (update frequency)
 !
-! Checksum: n4s72IlwBu+WgFjch1+Sfg
-! OriginalVersion: 202504271908
+! Checksum: nlB+lszF6gwoW8jF0Y2pQQ
+! OriginalVersion: 202504280956
 ! Title: Hufilter for AdGuard
-! Last modified: 27 Apr 2025 19:08 UTC
+! Last modified: 28 Apr 2025 09:56 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://hufilter.hu
 ! Licence: CC-BY, see https://creativecommons.org/licenses/by/4.0/
@@ -1905,6 +1905,9 @@ videa.hu,videaloop.hu##.top-video-container-banner
 ! https://github.com/hufilter/hufilter/issues/305
 ||beam-tracker.telex.hu^
 ||beam.telex.hu^
+||campaign.telex.hu/*/remplib.js$script
+||campaign.telex.hu/*/banner.js$script
+||campaign.telex.hu/showtime.php
 ||counter.megagroup.ru^
 ||doubleclick.net^
 ||gemius.hu^
@@ -2031,6 +2034,7 @@ pcworld.hu#%#//scriptlet('remove-class', 'have-ad', 'body')
 port.hu#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'window.ado.blocked')
 ! https://github.com/uBlockOrigin/uAssets/issues/25482
 online-filmek.ac#%#//scriptlet('prevent-fetch', 'api')
+online-filmek.ac#%#//scriptlet('prevent-fetch', 'ads')
 ! https://github.com/uBlockOrigin/uAssets/issues/27256#issuecomment-2670818969
 rubyvidhub.com#%#//scriptlet('remove-node-text', 'script', 'undefined')
 karpathir.com##[class^="k"][class*="-container"][class*="-2"][class$="-hide"]

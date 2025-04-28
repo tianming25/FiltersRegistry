@@ -1,9 +1,9 @@
-! Checksum: DXKhwVcV98fOst3DR4jgWQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1745801499-14400.patch
+! Checksum: Gn6t4/bOxBJZcey7o/+w1w
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1745815316-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.46
-! TimeUpdated: 2025-04-28T00:47:44+00:00
+! Version: 2.1.40.47
+! TimeUpdated: 2025-04-28T04:38:01+00:00
 ! Expires: 10 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -199,6 +199,7 @@ _social-bar/
 ###fan-exit
 ###fanback
 ###fb-box
+###fb-fanbox
 ###fb-like
 ###fbDiv
 ###fbLike
@@ -252,6 +253,7 @@ _social-bar/
 ###footer_social_instagram
 ###footer_social_youtube
 ###footer_socialmedia
+###fsb-social-bar
 ###getSocial
 ###gkSocial
 ###gkSocialAPI
@@ -315,6 +317,7 @@ _social-bar/
 ###panel-social
 ###pinterest-link
 ###pinterest-share
+###playerShare
 ###popup-social
 ###post-share-icons
 ###post-social
@@ -556,7 +559,9 @@ _social-bar/
 ###socialfooter
 ###socialicons
 ###sociallinks
+###socialmobile
 ###socialnav
+###socialnet
 ###socialnets
 ###socialpopup
 ###socialshare
@@ -834,6 +839,7 @@ _social-bar/
 ##.bctt-click-to-tweet
 ##.bd-socialicon
 ##.bdaia-social-io
+##.beSocialShare
 ##.beacon-social
 ##.better-social-counter
 ##.bg-share
@@ -1008,6 +1014,7 @@ _social-bar/
 ##.dwg-footer-plank__social
 ##.ea-share-count-button
 ##.easy-share
+##.easy-social-profile-buttons-class
 ##.ebm-share-item
 ##.eg-footer-icon-facebook
 ##.eg-footer-icon-instagram
@@ -1337,6 +1344,7 @@ _social-bar/
 ##.gridlove-share-wrapper
 ##.gridlove-soc-menu
 ##.gs-share
+##.gt-social-menu
 ##.gtm-clipboard-share-button
 ##.gtm-email-share-button
 ##.gtm-facebook-share-button
@@ -2231,6 +2239,7 @@ _social-bar/
 ##.share_nav
 ##.share_ok
 ##.share_panel
+##.share_pin_img
 ##.share_pinterest
 ##.share_post
 ##.share_row
@@ -2569,6 +2578,7 @@ _social-bar/
 ##.social-networking
 ##.social-networks-container
 ##.social-networks-footer
+##.social-networks-links
 ##.social-networks-list
 ##.social-networks__item
 ##.social-news-buttons
@@ -2704,6 +2714,7 @@ _social-bar/
 ##.socialMedia
 ##.socialMedia-linkedin
 ##.socialMediaBlock
+##.socialMediaButtons
 ##.socialMediaContainer
 ##.socialMediaIcon
 ##.socialMediaIcons
@@ -2827,6 +2838,8 @@ _social-bar/
 ##.ssba_pinterest_share
 ##.ssba_share_link
 ##.ssba_sharecount
+##.ssbp-container
+##.ssto-share-buttons
 ##.st-custom-button
 ##.st-social__share
 ##.st_sharethis
@@ -3462,7 +3475,6 @@ mirror.co.uk##.header__nav__share--active
 manutd.com##.home-content-panel__details-social__main-holder
 apa.org##.horizontal-icon-bar
 dictionary.cambridge.org##.i-facebook
-pcguide.com##.ic_google_news
 insideclimatenews.org##.icn-share-holder
 atptour.com##.icon-email
 manutd.com##.icon-share-card-lite
@@ -3513,6 +3525,7 @@ nhl.com##.nhl-o-sharebar
 nist.gov##.nist-social__wrapper
 infobyip.com##.noprint
 karanpc.com##.ns-buttons
+thepeoplesvoice.tv##.ns-buttons-wrapper
 foodnetwork.com##.o-SocialShare
 sheknows.com,spy.com##.o-social-list__item
 support.microsoft.com##.ocArticleFooterShareContainer
@@ -3648,6 +3661,7 @@ beincrypto.com##.want-to-know-more-block
 dailymail.co.uk,oogtv.nl##.whatsapp
 business-standard.com##.whtsclick
 indiatoday.in##.whtspp_share
+madinamerica.com##.widget_a2a_share_save_widget
 fandom.com##.wikia-bar-anon
 project-management.com##.wp-block-bssb-social-share
 destructoid.com##.wp-block-gamurs-footer-nav__website-info__socials

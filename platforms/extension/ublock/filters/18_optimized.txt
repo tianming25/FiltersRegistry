@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 2hiHAsng/Jyrny7DUgQxWQ
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1745821175-3600.patch
+! Checksum: ndyxxyjfYbF6qkdLRtijxw
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1745825157-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.60.67
-! TimeUpdated: 2025-04-28T06:15:40+00:00
+! Version: 2.0.60.68
+! TimeUpdated: 2025-04-28T07:22:02+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1316,6 +1316,10 @@ help.lurker.tv,help.zenky.io,docs.powershelluniversal.com,docs.snyk.io,docs.keep
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+dhgate.com##.gdpr-context-wrap
+bike-life.cz#$##modal-placeholder { display: none !important; }
+bike-life.cz#$#.modal-backdrop { display: none !important; }
+bike-life.cz#$#body { overflow: auto !important; padding-right: 0 !important; }
 himalayawellness.*#$#body:has(.ot-block-overlay[show="true"]), html:has(.ot-block-overlay[show="true"]) { overflow: auto !important; }
 himalayawellness.*#$#.otCookiesNotification { display: none !important; }
 bankmillennium.pl##+js(set-cookie, Analytics_consent, 2)
@@ -2009,9 +2013,9 @@ advgazeta.ru##.popup--confidential
 merkur.de,heidelberg24.de#$?#.cmp-modal-open { overflow: auto !important; }
 claude.ai##body > div:has(> div[data-theme="claude"] > h3:contains(Cookie))
 westermann.de##.component-cookie-overlay-wrapper
-ars24.com#$#body { overflow: auto !important; }
-ars24.com#$#.offcanvas-backdrop { display: none !important; }
-ars24.com#$#.offcanvas-modal { display: none !important; }
+ayex.de,ars24.com#$#body { overflow: auto !important; }
+ayex.de,ars24.com#$#.offcanvas-backdrop { display: none !important; }
+ayex.de,ars24.com#$#.offcanvas-modal { display: none !important; }
 starlux-airlines.com##.vue-portal-target > div[role="dialog"]:has(a[href*="cookie-policy"])
 airchina.*###cookie-notice-popin
 airchina.*##.cav2-notification_cookie

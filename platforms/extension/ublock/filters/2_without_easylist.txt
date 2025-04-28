@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: mUtx782q8+HInyfnBF14fw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745833954-3600.patch
+! Checksum: 1pbDpP0NM5Qf+DaUVfPxxA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745837053-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.9
-! TimeUpdated: 2025-04-28T09:43:56+00:00
+! Version: 2.3.81.10
+! TimeUpdated: 2025-04-28T10:39:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21450,9 +21450,9 @@ codec.kyiv.ua#$?#style[id="mdpDeblocker-css"] { remove: true; }
 shorttrick.in,whoisnovel.com,asiaon.top,jpopsingles.eu,superpsx.com,alliptvlinks.com#$#body[class*="blur"] > * { filter: none !important; }
 shorttrick.in,whoisnovel.com,asiaon.top,jpopsingles.eu,superpsx.com,alliptvlinks.com#$#body > div[class*="-blackout"] { display: none !important; }
 shorttrick.in,whoisnovel.com,asiaon.top,jpopsingles.eu,superpsx.com,alliptvlinks.com#$#body > div[class*="-blackout"] + div[class*="-wrapper"] { display: none !important; }
-yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > * { filter: none !important; }
-yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] + div[class]:has(> .active > [class*="-content"]) { display: none !important; }
-yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] { display: none !important; }
+techedubyte.com,yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > * { filter: none !important; }
+techedubyte.com,yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] + div[class]:has(> .active > [class*="-content"]) { display: none !important; }
+techedubyte.com,yomucomics.com,tuksudia2.sbs,tuktukcinma.com#$#body > div[class*=" active"][style] { display: none !important; }
 !
 sketchup.cgtips.org##+js(abort-on-property-write, Databdcacb)
 ! NOTE: mdpDeBlocker end ⬆️
@@ -23668,19 +23668,14 @@ pornleaks.in##+js(set-constant, ftuappss, true)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/160931
 ! https://github.com/AdguardTeam/AdguardFilters/issues/156107
 ! https://github.com/AdguardTeam/AdguardFilters/issues/185405
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=ravenscans.com|oatuu.org|techedubyte.com
-@@||cdn.pubfuture-ad.com/v2/unit/pt.js^$domain=techedubyte.com
-@@||static.doubleclick.net/instream/ad_status.js$domain=techedubyte.com
-techedubyte.com,oatuu.org,ravenscans.com#@#[data-adblockkey]
-techedubyte.com,oatuu.org,ravenscans.com#@#[data-advadstrackid]
-techedubyte.com,oatuu.org,ravenscans.com#@#[data-ad-width]
-techedubyte.com,oatuu.org,ravenscans.com#@#[data-ad-module]
-techedubyte.com,oatuu.org,ravenscans.com#@#[data-ad-manager-id]
-techedubyte.com,oatuu.org,ravenscans.com#@#.ad-slot
-techedubyte.com,oatuu.org,ravenscans.com#@#.ad-placeholder:not(#filter_ads_by_classname):not(#detect_ad_empire):not(#detect):not(.adsbox)
-techedubyte.com,oatuu.org,ravenscans.com#$#.adsbygoogle.Ad-Container.sidebar-ad.ad-slot.ad.ads.doubleclick.ad-placement.ad-placeholder.adbadge.BannerAd.adsbox { display: block !important; }
-oatuu.org,ravenscans.com#$#.tjewtsgyeszduwntfveteepbzzdajlhvjbrwdrcnroyuedzfvkjf { display: none !important; }
-techedubyte.com##.cdfjbgluvriuuuvzljdrfcymhgvwvjmwpitnymzjdqkwryudjsvjovtwghsb
+techedubyte.com#@#[data-adblockkey]
+techedubyte.com#@#[data-advadstrackid]
+techedubyte.com#@#[data-ad-width]
+techedubyte.com#@#[data-ad-module]
+techedubyte.com#@#[data-ad-manager-id]
+techedubyte.com#@#.ad-slot
+techedubyte.com#@#.ad-placeholder:not(#filter_ads_by_classname):not(#detect_ad_empire):not(#detect):not(.adsbox)
+techedubyte.com#$#.adsbygoogle.Ad-Container.sidebar-ad.ad-slot.ad.ads.doubleclick.ad-placement.ad-placeholder.adbadge.BannerAd.adsbox { display: block !important; }
 ! https://github.com/uBlockOrigin/uAssets/discussions/17361#discussioncomment-6498761
 exactpay.online##+js(abort-on-property-read, Swal.fire)
 ||exactpay.online/Bitmedia.html$subdocument,redirect=noop.html
@@ -31984,7 +31979,8 @@ report.az##.feed-col > div[style^="height:"]
 ||player.bax.tv/vast/$xmlhttprequest,redirect=noop.txt
 arenda.az,globalinfo.az,sfera.az,metbuat.az##.ainsyndication
 metbuat.az##.wh_box a[href="https://livescore.az"]
-replay.az##div[align="center"][style^="padding-top:"]
+replay.az#$#div[align="center"][style^="padding-top:"] { height: 0 !important; }
+replay.az##.widget-ad-unit
 ||replay.az/share2.jpg
 qiymeti.net##.float-ad
 boss.az,turbo.az##.lotriver-top-banner

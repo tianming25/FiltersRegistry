@@ -1,8 +1,8 @@
-! Checksum: haUBMwpNPaOELy6caMCM1w
+! Checksum: qZHS2flJU5RrdIy7Wx1s5w
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.98.92
-! TimeUpdated: 2025-04-28T11:22:30+00:00
+! Version: 2.0.98.93
+! TimeUpdated: 2025-04-28T12:10:15+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7628,9 +7628,11 @@ chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita.ru,lenta.ru
 !
 !
 !
+petstory.ru##div[onclick*="swapBanners"]
 fishki.net###rutube-block
 msi-store.ru#%#//scriptlet('prevent-window-open')
-livejournal.com##div:has(> div[class$=" ng-isolate-scope"] ~ div[class*="--hideable "])
+livejournal.com##.mainpage--adv > div:has(> div[class$=" ng-isolate-scope"] ~ div[class*="--hideable "])
+livejournal.com##header[role="banner"] > div:has(> div[class$=" ng-isolate-scope"] ~ div[class*="--hideable "])
 thegirl.ru##.article__content > div.article__block-and-creative-container:has(> div.article__block_type-productSet)
 1obl.ru##.backgroundWhite:not(:has(*))
 1obl.ru##div[itemtype="http://schema.org/NewsArticle"] > div[class="backgroundWhite px-4 pt-3 pb-0 mt-2"]
@@ -8324,7 +8326,7 @@ politonline.ru,pravda.ru##div[id^="div_sf_"]
 forum.antichat.club##.sam3Bannner2Uni
 aartyk.ru#?#.col > div.card-panel:has(> div.adv-widget)
 aartyk.ru#?#.col > div.card-panel:has(> ins.adsbygoogle)
-rtraveler.ru##div[class^="banner-"]
+petstory.ru,rtraveler.ru##div[class^="banner-"]
 rtraveler.ru##.traffic-networks
 uznayvse.ru##.iku_topadcategory
 uznayvse.ru##aside[data-blocktype="smi2"]

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 1pbDpP0NM5Qf+DaUVfPxxA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745837053-3600.patch
+! Checksum: N2XWZPYUo6bY3M7WsjiAeQ
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745842493-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.10
-! TimeUpdated: 2025-04-28T10:39:57+00:00
+! Version: 2.3.81.11
+! TimeUpdated: 2025-04-28T12:10:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -49048,6 +49048,7 @@ gazettetimes.com,missoulian.com,kenoshanews.com,cumberlink.com,trib.com,dailypro
 ! START: Youtube whitescreen fix
 !
 ! This one might be needed when the page is loaded for the first time
+! !+ PLATFORM(ext_ff)
 youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPlayerResponse.adPlacements, undefined)
 youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPlayerResponse.adSlots, undefined)
 youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, ytInitialPlayerResponse.playerAds, undefined)
@@ -49055,6 +49056,7 @@ youtubekids.com,youtube-nocookie.com,youtube.com##+js(set-constant, playerRespon
 !
 ! Modify YT xhr responses
 m.youtube.com,youtubekids.com,youtube-nocookie.com##+js(json-prune, playerResponse.adPlacements playerResponse.playerAds playerResponse.adSlots adPlacements playerAds adSlots)
+!+ NOT_PLATFORM(ext_ff)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172033#issuecomment-1925290685
 ||googlevideo.com/initplayback?source=youtube&*&c=TVHTML5&oad=$xmlhttprequest,domain=youtube.com
 ! Fix SSAP ads

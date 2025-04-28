@@ -1,5 +1,5 @@
-! Checksum: rNtEzopDGr0VjBBUOSBHhQ
-! Diff-Path: ../patches/1_optimized/1_optimized-s-1745721604-3600.patch
+! Checksum: naene2ByVLpX8MlsT0Nn5g
+! Diff-Path: ../patches/1_optimized/1_optimized-s-1745808007-3600.patch
 ! Title: AdGuard Russian filter (Optimized)
 ! Description: Filter that enables ad blocking on websites in Russian language.
 ! Version: 2.0.98.88
@@ -46,6 +46,7 @@
 ||ucoz.*/?*%21*%3B$script,~third-party
 /porebl/?Izo84uQ4=*%$script
 /tG3a8U7s/?x37gWsOk=
+/dear_code/*/goclick?t=*&ref=
 ://*.pp.ua^$script,third-party
 .info/show/?*=*&*=*&*=*%20*%20*&$third-party
 .ru/show/?*=*&*=*&*=*%20*%20*&$script,third-party
@@ -317,6 +318,7 @@ http://*.ru/leftunit.pl?
 /sponsoring/*
 /sponsorship_
 /style/branding.css
+/sun*_ajax.js|
 /TeaserBlock.site.js
 /tizers.
 /tizers/*
@@ -963,6 +965,7 @@ ucoz.ru/informer/
 ||dfnetwork.link^$third-party
 ||rbtwo.bid^$third-party
 ||g4news.biz^$third-party
+||admondom.ru^$third-party
 ||banner.aismo.ru^$third-party
 ||widjet.analnoe.tv^$third-party
 ||qq86tbqodk.ru^$third-party
@@ -1115,6 +1118,7 @@ ucoz.ru/informer/
 ||jux9ms4vc7.ru^$third-party
 ||unzpc.com^$third-party
 ||ahaclub.ru^$third-party
+||bcnewltd.club^$third-party
 ||2track.info^
 ||8c9cz5kp0o.com^$third-party
 ||vast.videocdn.tv^
@@ -1216,6 +1220,7 @@ ucoz.ru/informer/
 ://kma.biz^$third-party
 ||uektb.com^$third-party
 ||0916video.ru^$third-party
+||lapatiya.info^$third-party
 ||3lucosy.com^
 ||3mtr.ru^$third-party
 ||468.vologdainfo.ru^
@@ -1249,6 +1254,7 @@ ucoz.ru/informer/
 ||adone.ru^$third-party
 ||adpartner.pro^$third-party
 ||adpod.in^$third-party
+||adprofy.com^$third-party
 ||adserver1.
 ||adsmmgp.com^$third-party
 ||adstock.pro^$third-party
@@ -3926,6 +3932,7 @@ novate.ru#?##left > div.bordered:has(> center > div[id^="yandex_rtb_"])
 gmt-max.net#?#div[class$="_col_title"]:contains(Рекомендуем)
 agravery.com#?#.caption:contains(Реклама)
 oil-club.ru#?#.ipsLayout_sidebarright > div.cWidgetContainer > ul.ipsList_reset > li.ipsWidget:has(> h3:contains(Реклама))
+bowandtie.ru#?##secondary .widget-title:contains(Реклама)
 masterpaiki.ru#?##secondary section:has(> div > div[id^="yandex_rtb_R-A"])
 syl.ru#?#.flatBlock:has(> #ya_under)
 penzainform.ru#?#.grid_2 > div.block_header:contains(Это интересно)
@@ -4670,6 +4677,7 @@ svpressa.ru##.b-content__section_partners
 tengrisport.kz,tengrinews.kz##div[class$="-banner"]
 irecommend.ru##.adfox_block
 ||kraj.by/banners/
+glavred.info##.article__content > div > div[style^="margin: 10px 0; clear: both;"]
 glavred.info##.article__bottom > div.my-3.w-100
 glavred.info##.main-partners
 gidonline.fun###s-side
@@ -5707,6 +5715,7 @@ vnews.agency##a[rel="nofollow"] > img[width="336px"]
 tele-satinfo.ru##a[rel="nofollow"]:not([href^="http://tele-satinfo.ru"]) > img[alt]
 winrar-all.ru,rivne.media,zlatopil.com##a[target="_blank"] > img
 uhta24.ru##a[target="_blank"]:not([href^="/"]) > img[alt]
+realnyezarabotki.com##a[target="_blank"][rel="nofollow"][href*="/goto/"]
 verstov.info##a[target="_blank"][rel="rel nofollow"] > img
 cybergame.tv,myubuntu.ru,wio.ru##body .block_links
 bezprovodoff.com,v-androide.com##body > .distr-open-Img-block
@@ -6081,6 +6090,7 @@ uhta24.ru##td[width="220"] a:not([href^="/"]) > img[alt]
 ||txtfeed.club/?pu=
 ||ua-football.com/*.php?s=
 ||uaport.net/banners/
+||vashdom.ru/draw-banner.
 ||vg-news.ru/files/banners/
 ||via-midgard.info/top/img.php
 ||video.penzainform.ru/v/adjax/*.mp4
@@ -7053,6 +7063,7 @@ gnezdogluharya.ru#@#.banners
 @@||galaxy.mobstudio.ru$document
 @@||op.yandex.ru$document
 ||nashaniva.com/photos/banners/
+ex-press.live###bottom-layout
 baq.kz##.top-banner
 ||baq.kz/ajax/banners/
 stan.kz##.admanager_block

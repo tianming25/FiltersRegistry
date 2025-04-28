@@ -1,5 +1,5 @@
-! Checksum: AoKQ3biHW0WltBmxn+itbg
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1745721598-3600.patch
+! Checksum: Ov+rkuF0bPjwkpHGp2i3Ag
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1745808002-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.11.59
@@ -21,6 +21,7 @@
 ||rcm.shinobi.jp^
 ||nullpoantenna.com/scripts/parts/blog/
 ||matomeantena.com/scripts/parts/blog/
+||moviegate4.net/fukugansan/
 ||rss.tc^$third-party
 /rss/rss.html$subdocument,~third-party
 .com/rss.htm$subdocument,~third-party
@@ -79,6 +80,7 @@ syurabahazard.com##.kotei-link
 girlsreport.net###more > .top_link
 everydayissunday.livedoor.blog##.article-body span:has(> div[style="font-size: 16px; padding: 8px; border-radius: 5px; margin: 5px; border: 1px solid rgb(0, 0, 128); background-color: rgb(255, 255, 255); text-indent: 0px;"])
 news.tokimeki-s.com##.osusume_link_iframe02
+otanews.livedoor.biz##iframe[src^="https://otanews.livedoor.biz/otanews_rss"]
 ||burusoku-vip.com/include*_iframe1.html
 burusoku-vip.com##.include1_iframe1
 eegg.fun##iframe[src^="/rss_"]
@@ -96,6 +98,7 @@ himasoku.com##.article-body-more > iframe[src^="http://himasoku.com/"][width]
 toushichannel.net#?#.article-body-more > div[style="font-size: small;"]:contains(中間おすすめ記事) > *:not(.t_h)
 toushichannel.net##article .bottom-link
 gadget2ch.com#?#.posts-inner:contains(/他サイト様人気記事|こちらもオススメ/)
+oshiridaisuki.com##.article-header > div#text-4
 momon-ga.com##.blgo18-post-list
 koe-koe.com###nanmv
 shikotch.in###news
@@ -694,6 +697,7 @@ pokemon-matome.net#$##wrap-main { padding-top:0 !important; }
 pokemon-matome.net##div[class^="basehtml"]
 warotanikki.com##.code-block
 ||tb.53kf.com/code/$script
+||hayamimi-hobby.com/gen-rss/
 suresuta.jp,sikopedia.com,kisslog2.com###custom_html-6
 akankore.doorblog.jp,beelzeboulxxx.com,gossip1.net,kisslog2.com##.rss_wrapper
 newsoku.blog##.headrsssppc
@@ -994,6 +998,7 @@ jotform.com##.jfFeedbackButton
 ||blog.livedoor.com/plugins/news/topics.js
 kinsta.com##kinsta-article-feedback
 phoenixnap.com##.live-chat-btn
+||kuzen.io^$domain=chugoku-np.co.jp
 doc.ua##.header__call-btn
 ||code.jivosite.com/script/widget$third-party
 ||code.jivo.ru/widget/$third-party
@@ -1191,6 +1196,7 @@ zerohedge.com###polymarket-market-embed
 ||unpkg.com/@polymarket/embeds@*/dist/index.js
 ||s-cdn.sportbox.ru/sites/*/coefs-parser/coefs-parser.global.js
 ||quiz.rambler.ru^$domain=lenta.ru
+smartpress.by##.vidjet-template
 eiga.com##.area-unext
 ||cdn.vuukle.com/platform.js$domain=joblo.com
 hltv.org##.leftCol > aside > div.a-reset

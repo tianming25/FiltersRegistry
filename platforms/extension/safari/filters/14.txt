@@ -1,9 +1,9 @@
-! Checksum: WxMKOaRlC9Fyg5Sf/0H81Q
-! Diff-Path: ../patches/14/14-s-1745828809-3600.patch
+! Checksum: K/foKtVQfzK3T2d9WQxurA
+! Diff-Path: ../patches/14/14-s-1745833949-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.58
-! TimeUpdated: 2025-04-28T08:23:09+00:00
+! Version: 2.2.28.59
+! TimeUpdated: 2025-04-28T09:47:57+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2507,6 +2507,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+sberbank.ru##.cookies-nova
 telegraf.news##.ancr-group
 dhgate.com##.gdpr-context-wrap
 bike-life.cz#$##modal-placeholder { display: none !important; }
@@ -3277,7 +3278,7 @@ developer.nintendo.com#$#.cookie-overlay { display: none !important; }
 developer.nintendo.com#%#//scriptlet('abort-current-inline-script', '$', 'trackEssentialCookie')
 hermesplus.pl,ksiegralnia.pl#%#//scriptlet('set-local-storage-item', 'consents.show_consent_modal', '1')
 ci.chromium.org###cookie-consent-prompt
-gdh.digital#%#//scriptlet('trusted-set-local-storage-item', 'cookie_accepted', '-1')
+gdh.digital#%#//scriptlet('set-local-storage-item', 'cookieBarVisible', 'false')
 deriv.com##.cookies_background-wrapper
 elke.uoc.gr###cookie-bubble
 polar.sh#%#//scriptlet('set-local-storage-item', 'cookie_consent', 'no')
@@ -34620,6 +34621,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+theweek.in##.article-post > div.specialpromo:has(> div.video-iframe-new a[href^="https://whatsapp.com/channel/"])
 telegraf.news##.pod_photo > div.left:has(> a[href^="https://t.me/"])
 khaleejtimes.com##.signup-subscribe
 khaleejtimes.com##.hme-nwslttr-uae-nf
@@ -42603,6 +42605,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+tv9telugu.com##.tv9_banner
 dhgate.com###J_appBanner
 dhgate.com##body::before
 dhgate.com##.r-openapp
@@ -49675,6 +49678,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+forum.adrenaline.com.br##.js-replyNewMessageContainer > div[style*="margin-"]:has(> center > a[target="_blank"] > img)
 yggtorrent.top##.promo-container
 dhgate.com##div[spm-c="topbanner"]
 gigabaito.com##.article-banner-cta

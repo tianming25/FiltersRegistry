@@ -1,9 +1,9 @@
-! Checksum: TIP8ad69bo/eZ4fBgPL0dw
-! Diff-Path: ../patches/6/6-s-1745853089-3600.patch
+! Checksum: 9Qf/KSYqyepbygEcKtatDw
+! Diff-Path: ../patches/6/6-s-1745910704-3600.patch
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.47.22
-! TimeUpdated: 2025-04-28T15:07:21+00:00
+! Version: 2.0.47.23
+! TimeUpdated: 2025-04-29T07:07:36+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2118,6 +2118,8 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+rp-online.de##.js-article-content > .group[data-cy="article-content"]:has(div[id^="ir_rpd"])
+rp-online.de###park-main > section[data-cy="module"]:has(> header[data-cy="section-header-raw"] > div > .is-ad)
 faz.net##div[data-external-selector="taboola-ads"]
 nd-aktuell.de##.OUTBRAIN ~ .Slider::before
 infranken.de##.billboard_wrap
@@ -12272,4 +12274,3 @@ obi.at,obi.be,obi.ca,obi.ch,obi.co.id,obi.co.jp,obi.co.kr,obi.co.nz,obi.com,obi.
 @@||g.doubleclick.net/pcs/$popup,domain=auto-motor-und-sport.de
 @@||g.doubleclick.net^$popup,domain=11freunde.de
 @@||t.adcell.com/click.php?$popup,domain=comicschau.de
-@@||t.adcell.com/p/click?$popup,domain=jerseypoint.de

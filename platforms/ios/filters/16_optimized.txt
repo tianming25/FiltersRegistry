@@ -1,5 +1,5 @@
-! Checksum: MuUBijhrec3xjVYOOpnKXA
-! Diff-Path: ../patches/16_optimized/16_optimized-s-1745864043-3600.patch
+! Checksum: 4A5iIlcGiURUXdElOb0CVA
+! Diff-Path: ../patches/16_optimized/16_optimized-s-1745894336-3600.patch
 ! Title: AdGuard French filter (Optimized)
 ! Description: Liste FR + AdGuard French filter. Filter list that specifically removes ads on websites in French language.
 ! Version: 2.0.52.9
@@ -1550,6 +1550,7 @@ alfresco-holidays.com,alfresco-holidays.nl,alfresco-camping.de,eurocamp.co.uk#@#
 ://clk.*/click?
 ://creative.*/widgets/*&campaignId=*&creativeId=$third-party
 ://dc.ads.
+://eacash.
 ://engine.*&subid=
 ://fr.*/ads?
 ://get.*&clickid=
@@ -1626,6 +1627,7 @@ _300x600&
 _336x280.
 _46860_
 _468x200.
+_468x60&
 _468x60@
 _468X60v2.
 _480x250.
@@ -1917,6 +1919,7 @@ _build=iclick-$popup
 ||myservdir.com^$third-party
 ||myxpass.com^$third-party
 ||nend.net^$third-party
+||netclickstats.com^$third-party
 ||nr-data.net^$third-party
 ||nsfxaffiliates.com^$third-party
 ||ntl.cloud^$third-party
@@ -2326,6 +2329,7 @@ _build=iclick-$popup
 ||jvnpnyqoxoqx.com^
 ||kaayqbakmzrwy.top^
 ||kadam.net^
+||kaijoareharoa.net^
 ||kamamwvlvrazr.top^
 ||kernh41.com^
 ||kirvesip.shop^
@@ -2736,6 +2740,7 @@ _build=iclick-$popup
 ||alitems.com^$popup,third-party
 ||anrdoezrs.net^$popup,third-party
 ||badoink.com^$popup,third-party
+||bdwafx.com^$popup
 ||boonsex.com^$popup,third-party
 ||brightonclick.com^$popup,third-party
 ||buysellads.com^$popup,third-party
@@ -2758,6 +2763,7 @@ _build=iclick-$popup
 ||elvenar.com^$popup,third-party
 ||exodusjailhousetarantula.com^$popup
 ||familiarpyromaniasloping.com^$popup
+||firstclick.pro^$popup
 ||flashtalking.com^$popup,third-party
 ||flixtab.com^$popup
 ||getresponse.com^$popup
@@ -2830,6 +2836,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||cdn.citytourgirls.com/static/bn/
 ||cdn.escortdude.com/static/bn/
 ||cdn.x1cdn.com^*/banner/
+||cdnpark.com/registrar/*/loader.js
 ||cex.io/rb/$third-party
 ||chaturbate.com^*/?track=$subdocument,third-party
 ||classement.pro^$image,third-party
@@ -3228,6 +3235,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||rapeporn.name^$script
 ||rapidgator.net/images/pics/
 ||realite-virtuelle.com/wp-content/cache/min/1/pub.
+||rencontresanslendemain.net/wp-content/uploads/*/banniere-
 ||rennes-infos-autrement.fr/wp-content/uploads/2022/02/une-
 ||roulettechat.fr^*/facebook-api-pub/
 ||ruedesjoueurs.com/images/articles-/promo/
@@ -3848,8 +3856,13 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pubTitle
 ##.pubTop
 ##.pubVideo
+##.pub_1000
+##.pub_1000_center
+##.pub_1000_liste
 ##.pub_160x600
 ##.pub_300_250
+##.pub_300_250_right
+##.pub_300_250_right_interne
 ##.pub_728_90
 ##.pub_article
 ##.pub_banner
@@ -3982,6 +3995,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.ustreklam
 ##.vda-block
 ##.video-list-ads
+##.video_adp2
 ##.video_reklama
 ##.view-publicites
 ##.widget-advert
@@ -4225,6 +4239,7 @@ howtofix.guide##.eds-animate
 maison-et-domotique.com##.elementor-widget-heading
 xboxygen.com##.eneba
 manga-news.com##.external-link
+solvusoft.com##.fileviewpro
 gameblog.fr##.footer__partners
 tukif.com##.footer_partner_container_wrapper
 positivr.fr##.front-page-featured_partnr-section-container
@@ -4286,6 +4301,7 @@ monbestseller.com##.pane-mbspush
 jardiner-malin.fr##.parent-billboard
 portail.free.fr,sante-dz.com##.partenaire
 boursorama.com,caradisiac.com,dunod.com,ficam.ma,lesechos.fr,lfp.fr,mangario.fr,nouvelobs.com,saint-etienne.fr##.partenaires
+lequotidiendumedecin.fr##.partner-container
 caci.dz,lavenir.net,nintendo-master.com,ogaming.tv,savefrom.net##.partners
 grands-reportages.com,montagnes-magazine.com##.pavepub
 footballclubdemarseille.fr##.pb-sidebar-article
@@ -4481,6 +4497,7 @@ undernews.fr##img[width][height][alt$="VPN"]
 leroymerlin.fr##li[data-product-list-id*="sponsored"]
 bol.com##section.js_slot-sponsored-products
 solutions-numeriques.com##td[onclick^="window.open('https://www.solutions-numeriques.com/r/?"]
+1jour1film.club,1jour1film.com.bd,1jour1film.com.np,1jour1film.fr,1jour1film.fun,1jour1film.icu,1jour1film.me,1jour1film.online,1jour1film.shop,1jour1film.space,1jour1film.top,1jour1film.xyz###fakeplayer
 wiflix-max.com,wiflix-max.com.bd,wiflix-max.com.np,wiflix-max.site,wiflix-max.top,wiflix-catalogue.com,wiflix-catalogue.com.bd,wiflix-catalogue.com.np,wiflix-catalogue.net,wiflix-catalogue.online,wiflix-catalogue.org,wiflix-catalogue.pro,wiflix-hd.com,wiflix-hd.com.bd,wiflix-hd.com.np,wiflix-hd.live,wiflix-hd.me,wiflix-hd.net,wiflix-hd.online,wiflix-hd.site,wiflix-hd.store,wiflix-hd.vip,wiflix-pro.com.bd,wiflix-pro.com.np,wiflix-pro.site,wiflixien.com.bd,wiflixien.com.np,wiflixien.space##.btnnew
 wiflix-max.com,wiflix-max.com.bd,wiflix-max.com.np,wiflix-max.site,wiflix-max.top,wiflix-catalogue.com,wiflix-catalogue.com.bd,wiflix-catalogue.com.np,wiflix-catalogue.net,wiflix-catalogue.online,wiflix-catalogue.org,wiflix-catalogue.pro,wiflix-hd.com,wiflix-hd.com.bd,wiflix-hd.com.np,wiflix-hd.live,wiflix-hd.me,wiflix-hd.net,wiflix-hd.online,wiflix-hd.site,wiflix-hd.store,wiflix-hd.vip,wiflix-pro.com.bd,wiflix-pro.com.np,wiflix-pro.site,wiflixien.com.bd,wiflixien.com.np,wiflixien.space##.sadst
 1fr1.net,3oloum.com,7olm.org,ahladalil.com,ahlamontada.com,alamontada.com,arabepro.com,banouta.net,darkbb.com,easyforumpro.com,fcmulhousefans.com,forum2jeux.com,forumactif.com,forumactif.fr,forumactif.org,forumalgerie.net,forumpro.fr,forums-actifs.com,galoppourlavie.org,gid3an.com,jordanforum.net,lebonforum.com,orizzontescuolaforum.net,own0.com,passionmilitaria.com,sorcieremonique.com,superforum.fr,syriaforums.net,walkingdead-rpg.com,yoo7.com,ze-43eme.com##.croco_wrapper, [onclick*="var"], [onmousedown*="\x"], [style*="height: 90px;"]

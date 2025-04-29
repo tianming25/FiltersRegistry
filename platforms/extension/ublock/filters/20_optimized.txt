@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: 0Pd7vJaIyq+wx/fwCJ4zmA
-! Diff-Path: ../patches/20_optimized/20_optimized-s-1745860278-3600.patch
+! Checksum: gGMSucI+mJtqTrLTrxDRMA
+! Diff-Path: ../patches/20_optimized/20_optimized-s-1745894334-3600.patch
 ! Title: AdGuard Mobile App Banners filter (Optimized)
 ! Description: Blocks irritating banners that promote mobile apps of websites.
 ! Version: 2.0.20.41
@@ -606,6 +606,7 @@ st.benesse.ne.jp##.app_download_bnr
 4yuuu.com##a[href^="https://4moon.onelink.me/"]
 emg.yahoo.co.jp,crisis.yahoo.co.jp##.promotionLink
 4meee.com##.articles > ul.banner__items
+kma.kkbox.com##.banner-download
 callfilter.app###pageContent a[href="https://play.google.com/store/apps/details?id=callfilter.app"]
 sports.sina.com.cn##a[href^="http://sports.sina.com.cn/download/"] > img
 doc88.com##.boxright > .dk-side
@@ -1380,6 +1381,7 @@ kinopovtor1.online##+js(abort-on-property-read, stickyConfig)
 m.jbzd.cc,m.jbzdy.cc##+js(set-cookie, play-creation, 1)
 fcn.de,kq2.com,kdrv.com,wfft.com,wtva.com,wktv.com,actionnewsnow.com##+js(set-cookie, smartbanner-closed, true)
 svyaznoy.ru##+js(remove-class, android-banner-on-page)
+imgur.io,imgur.com#$#div[class^="SeeImgurOIA-"] { display: none !important; }
 imgur.io,imgur.com#$#body { overflow-y: auto !important; }
 msn.com##+js(remove-class, irisbactive-top, body)
 mytuner-radio.com###appDownloadAd

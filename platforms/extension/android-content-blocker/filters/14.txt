@@ -1,8 +1,8 @@
-! Checksum: FfPJaFww1MbeNTdmuVx35Q
+! Checksum: jXHV8DfO5KBuIt75zeJLEQ
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.74
-! TimeUpdated: 2025-04-29T08:10:00+00:00
+! Version: 2.2.28.75
+! TimeUpdated: 2025-04-29T09:08:51+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -23203,8 +23203,6 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ! TODO: remove "/.*/" part when this issue - https://github.com/AdguardTeam/FiltersCompiler/issues/229 will be fixed
 ! TODO: remove document modifier when this issue is fixed - https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2954
 /.*/$permissions=identity-credentials-get=(),document
-! TODO: remove the rule below 18.09.24 if it doesn't break anything (two lines)
-! The rule for sites, where URL blocking rule blocks also Google's log in button
 !
 ! SECTION: Popups - Regular rules
 !
@@ -31167,7 +31165,7 @@ kenh14.vn,ot.gr,sportime.gr,mononews.gr,the-decoder.com,sporx.com,nowymarketing.
 ! ##.newsletter-popup
 corrierenazionale.it,trustedreviews.com,superdeluxeedition.com,schmuckwerk.de,designrush.com,hbr-russia.ru,thewrap.com,reserved.com,citizenwatch.co.uk,mitvergnuegen.com,emergencemagazine.org,afound.com,made.com,elementor.com,infosperber.ch,salzburg-airport.com,michalpasterski.pl##.newsletter-popup
 ! ##.subscribe-widget
-newsguardrealitycheck.com,thecoder.cafe,gamefile.news,admissionnotice.com,forbesindia.com,materializedview.io,computerenhance.com,clubstrannik.ru,noktabursa.com.tr,girlonthenet.com,substack.com,santiye.com.tr,rb.ru,investors.com##.subscribe-widget
+ntv.com.tr,newsguardrealitycheck.com,thecoder.cafe,gamefile.news,admissionnotice.com,forbesindia.com,materializedview.io,computerenhance.com,clubstrannik.ru,noktabursa.com.tr,girlonthenet.com,substack.com,santiye.com.tr,rb.ru,investors.com##.subscribe-widget
 ! ##.subscribe-block
 flb.ru,4freerussia.org,carnegieendowment.org,rozetked.me,pozirk.online,zagorodna.com,markformelle.by,mc.today,dobrotsen.ru,65ymas.com,techtimes.com,elplural.com,kinometro.ru,sport24.ua,newsweek.com,positronica.ru,eurasia.expert,hockey.by,kleo.ru,focusme.com,charbelnemnom.com,iphonegeek.me,afanasy.biz,media.nenaprasno.ru,vogue.ru,hyperhost.ua,pravda.ru,reverso.net,vokrug.tv##.subscribe-block
 ! ##.mc4wp-form
@@ -37839,6 +37837,9 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+easy.co.il##.qr-container
+easy.co.il##.open-app-button
+ntv.com.tr##.article-app-widget
 tv9telugu.com##.tv9_banner
 dhgate.com###J_appBanner
 dhgate.com##body::before
@@ -38160,6 +38161,8 @@ realtor.com##div[class^="MobileBannerstyles"]
 banki.ru##div[class^="appsWidgetstyled__StyledAppsWidget"]
 subito.it##div[class^="AppWidget_download-box-wrapper"]
 routinehub.co##.actions div.qr-code
+jianshu.com#$#body { overflow: auto !important; }
+jianshu.com#$#body[style*="width: calc(100% - 15px)"] { width: 100% !important; }
 cara.app###js_smartbanner
 cars.av.by##.promo-app
 flip.gr##.needsclick

@@ -1,9 +1,9 @@
-! Checksum: Y3Fl/ltwN8xYZ3i8o9DLgg
-! Diff-Path: ../patches/20/20-s-1745914423-3600.patch
+! Checksum: UFgypQGQN9LlRn1a/he40g
+! Diff-Path: ../patches/20/20-s-1745917957-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.42
-! TimeUpdated: 2025-04-29T08:10:08+00:00
+! Version: 2.0.20.43
+! TimeUpdated: 2025-04-29T09:09:01+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -59,6 +59,9 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+easy.co.il##.qr-container
+easy.co.il##.open-app-button
+ntv.com.tr##.article-app-widget
 x.com##article[data-testid="tweet"] div[data-testid="card.wrapper"]:has(> div[data-testid="card.layoutLarge.media"] > a[href="https://itunes.apple.com/app/id6670324846"])
 tv9telugu.com##.tv9_banner
 dhgate.com###J_appBanner
@@ -525,7 +528,9 @@ banki.ru##div[class^="appsWidgetstyled__StyledAppsWidget"]
 subito.it##div[class^="AppWidget_download-box-wrapper"]
 analyticsindiamag.com##main[data-elementor-type="single-post"] > section.elementor-section:has(> div.elementor-container > div.elementor-column > div.elementor-widget-wrap > section > div.elementor-container > div.elementor-column > div.elementor-widget-wrap > div.elementor-element > div.elementor-widget-container > a[href="https://apps.apple.com/in/app/analytics-india-magazine/id1502685162"])
 routinehub.co##.actions div.qr-code
-jianshu.com##body > #__next ~ div:not([class]):has(img[src="//upload.jianshu.io/images/js-qrc.png"])
+jianshu.com#$#body { overflow: auto !important; }
+jianshu.com#$#body[style*="width: calc(100% - 15px)"] { width: 100% !important; }
+jianshu.com#$#body > #__next ~ div:not([class]):has(img[src="//upload.jianshu.io/images/js-qrc.png"]) { display: none !important; }
 cara.app###js_smartbanner
 cars.av.by##.promo-app
 flowgpt.com#%#//scriptlet('set-local-storage-item', 'appDownloadModal.Dismissed.p', 'true')

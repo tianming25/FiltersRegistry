@@ -1,9 +1,9 @@
-! Checksum: qCoL1SIzg66qeKS8mx/svw
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1745887917-14400.patch
+! Checksum: 0fFYYqb9NZMCLGz+N692Tw
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1745901649-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.52
-! TimeUpdated: 2025-04-29T00:47:36+00:00
+! Version: 2.1.40.53
+! TimeUpdated: 2025-04-29T04:36:51+00:00
 ! Expires: 10 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -213,6 +213,7 @@ _social-bar/
 ###fbbox
 ###fbbox1
 ###fbshare
+###fbshare_container
 ###fcbk
 ###fdbk_tab
 ###floatingSocialShare
@@ -804,6 +805,7 @@ _social-bar/
 ##.article_share
 ##.article_social
 ##.articlesharebox
+##.asocial-area
 ##.aspexifblikebox
 ##.aspexifbsidebox
 ##.asset-inline-share-tools
@@ -950,6 +952,7 @@ _social-bar/
 ##.ccm-block-social-links
 ##.cd-fb-like-widget
 ##.cff-share-container
+##.cff-share-link
 ##.cff-share-tooltip
 ##.ci-socials-ignited
 ##.cmg-share-bar
@@ -1547,6 +1550,7 @@ _social-bar/
 ##.jeg_share_button
 ##.jeg_share_top_container
 ##.jeg_sharelist
+##.jeg_socialcounter
 ##.jetpack-social-navigation
 ##.jetpack-social-widget-item
 ##.jetpack_widget_social_icons
@@ -1814,6 +1818,7 @@ _social-bar/
 ##.pgevoke-header-row2-right-social
 ##.photo-share
 ##.pic-share
+##.picto_twitter
 ##.pin-it
 ##.pin-it-button
 ##.pin-share
@@ -2211,6 +2216,7 @@ _social-bar/
 ##.share_block
 ##.share_bottom
 ##.share_box
+##.share_box_text
 ##.share_btn
 ##.share_btn_white
 ##.share_btns
@@ -2503,6 +2509,7 @@ _social-bar/
 ##.social-fixed
 ##.social-follow
 ##.social-follow-bar
+##.social-follow-item
 ##.social-foot
 ##.social-footer
 ##.social-footer-block
@@ -2562,6 +2569,7 @@ _social-bar/
 ##.social-media-header
 ##.social-media-li
 ##.social-media-list-container
+##.social-media-module
 ##.social-media-nav
 ##.social-media-nav__sticky
 ##.social-media-share
@@ -2831,6 +2839,7 @@ _social-bar/
 ##.ss-social-circle
 ##.ss-social-icons-container
 ##.ss-social-regular
+##.ss-social-share-label
 ##.ss-total-shares
 ##.ssb_followers
 ##.ssba-share-text
@@ -2995,6 +3004,7 @@ _social-bar/
 ##.user-share
 ##.usr-social
 ##.ut2-social-link-block
+##.utility-share
 ##.utility-social
 ##.vbseo_share
 ##.vc_container_social_button
@@ -3063,6 +3073,7 @@ _social-bar/
 ##.widget_follow_button_widget
 ##.widget_g1_socials
 ##.widget_jnews_social
+##.widget_jnews_social_counter
 ##.widget_novashare_follow_widget
 ##.widget_nypost_social_widget
 ##.widget_siliconcounters
@@ -3075,7 +3086,9 @@ _social-bar/
 ##.widget_sow-social-media-buttons
 ##.widget_twitter
 ##.widget_twitter_timeline
+##.widget_wc_shortcodes_social_icons
 ##.widget_wpcom_social_media_icons_widget
+##.wn-share-button
 ##.wp-block-social-links
 ##.wp-embed-share
 ##.wp-share
@@ -3313,14 +3326,12 @@ bracketfights.com,ecuadoradio.ec,tiermaker.com###share-container
 aiseesoft.com###share-list
 journals.aps.org,theintercept.com###share-menu-button
 theintercept.com###share-menu-top-button
-news.warrington.ufl.edu###share-this-article
 androidpolice.com###sharingButtonPopup
 coingape.com###social-ad-new
 animenewsnetwork.com###social-bookmarks
 breitbart.com###social-follow-sidebar-widget
 coindesk.com###social-icons-box
 battlefordsnow.com,everythinggp.com,huskiefan.ca,larongenow.com,lethbridgenewsnow.com,meadowlakenow.com,nanaimonewsnow.com,northeastnow.com,panow.com,rdnewsnow.com,rocketfan.ca,royalsfan.ca,sasknow.com,vernonmatters.ca###social-share-icons
-reviews.ofb.biz###socialShare
 asianews.it###social_top_nav
 salon.com###social_total
 nsctotal.com.br,pastebin.pl###socials
@@ -3581,6 +3592,7 @@ streetinsider.com##.sharesection
 thenation.com##.sharethis-menu
 12tomatoes.com##.sharetocare-popup
 streetsblog.org##.single_sharingInner__3IoQO
+nme.com,operawire.com##.site-footer-social
 news.sky.com,skysports.com##.site-share-wrapper
 archaeology.org##.site-socials
 buyee.jp##.sns_list
@@ -3823,6 +3835,7 @@ mingpao.com##.ssm
 ifeng.com##div[class^="index_share_box_"]
 dr.dk##.dre-sticky-share-band
 telegraaf.nl##.SocialButtons
+nu.nl##.app-follow-us
 achterhoeknieuwswinterswijk.nl##.css-hd-u-socials
 jumbosports.com##.footer-payment-social__social
 112markiezaten.nl##.nieuws_delen
@@ -4154,6 +4167,7 @@ playswellwithbutter.com#@#a[href^="https://www.pinterest.com/pin/create/button/"
 @@||radio24.ilsole24ore.com/plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js$script,~third-party
 @@||sharethis.com/button/buttons.js$domain=bristan.com
 @@||svgrepo.com/show/$image,~third-party
+@@||thecompany.pl/graf/icons/youtube.png
 @@||wettercomassets.com/wcomv5/images/footer/$domain=wetter.com
 @@||yaplakal.com/html/static/$image,~third-party
 @@||yastatic.net/share2/share.js$script

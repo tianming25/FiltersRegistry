@@ -1,9 +1,9 @@
-! Checksum: //+NTX9UQX5XgvzFVeMXnA
-! Diff-Path: ../patches/20/20-s-1745917972-3600.patch
+! Checksum: 8SsH0Zpj4zYzoXw5g8oK2A
+! Diff-Path: ../patches/20/20-s-1745939499-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.43
-! TimeUpdated: 2025-04-29T09:09:01+00:00
+! Version: 2.0.20.44
+! TimeUpdated: 2025-04-29T15:07:46+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3629,6 +3629,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+deviantart.com##body > aside:has(> h2 > div > button[aria-label="Close"])
+migros.com.tr##sm-mobile-app-popup
 threads.com#%#//scriptlet('trusted-click-element', 'body > div[id^="mount_0_0_"] ~ div[class^="__fb-"] span + div > div + div > div[role="button"] > div', '', '1000')
 uhaul.com###nativeAppBanner
 airbnb.com##div[data-testid="app-install-container"]

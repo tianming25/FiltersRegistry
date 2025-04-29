@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: ZElkpMng+U1pXz++xDC8xQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745925027-3600.patch
+! Checksum: JDv7s+1PvgDuPwUfuTmpoA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1745928985-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.26
-! TimeUpdated: 2025-04-29T11:06:02+00:00
+! Version: 2.3.81.27
+! TimeUpdated: 2025-04-29T12:11:06+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21088,9 +21088,10 @@ get-to.link###genesis-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199164
 ||cdn.drama-online.tv/wp-content/plugins/eeacab.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200072
-||crdroid.net/js/adblock-checker.min.js
 crdroid.net##+js(set-constant, AdBlockChecker, noopFunc)
 crdroid.net##+js(set-constant, AdBlockChecker.checkAdBlock, noopPromiseResolve)
+!+ NOT_OPTIMIZED
+||crdroid.net/js/adblock-checker.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200071
 @@||google.com/adsense/domains/caf.js$domain=deepart.io
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200066
@@ -47934,6 +47935,11 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+hentaihaven.com##+js(no-setTimeout-if, shouldShow)
+hentaihaven.com##+js(abort-on-property-write, Script_Manager)
+hentaihaven.com##+js(addEventListener-defuser, click, /inter)
+hentaihaven.com##iframe[src*="/www/delivery/afr.php?zoneid="]
+||hentaihaven.com/wp-content/plugins/script-manager/assets/js/script-manager.js
 wsj.com##main > div[class*=" "] > div[class*=" "] > div[class*=" "]:has(> hr:first-child + .dianomi_context:last-child)
 ||xcity.org/wp-content/themes/NewsPulse/images/smartad1.jpg
 ||xcity.org/wp-content/themes/NewsPulse/images/banner300.jpg

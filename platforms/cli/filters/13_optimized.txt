@@ -1,9 +1,9 @@
-! Checksum: qsvTRQgYqZf8B4raKEHEyg
-! Diff-Path: ../patches/13_optimized/13_optimized-s-1746011401-3600.patch
+! Checksum: 6wR7h7Jm6oRNyFsjJyHHbw
+! Diff-Path: ../patches/13_optimized/13_optimized-s-1746015246-3600.patch
 ! Title: AdGuard Turkish filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.56.4
-! TimeUpdated: 2025-04-30T11:06:33+00:00
+! Version: 2.0.56.5
+! TimeUpdated: 2025-04-30T12:10:36+00:00
 ! Expires: 12 hours (update frequency)
 ||movturs.click^
 ||dontmakethem.club^
@@ -769,7 +769,7 @@ eskisehirekspres.net#%#document.cookie="modalads=yes; path=/;";
 belgeselizlesene.com#%#//scriptlet('set-constant', 'Object.prototype.video_ads', 'noopFunc')
 belgeselizlesene.com#%#//scriptlet("set-constant", "Object.prototype.ads_enable", "false")
 technopat.net#%#//scriptlet('set-constant', 'td_ad_background_click_link', '')
-technopat.net#%#//scriptlet("abort-on-property-read", "wpsite_clickable_data")
+technopat.net#%#//scriptlet('abort-on-property-read', 'wpsite_clickable_data')
 itemci.com#%#//scriptlet('adjust-setInterval', 'advert', '*', '0.001')
 bizimyaka.com#%#//scriptlet("abort-current-inline-script", "$", "/ads/")
 tranimeizle.*#%#//scriptlet("abort-on-property-read", "jsPopunder")

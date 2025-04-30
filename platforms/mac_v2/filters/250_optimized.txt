@@ -1,5 +1,5 @@
-! Checksum: PpoNtolHe+hyjtTYd0FP/g
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1745959201-14400.patch
+! Checksum: L2RcIi2uT5HAcpXwqsO7fw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746002584-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.84
@@ -1745,6 +1745,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 185.155.186.24$network
 !+ PLATFORM(windows, mac, android)
 209.74.107.131$network
+||afflat3b3.com^$all
 !+ PLATFORM(windows, mac, android)
 69.172.200.185$network
 !+ PLATFORM(windows, mac, android)
@@ -2202,6 +2203,8 @@ linustechtips.com,forum.malwarebytes.com,community.ccleaner.com##.cTopicPostArea
 zapytaj.onet.pl##.know-better-answer
 instagram.com#?#div[class^=" _"][style^="width: "]:only-of-type:has(a[href^="/accounts/emailsignup/"])
 www.instagram.com##div[data-visualcompletion=ignore] + div[class*=" "]
+zeit.de#$?#.paragraph--faded { overflow: visible !important }
+zeit.de#$?##paywall { top: 250px !important }
 community.spiceworks.com#%#//scriptlet('ubo-cookie-remover.js', 'visit_count')
 ||glassdoor.com^*/gd-user-hardsell-overlay.
 ##.tmblr-iframe--follow-teaser
@@ -2270,6 +2273,7 @@ ctrip.com##.service-notice-right
 ctrip.com##.set-phone.set-list > .nav-myctrip.person-text
 jd.com###J_mobile
 lianjia.com,zu.ke.com,csair.com##.qr-code
+map.baidu.com##.message-panel-open
 map.baidu.com##.poi-ads
 map.baidu.com###leadDownloadCard
 mi.com##.item-image.item
@@ -2372,6 +2376,7 @@ reports.adguard.com$badfilter
 @@||pgl.yoyo.org/adservers/serverlist.
 @@||someonewhocares.org/hosts/
 @@||fanboy.co.nz/*.txt^
+thenews.com.pk##a[href$="/prayer-time"]
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
 bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 delfi.lt#%#//scriptlet('ubo-aeld.js', 'copy')
@@ -2460,6 +2465,7 @@ $removeparam=mindbox-message-key
 $removeparam=nx_source
 $removeparam=oprtrack
 $removeparam=ysclid
+&uclick=*&uclickhash=$document,removeparam
 $document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp|~uploadnow.io
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
@@ -2919,8 +2925,6 @@ $removeparam=bidswitch_ssp_id
 $removeparam=tgclid
 $removeparam=dlsi
 $removeparam=adset_id
-$removeparam=affid2
-$removeparam=oid2
 $removeparam=tw_source
 $removeparam=tw_adid
 $removeparam=retailerSlug
@@ -3165,6 +3169,7 @@ $removeparam=share_link_id
 $removeparam=si,document,domain=open.spotify.com|soundcloud.com|zappos.com
 $removeparam=gtm
 $removeparam=referral,domain=tv2.no|spotify.com|yubo.live
+||open.spotify.com^$removeparam=uid
 ||aliexpress.*/item/$removeparam=pvid
 ||aliexpress.$removeparam=_t
 ||aliexpress.$removeparam=gps-id
@@ -3351,6 +3356,8 @@ $removeparam=sref,domain=bloomberg.com|go.skimresources.com|go.skimlinks.com|go.
 $removeparam=pid,document,domain=123inkjets.com|appsflyer.com|bergfreunde.*|bybit.com|dobrytextil.cz|farfetch.com|fifa.com|glami.cz|hepsiburada.com|neeva.com|onelink.me|play.google.com|samsclub.com|shopee.*|th.bing.com|tiktok.com
 $removeparam=subid,domain=admitad.com|mintmobile.com|secretlab.*|webmasterplan.com
 $removeparam=u1,domain=linksynergy.com|shop-links.co
+$removeparam=article_name,domain=shop-links.co
+$removeparam=article_url,domain=shop-links.co
 $removeparam=origin,denyallow=platform.twitter.com,domain=archive.org|buzzfeed.com|buzzfeednews.com|drop.com|flaticon.com|nordstrom.com|norton.com|philips.*|symbolab.com|yle.fi|dressmann.com
 $removeparam=epi,domain=fernerjacobsen.no|webhallen.com|microsoft.com|xbox.com|adtraction.com|tradedoubler.com
 $removeparam=epi2,domain=tradedoubler.com
@@ -3476,7 +3483,13 @@ $removeparam=lid,domain=baidu.com|clickserve.dartsearch.net|flipkart.com
 ||unieuro.it^$removeparam=dedup
 ||philips.$removeparam=linkname
 ||philips.$removeparam=uuid
+||apple.com^$removeparam=mttn3pid
+||apple.com^$removeparam=mttnagencyid
+||apple.com^$removeparam=mttncc
+||apple.com^$removeparam=mttnsiteid
 ||apple.com^$removeparam=mttnsubad
+||apple.com^$removeparam=mttnsubkw
+||apple.com^$removeparam=mttnsubplmnt
 $removeparam=wfr,domain=weidian.com|baidu.com
 $removeparam=organic_search_click
 $removeparam=pro,domain=etsy.com
@@ -3821,14 +3834,6 @@ $document,removeparam=maskChannel,domain=tmall.com|taobao.com
 ||roblox.$removeparam=friendshipSourceType
 ||detail.chiebukuro.yahoo.co.jp^$document,removeparam=__ysp
 ||detail.chiebukuro.yahoo.co.jp^$document,removeparam=fr
-/offer/pre/*$removeparam=lpid
-/offer/pre/*$removeparam=source_id
-/offer/pre/*$removeparam=sub_id
-/offer/pre/*$removeparam=req_id
-/offer/pre/*$removeparam=oid
-/offer/pre/*$removeparam=device_type
-/offer/pre/*$removeparam=country_name
-/offer/pre/*$removeparam=uid
 ||instacart.com^$removeparam=improvedParams
 ||finn.no^$removeparam=alertType
 ||finn.no^$removeparam=stored-id
@@ -4150,13 +4155,10 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 @@/favicon1.ico|
 @@://adserver.advertising.adtech.$third-party
 #@#.adSense
-##.adSense:not(html,body,:empty)
 #@#.adContent
-##.adContent:not(html,body,:empty)
 #@#.ad-text
 ##.ad-text:not(html,body,:empty)
 #@#.adBlock
-##.adBlock:not(html,body,:empty)
 #@#.ad-banners
 ##.ad-banners:not(html,body,:empty)
 #@#.ad-below
@@ -4178,25 +4180,16 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 #@#.adBox
 ##.adBox:not(html,body,:empty)
 #@#.pub_300x250
-##.pub_300x250:not(html,body,:empty)
 #@#.pub_300x250m
-##.pub_300x250m:not(html,body,:empty)
 #@#.pub_728x90
-##.pub_728x90:not(html,body,:empty)
 #@#.text-ad
-##.text-ad:not(html,body,:empty)
 #@#.text-ad-links
-##.text-ad-links:not(html,body,:empty)
 #@#.text-ads
-##.text-ads:not(html,body,:empty)
 #@#.text_ad
-##.text_ad:not(html,body,:empty)
 #@#.text_ads
-##.text_ads:not(html,body,:empty)
 #@#.textad
 ##.textad:not(html,body,:empty)
 #@#.textAd
-##.textAd:not(html,body,:empty)
 www.youtube.com##.ytd-watch-flexy #dismissible:has(.badge-style-type-simple)
 www.youtube.com##ytd-video-renderer ~ ytd-shelf-renderer[thumbnail-style]
 tv2.no##.banner

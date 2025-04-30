@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.81.41",
-			"timeUpdated": "2025-04-30T09:07:16+0000",
+			"version": "2.3.81.42",
+			"timeUpdated": "2025-04-30T10:07:11+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -594,8 +594,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/13.txt",
 			"trustLevel": "full",
-			"version": "2.0.56.2",
-			"timeUpdated": "2025-04-30T07:07:34+0000",
+			"version": "2.0.56.3",
+			"timeUpdated": "2025-04-30T10:07:56+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -623,8 +623,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.28.85",
-			"timeUpdated": "2025-04-30T09:07:48+0000",
+			"version": "2.2.28.86",
+			"timeUpdated": "2025-04-30T10:08:06+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -728,8 +728,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/18.txt",
 			"trustLevel": "full",
-			"version": "2.0.60.85",
-			"timeUpdated": "2025-04-30T09:07:52+0000",
+			"version": "2.0.60.86",
+			"timeUpdated": "2025-04-30T10:08:14+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -750,8 +750,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.52",
-			"timeUpdated": "2025-04-30T08:09:45+0000",
+			"version": "2.0.54.53",
+			"timeUpdated": "2025-04-30T10:08:15+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -816,8 +816,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/ublock/filters/22.txt",
 			"trustLevel": "full",
-			"version": "2.0.11.60",
-			"timeUpdated": "2025-04-29T07:08:04+0000",
+			"version": "2.0.11.61",
+			"timeUpdated": "2025-04-30T10:08:16+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [

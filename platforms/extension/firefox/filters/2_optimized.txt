@@ -1,9 +1,9 @@
-! Checksum: rlWrfirklOVhKqmMlcliDQ
-! Diff-Path: ../patches/2_optimized/2_optimized-s-1746015259-3600.patch
+! Checksum: SF/QUXNwA2VXST9pJ99zkA
+! Diff-Path: ../patches/2_optimized/2_optimized-s-1746022267-3600.patch
 ! Title: AdGuard Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 2.3.81.44
-! TimeUpdated: 2025-04-30T12:10:11+00:00
+! Version: 2.3.81.45
+! TimeUpdated: 2025-04-30T14:06:55+00:00
 ! Expires: 10 days (update frequency)
 ||perky-method.com^
 ||nvpartnerspromo.com^$all
@@ -3349,9 +3349,6 @@ offidocs.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 ovabee.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 streambtw.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', '.onerror')
 dessi.io#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
-automoto.it,moto.it#%#//scriptlet('remove-class', 'app-cwall-shown', 'body')
-!+ NOT_OPTIMIZED
-automoto.it,moto.it#$#div#iubenda-cs-banner { display: none !important; }
 putangclan.com#@#.advert-wrapper
 govsfid.com#%#//scriptlet("set-constant", "isBrave", "noopFunc")
 govsfid.com#%#//scriptlet("set-constant", "AdBDetected", "noopFunc")
@@ -12067,6 +12064,10 @@ picazor.com##a[href="/livesex"]
 picazor.com##a[href="https://theporndude.com/"]
 ||biguz.net/vastcams.xml
 biguz.net##.rig
+mysexgames.com##td[valign="top"] > div[align="center"][style="margin-top:0px;"]
+||mysexgames.com/pix/ads/
+mysexgames.com##iframe[src^="https://mysexgames.com/pix/ads/"]
+mysexgames.com##td:has(> table > tbody > tr > td > a[href^="click.php"])
 pvpoke-re.com##.nitro-any
 y2meta.net##.all-flags > div[style="height:200px;"]
 ||y2meta.net/js/popupunder.js
@@ -13093,7 +13094,7 @@ transtxxx.com##div[class^="video-conten"] > div + div
 yahoo.com###commerce-module-container
 play.dictionary.com#%#//scriptlet('adjust-setInterval', 'generalTimeLeft', '*', '0.01')
 automaton-media.com,ricedigital.co.uk,vladan.fr#%#//scriptlet('abort-on-property-read', 'wpsite_clickable_data')
-automaton-media.com#$#body { background-image: none !important; }
+automaton-media.com#$#html > body { background-image: none !important; }
 xv-ru.com##div[id^="ad-footer"]
 xv-ru.com##.thumb-nat-ad
 xv-ru.com###video-right

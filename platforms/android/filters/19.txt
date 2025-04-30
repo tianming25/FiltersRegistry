@@ -1,9 +1,9 @@
-! Checksum: ImaVVZ5m+j87j25KPvaK/Q
-! Diff-Path: ../patches/19/19-s-1746015244-3600.patch
+! Checksum: 0mwKcKhxz/KRqS4gRVHl6Q
+! Diff-Path: ../patches/19/19-s-1746022255-3600.patch
 ! Title: AdGuard Popups filter
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.54.55
-! TimeUpdated: 2025-04-30T12:10:47+00:00
+! Version: 2.0.54.56
+! TimeUpdated: 2025-04-30T14:07:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -13249,6 +13249,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+hvost.news##a[href^="/bitrix/rk.php?id="]
 prothomalo.com##iframe[height="250"]
 air-journal.fr###newsletter
 ilmattino.it##.strip-box-optin
@@ -15463,7 +15464,8 @@ robota.ua##alliance-telegram-bot-promo
 minfin.com.ua##.progressive-news-text > p:has(i)
 indy100.com#$?#.body-description > p:has(> strong > a[href^="https://www.independent.co.uk/newsletters?"]) { visibility: hidden!important; }
 stuff.tv###block-60
-themarysue.com,dotesports.com,blog.quastor.org##iframe[src^="https://embeds.beehiiv.com/"]
+||embeds.beehiiv.com^$subdocument,domain=siliconera.com
+siliconera.com,themarysue.com,dotesports.com,blog.quastor.org##iframe[src^="https://embeds.beehiiv.com/"]
 blog.quastor.org#?#.col-span-12 > div > div:has(> div.mb-6 > div.flex > h4:contains(Signup))
 blog.quastor.org#?##content-blocks > div[style]:has(> p:contains(Engineering newsletter))
 blog.quastor.org#?#div[style*="word-break"] + div[style="padding: 24px 0;"]
@@ -20487,7 +20489,7 @@ svyaznoy.ru##.b-footer-subscribe-block
 irk.ru##.b-news-subscription
 104.ua##.b-newsletter-sub
 mel.fm##.b-pb-article__body > .b-pb-article__publication-newsletter-formarticle__publication-newsletter-form
-defenceconnect.com.au,altapress.ru,expedition-pricep.ru,sobaka.ru,samsungstore.ru,psm7.com##.b-subscribe
+raexpert.ru,defenceconnect.com.au,altapress.ru,expedition-pricep.ru,sobaka.ru,samsungstore.ru,psm7.com##.b-subscribe
 politeka.net##.b__subscription-email
 maximonline.ru##.b_subscribe
 buzzfeednews.com##.bfp-newsletter-signup-container

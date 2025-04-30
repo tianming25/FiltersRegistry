@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: 5wZ/QUcNVExhN0gDb8x5zQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746015270-3600.patch
+! Checksum: d5aE7EAioaDOQhY0VaxVgw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746022276-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.44
-! TimeUpdated: 2025-04-30T12:10:11+00:00
+! Version: 2.3.81.45
+! TimeUpdated: 2025-04-30T14:06:55+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -22357,10 +22357,6 @@ streambtw.com##+js(abort-current-script, document.createElement, .onerror)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164162
 dessi.io##+js(no-fetch-if, pagead2.googlesyndication.com)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/164205
-! https://github.com/AdguardTeam/AdguardFilters/issues/164007
-automoto.it,moto.it##+js(remove-class, app-cwall-shown, body)
-!+ NOT_OPTIMIZED
-automoto.it,moto.it#$#div#iubenda-cs-banner { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163765
 putangclan.com#@#.advert-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/163704
@@ -47984,6 +47980,10 @@ picazor.com##a[href="/livesex"]
 picazor.com##a[href="https://theporndude.com/"]
 ||biguz.net/vastcams.xml
 biguz.net##.rig
+mysexgames.com##td[valign="top"] > div[align="center"][style="margin-top:0px;"]
+||mysexgames.com/pix/ads/
+mysexgames.com##iframe[src^="https://mysexgames.com/pix/ads/"]
+mysexgames.com##td:has(> table > tbody > tr > td > a[href^="click.php"])
 pvpoke-re.com##.nitro-any
 y2meta.net##.all-flags > div[style="height:200px;"]
 ||y2meta.net/js/popupunder.js
@@ -49712,7 +49712,7 @@ computerpedia.in###popup
 computerpedia.in##.overlay
 play.dictionary.com##+js(nano-setInterval-booster, generalTimeLeft, *, 0.01)
 automaton-media.com,ricedigital.co.uk,vladan.fr##+js(abort-on-property-read, wpsite_clickable_data)
-automaton-media.com#$#body { background-image: none !important; }
+automaton-media.com#$#html > body { background-image: none !important; }
 ||ricedigital.co.uk/wp-content/uploads/*/Rice_TakeOver_
 ||ricedigital.co.uk/wp-content/uploads/*/Rice_WideBanner_
 xv-ru.com#?##content > div#video-right + div[class]:has(> a[href^="https://cams.xvideos.com"])

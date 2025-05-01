@@ -1,9 +1,9 @@
-! Checksum: SXun+wCfS3XBlvluwtDY+A
-! Diff-Path: ../patches/20/20-s-1746000816-3600.patch
+! Checksum: q84eKQsZtxs7ofm2n01e5w
+! Diff-Path: ../patches/20/20-s-1746083516-3600.patch
 ! Title: AdGuard Mobile App Banners filter
 ! Description: Blocks irritating banners that promote mobile apps of websites.
-! Version: 2.0.20.45
-! TimeUpdated: 2025-04-30T08:09:46+00:00
+! Version: 2.0.20.46
+! TimeUpdated: 2025-05-01T07:08:02+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2471,10 +2471,10 @@ gotradio.com##.leftColAd
 pinterest.asia,pinterest.at,pinterest.be,pinterest.biz,pinterest.blog,pinterest.ca,pinterest.ch,pinterest.cl,pinterest.cn,pinterest.co,pinterest.co.kr,pinterest.co.nz,pinterest.co.uk,pinterest.com,pinterest.com.ar,pinterest.com.au,pinterest.com.bd,pinterest.com.br,pinterest.com.hk,pinterest.com.mx,pinterest.com.np,pinterest.com.pe,pinterest.com.uy,pinterest.com.vn,pinterest.cz,pinterest.de,pinterest.dk,pinterest.ee,pinterest.es,pinterest.eu,pinterest.fi,pinterest.fr,pinterest.hu,pinterest.id,pinterest.ie,pinterest.in,pinterest.info,pinterest.io,pinterest.is,pinterest.it,pinterest.jp,pinterest.me,pinterest.mx,pinterest.net,pinterest.nl,pinterest.no,pinterest.one,pinterest.org,pinterest.pe,pinterest.ph,pinterest.pl,pinterest.pt,pinterest.ro,pinterest.ru,pinterest.se,pinterest.site,pinterest.tv,pinterest.tw,pinterest.uk,pinterest.us,pinterest.vn##div[data-test-id="header"] div[style^="background-color: rgba(255, 255, 255, 0."][style*="box-shadow: rgba(0, 0, 0, 0.0"]
 pinterest.asia,pinterest.at,pinterest.be,pinterest.biz,pinterest.blog,pinterest.ca,pinterest.ch,pinterest.cl,pinterest.cn,pinterest.co,pinterest.co.kr,pinterest.co.nz,pinterest.co.uk,pinterest.com,pinterest.com.ar,pinterest.com.au,pinterest.com.bd,pinterest.com.br,pinterest.com.hk,pinterest.com.mx,pinterest.com.np,pinterest.com.pe,pinterest.com.uy,pinterest.com.vn,pinterest.cz,pinterest.de,pinterest.dk,pinterest.ee,pinterest.es,pinterest.eu,pinterest.fi,pinterest.fr,pinterest.hu,pinterest.id,pinterest.ie,pinterest.in,pinterest.info,pinterest.io,pinterest.is,pinterest.it,pinterest.jp,pinterest.me,pinterest.mx,pinterest.net,pinterest.nl,pinterest.no,pinterest.one,pinterest.org,pinterest.pe,pinterest.ph,pinterest.pl,pinterest.pt,pinterest.ro,pinterest.ru,pinterest.se,pinterest.site,pinterest.tv,pinterest.tw,pinterest.uk,pinterest.us,pinterest.vn##div[data-test-id="footer"] div[style="max-width: 264px;"]
 www-hindustantimes-com.cdn.ampproject.org,hindustantimes.com##.openAppButton
-m.gamer.com.tw,noin.shop,india.com##.open-app
+newindianexpress.com,m.gamer.com.tw,noin.shop,india.com##.open-app
 commaful.com##.suggested-story-section > div.desktop-only.float-left
 commaful.com##.ios-app-promo
-qushucheng.com,m.wanben.org,jingwuhotel.com##.appguide-wrap
+wodeshucheng.com,qushucheng.com,m.wanben.org,jingwuhotel.com##.appguide-wrap
 lylcrc.cn,jingwuhotel.com##.aznav
 flipkart.com#?#div[class*=" "] > div[class]:has(> div > img[src*="flipkart_app_icon-"])
 microsoftedgewelcome.microsoft.com##.mobile-banner__unexpanded
@@ -3629,6 +3629,11 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+bestbuy.com#$#.upper-smart-banner-sticky .shop-header .small-header { top: 0 !important; }
+bestbuy.com#$#.upper-smart-banner-sticky { margin-top: 0 !important; }
+bestbuy.com#$#.lower-smart-banner-sticky > div[class][style]:has(> div[class] > img[alt="Best Buy App Icon"]) { display: none !important; }
+bestbuy.com#$##mobile-header > #header-block > .tab-bar { bottom: 0 !important; }
+bestbuy.com#%#//scriptlet('trusted-click-element', '.lower-smart-banner-sticky > div[class][style] > button.close-button')
 mqihuan.bookresource.qq.com#?##r-authorSay > div.mt-12px:has(> a[class]:contains(下载App))
 mqihuan.bookresource.qq.com##.auto-tr
 deviantart.com##body > aside:has(> h2 > div > button[aria-label="Close"])

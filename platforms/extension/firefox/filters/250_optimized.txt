@@ -1,5 +1,5 @@
-! Checksum: VARUzqtq+lkRhNpsJ+wCew
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1746002567-14400.patch
+! Checksum: YPlrsyi3TxsBu3F5vp9Cqg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746074584-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.84
@@ -182,7 +182,6 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||dealshik.com^$all
 ||dealslandz.com^$all
 ||x2lt.com^$all
-||adblockermax.com/land$document,popup
 ||abmcullfyo.com^$all
 ||abpancvun.com^$all
 ||abpwivog.com^$all
@@ -1542,6 +1541,7 @@ autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 ##.elementor-spacer:not(html, body)
 ~schengenvisainfo.com##.vc_empty_space:not(html, body)
 ##.et_pb_divider:not(html,body)
+##div.dfd-spacer-module:empty
 transfermarkt.com##.clearer
 feltet.dk#$#iframe + div[style*="height: 80vh"] { height: unset !important }
 rule34.xxx###status-notices > br:empty
@@ -1640,6 +1640,7 @@ $document,removeparam=_ga,domain=~login.aliexpress.*
 $document,removeparam=guccounter
 $document,removeparam=guce_referrer
 $document,removeparam=guce_referrer_sig
+$document,removeparam=psf_variant
 $document,removeparam=bxid
 $document,removeparam=irgwc
 $document,removeparam=/^clickid=.*$/i,domain=~discover.*
@@ -1956,6 +1957,7 @@ $removeparam=tj,domain=baidu.com|sina.com.cn
 $removeparam=tagtag_uid
 $removeparam=affiliateCode
 $removeparam=affcode
+$document,removeparam=/^source=admitad$/
 $removeparam=int_source
 $removeparam=int_medium
 $removeparam=int_content
@@ -2514,6 +2516,7 @@ $removeparam=medium,domain=1sol.io|bybit.com|coinpanel.com|deepdiscount.com|disc
 ||microsoft.com^$removeparam=headerid
 ||microsoft.com^$removeparam=destrt
 $removeparam=ad,domain=24hshop.fi|adlibris.com|data-systems.fi|e-ville.com|moosejaw.com|multitronic.fi|scandinavianphoto.fi|swamp.fi|ocado.com|ask.com|askmoney.com|bloglines.com|consumersearch.com|directhit.com|faqtoids.com|findthedish.com|informationvine.com|internetcorkboard.com|life123.com|ohdeal.com|questionsanswered.net|reference.com|shop411.com|shopping.net|simpli.com|smarter.com|symptomfind.com
+||squarespace.com^$removeparam=subchannel
 ||verizon.com^$removeparam=vendorid
 ||hp.com^$removeparam=jumpid
 ||walmart.com^$removeparam=veh
@@ -2737,6 +2740,7 @@ $removeparam=segment_id,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytb
 $removeparam=user_id,document,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion
 ||linkedin.com^$removeparam=original_referer
 $document,removeparam=refId,domain=aebn.com|linkedin.com
+$removeparam=rp,domain=sporcle.com|hclips.com
 ||eporner.$removeparam=trx
 ||fandom.com^$removeparam=so
 ||tumblr.com^$removeparam=is_related_post
@@ -2854,6 +2858,7 @@ $document,removeparam=intc,domain=citi.com
 $document,removeparam=selectedCCIndex,domain=citi.com
 $document,removeparam=aoOfferParams,domain=citi.com
 $removeparam=ProspectID,domain=citi.com
+$removeparam=BT_VanityDomain,domain=citi.com
 ||patreon.com/posts/$document,removeparam=token
 $document,removeparam=bpli,domain=blogger.com
 $document,removeparam=st,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
@@ -2900,6 +2905,7 @@ $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid
 ||login.yahoo.com^$document,removeparam=activity
+||windscribe.com^$document,removeparam=pcpid
 ||carousell.$removeparam=t-id
 ||carousell.$removeparam=t-referrer_browse_type
 ||carousell.$removeparam=t-referrer_page_type
@@ -2922,6 +2928,7 @@ $document,removeparam=af_xp
 ||qzone.qq.com^$document,removeparam=g_f
 ||asos.com^$removeparam=ctaref
 ||gumroad.com^$removeparam=recommended_by
+$document,removeparam=s_campaign
 ||www.booking.com^$document,removeparam=aid
 ||www.booking.com^$document,removeparam=sid
 ||www.booking.com^$document,removeparam=redirected
@@ -3038,6 +3045,7 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 #@#.ad-text
 ##.ad-text:not(html,body,:empty)
 #@#.adBlock
+##.adBlock:not(html,body,:empty)
 #@#.ad-banners
 ##.ad-banners:not(html,body,:empty)
 #@#.ad-below
@@ -3069,6 +3077,7 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 #@#.textad
 ##.textad:not(html,body,:empty)
 #@#.textAd
+##.textAd:not(html,body,:empty)
 www.youtube.com##.ytd-watch-flexy #dismissible:has(.badge-style-type-simple)
 www.youtube.com##ytd-video-renderer ~ ytd-shelf-renderer[thumbnail-style]
 tv2.no##.banner

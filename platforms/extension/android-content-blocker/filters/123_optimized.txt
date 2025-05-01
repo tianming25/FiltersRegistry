@@ -1,8 +1,8 @@
-! Checksum: C4zbcXHVqZN7pJQ9EBbJ1Q
+! Checksum: iJPpzq/bV457Gtl+vbLlZA
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.61
-! TimeUpdated: 2025-05-01T00:47:50+00:00
+! Version: 2.1.40.62
+! TimeUpdated: 2025-05-01T04:39:04+00:00
 ! Expires: 5 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -264,6 +264,7 @@ _social-bar/
 ###header-social
 ###header-social-icons
 ###header-social-links
+###header-social-nav
 ###header-socials
 ###header-youtube-social-link
 ###headerSocial
@@ -276,6 +277,7 @@ _social-bar/
 ###js-SocialWidget-Container
 ###js-Stay-Connected-Container-0
 ###js-Stay-Connected-Container-2
+###js-dialog-social-overlay
 ###js-share
 ###js-share-links
 ###large_share_wrapper
@@ -315,6 +317,7 @@ _social-bar/
 ###newGigyaShareTop
 ###newGigyaShareTop-Holder
 ###newSocialContainer
+###page-share
 ###pageshare
 ###panel-social
 ###pinterest-link
@@ -928,6 +931,7 @@ _social-bar/
 ##.c-global-header__social
 ##.c-header__social
 ##.c-list--social
+##.c-main-footer__social
 ##.c-nav-social
 ##.c-navbar-primary__social
 ##.c-share
@@ -997,6 +1001,7 @@ _social-bar/
 ##.custom-share-button
 ##.custom-sharing
 ##.custom-social
+##.d-share
 ##.d3-o-share-bar
 ##.dashicons-facebook
 ##.dashicons-twitter
@@ -1047,6 +1052,7 @@ _social-bar/
 ##.email-share
 ##.email-share-link
 ##.email_share
+##.end-social
 ##.entry-aside-shares
 ##.entry-footer-share
 ##.entry-meta-social
@@ -1101,6 +1107,7 @@ _social-bar/
 ##.facebook-like-box
 ##.facebook-like-static
 ##.facebook-messenger-avatar
+##.facebook-modal
 ##.facebook-page-plugin
 ##.facebook-popup
 ##.facebook-share-btn
@@ -1202,12 +1209,14 @@ _social-bar/
 ##.follow-us-panel
 ##.follow-us-txt
 ##.follow-us-wrapper
+##.follow-widget
 ##.followSocial
 ##.followTwitter
 ##.followUsLinks
 ##.followus_net
 ##.followuson
 ##.foot-share
+##.foot-soc-fb
 ##.foot-soc-list
 ##.foot-soc-twit
 ##.foot-social
@@ -1722,6 +1731,7 @@ _social-bar/
 ##.mh-social-icons
 ##.mh-social-nav
 ##.mk-header-social
+##.mkd-share-link
 ##.mkdf-social-icon-widget
 ##.mks_social_widget
 ##.ml-footer-social-links
@@ -1916,6 +1926,7 @@ _social-bar/
 ##.right-social
 ##.rmp-sharing
 ##.rn_SocialBookmarkLink
+##.rnsocial
 ##.row-social
 ##.rrssb-buttons
 ##.rrssb-buttons-container
@@ -2028,6 +2039,7 @@ _social-bar/
 ##.share-data
 ##.share-desktop
 ##.share-dropdown
+##.share-element
 ##.share-elements
 ##.share-email
 ##.share-entry
@@ -2367,6 +2379,7 @@ _social-bar/
 ##.sharing-option
 ##.sharing-options
 ##.sharing-popup
+##.sharing-social
 ##.sharing-tool
 ##.sharing-tools
 ##.sharing-twitter
@@ -2388,6 +2401,7 @@ _social-bar/
 ##.sharings_box
 ##.sharrre
 ##.sharrre-container
+##.show-all-sharetool
 ##.show-share
 ##.showShareMore
 ##.shr-bookmarks
@@ -2472,6 +2486,7 @@ _social-bar/
 ##.soc_tw
 ##.sociaPayLasim
 ##.sociable_tagline
+##.sociables
 ##.social--article
 ##.social--email
 ##.social--facebook
@@ -2916,6 +2931,7 @@ _social-bar/
 ##.tgla7-share
 ##.thb-social-links-container
 ##.thb-social-top
+##.the-social-links
 ##.theChampSharing
 ##.the_champ_sharing_container
 ##.the_champ_sharing_ul
@@ -3006,6 +3022,7 @@ _social-bar/
 ##.twitterbutton
 ##.twitterfollow
 ##.twitterjo
+##.twitterlink
 ##.twittershare
 ##.twshare
 ##.twtr
@@ -3145,6 +3162,7 @@ _social-bar/
 ##SHARE-BUTTON
 ##SOCIAL-SHARING
 ##TWITTER-SHARE-BUTTON
+##[data-social="share"]
 ##[data-target="share-review"]
 ##[data-testid="prism-share"]
 ##[eapps-link="share"]
@@ -3511,9 +3529,11 @@ insidehighered.com##.heading-sharethis
 manutd.com##.home-content-panel__details-social__main-holder
 apa.org##.horizontal-icon-bar
 dictionary.cambridge.org##.i-facebook
+pcguide.com##.ic_google_news
 insideclimatenews.org##.icn-share-holder
 atptour.com##.icon-email
 manutd.com##.icon-share-card-lite
+photofunia.com##.icons
 financialexpress.com##.ie-google-news
 indianexpress.com##.ie-ie-share
 insidehighered.com##.ihe-social-links
@@ -3574,6 +3594,7 @@ churchpop.com##.post-share-section
 tedium.co##.post-social
 foodandwaterwatch.org,medcitynews.com,publicbooks.org##.post-social-share
 cointelegraph.com##.post__socials-block
+captainaltcoin.com,celebritycruises.com,tomzorg.nl##.post_share
 pravda.com.ua##.post_social_item
 lifestyleasia.com##.pre-footer_instagram
 dailymail.co.uk##.prevNextWrapper-1Vg7e
@@ -3668,6 +3689,7 @@ aetv.com,wccftech.com##.story-share
 wccftech.com##.story-share-bottom
 gadgets360.com##.story_social_share
 americasvoice.news##.styles_share__ktP_t
+todayonline.com##.subcription-two
 npr.org,symmetrymagazine.org,thefinance.sg,thefulcrum.us,topbet.eu##.subscribe
 hindustantimes.com##.subscribe-social
 locals.com##.support-now
@@ -4042,6 +4064,7 @@ canalnet.tv##.the-single-body__share
 elpais.com##.w_rs
 orquideaonline.com##.wrap-footer-social
 autobild.es,businessinsider.es,computerhoy.com,hobbyconsolas.com,topgear.es##div[class^="share-bar_"]
+haberler.com##.googleNews
 trthaber.com##.social-links-container
 bigpara.hurriyet.com.tr##.socialIcons
 cumhuriyet.com.tr##.sosyal-medya

@@ -1,9 +1,9 @@
-! Checksum: fpirDvVAOS8GTLysrdrscw
-! Diff-Path: ../patches/1/1-s-1746025913-3600.patch
+! Checksum: zLwjZOl9jVI/7qyVsanmKA
+! Diff-Path: ../patches/1/1-s-1746080042-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.98.99
-! TimeUpdated: 2025-04-30T15:07:10+00:00
+! Version: 2.0.99.0
+! TimeUpdated: 2025-05-01T06:09:14+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7697,6 +7697,10 @@ chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita.ru,lenta.ru
 !
 !
 !
+radio1.ru##div[class^="adblock"]
+radio1.ru##div[data-set]:has(> div[class^="ads"])
+radio1.ru##div[class^="right_blok"]:has(a[href][target="blank"] img[src^="https://multi-admin.ru/media_banner/"])
+||multi-admin.ru/media_banner/$domain=radio1.ru
 iptvx.one##a[href^="https://go.iptvx.one/"]
 iptvx.one###formatted-banner
 iptvx.one##.widgb

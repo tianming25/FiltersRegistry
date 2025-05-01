@@ -1,8 +1,8 @@
-! Checksum: zJbtP9Qn60bauOSiLcrAyw
+! Checksum: e+74snb4NhX+gfvUzDF/Iw
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.28.96
-! TimeUpdated: 2025-05-01T07:07:56+00:00
+! Version: 2.2.28.97
+! TimeUpdated: 2025-05-01T08:09:05+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2453,6 +2453,9 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+spektrum.de#$#body { overflow: auto !important; }
+spektrum.de#$##pw-full-widget { display: none !important; }
+||cmpv2.computerwoche.de^
 ||static.1000.menu/style/js/cookie-script/
 raexpert.ru##.popup-block
 pcloud.com##.data_consent_holder
@@ -3141,7 +3144,7 @@ expat.com#$##sd-cmp { display: none !important; }
 viherpeukalot.fi##.modal-cookie-consent
 dinetecommerce.pe##div[id*="aviso-cookies"]
 ||tags.stepstone.com/utag/*/prod/utag.js
-kanaldim.tv##.privacy-policy-block
+uatv.ua,kanaldim.tv##.privacy-policy-block
 snipcart.com##.site-cookie-alert
 flocktory.com##.sc-CookiesNotification
 tass.ru##div[class^="CookieAcceptance_container"]
@@ -14532,6 +14535,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204115
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=spektrum.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204277
 hisense.com#@#.cookie-content
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204209
@@ -41143,6 +41148,7 @@ baseball.yahoo.co.jp##.sn-modAppText
 soccer.yahoo.co.jp,sports.yahoo.co.jp##.sn-modAppBanner
 limia.jp##.Button--appBannerLinkBorder
 trainman.in##.sticky-banner
+facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onionfacebook.com##div[data-mcomponent="MContainer"][class="m fixed-container bottom"][data-actual-height="67"]
 facebook.com,facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onionfacebook.com##div[data-mcomponent="MContainer"][class="m fixed-container bottom"][data-actual-height="53"]
 pokebattler.com##a[title="Pokebattler Raid Party App"]
 cookpad.com##.ep5ivm0

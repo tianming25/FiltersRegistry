@@ -1,9 +1,9 @@
-! Checksum: qUM9XLa1a8n3qI1Xy/WEew
-! Diff-Path: ../patches/14/14-s-1746177096-3600.patch
+! Checksum: ydLM9ccBuNaCdChqLdshBw
+! Diff-Path: ../patches/14/14-s-1746180666-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.7
-! TimeUpdated: 2025-05-02T09:08:02+00:00
+! Version: 2.2.29.8
+! TimeUpdated: 2025-05-02T10:07:30+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2505,6 +2505,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+m3datarecovery.com###user_popup
 otpbank.md#$#body { overflow: auto !important; }
 otpbank.md#$#.cookie-panel { display: none !important; }
 travelweekly.co.uk###aos-CookiePolicy
@@ -25682,6 +25683,8 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+filecr.com#$#body { overflow: auto !important; padding-right: 0 !important; }
+filecr.com#$#body > #modal:has(> div[class^="modal_wrap_"] > div[class^="modal_content_"] > div[class^="dp_body_"] > a[href*="/extension/install"][target="_blank"]) { display: none !important; }
 mqihuan.bookresource.qq.com##.fixed.bottom-48px
 mqihuan.bookresource.qq.com##.fixed.inset-0
 pcloud.com#%#//scriptlet('set-cookie', 'openedExitIntentRegistrationModal', 'true')
@@ -58584,6 +58587,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+hrw.org###graphene--modal
 air-journal.fr##[class*="donation"]:not(a)
 smutba.se,sfmlab.com##div[style="min-height: 90px; justify-content: center;"]
 smutba.se,sfmlab.com##.patreon

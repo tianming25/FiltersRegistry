@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: LoaVsLuUOOkCeRp4xQcbkQ
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746209594-3600.patch
+! Checksum: FrrzHFHC9mnZLi29a5Vcsg
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746213014-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.81
-! TimeUpdated: 2025-05-02T18:08:38+00:00
+! Version: 2.3.81.82
+! TimeUpdated: 2025-05-02T19:06:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21058,9 +21058,9 @@ proboxtv.com##body > div[style^="position: fixed; top:"][style*="z-index:"][styl
 foodtechnos.in###adblock-modal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201162
 @@||godlikeproductions.com/adblock/js/checks/fingerprint.js$domain=godlikeproductions.com
-! vogue.com - content gets removed in article
-vogue.com#$#.ad.ad-body.ad-slot.ad-content[style*="width: 1px"][style*="height: 1px"] { display: block !important; }
-@@||ads-static.conde.digital/production/cns/builds/vogue/v*.js$domain=vogue.com
+! vogue.com and newyorker.com - content gets removed in article
+newyorker.com,vogue.com#$#.ad.ad-body.ad-slot.ad-content[style*="width: 1px"][style*="height: 1px"] { display: block !important; }
+@@||ads-static.conde.digital/production/cns/builds/$domain=vogue.com|newyorker.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201324
 read.amazon.*##+js(set-constant, canRunAds, 1)
 read.amazon.*,primevideo.com##+js(set-constant, ue_adb_chk, 1)

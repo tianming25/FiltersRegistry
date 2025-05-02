@@ -1,9 +1,9 @@
-! Checksum: U3WV9fPBvU9rht5AxGMo2Q
-! Diff-Path: ../patches/203_optimized/203_optimized-s-1746160933-14400.patch
+! Checksum: 6fMnpHAGgwWdVV99OQojXA
+! Diff-Path: ../patches/203_optimized/203_optimized-s-1746190161-14400.patch
 ! Title: Hungarian filter (Optimized)
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.3.73
-! TimeUpdated: 2025-05-02T04:38:08+00:00
+! Version: 2.0.3.74
+! TimeUpdated: 2025-05-02T12:44:53+00:00
 ! Expires: 10 days (update frequency)
 ##.ad__main
 ##.adblokk
@@ -87,9 +87,6 @@ hu###hirdetes
 hu###hirdetesek
 hu##ins[id^="aswift_"]
 hu##[class*="overlayBg"]
-online-filmek.ac,online-filmek.me##div[align="center"] > div[style^="margin-top:"] > div > a[target="_blank"] > img
-online-filmek.ac,online-filmek.me##div[align="center"] > a[onclick]
-online-filmek.ac,online-filmek.me##span[class^="adslot_"]
 hdmozi.hu##.asgdc
 magyarorszagom.hu##.bannerContent
 112press.hu##.banner_middle
@@ -778,8 +775,9 @@ moly.hu##[class*="banner"]
 motorrevu.hu##[class*="hirdetes"]
 mozinet.me###adserving-tag-hb
 mozinet.me###pa_sticky_ad_box_middle_left
+mozinet.me##.abh
+mozinet.me##a[href="javascript:void(0);"][onclick^="window.open"]
 mozinet.me##iframe[id^="postbid_if_"]
-mozinet.me,online-filmek.ac##[href^="https://gamesspot.live/"]
 mozinezo.hu###header
 mozishop.hu##.om-holder
 muhelynet.hu###exposeMask
@@ -842,8 +840,9 @@ offline.hu##.ads
 olcsobbat.hu##[class*="Advert"]
 olcsobbat.hu##[id*="hirdetes"]
 olcsobbat.hu###datasheetNavHelp
-online-filmek.ac##[href^="https://wdtyl.xyz/"]
-online-filmek.me##.hover_bkgr_fricc
+online-filmek.ac,online-filmek.me###azidodpazarlod
+online-filmek.ac,online-filmek.me##.ad_mrg
+online-filmek.ac,online-filmek.me##.details-main-panel + span
 onlinecegjegyzek.hu##[class*="hirdetes"]
 onroad.hu##.highlighted-banner
 oprend.hu##[class*="ad-warning"]
@@ -1695,6 +1694,7 @@ sorozatwiki.hu###fhr-cookie-bar
 starity.hu###upprev_box
 startlap.hu###push-notification
 szabadfold.hu##div.fb_shares
+szallas.hu###onetrust-consent-sdk
 szatmar.ro##.cookie-consent
 szeged365.hu##.active.popup-screen
 szeged365.hu##.popup-box
@@ -1749,6 +1749,7 @@ infostart.hu#?##sitemodal:-abp-has(.fb-button)
 ||*.hu/*wp-content/plugins/complianz-gdpr/*.js$script
 ||*.hu/*wp-content/plugins/complianz-gdpr/*.css$stylesheet
 ||iccm.ingatlancdn.com/iccm-*.js$script
+||cookielaw.org^$third-party
 dizajnkonyha.hu##body > div[data-elementor-type="footer"] ~ div[id][class*=" "]
 rtl.hu##.adblock-confirm
 777blog.hu##[href="https://777blog.hu/reklamblokkolo-kikapcsolasa/"]
@@ -1835,6 +1836,7 @@ videa.hu,videaloop.hu##.top-video-container-banner
 ||track306.info^$third-party
 ||trackingterrorism.org^$third-party
 ||va.v.liveperson.net^$third-party,script
+||track.segmentstream.com^$third-party
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=mafab.hu
 @@||pro.hit.gemius.pl/gstream.js$script,domain=embed.rtl.hu
 jofogas.hu#%#//scriptlet('prevent-setTimeout', 'E(!1)')
@@ -1844,8 +1846,6 @@ startlap.hu#$#div.container.banner-container.wide { min-height: 0 !important; he
 dehir.hu#$##popupFrontPageBanner-modal { display: none !important; }
 dehir.hu#$#body { overflow: auto !important; }
 prohardver.hu,fototrend.hu#$#main { background-image: none !important; }
-online-filmek.ac,online-filmek.me#%#//scriptlet('set-constant', 'document.write', 'undefined')
-online-filmek.ac,online-filmek.me##a[onclick^="window.open"]
 /inside-banner.mini.js$domain=myonlineradio.hu
 blikk.hu#%#//scriptlet('set-cookie', 'isLeavingPopUpReady', '3')
 fizz.hu#%#//scriptlet('set-cookie', 'cookie.consent.finished', '1')
@@ -1902,6 +1902,7 @@ online-filmek.ac#%#//scriptlet('prevent-fetch', 'api')
 online-filmek.ac#%#//scriptlet('prevent-fetch', 'ads')
 rubyvidhub.com#%#//scriptlet('remove-node-text', 'script', 'undefined')
 karpathir.com##[class^="k"][class*="-container"][class*="-2"][class$="-hide"]
+||galaxypush.com/css/styles.min.css^$redirect=noopcss,domain=online-filmek.ac|online-filmek.me,important
 player.rtl.hu#%#//scriptlet('set-constant', 'gemiusStream', 'emptyObj')
 player.rtl.hu#%#//scriptlet('set-constant', 'gemiusStream.event', 'noopFunc')
 player.rtl.hu#%#//scriptlet('set-constant', 'gemiusStream.init', 'noopFunc')

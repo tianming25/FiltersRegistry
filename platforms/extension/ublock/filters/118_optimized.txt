@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: FWMnDVT6gM8My/RePRws+A
-! Diff-Path: ../patches/118_optimized/118_optimized-s-1746175343-14400.patch
+! Checksum: s4A3aAcmCZ0fcwBZoRvdcQ
+! Diff-Path: ../patches/118_optimized/118_optimized-s-1746190167-14400.patch
 ! Title: EasyPrivacy (Optimized)
 ! Description: Privacy protection supplement for EasyList.
-! Version: 2.1.43.34
-! TimeUpdated: 2025-05-02T08:37:59+00:00
+! Version: 2.1.43.35
+! TimeUpdated: 2025-05-02T12:44:43+00:00
 ! Expires: 5 days (update frequency)
 &&sub19=undefined&sub20=undefined
 &action=js_stats
@@ -690,6 +690,7 @@
 /plugins/duracelltomi-google-tag-manager/*
 /plugins/exactmetrics-
 /plugins/nsmg-tracking/*
+/plugins/tagging/*
 /plugins/visitors-traffic-
 /plugins/wp-vgwort/*
 /pmc-cxense.js
@@ -781,6 +782,7 @@
 /sfdc/networktracking.js
 /shared/sentry/*
 /shopify-boomerang-
+/shopify-datalayer-minified.js
 /shopify/track.js
 /shopify_stats.js
 /shopifycloud/shopify/assets/shop_events_listener-$script
@@ -932,6 +934,7 @@
 /umami.js
 /uniclick.js?attribution=
 /urchin.js
+/user-data-minified.$script
 /userdata_n?
 /usertracking.js
 /utag.sync.js
@@ -1098,13 +1101,19 @@ _webanalytics.
 /csi_204?$image,other,ping,script
 /gen_204?$image,other,ping,script
 /generate_204?$image
+&cx=c&gtm=
+&ep.analytics_storage=
 &event_name=page_view&
 &l=dataLayer&cx=c
 .js?id=GTM-
+/*JmVu.js?sp=
+/*JmVu.js?tg=
 /ns.html?id=GTM-
+/tag/proxy?id=G-
 ://gtm.*.js?st=
 ://load.*.js?st=$~third-party
 ://sgtm.*.js?
+://tagging.*.js?aw=
 ||adservice.google.
 ||google.*/url?$ping
 ||google.com/gen_204?
@@ -4950,6 +4959,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||tag.rmp.rakuten.com^
 ||tag.statshop.fr^
 ||tagger.opecloud.com^
+||tagging.shiftdigitalapps.io^
 ||taggstar.com^*/taggstar.min.js
 ||tags.catapultx.com^
 ||tags.dxmdp.com^
@@ -6808,6 +6818,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||promos.investing.com/*/digibox.gif?
 ||proporn.com/ajax/log/
 ||proxima.midjourney.com^
+||publicwww.com/mtm/mtm.js
 ||pulsar.ebay.com^
 ||pulse.delta.com^
 ||pumpkin.abine.com^
@@ -6901,6 +6912,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||sst.shopware.com^
 ||sstats.adobe.com^
 ||stan.xing.com^
+||stape.brascast.com^
 ||startpage.com/sp/$ping
 ||startpage.com/sp/dplpxs?
 ||startpage.com/sp/jst
@@ -28107,6 +28119,7 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=thepiratebay.org|vi
 ||tweakers.nl/track/
 ||two.tio.nl^
 ||vinted.nl/relay/events
+||woonboulevardpoortvliet.nl/*/Tagging_GTM/
 ||analytics.sanoma.fi^
 ||events.il.fi^
 ||io-tech.fi/io/www/delvr/lokiz.php

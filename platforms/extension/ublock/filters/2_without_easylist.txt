@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: tMmZEVxTJzQYrc7JHOj53w
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746173560-3600.patch
+! Checksum: rTtZJyYzjhnqsrXZjtO0UA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746177108-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.71
-! TimeUpdated: 2025-05-02T08:08:23+00:00
+! Version: 2.3.81.72
+! TimeUpdated: 2025-05-02T09:07:17+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -40079,8 +40079,6 @@ medonet.pl,plejada.pl,onet.pl,auto-swiat.pl,komputerswiat.pl##.ods-ads__ph
 .pl/*/*/tags?domain=$~third-party,xmlhttprequest,domain=komputerswiat.pl|auto-swiat.pl
 ! komputerswiat.pl - ad leftovers
 plejada.pl,auto-swiat.pl,newsweek.pl,onet.pl,medonet.pl,komputerswiat.pl###onet-ad-flat-belkagorna
-! https://github.com/AdguardTeam/AdguardFilters/issues/48819
-pclab.pl##+js(no-setTimeout-if, document.body.getAttribute("abp"))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64295
 onet.pl#$#.insertedSlot { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/155987
@@ -47955,6 +47953,7 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+tecadmin.net##.a-wrap:has(> .adsbygoogle)
 ||movies-2015.com/assets/script
 movies-2015.com###mdl-register
 movies-2015.com##+js(no-setTimeout-if, -register)

@@ -1,9 +1,9 @@
-! Checksum: hxquk//pTZ78jB1BAfryYw
-! Diff-Path: ../patches/3/3-s-1746188089-3600.patch
+! Checksum: uUhsSMNb3DIT6dSSMG0rgA
+! Diff-Path: ../patches/3/3-s-1746191842-3600.patch
 ! Title: AdGuard Tracking Protection filter
 ! Description: The most comprehensive list of various online counters and web analytics tools. Use this filter if you do not want your actions on the Internet to be tracked.
-! Version: 2.0.84.19
-! TimeUpdated: 2025-05-02T12:10:24+00:00
+! Version: 2.0.84.20
+! TimeUpdated: 2025-05-02T13:13:10+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -542,6 +542,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! test for CNAME
 ||kib.hu^
 !
+||api.visitorapi.com^$third-party
+||analytics.scorpion.co^
 ||tagging.shiftdigitalapps.io^
 ||adat.videa.hu^
 ||adat.ingatlanbazar.hu^
@@ -41307,6 +41309,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||data.festool.pl^
+||stape.brascast.com^
 ||tagging.040fit.nl^
 ||tagging.4-pieds.com^
 ||tagging.anker18.be^
@@ -44285,6 +44289,7 @@ charlestownwyllie.oaklawnnonantum.com^
 !+ NOT_OPTIMIZED
 /.well-known/private-click-measurement
 !
+/gtag/js?id=
 &cx=c&gtm=
 &ep.analytics_storage=
 /*JmVu.js?sp=
@@ -44963,6 +44968,7 @@ _tracking.php?b=
 !
 ! NOTE: Specific rules
 !
+||storage.googleapis.com/widget.kenect.com/resources/scripts/newRelic.js.gz
 ||woonboulevardpoortvliet.nl/*/Tagging_GTM/
 ||publicwww.com/mtm/mtm.js
 ||hrw.org/libraries/custom/simpleanalytics.js
@@ -47422,7 +47428,6 @@ suara.com##.dailymotion-widget
 ||gillette.com/index.php?action=track_
 ||deine-tierwelt.de/external/analytics.js
 ||deine-tierwelt.de/static/js/*tracking.js
-||p.rst.im/q/www.googletagmanager.com/gtag/js?id=
 ||houzz.com/js/log?p=
 ||admin.guide-rank.com/guiderank-tracking/
 ||image.ruliweb.com/view/log
@@ -49407,6 +49412,14 @@ link.gmapp*.net$image
 ! it's problematic that due to how Gmail proxy work, these domains aren't even exposed on the network level
 ! fortunately, extensions can see them (Gmail puts the real URL in the location.hash part of the src)
 !
+! Plex
+sp.plex.tv/q/$image
+sp.plex.tv%2Fq%2F$image
+links.plex.tv/s/eo/$image
+links.plex.tv%2Fs%2Feo%2F$image
+! Optimizely
+img.srv2.de/assets/bm/imh/*.gif?utm_$image
+img.srv2.de%2Fassets%2Fbm%2Fimh%2F*.gif%3Futm_$image
 ! theathletic.com
 sp.e2.theathletic.com/q/$image
 sp.e2.theathletic.com%2Fq%2F$image

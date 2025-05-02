@@ -1,9 +1,9 @@
-! Checksum: 221bOQD9HMCmz9r0h7E5nQ
-! Diff-Path: ../patches/14/14-s-1746188062-3600.patch
+! Checksum: /5Sz7I4xNZ1RZ7IXNJlyqQ
+! Diff-Path: ../patches/14/14-s-1746191818-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.10
-! TimeUpdated: 2025-05-02T12:10:54+00:00
+! Version: 2.2.29.11
+! TimeUpdated: 2025-05-02T13:13:31+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1689,6 +1689,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||podname.com^
 ||cmpv2.tori.fi^
 ||cookies.pro-idea.cz^
 ||cookies.praguebest.cz^
@@ -2505,6 +2506,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+ahbmedya.com##.policy
 m3datarecovery.com###user_popup
 otpbank.md#$#body { overflow: auto !important; }
 otpbank.md#$#.cookie-panel { display: none !important; }
@@ -15278,7 +15280,7 @@ transparency.meta.com,fort.fb.com,transparency.fb.com,facebookcareers.com,messen
 ai.meta.com,business.whatsapp.com,business.instagram.com,facebook.com#$#div[data-testid="cookie-policy-manage-dialog"] { display: none !important; }
 metacareers.com##div[data-testid="cookie-policy-manage-dialog"]
 messenger.com,facebook.com#%#//scriptlet("remove-class", "_31e", "body > ._li")
-threads.com#%#//scriptlet('trusted-set-cookie-reload', 'cb', '1_2030_01_01_1')
+wit.ai,threads.com#%#//scriptlet('trusted-set-cookie-reload', 'cb', '5_2030_01_01_1')
 !
 primoza.de#$##cookieAcivateModal { display: none !important; }
 primoza.de#$#body { overflow: auto !important; }
@@ -16035,7 +16037,6 @@ e-food.gr#%#//scriptlet('set-cookie-reload', 'accepted_cookies', 'true')
 diag.pl#%#//scriptlet('set-local-storage-item', 'DIAG_COOKIES_AGREEMENT', 'true')
 americanexpress.ch,swisscard.ch#%#//scriptlet('set-cookie', 'sc-privacy-settings', 'true')
 perplexity.ai#%#//scriptlet('set-cookie', 'trackingAllowed', 'false')
-threads.net#%#//scriptlet('trusted-set-cookie-reload', 'cb', '1_2023_07_05_2-3')
 thegamingwatcher.com#%#//scriptlet('set-cookie', 'snc-cp', '2')
 technopat.net#%#document.cookie='cmplz_consented_services={"youtube":true};path=/;';
 mentimeter.com#%#//scriptlet('set-cookie-reload', 'has_approved_cookie_policy', '0')
@@ -50422,6 +50423,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+globo.com###videos-tab-wrapper > ul > div.horizon-impression-wrapper
 discuss.techlore.tech##[data-section-name="forum-sponsors"]
 metadefender.com##.bg-bluerocratic
 wondershare.com.ru##.wsc-ad-plugin-container

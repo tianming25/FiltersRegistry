@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: arejr8LQLzxnSCp4HAwzeA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746184258-3600.patch
+! Checksum: 7NcnKdZrv0EqH1ltTficpw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746188092-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.81.74
-! TimeUpdated: 2025-05-02T11:06:21+00:00
+! Version: 2.3.81.75
+! TimeUpdated: 2025-05-02T12:10:11+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -20146,6 +20146,9 @@
 ! Good: ||example.org/adblock/detect.js
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
+!
+! GTM-related detection ex. https://www.bakkerij-wouters.be/
+://tagging.*/settings.js
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204150
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,redirect=googlesyndication.com/adsbygoogle.js
@@ -47954,6 +47957,9 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+indiaglitz.com##.top_cms_ads
+indiaglitz.com##.resize > a[target="_blank"] > img
+indiaglitz.com##+js(abort-current-script, $, /landingpage|bannermain/)
 abcnews.go.com##.ScrollSpy_container > div[data-container="band"]:has(> div[class] > div.taboola)
 abcnews.go.com##.ScrollSpy_container > div[data-container="band"]:has(> div[class] > div[data-box-type^="fitt-adbox-thinbanner"])
 abcnews.go.com##.navigation__hulu

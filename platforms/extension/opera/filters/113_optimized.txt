@@ -1,9 +1,9 @@
-! Checksum: sY7nDGrnhjkL0s902bOItQ
-! Diff-Path: ../patches/113_optimized/113_optimized-s-1746147121-14400.patch
+! Checksum: iQ67oveAbNYH3PGoDv/HXg
+! Diff-Path: ../patches/113_optimized/113_optimized-s-1746160932-14400.patch
 ! Title: Liste FR (Optimized)
 ! Description: Additional filter list for websites in French. Already included in AdGuard French filter.
-! Version: 2.1.69.12
-! TimeUpdated: 2025-05-02T00:47:41+00:00
+! Version: 2.1.69.13
+! TimeUpdated: 2025-05-02T04:37:56+00:00
 ! Expires: 10 days (update frequency)
 &ad_count=
 &ad_unit_
@@ -436,6 +436,7 @@ _werbebanner_
 /wp-content/plugins/mts-wp-in-post-ads/*
 /wp-content/plugins/quick-adsense-reloaded/*
 /wp-content/plugins/rnotify1.*/assets/public/custom.js
+/wp-content/plugins/wp-adsense-guard/*
 /wp-content/plugins/wp-banners/*
 /wp-content/themes/*/ads/*
 /wp-content/uploads/wp-banners/*
@@ -508,6 +509,7 @@ _build=iclick-$popup
 ||shop^*?scontext_r=$popup
 ||shop^*cuid/?
 ||xyz^*&zoneid=$popup
+||380tl.com^$third-party
 ||3xtraffic.com^$third-party
 ||acexedge.com^$third-party
 ||acxiom-online.com^$third-party
@@ -604,6 +606,7 @@ _build=iclick-$popup
 ||ezstatic.com^$third-party
 ||fancybar.net^$third-party
 ||fgn.me^$third-party
+||frtyj.com^$third-party
 ||futureadlabs.com^$third-party
 ||gagner-une-console.com^$third-party
 ||gestion2web.com^$third-party
@@ -718,6 +721,7 @@ _build=iclick-$popup
 ||vyking.io^$third-party
 ||wedoo.com^$third-party
 ||widespace.com^$third-party
+||xaddad.com^$third-party
 ||xcamz.xyz^$third-party
 ||xiepl.com^$third-party
 ||xn--ae-tja.ch^$third-party
@@ -766,6 +770,7 @@ _build=iclick-$popup
 ||admedia.network^
 ||admonishmentfastest.com^
 ||adslop.com^
+||adsrealpublic.ru^
 ||adtneosqnnitef.com^
 ||adtoqbuejunef.com^
 ||adulateprofessnorth.com^
@@ -967,6 +972,7 @@ _build=iclick-$popup
 ||fumiercrapper.com^
 ||functionssubqueries.com^
 ||furordosed.shop^
+||furyprosecutionkitchen.com^
 ||fusionflirt.com^
 ||fznpq.com^
 ||geneurawipers.com^
@@ -978,11 +984,11 @@ _build=iclick-$popup
 ||girl-topdate.com^
 ||glodsidrik.net^
 ||glum-mortgage.com^
-||gmelinaseller.com^
 ||go2yd.com^
 ||goavoafu.com^
 ||gobblerpoky.top^
 ||goeco.mobi^
+||gofimtaisa.net^
 ||gorrio.ru^
 ||greysummergo.biz^
 ||gribseep.net^
@@ -1141,7 +1147,6 @@ _build=iclick-$popup
 ||ndyzz.com^
 ||neatsafety.com^
 ||nefrvjfkzus.com^
-||negatebogfern.com^
 ||nettcruet.top^
 ||newscode.me^
 ||newup.bid^
@@ -1194,7 +1199,6 @@ _build=iclick-$popup
 ||pertholin.com^
 ||pgvpnkgp.com^
 ||phenver.com^
-||physidpraxes.com^
 ||pianolamickeys.com^
 ||pilusligalerie.com^
 ||pimplyhauling.com^
@@ -1258,7 +1262,6 @@ _build=iclick-$popup
 ||redichat.com^
 ||remainmother.com^
 ||renaissanto.com^
-||resalespursuit.com^
 ||retinaesprent.com^
 ||retiraltasty.top^
 ||rhasuecism.top^
@@ -1303,6 +1306,7 @@ _build=iclick-$popup
 ||silimbompom.com^
 ||sinopiacoronal.top^
 ||skymedia7.me^
+||slaitottawa.com^
 ||slideslive.com^
 ||sljtqfcyi.com^
 ||slova-accordy.ru^
@@ -1314,7 +1318,6 @@ _build=iclick-$popup
 ||sodhef.com^
 ||soknm.com^
 ||solemndates.com^
-||solerasignori.com^
 ||sparelli.com^
 ||splendlddate.com^
 ||srdymhfopxz.com^
@@ -1362,7 +1365,6 @@ _build=iclick-$popup
 ||trypacesious.shop^
 ||tsuwyehyxvis.com^
 ||ttsycqxjvgrya.xyz^
-||tuitivegaff.com^
 ||turbo-cdn.net^
 ||turfjxedwrbafb.com^
 ||uaadi.com^
@@ -1412,6 +1414,7 @@ _build=iclick-$popup
 ||wheeledqat.com^
 ||whehilru.com^
 ||whiteclick.biz^
+||wickedwrests.com^
 ||woalaiwhoosh.net^
 ||wooden-comfort.com^
 ||workcahoots.com^
@@ -1563,6 +1566,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||api.gamerprices.com/compare/$third-party
 ||apycdn.com^*/banner/
 ||arc.io/widget$third-party
+||astore.amazon.com^$subdocument,third-party
 ||asumi.shinobi.jp^
 ||autotrends.be^*/widget/$third-party
 ||awin1.com/awclick.php?
@@ -2100,7 +2104,6 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||winamax.fr/img/pub/
 ||winds-up.com/pub/
 ||wp.com/www.echangedeclics.*/$image,script,domain=~echangedeclics.com|~echangedeclics.fr
-||x1337x.*/css/images/atopg.gif
 ||xavbox.com/ban/
 ||zebest-3000.com/*.html
 ||zone-streaming.fr/wp-content/uploads/amazon-video.jpg
@@ -2337,6 +2340,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.coreads-wrapper
 ##.coreads_habillage
 ##.creatividad
+##.description_ad
 ##.desktop-ff-ads
 ##.desktop-ff-ads__main
 ##.desktop-mobile-ads__desktop
@@ -2494,6 +2498,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.pub_info
 ##.pub_leaderboard
 ##.pub_left
+##.pub_mobile
 ##.pub_pave
 ##.pub_sky
 ##.pub_slot
@@ -2822,6 +2827,7 @@ hitek.fr##.h_ad_970x250
 homecinema-fr.com##.hab_link
 cbanque.com,clubpronostics.com,gratuiciel.com,lelogicielgratuit.com,logicielmac.com,logitheque.com,made-in-algeria.com,made-in-tunisia.net,maghrebex.com,mediscom.com,quetelecharger.com,toucharger.com##.habillage
 realite-virtuelle.com##.halfpageAd
+avis-express.com,lnr-dz.com##.header-banner
 medialot.fr##.header-sub
 ouedkniss.com##.home-land-header
 ouedkniss.com##.home-promo-header
@@ -2937,6 +2943,7 @@ ccm.net,commentcamarche.com,commentcamarche.net##[class$="_adsense"]
 amazon.fr##[class*="-advertising-"]
 amazon.fr##[class*="-sponsored-"]
 filecrypt.cc,filecrypt.co##[class*="adb"]
+leparisien.fr##[class*="ads-"]
 winamax.fr##[class][onclick]
 carrefour.fr##[class^="advertising-placeholder"]
 webstar-electro.com##[class^="banner"]

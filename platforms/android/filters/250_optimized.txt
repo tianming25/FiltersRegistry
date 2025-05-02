@@ -1,5 +1,5 @@
-! Checksum: j+i+H/MeNK6CZcMBJx7pag
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1746074572-14400.patch
+! Checksum: 5LojsrLITjYkc6+hoQOoKg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746160918-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.84
@@ -1883,6 +1883,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ##.share__list:not(html,body,:empty)
 ##.share_area:not(html,body,:empty)
 ##.share_btn:not(html,body,:empty)
+##.share_icon_area:not(html,body,:empty)
 ##.share_toggle:not(html,body,:empty)
 ##.shareBar:not(html,body,:empty)
 ##.shareBottom:not(html,body,:empty)
@@ -2466,6 +2467,7 @@ $removeparam=nx_source
 $removeparam=oprtrack
 $removeparam=ysclid
 &uclick=*&uclickhash=$document,removeparam
+/?rb=*&zoneid=$document,removeparam
 $document,removeparam=/^\??utm_.*$/i,domain=~tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.*|~carrefourpl.snrpage.com|~justdial.com|~pepper.pl|~gaugau.futabanet.jp|~uploadnow.io
 $document,removeparam=/^itm_.*$/,domain=~redir.tradedoubler.com
 $document,removeparam=/^stm_.*$/,domain=~redir.tradedoubler.com
@@ -2511,6 +2513,10 @@ $document,removeparam=guce_referrer
 $document,removeparam=guce_referrer_sig
 $document,removeparam=psf_variant
 $document,removeparam=bxid
+$document,removeparam=cndid
+$document,removeparam=hasha
+$document,removeparam=hashb
+$document,removeparam=hashc
 $document,removeparam=irgwc
 $document,removeparam=/^clickid=.*$/i,domain=~discover.*
 $document,removeparam=c[0]
@@ -2745,6 +2751,7 @@ $document,removeparam=/^subid2=.*$/i
 $document,removeparam=/^subid3=.*$/i
 $document,removeparam=/^subid4=.*$/i
 $document,removeparam=/^subid5=.*$/i
+$removeparam=tid1
 $removeparam=tid3
 $removeparam=avad
 $removeparam=ckmc
@@ -2908,6 +2915,7 @@ $removeparam=tpmn_buid
 $removeparam=adsafe_type
 $removeparam=variationId
 $removeparam=beeswax_id
+$removeparam=ses_id
 $removeparam=_gfid
 $removeparam=mt_exid
 $removeparam=_sid
@@ -3569,6 +3577,7 @@ $removeparam=rec,domain=argos.co.uk|roboform.com
 ||blog.getadblock.com^$removeparam=gi
 $removeparam=nvid,domain=nvidia.com
 $removeparam=ico,domain=dailymail.co.uk|inews.co.uk|metro.co.uk|thisismoney.co.uk
+$removeparam=/^cid=DSS-Affiliate.*$/,domain=disneyplus.com|espn.com|hotstar.com|starplus.com
 ||mercadolibre.com.ar^$removeparam=pdp_filters
 $removeparam=cxt,domain=twitter.com|x.com
 ||comodo.com^$removeparam=track
@@ -3659,6 +3668,7 @@ $removeparam=mar,domain=nextdoor.com
 ||dzen.ru^$removeparam=yredirect
 ||youtube.com^$removeparam=embeds_euri
 ||youtube.com^$removeparam=source_ve_path
+^ref=hackernoon.com^$removeparam=ref
 ||notion.so^$removeparam=gspk
 ||notion.so^$removeparam=gsxid
 ||notion.so^$removeparam=pscd
@@ -3810,6 +3820,7 @@ $document,removeparam=s_campaign
 ||www.roblox.com^$document,removeparam=gameSetTargetId
 ||www.roblox.com^$removeparam=gameSearchSessionInfo
 $document,removeparam=entrypoint,domain=bing.com
+$document,removeparam=esrc,domain=arstechnica.com|newyorker.com|wired.com
 ||audible.$removeparam=creativeId
 ||audible.$removeparam=pageLoadId
 ||audible.$removeparam=/^ref/

@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/2.txt",
 			"trustLevel": "full",
-			"version": "2.3.81.78",
-			"timeUpdated": "2025-05-02T15:06:39+0000",
+			"version": "2.3.81.79",
+			"timeUpdated": "2025-05-02T16:07:59+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -389,8 +389,8 @@
 			"groupId": 2,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/3.txt",
 			"trustLevel": "full",
-			"version": "2.0.84.21",
-			"timeUpdated": "2025-05-02T14:06:48+0000",
+			"version": "2.0.84.22",
+			"timeUpdated": "2025-05-02T16:08:11+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -410,8 +410,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/4.txt",
 			"trustLevel": "full",
-			"version": "2.1.14.8",
-			"timeUpdated": "2025-05-02T12:10:27+0000",
+			"version": "2.1.14.9",
+			"timeUpdated": "2025-05-02T16:08:14+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -623,8 +623,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.29.13",
-			"timeUpdated": "2025-05-02T15:07:12+0000",
+			"version": "2.2.29.14",
+			"timeUpdated": "2025-05-02T16:08:42+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -708,8 +708,8 @@
 				"ext_android_cb"
 			],
 			"trustLevel": "full",
-			"version": "2.0.10.95",
-			"timeUpdated": "2025-04-29T19:06:36+0000",
+			"version": "2.0.10.96",
+			"timeUpdated": "2025-05-02T16:08:50+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -750,8 +750,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/19.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.70",
-			"timeUpdated": "2025-05-02T12:11:01+0000",
+			"version": "2.0.54.71",
+			"timeUpdated": "2025-05-02T16:08:53+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -1689,8 +1689,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/windows/filters/224.txt",
 			"trustLevel": "full",
-			"version": "2.1.36.14",
-			"timeUpdated": "2025-05-02T15:07:23+0000",
+			"version": "2.1.36.15",
+			"timeUpdated": "2025-05-02T16:09:01+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"

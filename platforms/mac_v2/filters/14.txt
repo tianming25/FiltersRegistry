@@ -1,9 +1,9 @@
-! Checksum: DH3KBCkyAroraNWnljZ1zA
-! Diff-Path: ../patches/14/14-s-1746169876-3600.patch
+! Checksum: dHfe/3vW+gx6cgp/FzuEQQ
+! Diff-Path: ../patches/14/14-s-1746173564-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.5
-! TimeUpdated: 2025-05-02T07:07:30+00:00
+! Version: 2.2.29.6
+! TimeUpdated: 2025-05-02T08:08:54+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2505,6 +2505,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+otpbank.md#$#body { overflow: auto !important; }
+otpbank.md#$#.cookie-panel { display: none !important; }
 travelweekly.co.uk###aos-CookiePolicy
 mhwildshub.com##.mantine-Affix-root
 sputnik8.com##.uses-cookies-banner
@@ -16934,6 +16936,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204432
+otpbank.md#@#.cookie-panel:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204399
 @@||cdn.privacy-mgmt.com/mms/v2/get_site_data$domain=aamulehti.fi
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=aamulehti.fi
@@ -34438,6 +34442,7 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+society19.com##.thb_widget_subscribe
 tatar-inform.ru##.main__icons__dzen
 realnoevremya.ru##article > noindex:has(> div.centeredText > p > a[href="https://t.me/realnoevremya"])
 travelweekly.co.uk###aoc-185-1
@@ -40320,7 +40325,7 @@ boston.com##.m-generic-cta--email-signup
 unian.net##a[href="https://vb.me/unian_web"]
 mskgazeta.ru##.telega_box
 mskgazeta.ru##.zen-widget
-altyazi.net##.thb-newsletter-form
+society19.com,altyazi.net##.thb-newsletter-form
 efahrer.chip.de##.subscriber-form
 mobilemarketingreads.com##[class*="-newsletter"]
 washingtonpost.com#$##qa-modal-body { display: none !important; }

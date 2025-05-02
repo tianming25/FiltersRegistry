@@ -1,9 +1,9 @@
-! Checksum: ygZ/vqadKK14I1ETL5iTIQ
-! Diff-Path: ../patches/18/18-s-1746169882-3600.patch
+! Checksum: +NA6xeZcs3E4v4ZAcxQwQQ
+! Diff-Path: ../patches/18/18-s-1746173570-3600.patch
 ! Title: AdGuard Cookie Notices filter
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.60.97
-! TimeUpdated: 2025-05-02T07:07:35+00:00
+! Version: 2.0.60.98
+! TimeUpdated: 2025-05-02T08:08:58+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2505,6 +2505,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+otpbank.md#$#body { overflow: auto !important; }
+otpbank.md#$#.cookie-panel { display: none !important; }
 travelweekly.co.uk###aos-CookiePolicy
 mhwildshub.com##.mantine-Affix-root
 sputnik8.com##.uses-cookies-banner
@@ -16936,6 +16938,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204432
+otpbank.md#@#.cookie-panel:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204399
 @@||cdn.privacy-mgmt.com/mms/v2/get_site_data$domain=aamulehti.fi
 @@||cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js$domain=aamulehti.fi

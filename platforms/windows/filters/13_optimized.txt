@@ -1,9 +1,9 @@
-! Checksum: T7t8GbNKPETnH8V67hwg7w
-! Diff-Path: ../patches/13_optimized/13_optimized-s-1746123191-3600.patch
+! Checksum: wXgj22mWi9+lB4kRIcTQfA
+! Diff-Path: ../patches/13_optimized/13_optimized-s-1746173569-3600.patch
 ! Title: AdGuard Turkish filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.56.6
-! TimeUpdated: 2025-05-01T18:09:01+00:00
+! Version: 2.0.56.7
+! TimeUpdated: 2025-05-02T08:08:48+00:00
 ! Expires: 12 hours (update frequency)
 ||movturs.click^
 ||dontmakethem.club^
@@ -4971,6 +4971,8 @@ dizilla.nl###router-view > div > div > div[class]:has(> div:only-child > ad)
 !+ NOT_VALIDATE
 ||video.twimg.com/ext_tw_video/*/*.m3u8$domain=/^[a-zA-Z]{1\,6}\.[a-zA-Z0-9]{15\,}.*\d+.*\.click$/
 ||googleusercontent.com/img/*/crt$domain=/selcuksportshd\d+\.xyz/
+!+ NOT_VALIDATE
+[$domain=/^main\.uxsyplayer[a-z0-9]+\.click$/]#%#//scriptlet('set-constant', 'document.referrer', '')
 !+ NOT_VALIDATE
 [$url=/^https?:\/\/(?:cinque|due|tre)\.(?=.*[0-9])[a-z0-9]{16}\.click\/.*\/player\.html/]#%#//scriptlet('set-constant', 'config.advertisement.enabled', 'false')
 [$domain=/^i\[a-z\]*\.strmrdr\[a-z0-9\]+\..*/]#%#//scriptlet('set-constant', 'adscfg.enabled', 'false')

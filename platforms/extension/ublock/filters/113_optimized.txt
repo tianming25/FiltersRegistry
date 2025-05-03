@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: bcS0dkRbn+B/nU0CxDz+3g
-! Diff-Path: ../patches/113_optimized/113_optimized-s-1746233514-14400.patch
+! Checksum: C590b3MLUVenTwjn4EpXjQ
+! Diff-Path: ../patches/113_optimized/113_optimized-s-1746247295-14400.patch
 ! Title: Liste FR (Optimized)
 ! Description: Additional filter list for websites in French. Already included in AdGuard French filter.
-! Version: 2.1.69.18
-! TimeUpdated: 2025-05-03T00:47:23+00:00
+! Version: 2.1.69.19
+! TimeUpdated: 2025-05-03T04:36:59+00:00
 ! Expires: 5 days (update frequency)
 &ad_count=
 &ad_unit_
@@ -275,6 +275,7 @@
 ://adss.
 ://adx.
 ://afflight.$third-party
+://ashot.$script
 ://banner.*click
 ://banner.*utm_
 ://banners2.$third-party
@@ -478,6 +479,7 @@ _werbebanner_
 &request_*&zoneid=$popup
 &subAffId=$popup
 &tid=*&ref=$popup
+&type=*&iframeDetected=$popup
 &url_bnm_redirect=$popup
 &utm_*=cpm&$popup
 &utm_ad=$popup
@@ -532,6 +534,7 @@ _build=iclick-$popup
 ||adpaths.com^$third-party
 ||adpick.co.kr^$third-party
 ||adpicker.net^$third-party
+||adpixo.com^$third-party
 ||adrequest.net^$third-party
 ||adrock.tv^$third-party
 ||adsb4trk.com^$third-party
@@ -794,7 +797,6 @@ _build=iclick-$popup
 ||amusingsnow.pro^
 ||anadistil.com^
 ||analaxadulatory.com^
-||androidundwelt.com^
 ||animeplaynow.com^
 ||apartgamble.com^
 ||aperytaplet.com^
@@ -830,7 +832,6 @@ _build=iclick-$popup
 ||biokrfvnvs.com^
 ||bitonlyana.live^
 ||bkrkv.com^
-||blawnsodium.com^
 ||blisterlngdates.net^
 ||blsznpcpmsjmeq.com^
 ||bmcnf.pro^
@@ -882,7 +883,6 @@ _build=iclick-$popup
 ||cstwpush.com^
 ||cuculesectary.com^
 ||culterwhether.com^
-||cutupssuss.top^
 ||cxmolk.com^
 ||damageddistance.com^
 ||date-vortex.com^
@@ -972,7 +972,6 @@ _build=iclick-$popup
 ||friendlybunny.com^
 ||fumiercrapper.com^
 ||functionssubqueries.com^
-||furordosed.shop^
 ||furyprosecutionkitchen.com^
 ||fusionflirt.com^
 ||fznpq.com^
@@ -1083,7 +1082,6 @@ _build=iclick-$popup
 ||kuptaigroo.net^
 ||kvsadman.com^
 ||laikeeboathaip.com^
-||lammiewarbite.top^
 ||langretsahibah.com^
 ||largeconfusion.com^
 ||laserveradedomaina.com^
@@ -1101,7 +1099,6 @@ _build=iclick-$popup
 ||looksmartppc.com^
 ||lotaissouxapse.com^
 ||loveonlinee.net^
-||lqkkoozmawemy.top^
 ||lvkwz.com^
 ||lvtuucmyfpz.com^
 ||lzexnxwjsmof.com^
@@ -1129,7 +1126,6 @@ _build=iclick-$popup
 ||montondirgy.com^
 ||moredatefind.com^
 ||morinelbewater.com^
-||mournerslath.com^
 ||mousheen.net^
 ||moyslovar.ru^
 ||mr2cnjuh34jb.com^
@@ -1340,11 +1336,9 @@ _build=iclick-$popup
 ||tauvineebisigi.net^
 ||tbmods.ru^
 ||tc-clicks.com^
-||tearfulawee.top^
 ||tech-script.ru^
 ||tercabilis.info^
 ||tetabesl.info^
-||tetheryplagues.com^
 ||tfpipnwengia.com^
 ||thaimtotchouz.net^
 ||thaurgaiboocoah.com^
@@ -1353,7 +1347,6 @@ _build=iclick-$popup
 ||thepsotsaims.com^
 ||thewhizproducts.com^
 ||theyeyilou.top^
-||ticticungag.top^
 ||timaariraconiansta.org^
 ||tjfot.com^
 ||tojinr.com^
@@ -1374,7 +1367,6 @@ _build=iclick-$popup
 ||umspecrek.ru^
 ||uncoatespave.com^
 ||undom.net^
-||unprayinterim.com^
 ||unwritmirific.com^
 ||uploadmix.net^
 ||uploopforged.com^
@@ -1713,6 +1705,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||tounet.com/button.php
 ||toutsurlesabdos.com/images/bannieres_$domain=europeplusnet.info
 ||tripadvisor.*/partner/$third-party
+||tripleclicks.com^$subdocument
 ||try.abtasty.com^$domain=planet.fr
 ||turk-dreamworld.com/images/sponsor/
 ||ucoz.net/cgi/uutils.fcg?
@@ -1951,6 +1944,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||egaliteetreconciliation.fr/img/
 ||elahmad.com/ads/
 ||elahmad.com/js/extreme.js
+||electromenager-compare.com/images/main/*/pub.jpg
 ||elheddaf.com/data/pub/
 ||emploitic.com/images/banners/
 ||emu-france.com/wp-content/themes/emufrance/*casino
@@ -2019,6 +2013,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ||mediabong.*/loader.js
 ||medialot.fr/wp-content/uploads/*/Logo-
 ||medialot.fr/wp-content/uploads/*/pub-
+||mediscom.com/imagix/cv_annonceurs/
 ||mobilealgerie.com/wp-content/uploads/*/banniere-
 ||monbestseller.com/sites/default/files/pushs/
 ||monpetitforfait.com/wp-content/uploads/*/ban
@@ -2185,6 +2180,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ###fake-player-wrapper
 ###fixed-ads
 ###foot_pub
+###footer-advertising
 ###footer_pub
 ###google-ads-1
 ###google-ads-2
@@ -2355,6 +2351,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.e3lan-cell
 ##.e3lan-post
 ##.e3lan300-600
+##.e3lanat-layout-rotator
 ##.ebam_ad
 ##.fakeAd
 ##.fake_player
@@ -2542,6 +2539,7 @@ $stylesheet,third-party,domain=1fichier.com|7-up.net|9xupload.me|adshrinks.com|a
 ##.sd-ad-container
 ##.section-ads-center
 ##.shareaholic-canvas
+##.shopperAds
 ##.side-pub
 ##.sidebar-adv
 ##.sidebar-header-pub
@@ -3053,6 +3051,7 @@ ouest-france.fr##div[id^="pub_native"]
 ouest-france.fr##div[id^="pub_pave_article"]
 universfreebox.com##div[id^="publicite-"]
 zonebourse.com##div[id^="zpp"]
+impotsurlerevenu.org##div[style*="float:right;width:300px;"]
 cpasbien-support.com,cpasbien.do,extreme-down.party,fmovies.ec,fmoviesz-to.com,gktorrent.cz,hdss.yachts,lookmovie-official.live,lookmovie2-official.lol,moviesjoy.ad,oxtorrent3.com,sflix.ad,tinyzone.ad,ultimate-torrent1.com,wiflix.rent,www-yts.com,yggtorrent.cc##div[style*="opacity:"]
 superphysique.org##div[style*="text-align: center"][style*="width:250px"]
 judgehype.com##div[style*="width:300px;height:600px;"]

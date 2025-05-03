@@ -1,9 +1,9 @@
-! Checksum: M54ejPRVGkVDSoT7mtZMog
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1746233518-14400.patch
+! Checksum: moEW5gw9YPbaVWlM/OWNRg
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1746247299-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.72
-! TimeUpdated: 2025-05-03T00:47:35+00:00
+! Version: 2.1.40.73
+! TimeUpdated: 2025-05-03T04:37:09+00:00
 ! Expires: 5 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -185,6 +185,7 @@ _social-bar/
 ###facebookFan
 ###facebookIcon
 ###facebookLike
+###facebookLikeBox
 ###facebookLikeButton
 ###facebookShareButton
 ###facebookWidget
@@ -520,6 +521,7 @@ _social-bar/
 ###socialMediaFacebook
 ###socialMediaSection
 ###socialModal
+###socialNav
 ###socialNetworks
 ###socialShare
 ###socialSharing
@@ -799,6 +801,7 @@ _social-bar/
 ##.article-social-sharing
 ##.article-social-wrapper
 ##.article-socials
+##.article-title-share
 ##.articleShare
 ##.article__header__share
 ##.article__likes
@@ -833,6 +836,7 @@ _social-bar/
 ##.av-share-box
 ##.av-social-share
 ##.avia_fb_likebox
+##.avia_socialcount
 ##.awp-media-share-container
 ##.b-article__social
 ##.b-event_links__share__block
@@ -867,6 +871,8 @@ _social-bar/
 ##.bloc-social
 ##.bloc_float_share
 ##.block-addtoany
+##.block-facebook
+##.block-facebook-inner
 ##.block-sharebar
 ##.block-sharethis
 ##.block-shariff
@@ -991,6 +997,7 @@ _social-bar/
 ##.countShare
 ##.counted-share-vertical
 ##.cp-follow-buttons
+##.cp-social-flyin
 ##.crafty-social-buttons
 ##.cresta-share-icon
 ##.crm-share-list
@@ -1103,6 +1110,7 @@ _social-bar/
 ##.facebook-bg
 ##.facebook-block
 ##.facebook-box
+##.facebook-box-widget
 ##.facebook-follow
 ##.facebook-footer
 ##.facebook-hover
@@ -2527,6 +2535,7 @@ _social-bar/
 ##.social-button-wrapper
 ##.social-buttons--content-before
 ##.social-buttons--follow
+##.social-buttons--uk
 ##.social-buttons-compact
 ##.social-buttons-container
 ##.social-buttons-twitter
@@ -2967,6 +2976,7 @@ _social-bar/
 ##.topSocial
 ##.top_share
 ##.top_social
+##.top_social_icons
 ##.topbar-social
 ##.topbar-socials
 ##.topbar__social-media
@@ -3012,6 +3022,7 @@ _social-bar/
 ##.twitter-wrap
 ##.twitter-wrapper
 ##.twitterBox
+##.twitterFeed
 ##.twitterFollow
 ##.twitterIcon
 ##.twitterItem
@@ -3116,6 +3127,7 @@ _social-bar/
 ##.widget_easy_facebook_page_plugin
 ##.widget_epcl_social
 ##.widget_facebook_likebox
+##.widget_follow
 ##.widget_follow_button_widget
 ##.widget_g1_socials
 ##.widget_jnews_social
@@ -3271,6 +3283,7 @@ _social-bar/
 ||button.like.co^$third-party
 ||buttons.github.io/buttons.js$third-party
 ||connect.ok.ru^$third-party
+||facebook.com/plugins/facepile.php?$third-party
 ||facebook.com/plugins/like.php?$third-party
 ||facebook.com/plugins/like_box.php$third-party
 ||facebook.com/plugins/page.php?$third-party
@@ -3684,6 +3697,7 @@ iflscience.com##.social-share-elements
 nashvillescene.com,stltoday.com##.social-share-links
 cio.com##.social-share-sticky-menu
 arnnet.com.au,csoonline.com,infoworld.com,networkworld.com##.social-share-sticky-menu__wrapper
+trip101.com##.social-sharing-sidebar
 mirror.co.uk,themirror.com##.social-sites
 politico.com##.social-tools__list
 dutchcowboys.nl,rbth.com,whoopsee.it##.social-wrapper
@@ -3978,6 +3992,7 @@ noticias.cancaonova.com###share-widget-horizontal
 superesportes.com.br###shareitens
 tecnoblog.net###tb-banner-whatsapp
 betteranime.net##.anime-down-share
+brasil247.com##.article__notif
 cnnbrasil.com.br##.blogger__social__midia
 fecatolica.com.br##.botoes-sociais-mat
 neofeed.com.br##.box-social-single
@@ -4000,6 +4015,7 @@ folha.uol.com.br##.gallery-widget-carousel__info-share
 tviplayer.iol.pt##.icon-share
 opoder.com.br##.iconCompartilhe
 uol.com.br##.jupiter-share
+brasil247.com##.links
 omelete.com.br##.links--social
 canaltech.com.br##.mb-8.flex.flex-col.flex-wrap.justify-between.gap-3.tablet\:flex-row
 poder360.com.br##.navigation-menu__social-media

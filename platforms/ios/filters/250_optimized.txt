@@ -1,5 +1,5 @@
-! Checksum: A94m9CDW5e14NZs0B1lDVw
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1746160943-14400.patch
+! Checksum: MaBCBzZXC+KlUmmTznWkZg
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746247300-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.84
@@ -39,6 +39,7 @@
 ##div[class^=AppBanner__]
 ##div[id*=smart-banner i]
 ##div[id*=smartbanner i]
+##smart-banner
 ~macgamestore.com##.get-the-app:not(html,body,:empty)
 abril.com.br##.magazine-read
 bilibili.com##.nav-link-item a[href$="app.bilibili.com"]
@@ -141,6 +142,7 @@ softonic.at,softonic.cl,softonic.cn,softonic.co,softonic.co.uk,softonic.com,soft
 !+ NOT_OPTIMIZED
 /^http://imgblaze.net/[a-z0-9]{6}\$/$third-party,subdocument
 ||pressizer.net^$all
+||semygruja.com^$all
 !+ NOT_OPTIMIZED
 ://landings.*_slots/?partner=$document
 ||inquirygrid.com^$all
@@ -1075,6 +1077,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ##a[title="Share on Telegram" i]
 ##a[title="Share on WhatsApp" i]
 ##a[title^="Share to "]
+##amedia-share
 ##amp-social-share
 ##button[data-a-target^=share]
 ~chess.com##button[data-share-url]
@@ -1127,6 +1130,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||social-plugins.line.me/widget/share?url=$subdocument
 ||static.addtoany.com/buttons^$image
 ||static.addtoany.com/menu^$script
+||static.mixi.jp/share_button.html^$subdocument,domain=~mixi.jp
 ||tumblr.com/share/$third-party
 ||twitter.com/share$third-party
 ||widgets.getpocket.com/v1/button?label=pocket$subdocument
@@ -1169,6 +1173,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ~hatena.ne.jp##.hatena-bookmark-button:not(html,body,:empty)
 ~line.me##a[href*="/lineit/share?"]
 ~linkedin.com##.addthis_button_linkedin:not(html,body,:empty)
+~linkedin.com##.linkedin_share:not(html,body,:empty)
 ~linkedin.com##.share-linkedin:not(html,body,:empty)
 ~linkedin.com##a[href*="linkedin.com/cws/share?"]
 ~linkedin.com##a[href*="linkedin.com/shareArticle?"]
@@ -1647,6 +1652,7 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 #@#.text-ad-links
 #@#.text-ads
 #@#.text_ad
+##.text_ad:not(html,body,:empty)
 #@#.text_ads
 #@#.textad
 ##.textad:not(html,body,:empty)

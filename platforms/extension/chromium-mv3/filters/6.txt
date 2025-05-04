@@ -1,8 +1,8 @@
-! Checksum: O7c1edlWRh5IXo+I/XN7zw
+! Checksum: bTewJM3HVoBYgNAQbxsJ9g
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.47.31
-! TimeUpdated: 2025-05-03T15:06:12+00:00
+! Version: 2.0.47.32
+! TimeUpdated: 2025-05-04T14:06:07+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1472,6 +1472,9 @@ it-administrator.de,formel1.de,krautundrueben.de,motorsport-total.com,traktorpoo
 !
 ! NOTE: Specific rules
 !
+chip.de,focus.de##div[data-hk]:has(> .Ad-Slot:only-child)
+focus.de#?#.Article-ReusableText:has(> blockquote > p:only-child:contains(Anzeige))
+focus.de##div[style="display: none !important;"] + div[data-element-tracking-campaign-name]
 ||autokostencheck.de/cd.autokostencheck.de/assets/cosmosdirekt/
 autokostencheck.de##iframe[src^="/cd.autokostencheck.de/assets/cosmosdirekt/"] + div.textlight[style^="margin-top"]
 fotocommunity.de##div[id^="p_ad"]

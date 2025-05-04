@@ -1,9 +1,9 @@
-! Checksum: 7GIv2E8x9hO72/62Dc6eTg
-! Diff-Path: ../patches/250/250-s-1745959173-14400.patch
+! Checksum: V54lSx+TVlqTdsTzb4dnsw
+! Diff-Path: ../patches/250/250-s-1746348042-14400.patch
 ! Title: Dandelion Sprout's Annoyances List
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.16.84
-! TimeUpdated: 2025-04-29T20:36:12+00:00
+! Version: 2.0.16.85
+! TimeUpdated: 2025-05-04T08:37:17+00:00
 ! Expires: 5 days (update frequency)
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
@@ -534,7 +534,7 @@ quora.com##.modal_bg
 linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 25April2025v3
+! OriginalVersion: 04May2025v2
 ! Expires: 1 day
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks blocks domains and domain patterns used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! Note: When asking us to whitelist a site: Make sure the site has some sort of public content. Non-public sites and alias sites are usually not whitelisted.
@@ -27664,6 +27664,12 @@ zombooru.com##a[href$="ttp://www.hard55.com"]
 ||172.240.41.32^$all
 ||172.240.41.64^$all
 ||172.240.41.96^$all
+!+ PLATFORM(windows, mac, android)
+172.240.41.32$network
+!+ PLATFORM(windows, mac, android)
+172.240.41.64$network
+!+ PLATFORM(windows, mac, android)
+172.240.41.96$network
 ! https://github.com/DandelionSprout/adfilt/issues/1129
 ||password-internal.com^$all
 ! ——— Standard malware that I stumbled upon on my own ———
@@ -33436,6 +33442,18 @@ www.tumblr.com##div[data-timeline-id] div[style="margin-top: 0px;"]:has(a:is([hr
 ||54.174.156.141^$document
 !+ PLATFORM(windows, mac, android)
 54.174.156.141$network
+! Searched for Breaking Bad Jesse memes on Qwant (29/04/2025)
+://old.sermitsiaq.ag^$document,domain=subdomain_stolen_from_sermitsiaqs_owners.*
+||modificationdesignate.com^$all
+||xss.my.id^$third-party
+||85.159.213.158^$all
+!+ PLATFORM(windows, mac, android)
+85.159.213.158$network
+! Mass domain parking service (e.g. picnicnetworkORG, 04/05/2025)
+!+ PLATFORM(windows, mac, android)
+91.195.240.12$network
+!+ PLATFORM(windows, mac, android)
+205.234.175.175$network
 ! ——— A hĳacked link that had previously been on https://sims•fandom•com/wiki/Game_guide:Fog_emitter ———
 ||0network.com^$all
 ||100conversions.com^$all

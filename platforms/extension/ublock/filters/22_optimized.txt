@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: 7W8mJPwR5vEy0X6pEOuFxA
-! Diff-Path: ../patches/22_optimized/22_optimized-s-1746239858-3600.patch
+! Checksum: RLEe+3YuqiV28NCN154MZA
+! Diff-Path: ../patches/22_optimized/22_optimized-s-1746326509-3600.patch
 ! Title: AdGuard Widgets filter (Optimized)
 ! Description: Blocks annoying third-party widgets: online assistants, live support chats, etc.
 ! Version: 2.0.11.64
@@ -391,6 +391,8 @@ crx7601.com##.section2
 ||kotaro269.com/kotaro269.html
 kotaro269.com###content-top-news
 geinoutopics-plus.blog.jp,ideal2ch.livedoor.biz,2chopmt.blog.jp##.rss-blogroll2
+doujinerosenka.blog.jp##.main-column-inner > div[style*="height:130px"]
+doujinerosenka.blog.jp##.main-column-inner > span[style="font-size: 79.75%;"]
 ysokuhou.blog.jp##.name2
 ysokuhou.blog.jp##div[style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;"]
 netouyonews.net##div[id^="head_rss"]
@@ -867,6 +869,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 ||client.contents-search-windows.com^
 ||affilizz.com^$third-party
 ||mbp-japan.com/information/$script,third-party
+.az/livechat/
 /crm/site_button/loader_*.js$domain=~tvoe.live
 /Jetlink.js
 /widget/js/przv.js
@@ -1416,6 +1419,7 @@ inmediahk.net##.banner-wrapper
 inmediahk.net##.donate-form
 novayagazeta.eu#?#main > header ~ div[class]:not([id]):has(> svg + div[class] a[href^="/donate?"])
 damninteresting.com##.plea
+currentaffairs.org#?#.wp-block-image:has(> a[href$="/donate"])
 ||helpukrainewinwidget.org/cdn/widget.js
 scroll.in##.floating-contribute-block
 osboxes.org#$#html { overflow: auto !important; }

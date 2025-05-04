@@ -1,9 +1,9 @@
-! Checksum: EgKP8DnckM4SSBmleh+R7w
-! Diff-Path: ../patches/249_optimized/249_optimized-s-1746304734-14400.patch
+! Checksum: geaaOSnEarzqJlxh0gi3rQ
+! Diff-Path: ../patches/249_optimized/249_optimized-s-1746319941-14400.patch
 ! Title: Dandelion Sprout's Nordic Filters (Optimized)
 ! Description: This list covers websites for Norway, Denmark, Iceland, Danish territories, and the Sami indigenous population.
-! Version: 2.0.8.2
-! TimeUpdated: 2025-05-03T20:34:49+00:00
+! Version: 2.0.8.3
+! TimeUpdated: 2025-05-04T00:48:15+00:00
 ! Expires: 12 hours (update frequency)
 ###ad_superboard:not(html,body,:empty)
 ###ad_topp:not(html,body,:empty)
@@ -1907,7 +1907,7 @@ baadmagasinet.dk##.article-bottom .qx-inner > .qx-section:last-of-type
 178.79.136.45$network
 ||65.21.200.49^$all
 !+ PLATFORM(windows, mac, android)
-65.21.200.49*$network
+65.21.200.49$network
 ||s.api.no/mittari/c/article/*/sectionId/*.gif^
 ||no/app/aas^$xmlhttprequest,ping,~third-party
 ://aas.*.no/a/|$xmlhttprequest,ping,~third-party
@@ -2474,10 +2474,9 @@ triplx.dk##.aff-inner-col
 ://132.148.220.142^
 !+ PLATFORM(windows, mac, android)
 132.148.220.142$network
-!+ PLATFORM(windows, mac, android)
-104.160.10.*$network
-!+ PLATFORM(windows, mac, android)
-165.231.154.*$network
+!+ NOT_OPTIMIZED
+://104.160.10.$domain=~in-addr.arpa
+://165.231.154.$domain=~in-addr.arpa
 ://167.99.196.225^
 !+ PLATFORM(windows, mac, android)
 167.99.196.225$network
@@ -2497,6 +2496,8 @@ triplx.dk##.aff-inner-col
 ||yttersiden.no^$document
 ||monetrizer*.$all
 ://38.180.96.244^$all
+!+ PLATFORM(windows, mac, android)
+38.180.96.244$network
 ||acc-inf.com^$all
 ||acc-ntfix.com^$all
 ||accessmyretur.com^$all
@@ -2663,8 +2664,7 @@ triplx.dk##.aff-inner-col
 ://193.143.1.217^$all
 !+ PLATFORM(windows, mac, android)
 193.143.1.217$network
-!+ PLATFORM(windows, mac, android)
-193.143.1.*$network
+://193.143.1.$document
 ||adidasko.com^$document,domain=~en-falsk-svindelbutikk.*
 ||airmaxskobillige.com^$document,domain=~en-falsk-svindelbutikk.*
 ||assassinfitness.com^$document,domain=~en-falsk-svindelbutikk.*
@@ -2695,6 +2695,8 @@ triplx.dk##.aff-inner-col
 ||modificationdesignate.com^$all
 ||xss.my.id^$third-party
 ||85.159.213.158^$all
+!+ PLATFORM(windows, mac, android)
+85.159.213.158$network
 ||nofotballshop.com^$document
 ||nofotballstore.com^$document
 ||nodrakts.com^$document

@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: MEJbhlP+IQ/Rwvp/S35nDA
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1746461510-3600.patch
+! Checksum: aLtbCfjL9yv06ZxjV++xmQ
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1746465076-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.31
-! TimeUpdated: 2025-05-05T16:08:07+00:00
+! Version: 2.2.29.32
+! TimeUpdated: 2025-05-05T17:07:04+00:00
 ! Expires: 5 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1460,6 +1460,7 @@ help.lurker.tv,help.zenky.io,docs.powershelluniversal.com,docs.snyk.io,docs.keep
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+publix.com##.tou-prompt-wrapper
 ptt.gov.tr##div[class^="styles_cookieBanner"]
 robolinkmarket.com##.w-full > div.fixed[class*="bottom-"]:has(a[href="https://robolinkmarket.com/pages/bilgi-guvenligi-politikasi"])
 9to5linux.com###wpconsent-root
@@ -19777,6 +19778,8 @@ honeysanime.com#$##header-line-2 { margin-top: -60px !important; }
 honeysanime.com#$##wrap-app-notice { display: none !important; }
 !+ NOT_OPTIMIZED
 m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
+publix.com#$#[class^="mobile-app-call-out"] { display: none !important; }
+publix.com#$#.navigation-bar-container { top: 0 !important; }
 m.yelp.com###reviews > div[class^="overlay-wrapper_"]
 cnbctv18.com##.overlayapp
 robolinkmarket.com###mobligo-smart-banner-container

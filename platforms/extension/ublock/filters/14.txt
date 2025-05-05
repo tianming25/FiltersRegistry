@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: cRJGA00t2zD7iTdvkoYxdA
-! Diff-Path: ../patches/14/14-s-1746461510-3600.patch
+! Checksum: eoLVapVt/szTt+X1gAkf0A
+! Diff-Path: ../patches/14/14-s-1746465075-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.31
-! TimeUpdated: 2025-05-05T16:08:07+00:00
+! Version: 2.2.29.32
+! TimeUpdated: 2025-05-05T17:07:04+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2466,6 +2466,7 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+publix.com##.tou-prompt-wrapper
 ptt.gov.tr##div[class^="styles_cookieBanner"]
 robolinkmarket.com##.w-full > div.fixed[class*="bottom-"]:has(a[href="https://robolinkmarket.com/pages/bilgi-guvenligi-politikasi"])
 9to5linux.com###wpconsent-root
@@ -44999,6 +45000,8 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! Limit it to mobile versions only
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 !
+publix.com#$#[class^="mobile-app-call-out"] { display: none !important; }
+publix.com#$#.navigation-bar-container { top: 0 !important; }
 m.yelp.com###reviews > div[class^="overlay-wrapper_"]
 cnbctv18.com##.overlayapp
 robolinkmarket.com###mobligo-smart-banner-container

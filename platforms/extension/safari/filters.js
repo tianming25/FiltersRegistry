@@ -341,8 +341,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/1_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.99.5",
-			"timeUpdated": "2025-05-05T07:07:39+0000",
+			"version": "2.0.99.6",
+			"timeUpdated": "2025-05-05T12:10:13+0000",
 			"deprecated": false,
 			"languages": [
 				"ru"
@@ -366,8 +366,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/2_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.3.82.14",
-			"timeUpdated": "2025-05-05T11:06:27+0000",
+			"version": "2.3.82.15",
+			"timeUpdated": "2025-05-05T12:10:28+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -410,8 +410,8 @@
 			"groupId": 3,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/4_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.14.17",
-			"timeUpdated": "2025-05-05T11:06:42+0000",
+			"version": "2.1.14.18",
+			"timeUpdated": "2025-05-05T12:10:43+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -476,8 +476,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/7_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.64.20",
-			"timeUpdated": "2025-05-05T11:06:53+0000",
+			"version": "2.0.64.21",
+			"timeUpdated": "2025-05-05T12:10:53+0000",
 			"deprecated": false,
 			"languages": [
 				"ja"
@@ -526,8 +526,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/9_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.29.75",
-			"timeUpdated": "2025-05-05T07:08:25+0000",
+			"version": "2.0.29.76",
+			"timeUpdated": "2025-05-05T12:10:58+0000",
 			"deprecated": false,
 			"languages": [
 				"es",
@@ -570,8 +570,8 @@
 			"groupId": 1,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/11_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.60.37",
-			"timeUpdated": "2025-05-05T09:08:12+0000",
+			"version": "2.0.60.38",
+			"timeUpdated": "2025-05-05T12:11:00+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -594,8 +594,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/13_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.56.11",
-			"timeUpdated": "2025-05-05T07:08:30+0000",
+			"version": "2.0.56.12",
+			"timeUpdated": "2025-05-05T12:11:02+0000",
 			"deprecated": false,
 			"languages": [
 				"tr"
@@ -623,8 +623,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.2.29.26",
-			"timeUpdated": "2025-05-05T11:07:12+0000",
+			"version": "2.2.29.27",
+			"timeUpdated": "2025-05-05T12:11:10+0000",
 			"languages": [],
 			"tags": [
 				5,
@@ -647,8 +647,8 @@
 				"ext_chromium_mv3"
 			],
 			"trustLevel": "full",
-			"version": "2.0.79.81",
-			"timeUpdated": "2025-05-05T06:09:59+0000",
+			"version": "2.0.79.82",
+			"timeUpdated": "2025-05-05T12:11:11+0000",
 			"languages": [],
 			"tags": [
 				45,
@@ -677,8 +677,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/16_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.52.21",
-			"timeUpdated": "2025-05-05T11:07:18+0000",
+			"version": "2.0.52.22",
+			"timeUpdated": "2025-05-05T12:11:15+0000",
 			"deprecated": false,
 			"languages": [
 				"fr"
@@ -703,8 +703,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/18_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.61.8",
-			"timeUpdated": "2025-05-05T11:07:19+0000",
+			"version": "2.0.61.9",
+			"timeUpdated": "2025-05-05T12:11:16+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -725,8 +725,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/19_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.54.77",
-			"timeUpdated": "2025-05-05T11:07:21+0000",
+			"version": "2.0.54.78",
+			"timeUpdated": "2025-05-05T12:11:17+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -769,8 +769,8 @@
 			"groupId": 4,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/21_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.33.7",
-			"timeUpdated": "2025-05-05T11:07:22+0000",
+			"version": "2.0.33.8",
+			"timeUpdated": "2025-05-05T12:11:18+0000",
 			"deprecated": false,
 			"languages": [],
 			"tags": [
@@ -813,8 +813,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/23_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.6.57",
-			"timeUpdated": "2025-05-05T07:08:49+0000",
+			"version": "2.0.6.58",
+			"timeUpdated": "2025-05-05T12:11:19+0000",
 			"deprecated": false,
 			"languages": [
 				"uk"
@@ -1664,8 +1664,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/224_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.1.36.34",
-			"timeUpdated": "2025-05-05T07:08:55+0000",
+			"version": "2.1.36.35",
+			"timeUpdated": "2025-05-05T12:11:23+0000",
 			"deprecated": false,
 			"languages": [
 				"zh"

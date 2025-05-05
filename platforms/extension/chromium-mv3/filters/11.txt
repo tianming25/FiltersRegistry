@@ -1,8 +1,8 @@
-! Checksum: BVKyOHX8XawMTKEmOumPEQ
+! Checksum: URFtOjluW5g+UVSheSu3Ww
 ! Title: AdGuard Mobile Ads filter
 ! Description: Filter for all known mobile ad networks. Useful for mobile devices.
-! Version: 2.0.60.38
-! TimeUpdated: 2025-05-05T12:11:00+00:00
+! Version: 2.0.60.39
+! TimeUpdated: 2025-05-05T13:15:09+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -7558,6 +7558,11 @@ womenshealth.de#?#body > .list__header:contains(Sponsored Section)
 contexto.me#$#.top-ad-padding { padding-top: 15px !important; }
 ! NOTE: Regular rules end ⬆️
 ! !SECTION: Regular rules
+!
+! m.yelp.com
+m.yelp.com##div[data-testid="suggested-search-bar"] ~ div[class*="border-color-"] > ol > li:has(> div[class*="sponsored-icon_"])
+m.yelp.com##div[data-testid="suggested-search-bar"] ~ div[class*="border-color-"] > ol > li:has(> div[class*="sponsored-icon_"]) + li[class]
+m.yelp.com##div[data-testid="suggested-search-bar"] ~ div[class*="border-color-"] > ol > li:has(> div[data-testid^="themed-ad-"])
 !
 ! Avito
 m.avito.ru#?#div[data-marker="new-item-wrapper"] ~ div[class]:has(> div[data-code] > div[id^="ads_"])

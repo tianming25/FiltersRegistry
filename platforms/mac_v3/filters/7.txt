@@ -1,9 +1,9 @@
-! Checksum: a7GEc9DYNt6oosePPlsfEQ
-! Diff-Path: ../patches/7/7-s-1746457902-3600.patch
+! Checksum: ZzOR5nJDXlh8cVqOW6YRUA
+! Diff-Path: ../patches/7/7-s-1746461518-3600.patch
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.64.23
-! TimeUpdated: 2025-05-05T15:07:16+00:00
+! Version: 2.0.64.24
+! TimeUpdated: 2025-05-05T16:07:55+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1540,6 +1540,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/uploads/2024/09/fanza_ad$image
 !
 ! Malware/Phishing
+-co-jp.com/sbi4sec/$document
 ://eki-*.com/Perosnal_member/$document
 ://apple-*.com/account_int/$document
 .cn/QUbkxeCpCA/$document
@@ -1555,7 +1556,6 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 ://eki-net.*/co.jp/$document
 /?a=*&i=random*&t=$document
 /?a=*&i=imgcode_*&t=$document
-.cn/bxzm/|$document
 ?t=JPN_adultmain.txt&cid=$document
 ||web.core.windows.net/media/jp.mp3
 ://icloud-apple-*.net/account_int/$document
@@ -1564,7 +1564,6 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 .com/ITS/V_ACT_Login.html$document
 ://v-point.*.com/?lyapp=$document
 ://www.aeon.co.jp.*.*/auth/realms/msweb/protocol/openid-connect/authclient/$document
-://eki.*.net/eki3242$document
 ://icloud.apple.*.cn/account_int/$document
 .com/top/client/select_*.php|$document
 /all/firstSelect.php?$document
@@ -1589,7 +1588,6 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /memberservice/login|$document,domain=sbs|xyz
 /M08Myr0hotline0JP07/*$document
 /W08Myr0hotline0JP07/*$document
-.top/memx/force_login?acr_values=$document
 /?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=sign-in&path=home&ref_=nav_Account&signIn=1&useRedirectOnSuccess=1|$document,domain=cn|com
 ://kuronekoyam*.top/jp$document
 -co-jp-*.com/reg/login$document
@@ -8891,6 +8889,8 @@ bookmeter.com###sticky_sidebar_advertising-sticky-wrapper
 bookmeter.com##div[style="width: 300px; height: 250px"]
 nordot.app##.main__ad
 nordot.app###js-ur
+dic.nicovideo.jp##.article > h2:has(+ p > iframe.nicoichiba)
+dic.nicovideo.jp##iframe.nicoichiba
 dic.nicovideo.jp##.article > div[style="margin-left: -4px;"] + ul[style="margin-left: -4px;"]
 dic.nicovideo.jp##div[id^="dic_sp_300x250_"]
 automesseweb.jp###ads-pc-top-super

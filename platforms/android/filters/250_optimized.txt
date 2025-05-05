@@ -1,9 +1,9 @@
-! Checksum: IIB1vMYDMS2kZRRedlMIuQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1746348042-14400.patch
+! Checksum: UUZVsN+t1q3aYRpL+S/Qjw
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746420125-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
-! Version: 2.0.16.85
-! TimeUpdated: 2025-05-04T08:37:17+00:00
+! Version: 2.0.16.86
+! TimeUpdated: 2025-05-05T04:38:46+00:00
 ! Expires: 5 days (update frequency)
 ###app-download
 ###app-modal
@@ -65,6 +65,7 @@ zargan.com###app-menu
 reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##span.hidden[class$="m:block"]
 bfmtv.com###android_banner
 bfmtv.com#$?#.fixed_title { top: 0 !important }
+/^.*/jquery\.smartbanner/.*$/$match-case
 /^.*/js/smartbanner\..*$/$match-case
 /^.*/smart-app-banner\..*$/$match-case
 fandom.com##.global-footer__section-fandom-apps
@@ -873,6 +874,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||invadedisheartentrail.com^$all
 ||expensivelikeness.com^$all
 ||apologiesoccursdepressed.com^$all
+||delayeddisputecommotion.com^$all
 ||endurancesupervision.com^$all
 ||participationwhitehandwriting.com^$all
 ||billboardwring.com^$all
@@ -1820,13 +1822,8 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ://ww5.$document,domain=~ww5.ikea.com|~ww5.msu.ac.zw|~ww5.autotask.net|~ww5.pornhoarder.tv
 ://ww6.$document,domain=~ww6.generali.pt|~ww6.autotask.net|~ww6.pornhoarder.org
 ://ww7.$document,domain=~ww7.be|~ww7.readsnk.com|~ww7.autotask.net|~ww7.pornhoarder.tv
-://ww9.$document,domain=~ww9.ikea.com|~ww9.tiki.ne.jp|~ww9.sakura.ne.jp|~ww9.generali.pt|~ww9.itau.com.br|~ww9.autotask.net|~ww9.pornhoarder.tv
-://ww10.$document,domain=~ww10.autotask.net|~ww10.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
-://ww11.$document,domain=~ww11.autotask.net|~ww11.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww12.$document,domain=~ww12.autotask.net|~ww12.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww13.$document,domain=~ww13.autotask.net|~ww13.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
-://ww14.$document,domain=~ww14.autotask.net|~ww15.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
-://ww15.$document,domain=~ww15.nl|~ww15.autotask.net|~ww15.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww16.$document,domain=~ww16.autotask.net|~ww16.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww17.$document,domain=~ww17.autotask.net|~ww17.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
 ://ww18.$document,domain=~ww18.autotask.net|~ww18.pornhoarder.tv|~practically_always_leads_to_a_domain_parking_service_known_for_malware.*
@@ -2440,6 +2437,7 @@ autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 ~schengenvisainfo.com##.vc_empty_space:not(html, body)
 ##.et_pb_divider:not(html,body)
 ##div.dfd-spacer-module:empty
+###top_container_spacing:empty
 transfermarkt.com##.clearer
 feltet.dk#$#iframe + div[style*="height: 80vh"] { height: unset !important }
 rule34.xxx###status-notices > br:empty
@@ -2472,6 +2470,7 @@ twe.no#$#div[style*=overlayFadeTo] { --overlayFadeTo: none !important }
 ~imdb.com##.ratingsBlockIMDb:not(html,body,:empty)
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
 rakuten.tv##a[href*=".imdb.com/title/"]
+playpilot.com##.ratings
 www.google.*,ipv6.google.com##script ~ div[jsdata] > [jsname] a[href*="://m.imdb.com/title/"] ~ div > div[class]:not([class*=" "])
 www.google.*,ipv6.google.com##div.g:has(a[href*="imdb.com"]) [style^=grid]:last-of-type
 justwatch.com##div[class*=__rating i]:has(img[alt*=IMDB i])
@@ -2519,6 +2518,7 @@ $document,removeparam=ranEAID
 $document,removeparam=ranSiteID
 $document,removeparam=xtor
 $document,removeparam=SRC
+$document,removeparam=dartycid
 $document,removeparam=bbaid
 ||paypal.$document,removeparam=ppid
 $document,removeparam=unptid
@@ -2596,6 +2596,9 @@ $removeparam=campaign_id,domain=~kochava.com|~unisportstore.*
 $removeparam=wmlspartner
 $removeparam=sscid
 $removeparam=rmmds
+$removeparam=pjxsource
+$removeparam=pjxaffiliate_id
+$removeparam=pjxclick_id
 $removeparam=msclkid
 $removeparam=litb_from
 $removeparam=ftag
@@ -2856,6 +2859,7 @@ $document,removeparam=/^mtm_.*$/
 $removeparam=pk_campaign
 $removeparam=pk_medium
 $removeparam=pk_source
+$removeparam=pk_content
 $removeparam=pk_kwd
 $removeparam=ig_mid
 $removeparam=au_advert_id
@@ -2906,7 +2910,12 @@ $removeparam=relatedposts_origin
 $removeparam=relatedposts_position
 ref=itsfoss.com$document,removeparam=ref
 ref=news.itsfoss.com$document,removeparam=ref
+$removeparam=b_source
+$removeparam=b_medium
+$removeparam=b_campaign
 $removeparam=gad_source
+$removeparam=tw_medium
+$removeparam=tw_profile_id
 $removeparam=ga_vid
 $removeparam=ga_sid
 $removeparam=partner_device_id
@@ -3001,7 +3010,6 @@ $removeparam=coliid
 $removeparam=geniuslink
 ||amazon.$removeparam=aaxitk
 ||amazon.$removeparam=/^pd_rd_.*$/
-||amazon.$removeparam=sig
 ||amazon.$removeparam=store_ref
 ||amazon.$removeparam=lp_asins
 ||amazon.$removeparam=lp_slot
@@ -3086,6 +3094,7 @@ $removeparam=sk,domain=aliexpress.*|bing.com
 ||bing.com/search?$removeparam=FPIG
 $removeparam=_trkparms
 $removeparam=_from
+$removeparam=amdata,domain=ebay.*
 $removeparam=hash,domain=ebay.*
 ||ebay.$removeparam=mkevt
 ||ebay.$removeparam=mkcid
@@ -3818,6 +3827,7 @@ $document,removeparam=oc,domain=indeed.com
 $document,removeparam=sal,domain=indeed.com
 $document,removeparam=vjk,domain=indeed.com
 $document,removeparam=fvj,domain=indeed.com
+$document,removeparam=ttclid
 $document,removeparam=af_xp
 ||login.yahoo.com^$document,removeparam=.src
 ||login.yahoo.com^$document,removeparam=pspid

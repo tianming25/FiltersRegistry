@@ -1,13 +1,13 @@
-! Checksum: IJYKOlzl1sWAQUZaOL5UnA
-! Diff-Path: ../patches/251/251-s-1745959179-14400.patch
+! Checksum: oy0sC4wuVqptf/fdnWa+GQ
+! Diff-Path: ../patches/251/251-s-1746420131-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.67
-! TimeUpdated: 2025-04-29T20:36:12+00:00
+! Version: 2.0.8.68
+! TimeUpdated: 2025-05-05T04:38:46+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 29April2025v2
+! OriginalVersion: 05May2025v1
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1182,6 +1182,9 @@ $removeparam=b_medium
 $removeparam=b_campaign
 ! https://www•elkjop•no/product/hvitevarer/vask-og-tork/torketrommel-og-torkeskap/torketrommel/gram-torketrommel-de5731050/DE5731050?gad_source=1 (23/11/2023)
 $removeparam=gad_source
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13015578
+$removeparam=tw_medium
+$removeparam=tw_profile_id
 ! https://github.com/purl-sanitizer/purl/blob/main/data/tracking_link_decorations.txt (Parameters that were present in at least 10 rows there as of 7th of October 2023, and which didn't look overly broad)
 $removeparam=_gid
 $removeparam=ga_vid
@@ -1498,7 +1501,7 @@ $removeparam=geniuslink
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-944078
 ||amazon.$removeparam=twitchToken
 ||amazon.$removeparam=sigts
-||amazon.$removeparam=sig
+!!!||amazon.$removeparam=sig (Breaks chat functions; see https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-13026342)
 ||amazon.$removeparam=ref-refURL
 ||amazon.$removeparam=imprToken
 ! https://www•amazon•es/stores/page/592C024E-4E49-421A-8F46-E0D751082704?store_ref=SB_A05201253TLBE81101JJ5&lp_asins=B07L8XGM53%2CB07L8Y3YFP%2CB07L8N2T51&lp_slot=desktop-arbies&lp_page_asin=B0777WPMPH

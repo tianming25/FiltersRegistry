@@ -1,8 +1,8 @@
-! Checksum: QH+d7oFGqD3g7NQQdzyI/w
+! Checksum: sfuK/8J8LXrPgP4iaRDeDQ
 ! Title: AdGuard German filter
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.47.32
-! TimeUpdated: 2025-05-04T14:06:07+00:00
+! Version: 2.0.47.33
+! TimeUpdated: 2025-05-05T09:08:04+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -1077,10 +1077,12 @@ blasensex.com#%#//scriptlet("abort-on-property-read", "jsUnda")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90034
 wetter.de,rtl.de#%#//scriptlet("set-constant", "cbcAdvertisingAdapter.smartClientCoreFacade.config.adReinsertion.homad.enabled", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89311
+! https://github.com/AdguardTeam/AdguardFilters/issues/204506
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111225
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84213
 ! damoh
-welt.de#%#//scriptlet("set-constant", "Object.prototype.initHomad", "noopFunc")
+welt.de#%#//scriptlet('set-constant', 'Object.prototype.isHomadScriptLoaded', 'true')
+welt.de#%#//scriptlet('set-constant', 'weltConfig.switches.videoAdBlockBlocker', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82457
 chip.de#%#//scriptlet("abort-on-property-read", "htmlEntities")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81081

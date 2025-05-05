@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: VsuexH4ncNcCUl+z1dk+MA
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746432802-3600.patch
+! Checksum: 3UX9IzBML2df8DixIlg5IA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746436337-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.82.11
-! TimeUpdated: 2025-05-05T08:09:00+00:00
+! Version: 2.3.82.12
+! TimeUpdated: 2025-05-05T09:07:44+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21667,12 +21667,14 @@ bong.ink##body > div[style^="position: fixed; top:"][style*="z-index:"]
 @@||topsporter.net^$generichide
 ||evaki.fun/block/$script
 ||thesciencetoday.com/block/$script
+evaki.fun,sportnews.to##body > div[id]:has(> .keep-lightbox)
 evaki.fun,sportnews.to##body > div[style*="position: fixed; top:"][style*="z-index:"]
 evaki.fun,sportnews.to###adblock-overlay
 evaki.fun,sportnews.to#$#body > * { filter: none !important; }
 evaki.fun,sportnews.to#$#body > div[class*=" active"][style] { display: none !important; }
 evaki.fun,sportnews.to#$#body > div[class*=" active"][style] + div[class]:has(> .active > [class*="-content"]) { display: none !important; }
 evaki.fun,sportnews.to##+js(no-fetch-if, adsbygoogle.js)
+evaki.fun,sportnews.to##+js(abort-current-script, document.getElementsByTagName, $$)
 sportshub.to##+js(remove-node-text, script, Databffbdb)
 sportnews.to##+js(remove-node-text, script, Dev tools checker)
 sportshub.to,sportnews.to,topsporter.net##+js(no-xhr-if, pubads.g.doubleclick.net/pagead/js/adsbygoogle.js)
@@ -36344,7 +36346,10 @@ matzoo.pl##+js(no-setInterval-if, bait.offsetParent)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199566
 podhaleregion.pl#$#header > .logo-container { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199281
-epiotrkow.pl##+js(set-constant, adbfunct, noopFunc)
+epiotrkow.pl##body .in-ad
+epiotrkow.pl##.sidebar-item:has(> .make-me-sticky > .rek)
+epiotrkow.pl##.box-ra:has(ins:is(.adsbygoogle, [data-revive-zoneid]))
+epiotrkow.pl##+js(abort-current-script, EventTarget.prototype.addEventListener, /\/asyncjs\.php|adBlock/)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197804
 poradnikprzedsiebiorcy.pl###bottomBar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/197403
@@ -40955,6 +40960,7 @@ vatantat.ru##a[href="https://pobeda.onf.ru/"]
 ##.right-menu > div.adhl
 !
 !
+123-hd.com##div[id^="banner_"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/200270
 ||adsok.co^$third-party
 .gif^$image,domain=dooporn24.com
@@ -43065,6 +43071,10 @@ kat.*,kickass.*,kickass2.*,kickasstorrents.*,kat2.*,kattracker.*,thekat.*,thekic
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204562
+! droplink.co
+game5s.com,linkss.rcccn.in#$#[id^="droplink-step-"] { display: none !important; }
+game5s.com,linkss.rcccn.in#$#.submitBtn#go_d2 { display: inline-block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204398
 ! Safari extension and iOS app doesn't support "$redirect" modifier, so as a workaround we use scriptlet to replace video ad URL with data URI with base64 encoded MP3
 ! Content is the same as "noopmp3-0.1s"

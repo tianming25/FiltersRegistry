@@ -1,9 +1,9 @@
-! Checksum: Qb+oUWgScvqffOcy7Nx8VA
-! Diff-Path: ../patches/6_optimized/6_optimized-s-1746412886-3600.patch
+! Checksum: rDTnI6PFf7i8Nlfjj68jXg
+! Diff-Path: ../patches/6_optimized/6_optimized-s-1746436335-3600.patch
 ! Title: AdGuard German filter (Optimized)
 ! Description: EasyList Germany + AdGuard German filter. Filter list that specifically removes ads on websites in German language.
-! Version: 2.0.47.32
-! TimeUpdated: 2025-05-04T14:06:07+00:00
+! Version: 2.0.47.33
+! TimeUpdated: 2025-05-05T09:08:04+00:00
 ! Expires: 5 days (update frequency)
 ||addefend-platform.com^
 ||remp-campaign.golem.de^
@@ -674,7 +674,8 @@ blasensex.com#%#//scriptlet("abort-on-property-read", "jsUnda")
 wetter.de,rtl.de#%#//scriptlet("set-constant", "cbcAdvertisingAdapter.smartClientCoreFacade.config.adReinsertion.homad.enabled", "false")
 !+ NOT_PLATFORM(windows, mac, android, ext_ff)
 focus.de#%#//scriptlet("json-prune", "enabled", "testhide")
-welt.de#%#//scriptlet("set-constant", "Object.prototype.initHomad", "noopFunc")
+welt.de#%#//scriptlet('set-constant', 'Object.prototype.isHomadScriptLoaded', 'true')
+welt.de#%#//scriptlet('set-constant', 'weltConfig.switches.videoAdBlockBlocker', 'false')
 chip.de#%#//scriptlet("abort-on-property-read", "htmlEntities")
 german-porno-deutsch.info,reifporn.de,sexvideos-hd.com,tube8-pornos.com,meinyouporn.com,hd-sexfilme.com,beeg-pornos.com,deinesexfilme.com,einfachtitten.com,gutesexfilme.com,halloporno.com,hd-pornos.net,hdpornos.net,herzporno.com,lesbenhd.com,milffabrik.com,nursexfilme.com,porn-monkey.com,porndrake.com,pornoaffe.com,pornodavid.com,pornoente.tv,pornofelix.com,pornofisch.com,pornohammer.com,pornohans.com,pornohelm.com,pornohirsch.net,pornoklinge.com,pornoschlange.com,pornotom.com,pornotom.com,pornotommy.com,pornovideos-hd.com,pornozebra.com,xhamster-sexvideos.com,xhamsterdeutsch.xyz#%#//scriptlet("abort-current-inline-script", "document.cookie", "delete a.llEvLisnrs")
 chip.de#%#//scriptlet('set-constant', 'installerConfig.cid', '')

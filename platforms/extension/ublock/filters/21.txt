@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: IpHs9s7vndzuyLqVYsu7bQ
-! Diff-Path: ../patches/21/21-s-1746425635-3600.patch
+! Checksum: g7HZOVlLZAsCWPe8SE9jsw
+! Diff-Path: ../patches/21/21-s-1746439905-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.33.5
-! TimeUpdated: 2025-05-05T06:10:05+00:00
+! Version: 2.0.33.6
+! TimeUpdated: 2025-05-05T10:08:09+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -41,6 +41,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204592
+mobygames.com##div[id^="atari-advert-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203942
 pcgamer.com##aside[data-component-name="Recirculation:ArticleRiver"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203527
@@ -8512,6 +8514,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204546
+megaup.net##+js(nano-setInterval-booster, /display\(\)|btnDownload/, *, 0.001)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204332
 siliconera.com##+js(set-attr, iframe[data-src^="https://www.youtube.com/embed/"].lazy-loaded-embed, src, [data-src])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202743

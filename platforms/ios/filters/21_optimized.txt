@@ -1,14 +1,15 @@
-! Checksum: H0+b46q2gWhpiLPKId/nRA
-! Diff-Path: ../patches/21_optimized/21_optimized-s-1746425640-3600.patch
+! Checksum: otZJE9Oh5KfJ2l3BE7LLAw
+! Diff-Path: ../patches/21_optimized/21_optimized-s-1746439908-3600.patch
 ! Title: AdGuard Other Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.33.5
-! TimeUpdated: 2025-05-05T06:10:05+00:00
+! Version: 2.0.33.6
+! TimeUpdated: 2025-05-05T10:08:09+00:00
 ! Expires: 5 days (update frequency)
 !######### Annoying elements (not ads)
 instagram.com#$?#div[class]:has(> div[class]:first-child > a[href="/explore/people/"]) { position: absolute !important; left: -3000px !important; }
 instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[style] > div[style] > div[aria-labelledby] > div[class]:last-child > button)
 instagram.com##._aagw:empty
+mobygames.com##div[id^="atari-advert-"]
 pcgamer.com##aside[data-component-name="Recirculation:ArticleRiver"]
 ntvtelugu.com#$#.related-news > div.cards-grid { margin-top: 0 !important; }
 neoline.ru##a[href="/company/news/interesnoe/yandex-split-pay/"]
@@ -3169,6 +3170,7 @@ softpedia.com#$#iframe.swipebox-rightxd[id="relcontent"] { top: 60px!important; 
 !##############################
 !######### JS tweaks ##########
 !##############################
+megaup.net#%#//scriptlet('adjust-setInterval', '/display\(\)|btnDownload/', '*', '0.001')
 siliconera.com#%#//scriptlet('set-attr', 'iframe[data-src^="https://www.youtube.com/embed/"].lazy-loaded-embed', 'src', '[data-src]')
 leakshaven.com#%#//scriptlet('adjust-setInterval', '(clearInterval(', '*', '0.001')
 recut.ru#%#//scriptlet('trusted-click-element', '#open_link', '', '500')

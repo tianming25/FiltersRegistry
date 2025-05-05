@@ -1,9 +1,9 @@
-! Checksum: 8uR0Xt3eql+y+HVLnps9/A
-! Diff-Path: ../patches/14/14-s-1746436339-3600.patch
+! Checksum: 1lIe13SbAr0PrHcTSWGp/Q
+! Diff-Path: ../patches/14/14-s-1746439906-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.24
-! TimeUpdated: 2025-05-05T09:08:20+00:00
+! Version: 2.2.29.25
+! TimeUpdated: 2025-05-05T10:08:03+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -46541,7 +46541,7 @@ mqihuan.bookresource.qq.com#?##r-authorSay > div.mt-12px:has(> a[class]:contains
 mqihuan.bookresource.qq.com##.auto-tr
 deviantart.com##body > aside:has(> h2 > div > button[aria-label="Close"])
 migros.com.tr##sm-mobile-app-popup
-threads.com#%#//scriptlet('trusted-click-element', 'body > div[id^="mount_0_0_"] ~ div[class^="__fb-"] span + div > div + div > div[role="button"] > div', '', '1000')
+threads.com#%#//scriptlet('trusted-click-element', 'div[class^="__fb-"] span + div > a[href^="https://applink.threads.com/?ct"] + div > div[role="button"]', '', '1000')
 uhaul.com###nativeAppBanner
 airbnb.com##div[data-testid="app-install-container"]
 ww2.freshthyme.com##a[href="https://ww2.freshthyme.com/mythyme-loyalty"]
@@ -47340,6 +47340,8 @@ instagram.com##._aagw:empty
 ! End: Instagram.com
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204592
+mobygames.com##div[id^="atari-advert-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203942
 pcgamer.com##aside[data-component-name="Recirculation:ArticleRiver"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203527
@@ -55877,6 +55879,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204546
+megaup.net#%#//scriptlet('adjust-setInterval', '/display\(\)|btnDownload/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204332
 siliconera.com#%#//scriptlet('set-attr', 'iframe[data-src^="https://www.youtube.com/embed/"].lazy-loaded-embed', 'src', '[data-src]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/202743

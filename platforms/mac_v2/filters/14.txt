@@ -1,9 +1,9 @@
-! Checksum: 8CMyWlIUN0DIQZIBiAvDVQ
-! Diff-Path: ../patches/14/14-s-1746367804-3600.patch
+! Checksum: 7IW1B3V2JOsdtpezLr8EMg
+! Diff-Path: ../patches/14/14-s-1746421902-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.19
-! TimeUpdated: 2025-05-04T14:06:21+00:00
+! Version: 2.2.29.20
+! TimeUpdated: 2025-05-05T05:08:04+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -34448,6 +34448,8 @@ gaugau.futabanet.jp,newscientist.com,jiji.com,edp24.co.uk,technologyreview.com,n
 !
 ! SECTION: Subscriptions - Regular rules
 !
+perito.media##.article__block-list > div.article__block:has(> div.article__block__text > p > a[href="https://t.me/prtbrt"])
+perito.media##section[class="form initted"]
 focus.de##.Footer-Subframe-Newsletter
 gocomics.com##section[class^="ShowNewsletterSignUp_"]
 indiaglitz.com##.gboxnews
@@ -58724,6 +58726,7 @@ subbota.ua##aside.sidebar > div[id^="custom_html-"]
 !   NOTE: Donation widgets
 !   Really annoying only
 !
+perito.media##.footer__swiper-row > div.footer-swiper:has(> div.footer-swiper__container a[href="https://perito.media/posts/perito-zapuskaet-patreon-i-boosty"])
 hrw.org###graphene--modal
 air-journal.fr##[class*="donation"]:not(a)
 smutba.se,sfmlab.com##div[style="min-height: 90px; justify-content: center;"]

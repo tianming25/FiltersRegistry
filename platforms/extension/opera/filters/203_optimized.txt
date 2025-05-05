@@ -1,9 +1,9 @@
-! Checksum: tR2LLapD3lodAYSH0SD/GA
-! Diff-Path: ../patches/203_optimized/203_optimized-s-1746463472-14400.patch
+! Checksum: Fmoh20P3A/9zUG1hUBEbGg
+! Diff-Path: ../patches/203_optimized/203_optimized-s-1746477597-14400.patch
 ! Title: Hungarian filter (Optimized)
 ! Description: Hufilter. Filter list that specifically removes ads on websites in the Hungarian language.
-! Version: 2.0.3.82
-! TimeUpdated: 2025-05-05T16:39:24+00:00
+! Version: 2.0.3.83
+! TimeUpdated: 2025-05-05T20:35:46+00:00
 ! Expires: 10 days (update frequency)
 ##.ad__main
 ##.adblokk
@@ -381,6 +381,7 @@ freemail.hu##.etarget
 freemail.hu##.facebook-layer-box
 freemail.hu##[class*="adbox"]
 freemail.hu##[class*="magnum"]
+freemail.hu##a[href][rel="noopener noreferrer"][class*="enabled-"]
 freemail.hu###content-container > div > a:not([class*="MailListItem-"])
 galamus.hu##[class*="banner"]
 gamekapocs.hu###background_ad_top
@@ -530,16 +531,7 @@ hvg.hu##[class="site-scarab-bottom open"]
 hvg.hu##[id*="-ad-"]
 hvg.hu###webpushSelctorFormId
 hvo.hu##div[class*="ad_"]
-hwsw.hu##.billboard
-hwsw.hu##.cikkszovegaction
-hwsw.hu##.cikkszovegakcio
-hwsw.hu##.kommentadomany
-hwsw.hu##[class*="hirdetes"]
-hwsw.hu###announcement
-hwsw.hu###cikktoolbaradomany
-hwsw.hu###sidebar > table
-hwsw.hu##body > div > a[target="_blank"]
-hwsw.hu##div[id*="hirdetes"]
+hwsw.hu##.gate-banner-wrap
 iho.hu##.banner
 iho.hu##.footer-banner-row
 iho.hu##.iho-adzone
@@ -1254,8 +1246,7 @@ ugytudjuk.hu#?#.row:-abp-has(.mainTopBnr)
 ||hosszupuskasub.com/css/*skin.jpg$image
 ||hrportal.hu/images/banner/$image
 ||hupont.hu/hirdetes/
-||hwsw.hu/images/bodybgs/$image
-||hwsw.hu/images/bodybgs2/
+||hwsw.hu/kepek/hirek/2025/04/arm_final_5.jpg$image
 ||i.cdn29.hu/apix_collect/ads
 ||iap.cdn.indexvas.hu/Scripts.js$script
 ||iho.hu/img/banner/
@@ -1522,6 +1513,7 @@ csaladinet.hu###cikkajanlo
 csaladinet.hu###CookieAcceptLayer
 csupasport.hu##.enews-article-content .endless-shared-area
 cyberpress.hu###cookie-law-info-bar
+drogriporter.hu###gform_widget-2
 e-cegjegyzek.hu###suti_uzenet
 economx.hu##.mobilsticky
 egeszsegkalauz.hu###articleOfferFlag
@@ -1568,7 +1560,6 @@ hestore.hu###cookiewarnbar
 hiros.hu###cookieAlertBox
 hoxa.hu###cookiekezeles
 hvg.hu##.hvg_push
-hwsw.hu###cookiealert
 hellovidek.hu###ajanlo
 hellovidek.hu##.box_remote
 hellovidek.hu##.h-sideboard_2
@@ -1923,7 +1914,7 @@ automotor.hu#$#div.postContent { margin-top: 0 !important; }
 budapestkornyeke.hu#$#body { padding-top: 0 !important; }
 hosszupuskasub.com#$# * { cursor: auto !important; }
 hu.ign.com#$#div.article-headline { margin-top: 44px !important; }
-hwsw.hu#$#body[style*="padding-top"] { padding-top: 0px !important; background-color: #777 !important; }
+hwsw.hu#$#.has-gate-banner { top: 30px !important; }
 index.hu,velvet.hu,divany.hu,totalbike.hu,totalcar.hu#$#body { overflow: auto !important; }
 jofogas.hu#$##page-content { margin-top: 0px !important; }
 kektura.hu#$#body.modal-open { overflow: auto!important; }

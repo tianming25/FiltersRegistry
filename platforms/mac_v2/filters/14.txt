@@ -1,9 +1,9 @@
-! Checksum: wqCt0BPI78wIqTm4slYBhg
-! Diff-Path: ../patches/14/14-s-1746451167-3600.patch
+! Checksum: qpEJhOCZfmrDDJSxtSACYQ
+! Diff-Path: ../patches/14/14-s-1746454299-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.28
-! TimeUpdated: 2025-05-05T13:15:19+00:00
+! Version: 2.2.29.29
+! TimeUpdated: 2025-05-05T14:07:48+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -16943,6 +16943,8 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! metacritic.com - videos not playing
+@@||geolocation.onetrust.com/cookieconsentpub/$domain=metacritic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204432
 otpbank.md#@#.cookie-panel:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204399
@@ -42487,6 +42489,9 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+doordash.com##a[data-testid="openAppButton"]
+doordash.com##div[class]:has(> div[data-testid="appDownload"]:first-child + button[data-testid="appDownloadButton"]:last-child)
+doordash.com##main > main > div[class]:has(> div[class]:only-child > div[class]:only-child > div[class] > span:only-child > a[href*="adjust"])
 t.shuqi.com##.ReaderFreeFixedGuideBtn
 easy.co.il##.qr-container
 easy.co.il##.open-app-button

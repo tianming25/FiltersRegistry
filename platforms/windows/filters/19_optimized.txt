@@ -1,9 +1,9 @@
-! Checksum: K5v/qhPvL4A6huLVaHf/qg
-! Diff-Path: ../patches/19_optimized/19_optimized-s-1746537904-3600.patch
+! Checksum: /Ch9SLoU/6zJcp6SjrTPfw
+! Diff-Path: ../patches/19_optimized/19_optimized-s-1746540702-3600.patch
 ! Title: AdGuard Popups filter (Optimized)
 ! Description: Blocks all kinds of pop-ups that are not necessary for websites' operation according to our Filter policy.
-! Version: 2.0.54.82
-! TimeUpdated: 2025-05-06T13:21:03+00:00
+! Version: 2.0.54.83
+! TimeUpdated: 2025-05-06T14:07:47+00:00
 ! Expires: 12 hours (update frequency)
 ://yandex.*/images/_$xmlhttprequest,method=post
 [$path=/images]ya.ru,yandex.*#%#//scriptlet('abort-on-property-write', '__pcodeAllActiveTestIds')
@@ -390,6 +390,7 @@ scitechdaily.com,thewindowsclub.com#@#.ad-space
 @@||search-module.s3.us-east-2.amazonaws.com/pubs/trib/adblockdetect.js
 !#safari_cb_affinity
 armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwesterndaily.com.au,crookwellgazette.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,portnews.com.au,thecourier.com.au,thesenior.com.au#%#//scriptlet('set-cookie', 'dismissCheck', '1')
+apps.dirittopratico.it##div[class^="apprise"]
 ||cdn.snigelweb.com/adengine/civitai.com/loader.js$domain=civitai.com,redirect=noopjs
 civitai.com##div[id][class*="box-content"]:empty
 yummy-anime.ru##.sidebar-block.additional-block
@@ -1088,6 +1089,8 @@ zhihu.com##.AdblockBanner
 ||zeelandnet.nl/static/js/footer.*.js$replace=/(=new Request\(")https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js(")/\$1\$2/
 socialblade.com##.socialblade-heartbeat
 creativeuncut.com###g_abox
+||cdn.btmessage.com^$domain=medicalnewstoday.com
+medicalnewstoday.com#%#//scriptlet('set-constant', '__bt_intrnl.aaDetectionResults.ab', 'false')
 iqiyi.com##iqpdiv[data-cupid=container]
 sports.iqiyi.com#%#//scriptlet("set-constant", "Object.prototype.adPlayerId", "")
 www.iqiyi.com#%#//scriptlet('set-constant', 'QiyiPlayerProphetData.a.data', 'emptyObj')

@@ -1,9 +1,9 @@
-! Checksum: QDTmL5HBZ7FDrKWNcMJwlA
-! Diff-Path: ../patches/14/14-s-1746537862-3600.patch
+! Checksum: iMc9SAf54S43NL+CxV4H3w
+! Diff-Path: ../patches/14/14-s-1746540668-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.39
-! TimeUpdated: 2025-05-06T13:20:57+00:00
+! Version: 2.2.29.40
+! TimeUpdated: 2025-05-06T14:07:40+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2506,6 +2506,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+apps.dirittopratico.it#$##cookieChoiceInfo { display: none !important; }
+apps.dirittopratico.it#$##contenitore { filter: none !important; }
 chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl#$#.gdpr-layer { display: none; }
 chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
 ||fundingchoicesmessages.google.com^$domain=picmix.com
@@ -16952,6 +16954,9 @@ poznancongresscenter.pl,arenapoznan.pl,garden-city.pl,city-marketing.pl,ideaexpo
 !+ NOT_OPTIMIZED PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204690
+apps.dirittopratico.it#@##cookieChoiceInfo
+apps.dirittopratico.it#@##cookieinfo
 ! metacritic.com - videos not playing
 @@||geolocation.onetrust.com/cookieconsentpub/$domain=metacritic.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204432
@@ -23085,6 +23090,7 @@ armidaleexpress.com.au,bendigoadvertiser.com.au,canberratimes.com.au,centralwest
 ! Do not forget about '!#safari_cb_affinity' section for exclusions:
 ! LINK: AnnoyancesFilter/Popups/sections/antiadblock.txt#general
 !
+apps.dirittopratico.it##div[class^="apprise"]
 ||cdn.snigelweb.com/adengine/civitai.com/loader.js$domain=civitai.com,redirect=noopjs
 civitai.com##div[id][class*="box-content"]:empty
 yummy-anime.ru##.sidebar-block.additional-block
@@ -24556,6 +24562,10 @@ socialblade.com##.socialblade-heartbeat
 socialblade.com##div[style^="width: px; height: 250px;"]
 creativeuncut.com###abox-s_i
 creativeuncut.com###g_abox
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/204525
+||cdn.btmessage.com^$domain=medicalnewstoday.com
+medicalnewstoday.com#%#//scriptlet('set-constant', '__bt_intrnl.aaDetectionResults.ab', 'false')
 !
 ! iqiyi.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74116

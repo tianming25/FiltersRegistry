@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: +bBIj/lrNsjGT5R3FXSU0Q
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746565837-3600.patch
+! Checksum: gM5rZMEICDtLHIKlZqtKWw
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746569451-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.82.36
-! TimeUpdated: 2025-05-06T21:06:14+00:00
+! Version: 2.3.82.37
+! TimeUpdated: 2025-05-06T22:06:33+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -21328,6 +21328,8 @@ youporn.com##+js(remove-node-text, script, /window\.[\s\S]*?_zone_[\s\S]*?{"zone
 !
 ! NOTE: Regular rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204410#issuecomment-2855256390
+www.msn.com##+js(no-fetch-if, /pagead2\.googlesyndication\.com/ method:HEAD mode:no-cors)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204693
 ||bistream.xyz/js/loader.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204464
@@ -21413,7 +21415,6 @@ worldmak.com,3minx.com##+js(remove-node-text, script, detectAdBlock)
 call-bomber.info##+js(no-setTimeout-if, checkAds)
 call-bomber.info##+js(adjust-setTimeout, , *, 0.02)
 call-bomber.info##+js(nano-setInterval-booster, , *, 0.02)
-! https://github.com/AdguardTeam/AdguardFilters/issues/204410#issuecomment-2855256390
 ! https://github.com/AdguardTeam/AdguardFilters/issues/201832
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima.js,domain=zone.msn.com
 ||cdn.jsdelivr.net/gh/magiclen/adblock-checker^$domain=zone.msn.com

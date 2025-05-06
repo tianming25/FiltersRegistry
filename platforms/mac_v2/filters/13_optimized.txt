@@ -1,9 +1,9 @@
-! Checksum: knP4ZfL16kW/oc8HGw971g
-! Diff-Path: ../patches/13_optimized/13_optimized-s-1746512033-3600.patch
+! Checksum: Vzd5PuuzKm5IShbnCBlVWQ
+! Diff-Path: ../patches/13_optimized/13_optimized-s-1746515524-3600.patch
 ! Title: AdGuard Turkish filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.56.15
-! TimeUpdated: 2025-05-06T06:09:35+00:00
+! Version: 2.0.56.16
+! TimeUpdated: 2025-05-06T07:07:53+00:00
 ! Expires: 12 hours (update frequency)
 ||movturs.click^
 ||dontmakethem.club^
@@ -240,11 +240,12 @@ menufiyatlari.com.tr#$#.adblockalert { display: none !important; }
 menufiyatlari.com.tr#$#body.ad_block_detected { overflow: auto !important; }
 menufiyatlari.com.tr#%#//scriptlet('prevent-setTimeout', 'adsbygoogle')
 sosyogaraj.com.tr#%#//scriptlet('prevent-setTimeout', 'adsbygoogle')
+gecmisi.com.tr##a[href^="https://bingx.com/"]
 gecmisi.com.tr#@#.adsbygoogle-noablate
 gecmisi.com.tr#@#div[id^="aswift_"]
 @@/favicon.ico|$domain=gecmisi.com.tr
 @@||gecmisi.com.tr^$cookie=_ym_uid
-gecmisi.com.tr#%#//scriptlet('trusted-create-element', 'footer', 'iframe', 'src="googleads"')
+gecmisi.com.tr#%#//scriptlet('trusted-create-element', 'footer', 'iframe', 'src="about:srcdoc"')
 gecmisi.com.tr#%#(()=>{const o=Math.floor(1e5+9e5*Math.random()),a=`${Date.now()}${o}`;var t,e,m,$;t="_ym_uid",e=a,m="/",$=".gecmisi.com.tr",document.cookie=`${t}=${e};path=${m};domain=${$};`})();
 promy.pro#%#//scriptlet('set-constant', 'canRunAds', 'true')
 forumchess.com.tr#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com')
@@ -1059,6 +1060,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 /service/advertchannels?$domain=kocaelifikir.com|anayurtgazetesi.com|medyaankara.com|ozgunkocaeli.com.tr|urfanatik.com|dirilispostasi.com|turkuazgazetesi.net|yenialanya.com|bugunkocaeli.com.tr|cagdaskocaeli.com.tr|mansetaydin.com|enkocaeli.com|kocaelikoz.com|kocaelibarisgazetesi.com|seskocaeli.com|sigortahaber.com
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
+||vipfilmizle.net/anasayfa%20header.gif
 golgebahcesi.com##.rutaku-banner
 tranimaci.com##a[href^="https://cutt.ly/"]:has(img)
 tranimaci.com##a[href]:has(img[src="https://tranimaci.com/image/reklam.jpg"])
@@ -4824,7 +4826,7 @@ takvim.com.tr##iframe[name$="BIKADV"]
 haberturk.com##iframe[src*="/ads/"]
 cnnturk.com##iframe[src^="/action/ibanner"]
 afyonhaber.com##img[alt*="web-banner"]
-akcakocahavadis.com,muglagazetesi.com.tr,basarisiralamalari.com,eniyiandroid.com,bigatribun.net,mavididim.com.tr##img[alt="reklam"]
+dizimag.net,akcakocahavadis.com,muglagazetesi.com.tr,basarisiralamalari.com,eniyiandroid.com,bigatribun.net,mavididim.com.tr##img[alt="reklam"]
 fatsayenihaber.com,geredeyenigun.com,balikesirhaberajansi.com,kurtulusgazetesi.com.tr##img[alt="Reklam"]
 gidahatti.com##img[alt="ad"]
 haber.sol.org.tr##img[style="width: 300px;height: 250px;"]

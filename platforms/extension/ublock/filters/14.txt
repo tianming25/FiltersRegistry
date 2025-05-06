@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: KzsH5boEjjBF3o8VSOFmUQ
-! Diff-Path: ../patches/14/14-s-1746529830-3600.patch
+! Checksum: 5tn6JqNHP4GmNRGwNAAZ5w
+! Diff-Path: ../patches/14/14-s-1746533789-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.37
-! TimeUpdated: 2025-05-06T11:06:36+00:00
+! Version: 2.2.29.38
+! TimeUpdated: 2025-05-06T12:12:28+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2466,6 +2466,11 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl#$#.gdpr-layer { display: none; }
+chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
+||fundingchoicesmessages.google.com^$domain=picmix.com
+remarkable.com#$?#.ark-dialog--prevent-body-scroll { remove: true; }
+riamoneytransfer.com##main > div[class]:has(> div[class][style*="opacity"]:only-child)
 javmodel.com###example1
 vitalvet.sk##.cm-cookie-block
 hostzealot.*##div[x-data="gdprComponent"]
@@ -5311,8 +5316,6 @@ witway.be,witway.nl#$#body.locked { position: static !important; }
 reolink.com##div[class^="_gdpr-cookie-popup_"]
 singkinderlieder.de#?##__next > .overflow-x-hidden:has(a[href="/impressum"] ~ a[href="/datenschutz"])
 singkinderlieder.de#?##__next > .overflow-x-hidden:has(a[href="/impressum"] ~ a[href="/datenschutz"]) + .inset-0.z-40
-chrono24.*#$#.gdpr-layer { display: none; }
-chrono24.*#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
 son-video.com##div[data-context="cookies-banner"]
 capcut.com##.lv_cookie_banner-wrapper
 petsathome.com##.onetrust
@@ -11623,7 +11626,6 @@ sadnescity.it,baydoner.com##body > .alert-dismissible[role="alert"]
 yellowpages.pl###section-cookies
 advice.co.th,fitcurves.org##.foot-cookie
 opowi.pl###ci-info-box
-||chrono24.*/cookie/*
 citibank.ru##.bn-alert-tracking-block
 techxplore.com,phys.org###js-popup-cookies
 kartotekaonline.pl##body > .ui-pnotify[style^="width: 300px; opacity:"]
@@ -24780,6 +24782,7 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+imdb.com##+js(set-local-storage-item, videopage_autoplay_policy_tooltip_dismissed, true)
 snapedit.app###modal-landscape
 web-design.academy#$#.popup-webinar { display: none !important; }
 web-design.academy#$#body { position: static !important; }
@@ -41465,6 +41468,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+m.imdb.com##.imdb-header__app-button
 doordash.com##a[data-testid="openAppButton"]
 doordash.com##div[class]:has(> div[data-testid="appDownload"]:first-child + button[data-testid="appDownloadButton"]:last-child)
 doordash.com##main > main > div[class]:has(> div[class]:only-child > div[class]:only-child > div[class] > span:only-child > a[href*="adjust"])
@@ -41486,7 +41490,7 @@ ivoox.com##.attached-app-qr
 jetpacglobal.com##.css-jj463j
 search.brave.com##.download-cta
 wear.jp##section[class]:has(> div[class*="image_links"] > div.contents a[href^="https://app.adjust.com/"])
-chrono24.*##header > section.js-pre-header:has(a[href="/info/apps.htm"])
+chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl##header > section.js-pre-header:has(a[href="/info/apps.htm"])
 nyuka-now.com##.content.postCta
 treccani.it##.css-uwijew
 media.wear.jp##main > .flex > section:has(> ul > li > a[href^="https://app.adjust.com"])
@@ -49196,6 +49200,8 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+flaticon.com###banner-craft
+flaticon.com##.detail__download-confirmation
 123pan.com##+js(remove-attr, style, .appdiv > div.webbody[style^="background-image:"])
 123pan.com##+js(remove-class, svip-body, .appdiv > div.webbody)
 123pan.com##.cent-not-login > div

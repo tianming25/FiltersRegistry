@@ -1,9 +1,9 @@
-! Checksum: 2U9uCFt+QZsiZSlMn9dSJw
-! Diff-Path: ../patches/18_optimized/18_optimized-s-1746529839-3600.patch
+! Checksum: xoD8KLGUiZHoxxlwKcXmfQ
+! Diff-Path: ../patches/18_optimized/18_optimized-s-1746533799-3600.patch
 ! Title: AdGuard Cookie Notices filter (Optimized)
 ! Description: Blocks cookie notices on web pages.
-! Version: 2.0.61.19
-! TimeUpdated: 2025-05-06T11:06:41+00:00
+! Version: 2.0.61.20
+! TimeUpdated: 2025-05-06T12:12:34+00:00
 ! Expires: 12 hours (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -1366,6 +1366,11 @@ cmp.focus.de#%#//scriptlet('trusted-click-element', '.sp_choice_type_9[title*="Z
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$?#div[consent-skip-blocker] { remove: true; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#body[style] { overflow: auto !important; }
 scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl,warzywapolowe.pl,airportwebcams.net#$#html[style] { overflow: auto !important; }
+chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl#$#.gdpr-layer { display: none; }
+chrono24.cn,chrono24.co.uk,chrono24.com,chrono24.de,chrono24.es,chrono24.fr,chrono24.it,chrono24.jp,chrono24.nl#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
+||fundingchoicesmessages.google.com^$domain=picmix.com
+remarkable.com#$?#.ark-dialog--prevent-body-scroll { remove: true; }
+riamoneytransfer.com##main > div[class]:has(> div[class][style*="opacity"]:only-child)
 javmodel.com###example1
 vitalvet.sk##.cm-cookie-block
 hostzealot.*##div[x-data="gdprComponent"]
@@ -3622,8 +3627,6 @@ neopharm.ru###pop-check-cookie
 rigla.ru##.cookie-confirmation-notice
 fruugo.*#%#//scriptlet('set-cookie', 'consents', 'essential')
 reolink.com##div[class^="_gdpr-cookie-popup_"]
-chrono24.*#$#.gdpr-layer { display: none; }
-chrono24.*#$#body:not(#style_important) { overflow: auto !important; padding-right: 0 !important; position: unset !important; }
 son-video.com##div[data-context="cookies-banner"]
 capcut.com##.lv_cookie_banner-wrapper
 baldursgate3.game,larian.com##.ciastko
@@ -7312,7 +7315,6 @@ help.snapchat.com#%#//scriptlet('prevent-addEventListener', 'wheel', 'preventDef
 sudameapteek.ee#%#//scriptlet('set-cookie', 'gdpr_cookie_token', '1')
 sii.org.pl,ruhr24.de,thomas-philipps.de,fraenkische-rezepte.de,parkerlebnis.de,moin.de,futurezone.de,derwesten.de#%#//scriptlet('trusted-click-element', '.cmpboxbtnspan > a.cmpboxbtnyes')
 infranken.de#%#//scriptlet('trusted-click-element', 'body > div[id][class]:first-child >>> div[id][class][aria-labelledby^="cmpboxheadline"] .cmpboxbtnspan a.cmpboxbtnyes')
-chrono24.*#%#//scriptlet('trusted-set-cookie', 'c24-consent', 'AAAAH0Eq')
 xv-ru.com,xvideos.com#%#//scriptlet('trusted-click-element', 'span#disclaimer-reject_cookies')
 crtm.es#%#//scriptlet('set-cookie', 'crtmcookiesCPersonalizacion', '1')
 crtm.es#%#//scriptlet('set-cookie', 'crtmcookiesCPublicitarias', '1')

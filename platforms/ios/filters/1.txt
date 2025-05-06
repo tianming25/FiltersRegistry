@@ -1,9 +1,9 @@
-! Checksum: emeI6NZUsx83voKRqupXjg
-! Diff-Path: ../patches/1/1-s-1746533793-3600.patch
+! Checksum: p3rTNwyh6E247NMleobaxg
+! Diff-Path: ../patches/1/1-s-1746544362-3600.patch
 ! Title: AdGuard Russian filter
 ! Description: Filter that enables ad blocking on websites in Russian language.
-! Version: 2.0.99.9
-! TimeUpdated: 2025-05-06T12:11:30+00:00
+! Version: 2.0.99.10
+! TimeUpdated: 2025-05-06T15:07:50+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -4384,6 +4384,8 @@ modsforwot.ru,vargr.ru,trialkeys.ru#@#iframe[width="728"][height="90"]
 modsforwot.ru,vargr.ru,trialkeys.ru#@#img[width="728"][height="90"]
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204523
+volley.ru##pjsdiv[style*="opacity: 1; font-size: 14px; line-height: 1em; pointer-events: none; display: block; visibility: visible;"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/199584
 ritsatv.ru#%#//scriptlet('remove-node-text', 'script', 'script.onerror')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -4413,17 +4415,10 @@ animix.lol#%#//scriptlet('prevent-fetch', 'www3.doubleclick.net')
 anidubonline.com#%#//scriptlet('prevent-xhr', '/(vast|getCode)\?/')
 @@||yandex.ru/ads/$domain=anidubonline.com
 @@||ad.moe.video/vast$domain=anidubonline.com
-! https://github.com/AdguardTeam/AdguardFilters/issues/181132
-!+ PLATFORM(ios, ext_android_cb)
-@@||v*.plrjs.org/*.xml$domain=volley.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176423
 leingpt.ru#@#div[id^="yandex_rtb"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/176044
 @@||yandex.ru/ads/system/context.js$domain=trychatgpt.ru
-! https://github.com/AdguardTeam/AdguardFilters/issues/173207
-volley.ru#%#//scriptlet('prevent-fetch', 'exchange.buzzoola.com')
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||exchange.buzzoola.com/adv/$xmlhttprequest,domain=volley.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/172229
 @@||yandex.ru/ads/system/context.js$domain=tvzvezda.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/171998
@@ -7714,6 +7709,7 @@ chehov-vid.ru,161.ru,prufy.ru,ysia.ru,5koleso.ru,ngs.ru,i38.ru,chita.ru,lenta.ru
 !
 !
 !
+||alternativebts.ucoz.com/*%$script
 lgz.ru##.bottom
 lgz.ru##[data-placeholder]
 tatar-inform.ru##.widget-any

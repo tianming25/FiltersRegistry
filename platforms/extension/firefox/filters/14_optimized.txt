@@ -1,9 +1,9 @@
-! Checksum: NmILfPMiuIT8ZLLWOyoxYw
-! Diff-Path: ../patches/14_optimized/14_optimized-s-1746519216-3600.patch
+! Checksum: 0ZcL54mCMZSdpofnK4P32A
+! Diff-Path: ../patches/14_optimized/14_optimized-s-1746526273-3600.patch
 ! Title: AdGuard Annoyances filter (Optimized)
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.35
-! TimeUpdated: 2025-05-06T08:09:51+00:00
+! Version: 2.2.29.36
+! TimeUpdated: 2025-05-06T10:07:38+00:00
 ! Expires: 10 days (update frequency)
 !#######################################################
 !######### General element hiding rules ################
@@ -2045,7 +2045,7 @@ hgtv.com#%#//scriptlet('remove-class', 'block-user', '#root.block-user')
 hgtv.com#$#.block-user * { opacity: 1 !important; pointer-events: auto !important; touch-action: auto !important; }
 innn.it#%#//scriptlet('trusted-set-cookie', 'cookieConsent', '%5B%22essential%22%5D')
 pepperdeals.se#%#//scriptlet('trusted-click-element', '.vue-portal-target .vue-portal-target button[data-t="acceptAll"] > span', '', '1000')
-bing.com#%#//scriptlet('trusted-click-element', '#bnp_cookie_banner button#bnp_btn_reject', '', '1000')
+bing.com#%#//scriptlet('trusted-click-element', '#bnp_cookie_banner #bnp_btn_reject', '', '1000')
 kyonavi.kyoto.travel#%#//scriptlet('set-cookie', 'ktaAgreed', 'false')
 uptrends.com###UptrendsCookieConsent
 getmerlin.in##.rounded-xl.text-card-foreground:has(h3.tracking-tight)
@@ -24650,6 +24650,7 @@ nidbdcheck.com,dizok.com,9sblog.com,newselab.com,glowandglamcorner.com,dadinthem
 forbes.com##.for-you__component:empty
 tudogostoso.com.br,cumhuriyet.com.tr,lepoint.fr,lpnt.fr#$#.dailymotion-player-wrapper { height: 100% !important; position: absolute !important; width: 100% !important; transform: translate(0px, 0px) !important; z-index: auto !important; }
 tudogostoso.com.br#%#//scriptlet('remove-class', 'js-header-is-sticky|js-is-sticky--change', '.header-stickable')
+beinsports.com,hobbyconsolas.com###dailymotion-pip-large-viewport
 worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$##wpsafe-link { display: block !important; }
 worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$##wpsafe-generate { display: block !important; }
 worldmak.com,metode.my.id,sigaptech.com,tutorialsaya.com#$#div[id^="wpsafe-wait"] { display: none !important; }

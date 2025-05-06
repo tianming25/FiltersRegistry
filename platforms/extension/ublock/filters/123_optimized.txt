@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: YwddRKm0b3tgWY9a4pPSWQ
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1746492704-14400.patch
+! Checksum: fdYqo7XGOzPuYUHaWc7kIw
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1746506537-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.89
-! TimeUpdated: 2025-05-06T00:47:37+00:00
+! Version: 2.1.40.90
+! TimeUpdated: 2025-05-06T04:37:50+00:00
 ! Expires: 5 days (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -119,6 +119,7 @@
 /twitter-v2.png
 /twitter_footer.png
 /twitter_square.png
+/twitteron.png
 /videojs-share.js
 /vk_button.png
 /weiboshare.html
@@ -201,6 +202,7 @@ _social-bar/
 ###facebooktrend
 ###fan-exit
 ###fanback
+###favsocial-list
 ###fb-box
 ###fb-fanbox
 ###fb-like
@@ -490,6 +492,7 @@ _social-bar/
 ###social-share
 ###social-share-bottom
 ###social-share-buttons
+###social-share-buttons-block
 ###social-share-root
 ###social-share-top
 ###social-sharing
@@ -518,6 +521,7 @@ _social-bar/
 ###socialGoogle
 ###socialHolder
 ###socialIcons
+###socialIconsFoot
 ###socialLinks
 ###socialLinksContainer
 ###socialMedia
@@ -555,6 +559,7 @@ _social-bar/
 ###social_pinterest
 ###social_popup
 ###social_share
+###social_share_bar
 ###social_share_wrapper
 ###social_sharing
 ###social_side_links
@@ -809,6 +814,7 @@ _social-bar/
 ##.article__header__share
 ##.article__likes
 ##.article__share
+##.article__share-btns
 ##.article__share-buttons
 ##.article__share-title
 ##.article__sharebar
@@ -875,6 +881,7 @@ _social-bar/
 ##.bloc-social
 ##.bloc_float_share
 ##.block-addtoany
+##.block-ec_social
 ##.block-facebook
 ##.block-facebook-inner
 ##.block-sharebar
@@ -1657,6 +1664,7 @@ _social-bar/
 ##.like_buttons
 ##.likebtn
 ##.likebutton
+##.likes-block_left
 ##.line-btn-icon
 ##.line-social
 ##.link-facebook
@@ -2288,6 +2296,7 @@ _social-bar/
 ##.share_icon
 ##.share_icons
 ##.share_icons_container
+##.share_inline_header
 ##.share_line
 ##.share_link
 ##.share_linkedin
@@ -2389,6 +2398,7 @@ _social-bar/
 ##.sharify-btn-pinterest
 ##.sharify-btn-twitter
 ##.sharify-container
+##.sharing--footer
 ##.sharing-bar
 ##.sharing-block
 ##.sharing-bottom
@@ -2735,6 +2745,7 @@ _social-bar/
 ##.social-tab-i
 ##.social-tab-mini
 ##.social-tabs
+##.social-telegramm
 ##.social-toggle
 ##.social-tool
 ##.social-tooltip
@@ -3134,6 +3145,7 @@ _social-bar/
 ##.widget-sharebar-container
 ##.widget-sharrre
 ##.widget-social
+##.widget-social-facebook
 ##.widget-social-follower
 ##.widget-social-icons
 ##.widget_FacebookLikeBox
@@ -3145,6 +3157,7 @@ _social-bar/
 ##.widget_dpsp_social_media_follow
 ##.widget_easy_facebook_page_plugin
 ##.widget_epcl_social
+##.widget_essbsocialfollowerscounterwidget
 ##.widget_facebook_likebox
 ##.widget_follow
 ##.widget_follow_button_widget
@@ -3298,6 +3311,7 @@ _social-bar/
 ||b.st-hatena.com/js/$script,third-party,domain=~b.hatena.ne.jp
 ||badge.facebook.com^$third-party
 ||badges.instagram.com^$third-party
+||bloglovin.com/widget/$third-party
 ||bshare.cn^$third-party
 ||button-share.zalo.me^$third-party
 ||button.like.co^$third-party
@@ -3694,6 +3708,7 @@ cointelegraph.com##.shares-list__list
 streetinsider.com##.sharesection
 thenation.com##.sharethis-menu
 12tomatoes.com##.sharetocare-popup
+welivesecurity.com##.sidebar-card-media
 news24online.com##.single_page-social-share
 streetsblog.org##.single_sharingInner__3IoQO
 nme.com,operawire.com,whoopsee.it##.site-footer-social
@@ -3783,7 +3798,9 @@ natlawreview.com##.view-footer
 motorsport.tv##.vjs-icons-bar
 dailymail.co.uk##.vjs-social-controls
 beincrypto.com##.want-to-know-more-block
+businesstoday.in##.whatsAppChannel
 dailymail.co.uk,oogtv.nl##.whatsapp
+aajtak.in,businesstoday.in##.whatsapp_channel
 business-standard.com##.whtsclick
 indiatoday.in##.whtspp_share
 madinamerica.com##.widget_a2a_share_save_widget
@@ -3793,7 +3810,9 @@ destructoid.com##.wp-block-gamurs-footer-nav__website-info__socials
 comicbook.com,hyperallergic.com,reneweconomy.com.au,vice.com##.wp-block-jetpack-sharing-buttons
 theonion.com##.wp-block-outermost-social-sharing
 techcrunch.com##.wp-block-techcrunch-social-share
+securityweek.com##.wp-social-link
 firstpost.com##.yt-ch
+securityweek.com##.zox-top-soc-wrap
 sfgate.com##[aria-label="Share from Email"]
 cyprus-mail.com##[class^="_googleNewsContainer_"]
 news.sky.com##[data-component-name="sdc-article-strapline"]
@@ -3977,6 +3996,7 @@ calciomercato.com##.cm-share
 iodonna.it##.eltdf-woo-social-share-holder
 alfredopedulla.com##.fb-banner
 spaziogames.it##.flex.gap-x-2.mx-auto.my-4
+focus.it##.foc-footer-social
 alfredopedulla.com##.ig-banner
 libero.it,virgilio.it##.iol-share-menu
 libero.it##.iol-social
@@ -4017,6 +4037,7 @@ oricon.co.jp##.block-sub-sns
 kakakumag.com##.hd-sns
 srad.jp##.synd
 auction.co.kr##.sare-sns
+forbes.pl##.articleSocials
 gazetawroclawska.pl##.atomsArticleFoot__socialMedia
 terrabrasilnoticias.com###block-18
 noticias.cancaonova.com###cn-post-mark

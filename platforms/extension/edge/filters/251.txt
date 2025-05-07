@@ -1,13 +1,13 @@
-! Checksum: 9wCZUoi1C4xkpv6PnIGVPw
-! Diff-Path: ../patches/251/251-s-1746420135-14400.patch
+! Checksum: dOs9XB5pJIUcf9/09Hz1jw
+! Diff-Path: ../patches/251/251-s-1746636329-14400.patch
 ! Title: Legitimate URL Shortener
 ! Description: Automatically removes unnecessary '$' and '&' values from URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Already included in Dandelion Sprout's Annoyances List.
-! Version: 2.0.8.68
-! TimeUpdated: 2025-05-05T04:38:46+00:00
+! Version: 2.0.8.69
+! TimeUpdated: 2025-05-07T16:40:33+00:00
 ! Expires: 10 days (update frequency)
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 05May2025v1
+! OriginalVersion: 07May2025v2
 ! Expires: 12 hours
 ! Description: In a world dominated by bitLy, adfLy, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -337,7 +337,7 @@ $removeparam=ad_medium
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 $document,removeparam=/^adgroup=.*$/i
 $removeparam=ads_name
-$removeparam=ad_type
+$removeparam=ad_type,domain=~leboncoin.fr|~2dehands.be|~agriaffaires.com|~avendrealouer.fr|~donedeal.ie|~jofogas.hu|~kijiji.ca|~machineryzone.fr|~marktplaats.nl|~milanuncios.com|~mobile.de|~olx.com.br|~subito.it|~truckscorner.fr|~willhaben.at
 $removeparam=CAWELAID
 $removeparam=partition_id
 $removeparam=adgroup_id
@@ -1204,7 +1204,7 @@ $removeparam=vxii_pdid
 $removeparam=bsw_user_id
 $removeparam=bsw_custom_parameter
 $removeparam=partnerUserId
-$removeparam=taboola_hm
+$document,removeparam=taboola_hm
 $removeparam=anx_uId
 $removeparam=d_uuid
 $removeparam=_utma
@@ -1871,9 +1871,18 @@ $document,removeparam=sca_upv,domain=www.google.*|ipv6.google.com
 ||www.google.$document,removeparam=ictx
 ||www.google.$document,removeparam=dpr
 ||www.google.$document,removeparam=tfu
-! https://www.google.com/finance/?output=search&source=lnms (11/03/2025)
+||ipv6.google.com^$document,removeparam=fbs
+||ipv6.google.com^$document,removeparam=ictx
+||ipv6.google.com^$document,removeparam=dpr
+||ipv6.google.com^$document,removeparam=tfu
+! https://www•google•com/finance/?output=search&source=lnms (11/03/2025)
 ||www.google.com/finance/?$removeparam=output
 ||www.google.com/finance/?$removeparam=source
+! https://www.google.com/search?q=john%20madden&hl=no&udm=2&no_sw_cr=1&zx=1746611130163 (07/05/2025)
+||www.google.$document,removeparam=no_sw_cr
+||www.google.$document,removeparam=zx
+||ipv6.google.com^$document,removeparam=no_sw_cr
+||ipv6.google.com^$document,removeparam=zx
 ! (https://github.com/DandelionSprout/adfilt/issues/1078 ...?)
 @@://www.google.*/maps^$removeparam=utm_campaign
 @@://ipv6.google.com/maps^$removeparam=utm_campaign

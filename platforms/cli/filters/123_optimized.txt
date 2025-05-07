@@ -1,9 +1,9 @@
-! Checksum: mezx8+MUOmQAs8EDzx1fiw
-! Diff-Path: ../patches/123_optimized/123_optimized-s-1746564057-14400.patch
+! Checksum: CZcvJmx7bmJYhi2QU5Ae9Q
+! Diff-Path: ../patches/123_optimized/123_optimized-s-1746592894-14400.patch
 ! Title: Fanboy's Social Blocking List (Optimized)
 ! Description: Hides and blocks social content, social widgets, social scripts and social icons. Already included in Fanboy's Annoyances list.
-! Version: 2.1.40.94
-! TimeUpdated: 2025-05-06T20:36:44+00:00
+! Version: 2.1.40.95
+! TimeUpdated: 2025-05-07T04:37:41+00:00
 ! Expires: 12 hours (update frequency)
 -facebook-share.
 -facebook-widget.
@@ -135,6 +135,7 @@ _social-bar/
 ###Followers1
 ###ShareButton
 ###ShareItemBtn
+###Side_Block_Facebook
 ###SocialMedia
 ###SocialShare
 ###Socialize
@@ -163,6 +164,7 @@ _social-bar/
 ###block-socialmenu
 ###block-socialsharingblock
 ###blog-follow-widget
+###bottom-share
 ###btn-share-email
 ###btn-share-fb
 ###btn-share-tele
@@ -333,6 +335,7 @@ _social-bar/
 ###post-share-icons
 ###post-social
 ###post_info_share
+###reseaux-sociaux
 ###rsociaux
 ###sb_instagram
 ###selectionShare
@@ -709,6 +712,7 @@ _social-bar/
 ##.a-icon-share-twitter
 ##.a-link--facebook
 ##.a-picto-social
+##.a-share
 ##.a-social-btn
 ##.a2a_floating_style
 ##.a2a_vertical_style
@@ -934,6 +938,7 @@ _social-bar/
 ##.button_share
 ##.button_twitter
 ##.buttons-share
+##.bwc-footer__social
 ##.bx-footer__social-links
 ##.bx-header__social-links
 ##.bx-social-share
@@ -1988,12 +1993,14 @@ _social-bar/
 ##.sb_share
 ##.sc--twitter
 ##.sc-button-share
+##.sc-social
 ##.sc-social-links
 ##.scShareBoxRow
 ##.scShareText
 ##.scSocialIconsWidget
 ##.scriptlesssocialsharing
 ##.scroll-triggered-box
+##.sd-share-icon
 ##.sd-sharing
 ##.sd-social
 ##.sd-social-icon-text
@@ -2544,6 +2551,7 @@ _social-bar/
 ##.social-badge
 ##.social-badges
 ##.social-banner
+##.social-banners
 ##.social-bar-sticky
 ##.social-bar-widget
 ##.social-bar-wrapper
@@ -2656,6 +2664,7 @@ _social-bar/
 ##.social-networking
 ##.social-networks-container
 ##.social-networks-footer
+##.social-networks-link
 ##.social-networks-links
 ##.social-networks-list
 ##.social-networks__item
@@ -2910,6 +2919,7 @@ _social-bar/
 ##.ss-inline-share-content
 ##.ss-instagram
 ##.ss-share-network-content
+##.ss-sharing-container
 ##.ss-social-button-wrapper
 ##.ss-social-circle
 ##.ss-social-icons-container
@@ -3118,6 +3128,7 @@ _social-bar/
 ##.vlog-share-single
 ##.vlog-social-icons
 ##.voc-social
+##.vrt-social-links
 ##.vs-social
 ##.vs-social-link
 ##.vuukle-powerbar
@@ -3576,6 +3587,7 @@ airdriecityview.com,alaskahighwaynews.ca,barrietoday.com,baytoday.ca,bowenisland
 ghacks.net##.ghacks_share_widget
 cars.com##.global-footer-social-buttons
 oneindia.com##.goog-one-news
+coinedition.com##.google-news-block
 japan.go.jp##.gov_sns
 gadgets360.com##.gsocialbar
 verdictum.in##.h-anchor
@@ -3636,6 +3648,7 @@ chess.com##.navigation-footer-platforms-component
 pmc.ncbi.nlm.nih.gov##.ncbi-footer__icon-section
 nerdist.com##.nerdist-social-share
 taiwebs.com##.networking
+2001online.com,thepostmillennial.com##.networks
 news.mit.edu##.news-article--share
 science.org##.news-article__share
 cgtn.com##.news-share-wrapper
@@ -3658,7 +3671,6 @@ getcomics.org##.post-footer-shr
 discussingfilm.net,douglasnow.com##.post-share-bot
 discussingfilm.net,douglasnow.com,rockstarintel.com,watchinamerica.com##.post-share-float
 churchpop.com##.post-share-section
-tedium.co##.post-social
 foodandwaterwatch.org,medcitynews.com,publicbooks.org##.post-social-share
 cointelegraph.com##.post__socials-block
 captainaltcoin.com,celebritycruises.com,tomzorg.nl##.post_share
@@ -4005,6 +4017,7 @@ ansa.it##.media-share
 andreagaleazzi.com##.mercatino-toggle
 everyeye.it##.p-gnewsBanner
 everyeye.it##.p-telBut
+lifegate.it##.post__trends
 raiplay.it##.prefooter__social__list
 ohga.it##.share-item
 rainews.it##.share-toggler
@@ -4165,6 +4178,7 @@ diaridegirona.cat,diariocordoba.com,diariodeibiza.es,diariodemallorca.es,elcorre
 milenio.com##.google-news-follow
 dolarhoy.com##.header__redes
 tn.com.ar##.horizontal-share
+milenio.com##.info-networks
 laprensa.hn##.joinWhatsapp
 milanuncios.com##.ma-AdDetailShare
 perfil.com##.main-footer__redes
@@ -4278,6 +4292,7 @@ wired.it#@#.sharebox
 quizfreak.com#@#.sharebuttons
 vtvgujarati.com#@#.sharing-box
 marca.com#@#.sharing-tools
+fibery.io#@#.sharing_panel
 youtube.com#@#.show-share
 novelpia.com#@#.sns-btns
 nvidia.pl#@#.social-newsletter

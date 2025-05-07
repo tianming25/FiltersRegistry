@@ -1,6 +1,6 @@
 ![Adblock Plus 2.0]
-! Checksum: aC559XDfs694hnEl8pHi4A
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1746506538-14400.patch
+! Checksum: PACrcM+ZVYnq49F58Kx2gA
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746592913-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.86
@@ -9,6 +9,7 @@
 ###app-download
 ###app-modal
 ###smart-banner
+###smartbanner
 ##.app-banner:not(html,body,:empty,[id*=log i],[class*=log i])
 ##.app-btn:not(html,body,:empty)
 ##.app-cta:not(html,body,:empty)
@@ -138,6 +139,7 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||[2600:1f18:43d1:2a04:ee05:261e:d408:7ba1]^$document
 /^.*\.(xyz|pics)/[a-zA-Z0-9]{130,}$/$document,script,subdocument,image
 /^.*\.(cloudfront\.net|xyz|pics)/[a-zA-Z0-9]{20,}/[a-zA-Z0-9]{25,}\+[a-zA-Z0-9+]{90,}$/$document,script,subdocument,image
+/^(https?://)?(www\.)?cunt[a-z]{3,8}\.com(/.*)?$/$document,popup
 ||[2a02:1668:1034::2]^$document
 ||auslogics.com^$document
 /^(.*\.|.*//)?tkqlhce\.com/click-.*([?&][a-tv-z]{1,}(=[a-zA-Z0-9]{1,})?){1,}$/$document
@@ -1620,6 +1622,7 @@ daz3d.ru##+js(set-constant, snow, undefined)
 /snowstorm-min.js
 /snowstorm.js
 @@||epochtimes.com^
+@@||ntdtv.com^
 @@||soundofhope.org^
 @@||buzzfeed.com^
 @@||mewe.com^
@@ -2562,8 +2565,10 @@ $removeparam=aff_click_id
 ||baidu.com^$removeparam=frs
 ||baidu.com/link?$removeparam=eqid
 ||baidu.com/link?$removeparam=wd
+||map.baidu.com^$removeparam=compat
 ||map.baidu.com^$removeparam=da_src
 ||map.baidu.com^$removeparam=device_ratio
+||map.baidu.com^$removeparam=pcevaname
 ||map.baidu.com^$removeparam=ugc_type
 ||map.baidu.com^$removeparam=ugc_ver
 ||baidu.com^$removeparam=hl_tag
@@ -2847,6 +2852,9 @@ $removeparam=visit_id,document,domain=bilibili.com|google.*
 ||coupang.com^$removeparam=traceid
 ||coupang.com^$removeparam=wTime
 ||coupang.com^$removeparam=wPcid
+||fiverr.com^$removeparam=bta
+||fiverr.com^$removeparam=afp
+||fiverr.com^$removeparam=cxd_token
 ||walmart.$removeparam=/^wl\d=.*$/
 ||walmart.$removeparam=wl10
 ||walmart.$removeparam=wl11

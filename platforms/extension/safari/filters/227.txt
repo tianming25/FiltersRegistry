@@ -1,14 +1,14 @@
-! Checksum: S5oPOvaYIybsC9x7JAVa9Q
-! Diff-Path: ../patches/227/227-s-1746449370-14400.patch
+! Checksum: Kv7xkrf+fxzhLCqPy8Djug
+! Diff-Path: ../patches/227/227-s-1746592909-14400.patch
 ! Title: List-KR
 ! Description: Filter that removes ads and various scripts from websites with Korean content. Combined and augmented with AdGuard-specific rules for enhanced filtering. This filter is expected to be used alongside with AdGuard Base filter.
-! Version: 2.0.21.27
-! TimeUpdated: 2025-05-05T12:45:12+00:00
+! Version: 2.0.21.28
+! TimeUpdated: 2025-05-07T04:37:52+00:00
 ! Expires: 1 day (update frequency)
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2025.0505.0
+! OriginalVersion: 2025.0507.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://list-kr-community.pages.dev/docs/
@@ -539,6 +539,7 @@ board.namu.wiki#@#div[class]:not([class*=" "]) ~ div[class*=" "] > *[class*=" "]
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/bannerpop\/uploads\//
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/adManager\/(css|js)\/[A-z]+\.(css|js)$/
 !
+/api/inventory?entryId=
 /gnetwork/adforus.
 /studio_backend/adforus.
 /^https?:\/\/[a-z0-9-\.]*[a-z0-9-]+\.[a-z]+\/RealMedia\/ads\//
@@ -547,11 +548,9 @@ board.namu.wiki#@#div[class]:not([class*=" "]) ~ div[class*=" "] > *[class*=" "]
 !
 ||biz.sbs.co.kr/ad/
 ||biz.sbs.co.kr/img/pc/end_banner_250423.jpg
-||2days.aboda.kr/api/inventory
 ||api.eyejokerdb.com/api/banners/
 ||darknsilver.com/reaction
 ||item.gmarket.co.kr/Nbp/PowerClick
-||seemsinfo.com/api/inventory
 ||script.auction.co.kr/style/js/ad_icon.js
 ||c.011st.com/img/common/sprites/sp_ad_2x.png
 ||conist-cdn.com/*/iV/BO/
@@ -3550,6 +3549,7 @@ t.hi098123.com#@#ins.adsbygoogle[data-ad-slot]
 !#safari_cb_affinity
 t.hi098123.com#$#.tabad { top: -100px !important; }
 !
+minipol.tistory.com#%#//scriptlet('set-constant', 'checkAdBlock', 'undefined')
 start.klauncher.kr#%#//scriptlet('set-constant', 'googletag.getVersion', 'trueFunc')
 start.klauncher.kr#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
 tabriz.kr#@##AdHeader

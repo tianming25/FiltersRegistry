@@ -1,9 +1,9 @@
-! Checksum: VMNnLjyxf0+fP+e7WAu0Xg
-! Diff-Path: ../patches/4/4-s-1746581951-3600.patch
+! Checksum: aWYweQDwU/W4Y7AuRKJdqg
+! Diff-Path: ../patches/4/4-s-1746601914-3600.patch
 ! Title: AdGuard Social Media filter
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.14.24
-! TimeUpdated: 2025-05-07T01:35:02+00:00
+! Version: 2.1.14.25
+! TimeUpdated: 2025-05-07T07:07:38+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -14979,6 +14979,11 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204699
+rkf.online#%#//scriptlet('set-constant', 'Ya', 'emptyObj')
+rkf.online#%#//scriptlet('set-constant', 'Ya.share2', 'noopFunc')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||yastatic.net/share2/share.js$domain=rkf.online
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204664
 @@||scotusblog.com/_static/??/wp-content/themes/*/public/assets/app.css,/wp-content/plugins/add-to-any/addtoany.min.css
 ! https://github.com/AdguardTeam/AdguardFilters/issues/203945

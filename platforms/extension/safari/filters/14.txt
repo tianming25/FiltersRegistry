@@ -1,9 +1,9 @@
-! Checksum: NXmOh24W2Z5xHYafLJYczQ
-! Diff-Path: ../patches/14/14-s-1746581948-3600.patch
+! Checksum: PND+x5W4hgLFxhHMgircpQ
+! Diff-Path: ../patches/14/14-s-1746601911-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.44
-! TimeUpdated: 2025-05-07T01:35:21+00:00
+! Version: 2.2.29.45
+! TimeUpdated: 2025-05-07T07:08:01+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2508,6 +2508,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+motostacja.com##div[x-data*="consentModal"]
+rkf.online##.cookie-modal
 aliexpress.ru##div[class^="SnowPrivacyPolicyBanner_"]
 ||default.beam-emea.prd.api.max.com/legal/*/consentExperience?
 lio-trafic-occitanie.fr##.cdk-overlay-container > div.cdk-overlay-backdrop-showing
@@ -5753,7 +5755,7 @@ tango.me#?##root > div:has(> span:contains(uses cookies))
 kox-direct.de###wsModalAgreementPrivacy
 autodesk.ae,autodesk.be,autodesk.by,autodesk.ca,autodesk.ch,autodesk.co,autodesk.co.jp,autodesk.co.kr,autodesk.co.nz,autodesk.co.uk,autodesk.com,autodesk.com.au,autodesk.com.bd,autodesk.com.br,autodesk.com.cn,autodesk.com.hk,autodesk.com.np,autodesk.com.sg,autodesk.com.tr,autodesk.com.tw,autodesk.de,autodesk.dk,autodesk.es,autodesk.eu,autodesk.fi,autodesk.fr,autodesk.in,autodesk.io,autodesk.it,autodesk.jp,autodesk.mx,autodesk.net,autodesk.nl,autodesk.org,autodesk.pl,autodesk.pt,autodesk.pw,autodesk.ru,autodesk.se,autodesk.work###adsk-gdpr-footer-wrapper
 shop.elsevier.com#?##__next > div[class*=" "] > div[style]:has(> div > div > p[class] > a[href="https://www.elsevier.com/legal/cookienotice"])
-jrt.co.jp,fbc.jp,fct.co.jp,teny.co.jp,fmf.co.jp###gdpr_c
+rkc-kochi.co.jp,jrt.co.jp,fbc.jp,fct.co.jp,teny.co.jp,fmf.co.jp###gdpr_c
 ||service-cmp.com/config?js$domain=megogo.net
 vessoft.com##div[id^="cookie_ok_"]
 ||tokyometro.jp/library/common/js/jquery.cookie.js
@@ -49790,6 +49792,9 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+koreatimes.co.kr##div[class^="MyTimesBanner_wrap"]
+koreatimes.co.kr##section[class^="MyTimes_my-times"]
+koreatimes.co.kr##div[class^="BannerArea"]
 flaticon.com###banner-craft
 flaticon.com##.detail__download-confirmation
 123pan.com#%#//scriptlet('remove-attr', 'style', '.appdiv > div.webbody[style^="background-image:"]')
@@ -54873,6 +54878,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204724
+romsfun.me#%#//scriptlet('adjust-setTimeout', 'download', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204546
 megaup.net#%#//scriptlet('adjust-setInterval', '/display\(\)|btnDownload/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204332

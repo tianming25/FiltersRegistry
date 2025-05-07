@@ -1,10 +1,10 @@
 ![Adblock Plus 2.0]
-! Checksum: l1K0erTJv3ysW/ScxFjrGw
-! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746598431-3600.patch
+! Checksum: 7c8XwbN5KgeueUiZmhc5OA
+! Diff-Path: ../patches/2_without_easylist/2_without_easylist-s-1746601916-3600.patch
 ! Title: AdGuard Base filter
 ! Description: This filter is necessary for quality ad blocking.
-! Version: 2.3.82.41
-! TimeUpdated: 2025-05-07T06:09:11+00:00
+! Version: 2.3.82.42
+! TimeUpdated: 2025-05-07T07:07:22+00:00
 ! Expires: 5 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -48358,6 +48358,9 @@ $subdocument,third-party,denyallow=disqus.com,domain=welovemanga.one
 ! NOTE: Specific rules
 !
 !
+romsfun.me##center > a[target="_blank"] > button
+romsfun.me###download-loading-vip > .text-center > a[target="_blank"]
+xmilf.com##.header__nav > a[href][target="_blank"][rel="nofollow"]
 otakuusamagazine.com##.geekmag-page-right > div[id^="text-"]:has(ins[data-revive-zoneid])
 fuwanovel.moe##div[id^="adb"]
 fuwanovel.moe##.sidebar > div.widget_custom_html:has(> div:only-child > div[id^="adb"])
@@ -48376,6 +48379,9 @@ pixabay.com##div[class^="adPlacement"]
 snapedit.app###modal
 liquipedia.net#?#.fo-nttax-infobox > div:has(> .infobox-header:contains(Accommodation))
 liquipedia.net##.fo-nttax-infobox > div:has(> .infobox-center > div > a[href*="?aid="][target="_blank"][rel])
+koreatimes.co.kr##div[class^="homeLayoutWrapper_aside-contents-wrap"] > div[class^="homeLayoutWrapper_aside-contents"] > div:has(> div[id^="div-gpt-ad"])
+koreatimes.co.kr##div[class^="wrap DetailTabool"]
+koreatimes.co.kr##div[class^="homeLayoutWrapper"]:has(> div.wrap > div[class^="HomeTaboola"])
 armorgames.com##.ad-lrgrec
 armorgames.com##div[class^="ad-large-"]
 thepointsguy.com##div[data-testid="tpg-inline"]
@@ -48447,7 +48453,7 @@ hotxv.com##.w3-main > div[style*="height:250px;"]
 goart.fotor.com###fotorAdWapper
 goart.fotor.com##.goart_ad_btn
 scmp.com##div[data-qa$="Ads"]
-vxxx.com###fhvids
+xmilf.com,vxxx.com###fhvids
 picazor.com##main.h-full > div.mx-auto:has(iframe[src^="//bullionglidingscuttle.com/"])
 picazor.com##.bg-rose-500:has(> a[href="/livesex"])
 picazor.com##a[href="/livesex"]
@@ -48842,10 +48848,10 @@ kissasian.*##.banner-container
 mydramalist.com##div[class*="is-desktop-ads-"]
 dailyecho.co.uk##div[data-uses-js="dfp-top-ad-fixed"]
 katestube.com##+js(window.open-defuser)
-manysex.com##.header__item
+xmilf.com,manysex.com##.header__item
 hdzog.com,hdzog.tube##.video-page__content > div:not([class*="video"])
 hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##a[href^="https://rtr2perf1.com/"]
-hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##.nopop
+xmilf.com,hotmovs.com,hclips.com,manysex.com,hdzog.com,hdzog.tube##.nopop
 abmilf.com##.wrapper > section:has(> div > div[style^="width"] > div.ad__title)
 playhop.com#$#.google-sticky-adv-banner__desktop-wrapper { display: none !important; }
 playhop.com#$#.app__wrapper [style*="width: calc(100% - 300px);"] { width: 100% !important; }
@@ -72944,6 +72950,7 @@ implbits.com#@#.banner_container
 !#########################################
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204339
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204523
 ! 9animetv.to - playback not working
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204106

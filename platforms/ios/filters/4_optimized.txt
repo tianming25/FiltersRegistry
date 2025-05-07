@@ -1,9 +1,9 @@
-! Checksum: G/+Ys4dJJ15B7Oapke/TpA
-! Diff-Path: ../patches/4_optimized/4_optimized-s-1746585633-3600.patch
+! Checksum: DPlIB0ADtKZIb5InGUI++w
+! Diff-Path: ../patches/4_optimized/4_optimized-s-1746601921-3600.patch
 ! Title: AdGuard Social Media filter (Optimized)
 ! Description: Filter for social media widgets such as 'Like' and 'Share' buttons and more.
-! Version: 2.1.14.24
-! TimeUpdated: 2025-05-07T01:35:02+00:00
+! Version: 2.1.14.25
+! TimeUpdated: 2025-05-07T07:07:38+00:00
 ! Expires: 5 days (update frequency)
 ||share-count.donreach.com^$third-party
 ||button-follow.zalo.me^$third-party
@@ -8898,6 +8898,10 @@ dooralei.ru#$#body { overflow: visible!important; }
 twgreatdaily.com#$#.body.modal-open { overflow: visible!important; }
 catalogmineralov.ru#$#body { overflow: visible!important; }
 1track.ru#$#body { overflow: visible!important; }
+rkf.online#%#//scriptlet('set-constant', 'Ya', 'emptyObj')
+rkf.online#%#//scriptlet('set-constant', 'Ya.share2', 'noopFunc')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||yastatic.net/share2/share.js$domain=rkf.online
 @@||scotusblog.com/_static/??/wp-content/themes/*/public/assets/app.css,/wp-content/plugins/add-to-any/addtoany.min.css
 rd.nl#@#.share-icon
 ufret.jp#@#a[href^="https://twitter.com/intent/tweet?"]

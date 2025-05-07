@@ -1,9 +1,9 @@
-! Checksum: lbC3fMFd6145P8vaoG2gTA
-! Diff-Path: ../patches/21/21-s-1746601899-3600.patch
+! Checksum: IAciIRHz4lirNWwPG9GwkQ
+! Diff-Path: ../patches/21/21-s-1746609106-3600.patch
 ! Title: AdGuard Other Annoyances filter
 ! Description: Blocks irritating elements on web pages that do not fall under the popular categories of annoyances.
-! Version: 2.0.33.15
-! TimeUpdated: 2025-05-07T07:08:08+00:00
+! Version: 2.0.33.16
+! TimeUpdated: 2025-05-07T09:08:12+00:00
 ! Expires: 10 days (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -3491,6 +3491,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+bristol.ru##.corporative-banner
 koreatimes.co.kr##div[class^="MyTimesBanner_wrap"]
 koreatimes.co.kr##section[class^="MyTimes_my-times"]
 koreatimes.co.kr##div[class^="BannerArea"]
@@ -8580,6 +8581,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204557
+datanodes.to#%#//scriptlet('adjust-setTimeout', '/downloadForm|seconds--/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204724
 romsfun.me#%#//scriptlet('adjust-setTimeout', 'download', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204546

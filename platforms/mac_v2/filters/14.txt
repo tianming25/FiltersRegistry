@@ -1,9 +1,9 @@
-! Checksum: tQkG6wth4QhhkSqfCKrwbw
-! Diff-Path: ../patches/14/14-s-1746605706-3600.patch
+! Checksum: j/459F271lAQbz58SVmmVA
+! Diff-Path: ../patches/14/14-s-1746609132-3600.patch
 ! Title: AdGuard Annoyances filter
 ! Description: Blocks irritating elements on web pages including cookie notices, third-party widgets and in-page pop-ups. Contains the following AdGuard filters: Cookie Notices, Popups, Mobile App Banners, Other Annoyances and Widgets.
-! Version: 2.2.29.46
-! TimeUpdated: 2025-05-07T08:11:11+00:00
+! Version: 2.2.29.47
+! TimeUpdated: 2025-05-07T09:08:04+00:00
 ! Expires: 12 hours (update frequency)
 ! Homepage: https://github.com/AdguardTeam/AdGuardFilters
 ! License: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
@@ -2506,6 +2506,8 @@ scootertechno.com,mysize.ch,aeotec.com,geschichte-wissen.de,4kfilme.de,pk.edu.pl
 !
 ! NOTE: Regular rules
 !
+m24.ru##.b-cookies-window
+bristol.ru##.cookie-popover
 motostacja.com##div[x-data*="consentModal"]
 rkf.online##.cookie-modal
 aliexpress.ru##div[class^="SnowPrivacyPolicyBanner_"]
@@ -25788,6 +25790,8 @@ aol.com#$#.ad__tile { height: 10px!important; position: absolute!important; left
 !
 ! SECTION: Popups - Regular rules
 !
+bristol.ru##.SmartCaptcha-Overlay
+bristol.ru##.SmartCaptcha-Shield_position_bottom
 imdb.com#%#//scriptlet('set-local-storage-item', 'videopage_autoplay_policy_tooltip_dismissed', 'true')
 snapedit.app###modal-landscape
 web-design.academy#$#.popup-webinar { display: none !important; }
@@ -42495,6 +42499,7 @@ alfastrah.ru,turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,ra
 !
 !
 !
+bristol.ru##.first-order-modal
 raycast.com##div[class^="GlobalBanner"]
 m.imdb.com##.imdb-header__app-button
 doordash.com##a[data-testid="openAppButton"]
@@ -49612,6 +49617,7 @@ www.kinopoisk.ru##div[class^="trailer-promo"]
 !
 ! SECTION: Self-promo - Regular rules
 !
+bristol.ru##.corporative-banner
 koreatimes.co.kr##div[class^="MyTimesBanner_wrap"]
 koreatimes.co.kr##section[class^="MyTimes_my-times"]
 koreatimes.co.kr##div[class^="BannerArea"]
@@ -54702,6 +54708,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/204557
+datanodes.to#%#//scriptlet('adjust-setTimeout', '/downloadForm|seconds--/', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204724
 romsfun.me#%#//scriptlet('adjust-setTimeout', 'download', '*', '0.001')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/204546

@@ -1,9 +1,9 @@
-! Checksum: nrRAiX7JLC5OfW/CnA5QSg
-! Diff-Path: ../patches/13_optimized/13_optimized-s-1746627135-3600.patch
+! Checksum: 4QUdqwELJboXPNYlknccJg
+! Diff-Path: ../patches/13_optimized/13_optimized-s-1746630716-3600.patch
 ! Title: AdGuard Turkish filter (Optimized)
 ! Description: Filter list that specifically removes ads on websites in Turkish language.
-! Version: 2.0.56.21
-! TimeUpdated: 2025-05-07T14:08:09+00:00
+! Version: 2.0.56.22
+! TimeUpdated: 2025-05-07T15:07:47+00:00
 ! Expires: 12 hours (update frequency)
 ||movturs.click^
 ||dontmakethem.club^
@@ -1056,6 +1056,7 @@ $xmlhttprequest,third-party,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.l
 /service/advertchannels?$domain=kocaelifikir.com|anayurtgazetesi.com|medyaankara.com|ozgunkocaeli.com.tr|urfanatik.com|dirilispostasi.com|turkuazgazetesi.net|yenialanya.com|bugunkocaeli.com.tr|cagdaskocaeli.com.tr|mansetaydin.com|enkocaeli.com|kocaelikoz.com|kocaelibarisgazetesi.com|seskocaeli.com|sigortahaber.com
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
+canli-macizle.com##.sc_blogger_columns_wrap > div.text-center > a[target="_blank"] > img
 ||silentall.net/templates/silentallnet/images/sponrek.gif
 ||vipfilmizle.net/anasayfa%20header.gif
 golgebahcesi.com##.rutaku-banner
@@ -4963,11 +4964,21 @@ hdfilmcehennem.live#$##reki1 { display: none!important; }
 hdfilmcehennem.live#$##kendisi { display: block!important; }
 oyunu.com.tr#$##bir.oynama { display: none !important; }
 oyunu.com.tr#$##iki.oynama { display: block !important; }
-||blogger.googleusercontent.com/img/$domain=justintv.shop|justintvsh.baby|dmlstechnology.com|justintvde.com|justin-tv.org|inattvgiris.pro|justintv.co
-justintv.shop,justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.co##.wpb_wrapper > center > a[target="_blank"]
-justintv.shop,justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.co##.wpb_wrapper > a[target="_blank"][style^="color:red; background-color:black; padding:10px; display:inline-block;"]
-justintv.shop,justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.co##a[target="_blank"][rel="noopener"] > img
-justintv.shop,justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.co#%#//scriptlet('set-constant', 'window.config.adv.enabled', '0')
+||blogger.googleusercontent.com/img/$domain=justintvsh.baby|dmlstechnology.com|justintvde.com|justin-tv.org|inattvgiris.pro|justintv.*
+justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.*##div[class^="footer-"]
+justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.*##header > a[href="/"] + ul
+justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.*##.wpb_wrapper > center > a[target="_blank"]
+justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.*##.wpb_wrapper > a[target="_blank"][style^="color:red; background-color:black; padding:10px; display:inline-block;"]
+justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.*##a[target="_blank"][rel="noopener"] > img
+justintvsh.baby,dmlstechnology.com,justintvde.com,justin-tv.org,inattvgiris.pro,justintv.*#%#//scriptlet('set-constant', 'window.config.adv.enabled', '0')
+||justintvizle*.top/dimg/*.gif
+||justintvizle*.top/cdn/r/
+||selcuksports*.top/dimg/*.gif
+[$domain=/justintvizle\d+\.top/]##div[class^="footer-"]
+[$domain=/justintvizle\d+\.top/]##header > a[href="/"] + ul
+[$domain=/justintvizle\d+\.top/]##.header_r
+[$domain=/selcuksports\d+\.top/]##div[class^="footer-"]
+[$domain=/selcuksports\d+\.top/]##header > a[href="/"] + ul
 hdfilmizleamk.net,indirmedenfilmizle.vip,birasyadizi.com,seyredeger.com,dizilost.com#%#//scriptlet('abort-on-property-write', 'onPopUnderLoaded')
 ||cdn.diziyou*.com/wp-content/*.gif
 [$domain=/dizilla\d+\.nl/]###playerLsDizilla > div.flex:not(.player)

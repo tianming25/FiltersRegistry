@@ -526,8 +526,8 @@
 			"groupId": 7,
 			"subscriptionUrl": "https://filters.adtidy.org/extension/safari/filters/9_optimized.txt",
 			"trustLevel": "full",
-			"version": "2.0.29.78",
-			"timeUpdated": "2025-05-08T06:09:54+0000",
+			"version": "2.0.29.79",
+			"timeUpdated": "2025-05-08T07:07:22+0000",
 			"deprecated": false,
 			"languages": [
 				"es",

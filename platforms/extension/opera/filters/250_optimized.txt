@@ -1,5 +1,5 @@
-! Checksum: Cs9sNWZvQ+I9tgCUXHbczQ
-! Diff-Path: ../patches/250_optimized/250_optimized-s-1746636336-14400.patch
+! Checksum: AcyhmqBq52MsE9iVoSeUYQ
+! Diff-Path: ../patches/250_optimized/250_optimized-s-1746679379-14400.patch
 ! Title: Dandelion Sprout's Annoyances List (Optimized)
 ! Description: This list is made in the style of AdGuard's and Fanboy's annoyances lists. It combines many of Dandelion Sprout's proudest and most frequently maintained international lists, as a curated compilation for simplicity's sake.
 ! Version: 2.0.16.87
@@ -129,6 +129,7 @@ coolrom.com.au,coolrom.com##.download_link
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://ublock-chrome."]
 softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 ||ubuntu.org^$document,domain=~you-were-likely-looking-for-ubuntu.com
+?bemobdata=$all
 ||conjunctionrepresentativepowerless.com^$all
 ||connatedresspint.com^$all
 ||honourrib.com^$all
@@ -1004,6 +1005,7 @@ www.microsoft.com##.card[data-bi-cn*="jail break" i]
 ##.heateor_sss_sharing_container:not(html,body,:empty)
 ##.js-share-btn:not(html,body,:empty)
 ##.mashsb-box:not(html,body,:empty)
+##.meta-share-wrapper:not(html,body,:empty)
 ##.news_share:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.post_social:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
 ##.product-sharing:not(html,body,[class*=body i],[id*=body i],[class*=content i],[id*=content i])
@@ -1513,6 +1515,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||bitbucket.org^
 #@#html
 #@#body
+@@|https://raw.githubusercontent.com/DandelionSprout/adfilt/*
 @@||kaltura.com^
 @@.dna.ip-only.net^
 ||filters.adtidy.org^$badfilter
@@ -1525,6 +1528,7 @@ reports.adguard.com$badfilter
 @@||gitlab.com/*/raw/master/*$~third-party
 @@||gitlab.com/*/raw/main/*$~third-party
 @@||cdn.jsdelivr.net/gh/*@master$~third-party
+@@||cdn.statically.io/gh/*/master/$~third-party
 @@||easylist.to/*.txt^
 @@||pgl.yoyo.org/adservers/serverlist.
 @@||someonewhocares.org/hosts/
@@ -1861,6 +1865,7 @@ $document,removeparam=/^_s=afl_impact$/
 $document,removeparam=/^cid_.*$/
 $removeparam=cjReq
 $removeparam=ir_cid
+$removeparam=p_aid
 $document,removeparam=p_sid,domain=~wgv.de
 $removeparam=depth_1-utm_source
 $removeparam=cmp_id
@@ -1869,6 +1874,7 @@ $removeparam=ldtag_cl
 $removeparam=vero_conv
 $removeparam=vero_id
 $removeparam=a_aid
+$removeparam=otracker
 $removeparam=ft_source
 $removeparam=ft_medium
 $removeparam=ref_source
@@ -2496,6 +2502,8 @@ wenku.baidu.com#%#//scriptlet('ubo-set.js', 'history.replaceState', 'noopFunc')
 ||sogou.com^$removeparam=lkt
 ||sogou.com^$removeparam=s_from
 ||sogou.com^$removeparam=sst0
+||sogou.com^$removeparam=sugsuv
+||sogou.com^$removeparam=sugtime
 ||sogou.com^$removeparam=sut
 ||sogou.com^$removeparam=w
 $removeparam=clickArea
@@ -2505,6 +2513,7 @@ $removeparam=user_ip
 ||sogou.com^$removeparam=htdbg
 ||sogou.com^$removeparam=interation
 ||sogou.com^$removeparam=interV
+||sogou.com^$removeparam=suguuid
 ||baike.sogou.com^$removeparam=ch
 ||sogou.com^$removeparam=fromTitle
 ||mp.weixin.qq.com^$removeparam=scene
@@ -2777,6 +2786,7 @@ $removeparam=s_kw,domain=expansion.com|marca.com
 ||ecosia.org^$removeparam=addon
 $removeparam=referralInfo,domain=wix.com
 $removeparam=locale,domain=udemy.com
+||zoho.com^$removeparam=zsrc
 ||nortonsafe.search.ask.com^$removeparam=installsource
 ||nortonsafe.search.ask.com^$removeparam=os
 ||nortonsafe.search.ask.com^$removeparam=templatecat
@@ -2855,6 +2865,9 @@ $removeparam=link_source_user_id,domain=nextdoor.com
 $removeparam=is,domain=nextdoor.com
 $removeparam=mar,domain=nextdoor.com
 ||dzen.ru^$removeparam=yredirect
+||verizon.com^$removeparam=campaignGroup
+||verizon.com^$removeparam=campaignName
+||verizon.com^$removeparam=campaignSource
 ||youtube.com^$removeparam=embeds_euri
 ||youtube.com^$removeparam=source_ve_path
 ^ref=hackernoon.com^$removeparam=ref
